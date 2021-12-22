@@ -20,6 +20,6 @@ if output.find(word):
 print(output)
 
 # TODO Polaczenie sie po COMIE i sprawdzenie z konsoli czy juz urzadzenie bylo skonifgurowane,
-# TODO to juz lab bo, ale pomysl jest
+# TODO to juz lab bo, ale pomysl jest, porobienie folderow na pliki odpowiednio, ale to po swietach
 
 print(type(output))
