@@ -1,3 +1,0 @@
-Switch_1
-Router_1
-Cos_2
