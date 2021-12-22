@@ -1,9 +1,25 @@
-with open('test.txt', 'r') as a_file:
+import os
+from contextlib import redirect_stdout
+# from pythonping import ping
+# import subprocess
+# stream = os.popen('echo Returned output')
+# output = stream.read()
+# print(output)
 
-    lines = a_file.read()
-    list_of_lists = lines.splitlines()
+# ping('www.google.com', verbose=True)
+# essa = os.system('ipconfig')
 
-    a_file.close()
+import subprocess
 
-    print(list_of_lists)
-    print(list_of_lists[0])
+# ZNAJDYWANIE slow w wypluwaniu z komend
+import subprocess
+output = str(subprocess.check_output("ipconfig", shell=True))
+word = 'lokalne'
+if output.find(word):
+    print("mamy to")
+print(output)
+
+# TODO Polaczenie sie po COMIE i sprawdzenie z konsoli czy juz urzadzenie bylo skonifgurowane,
+# TODO to juz lab bo, ale pomysl jest
+
+print(type(output))
