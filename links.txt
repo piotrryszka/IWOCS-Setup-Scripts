@@ -1,0 +1,3 @@
+https://pynet.twb-tech.com/blog/automation/pyserial.html
+https://stackoverflow.com/questions/69256034/pyserial-send-and-receive-multiple-commands
+https://github.com/ktbyers/pynet/blob/master/serial/cisco_serial.py

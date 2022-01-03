@@ -45,10 +45,10 @@ while running_flag:
                     if user_device in list_of_lists:
                         print(f"Connecting to {user_device} by {COM_string}...")
 
-                        # TODO: Connect to Serial Port, Check in LAB
-                        # ser_connection = Serial(COM_string, COM_speed)
-                        # data = ser_connection.readline(1000)
-                        # print(data)
+                        # TODO: Connect to Serial Port, Check in LAB on default router
+                        ser_connection = Serial(COM_string, COM_speed)
+                        data = ser_connection.readline(5)
+                        print(data)
                     elif user_device == "break":
                         break
                     else:
