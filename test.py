@@ -13,7 +13,7 @@ import subprocess
 
 # ZNAJDYWANIE slow w wypluwaniu z komend
 import subprocess
-output = str(subprocess.check_output("ipconfig", shell=True))
+output = str(subprocess.check_output("ipconfig", shell=True)).strip()
 word = 'lokalne'
 if output.find(word):
     print("mamy to")

@@ -28,7 +28,7 @@ while running_flag:
                 COM_string = "COM" + user_COM
 
                 # Creating a list with all the possible devices
-                with open('test.txt', 'r') as file_devices:
+                with open('static_files/test.txt', 'r') as file_devices:
                     lines = file_devices.read()
                     list_of_lists = lines.splitlines()
                     file_devices.close()
