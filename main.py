@@ -51,7 +51,6 @@ while running_flag:
                         print(ser_connection)
                         # encoding to bytes (some commands like show version or enable should also work)
                         ser_connection.write(str.encode('rokoko'))  # write a string in bytes
-                        print(ser_connection)
                         ser_connection.close()  # close port
 
                     elif user_device == "break":
