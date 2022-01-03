@@ -1,7 +1,6 @@
 # imports
 import serial
 from serial import Serial
-from pprint import pprint
 
 # Program flags:
 running_flag = True  # main flag, running program
@@ -46,9 +45,15 @@ while running_flag:
                         print(f"Connecting to {user_device} by {COM_string}...")
 
                         # TODO: Connect to Serial Port, Check in LAB on default router
+                        # TODO: Verify from test.py options on router/switch
                         ser_connection = Serial(COM_string, COM_speed)
-                        data = ser_connection.readline(5)
-                        print(data)
+                        # connection set
+                        print(ser_connection)
+                        # encoding to bytes (some commands like show version or enable should also work)
+                        ser_connection.write(str.encode('rokoko'))  # write a string in bytes
+                        print(ser_connection)
+                        ser_connection.close()  # close port
+
                     elif user_device == "break":
                         break
                     else:

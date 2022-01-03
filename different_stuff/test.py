@@ -50,44 +50,51 @@ import subprocess
 #     send_to_console(ser, "show ap summary", wait_time=2)
 #     print(f"Connection to {ser.name} closed.")
 
-import serial
-import sys
-import time
+# import serial
+# import sys
+# import time
+#
+# import credentials
+#
+# READ_TIMEOUT = 8
+#
+#
+# def main():
+#
+#     print("\nInitializing serial connection")
+#
+#     console = serial.Serial(
+#         port='COM3',
+#         baudrate=9600,
+#         parity="N",
+#         stopbits=1,
+#         bytesize=8,
+#         timeout=READ_TIMEOUT
+#     )
+#
+#     if not console.isOpen():
+#         sys.exit()
+#
+#     console.write("\r\n\r\n")
+#     time.sleep(1)
+#     input_data = console.read(console.inWaiting())
+#     if 'Username' in input_data:
+#         console.write(credentials.username + '\r\n')
+#     time.sleep(1)
+#     input_data = console.read(console.inWaiting())
+#     if 'Password' in input_data:
+#         console.write(credentials.password + '\r\n')
+#     time.sleep(1)
+#     input_data = console.read(console.inWaiting())
+#     print(input_data)
+#
+#
+# if __name__ == "__main__":
+#     main()
 
-import credentials
-
-READ_TIMEOUT = 8
-
-
-def main():
-
-    print("\nInitializing serial connection")
-
-    console = serial.Serial(
-        port='COM3',
-        baudrate=9600,
-        parity="N",
-        stopbits=1,
-        bytesize=8,
-        timeout=READ_TIMEOUT
-    )
-
-    if not console.isOpen():
-        sys.exit()
-
-    console.write("\r\n\r\n")
-    time.sleep(1)
-    input_data = console.read(console.inWaiting())
-    if 'Username' in input_data:
-        console.write(credentials.username + '\r\n')
-    time.sleep(1)
-    input_data = console.read(console.inWaiting())
-    if 'Password' in input_data:
-        console.write(credentials.password + '\r\n')
-    time.sleep(1)
-    input_data = console.read(console.inWaiting())
-    print(input_data)
-
-
-if __name__ == "__main__":
-    main()
+# import serial
+#
+# ser = serial.Serial('COM3')  # open first serial port
+# print(ser.portstr)       # check which port was really used
+# ser.write(str.encode('allon'))     # write a string COS W BAJTACH
+# ser.close()             # close port

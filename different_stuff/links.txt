@@ -1,3 +1,6 @@
 https://pynet.twb-tech.com/blog/automation/pyserial.html
 https://stackoverflow.com/questions/69256034/pyserial-send-and-receive-multiple-commands
 https://github.com/ktbyers/pynet/blob/master/serial/cisco_serial.py
+https://gist.github.com/TannerRayMartin/f0b91c5e492b1f15698656486403ef02
+TODO: to chyba najwazniejsze
+https://www.udemy.com/tutorial/master-python-network-automation-for-network-engineers/configure-cisco-devices-using-serial-connections/
