@@ -3,7 +3,6 @@ import serial
 from serial import Serial
 from time import sleep
 
-
 # Program flags:
 running_flag = True  # main flag, running program
 system_flag = True  # flag about type of system
@@ -22,10 +21,9 @@ def send_to_console(ser_fun: serial.Serial, command: str, wait_time: float = 0.5
     sleep(wait_time)
     return ser_fun.read(ser_fun.inWaiting()).decode('utf-8')
 
+
 # decorators
 decorator_1 = '----------------------------------------------------------------------'
-
-
 
 while running_flag:
     print(decorator_1)
@@ -68,29 +66,37 @@ while running_flag:
                         # TODO: Connect to Serial Port, Check in LAB on default router
                         # TODO: Verify from test.py options on router/switch
                         # connection set
-                        ser = Serial(COM_string, COM_speed)
+                        try:
+                            ser = Serial(COM_string, COM_speed)
 
-                        checking_string = ''
-                        # some commands to check the effect
+                            checking_string = ''
+                            # some commands to check the effect
 
-                        # waiting for router/switch to boot
-                        # avarage time to boot switch/router some device
-                        sleep(240)
-                        send_to_console(ser, "\r\n\r")
-                        checking_string += send_to_console(ser, "\r\n\r\n")
+                            # waiting for router/switch to boot
+                            # avarage time to boot switch/router some device
+                            sleep(1)
+                            send_to_console(ser, "\r\n\r")
+                            checking_string += send_to_console(ser, "\r\n\r\n")
 
-                        if 'initial configuration' in checking_string:
-                            print("Your device has not been configured yet. What do you want to do with it?")
+                            if 'initial configuration' in checking_string:
+                                print("Your device has not been configured yet. What do you want to do with it?")
+                                print(decorator_1)
+                                # tutaj dalsza kontynuacja wgrywania configu czy czegos tam jeszcze
+
+                            else:
+                                print('Sorry your device has some starting configuration, we could not help you...')
+                                print('If you want you can try again to connect to your device.')
+                                print(decorator_1)
+                                # closing connection
+                                ser.close()
+                                print(f"Connection to {ser.name} closed.")
+                                break
+
+                        except:
+                            print("Sorry, you have provided bad info. Check your ports and device.")
+                            print("Probably your port is used by different process... ")
                             print(decorator_1)
 
-                        # tutaj dalsza kontynuacja wgrywania configu czy czegos tam jeszcze
-
-                        else:
-                            print('Sorry your device has some starting configuration, we could not help you...')
-                            # closing connection
-                            ser.close()
-                            print(f"Connection to {ser.name} closed.")
-                            break
 
                             # some basic commands
                         # testowa_lista.append(send_to_console(ser, "\nenable"))
