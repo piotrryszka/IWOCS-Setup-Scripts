@@ -1,6 +1,8 @@
 # imports
 import serial
 from serial import Serial
+from time import sleep
+
 
 # Program flags:
 running_flag = True  # main flag, running program
@@ -10,6 +12,16 @@ device_flag = True  # flag checking device
 
 # Variables:
 COM_speed = 9600
+
+#functions
+
+# sending commands to device consol
+def send_to_console(ser: serial.Serial, command: str, wait_time: float = 0.5):
+    command_to_send = command + "\r\n"
+    ser.write(command_to_send.encode('utf-8'))
+    sleep(wait_time)
+    return ser.read(ser.inWaiting()).decode('utf-8')
+
 
 while running_flag:
     print("IMPORTANT ISSUE!!!\n"
@@ -46,13 +58,39 @@ while running_flag:
 
                         # TODO: Connect to Serial Port, Check in LAB on default router
                         # TODO: Verify from test.py options on router/switch
-                        ser_connection = Serial(COM_string, COM_speed)
                         # connection set
-                        print(ser_connection)
-                        # encoding to bytes (some commands like show version or enable should also work)
-                        ser_connection.write(str.encode('rokoko'))  # write a string in bytes
-                        ser_connection.close()  # close port
+                        ser = Serial(COM_string, COM_speed)
 
+                        checking_string = ''
+                        # some commands to check the effect
+                        # waiting for router/switch to boot
+                        send_to_console(ser, "\r\n\r")
+                        send_to_console(ser, "\r\n\r")
+                        send_to_console(ser, "\r\n\r")
+                        send_to_console(ser, "\r\n\r")
+                        sleep(240)
+                        send_to_console(ser, "\r\n\r")
+                        send_to_console(ser, "\r\n\r")
+                        send_to_console(ser, "\r\n\r")
+                        send_to_console(ser, "\r\n\r")
+                        checking_string += send_to_console(ser, "\r\n\r\n")
+
+                        if 'initial configuration' in checking_string:
+                            print("Your device has not been configurated yet. What do you want to do with it?")
+                        else:
+                            print('Sorry your device has some starting configuration, we could not help you...')
+                            # closing connection
+                            ser.close()
+                            print(f"Connection to {ser.name} closed.")
+                            break
+
+                            # some basic commands
+                        # testowa_lista.append(send_to_console(ser, "\nenable"))
+                        # testowa_lista.append(send_to_console(ser, "sh run", wait_time=10))
+                        # for i in range(1, 10):
+                        #     send_to_console(ser, " ")
+                        # testowa_lista.append(send_to_console(ser, "\n"))
+                        # print(testowa_lista)
                     elif user_device == "break":
                         break
                     else:

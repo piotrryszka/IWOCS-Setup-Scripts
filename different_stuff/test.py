@@ -98,3 +98,24 @@ import subprocess
 # print(ser.portstr)       # check which port was really used
 # ser.write(str.encode('allon'))     # write a string COS W BAJTACH
 # ser.close()             # close port
+
+import serial
+from time import sleep
+
+
+def send_to_console(ser: serial.Serial, command: str, wait_time: float = 0.5):
+    command_to_send = command + "\r"
+    ser.write(command_to_send.encode('utf-8'))
+    sleep(wait_time)
+    print(ser.read(ser.inWaiting()).decode('utf-8'), end="")
+
+
+with serial.Serial("COM5", timeout=1) as ser:
+    print(f"Connecting to {ser.name}...")
+    send_to_console(ser, "\n")
+    send_to_console(ser, "\nenable")
+    send_to_console(ser, "sh run", wait_time=10)
+    for i in range(1, 10):
+        send_to_console(ser, " ")
+    send_to_console(ser, "\n")
+    print(f"Connection to {ser.name} closed.")
