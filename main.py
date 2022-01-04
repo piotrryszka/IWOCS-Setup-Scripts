@@ -68,6 +68,7 @@ while running_flag:
                         send_to_console(ser, "\r\n\r")
                         send_to_console(ser, "\r\n\r")
                         send_to_console(ser, "\r\n\r")
+                        # avarage time to boot switch/router some device
                         sleep(240)
                         send_to_console(ser, "\r\n\r")
                         send_to_console(ser, "\r\n\r")
