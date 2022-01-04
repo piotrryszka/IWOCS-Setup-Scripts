@@ -23,6 +23,7 @@ def send_to_console(ser_fun: serial.Serial, command: str, wait_time: float = 0.5
 
 
 # decorators
+# some simple tricks for better user experience
 decorator_1 = '----------------------------------------------------------------------'
 
 while running_flag:
@@ -91,7 +92,6 @@ while running_flag:
                                 ser.close()
                                 print(f"Connection to {ser.name} closed.")
                                 break
-
                         except:
                             print("Sorry, you have provided bad info. Check your ports and device.")
                             print("Probably your port is used by different process... ")
