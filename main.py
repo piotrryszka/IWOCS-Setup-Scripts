@@ -13,27 +13,35 @@ device_flag = True  # flag checking device
 # Variables:
 COM_speed = 9600
 
-#functions
 
-# sending commands to device consol
-def send_to_console(ser: serial.Serial, command: str, wait_time: float = 0.5):
+# functions
+# sending commands to device console
+def send_to_console(ser_fun: serial.Serial, command: str, wait_time: float = 0.5):
     command_to_send = command + "\r\n"
-    ser.write(command_to_send.encode('utf-8'))
+    ser_fun.write(command_to_send.encode('utf-8'))
     sleep(wait_time)
-    return ser.read(ser.inWaiting()).decode('utf-8')
+    return ser_fun.read(ser_fun.inWaiting()).decode('utf-8')
+
+# decorators
+decorator_1 = '----------------------------------------------------------------------'
+
 
 
 while running_flag:
+    print(decorator_1)
     print("IMPORTANT ISSUE!!!\n"
-          "If you want to leave any part of the program type break in your input!\n")
+          "If you want to leave any part of the program type break in your input!")
+    print(decorator_1)
     # question about complete system or one module TASK 184
     user_system = input("It is your system a complete one or it is just one module? "
                         "\nType 'Yes' if system complete, if not write anything else: ").lower()
+    print(decorator_1)
     if user_system == 'yes':
         while COM_flag:
             # question about which COM port is user using TASK 185
             user_COM = input("Which COM port are you using?"
                              "\nType number of your COM: ").lower()
+            print(decorator_1)
             if user_COM.isnumeric():
                 # Creating string for connection to the device
                 COM_string = "COM" + user_COM
@@ -55,7 +63,8 @@ while running_flag:
                     # Checking if the device is in the list of devices
                     if user_device in list_of_lists:
                         print(f"Connecting to {user_device} by {COM_string}...")
-
+                        print("Please wait patiently...")
+                        print(decorator_1)
                         # TODO: Connect to Serial Port, Check in LAB on default router
                         # TODO: Verify from test.py options on router/switch
                         # connection set
@@ -63,21 +72,19 @@ while running_flag:
 
                         checking_string = ''
                         # some commands to check the effect
+
                         # waiting for router/switch to boot
-                        send_to_console(ser, "\r\n\r")
-                        send_to_console(ser, "\r\n\r")
-                        send_to_console(ser, "\r\n\r")
-                        send_to_console(ser, "\r\n\r")
                         # avarage time to boot switch/router some device
                         sleep(240)
-                        send_to_console(ser, "\r\n\r")
-                        send_to_console(ser, "\r\n\r")
-                        send_to_console(ser, "\r\n\r")
                         send_to_console(ser, "\r\n\r")
                         checking_string += send_to_console(ser, "\r\n\r\n")
 
                         if 'initial configuration' in checking_string:
-                            print("Your device has not been configurated yet. What do you want to do with it?")
+                            print("Your device has not been configured yet. What do you want to do with it?")
+                            print(decorator_1)
+
+                        # tutaj dalsza kontynuacja wgrywania configu czy czegos tam jeszcze
+
                         else:
                             print('Sorry your device has some starting configuration, we could not help you...')
                             # closing connection
