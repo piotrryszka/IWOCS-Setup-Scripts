@@ -26,6 +26,8 @@ def send_to_console(ser_fun: serial.Serial, command: str, wait_time: float = 0.5
 # some simple tricks for better user experience
 decorator_1 = '----------------------------------------------------------------------'
 
+
+# main project
 while running_flag:
     print(decorator_1)
     print("IMPORTANT ISSUE!!!\n"
