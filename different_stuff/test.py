@@ -119,3 +119,24 @@ import subprocess
 #         send_to_console(ser, " ")
 #     send_to_console(ser, "\n")
 #     print(f"Connection to {ser.name} closed.")
+#
+#
+# import os
+#
+# # Print the current working directory
+# print("Current working directory: {0}".format(os.getcwd()))
+
+# # Change the current working directory
+# os.chdir('static_files')
+#
+# # Print the current working directory
+# print("Current working directory: {0}".format(os.getcwd()))
+with open('../conf-files/basic_conf.txt') as file:
+    content_list = file.readlines()
+    stripped = [s.strip() for s in content_list]
+    print(content_list)
+    print(stripped)
+
+# x_file = open('links.txt')
+# lines = x_file.readlines()
+# print(lines)

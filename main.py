@@ -41,7 +41,7 @@ while running_flag:
         while COM_flag:
             # question about which COM port is user using TASK 185
             user_COM = input("Which COM port are you using?"
-                             "\nType number of your COM: ").lower()
+                             "\nType number of your COM port: ").lower()
             print(decorator_1)
             if user_COM.isnumeric():
                 # Creating string for connection to the device
@@ -84,6 +84,8 @@ while running_flag:
                             if user_boot_time == 'booted':
                                 sleep(1)
                             else:
+                                # 4 minutes is enough time to boot switch/router
+                                print("It will take about 4 minutes...")
                                 sleep(240)
                             send_to_console(ser, "\r\n\r")
                             checking_string += send_to_console(ser, "\r\n\r\n")
@@ -91,20 +93,32 @@ while running_flag:
                             if 'initial configuration' in checking_string:
                                 print("Your device has not been configured yet. What do you want to do with it?")
                                 print(decorator_1)
-                                # tutaj dalsza kontynuacja wgrywania configu czy czegos tam jeszcze
                                 # commands are working, waiting for basic.conf files
-                                send_to_console(ser, 'no')
-                                send_to_console(ser, 'en')
-                                send_to_console(ser, 'conf t')
-                                send_to_console(ser, 'int g1/1')
-                                send_to_console(ser, 'duplex full')
-                                send_to_console(ser, 'speed 100')
-                                send_to_console(ser, 'exit')
-                                send_to_console(ser, 'exit')
+                                # example of switch port conf
+
+                                # opening file with configuration
+                                with open('conf-files/basic_conf.txt') as file:
+                                    # getting commands from list
+                                    content_list = file.readlines()
+                                    stripped_list = [s.strip() for s in content_list]
+
+                                # executing commands from the list
+                                for command in stripped_list:
+                                    send_to_console(ser, command)
+
+                                # send_to_console(ser, 'no')
+                                # send_to_console(ser, 'en')
+                                # send_to_console(ser, 'conf t')
+                                # send_to_console(ser, 'int g1/1')
+                                # send_to_console(ser, 'duplex full')
+                                # send_to_console(ser, 'speed 100')
+                                # send_to_console(ser, 'exit')
+                                # send_to_console(ser, 'exit')
 
                                 # closing connection
                                 ser.close()
                                 print(f"Connection to {ser.name} closed.")
+                                print(decorator_1)
 
                             else:
                                 print('Sorry your device has some starting configuration, we could not help you...')
