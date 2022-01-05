@@ -60,14 +60,18 @@ while running_flag:
                     # User chooses the device, which one he wants to
                     # Completed TASK 186
                     user_device = input("Which device do you want to connect? ")
+                    print(decorator_1)
 
                     # Checking if the device is in the list of devices
                     if user_device in list_of_lists:
+
+                        # asking user if device is already booted
+                        user_boot_time = input("Is your device already booted or has started booting now?"
+                                               "\nType 'booted' if it is ready, type whatever you want if not. ").lower()
+                        print(decorator_1)
                         print(f"Connecting to {user_device} by {COM_string}...")
                         print("Please wait patiently...")
                         print(decorator_1)
-                        # TODO: Connect to Serial Port, Check in LAB on default router
-                        # TODO: Verify from test.py options on router/switch
                         # connection set
                         try:
                             ser = Serial(COM_string, COM_speed)
@@ -76,8 +80,11 @@ while running_flag:
                             # some commands to check the effect
 
                             # waiting for router/switch to boot
-                            # avarage time to boot switch/router some device
-                            sleep(1)
+                            # average time to boot switch/router some device
+                            if user_boot_time == 'booted':
+                                sleep(1)
+                            else:
+                                sleep(240)
                             send_to_console(ser, "\r\n\r")
                             checking_string += send_to_console(ser, "\r\n\r\n")
 
@@ -85,6 +92,7 @@ while running_flag:
                                 print("Your device has not been configured yet. What do you want to do with it?")
                                 print(decorator_1)
                                 # tutaj dalsza kontynuacja wgrywania configu czy czegos tam jeszcze
+
 
                             else:
                                 print('Sorry your device has some starting configuration, we could not help you...')
