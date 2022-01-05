@@ -92,7 +92,19 @@ while running_flag:
                                 print("Your device has not been configured yet. What do you want to do with it?")
                                 print(decorator_1)
                                 # tutaj dalsza kontynuacja wgrywania configu czy czegos tam jeszcze
+                                # commands are working, waiting for basic.conf files
+                                send_to_console(ser, 'no')
+                                send_to_console(ser, 'en')
+                                send_to_console(ser, 'conf t')
+                                send_to_console(ser, 'int g1/1')
+                                send_to_console(ser, 'duplex full')
+                                send_to_console(ser, 'speed 100')
+                                send_to_console(ser, 'exit')
+                                send_to_console(ser, 'exit')
 
+                                # closing connection
+                                ser.close()
+                                print(f"Connection to {ser.name} closed.")
 
                             else:
                                 print('Sorry your device has some starting configuration, we could not help you...')
