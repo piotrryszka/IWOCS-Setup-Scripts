@@ -106,17 +106,9 @@ while running_flag:
                                 for command in stripped_list:
                                     send_to_console(ser, command)
 
-                                # send_to_console(ser, 'no')
-                                # send_to_console(ser, 'en')
-                                # send_to_console(ser, 'conf t')
-                                # send_to_console(ser, 'int g1/1')
-                                # send_to_console(ser, 'duplex full')
-                                # send_to_console(ser, 'speed 100')
-                                # send_to_console(ser, 'exit')
-                                # send_to_console(ser, 'exit')
-
                                 # closing connection
                                 ser.close()
+                                print(f"Your device {user_device} has been configured properly.")
                                 print(f"Connection to {ser.name} closed.")
                                 print(decorator_1)
 
