@@ -131,7 +131,8 @@ import subprocess
 #
 # # Print the current working directory
 # print("Current working directory: {0}".format(os.getcwd()))
-with open('../conf-files/basic_conf.txt') as file:
+test_input = input("Wprowadz nazwe urzadzenia, ktore chcesz skonfigurowac:")
+with open(f'../conf-files/{test_input}.txt') as file:
     content_list = file.readlines()
     stripped = [s.strip() for s in content_list]
     print(content_list)

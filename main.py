@@ -102,6 +102,13 @@ while running_flag:
                                     content_list = file.readlines()
                                     stripped_list = [s.strip() for s in content_list]
 
+                                # opening dedicated file with configuration
+                                
+                                # with open(f'conf-files/{user_device}.txt') as file:
+                                #     # getting commands from list
+                                #     content_list = file.readlines()
+                                #     stripped_list = [s.strip() for s in content_list]
+
                                 # executing commands from the list
                                 for command in stripped_list:
                                     send_to_console(ser, command)
