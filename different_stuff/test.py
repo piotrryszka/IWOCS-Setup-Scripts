@@ -143,14 +143,31 @@ import subprocess
 # print(lines)
 
 # trying to catch up logs from putty
-def send_to_console(ser_fun: serial.Serial, command: str, wait_time: float = 0.5):
-    command_to_send = command + "\r\n"
-    ser_fun.write(command_to_send.encode('utf-8'))
-    sleep(wait_time)
-    return ser_fun.read(ser_fun.inWaiting()).decode('utf-8')
+# def send_to_console(ser_fun: serial.Serial, command: str, wait_time: float = 0.5):
+#     command_to_send = command + "\r\n"
+#     ser_fun.write(command_to_send.encode('utf-8'))
+#     sleep(wait_time)
+#     return ser_fun.read(ser_fun.inWaiting()).decode('utf-8')
 
-test_input  = input("Wprowadz cos testowego: ")
-with open(f'../different_stuff/{test_input}.txt', 'w') as file:
-    file.write(send_to_console())
+test_input = input("Wprowadz cos testowego: ")
+with open(f'../logs/{test_input}.txt', 'a') as file:
+    for x in range(0, 10):
+        file.write('rokoko')
+        file.write('\n')
 
+    # test in lab how saving logs to files should work
+    # file.write(send_to_console())
 
+test_opening = input("Co otworzyc: ")
+
+with open(f'../logs/{test_opening}.txt', 'r') as file:
+    # cały plik sobie zczytuje
+    data = file.read()
+
+    # caly plik zczytuje linia po linii do jednej duzej listy, problem z parsowaniem
+    data_list = file.readlines()
+    # stripowanie tej listy
+    stripped_list = [s.strip() for s in data_list]
+    print(stripped_list)
+
+    print(data)
