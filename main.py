@@ -103,7 +103,7 @@ while running_flag:
                                     stripped_list = [s.strip() for s in content_list]
 
                                 # opening dedicated file with configuration
-                                
+
                                 # with open(f'conf-files/{user_device}.txt') as file:
                                 #     # getting commands from list
                                 #     content_list = file.readlines()

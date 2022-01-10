@@ -131,13 +131,26 @@ import subprocess
 #
 # # Print the current working directory
 # print("Current working directory: {0}".format(os.getcwd()))
-test_input = input("Wprowadz nazwe urzadzenia, ktore chcesz skonfigurowac:")
-with open(f'../conf-files/{test_input}.txt') as file:
-    content_list = file.readlines()
-    stripped = [s.strip() for s in content_list]
-    print(content_list)
-    print(stripped)
-
-# x_file = open('links.txt')
+# test_input = input("Wprowadz nazwe urzadzenia, ktore chcesz skonfigurowac:")
+# with open(f'../conf-files/{test_input}.txt') as file:
+#     content_list = file.readlines()
+#     stripped = [s.strip() for s in content_list]
+#     print(content_list)
+#     print(stripped)
+#
+# # x_file = open('links.txt')
 # lines = x_file.readlines()
 # print(lines)
+
+# trying to catch up logs from putty
+def send_to_console(ser_fun: serial.Serial, command: str, wait_time: float = 0.5):
+    command_to_send = command + "\r\n"
+    ser_fun.write(command_to_send.encode('utf-8'))
+    sleep(wait_time)
+    return ser_fun.read(ser_fun.inWaiting()).decode('utf-8')
+
+test_input  = input("Wprowadz cos testowego: ")
+with open(f'../different_stuff/{test_input}.txt', 'w') as file:
+    file.write(send_to_console())
+
+
