@@ -1,7 +1,9 @@
 # imports
-import serial
 from serial import Serial
 from time import sleep
+from lib.commands import send_to_console
+from lib.operations import opening_device_list, reading_conf_files
+from lib.booting import checking_booting
 
 # Program flags:
 running_flag = True  # main flag, running program
@@ -11,16 +13,6 @@ device_flag = True  # flag checking device
 
 # Variables:
 COM_speed = 9600
-
-
-# functions
-# sending commands to device console
-def send_to_console(ser_fun: serial.Serial, command: str, wait_time: float = 0.5):
-    command_to_send = command + "\r\n"
-    ser_fun.write(command_to_send.encode('utf-8'))
-    sleep(wait_time)
-    return ser_fun.read(ser_fun.inWaiting()).decode('utf-8')
-
 
 # decorators
 # some simple tricks for better user experience
@@ -48,14 +40,11 @@ while running_flag:
                 COM_string = "COM" + user_COM
 
                 # Creating a list with all the possible devices
-                with open('static_files/test.txt', 'r') as file_devices:
-                    lines = file_devices.read()
-                    list_of_lists = lines.splitlines()
-                    file_devices.close()
+                device_list = opening_device_list()
 
                 while device_flag:
                     # Printing the possible devices
-                    print(*list_of_lists, sep=', ')
+                    print(*device_list, sep=', ')
 
                     # User chooses the device, which one he wants to
                     # Completed TASK 186
@@ -63,9 +52,9 @@ while running_flag:
                     print(decorator_1)
 
                     # Checking if the device is in the list of devices
-                    if user_device in list_of_lists:
-
+                    if user_device in device_list:
                         # asking user if device is already booted
+                        # poprawic to na 0 i 1
                         user_boot_time = input("Is your device already booted or has started booting now?"
                                                "\nType 'booted' if it is ready, type whatever you want if not. ").lower()
                         print(decorator_1)
@@ -74,40 +63,26 @@ while running_flag:
                         print(decorator_1)
                         # connection set
                         try:
+                            # to tez metoda
                             ser = Serial(COM_string, COM_speed)
 
                             checking_string = ''
                             # some commands to check the effect
 
                             # waiting for router/switch to boot
-                            # average time to boot switch/router some device
-                            if user_boot_time == 'booted':
-                                sleep(1)
-                            else:
-                                # 4 minutes is enough time to boot switch/router
-                                print("It will take about 4 minutes...")
-                                sleep(240)
+                            checking_booting(user_boot_time)
+
                             send_to_console(ser, "\r\n\r")
                             checking_string += send_to_console(ser, "\r\n\r\n")
 
                             if 'initial configuration' in checking_string:
                                 print("Your device has not been configured yet. What do you want to do with it?")
                                 print(decorator_1)
-                                # commands are working, waiting for basic.conf files
-                                # example of switch port conf
 
                                 # opening file with configuration
-                                with open('conf-files/basic_conf.txt') as file:
-                                    # getting commands from list
-                                    content_list = file.readlines()
-                                    stripped_list = [s.strip() for s in content_list]
+                                stripped_list = reading_conf_files()
 
                                 # opening dedicated file with configuration
-
-                                # with open(f'conf-files/{user_device}.txt') as file:
-                                #     # getting commands from list
-                                #     content_list = file.readlines()
-                                #     stripped_list = [s.strip() for s in content_list]
 
                                 # executing commands from the list
                                 for command in stripped_list:
@@ -132,14 +107,6 @@ while running_flag:
                             print("Probably your port is used by different process... ")
                             print(decorator_1)
 
-
-                            # some basic commands
-                        # testowa_lista.append(send_to_console(ser, "\nenable"))
-                        # testowa_lista.append(send_to_console(ser, "sh run", wait_time=10))
-                        # for i in range(1, 10):
-                        #     send_to_console(ser, " ")
-                        # testowa_lista.append(send_to_console(ser, "\n"))
-                        # print(testowa_lista)
                     elif user_device == "break":
                         break
                     else:

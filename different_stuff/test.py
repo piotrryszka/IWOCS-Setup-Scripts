@@ -103,11 +103,7 @@ import subprocess
 # from time import sleep
 #
 #
-# def send_to_console(ser: serial.Serial, command: str, wait_time: float = 0.5):
-#     command_to_send = command + "\r"
-#     ser.write(command_to_send.encode('utf-8'))
-#     sleep(wait_time)
-#     print(ser.read(ser.inWaiting()).decode('utf-8'), end="")
+# from lib.commands import send_to_console
 #
 #
 # with serial.Serial("COM5", timeout=1) as ser:
@@ -149,25 +145,31 @@ import subprocess
 #     sleep(wait_time)
 #     return ser_fun.read(ser_fun.inWaiting()).decode('utf-8')
 
-test_input = input("Wprowadz cos testowego: ")
-with open(f'../logs/{test_input}.txt', 'a') as file:
-    for x in range(0, 10):
-        file.write('rokoko')
-        file.write('\n')
+# test_input = input("Wprowadz cos testowego: ")
+# with open(f'../logs/{test_input}.txt', 'a') as file:
+#     for x in range(1, 11):
+#         file.write(f'ip address 192.168.1.{x}')
+#         file.write('\n')
+#
+#     # test in lab how saving logs to files should work
+#     # file.write(send_to_console())
+#
+# test_opening = input("Co otworzyc: ")
+#
+# with open(f'../logs/{test_opening}.txt', 'r') as file:
+#     # cały plik sobie zczytuje
+#     #data = file.read()
+#
+#     # caly plik zczytuje linia po linii do jednej duzej listy, problem z parsowaniem
+#     data_list = file.readlines()
+#     # stripowanie tej listy
+#     stripped_list = [s.strip() for s in data_list]
+#     print(stripped_list)
 
-    # test in lab how saving logs to files should work
-    # file.write(send_to_console())
+    #print(data)
 
-test_opening = input("Co otworzyc: ")
-
-with open(f'../logs/{test_opening}.txt', 'r') as file:
-    # cały plik sobie zczytuje
-    data = file.read()
-
-    # caly plik zczytuje linia po linii do jednej duzej listy, problem z parsowaniem
-    data_list = file.readlines()
-    # stripowanie tej listy
-    stripped_list = [s.strip() for s in data_list]
-    print(stripped_list)
-
-    print(data)
+with open('../static_files/test.txt', 'r') as file_devices:
+                    lines = file_devices.read()
+                    list_of_lists = lines.splitlines()
+                    print(list_of_lists)
+                    file_devices.close()
