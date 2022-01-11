@@ -10,6 +10,7 @@ running_flag = True  # main flag, running program
 system_flag = True  # flag about type of system
 COM_flag = True  # flag checking COM
 device_flag = True  # flag checking device
+user_boot_flag = True
 
 # Variables:
 COM_speed = 9600
@@ -23,7 +24,7 @@ decorator_1 = '-----------------------------------------------------------------
 while running_flag:
     print(decorator_1)
     print("IMPORTANT ISSUE!!!\n"
-          "If you want to leave any part of the program type break in your input!")
+          "If you want to leave any part of the program type '0' [zero] in your input!")
     print(decorator_1)
     # question about complete system or one module TASK 184
     user_system = input("It is your system a complete one or it is just one module? "
@@ -35,7 +36,7 @@ while running_flag:
             user_COM = input("Which COM port are you using?"
                              "\nType number of your COM port: ").lower()
             print(decorator_1)
-            if user_COM.isnumeric():
+            if user_COM.isnumeric() and user_COM != '0':
                 # Creating string for connection to the device
                 COM_string = "COM" + user_COM
 
@@ -55,27 +56,28 @@ while running_flag:
                     if user_device in device_list:
                         # asking user if device is already booted
                         # poprawic to na 0 i 1
-                        user_boot_time = input("Is your device already booted or has started booting now?"
-                                               "\nType 'booted' if it is ready, type whatever you want if not. ").lower()
+                        user_boot_time = int(input("Is your device already booted or has started booting now?"
+                                               "\nType '1' if it is ready, type '2' if not: "))
                         print(decorator_1)
                         print(f"Connecting to {user_device} by {COM_string}...")
                         print("Please wait patiently...")
                         print(decorator_1)
+                        
                         # connection set
                         try:
-                            # to tez metoda
                             ser = Serial(COM_string, COM_speed)
 
                             checking_string = ''
                             # some commands to check the effect
 
                             # waiting for router/switch to boot
-                            checking_booting(user_boot_time)
+                            user_boot_flag = checking_booting(user_boot_time)
 
+                            # checking initial configuration prompt
                             send_to_console(ser, "\r\n\r")
                             checking_string += send_to_console(ser, "\r\n\r\n")
 
-                            if 'initial configuration' in checking_string:
+                            if 'initial configuration' in checking_string and user_boot_flag:
                                 print("Your device has not been configured yet. What do you want to do with it?")
                                 print(decorator_1)
 
@@ -101,18 +103,19 @@ while running_flag:
                                 # closing connection
                                 ser.close()
                                 print(f"Connection to {ser.name} closed.")
+                                print(decorator_1)
                                 break
                         except:
                             print("Sorry, you have provided bad info. Check your ports and device.")
                             print("Probably your port is used by different process... ")
                             print(decorator_1)
 
-                    elif user_device == "break":
+                    elif user_device == str(0):
                         break
                     else:
                         print("Sorry, your device is not supported by this program. Try again.")
 
-            elif user_COM == "break":
+            elif user_COM == str(0):
                 break
             else:
                 print("It is not number. Please try again.")
