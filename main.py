@@ -62,7 +62,7 @@ while running_flag:
                         print(f"Connecting to {user_device} by {COM_string}...")
                         print("Please wait patiently...")
                         print(decorator_1)
-                        
+
                         # connection set
                         try:
                             ser = Serial(COM_string, COM_speed)
