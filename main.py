@@ -1,7 +1,7 @@
 # imports
 from serial import Serial
 from time import sleep
-from lib.commands import send_to_console
+from lib.commands import send_to_console, checking_switch_ports
 from lib.operations import opening_device_list, reading_conf_files
 from lib.booting import checking_booting
 
@@ -67,6 +67,9 @@ while running_flag:
                             # waiting for router/switch to boot
                             user_boot_flag = checking_booting(ser)
 
+                            # trying to count number of ports
+                            checking_switch_ports(ser)
+
                             if user_boot_flag:
                                 print("Your device has not been configured yet. What do you want to do with it?")
                                 print(decorator_1)
@@ -75,6 +78,7 @@ while running_flag:
                                 stripped_list = reading_conf_files()
 
                                 # opening dedicated file with configuration
+                                #TODO: in the future
 
                                 # executing commands from the list
                                 for command in stripped_list:
@@ -98,6 +102,7 @@ while running_flag:
                         except:
                             print("Sorry, you have provided bad info. Check your ports and device.")
                             print("Probably your port is used by different process... ")
+                            print("Maybe turn off the Putty client!")
                             print(decorator_1)
 
                     elif user_device == str(0):
