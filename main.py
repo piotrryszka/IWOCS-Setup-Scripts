@@ -12,12 +12,12 @@ COM_flag = True  # flag checking COM
 device_flag = True  # flag checking device
 user_boot_flag = True
 
-# Variables:
+# FIXED Variables:
 COM_speed = 9600
 
 # decorators
 # some simple tricks for better user experience
-decorator_1 = '----------------------------------------------------------------------'
+decorator_1 = '|<----------------------------------------------------------------------------------------------------->|'
 
 
 # main project
