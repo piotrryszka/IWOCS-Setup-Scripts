@@ -1,7 +1,7 @@
 # functions working on txt static_files
 
 def opening_device_list():
-    with open('static_files/test.txt', 'r') as file_devices:
+    with open('static_files/project_names_of_devices.txt', 'r') as file_devices:
                         lines = file_devices.read()
                         list_of_lists = lines.splitlines()
                         return list_of_lists
