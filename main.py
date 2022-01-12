@@ -55,9 +55,6 @@ while running_flag:
                     # Checking if the device is in the list of devices
                     if user_device in device_list:
                         # asking user if device is already booted
-                        # poprawic to na 0 i 1
-                        user_boot_time = int(input("Is your device already booted or has started booting now?"
-                                               "\nType '1' if it is ready, type '2' if not: "))
                         print(decorator_1)
                         print(f"Connecting to {user_device} by {COM_string}...")
                         print("Please wait patiently...")
