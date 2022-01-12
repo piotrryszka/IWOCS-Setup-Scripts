@@ -18,7 +18,9 @@ def checking_switch_ports(ser_port):
     checking_string += send_to_console(ser_port, 'sh run', 5)
     checking_string += send_to_console(ser_port, '\n')
     number_gigabit = checking_string.count('GigabitEthernet')
-    number_fast = checking_string.count('GigabitEthernet')
+    number_fast = checking_string.count('FastEthernet')
+    port_dictionary = {'Gigabit': number_gigabit,
+                       'Fast': number_fast
+                        }
     send_to_console(ser_port, 'term len 24')
-    print(number_gigabit)
-    print(number_fast)
+    return port_dictionary

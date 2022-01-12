@@ -68,7 +68,8 @@ while running_flag:
                             user_boot_flag = checking_booting(ser)
 
                             # trying to count number of ports
-                            checking_switch_ports(ser)
+                            device_ports = checking_switch_ports(ser)
+                            print(device_ports)
 
                             if user_boot_flag:
                                 print("Your device has not been configured yet. What do you want to do with it?")
