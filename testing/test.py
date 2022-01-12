@@ -1,5 +1,5 @@
-import os
-from contextlib import redirect_stdout
+# import os
+# from contextlib import redirect_stdout
 # from pythonping import ping
 # import subprocess
 # stream = os.popen('echo Returned output')
@@ -8,8 +8,8 @@ from contextlib import redirect_stdout
 
 # ping('www.google.com', verbose=True)
 # essa = os.system('ipconfig')
-
-import subprocess
+#
+# import subprocess
 
 # # ZNAJDYWANIE slow w wypluwaniu z komend
 # import subprocess
@@ -168,8 +168,8 @@ import subprocess
 
     #print(data)
 
-with open('../static_files/test.txt', 'r') as file_devices:
-                    lines = file_devices.read()
-                    list_of_lists = lines.splitlines()
-                    print(list_of_lists)
-                    file_devices.close()
+# with open('../static_files/test.txt', 'r') as file_devices:
+#                     lines = file_devices.read()
+#                     list_of_lists = lines.splitlines()
+#                     print(list_of_lists)
+#                     file_devices.close()
