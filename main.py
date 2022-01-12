@@ -67,17 +67,10 @@ while running_flag:
                         try:
                             ser = Serial(COM_string, COM_speed)
 
-                            checking_string = ''
-                            # some commands to check the effect
-
                             # waiting for router/switch to boot
-                            user_boot_flag = checking_booting(user_boot_time)
+                            user_boot_flag = checking_booting(ser)
 
-                            # checking initial configuration prompt
-                            send_to_console(ser, "\r\n\r")
-                            checking_string += send_to_console(ser, "\r\n\r\n")
-
-                            if 'initial configuration' in checking_string and user_boot_flag:
+                            if user_boot_flag:
                                 print("Your device has not been configured yet. What do you want to do with it?")
                                 print(decorator_1)
 
