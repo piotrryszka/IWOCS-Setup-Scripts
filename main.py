@@ -11,6 +11,7 @@ system_flag = True  # flag about type of system
 COM_flag = True  # flag checking COM
 device_flag = True  # flag checking device
 user_boot_flag = True
+ip_flag = False
 
 # FIXED Variables:
 COM_speed = 9600
@@ -41,7 +42,13 @@ while running_flag:
                 COM_string = "COM" + user_COM
 
                 # checking ip address but need to be commented
-                ip_set = checking_ip_address()
+                while ip_flag == False:
+                    ip_set = checking_ip_address()
+                    if ip_set == True:
+                        ip_flag = True
+                ip_flag = False
+
+                # this command need to be deleted before releasing
                 #ip_set = True
                 print(decorator_1)
 

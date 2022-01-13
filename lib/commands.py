@@ -45,6 +45,7 @@ def checking_ip_address():
             if ip_address in output_ipconfig:
                 IP_flag = True
                 print("Your IP address has been configured properly...")
+                break
             else:
                 IP_flag = False
                 print("Check once again your IP address and your port...")
