@@ -11,13 +11,13 @@
 #
 # import subprocess
 
-# # ZNAJDYWANIE slow w wypluwaniu z komend
-# import subprocess
-# output = str(subprocess.check_output("ipconfig", shell=True)).strip()
-# word = 'lokalne'
-# if output.find(word):
-#     print("mamy to")
-# print(output)
+# ZNAJDYWANIE slow w wypluwaniu z komend
+import subprocess
+output = str(subprocess.check_output("ipconfig", shell=True)).strip()
+word = 'lokalne'
+if output.find(word):
+    print("mamy to")
+print(output)
 #
 # # TODO Polaczenie sie po COMIE i sprawdzenie z konsoli czy juz urzadzenie bylo skonifgurowane,
 # # TODO to juz lab bo, ale pomysl jest, porobienie folderow na pliki odpowiednio, ale to po swietach

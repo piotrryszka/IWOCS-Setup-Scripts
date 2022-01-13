@@ -1,7 +1,7 @@
 # imports
 from serial import Serial
 from time import sleep
-from lib.commands import send_to_console, checking_switch_ports
+from lib.commands import send_to_console, checking_switch_ports, checking_ip_address
 from lib.operations import opening_device_list, reading_conf_files
 from lib.booting import checking_booting
 
@@ -40,10 +40,15 @@ while running_flag:
                 # Creating string for connection to the device
                 COM_string = "COM" + user_COM
 
+                # checking ip address but need to be commented
+                ip_set = checking_ip_address()
+                #ip_set = True
+                print(decorator_1)
+
                 # Creating a list with all the possible devices
                 device_list = opening_device_list()
 
-                while device_flag:
+                while device_flag and ip_set:
                     # Printing the possible devices
                     print(*device_list, sep=', ')
 
