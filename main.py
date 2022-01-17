@@ -42,11 +42,11 @@ while running_flag:
                 COM_string = "COM" + user_COM
 
                 # checking ip address but need to be commented
-                while ip_flag == False:
-                    ip_set = checking_ip_address()
-                    if ip_set == True:
-                        ip_flag = True
-                ip_flag = False
+#                 while ip_flag == False:
+#                     ip_set = checking_ip_address()
+#                     if ip_set == True:
+#                         ip_flag = True
+#                 ip_flag = False
 
                 # this command need to be deleted before releasing
                 ip_set = True
@@ -57,12 +57,23 @@ while running_flag:
 
                 while device_flag and ip_set:
                     # Printing the possible devices
-                    print(*device_list, sep=', ')
+                    # print(*device_list, sep=', ')
 
                     # User chooses the device, which one he wants to
                     # Completed TASK 186
-                    user_device = input("Which device do you want to connect? ")
-                    print(decorator_1)
+                    choosing_device = True
+                    while choosing_device == True:
+                        user_device = input("Which device do you want to connect? ").upper()
+                        user_list = []
+                        for dev in device_list:
+                            if user_device in dev:
+                                user_list.append(dev)
+                        print(decorator_1)
+                        print("Your list of possible devices to configure: ")
+                        print(*user_list, sep=', ')
+                        print(decorator_1)
+                        if user_device in user_list:
+                            choosing_device = False
 
                     # Checking if the device is in the list of devices
                     if user_device in device_list:
