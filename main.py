@@ -4,6 +4,7 @@ from time import sleep
 from lib.commands import send_to_console, checking_switch_ports, checking_ip_address
 from lib.operations import opening_device_list, reading_conf_files
 from lib.booting import checking_booting
+from lib.languages import listing_languages
 
 # Program flags:
 running_flag = True  # main flag, running program
@@ -12,6 +13,7 @@ COM_flag = True  # flag checking COM
 device_flag = True  # flag checking device
 user_boot_flag = True
 ip_flag = False
+proper_language = True
 
 # FIXED Variables:
 COM_speed = 9600
@@ -23,7 +25,19 @@ decorator_1 = '|<---------------------------------------------------------------
 
 # main project
 while running_flag:
-    print(decorator_1)
+
+    # choosing language
+    while proper_language:
+        print("Available languages are presented below:")
+        languages = listing_languages()
+        print(*languages, sep = ', ')
+        user_language = input("Please choose one of possible languages: ").lower()
+        if user_language in languages:
+            proper_language = False
+        else:
+            print("You have provided wrong language, try again...")
+        print(decorator_1)
+        
     print("IMPORTANT ISSUE!!!\n"
           "If you want to leave any part of the program type '0' [zero] in your input!")
     print(decorator_1)
@@ -56,9 +70,6 @@ while running_flag:
                 device_list = opening_device_list()
 
                 while device_flag and ip_set:
-                    # Printing the possible devices
-                    # print(*device_list, sep=', ')
-
                     # User chooses the device, which one he wants to
                     # Completed TASK 186
                     choosing_device = True
