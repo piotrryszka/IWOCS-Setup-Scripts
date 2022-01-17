@@ -12,12 +12,12 @@
 # import subprocess
 
 # ZNAJDYWANIE slow w wypluwaniu z komend
-import subprocess
-output = str(subprocess.check_output("ipconfig", shell=True)).strip()
-word = 'lokalne'
-if output.find(word):
-    print("mamy to")
-print(output)
+# import subprocess
+# output = str(subprocess.check_output("ipconfig", shell=True)).strip()
+# word = 'lokalne'
+# if output.find(word):
+#     print("mamy to")
+# print(output)
 #
 # # TODO Polaczenie sie po COMIE i sprawdzenie z konsoli czy juz urzadzenie bylo skonifgurowane,
 # # TODO to juz lab bo, ale pomysl jest, porobienie folderow na pliki odpowiednio, ale to po swietach
@@ -173,3 +173,13 @@ print(output)
 #                     list_of_lists = lines.splitlines()
 #                     print(list_of_lists)
 #                     file_devices.close()
+import logging
+
+logging.basicConfig(filename='logname.txt',
+                            filemode='a',
+                            format='%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s',
+                            datefmt='%H:%M:%S',
+                            level=logging.DEBUG)
+
+logging.info("Running Urban Planning")
+logging.info("ESASASASA")

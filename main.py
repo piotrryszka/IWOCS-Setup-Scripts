@@ -49,7 +49,7 @@ while running_flag:
                 ip_flag = False
 
                 # this command need to be deleted before releasing
-                #ip_set = True
+                ip_set = True
                 print(decorator_1)
 
                 # Creating a list with all the possible devices
