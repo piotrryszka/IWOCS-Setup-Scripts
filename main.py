@@ -4,7 +4,7 @@ from time import sleep
 from lib.commands import send_to_console, checking_switch_ports, checking_ip_address
 from lib.operations import opening_device_list, reading_conf_files
 from lib.booting import checking_booting
-from lib.languages import listing_languages
+from lib.languages import listing_languages, reading_language
 
 # Program flags:
 running_flag = True  # main flag, running program
@@ -27,6 +27,7 @@ decorator_1 = '|<---------------------------------------------------------------
 while running_flag:
 
     # choosing language
+    # it has to be in english
     while proper_language:
         print("Available languages are presented below:")
         languages = listing_languages()
@@ -34,12 +35,13 @@ while running_flag:
         user_language = input("Please choose one of possible languages: ").lower()
         if user_language in languages:
             proper_language = False
+            # making a list dictionary with expressions in chosen language
+            lang_expressions = reading_language(user_language)
         else:
             print("You have provided wrong language, try again...")
         print(decorator_1)
-        
-    print("IMPORTANT ISSUE!!!\n"
-          "If you want to leave any part of the program type '0' [zero] in your input!")
+
+    print(lang_expressions['information_prompt'])
     print(decorator_1)
     # question about complete system or one module TASK 184
     user_system = input("It is your system a complete one or it is just one module? "
