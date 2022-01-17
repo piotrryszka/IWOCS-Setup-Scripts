@@ -32,6 +32,7 @@ while running_flag:
         print("Available languages are presented below:")
         languages = listing_languages()
         print(*languages, sep = ', ')
+        print(decorator_1)
         user_language = input("Please choose one of possible languages: ").lower()
         if user_language in languages:
             proper_language = False
@@ -44,14 +45,12 @@ while running_flag:
     print(lang_expressions['information_prompt'])
     print(decorator_1)
     # question about complete system or one module TASK 184
-    user_system = input("It is your system a complete one or it is just one module? "
-                        "\nType 'Yes' if system complete, if not write anything else: ").lower()
+    user_system = input(lang_expressions['module_question']).lower()
     print(decorator_1)
-    if user_system == 'yes':
+    if user_system == '1':
         while COM_flag:
             # question about which COM port is user using TASK 185
-            user_COM = input("Which COM port are you using?"
-                             "\nType number of your COM port: ").lower()
+            user_COM = input(lang_expressions['port_question']).lower()
             print(decorator_1)
             if user_COM.isnumeric() and user_COM != '0':
                 # Creating string for connection to the device
@@ -76,13 +75,13 @@ while running_flag:
                     # Completed TASK 186
                     choosing_device = True
                     while choosing_device == True:
-                        user_device = input("Which device do you want to connect? ").upper()
+                        user_device = input(lang_expressions['device_question']).upper()
                         user_list = []
                         for dev in device_list:
                             if user_device in dev:
                                 user_list.append(dev)
                         print(decorator_1)
-                        print("Your list of possible devices to configure: ")
+                        print(lang_expressions['listing_devices'])
                         print(*user_list, sep=', ')
                         print(decorator_1)
                         if user_device in user_list:
