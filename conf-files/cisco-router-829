@@ -1,0 +1,74 @@
+!
+hostname xxx
+!
+no logging console
+enable secret 5 $1$5U9c$efCvPV56d1Bc8r6MEtP6r/
+!
+no aaa new-model
+!
+clock timezone GMT 0 0
+!
+no ip domain lookup
+ip domain name xxx.setup.technipfmc.com
+username admin privilege 15 secret 5 $1$6snM$Tb.k339ObxUGiWfuf1iYd1
+!
+lldp run
+no cdp run
+!
+interface GigabitEthernet3
+ description SETUP-VLAN-1
+ switchport access vlan 1
+ switchport mode access
+ no shutdown
+!
+interface GigabitEthernet4
+ description SETUP-VLAN-1
+ switchport access vlan 1
+ switchport mode access
+ no shutdown
+!
+interface Vlan1
+ ip address x.x.x.x y.y.y.y
+ no shutdown
+!
+ip ssh version 2
+!
+banner motd ^C
+                            TechnipFMC                      
+         -------------------------------------------------
+                 INITIAL TEMPORARY SCRIPT CONFIG
+         -------------------------------------------------
+^C
+!
+line con 0
+ logging synchronous
+ stopbits 1
+line 1 2
+ stopbits 1
+line 3
+ script dialer lte
+ no exec
+ transport output lat pad telnet rlogin lapb-ta mop udptn v120 ssh
+line 4
+ no activation-character
+ no exec
+ transport preferred none
+ transport input all
+ transport output lat pad telnet rlogin lapb-ta mop udptn v120 ssh
+line 8
+ no exec
+ transport output lat pad telnet rlogin lapb-ta mop udptn v120 ssh
+line 1/3 1/6
+ transport preferred none
+ transport output none
+ stopbits 1
+line vty 0 4
+ logging synchronous
+ transport input ssh
+line vty 5 15
+ logging synchronous
+ transport input ssh
+!
+no scheduler max-task-time
+!
+end

@@ -1,0 +1,7 @@
+Config/Device assignemnts
+---------------------------------------------------------------------
+
+SDG - firewall (2 models) -> cisco-firewall-ASA or cisco-firewall-FPR based on "sh lic udi"
+TDS, MS*, TAS - switch -> cisco-switch
+ETAS - router 1111 -> cisco-router-c1111
+TIR - router 829 -> cisco-router-829

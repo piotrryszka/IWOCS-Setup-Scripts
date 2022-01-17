@@ -1,0 +1,50 @@
+!
+hostname xxx
+domain-name xxx.setup.technipfmc.com
+enable password $sha512$5000$OtI3NHW/Icuej6P08ewhAA==$EONwCHiftpN2rTr4pBEpCg== pbkdf2
+names
+no mac-address auto
+!
+interface GigabitEthernet0/3
+ nameif SETUP
+ security-level 0
+ ip address x.x.x.x y.y.y.y
+ no shutdown
+!
+banner motd                            TechnipFMC                      
+banner motd         -------------------------------------------------
+banner motd                 INITIAL TEMPORARY SCRIPT CONFIG
+banner motd         -------------------------------------------------
+ftp mode passive
+clock timezone GMT 0
+pager lines 24
+logging enable
+logging timestamp rfc5424
+logging trap notifications
+logging asdm notifications
+logging device-id hostname
+!
+icmp unreachable rate-limit 1 burst-size 1
+!
+user-identity default-domain LOCAL
+aaa authentication ssh console LOCAL 
+aaa authentication login-history
+http server enable
+http x.x.x.x y.y.y.y SETUP
+ssh timeout 5
+ssh version 2
+ssh key-exchange group dh-group1-sha1
+ssh x.x.x.x y.y.y.y SETUP
+console timeout 0
+!
+username daffy password $sha512$5000$rePwv+dRRuqjd8WtOfk5dw==$N7edju6mM4egHfnTyAyZ2w== pbkdf2 privilege 5
+username walter password $sha512$5000$BqVkGFqZQXJ+F+9tO25NGQ==$y7AjDzHC3gI1zoExO1fxeA== pbkdf2 privilege 15
+username marvin password $sha512$5000$hUDsqswHyFV4DheAJ3ejZQ==$KIk1ynYuUgUdbsxURwG9YA== pbkdf2 privilege 15
+!
+!
+prompt hostname context 
+no call-home reporting anonymous
+!
+crypto key generate rsa mod 2048
+!
+: end

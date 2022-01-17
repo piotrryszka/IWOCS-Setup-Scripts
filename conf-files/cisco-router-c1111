@@ -1,0 +1,67 @@
+!
+hostname xxx
+!
+logging buffered 16384 informational
+enable secret 5 $1$vhjr$Zr37SWDYBA8I9LmagrxJg1
+!
+no aaa new-model
+clock timezone GMT 0
+!
+no ip domain lookup
+ip domain name xxx.setup.technipfmc.com
+!
+vtp mode off									   
+!
+license accept end user agreement
+no license smart enable
+!
+diagnostic bootup level minimal
+!
+spanning-tree extend system-id
+!
+!
+username walter privilege 15 secret 5 $1$u/LQ$NtiHcHtmKzWwA1aed/XoQ/
+username marvin privilege 15 secret 5 $1$xegf$IQ4NS5Z4evQ6LEBDGI3l90
+username daffy privilege 5 secret 5 $1$/6pG$YpDyPemQiW/4Mtpj.EBpR0
+!
+redundancy
+ mode none
+!
+vlan internal allocation policy ascending
+!
+lldp run
+!
+interface GigabitEthernet0/1/7
+ description SETUP-VLAN-1
+ switchport access vlan 1
+ switchport mode access
+ storm-control broadcast level 20.00
+ storm-control multicast level 20.00
+ storm-control action shutdown
+ no shutdown
+!
+interface Vlan1
+ ip address x.x.x.x y.y.y.y
+ no shutdown
+!
+ip ssh version 2
+!
+banner motd ^C
+                            TechnipFMC                      
+         -------------------------------------------------
+                 INITIAL TEMPORARY SCRIPT CONFIG
+         -------------------------------------------------
+^C
+!
+line con 0
+ logging synchronous
+ transport input none
+ stopbits 1
+line vty 0 4
+ logging synchronous
+ login local
+ transport input ssh
+!
+crypto key generate rsa mod 2048
+!
+end
