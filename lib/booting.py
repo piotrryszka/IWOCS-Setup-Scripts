@@ -9,7 +9,7 @@ def checking_booting(port):
     while correct_flag == False:
         verifying_string += send_to_console(port, "\r\n\r")
         # to discuss how often to refresh computing vs user experience
-        sleep(10)
+        sleep(3)
         counter += 1
         if 'initial configuration' in verifying_string:
             correct_flag = True

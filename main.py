@@ -57,11 +57,11 @@ while running_flag:
                 COM_string = "COM" + user_COM
 
                 # checking ip address but need to be commented
-                while ip_flag == False:
-                    ip_set = checking_ip_address(lang_expressions)
-                    if ip_set == True:
-                        ip_flag = True
-                ip_flag = False
+#                 while ip_flag == False:
+#                     ip_set = checking_ip_address(lang_expressions)
+#                     if ip_set == True:
+#                         ip_flag = True
+#                 ip_flag = False
 
                 # this command need to be deleted before releasing
                 ip_set = True
