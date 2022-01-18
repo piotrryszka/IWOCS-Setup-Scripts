@@ -1,6 +1,6 @@
 !
 hostname xxx
-domain-name xxx.setup.technipfmc.com
+domain-name setup.technipfmc.com
 enable password $sha512$5000$OtI3NHW/Icuej6P08ewhAA==$EONwCHiftpN2rTr4pBEpCg== pbkdf2
 names
 no mac-address auto

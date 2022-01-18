@@ -9,7 +9,7 @@ no aaa new-model
 clock timezone GMT 0 0
 !
 no ip domain lookup
-ip domain name xxx.setup.technipfmc.com
+ip domain name setup.technipfmc.com
 username admin privilege 15 secret 5 $1$6snM$Tb.k339ObxUGiWfuf1iYd1
 !
 lldp run

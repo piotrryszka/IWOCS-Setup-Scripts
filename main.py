@@ -5,6 +5,7 @@ from lib.commands import send_to_console, checking_switch_ports, checking_ip_add
 from lib.operations import opening_device_list, reading_conf_files
 from lib.booting import checking_booting
 from lib.languages import listing_languages, reading_language
+import sys
 
 # Program flags:
 running_flag = True  # main flag, running program
@@ -21,7 +22,7 @@ COM_speed = 9600
 # decorators
 # some simple tricks for better user experience
 decorator_1 = '|<----------------------------------------------------------------------------------------------------->|'
-
+#sys.stdout = open("test.txt", "w")
 
 # main project
 while running_flag:
@@ -156,3 +157,5 @@ while running_flag:
     else:
         print(lang_expressions['not_complete'])
         running_flag = False
+
+    #sys.stdout.close()

@@ -15,7 +15,7 @@ no ip source-route
 ip routing
 !
 no ip domain-lookup
-ip domain-name xxx.setup.technipfmc.com
+ip domain-name setup.technipfmc.com
 vtp mode off
 !
 license boot level ipservices
