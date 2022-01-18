@@ -19,6 +19,8 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                               'good_ip': "Your IP address has been configured properly...",
                               'again_ip': "Check once again your IP address and your port...",
                               'bad_conf_ip': "Bad info try again.",
+                              'proper_device': "Device is chosen properly, let's continue...",
+                              'bad_device': "You have chosen bad device, try again..."
 
 
                               },
@@ -43,6 +45,9 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                                'good_ip': "Something in Norwegian language ",
                                'again_ip': "Something in Norwegian language ",
                                'bad_conf_ip': "Something in Norwegian language ",
+                               'proper_device': "Something in Norwegian language ",
+                               'bad_device': "Something in Norwegian language ",
+
                                }
                        }
 

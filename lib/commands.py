@@ -56,7 +56,7 @@ def checking_ip_address(lang_dict):
     return IP_flag
 
 # checking type of device
-def checking_device(ser_port, user_device):
+def checking_device(ser_port, user_device, lang_dict):
     good_conf = False
     check_device = send_to_console(ser_port, 'sh lic udi')
     # switches
@@ -67,14 +67,14 @@ def checking_device(ser_port, user_device):
     # TODO: to code here some lists
     if 'IE-4010' in check_device:
         if user_device in ie4010:
-            print("Tak mamy to urzadzenie, jest to switch IE-4010")
+            print(lang_dict['proper_device'])
             good_conf = True
         else:
-            print("Niestety nie debilu, nie jest to poprawne urzadzenie, bo nie jest to ktores z listy ")
+            print(lang_dict['bad_device'])
     elif 'IE-2000' in check_device:
         if user_device in ie2000:
-            print("Tak mamy to urzadzenie, jest to switch IE-4010")
+            print(lang_dict['proper_device'])
             good_conf = True
         else:
-            print("Niestety nie debilu, nie jest to poprawne urzadzenie, bo nie jest to ktores z listy ")
+            print(lang_dict['bad_device'])
     return good_conf

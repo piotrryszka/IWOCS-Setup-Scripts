@@ -107,7 +107,7 @@ while running_flag:
                             device_ports = checking_switch_ports(ser)
 
                             # checking if device is really the device, which was wanted by user
-                            proper_device = checking_device(ser, user_device)
+                            proper_device = checking_device(ser, user_device, lang_expressions)
 
                             #print(device_ports)
 
