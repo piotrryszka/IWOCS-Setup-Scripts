@@ -1,7 +1,7 @@
 # imports
 from serial import Serial
 from time import sleep
-from lib.commands import send_to_console, checking_switch_ports, checking_ip_address
+from lib.commands import send_to_console, checking_switch_ports, checking_ip_address, checking_device
 from lib.operations import opening_device_list, reading_conf_files
 from lib.booting import checking_booting
 from lib.languages import listing_languages, reading_language
@@ -106,9 +106,12 @@ while running_flag:
                             # counting number of gigabit and fast ports
                             device_ports = checking_switch_ports(ser)
 
+                            # checking if device is really the device, which was wanted by user
+                            proper_device = checking_device(ser, user_device)
+
                             #print(device_ports)
 
-                            if user_boot_flag:
+                            if user_boot_flag and proper_device:
                                 print(lang_expressions['not_configured'])
                                 print(decorator_1)
 

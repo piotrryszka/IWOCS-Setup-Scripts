@@ -55,3 +55,26 @@ def checking_ip_address(lang_dict):
             break
     return IP_flag
 
+# checking type of device
+def checking_device(ser_port, user_device):
+    good_conf = False
+    check_device = send_to_console(ser_port, 'sh lic udi')
+    # switches
+    ie2000 = ['TAS-1', 'MSC-1', 'MSH-1', 'MSH-2', 'MSH-3', 'MSH-4', 'MSW-1_A', 'MSW-1_B', 'MSX-1_A','MSX-1_B',
+              'MSY-1_A', 'MSY-1_B', 'MSS-1_A', 'MSS-1_B'  ]
+    ie4010 = ['TDS-1_A', 'TDS-1_B']
+    # routers/firewall
+    # TODO: to code here some lists
+    if 'IE-4010' in check_device:
+        if user_device in ie4010:
+            print("Tak mamy to urzadzenie, jest to switch IE-4010")
+            good_conf = True
+        else:
+            print("Niestety nie debilu, nie jest to poprawne urzadzenie, bo nie jest to ktores z listy ")
+    elif 'IE-2000' in check_device:
+        if user_device in ie2000:
+            print("Tak mamy to urzadzenie, jest to switch IE-4010")
+            good_conf = True
+        else:
+            print("Niestety nie debilu, nie jest to poprawne urzadzenie, bo nie jest to ktores z listy ")
+    return good_conf

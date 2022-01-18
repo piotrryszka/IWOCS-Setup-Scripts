@@ -14,7 +14,7 @@ def checking_booting(port):
         if 'initial configuration' in verifying_string:
             correct_flag = True
         # waiting 5 minutes
-        elif counter > 30:
+        elif counter > 100:
             break
     return correct_flag
 
