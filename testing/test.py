@@ -173,13 +173,18 @@
 #                     list_of_lists = lines.splitlines()
 #                     print(list_of_lists)
 #                     file_devices.close()
-import logging
+# import logging
+#
+# logging.basicConfig(filename='logname.txt',
+#                             filemode='a',
+#                             format='%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s',
+#                             datefmt='%H:%M:%S',
+#                             level=logging.DEBUG)
+#
+# logging.info("Running Urban Planning")
+# logging.info("ESASASASA")
 
-logging.basicConfig(filename='logname.txt',
-                            filemode='a',
-                            format='%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s',
-                            datefmt='%H:%M:%S',
-                            level=logging.DEBUG)
-
-logging.info("Running Urban Planning")
-logging.info("ESASASASA")
+import subprocess
+file_ = open('shell_output.txt', 'w+')
+subprocess.run('echo Hello from shell', shell=True, stdout=file_)
+file_.close()

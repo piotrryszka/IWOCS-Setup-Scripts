@@ -1,0 +1,9 @@
+Available languages are presented below:
+En, No
+|<----------------------------------------------------------------------------------------------------->|
+Please choose one of possible languages: You have provided wrong language, try again...
+|<----------------------------------------------------------------------------------------------------->|
+Available languages are presented below:
+En, No
+|<----------------------------------------------------------------------------------------------------->|
+Please choose one of possible languages: 
