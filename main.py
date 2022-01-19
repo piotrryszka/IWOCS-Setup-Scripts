@@ -119,6 +119,9 @@ while running_flag:
                             # creating_proper_configuration(user_device, device_ports, ip_number)
                             creating_proper_configuration(user_device, 12, ip_number)
 
+                            #TODO: check in lab how script work if choosing new devices
+
+
                             if user_boot_flag and proper_device:
                                 print(lang_expressions['not_configured'])
                                 print(decorator_1)
