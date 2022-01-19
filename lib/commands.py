@@ -1,6 +1,9 @@
 # functions
+
+# imports
 from serial import Serial
 from time import sleep
+from lib.data import ie2000, ie4010
 import subprocess
 
 #decorator
@@ -59,10 +62,6 @@ def checking_ip_address(lang_dict):
 def checking_device(ser_port, user_device, lang_dict):
     good_conf = False
     check_device = send_to_console(ser_port, 'sh lic udi')
-    # switches
-    ie2000 = ['TAS-1', 'MSC-1', 'MSH-1', 'MSH-2', 'MSH-3', 'MSH-4', 'MSW-1_A', 'MSW-1_B', 'MSX-1_A','MSX-1_B',
-              'MSY-1_A', 'MSY-1_B', 'MSS-1_A', 'MSS-1_B'  ]
-    ie4010 = ['TDS-1_A', 'TDS-1_B']
     # routers/firewall
     # TODO: to code here some lists
     if 'IE-4010' in check_device:
