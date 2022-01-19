@@ -5,6 +5,7 @@ from lib.commands import send_to_console, checking_switch_ports, checking_ip_add
 from lib.operations import opening_device_list, reading_conf_files, creating_proper_configuration
 from lib.booting import checking_booting
 from lib.languages import listing_languages, reading_language
+from lib.data import ip_number
 import sys
 
 # Program flags:
@@ -19,8 +20,6 @@ proper_language = True
 # FIXED Variables:
 COM_speed = 9600
 
-# global variables:
-ip_number = 10
 
 # decorators
 # some simple tricks for better user experience

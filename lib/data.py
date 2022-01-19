@@ -54,3 +54,5 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
 ie2000 = ['TAS-1', 'MSC-1', 'MSH-1', 'MSH-2', 'MSH-3', 'MSH-4', 'MSW-1_A', 'MSW-1_B', 'MSX-1_A','MSX-1_B',
               'MSY-1_A', 'MSY-1_B', 'MSS-1_A', 'MSS-1_B'  ]
 ie4010 = ['TDS-1_A', 'TDS-1_B']
+
+ip_number = 10
