@@ -4,7 +4,7 @@ https://www.youtube.com/watch?v=-ARI4Cz-awo
 adresy ip od 10 w initial config
 podmienic hasla sobie z czatu do cisco switcha (tam sa zasolone)
 
-TODO: na jutro 19.01
+TODO:
 te adresy pewnie w makro,
 pozmienianie funkcji z odczytem na parametrem i wgraniem odpowiedniego configu
 przerobienie configow na pare np cisco switch na cisco switch 4010 i cisco switch 2000

@@ -2,7 +2,7 @@
 from serial import Serial
 from time import sleep
 from lib.commands import send_to_console, checking_switch_ports, checking_ip_address, checking_device
-from lib.operations import opening_device_list, reading_conf_files
+from lib.operations import opening_device_list, reading_conf_files, creating_proper_configuration
 from lib.booting import checking_booting
 from lib.languages import listing_languages, reading_language
 import sys
@@ -18,6 +18,9 @@ proper_language = True
 
 # FIXED Variables:
 COM_speed = 9600
+
+# global variables:
+ip_number = 10
 
 # decorators
 # some simple tricks for better user experience
@@ -88,6 +91,7 @@ while running_flag:
                         if user_device in user_list:
                             choosing_device = False
 
+
                     # Checking if the device is in the list of devices
                     if user_device in device_list:
                         # asking user if device is already booted
@@ -111,6 +115,10 @@ while running_flag:
                             proper_device = checking_device(ser, user_device, lang_expressions)
 
                             #print(device_ports)
+
+                            # getting ready to create proper_initial_configuration
+                            # creating_proper_configuration(user_device, device_ports, ip_number)
+                            creating_proper_configuration(user_device, 12, ip_number)
 
                             if user_boot_flag and proper_device:
                                 print(lang_expressions['not_configured'])
