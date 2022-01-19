@@ -1,6 +1,9 @@
+# imports
 from lib.commands import send_to_console
+
 # functions working on txt static_files
 
+# opening possible devices to configure
 def opening_device_list():
     with open('static_files/project_names_of_devices.txt', 'r') as file_devices:
                         lines = file_devices.read()
@@ -8,6 +11,7 @@ def opening_device_list():
                         return list_of_lists
                         file_devices.close()
 
+# reading commands from files (add argument to make this happen)
 def reading_conf_files():
     with open('initial-configuration-files/basic_conf.txt') as file:
         # getting commands from list

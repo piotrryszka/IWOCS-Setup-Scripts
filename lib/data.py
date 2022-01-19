@@ -1,3 +1,4 @@
+# all commands in different languages
 language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you want to leave any part of the program type 0 [zero] in your input!"',
                               'module_question': "It is your system a complete one or it is just one module? \nType '1' if system complete, if not write anything else: ",
                               'port_question': "Which COM port are you using?\nType number of your COM port: ",
@@ -50,9 +51,15 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
 
                                }
                        }
-
+# devices possible to be ie2000
 ie2000 = ['TAS-1', 'MSC-1', 'MSH-1', 'MSH-2', 'MSH-3', 'MSH-4', 'MSW-1_A', 'MSW-1_B', 'MSX-1_A','MSX-1_B',
               'MSY-1_A', 'MSY-1_B', 'MSS-1_A', 'MSS-1_B'  ]
+
+# devices possible to be ie4010
 ie4010 = ['TDS-1_A', 'TDS-1_B']
 
+# starting ip number, not changable here, we can change it in main.py
 ip_number = 10
+
+# decorator_1
+decorator_1 = '|<----------------------------------------------------------------------------------------------------->|'

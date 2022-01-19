@@ -3,12 +3,8 @@
 # imports
 from serial import Serial
 from time import sleep
-from lib.data import ie2000, ie4010
+from lib.data import ie2000, ie4010, decorator_1
 import subprocess
-
-#decorator
-decorator_1 = '|<----------------------------------------------------------------------------------------------------->|'
-
 
 # sending commands to console
 def send_to_console(ser_fun: Serial, command: str, wait_time: float = 0.5):
