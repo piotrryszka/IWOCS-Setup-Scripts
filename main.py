@@ -103,6 +103,12 @@ while running_flag:
                         print(lang_expressions['wait_prompt'])
                         print(decorator_1)
 
+                        # returning next ip number and full name of configured device
+#                         our_conf = creating_proper_configuration(user_device, 12, ip_number)
+#                         actual_device = our_conf[1]
+#                         ip_number = our_conf[0]
+#                         our_conf = creating_proper_configuration('sssss', 2222, ip_number)
+
                         # connection set
                         try:
                             ser = Serial(COM_string, COM_speed)
@@ -120,8 +126,9 @@ while running_flag:
 
                             # getting ready to create proper_initial_configuration
                             # creating_proper_configuration(user_device, device_ports, ip_number)
-                            creating_proper_configuration(user_device, 12, ip_number)
-
+                            our_conf = creating_proper_configuration(user_device, 12, ip_number)
+                            actual_device = our_conf[1]
+                            ip_number = our_conf[0]
                             #TODO: check in lab how script work if choosing new devices
 
 
@@ -130,7 +137,7 @@ while running_flag:
                                 print(decorator_1)
 
                                 # opening file with configuration
-                                stripped_list = reading_conf_files()
+                                stripped_list = reading_conf_files(actual_device)
 
                                 # opening dedicated file with configuration
                                 #TODO: in the future

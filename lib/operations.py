@@ -12,8 +12,8 @@ def opening_device_list():
                         file_devices.close()
 
 # reading commands from files (add argument to make this happen)
-def reading_conf_files():
-    with open('initial-configuration-files/basic_conf.txt') as file:
+def reading_conf_files(file):
+    with open(f'initial-configuration-files/{file}') as file:
         # getting commands from list
         content_list = file.readlines()
         stripped_list = [s.strip() for s in content_list]
@@ -41,4 +41,4 @@ def creating_proper_configuration(user_device, port_num, ip_add):
         with open(f'initial-configuration-files/cisco-switch4010-{user_device}', 'w') as file:
             for row in content_list:
                 file.write(str(row) + '\n')
-        return ip_add
+        return ip_add, f'initial-configuration-files/cisco-switch4010-{user_device}'
