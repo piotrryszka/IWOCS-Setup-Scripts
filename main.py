@@ -15,7 +15,7 @@ COM_flag = True  # flag checking COM
 device_flag = True  # flag checking device
 user_boot_flag = True
 ip_flag = False
-proper_language = True
+proper_language = False
 
 # FIXED Variables:
 COM_speed = 9600
@@ -26,16 +26,19 @@ while running_flag:
 
     # choosing language
     # it has to be in english
-    while proper_language:
+    while not proper_language:
         print("Available languages are presented below:")
         languages = listing_languages()
         print(*languages, sep = ', ')
         print(decorator_1)
         user_language = input("Please choose one of possible languages: ").title()
         if user_language in languages:
-            proper_language = False
+            proper_language = True
             # making a list dictionary with expressions in chosen language
             lang_expressions = reading_language(user_language)
+        elif user_language == "0":
+            lang_expressions = reading_language('En')
+            proper_language = True
         else:
             print("You have provided wrong language, try again...")
         print(decorator_1)

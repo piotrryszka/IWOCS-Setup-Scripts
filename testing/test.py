@@ -216,11 +216,45 @@
 #         for row in content_list:
 #             file.write(str(row) + '\n')
 
-# LOGGING
-aaaa = 'ssssss'
-import logging
+# # LOGGING
+# import logging
+# import time
+#
+# aaaa = 'example output from function/string'
+#
+# logging.basicConfig(level = logging.INFO, filename = time.strftime("Configurationdsadas - my-%Y-%m-%d.log"))
+#
+# logging.info(f"> {aaaa }")
+
+import paramiko
+from getpass import getpass
 import time
 
-logging.basicConfig(level = logging.INFO, filename = time.strftime("Configuration - my-%Y-%m-%d.log"))
+ip = raw_input("Please enter your IP address: ")
+username = raw_input("Please enter your username: ")
+password = getpass()
 
-logging.info(f"> {aaaa }")
+remote_conn_pre=paramiko.SSHClient()
+remote_conn_pre.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+remote_conn_pre.connect(ip, port=22, username=username,
+                        password=password,
+                        look_for_keys=False, allow_agent=False)
+
+remote_conn = remote_conn_pre.invoke_shell()
+output = remote_conn.recv(65535)
+print output
+
+remote_conn.send("show ip int brief\n")
+time.sleep(.5)
+output = remote_conn.recv(65535)
+print output
+
+remote_conn.send("conf t\n")
+time.sleep(.5)
+output = remote_conn.recv(65535)
+print output
+
+remote_conn.send("end\n")
+time.sleep(.5)
+output = remote_conn.recv(65535)
+print output
