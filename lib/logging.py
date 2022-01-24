@@ -4,7 +4,9 @@ from datetime import datetime
 class Logger(object):
     # creating time stamp
     exact_time = datetime.date(datetime.now())
-    def __init__(self, filename=f'logs/{exact_time}.log', stream=sys.stdout):
+
+    # creating object
+    def __init__(self, filename=f'logs/{exact_time}.txt', stream=sys.stdout):
         self.terminal = stream
         self.log = open(filename, 'a')
 
@@ -15,5 +17,5 @@ class Logger(object):
     def flush(self):
         pass
 
-
+# catching every line from console
 sys.stdout = Logger(stream=sys.stdout)

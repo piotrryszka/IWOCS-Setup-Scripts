@@ -1,0 +1,28 @@
+Available languages are presented below:
+En, No
+|<----------------------------------------------------------------------------------------------------->|
+Please choose one of possible languages: Sdasd
+You have provided wrong language, try again...
+|<----------------------------------------------------------------------------------------------------->|
+Available languages are presented below:
+En, No
+|<----------------------------------------------------------------------------------------------------->|
+Please choose one of possible languages: S
+You have provided wrong language, try again...
+|<----------------------------------------------------------------------------------------------------->|
+Available languages are presented below:
+En, No
+|<----------------------------------------------------------------------------------------------------->|
+Please choose one of possible languages: S
+You have provided wrong language, try again...
+|<----------------------------------------------------------------------------------------------------->|
+Available languages are presented below:
+En, No
+|<----------------------------------------------------------------------------------------------------->|
+Please choose one of possible languages: En
+|<----------------------------------------------------------------------------------------------------->|
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+|<----------------------------------------------------------------------------------------------------->|
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 
