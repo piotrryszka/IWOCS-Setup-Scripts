@@ -100,4 +100,20 @@ If you want to leave any part of the program type 0 [zero] in your input!"
 |<----------------------------------------------------------------------------------------------------->|
 Do you want to delete all logs? If yes type '1', if not type anything else. 2022-01-24.txt, dsada
 It is your system a complete one or it is just one module? 
-Type '1' if system complete, if not write anything else: 
+Type '1' if system complete, if not write anything else: Available languages are presented below:
+En, No
+|<----------------------------------------------------------------------------------------------------->|
+Please choose one of possible languages: En
+|<----------------------------------------------------------------------------------------------------->|
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+|<----------------------------------------------------------------------------------------------------->|
+Do you want to delete all logs? If yes type '1', if not type anything else. 
+ It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+|<----------------------------------------------------------------------------------------------------->|
+Which COM port are you using?
+Type number of your COM port: 6
+|<----------------------------------------------------------------------------------------------------->|
+|<----------------------------------------------------------------------------------------------------->|
+Which device do you want to connect? 
