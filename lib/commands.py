@@ -79,7 +79,11 @@ def checking_device(ser_port, user_device, lang_dict):
 def deleting_files():
     files = os.listdir('logs')
     # printing files
-    print(*languages, sep = ', ')
+    #print(*files, sep = ', ')
     # deleting files
     for file in files:
-        os.remove(f'logs/{file}')
+        # cannot delete the file from today's date
+        try:
+            os.remove(f'logs/{file}')
+        except:
+            pass

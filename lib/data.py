@@ -21,7 +21,8 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                               'again_ip': "Check once again your IP address and your port...",
                               'bad_conf_ip': "Bad info try again.",
                               'proper_device': "Device is chosen properly, let's continue...",
-                              'bad_device': "You have chosen bad device, try again..."
+                              'bad_device': "You have chosen bad device, try again...",
+                              'deleting_logs': "Do you want to delete all logs? If yes type '1', if not type anything else. "
 
 
                               },
@@ -48,6 +49,7 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                                'bad_conf_ip': "Something in Norwegian language ",
                                'proper_device': "Something in Norwegian language ",
                                'bad_device': "Something in Norwegian language ",
+                               'deleting_logs': "Something in Norwegian language "
 
                                }
                        }

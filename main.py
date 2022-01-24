@@ -1,7 +1,7 @@
 # imports
 from serial import Serial
 from time import sleep
-from lib.commands import send_to_console, checking_switch_ports, checking_ip_address, checking_device
+from lib.commands import send_to_console, checking_switch_ports, checking_ip_address, checking_device, deleting_files
 from lib.operations import opening_device_list, reading_conf_files, creating_proper_configuration
 from lib.booting import checking_booting
 from lib.languages import listing_languages, reading_language
@@ -47,6 +47,17 @@ while running_flag:
 
     print(lang_expressions['information_prompt'])
     print(decorator_1)
+
+    # deleting logs
+    user_del = input(lang_expressions['deleting_logs'])
+    if user_del == '1':
+        deleting_files()
+    elif user_del == '0':
+        break
+    else:
+        pass
+
+
     # question about complete system or one module TASK 184
     user_system = input(lang_expressions['module_question']).lower()
     print(user_system)
