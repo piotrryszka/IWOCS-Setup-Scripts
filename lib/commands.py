@@ -5,6 +5,7 @@ from serial import Serial
 from time import sleep
 from lib.data import ie2000, ie4010, decorator_1
 import subprocess
+import os
 
 # sending commands to console
 def send_to_console(ser_fun: Serial, command: str, wait_time: float = 0.5):
@@ -73,3 +74,12 @@ def checking_device(ser_port, user_device, lang_dict):
         else:
             print(lang_dict['bad_device'])
     return good_conf
+
+# deleting logs and handling logs files
+def deleting_files():
+    files = os.listdir('logs')
+    # printing files
+    print(*languages, sep = ', ')
+    # deleting files
+    for file in files:
+        os.remove(f'logs/{file}')

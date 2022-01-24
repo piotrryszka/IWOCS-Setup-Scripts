@@ -310,9 +310,16 @@ import logging
 # readline.write_history_file('history.txt')
 # print('sdasd')
 # print('sd')
+#
+# from datetime import datetime
+#
+# # Current date time in local system
+# print(datetime.now())
+# print(datetime.date(datetime.now()))
 
-from datetime import datetime
+import os
 
-# Current date time in local system
-print(datetime.now())
-print(datetime.date(datetime.now()))
+files = os.listdir('../logs')
+print(files)
+for file in files:
+    os.remove(f'../logs/{file}')
