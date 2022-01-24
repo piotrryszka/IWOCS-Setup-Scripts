@@ -226,35 +226,93 @@
 #
 # logging.info(f"> {aaaa }")
 
-import paramiko
-from getpass import getpass
-import time
 
-ip = raw_input("Please enter your IP address: ")
-username = raw_input("Please enter your username: ")
-password = getpass()
 
-remote_conn_pre=paramiko.SSHClient()
-remote_conn_pre.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-remote_conn_pre.connect(ip, port=22, username=username,
-                        password=password,
-                        look_for_keys=False, allow_agent=False)
 
-remote_conn = remote_conn_pre.invoke_shell()
-output = remote_conn.recv(65535)
-print output
 
-remote_conn.send("show ip int brief\n")
-time.sleep(.5)
-output = remote_conn.recv(65535)
-print output
 
-remote_conn.send("conf t\n")
-time.sleep(.5)
-output = remote_conn.recv(65535)
-print output
 
-remote_conn.send("end\n")
-time.sleep(.5)
-output = remote_conn.recv(65535)
-print output
+# import paramiko
+# from getpass import getpass
+# import time
+#
+# ip = raw_input("Please enter your IP address: ")
+# username = raw_input("Please enter your username: ")
+# password = getpass()
+#
+# remote_conn_pre=paramiko.SSHClient()
+# remote_conn_pre.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+# remote_conn_pre.connect(ip, port=22, username=username,
+#                         password=password,
+#                         look_for_keys=False, allow_agent=False)
+#
+# remote_conn = remote_conn_pre.invoke_shell()
+# output = remote_conn.recv(65535)
+# print output
+#
+# remote_conn.send("show ip int brief\n")
+# time.sleep(.5)
+# output = remote_conn.recv(65535)
+# print output
+#
+# remote_conn.send("conf t\n")
+# time.sleep(.5)
+# output = remote_conn.recv(65535)
+# print output
+#
+# remote_conn.send("end\n")
+# time.sleep(.5)
+# output = remote_conn.recv(65535)
+# print output
+import logging
+#
+# logging.basicConfig(level=logging.INFO, format='%(message)s')
+# logger = logging.getLogger()
+# logger.addHandler(logging.FileHandler('test.log', 'a'))
+# print = logger.info
+#
+# print('yo!')
+
+
+# moje
+# import logging
+# logging.basicConfig(
+#      filename='rokoko.txt',
+#      level=logging.INFO,
+#      format= '[%(asctime)s] %(levelname)s ->>> %(message)s',
+#      datefmt='%H:%M:%S'
+#  )
+# logger = logging.getLogger()
+# print = logger.info
+# print('esss')
+
+# import logging
+#
+# log = logging.getLogger(__name__)
+#
+# def do_something():
+#     log.debug("Doing something!")
+#
+# do_something()
+
+# class Tee:
+#     def write(self, *args, **kwargs):
+#         self.out1.write(*args, **kwargs)
+#         self.out2.write(*args, **kwargs)
+#     def __init__(self, out1, out2):
+#         self.out1 = out1
+#         self.out2 = out2
+#
+# import sys
+# sys.stdout = Tee(open("log.txt", "w"), sys.stdout)
+
+# import readline
+# readline.write_history_file('history.txt')
+# print('sdasd')
+# print('sd')
+
+from datetime import datetime
+
+# Current date time in local system
+print(datetime.now())
+print(datetime.date(datetime.now()))

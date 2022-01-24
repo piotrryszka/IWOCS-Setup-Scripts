@@ -6,6 +6,7 @@ from lib.operations import opening_device_list, reading_conf_files, creating_pro
 from lib.booting import checking_booting
 from lib.languages import listing_languages, reading_language
 from lib.data import ip_number, decorator_1
+from lib.logging import *
 import sys
 
 # Program flags:
@@ -32,6 +33,7 @@ while running_flag:
         print(*languages, sep = ', ')
         print(decorator_1)
         user_language = input("Please choose one of possible languages: ").title()
+        print(user_language)
         if user_language in languages:
             proper_language = True
             # making a list dictionary with expressions in chosen language
@@ -47,11 +49,13 @@ while running_flag:
     print(decorator_1)
     # question about complete system or one module TASK 184
     user_system = input(lang_expressions['module_question']).lower()
+    print(user_system)
     print(decorator_1)
     if user_system == '1':
         while COM_flag:
             # question about which COM port is user using TASK 185
             user_COM = input(lang_expressions['port_question']).lower()
+            print(user_COM)
             print(decorator_1)
             if user_COM.isnumeric() and user_COM != '0':
                 # Creating string for connection to the device
@@ -77,6 +81,7 @@ while running_flag:
                     choosing_device = True
                     while choosing_device == True:
                         user_device = input(lang_expressions['device_question']).upper()
+                        print(user_device)
                         user_list = []
                         for dev in device_list:
                             if user_device in dev:
@@ -165,5 +170,3 @@ while running_flag:
     else:
         print(lang_expressions['not_complete'])
         running_flag = False
-
-    #sys.stdout.close()
