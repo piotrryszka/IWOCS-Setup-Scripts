@@ -1,7 +1,7 @@
 # imports
 from serial import Serial
 from time import sleep
-from lib.commands import send_to_console, checking_switch_ports, checking_ip_address, checking_device, deleting_files
+from lib.commands import send_to_console, checking_switch_ports, checking_ip_address, checking_device, deleting_files, printing_logs
 from lib.operations import opening_device_list, reading_conf_files, creating_proper_configuration
 from lib.booting import checking_booting
 from lib.languages import listing_languages, reading_language
@@ -49,13 +49,9 @@ while running_flag:
     print(decorator_1)
 
     # deleting logs
+    printing_logs(lang_expressions)
     user_del = input(lang_expressions['deleting_logs'])
-    if user_del == '1':
-        deleting_files()
-    elif user_del == '0':
-        break
-    else:
-        pass
+    deleting_files(lang_expressions,user_del)
 
 
     # question about complete system or one module TASK 184

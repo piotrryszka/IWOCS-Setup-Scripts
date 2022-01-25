@@ -76,14 +76,24 @@ def checking_device(ser_port, user_device, lang_dict):
     return good_conf
 
 # deleting logs and handling logs files
-def deleting_files():
+def deleting_files(lang_dict, user_input):
+    files = os.listdir('logs')
+    # deleting files
+    if user_input == '1':
+        for file in files:
+            # cannot delete the file from today's date
+            try:
+                os.remove(f'logs/{file}')
+            except:
+                pass
+    elif user_input == '0':
+        return
+    else:
+        pass
+
+# printing accessible logs
+def printing_logs(lang_dict):
     files = os.listdir('logs')
     # printing files
-    #print(*files, sep = ', ')
-    # deleting files
-    for file in files:
-        # cannot delete the file from today's date
-        try:
-            os.remove(f'logs/{file}')
-        except:
-            pass
+    print(lang_dict['print_logs'])
+    print(*files, sep = ', ')

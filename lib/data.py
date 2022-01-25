@@ -22,8 +22,8 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                               'bad_conf_ip': "Bad info try again.",
                               'proper_device': "Device is chosen properly, let's continue...",
                               'bad_device': "You have chosen bad device, try again...",
-                              'deleting_logs': "Do you want to delete all logs? If yes type '1', if not type anything else.\n"
-
+                              'deleting_logs': "Do you want to delete all logs? If yes type '1', if not type anything else.\n",
+                              'print_logs': "This is a list of all saved session logs..."
 
                               },
                         'No': {'information_prompt': 'Something in Norwegian language ',
