@@ -31,7 +31,6 @@ while running_flag:
         print("Available languages are presented below:")
         languages = listing_languages()
         print(*languages, sep = ', ')
-        print(decorator_1)
         user_language = input("Please choose one of possible languages: ").title()
         print(user_language)
         if user_language in languages:
@@ -45,10 +44,11 @@ while running_flag:
             print("You have provided wrong language, try again...")
         print(decorator_1)
 
-
+    # creating_timestamp
     creating_timestamp(lang_expressions)
     print(decorator_1)
 
+    # info to user how to leave any part of program
     print(lang_expressions['information_prompt'])
     print(decorator_1)
 

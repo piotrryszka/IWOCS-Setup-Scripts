@@ -23,7 +23,7 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                               'proper_device': "Device is chosen properly, let's continue...",
                               'bad_device': "You have chosen bad device, try again...",
                               'deleting_logs': "Do you want to delete all logs? If yes type '1', if not type anything else.\n",
-                              'print_logs': "This is a list of all saved session logs...",
+                              'print_logs': "This is a list of all saved session logs: ",
                               'timestamp': "Creating current timestamp: ",
 
                               },
@@ -75,5 +75,7 @@ Ir829 = ['TIR']
 # starting ip number, not changable here, we can change it in main.py
 ip_number = 10
 
+# TODO: if it is better to have line of chars or normal empty line
 # decorator_1
-decorator_1 = '|<----------------------------------------------------------------------------------------------------->|'
+#decorator_1 = '|<----------------------------------------------------------------------------------------------------->|'
+decorator_1 = '\n'
