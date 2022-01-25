@@ -1,7 +1,7 @@
 # imports
 from serial import Serial
 from time import sleep
-from lib.commands import send_to_console, checking_switch_ports, checking_ip_address, checking_device, deleting_files, printing_logs
+from lib.commands import send_to_console, checking_switch_ports, checking_ip_address, checking_device, deleting_files, printing_logs, creating_timestamp
 from lib.operations import opening_device_list, reading_conf_files, creating_proper_configuration
 from lib.booting import checking_booting
 from lib.languages import listing_languages, reading_language
@@ -44,6 +44,10 @@ while running_flag:
         else:
             print("You have provided wrong language, try again...")
         print(decorator_1)
+
+
+    creating_timestamp(lang_expressions)
+    print(decorator_1)
 
     print(lang_expressions['information_prompt'])
     print(decorator_1)

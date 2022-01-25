@@ -317,9 +317,20 @@ import logging
 # print(datetime.now())
 # print(datetime.date(datetime.now()))
 
-import os
+# import os
+#
+# files = os.listdir('../logs')
+# print(files)
+# for file in files:
+#     os.remove(f'../logs/{file}')
 
-files = os.listdir('../logs')
-print(files)
-for file in files:
-    os.remove(f'../logs/{file}')
+from datetime import datetime
+
+# datetime object containing current date and time
+now = datetime.now()
+
+print("now =", now)
+
+# dd/mm/YY H:M:S
+dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
+print("date and time =", dt_string)

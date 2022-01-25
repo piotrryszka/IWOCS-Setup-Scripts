@@ -6,6 +6,7 @@ from time import sleep
 from lib.data import ie2000, ie4010, decorator_1
 import subprocess
 import os
+from datetime import datetime
 
 # sending commands to console
 def send_to_console(ser_fun: Serial, command: str, wait_time: float = 0.5):
@@ -97,3 +98,12 @@ def printing_logs(lang_dict):
     # printing files
     print(lang_dict['print_logs'])
     print(*files, sep = ', ')
+
+# creating_timestamp to make logs clearer
+def creating_timestamp(lang_dict):
+    # datetime object containing current date and time
+    now = datetime.now()
+    # converting data object to string
+    dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
+    print(f"{lang_dict['timestamp']}", dt_string)
+

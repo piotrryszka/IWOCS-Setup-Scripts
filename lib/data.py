@@ -23,7 +23,8 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                               'proper_device': "Device is chosen properly, let's continue...",
                               'bad_device': "You have chosen bad device, try again...",
                               'deleting_logs': "Do you want to delete all logs? If yes type '1', if not type anything else.\n",
-                              'print_logs': "This is a list of all saved session logs..."
+                              'print_logs': "This is a list of all saved session logs...",
+                              'timestamp': "Creating current timestamp: ",
 
                               },
                         'No': {'information_prompt': 'Something in Norwegian language ',
@@ -49,7 +50,9 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                                'bad_conf_ip': "Something in Norwegian language ",
                                'proper_device': "Something in Norwegian language ",
                                'bad_device': "Something in Norwegian language ",
-                               'deleting_logs': "Something in Norwegian language "
+                               'deleting_logs': "Something in Norwegian language ",
+                               'print_logs': "Something in Norwegian language ",
+                               'timestamp': "Something in Norwegian language ",
 
                                }
                        }
