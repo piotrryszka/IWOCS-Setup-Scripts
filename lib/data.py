@@ -60,6 +60,15 @@ ie2000 = ['TAS-1', 'MSC-1', 'MSH-1', 'MSH-2', 'MSH-3', 'MSH-4', 'MSW-1_A', 'MSW-
 # devices possible to be ie4010
 ie4010 = ['TDS-1_A', 'TDS-1_B']
 
+# devices possible to be ASA5525
+asa5525 = ['SDG_A', 'SDG_B']
+
+# devices possible to be C1111
+C1111 = ['ETAS-1']
+
+# devices possible to be IR829
+Ir829 = ['TIR']
+
 # starting ip number, not changable here, we can change it in main.py
 ip_number = 10
 
