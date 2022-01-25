@@ -334,3 +334,10 @@ import logging
 # # dd/mm/YY H:M:S
 # dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
 # print("date and time =", dt_string)
+
+# my_file = open("commands.txt", "r")
+# content = my_file.read()
+# print(content)
+# content_list = content.split("\n")
+# my_file.close()
+# print(content_list)
