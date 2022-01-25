@@ -1,29 +1,33 @@
 # settling ip connection
 import paramiko
 
+# need to add more arguments, like to make host, username, password correct in every case
 def ip_connect(ip-number):
 
-    # setting
-    ip_address = f'172.30.100.{ip-number}'
-    # ask if it is correct
-    router_username = "walter"
-    router_password = "mel0n98"
+host = "pluton.kt.agh.edu.pl"
+port = 22
+username = "msztaba"
+# needs to be hashed
+password = "##########"
 
+# creating list of commands to be executed
+try:
+    with open("commands.txt", 'r') as my_file:
+        content = my_file.read()
+        content_list = content.split("\n")
+
+    # creating connection
     ssh = paramiko.SSHClient()
-    ssh.load_system_host_keys()
     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+    ssh.connect(host, port, username, password)
 
-    # connecting by our data
-    ssh.connect(ip_address,
-            username=router_username,
-            password=router_password,
-            look_for_keys=False )
-
-    # running some commands to check if it device is configured
-    ssh_stdin, ssh_stdout, ssh_stderr = ssh.exec_command("show ip route")
-
-    # getting output
-    output = ssh_stdout.readlines()
+    # executing commands
+    for command in content_list:
+        stdin, stdout, stderr = ssh.exec_command(command)
+        lines = stdout.readlines()
+        print(lines)
 
     # closing connection
     ssh.close()
+except:
+    print("something went wrong")
