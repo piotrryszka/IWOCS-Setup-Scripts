@@ -9,17 +9,20 @@ username = "msztaba"
 password = "##########"
 
 # creating list of commands to be executed
-with open("commands.txt", 'r') as my_file:
-    content = my_file.read()
-    content_list = content.split("\n")
+try:
+    with open("commands.txt", 'r') as my_file:
+        content = my_file.read()
+        content_list = content.split("\n")
 
-# creating connection
-ssh = paramiko.SSHClient()
-ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-ssh.connect(host, port, username, password)
+    # creating connection
+    ssh = paramiko.SSHClient()
+    ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+    ssh.connect(host, port, username, password)
 
-# executing commands
-for command in content_list:
-    stdin, stdout, stderr = ssh.exec_command(command)
-    lines = stdout.readlines()
-    print(lines)
+    # executing commands
+    for command in content_list:
+        stdin, stdout, stderr = ssh.exec_command(command)
+        lines = stdout.readlines()
+        print(lines)
+except:
+    print("something went wrong")
