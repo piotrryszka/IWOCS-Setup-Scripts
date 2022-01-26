@@ -19,7 +19,7 @@ def ip_connect():
 
     # creating list of commands to be executed
     try:
-        with open("testing/commands.txt", 'r') as my_file:
+        with open("tftp-conf-files/commands.txt", 'r') as my_file:
             content = my_file.read()
             content_list = content.split("\n")
 
