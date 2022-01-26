@@ -54,10 +54,6 @@ while running_flag:
     print(lang_expressions['information_prompt'])
     print(decorator_1)
 
-    # checking ssh connection
-    ip_connect()
-
-
 
     # deleting logs
     printing_logs(lang_expressions)
@@ -169,6 +165,10 @@ while running_flag:
                                 print(f"{lang_expressions['proper_conf']}{user_device}.")
                                 print(f"{lang_expressions['close_con']}{ser.name}.")
                                 print(decorator_1)
+
+                                # after initial_config by serial port now, we can go to the SSH connection
+                                # needs to add arguments to define host, password etc
+                                ip_connect()
 
                             else:
                                 print(lang_expressions['start_conf'])
