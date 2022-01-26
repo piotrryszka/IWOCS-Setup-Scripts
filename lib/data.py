@@ -79,3 +79,7 @@ ip_number = 10
 # decorator_1
 #decorator_1 = '|<----------------------------------------------------------------------------------------------------->|'
 decorator_1 = '\n'
+
+# ssh connection data, needs to be properly imported into main.py when adding arguments
+username = 'walter'
+password = 'mel0n98'

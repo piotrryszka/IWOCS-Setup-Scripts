@@ -12,8 +12,8 @@ def ip_connect():
     password = "098azerty@MS"
 
     # project-config settings
-    # username = walter
-    # password = mel0n98
+    # username = 'walter'
+    # password = 'mel0n98'
     # host = f'172.30.100.{ip_number}'
 
 
