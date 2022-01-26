@@ -1,33 +1,40 @@
-# settling ip connection
+# imports
 import paramiko
 
+
 # need to add more arguments, like to make host, username, password correct in every case
-def ip_connect(ip-number):
+def ip_connect():
+    # checking private configuration
+    host = "pluton.kt.agh.edu.pl"
+    port = 22
+    username = "msztaba"
+    # needs to be hashed
+    password = "098azerty@MS"
 
-host = "pluton.kt.agh.edu.pl"
-port = 22
-username = "msztaba"
-# needs to be hashed
-password = "##########"
+    # project-config settings
+    # username = walter
+    # password = mel0n98
+    # host = f'172.30.100.{ip_number}'
 
-# creating list of commands to be executed
-try:
-    with open("commands.txt", 'r') as my_file:
-        content = my_file.read()
-        content_list = content.split("\n")
 
-    # creating connection
-    ssh = paramiko.SSHClient()
-    ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-    ssh.connect(host, port, username, password)
+    # creating list of commands to be executed
+    try:
+        with open("testing/commands.txt", 'r') as my_file:
+            content = my_file.read()
+            content_list = content.split("\n")
 
-    # executing commands
-    for command in content_list:
-        stdin, stdout, stderr = ssh.exec_command(command)
-        lines = stdout.readlines()
-        print(lines)
+        # creating connection
+        ssh = paramiko.SSHClient()
+        ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+        ssh.connect(host, port, username, password)
 
-    # closing connection
-    ssh.close()
-except:
-    print("something went wrong")
+        # executing commands
+        for command in content_list:
+            stdin, stdout, stderr = ssh.exec_command(command)
+            lines = stdout.readlines()
+            print(lines)
+
+        # closing connection
+        ssh.close()
+    except:
+        print("something went wrong")

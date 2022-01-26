@@ -7,7 +7,9 @@ from lib.booting import checking_booting
 from lib.languages import listing_languages, reading_language
 from lib.data import ip_number, decorator_1
 from lib.logging import *
+from lib.network import ip_connect
 import sys
+
 
 # Program flags:
 running_flag = True  # main flag, running program
@@ -51,6 +53,11 @@ while running_flag:
     # info to user how to leave any part of program
     print(lang_expressions['information_prompt'])
     print(decorator_1)
+
+    # checking ssh connection
+    ip_connect()
+
+
 
     # deleting logs
     printing_logs(lang_expressions)

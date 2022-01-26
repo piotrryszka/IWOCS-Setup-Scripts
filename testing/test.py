@@ -264,7 +264,7 @@
 # time.sleep(.5)
 # output = remote_conn.recv(65535)
 # print output
-import logging
+# import logging
 #
 # logging.basicConfig(level=logging.INFO, format='%(message)s')
 # logger = logging.getLogger()
@@ -341,3 +341,42 @@ import logging
 # content_list = content.split("\n")
 # my_file.close()
 # print(content_list)
+
+import paramiko
+
+def test():
+    host = "pluton.kt.agh.edu.pl"
+    port = 22
+    username = "msztaba"
+    # needs to be hashed
+    password = "098azerty@MS"
+
+    # project-config settings
+    # username = walter
+    # password = mel0n98
+    # host = f'172.30.100.{ip_number}'
+
+
+    # creating list of commands to be executed
+    try:
+        with open("commands.txt", 'r') as my_file:
+            content = my_file.read()
+            content_list = content.split("\n")
+
+        # creating connection
+        ssh = paramiko.SSHClient()
+        ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+        ssh.connect(host, port, username, password)
+
+        # executing commands
+        for command in content_list:
+            stdin, stdout, stderr = ssh.exec_command(command)
+            lines = stdout.readlines()
+            print(lines)
+
+        # closing connection
+        ssh.close()
+    except:
+        print("something went wrong")
+
+test()
