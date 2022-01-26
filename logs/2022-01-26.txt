@@ -167,3 +167,55 @@ If you want to leave any part of the program type 0 [zero] in your input!"
 This is a list of all saved session logs: 
 2022-01-25.txt, 2022-01-26.txt
 Do you want to delete all logs? If yes type '1', if not type anything else.
+Available languages are presented below:
+En, No
+Please choose one of possible languages: E
+You have provided wrong language, try again...
+
+
+Available languages are presented below:
+En, No
+Please choose one of possible languages: E
+You have provided wrong language, try again...
+
+
+Available languages are presented below:
+En, No
+Please choose one of possible languages: E
+You have provided wrong language, try again...
+
+
+Available languages are presented below:
+En, No
+Please choose one of possible languages: Available languages are presented below:
+En, No
+Please choose one of possible languages: En
+
+
+Creating current timestamp:  26/01/2022 13:31:01
+
+
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+
+
+This is a list of all saved session logs: 
+2022-01-25.txt, 2022-01-26.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+Available languages are presented below:
+En, No
+Please choose one of possible languages: En
+
+
+Creating current timestamp:  26/01/2022 15:48:02
+
+
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+
+
+This is a list of all saved session logs: 
+2022-01-25.txt, 2022-01-26.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 
