@@ -59,6 +59,8 @@ while running_flag:
     # testing ssh connection, second argument to be set
     ip_connect(lang_expressions, 1000, 'commands.txt')
 
+    # ip_connect(lang_expressions, 1000, 'test.txt')
+
 
 
     # deleting logs
