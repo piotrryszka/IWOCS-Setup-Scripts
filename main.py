@@ -55,6 +55,12 @@ while running_flag:
     print(decorator_1)
 
 
+    # TODO: needs to be removed or moved to be done later
+    # testing ssh connection, second argument to be set
+    ip_connect(lang_expressions, 1000, 'commands.txt')
+
+
+
     # deleting logs
     printing_logs(lang_expressions)
     user_del = input(lang_expressions['deleting_logs'])

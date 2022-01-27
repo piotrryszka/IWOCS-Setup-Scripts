@@ -25,6 +25,8 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                               'deleting_logs': "Do you want to delete all logs? If yes type '1', if not type anything else.\n",
                               'print_logs': "This is a list of all saved session logs: ",
                               'timestamp': "Creating current timestamp: ",
+                              'ssh_failed': "Sorry, your SSH connection cannot be established...",
+                              'ssh_established': "Connection has been established correctly ...",
 
                               },
                         'No': {'information_prompt': 'Something in Norwegian language ',
@@ -53,6 +55,8 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                                'deleting_logs': "Something in Norwegian language ",
                                'print_logs': "Something in Norwegian language ",
                                'timestamp': "Something in Norwegian language ",
+                               'ssh_failed': "Something in Norwegian language ",
+                               'ssh_established': "Something in Norwegian language ",
 
                                }
                        }
@@ -81,5 +85,10 @@ ip_number = 10
 decorator_1 = '\n'
 
 # ssh connection data, needs to be properly imported into main.py when adding arguments
-username = 'walter'
-password = 'mel0n98'
+# username = 'walter'
+# password = 'mel0n98'
+
+# to check connection
+username = "msztaba"
+# needs to be hashed
+password = "098azerty@MS"
