@@ -381,24 +381,30 @@
 #
 # test()
 
-
 from netmiko import ConnectHandler
 from getpass import getpass
 
-cisco1 = {
-    "device_type": "cisco_ios",
-    "host": "pluton.kt.agh.edu.pl",
-    "username": "msztaba",
-    "password": '098azerty@MS',
-}
+password = '098azerty@MS'
+username = 'msztaba'
+host = "pluton.kt.agh.edu.pl"
+device_type = 'linux'
 
-# Show command that we execute.
-command = "ls"
+def try_netmiko(dev, hos, user, pas):
+    cisco1 = {
+        "device_type": f"{dev}",
+        "host": f"{host}",
+        "username": f"{user}",
+        "password": f'{pas}',
+    }
 
-with ConnectHandler(**cisco1) as net_connect:
-    output = net_connect.send_command(command)
+    # Show command that we execute.
+    command = "ls"
 
-# Automatically cleans-up the output so that only the show output is returned
-print()
-print(output)
-print()
+    with ConnectHandler(**cisco1) as net_connect:
+        output = net_connect.send_command(command)
+
+    # Automatically cleans-up the output so that only the show output is returned
+
+    print(output)
+
+try_netmiko(device_type, host, username, password)

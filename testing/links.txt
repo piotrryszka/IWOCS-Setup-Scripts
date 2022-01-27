@@ -1,8 +1,6 @@
 TODO: to chyba najwazniejsze
-https://www.youtube.com/watch?v=-ARI4Cz-awo
-
-adresy ip od 10 w initial config
-podmienic hasla sobie z czatu do cisco switcha (tam sa zasolone)
+TODO: NETMIKO VS PARAMIKO
+https://github.com/ktbyers/netmiko/blob/develop/EXAMPLES.md#simple-example
 
 TODO:
 te adresy pewnie w makro,
