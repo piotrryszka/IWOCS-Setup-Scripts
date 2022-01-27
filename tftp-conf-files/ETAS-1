@@ -1,0 +1,230 @@
+!
+version 16.9
+service timestamps debug datetime msec
+service timestamps log datetime msec
+service password-encryption
+service call-home
+platform qfp utilization monitor load 80
+platform punt-keepalive disable-kernel-core
+!
+hostname ETAS-1
+!
+boot-start-marker
+boot system flash c1100-universalk9_ias.16.09.06.SPA.bin
+boot-end-marker
+!
+!
+logging buffered 16384 informational
+enable secret 5 $1$vhjr$Zr37SWDYBA8I9LmagrxJg1
+!
+!
+no aaa new-model
+clock timezone CST -6 0
+clock summer-time CDT recurring
+!
+ip vrf 102
+ description Management
+!
+!
+!
+!
+!
+!
+!
+no ip domain lookup
+ip domain name iwocsgen2.controls.technipfmc.com
+!
+ip dhcp pool 52
+ network 172.30.52.0 255.255.255.0
+ default-router 172.30.52.1
+ lease 10
+ reserved-only
+   address 172.30.52.74 client-id "Gi0/1/1" ascii
+   address 172.30.52.75 client-id "Gi0/1/2" ascii
+!
+!
+!
+login block-for 20 attempts 5 within 60
+login on-failure log
+login on-success log
+!
+!
+!
+!
+!
+!
+!
+subscriber templating
+!
+! 
+! 
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+license udi pid C1111-8P sn FCZ2441C0FV
+license accept end user agreement
+no license smart enable
+memory free low-watermark processor 70177
+!
+diagnostic bootup level minimal
+!
+spanning-tree extend system-id
+!
+!
+username walter privilege 15 secret 5 $1$u/LQ$NtiHcHtmKzWwA1aed/XoQ/
+username marvin privilege 15 secret 5 $1$xegf$IQ4NS5Z4evQ6LEBDGI3l90
+username daffy privilege 5 secret 5 $1$/6pG$YpDyPemQiW/4Mtpj.EBpR0
+!
+redundancy
+ mode none
+!
+!
+vlan internal allocation policy ascending
+no cdp run
+!
+lldp run
+!
+!
+!
+!
+! 
+! 
+!
+!
+interface GigabitEthernet0/0/0
+ no ip address
+ shutdown
+ negotiation auto
+!
+interface GigabitEthernet0/0/1
+ no ip address
+ shutdown
+ negotiation auto
+!
+interface GigabitEthernet0/1/0
+ description LINK-TO-EXTERNAL
+ switchport access vlan 52
+ spanning-tree portfast
+!
+interface GigabitEthernet0/1/1
+ description RCP-4-DHCP
+ switchport access vlan 52
+ ip dhcp server use subscriber-id client-id
+ spanning-tree portfast
+!
+interface GigabitEthernet0/1/2
+ description RCP-5-DHCP
+ switchport access vlan 52
+ ip dhcp server use subscriber-id client-id
+ spanning-tree portfast
+!
+interface GigabitEthernet0/1/3
+ shutdown
+!
+interface GigabitEthernet0/1/4
+ shutdown
+!
+interface GigabitEthernet0/1/5
+ shutdown
+!
+interface GigabitEthernet0/1/6
+ shutdown
+!
+interface GigabitEthernet0/1/7
+ description LINK-TO-TIR
+ switchport trunk native vlan 888
+ switchport trunk allowed vlan 1,52,102,1002-1005
+ switchport mode trunk
+!
+interface Vlan1
+ ip address 10.10.10.1 255.255.255.0
+!
+interface Vlan52
+ description DMZ-2
+ ip address 172.30.52.4 255.255.255.0
+!
+interface Vlan102
+ description Management
+ ip vrf forwarding 102
+ ip address 172.30.102.4 255.255.255.0
+!
+ip forward-protocol nd
+no ip http server
+ip http authentication local
+no ip http secure-server
+ip route vrf 102 0.0.0.0 0.0.0.0 172.30.102.1
+ip ssh version 2
+!
+!
+!
+logging trap notifications
+logging host 172.30.100.99 vrf 102
+!
+!
+snmp-server community LUCKYLUKE RO
+snmp-server location IWOCS Gen2
+snmp-server contact 20k-1-off
+!
+!
+control-plane
+!
+privilege exec level 5 show spanning-tree blockedports
+privilege exec level 5 show spanning-tree
+privilege exec level 5 show vlans
+privilege exec level 5 show lldp neighbors
+privilege exec level 5 show lldp
+privilege exec level 5 show vlan-range
+privilege exec level 5 show logging
+privilege exec level 5 show running-config
+privilege exec level 5 show interfaces
+privilege exec level 5 show
+banner motd C
+
+
+
+                            TechnipFMC
+
+         ------------------ W A R N I N G -----------------           
+               This system is for authorized use only.                
+      All activities conducted on and information accessed, processed,     
+           stored or sent using this device may be examined.           
+By using the system, all users acknowledge and consent to such monitoring.
+   All unauthorized or improper use of this system shall be reported.      
+                                                                      
+                All activities performed on this device               
+                      are logged and monitored.                       
+                                                                      
+         -------------------------------------------------   
+
+                        Location  : IWOCS Generation 2
+                     Device name  : ETAS-1
+                      Cabinet PN  : P6000183221 
+                      Network PN  : P6000185409
+                         Version  : C
+                        Filename  : ETAS-1
+
+         -------------------------------------------------
+
+!
+line con 0
+ logging synchronous
+ transport input none
+ stopbits 1
+line vty 0 4
+ logging synchronous
+ login local
+ transport input ssh
+!
+ntp source Vlan102
+ntp server vrf 102 172.30.51.10 minpoll 10
+!
+!
+!
+!
+!
+end

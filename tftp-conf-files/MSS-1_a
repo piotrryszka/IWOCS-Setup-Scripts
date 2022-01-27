@@ -1,0 +1,368 @@
+!
+version 15.2
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+service password-encryption
+service sequence-numbers
+!
+hostname MSS-1_A
+!
+boot-start-marker
+boot-end-marker
+!
+!
+logging buffered 16384 informational
+enable secret 5 $1$vhjr$Zr37SWDYBA8I9LmagrxJg1
+!
+username walter privilege 15 secret 5 $1$u/LQ$NtiHcHtmKzWwA1aed/XoQ/
+username marvin privilege 15 secret 5 $1$xegf$IQ4NS5Z4evQ6LEBDGI3l90
+username daffy privilege 5 secret 5 $1$/6pG$YpDyPemQiW/4Mtpj.EBpR0
+no aaa new-model
+clock timezone CST -6 0
+clock summer-time CDT recurring
+system mtu routing 1500
+no ip source-route
+ip routing
+!
+ip vrf 100
+ description Management
+!
+ip dhcp use subscriber-id client-id
+ip dhcp subscriber-id interface-name
+!
+ip dhcp pool 201
+ network 172.30.201.0 255.255.255.0
+ default-router 172.30.201.1 
+ lease 10
+ reserved-only
+   address 172.30.201.91 client-id "Fa1/8" ascii
+   address 172.30.201.62 client-id "Fa1/3" ascii
+   address 172.30.201.61 client-id "Fa1/1" ascii
+   address 172.30.201.71 client-id "Fa1/5" ascii
+   address 172.30.201.72 client-id "Fa1/6" ascii
+   cip instance 1
+!
+ip dhcp pool 21
+ network 172.30.21.0 255.255.255.0
+ default-router 172.30.21.1 
+ lease 10
+ reserved-only
+   address 172.30.21.61 client-id "Fa1/2" ascii
+   address 172.30.21.62 client-id "Fa1/4" ascii
+   address 172.30.21.93 client-id "Fa1/7" ascii
+   cip instance 2
+!
+!
+no ip domain-lookup
+ip domain-name iwocsg2.bifrost.technipfmc.com
+login block-for 20 attempts 5 within 60
+login on-failure log
+vtp mode off
+!
+shutdown vlan 666
+!
+!
+!
+!
+!
+ptp mode e2etransparent 
+!
+!
+license boot level iplite
+!
+spanning-tree mode rapid-pvst
+spanning-tree loopguard default
+spanning-tree portfast edge bpduguard default
+spanning-tree extend system-id
+spanning-tree vlan 11,21,100,201,888 priority 12288
+errdisable recovery cause udld
+errdisable recovery cause bpduguard
+errdisable recovery cause security-violation
+errdisable recovery cause channel-misconfig
+errdisable recovery cause pagp-flap
+errdisable recovery cause dtp-flap
+errdisable recovery cause link-flap
+errdisable recovery cause sfp-config-mismatch
+errdisable recovery cause gbic-invalid
+errdisable recovery cause psecure-violation
+errdisable recovery cause port-mode-failure
+errdisable recovery cause dhcp-rate-limit
+errdisable recovery cause pppoe-ia-rate-limit
+errdisable recovery cause mac-limit
+errdisable recovery cause vmps
+errdisable recovery cause storm-control
+errdisable recovery cause inline-power
+errdisable recovery cause arp-inspection
+errdisable recovery cause loopback
+errdisable recovery cause small-frame
+errdisable recovery cause psp
+!
+alarm profile defaultPort
+ alarm not-operating 
+ syslog not-operating 
+ notifies not-operating 
+!
+
+!
+!
+!
+!
+vlan internal allocation policy ascending
+!
+vlan 21
+ name SCU_A
+!
+vlan 100
+ name MANAGEMENT
+!
+vlan 201
+ name SAFE-A
+!
+vlan 666
+ name NOTINUSE
+ shutdown
+!
+vlan 888
+ name NATIVE
+no cdp run
+!
+lldp run
+!
+class-map match-any AF11-PRI
+ match access-group name ACL_MARK_AF11
+class-map match-any AF22-PRI
+ match access-group name ACL_MARK_AF22
+class-map match-any AF43-PRI
+ match access-group name ACL_MARK_AF43
+!
+policy-map AF11
+ class AF11-PRI
+  set dscp af11
+policy-map AF43
+ class AF43-PRI
+  set dscp af43
+policy-map AF22
+ class AF22-PRI
+  set dscp af22
+!
+!
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+interface FastEthernet1/1
+ description SIS-PLC-E1-1
+ switchport access vlan 201
+ switchport mode access
+ ip dhcp relay information option server-id-override
+ ip dhcp server use subscriber-id client-id
+ storm-control broadcast level 20.00
+ storm-control multicast level 20.00
+ storm-control action shutdown
+ spanning-tree portfast edge
+ service-policy input AF43
+!
+interface FastEthernet1/2
+ description SIS-PLC-E1-2
+ switchport access vlan 21
+ switchport mode access
+ ip dhcp relay information option server-id-override
+ ip dhcp server use subscriber-id client-id
+ storm-control broadcast level 20.00
+ storm-control multicast level 20.00
+ storm-control action shutdown
+ spanning-tree portfast edge
+!
+interface FastEthernet1/3
+ description CA-A-IF3
+ switchport access vlan 201
+ switchport mode access
+ ip dhcp relay information option server-id-override
+ ip dhcp server use subscriber-id client-id
+ storm-control broadcast level 20.00
+ storm-control multicast level 20.00
+ storm-control action shutdown
+ spanning-tree portfast edge
+ service-policy input AF43
+!
+interface FastEthernet1/4
+ description CA-A-IF2
+ switchport access vlan 21
+ switchport mode access
+ ip dhcp relay information option server-id-override
+ ip dhcp server use subscriber-id client-id
+ storm-control broadcast level 20.00
+ storm-control multicast level 20.00
+ storm-control action shutdown
+ spanning-tree portfast edge
+!
+interface FastEthernet1/5
+ description PSDT1_A
+ switchport access vlan 201
+ switchport mode access
+ ip dhcp relay information option server-id-override
+ ip dhcp server use subscriber-id client-id
+ storm-control broadcast level 20.00
+ storm-control multicast level 20.00
+ storm-control action shutdown
+ spanning-tree portfast edge
+ service-policy input AF43
+!
+interface FastEthernet1/6
+ description PSDT2_A
+ switchport access vlan 201
+ switchport mode access
+ ip dhcp relay information option server-id-override
+ ip dhcp server use subscriber-id client-id
+ storm-control broadcast level 20.00
+ storm-control multicast level 20.00
+ storm-control action shutdown
+ spanning-tree portfast edge
+ service-policy input AF43
+!
+interface FastEthernet1/7
+ description EWS-Safe-SCU_A
+ switchport access vlan 21
+ switchport mode access
+ ip dhcp relay information option server-id-override
+ ip dhcp server use subscriber-id client-id
+ storm-control broadcast level 20.00
+ storm-control multicast level 20.00
+ storm-control action shutdown
+!
+interface FastEthernet1/8
+ description EWS-Safe_A
+ switchport access vlan 201
+ switchport mode access
+ ip dhcp relay information option server-id-override
+ ip dhcp server use subscriber-id client-id
+ storm-control broadcast level 20.00
+ storm-control multicast level 20.00
+ spanning-tree portfast edge
+!
+interface GigabitEthernet1/1
+ description TRUNK_TO_TDS-1_A
+ switchport trunk allowed vlan 21,100,201
+ switchport trunk native vlan 888
+ switchport mode trunk
+ storm-control broadcast level 20.00
+ storm-control multicast level 20.00
+!
+interface GigabitEthernet1/2
+ description NotInUse
+ switchport access vlan 666
+ shutdown
+ storm-control broadcast level 20.00
+ storm-control multicast level 20.00
+!
+interface Vlan1
+ no ip address
+ no ip redirects
+ no ip unreachables
+ no ip proxy-arp
+ shutdown
+!
+interface Vlan21
+ description SCU_A
+ ip address 172.30.21.12 255.255.255.0
+ no ip redirects
+ no ip unreachables
+ no ip proxy-arp
+!
+interface Vlan100
+ description Management
+ ip vrf forwarding 100
+ ip address 172.30.100.107 255.255.255.0
+ no ip redirects
+ no ip unreachables
+ no ip proxy-arp
+!
+interface Vlan201
+ description Safe_A
+ ip address 172.30.201.11 255.255.255.0
+ no ip redirects
+ no ip unreachables
+ no ip proxy-arp
+!
+ip forward-protocol nd
+!
+no ip http server
+no ip http secure-server
+ip tftp source-interface Vlan100
+ip route vrf 100 0.0.0.0 0.0.0.0 172.30.100.1
+ip ssh version 2
+!
+ip access-list extended ACL_MARK_AF11
+ip access-list extended ACL_MARK_AF22
+ip access-list extended ACL_MARK_AF43
+ permit ip 0.0.0.0 255.255.255.0 any
+!
+logging trap notifications
+logging host 172.30.100.99 vrf 100
+snmp-server community LUCKYLUKE RO
+snmp-server location IWOCS Gen2 SAFE_A
+snmp-server contact 0.0.13
+snmp mib flash cache
+privilege exec level 5 show spanning-tree blockedports
+privilege exec level 5 show spanning-tree
+privilege exec level 5 show lldp neighbors
+privilege exec level 5 show lldp
+privilege exec level 5 show vlan
+privilege exec level 5 show running-config
+privilege exec level 5 show logging
+privilege exec level 5 show interfaces
+privilege exec level 5 show
+banner motd C
+
+                                                    
+                            TechnipFMC                      
+                     
+         ------------------ W A R N I N G -----------------           
+               This system is for authorized use only.                
+      All activities conducted on and information accessed, processed,     
+           stored or sent using this device may be examined.           
+By using the system, all users acknowledge and consent to such monitoring.
+   All unauthorized or improper use of this system shall be reported.      
+                                                                      
+                All activities performed on this device               
+                      are logged and monitored.                       
+                                                                      
+         -------------------------------------------------     
+                                                    
+                        Location  : IWOCS Generation 2
+                     Device name  : MSS-1_A
+                      Cabinet PN  : P6000183221 
+                      Network PN  : P6000185409
+                         Version  : B
+                        Filename  : MSS-1_A
+                                                     
+         -------------------------------------------------        
+
+!
+line con 0
+ logging synchronous
+ login local
+line vty 0 4
+ logging synchronous
+ login local
+ transport input ssh
+line vty 5 15
+ logging synchronous
+ login local
+ transport input ssh
+!
+ntp server vrf 100 172.30.51.10 minpoll 10
+!
+!
+!
+!
+!
+!
+!
+end

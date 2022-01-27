@@ -1,0 +1,401 @@
+
+!
+! Last configuration change at 04:41:59 CDT Mon Jun 21 2021 by walter
+! NVRAM config last updated at 07:00:54 CDT Mon Aug 16 2021 by walter
+!
+version 15.2
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+service password-encryption
+service sequence-numbers
+!
+hostname TDS-1_PCU
+!
+boot-start-marker
+boot-end-marker
+!
+!
+logging buffered 16384 informational
+enable secret 5 $1$mERr$WIRGHp0A0Tjpj8yb3g/3S0
+!
+username walter privilege 15 secret 5 $1$BXKP$P/6ihSmA1hgYsv3GAlQB7.
+username marvin privilege 15 secret 5 $1$mERr$gTL4/Y8jbn/8J5Dpe4uUB/
+username daffy privilege 5 secret 5 $1$o8sP$vPEt5P05k5TFBallbLjBx/
+no aaa new-model
+clock timezone CST -6 0
+clock summer-time CDT recurring
+system mtu routing 1500
+no ip source-route
+ip routing
+!
+ip vrf 105
+ description Management
+!
+ip dhcp use subscriber-id client-id
+ip dhcp subscriber-id interface-name
+!
+!
+no ip domain-lookup
+ip domain-name iwocsg2.bifrost.technipfmc.com
+login block-for 20 attempts 5 within 60
+login on-failure log
+vtp mode off
+!
+shutdown vlan 666
+!
+!
+!
+!
+!
+ptp mode e2etransparent 
+!
+!
+!
+license boot level ipservices
+!
+spanning-tree mode rapid-pvst
+spanning-tree loopguard default
+spanning-tree portfast edge bpduguard default
+spanning-tree extend system-id
+spanning-tree vlan 3,11-13,29,53,100,104-106,200-299,888 priority 4096
+errdisable recovery cause udld
+errdisable recovery cause bpduguard
+errdisable recovery cause security-violation
+errdisable recovery cause channel-misconfig
+errdisable recovery cause pagp-flap
+errdisable recovery cause link-flap
+errdisable recovery cause sfp-config-mismatch
+errdisable recovery cause gbic-invalid
+errdisable recovery cause l2ptguard
+errdisable recovery cause psecure-violation
+errdisable recovery cause port-mode-failure
+errdisable recovery cause dhcp-rate-limit
+errdisable recovery cause pppoe-ia-rate-limit
+errdisable recovery cause mac-limit
+errdisable recovery cause vmps
+errdisable recovery cause storm-control
+errdisable recovery cause inline-power
+errdisable recovery cause arp-inspection
+errdisable recovery cause loopback
+errdisable recovery cause small-frame
+errdisable recovery cause psp
+!
+alarm profile defaultPort
+ alarm not-operating 
+ syslog not-operating 
+ notifies not-operating 
+!
+!
+!
+!
+!
+!
+vlan internal allocation policy ascending
+!
+vlan 11
+ name SCADA-PCU
+!
+vlan 53
+ name DMZ-PCU
+!
+vlan 104
+ name ESXI-PCU
+!
+vlan 105
+ name Mgmt-PCU-int
+!
+vlan 106
+ name Mgmt-PCU-ext
+!
+vlan 229
+ name Top-intf-int
+!
+vlan 666
+ name NOTINUSE
+ shutdown
+!
+vlan 888
+ name NATIVE
+no cdp run
+!
+lldp run
+!
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface GigabitEthernet1/1
+ description TRUNK_TO_SACU_TDS-1-A/B
+ switchport trunk allowed vlan 105,229
+ switchport trunk native vlan 888
+ switchport mode trunk
+ storm-control broadcast level 20.00
+ storm-control multicast level 20.00
+ storm-control action shutdown
+!
+interface GigabitEthernet1/2
+ description NotInUse
+ switchport access vlan 666
+ switchport mode access
+ shutdown
+ storm-control broadcast level 20.00
+ storm-control multicast level 20.00
+ storm-control action shutdown
+!
+interface GigabitEthernet1/3
+ description NotInUse
+ switchport access vlan 666
+ switchport mode access
+ shutdown
+ storm-control broadcast level 20.00
+ storm-control multicast level 20.00
+ storm-control action shutdown
+!
+interface GigabitEthernet1/4
+ description NotInUse
+ switchport access vlan 666
+ switchport mode access
+ shutdown
+ storm-control broadcast level 20.00
+ storm-control multicast level 20.00
+ storm-control action shutdown
+!
+interface FastEthernet1/5
+ description TRUNK_TO_SDG-1_PCU_port3
+ switchport trunk allowed vlan 3,11,53,104,105,229
+ switchport trunk native vlan 888
+ switchport mode trunk
+ storm-control broadcast level 20.00
+ storm-control multicast level 20.00
+ storm-control action shutdown
+!
+interface FastEthernet1/6
+ description TRUNK_TO_SDG-1_PCU_port4
+ switchport trunk allowed vlan 3,11,53,104,105,229
+ switchport trunk native vlan 888
+ switchport mode trunk
+ storm-control broadcast level 20.00
+ storm-control multicast level 20.00
+ storm-control action shutdown
+!
+interface FastEthernet1/7
+ description PC1-X1
+ switchport trunk allowed vlan 53,104
+ switchport trunk native vlan 888
+ switchport mode trunk
+ storm-control broadcast level 20.00
+ storm-control multicast level 20.00
+!
+interface FastEthernet1/8
+ description PC1-X2
+ switchport trunk allowed vlan 11,105
+ switchport trunk native vlan 888
+ switchport mode trunk
+ storm-control broadcast level 20.00
+ storm-control multicast level 20.00
+!
+interface FastEthernet1/9
+ description PC2-X1
+ switchport trunk allowed vlan 104
+ switchport trunk native vlan 888
+ switchport mode trunk
+ storm-control broadcast level 20.00
+ storm-control multicast level 20.00
+!
+interface FastEthernet1/10
+ description PC2-X2
+ switchport trunk allowed vlan 11
+ switchport trunk native vlan 888
+ switchport mode trunk
+ storm-control broadcast level 20.00
+ storm-control multicast level 20.00
+!
+interface FastEthernet1/11
+ description PC3-X1
+ switchport trunk allowed vlan 104
+ switchport trunk native vlan 888
+ switchport mode trunk
+ storm-control broadcast level 20.00
+ storm-control multicast level 20.00
+!
+interface FastEthernet1/12
+ description PC3-X2
+ switchport trunk allowed vlan 11
+ switchport trunk native vlan 888
+ switchport mode trunk
+ storm-control broadcast level 20.00
+ storm-control multicast level 20.00
+!
+interface FastEthernet1/13
+ description DE_PLC
+ switchport access vlan 53
+ storm-control broadcast level 20.00
+ storm-control multicast level 20.00
+ storm-control action shutdown
+!
+interface FastEthernet1/14
+ description Export_PC
+ switchport access vlan 105
+ storm-control broadcast level 20.00
+ storm-control multicast level 20.00
+ storm-control action shutdown
+!
+interface FastEthernet1/15
+ description NotInUse
+ switchport access vlan 666
+ switchport mode access
+ shutdown
+ storm-control broadcast level 20.00
+ storm-control multicast level 20.00
+ storm-control action shutdown
+!
+interface FastEthernet1/16
+ description NotInUse
+ switchport access vlan 666
+ switchport mode access
+ shutdown
+ storm-control broadcast level 20.00
+ storm-control multicast level 20.00
+ storm-control action shutdown
+!
+interface FastEthernet1/17
+ description NotInUse
+ switchport access vlan 666
+ switchport mode access
+ shutdown
+ storm-control broadcast level 20.00
+ storm-control multicast level 20.00
+ storm-control action shutdown
+!
+interface FastEthernet1/18
+ description NotInUse
+ switchport access vlan 666
+ switchport mode access
+ shutdown
+ storm-control broadcast level 20.00
+ storm-control multicast level 20.00
+ storm-control action shutdown
+!
+interface FastEthernet1/19
+ description Management_EWS
+ switchport access vlan 105
+ storm-control broadcast level 20.00
+ storm-control multicast level 20.00
+ storm-control action shutdown
+!
+interface FastEthernet1/20
+ description IP_KVM
+ switchport access vlan 105
+ storm-control broadcast level 20.00
+ storm-control multicast level 20.00
+ storm-control action shutdown
+!
+interface Vlan1
+ no ip address
+ no ip redirects
+ no ip unreachables
+ no ip proxy-arp
+ shutdown
+!
+interface Vlan11
+ description SCADA-PCU
+ ip address 172.29.11.11 255.255.255.0
+ no ip redirects
+ no ip unreachables
+ no ip proxy-arp
+!
+interface Vlan12
+ description SCADA-PCU
+ ip address 172.29.12.11 255.255.255.0
+ no ip redirects
+ no ip unreachables
+ no ip proxy-arp
+!
+interface Vlan53
+ description DMZ-PCU
+ ip address 172.29.53.4 255.255.255.0
+ no ip redirects
+ no ip unreachables
+ no ip proxy-arp
+!
+interface Vlan105
+ description Management-PCU-Int
+ ip vrf forwarding 105
+ ip address 172.29.105.101 255.255.255.0
+ no ip redirects
+ no ip unreachables
+ no ip proxy-arp
+!
+ip forward-protocol nd
+!
+no ip http server
+no ip http secure-server
+ip tftp source-interface Vlan105
+ip route vrf 105 0.0.0.0 0.0.0.0 172.29.105.1
+!
+!
+logging trap notifications
+logging host 172.30.100.99 vrf 105
+!
+snmp-server community LUCKYLUKE RO
+!
+no vstack
+privilege exec level 5 show spanning-tree blockedports
+privilege exec level 5 show spanning-tree
+privilege exec level 5 show lldp neighbors
+privilege exec level 5 show lldp
+privilege exec level 5 show vlan
+privilege exec level 5 show running-config
+privilege exec level 5 show logging
+privilege exec level 5 show interfaces
+privilege exec level 5 show
+banner motd C
+
+
+                            TechnipFMC
+
+         ------------------ W A R N I N G -----------------
+               This system is for authorized use only.
+      All activities conducted on and information accessed, processed,
+           stored or sent using this device may be examined.
+By using the system, all users acknowledge and consent to such monitoring.
+   All unauthorized or improper use of this system shall be reported.
+
+                All activities performed on this device
+                      are logged and monitored.
+
+         -------------------------------------------------
+
+                        Location  : PCU, IWOCS Generation 2
+                     Device name  : TDS-1_PCU
+                      Cabinet PN  : P6000xxxxxx
+                      Network PN  : P6000186820
+                         Version  : 02
+                        Filename  : TDS-1_PCU
+
+         -------------------------------------------------
+
+!
+line con 0
+ logging synchronous
+ login local
+line vty 0 4
+ logging synchronous
+ login local
+ transport input ssh
+line vty 5 15
+ logging synchronous
+ login local
+ transport input ssh
+!
+ntp server vrf 105 172.30.51.10 minpoll 10
+!
+end

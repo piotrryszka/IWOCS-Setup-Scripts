@@ -329,4 +329,26 @@ Something in French language
 ['/home/msztaba\n']
 Something in French language 
 2022-01-26.txt, 2022-01-27.txt
-Something in French language 
+Something in French language Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+
+
+Creating current timestamp:  27/01/2022 13:04:10
+
+
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+
+
+Connection has been established correctly ...
+
+
+['bd_lab1\n', 'bd_lab2\n', 'bd_lab3\n', 'episodes_list2\n', 'kat3\n', 'KAT3\n', 'KAT4\n', 'LAB6\n', 'ppok\n', 'Programy\n', 'PROGRAMY\n', 'public_html\n', 'rokoko\n', 'samba\n', 'secure_html\n', 'test1\n', 'zaliczenie\n']
+['/home/msztaba\n']
+[]
+['bd_lab1\n', 'bd_lab2\n', 'bd_lab3\n', 'episodes_list2\n', 'kat3\n', 'KAT3\n', 'KAT4\n', 'LAB6\n', 'ppok\n', 'Programy\n', 'PROGRAMY\n', 'public_html\n', 'rokoko\n', 'samba\n', 'secure_html\n', 'test1\n', 'zaliczenie\n']
+['/home/msztaba\n']
+This is a list of all saved session logs: 
+2022-01-26.txt, 2022-01-27.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.

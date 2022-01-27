@@ -1,0 +1,446 @@
+
+!
+! Last configuration change at 07:26:44 CDT Thu Aug 12 2021 by walter
+! NVRAM config last updated at 07:00:56 CDT Mon Aug 16 2021 by walter
+!
+version 15.8
+service timestamps debug datetime msec
+service timestamps log datetime msec
+service password-encryption
+!
+hostname TIR-1-kbg1lab1
+!
+boot-start-marker
+boot-end-marker
+!
+!
+enable password 7 111E1809031719010126242A
+!
+aaa new-model
+!
+!
+aaa authentication login default local-case
+aaa authentication enable default enable
+aaa authorization exec default local 
+aaa authorization commands 15 default local 
+!
+!
+!
+!
+!
+aaa session-id common
+clock timezone CST -6 0
+clock summer-time CDT recurring
+service-module wlan-ap 0 bootimage autonomous
+!
+ignition off-timer 900
+!
+ignition undervoltage threshold 11 000
+!
+no ignition enable
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+
+
+!
+ip vrf 103
+ description Management-External
+!
+!
+!
+!
+no ip domain lookup
+ip domain name iwocsg2.bifrost.technipfmc.com
+ip cef
+no ipv6 cef
+!
+multilink bundle-name authenticated
+!
+!
+!
+chat-script lte "" "AT!CALL" TIMEOUT 20 "OK"
+!
+!
+license udi pid IR829M-2LTE-EA-EK9 sn FGL2349LPMT
+!
+!
+!
+no spanning-tree vlan 5
+username marvin privilege 15 secret 5 $1$rVYX$yFY9W1ywpmSTCpejKXLFO.
+username daffy privilege 5 secret 5 $1$VjZI$f9x/VqD1JkeMkuovJkukk0
+username walter privilege 15 secret 5 $1$BXKP$P/6ihSmA1hgYsv3GAlQB7.
+!
+redundancy
+
+!
+!
+!
+!
+!
+controller Cellular 0
+ no lte gps enable
+!
+controller Cellular 1
+ no lte gps enable
+lldp run
+no cdp run
+!
+! 
+!
+crypto isakmp policy 1
+ authentication pre-share
+crypto isakmp key &WhateverKeyWeUse& address 0.0.0.0        
+crypto isakmp keepalive 10 periodic
+!
+!
+crypto ipsec transform-set MidSec esp-3des esp-sha-hmac 
+ mode transport
+!
+crypto ipsec profile VPNProfile
+ set transform-set MidSec 
+!
+!
+!
+!
+!
+!
+!
+interface Loopback1
+ ip address 192.168.210.1 255.255.255.128
+!
+interface Tunnel0
+ description DMVPN
+ bandwidth 1000
+ ip address 10.41.202.210 255.255.255.0
+ no ip redirects
+ ip nat outside
+ ip nhrp authentication Ex0rc1st
+ ip nhrp map multicast 193.90.120.13
+ ip nhrp map 10.41.200.200 193.90.120.13
+ ip nhrp network-id 99
+ ip nhrp holdtime 300
+ ip nhrp nhs 10.41.200.200
+ ip virtual-reassembly in
+ ip tcp adjust-mss 1360
+ delay 1000
+ tunnel source Vlan5
+ tunnel mode gre multipoint
+ tunnel key 100000
+ tunnel protection ipsec profile VPNProfile
+!
+interface GigabitEthernet0
+ no ip address
+ shutdown
+!
+interface GigabitEthernet1
+ switchport access vlan 5
+ switchport mode access
+ no ip address
+ power inline never
+!
+interface GigabitEthernet2
+ switchport trunk allowed vlan 1,52,102,1002-1005
+ switchport mode trunk
+ no ip address
+!
+interface GigabitEthernet3
+ description Trunk to SDG-1_A
+ switchport trunk native vlan 888
+ switchport trunk allowed vlan 1,2,52,102,103,1002-1005
+ switchport mode trunk
+ no ip address
+!
+interface GigabitEthernet4
+ description Trunk to SDG-1_B
+ switchport trunk native vlan 888
+ switchport trunk allowed vlan 1,2,52,102,103,1002-1005
+ switchport mode trunk
+ no ip address
+!
+interface Wlan-GigabitEthernet0
+ no ip address
+!
+interface GigabitEthernet5
+ no ip address
+ shutdown
+ duplex auto
+ speed auto
+!
+interface Cellular0/0
+ no ip address
+ encapsulation slip
+ shutdown
+ dialer in-band
+ dialer string lte
+!
+interface Cellular1/0
+ no ip address
+ encapsulation slip
+ shutdown
+ dialer in-band
+ dialer string lte
+!
+interface Cellular0/1
+ no ip address
+ encapsulation slip
+ shutdown
+!
+interface Cellular1/1
+ no ip address
+ encapsulation slip
+ shutdown
+!
+interface wlan-ap0
+ no ip address
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan2
+ description SDG-Linknet
+ ip address 172.30.2.9 255.255.255.0
+ ip nat inside
+ ip virtual-reassembly in
+!
+interface Vlan5
+ description INTERNET
+ ip address dhcp
+ ip access-group Internet in
+ ip nat outside
+ ip virtual-reassembly in
+!
+interface Vlan102
+ ip address 172.30.102.3 255.255.255.0
+!
+interface Vlan103
+ ip vrf forwarding 103
+ ip address 172.30.103.4 255.255.255.0
+ no ip redirects
+ no ip unreachables
+ no ip proxy-arp
+!
+interface Async0
+ no ip address
+ encapsulation scada
+!
+interface Async1
+ no ip address
+ encapsulation scada
+!
+!
+router rip
+ version 2
+ no validate-update-source
+ passive-interface default
+ no passive-interface Tunnel0
+ network 10.0.0.0
+ network 192.168.210.0
+ no auto-summary
+!
+ip forward-protocol nd
+!
+no ip http server
+no ip http secure-server
+!
+ip tftp source-interface Vlan103
+ip nat inside source static 172.30.104.41 192.168.210.2
+ip nat inside source static 172.30.104.42 192.168.210.3
+ip nat inside source static 172.30.104.43 192.168.210.4
+ip nat inside source static 172.30.104.44 192.168.210.5
+ip nat inside source static 172.30.51.20 192.168.210.6
+ip nat inside source static 172.30.11.34 192.168.210.7
+ip nat inside source static 172.30.100.101 192.168.210.8
+ip nat inside source static 172.30.100.201 192.168.210.9
+ip nat inside source static 172.30.2.1 192.168.210.10
+ip nat inside source static 172.30.2.2 192.168.210.11
+ip nat inside source static 172.30.51.10 192.168.210.12
+ip nat inside source static 172.30.21.111 192.168.210.13
+ip nat inside source static 172.30.22.111 192.168.210.14
+ip nat inside source static 172.30.201.62 192.168.210.15
+ip nat inside source static 172.30.202.62 192.168.210.16
+ip nat inside source static 172.30.201.61 192.168.210.17
+ip nat inside source static 172.30.202.61 192.168.210.18
+ip nat inside source static 172.30.21.113 192.168.210.19
+ip nat inside source static 172.30.22.113 192.168.210.20
+ip nat inside source static 172.30.12.61 192.168.210.21
+ip nat inside source static 172.30.100.99 192.168.210.22
+ip nat inside source static 172.30.220.77 192.168.210.23
+ip nat inside source static 172.30.210.77 192.168.210.24
+ip nat inside source static 172.30.21.91 192.168.210.25
+ip nat inside source static 172.30.22.91 192.168.210.26
+ip nat inside source static 172.30.201.91 192.168.210.27
+ip nat inside source static 172.30.202.91 192.168.210.28
+ip nat inside source static 172.30.21.92 192.168.210.29
+ip nat inside source static 172.30.22.92 192.168.210.30
+ip nat inside source static 172.30.220.91 192.168.210.31
+ip nat inside source static 172.30.220.92 192.168.210.32
+ip nat inside source static 172.30.220.94 192.168.210.33
+ip nat inside source static 172.30.220.95 192.168.210.34
+ip nat inside source static 172.30.210.91 192.168.210.35
+ip nat inside source static 172.30.210.92 192.168.210.36
+ip nat inside source static 172.30.51.91 192.168.210.37
+ip nat inside source static 172.30.12.91 192.168.210.38
+ip nat inside source static 172.30.13.91 192.168.210.39
+ip nat inside source static 172.30.14.91 192.168.210.40
+ip nat inside source static 172.30.100.91 192.168.210.41
+ip nat inside source static 172.30.100.92 192.168.210.42
+ip nat inside source static 172.30.220.71 192.168.210.43
+ip nat inside source static 172.30.210.71 192.168.210.44
+ip nat inside source static 172.30.11.35 192.168.210.45
+ip nat inside source static 172.30.11.36 192.168.210.46
+ip nat inside source static 172.30.11.37 192.168.210.47
+ip nat inside source static 172.30.11.100 192.168.210.48
+ip nat inside source static 172.30.11.200 192.168.210.49
+ip nat inside source static 172.30.11.31 192.168.210.50
+ip nat inside source static 172.30.11.32 192.168.210.51
+ip nat inside source static 172.29.105.99 192.168.210.60
+ip nat inside source static 172.29.104.41 192.168.210.61
+ip nat inside source static 172.29.104.42 192.168.210.62
+ip nat inside source static 172.29.104.43 192.168.210.63
+ip nat inside source static 172.29.105.4 192.168.210.64
+ip nat inside source static 172.29.53.10 192.168.210.65
+ip nat inside source static 172.29.53.20 192.168.210.66
+ip nat inside source static 172.29.105.91 192.168.210.67
+ip nat inside source static 172.29.11.100 192.168.210.68
+ip nat inside source static 172.29.11.32 192.168.210.69
+ip route 10.41.0.0 255.255.0.0 10.41.202.200 name VPN_segment
+ip route 10.254.0.0 255.255.0.0 10.41.202.200
+ip route 172.29.0.0 255.255.0.0 172.30.2.1 name PCU_nets
+ip route 172.30.0.0 255.255.0.0 172.30.2.1 name SACU_nets
+ip route vrf 103 0.0.0.0 0.0.0.0 172.30.103.1 name TIR_MGMT
+ip route 0.0.0.0 0.0.0.0 dhcp
+ip ssh version 2
+!
+ip access-list extended Internet
+ permit tcp any any established
+ permit gre host 193.90.120.13 any
+ permit esp host 193.90.120.13 any
+ permit udp host 193.90.120.13 any eq isakmp
+ permit udp host 193.90.120.13 any eq non500-isakmp
+ permit udp host 192.36.143.150 any eq ntp
+ permit udp any any eq bootpc
+ deny   ip any any log
+ip access-list extended VTY
+ permit ip 172.30.100.0 0.0.0.255 any
+ deny   ip any any log
+!
+ipv6 ioam timestamp
+!
+!
+snmp-server community LUCKYLUKE RO
+snmp-server location IWOCS Gen2 kbg1lab1
+snmp-server contact 0.0.14
+snmp-server enable traps wpan
+!
+!
+!
+control-plane
+!
+!
+privilege exec level 5 show vlan-switch
+privilege exec level 5 show spanning-tree blockedports
+privilege exec level 5 show spanning-tree
+privilege exec level 5 show vlan-range
+privilege exec level 5 show lldp neighbors
+privilege exec level 5 show lldp
+privilege exec level 5 show vlans
+privilege exec level 5 show running-config
+privilege exec level 5 show logging
+privilege exec level 5 show interfaces
+privilege exec level 5 show
+banner motd C
+
+
+                            TechnipFMC
+
+         ------------------ W A R N I N G -----------------
+               This system is for authorised use only.
+      All actives conducted on and information accessed, processed,
+           stored or sent using this device may be examined.
+By using the system, all users acknowledge and consent to such monitoring.
+   All unauthorised or improper use of this system shall be reported.
+
+                All activities performed on this device
+                      are logged and monitored.
+
+         -------------------------------------------------
+
+                        Location  : IWOCS Generation 2
+                     Device name  : TIR-1
+                      Cabinet PN  : P6000134072
+                      Network PN  : P6000180565
+                         Version  : 0.0.14 + pcu nats
+                        Filename  : TIR-1-kbg1lab1
+
+         -------------------------------------------------
+
+!
+line con 0
+ logging synchronous
+ stopbits 1
+line 1 2
+ stopbits 1
+line 3
+ script dialer lte
+ no exec
+ transport preferred lat pad telnet rlogin lapb-ta mop udptn v120 ssh
+ transport output lat pad telnet rlogin lapb-ta mop udptn v120 ssh
+line 4
+ no activation-character
+ no exec
+ transport preferred none
+ transport input all
+ transport output lat pad telnet rlogin lapb-ta mop udptn v120 ssh
+line 8
+ no exec
+ transport preferred lat pad telnet rlogin lapb-ta mop udptn v120 ssh
+ transport output lat pad telnet rlogin lapb-ta mop udptn v120 ssh
+line 9
+ script dialer lte
+ no exec
+ transport preferred lat pad telnet rlogin lapb-ta mop udptn v120 ssh
+ transport output lat pad telnet rlogin lapb-ta mop udptn v120 ssh
+line 15
+ no exec
+ transport preferred lat pad telnet rlogin lapb-ta mop udptn v120 ssh
+ transport output lat pad telnet rlogin lapb-ta mop udptn v120 ssh
+line 1/3 1/6
+ transport preferred none
+ transport output none
+ stopbits 1
+line vty 0 4
+ logging synchronous
+ transport input ssh
+line vty 5 15
+ logging synchronous
+ transport input ssh
+!
+no scheduler max-task-time
+ntp master 15
+ntp server 192.36.143.150
+no iox hdm-enable
+iox client enable interface GigabitEthernet5
+no iox recovery-enable
+!
+!
+!
+!
+!
+!
+!
+end

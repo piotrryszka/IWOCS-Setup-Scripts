@@ -1,0 +1,1748 @@
+!
+ASA Version 9.12(1) 
+!
+hostname SDG-1
+domain-name iwocsg2.bifrost.technipfmc.com
+enable password $sha512$5000$OtI3NHW/Icuej6P08ewhAA==$EONwCHiftpN2rTr4pBEpCg== pbkdf2
+names
+no mac-address auto
+
+!
+interface GigabitEthernet0/0
+ no nameif
+ no security-level
+ no ip address
+!
+interface GigabitEthernet0/0.2
+ vlan 2
+ nameif External-Linknet
+ security-level 10
+ ip address 172.30.2.1 255.255.255.0 standby 172.30.2.2 
+!
+interface GigabitEthernet0/0.52
+ vlan 52
+ nameif DMZ-2
+ security-level 52
+ ip address 172.30.52.1 255.255.255.0 standby 172.30.52.2 
+!
+interface GigabitEthernet0/0.102
+ vlan 102
+ nameif Management-DMZ-2
+ security-level 97
+ ip address 172.30.102.1 255.255.255.0 standby 172.30.102.2 
+!
+interface GigabitEthernet0/0.103
+ vlan 103
+ nameif Management-External
+ security-level 98
+ ip address 172.30.103.1 255.255.255.0 standby 172.30.103.2 
+!
+interface GigabitEthernet0/1
+ no nameif
+ no security-level
+ no ip address
+!
+interface GigabitEthernet0/1.51
+ vlan 51
+ nameif DMZ-1
+ security-level 50
+ ip address 172.30.51.1 255.255.255.0 standby 172.30.51.2 
+!
+interface GigabitEthernet0/1.101
+ vlan 101
+ nameif Management-DMZ-1
+ security-level 99
+ ip address 172.30.101.1 255.255.255.0 standby 172.30.101.2 
+!
+interface GigabitEthernet0/1.104
+ vlan 104
+ nameif ESXi
+ security-level 93
+ ip address 172.30.104.1 255.255.255.0 standby 172.30.104.2 
+!
+interface GigabitEthernet0/2
+ no nameif
+ no security-level
+ no ip address
+!
+interface GigabitEthernet0/3
+ no nameif
+ no security-level
+ no ip address
+!
+interface GigabitEthernet0/4
+ shutdown
+ no nameif
+ no security-level
+ no ip address
+!
+interface GigabitEthernet0/5
+ shutdown
+ no nameif
+ no security-level
+ no ip address
+!
+interface GigabitEthernet0/6
+ shutdown
+ no nameif
+ no security-level
+ no ip address
+!
+interface GigabitEthernet0/7
+ description LAN/STATE Failover Interface
+!
+interface Management0/0
+ management-only
+ shutdown
+ no nameif
+ no security-level
+ no ip address
+!
+interface Redundant1
+ member-interface GigabitEthernet0/2
+ member-interface GigabitEthernet0/3
+ no nameif
+ no security-level
+ no ip address
+!
+interface Redundant1.11
+ vlan 11
+ nameif SCADA
+ security-level 60
+ ip address 172.30.11.1 255.255.255.0 standby 172.30.11.2 
+!
+interface Redundant1.12
+ vlan 12
+ nameif HPU/HDU
+ security-level 65
+ ip address 172.30.12.1 255.255.255.0 standby 172.30.12.2 
+!
+interface Redundant1.13
+ vlan 13
+ nameif SFT
+ security-level 66
+ ip address 172.30.13.1 255.255.255.0 standby 172.30.13.2 
+!
+interface Redundant1.14
+ vlan 14
+ nameif CIU
+ security-level 67
+ ip address 172.30.14.1 255.255.255.0 standby 172.30.14.2 
+!
+interface Redundant1.21
+ vlan 21
+ nameif SCU_A
+ security-level 71
+ ip address 172.30.21.1 255.255.255.0 standby 172.30.21.2 
+!
+interface Redundant1.22
+ vlan 22
+ nameif SCU_B
+ security-level 72
+ ip address 172.30.22.1 255.255.255.0 standby 172.30.22.2 
+!
+interface Redundant1.100
+ vlan 100
+ nameif Management-Internal
+ security-level 100
+ ip address 172.30.100.1 255.255.255.0 standby 172.30.100.2 
+!
+interface Redundant1.105
+ vlan 105
+ nameif Management-PCU-Int
+ security-level 100
+ ip address 172.29.105.1 255.255.255.0 standby 172.29.105.2 
+!
+interface Redundant1.201
+ vlan 201
+ nameif SAFE_A
+ security-level 81
+ ip address 172.30.201.1 255.255.255.0 standby 172.30.201.2 
+!
+interface Redundant1.202
+ vlan 202
+ nameif SAFE_B
+ security-level 82
+ ip address 172.30.202.1 255.255.255.0 standby 172.30.202.2 
+!
+interface Redundant1.210
+ vlan 210
+ nameif SPCU-W
+ security-level 73
+ ip address 172.30.210.1 255.255.255.0 standby 172.30.210.2 
+!
+interface Redundant1.220
+ vlan 220
+ nameif SPCU-X
+ security-level 70
+ ip address 172.30.220.1 255.255.255.0 standby 172.30.220.2 
+!
+interface Redundant1.229
+ vlan 229
+ nameif PCU
+ security-level 15
+ ip address 172.29.2.1 255.255.255.248 standby 172.29.2.2 
+!
+banner motd                            TechnipFMC                      
+banner motd                     
+banner motd         ------------------ W A R N I N G -----------------           
+banner motd               This system is for authorised use only.                
+banner motd      All actives conducted on and information accessed, processed,     
+banner motd           stored or sent using this device may be examined.           
+banner motd By using the system, all users acknowledge and consent to such monitoring.
+banner motd   All unauthorised or improper use of this system shall be reported.      
+banner motd                                                                      
+banner motd                All activities performed on this device               
+banner motd                      are logged and monitored.                       
+banner motd                                                                      
+banner motd         -------------------------------------------------     
+banner motd                                                    
+banner motd                        Location  : IWOCS Generation 2
+banner motd                     Device name  : SDG-1
+banner motd                      Cabinet PN  : P6000183221 
+banner motd                      Network PN  : P6000185409
+banner motd                         Version  : B
+banner motd                Primary Filename  : SDG-1_Primary
+banner motd              Secondary Filename  : SDG-1_Secondary
+banner motd                                                     
+banner motd         -------------------------------------------------
+ftp mode passive
+clock timezone CST -6
+clock summer-time CDT recurring
+dns server-group DefaultDNS
+ domain-name iwocsg2.bifrost.technipfmc.com
+same-security-traffic permit inter-interface
+same-security-traffic permit intra-interface
+object network Management-TDS-1_A
+ host 172.30.100.101
+object network Management-TDS-1_B
+ host 172.30.100.201
+object network Management-MSS-1_A
+ host 172.30.100.107
+object network Management-MSS-1_B
+ host 172.30.100.207
+object network Management-MSX-1_A
+ host 172.30.100.105
+object network Management-MSX-1_B
+ host 172.30.100.205
+object network Management-MSW-1_A
+ host 172.30.100.103
+object network Management-MSW-1_B
+ host 172.30.100.203
+object network Management-MSC-1
+ host 172.30.100.31
+object network Management-MSH-1
+ host 172.30.100.41
+object network Management-ETAS-1
+ host 172.30.102.4
+object network Management-TAS-1
+ host 172.30.101.4
+object network Management-TIR-1
+ host 172.30.103.4
+object network Service-I
+ host 172.30.100.99
+object network Management-EWS_A
+ host 172.30.100.91
+object network Management-EWS_B
+ host 172.30.100.92
+object network DMZ-1-DE-PLC
+ host 172.30.51.10
+ description B&R Automation PLC
+object network DMZ-1-RD-GW
+ host 172.30.51.20
+object network ESXi-ESXi_PC1
+ host 172.30.104.41
+object network ESXi-ESXi_PC2
+ host 172.30.104.42
+object network ESXi-ESXi_PC3
+ host 172.30.104.43
+object network ESXi-ESXi_PC4
+ host 172.30.104.44
+object network DMZ-1-Printer
+ host 172.30.51.240
+object network Bifrost-network
+ subnet 10.41.0.0 255.255.0.0
+object network SCADA-DC_A
+ host 172.30.11.31
+object network SCADA-DataBase-GR
+ host 172.30.11.35
+object network SCADA-IAS_A
+ host 172.30.11.100
+object network SCADA-IAS_B
+ host 172.30.11.200
+object network SCADA-RD-HOST
+ host 172.30.11.34
+object network SCADA-LCP-1_A
+ host 172.30.11.61
+object network SCADA-LCP-2_A
+ host 172.30.11.62
+object network SCADA-LCP-1_B
+ host 172.30.11.65
+object network SCADA-LCP-2_B
+ host 172.30.11.66
+object network SCADA-RCP-1
+ host 172.30.11.71
+object network SCADA-RCP-2
+ host 172.30.11.72
+object network SCADA-RCP-3
+ host 172.30.11.73
+object network SCADA-RCP-4
+ host 172.30.11.74
+object network SCADA-RCP-5
+ host 172.30.11.75
+object network SAFE_A-SIS-PLC_A
+ host 172.30.201.61
+object network SAFE_A-CA-PLC_A
+ host 172.30.201.62
+object network SAFE_A-PSDT-1_A
+ host 172.30.201.71
+object network SAFE_A-PSDT-2_A
+ host 172.30.201.72
+object network SAFE_A-EWS_A
+ host 172.30.201.91
+object network SAFE_B-SIS-PLC_B
+ host 172.30.202.61
+object network SAFE_B-CA-PLC_B
+ host 172.30.202.62
+object network SAFE_B-PSDT-1_B
+ host 172.30.202.71
+object network SAFE_B-PSDT-2_B
+ host 172.30.202.72
+object network SAFE_B-EWS_B
+ host 172.30.202.91
+object network SPCU-X-EWS_A
+ host 172.30.220.91
+object network SPCU-X-EWS_B
+ host 172.30.220.92
+object network SPCU-X-DHI-EWS_A
+ host 172.30.220.94
+object network SPCU-X-DHI-EWS_B
+ host 172.30.220.95
+object network SPCU-X-UtilityServer
+ host 172.30.220.71
+object network SPCU-X-Service-X
+ host 172.30.220.77
+object network SPCU-X-TPU-X_A
+ host 172.30.220.102
+object network SPCU-X-TPU-X_B
+ host 172.30.220.202
+object network SPCU-X-SGB-X_A
+ host 172.30.220.103
+object network SPCU-X-SGB-X_B
+ host 172.30.220.203
+object network SPCU-X-RIBT-X_A
+ host 172.30.220.31
+object network SPCU-X-RIBT-X_B
+ host 172.30.220.41
+object network SPCU-X-MRMT-X_A
+ host 172.30.220.32
+object network SPCU-X-MRMT-X_B
+ host 172.30.220.42
+object network SPCU-W-EWS_A
+ host 172.30.210.91
+object network SPCU-W-EWS_B
+ host 172.30.210.92
+object network SPCU-W-Service-W
+ host 172.30.210.77
+object network SPCU-W-TPU-W_A
+ host 172.30.210.102
+object network SPCU-W-TPU-W_B
+ host 172.30.210.202
+object network SPCU-W-RIBT-X_A
+ host 172.30.210.31
+object network SPCU-W-RIBT-W_B
+ host 172.30.210.41
+object network SPCU-W-MRMT-W_A
+ host 172.30.210.32
+object network SPCU-W-MRMT-W_B
+ host 172.30.210.42
+object network Management-Service-I
+ host 172.30.100.99
+object network HPU-HDU-EWS
+ host 172.30.12.98
+object network SCU-EWS_A
+ host 172.30.21.91
+object network SCU-EWS_B
+ host 172.30.22.91
+object network HPU-HDU-ControlPanel
+ host 172.30.12.65
+object network HPU-HDU-PLC
+ host 172.30.12.61
+object network SCU-SPCU-R_A
+ host 172.30.21.111
+object network SCU-SPCU-R_B
+ host 172.30.22.111
+object network SCU-UPS_A
+ host 172.30.21.112
+object network SCU-UPS_B
+ host 172.30.22.112
+object network SCU-BPCS-PLC_A
+ host 172.30.21.113
+object network SCU-BPCS-PLC_B
+ host 172.30.22.113
+object service 902_TCP_ESXIconsole
+ service tcp destination eq 902 
+ description ESXIconsole
+object service 3389_TCP_RDP
+ service tcp destination eq 3389 
+object service 88_UDP_DCAuthentication
+ service udp destination eq 88 
+object network TIR-NTP
+ host 172.30.103.4
+object network TIR-Interface-Internal
+ host 172.30.2.9
+object network SCU-SIS-CA_B
+ host 172.30.22.62
+object network SCU-SIS-CA_A
+ host 172.30.21.62
+object service 1132_TCP_WorkbenchDebugger
+ service tcp destination eq 1132 
+object service 2010-2011_UDP_DiscoverTool
+ service udp destination range 2010 2011 
+object service 5000_UDP_PeerToPeer
+ service udp destination eq 5000 
+object service 6000_TCP_OnlineDebugger
+ service tcp destination eq 6000 
+object service 55555_TCP_DiagnosticCLI
+ service tcp destination eq 55555 
+object service 1025-65535_TCP_RPC-dynamic-assign
+ service tcp destination range 1024 65535 
+object service 4840_TCP_OPC-UA
+ service tcp destination eq 4840 
+object network SPCU-W_WOCM_A-PSDS-1_A
+ host 10.210.1.66
+object network SPCU-W_WOCM_A-PSDS-2_A
+ host 10.1.1.1
+ description placeholder
+object network SPCU-W_WOCM_B-PSDS-1_B
+ host 10.210.2.66
+object network SPCU-W_WOCM_B-PSDS-2_B
+ host 10.1.1.1
+ description placeholder
+object service 9100-9102_TCP_PrintPorts
+ service tcp destination range 9100 9102 
+object service 13001-13002_UDP_PSDcom
+ service udp source range 1024 65535 destination range 13001 13002 
+object service 13010_UDP_PSDCAN
+ service udp destination eq 13010 
+object service 53_UDP_domain-return
+ service udp source eq domain 
+object service 11169_TCP
+ service tcp destination eq 11169 
+object service 135_TCP_WIN_RM
+ service tcp destination eq 135 
+object service 5985_TCP_WIN_RM
+ service tcp destination eq 5985 
+object network SCADA-DC_B
+ host 172.30.11.32
+object network SPCU-W-UtilityServer
+ host 172.30.210.71
+object service 4200_TCP_UtilityServerConsole
+ service tcp destination eq 4200 
+object network SCADA-HMI-1
+ host 172.30.11.36
+object network SCADA-HMI-2
+ host 172.30.11.37
+object network CylanceHybridBrfrost
+ host 10.254.1.111
+object network DMZ-2-RCP-4
+ host 172.30.52.74
+object network DMZ-2-RCP-5
+ host 172.30.52.75
+object network Management-SDG-pri
+ host 172.30.100.1
+object network Management-SDG-sec
+ host 172.30.100.2
+object network Management-MSH-2
+ host 172.30.100.42
+object network Management-MSH-3
+ host 172.30.100.43
+object network SPCU-X_MRM-NET-A
+ subnet 10.255.3.200 255.255.255.252
+object network SPCU-X-MRM-NET-B
+ subnet 10.255.3.232 255.255.255.252
+object network RIG-Master-Clock
+ host 1.1.1.1
+ description placeholder
+object service 11159_UDP
+ service udp destination eq 11159 
+object network SFT-EWS
+ host 172.30.13.91
+object network CIU-EWS
+ host 172.30.14.91
+object network SPCU-R-PLC_A
+ host 172.30.21.111
+object network SPCU-R-PLC_B
+ host 172.30.22.111
+object network CIU-PLC
+ host 172.30.14.61
+object network HPU-PLC
+ host 172.30.12.61
+object network SCU-PurgeControl-PLC_A
+ host 172.30.21.114
+object network SCU-PurgeControl-PLC_B
+ host 172.30.22.114
+object network SCU-OptionalDev_A
+ host 172.30.21.114
+object network SCU-OptionalDev_B
+ host 172.30.22.114
+object network SFT-PLC
+ host 172.30.13.61
+object network SPCU-W_WOCM_A_GreasePump_A
+ host 10.210.1.195
+object network SPCU-W_WOCM_B_GreasePump_B
+ host 10.210.2.195
+object service 502_UDP_Modbus
+ service udp destination eq 502 
+object network PCU-Networks
+ subnet 172.29.0.0 255.255.0.0
+object network SPCU-X-PCR-D_A
+ host 10.255.1.34
+object network SPCU-X-PCR-D_B
+ host 10.255.2.34
+object service 8700_TCP
+ service tcp destination eq 8700 
+object network SFT-Panel
+ host 172.30.13.65
+object service 102_TCP_Siemens
+ service tcp destination eq 102 
+object network DMZ-Export-PC
+ host 172.30.51.91
+object network CIU-Panel
+ host 1.1.1.1
+object network HPU-Panel
+ host 1.1.1.1
+object service 5413_tcp
+ service tcp destination eq 5413 
+object service 445_TCP
+ service tcp destination eq 445 
+object network DMZ-DE-PLC_PCU
+ host 172.29.53.10
+object network DMZ-2-RCP-6
+ host 172.30.52.76
+object network DMZ-2-RCP-7
+ host 172.30.52.77
+object network DMZ-2-RCP-8
+ host 172.30.52.78
+object network SPCU-W_WOCM-nets
+ subnet 10.210.0.0 255.255.0.0
+object network SPCU-X_SCM-nets
+ subnet 10.220.0.0 255.255.0.0
+object network IWOCS-Topside-Nets
+ subnet 172.30.0.0 255.255.0.0
+object network SPCU-W_WOCM_A_DAS_A
+ host 10.210.1.195
+object network SPCU-W_WOCM_B_DAS_B
+ host 10.210.2.195
+object network PCU-SCADA-CYXENCE
+ host 172.29.11.100
+object service 4201_UDP
+ service udp destination eq 4201 
+object service 4221_UDP
+ service udp destination eq 4221 
+object service 4840_UDP_OPC_UA
+ service udp destination eq 4840 
+object-group network Management-Internal
+ network-object object Management-EWS_A
+ network-object object Management-EWS_B
+ network-object object Management-MSC-1
+ network-object object Management-MSH-1
+ network-object object Management-MSS-1_A
+ network-object object Management-MSS-1_B
+ network-object object Management-MSW-1_A
+ network-object object Management-MSW-1_B
+ network-object object Management-MSX-1_A
+ network-object object Management-MSX-1_B
+ network-object object Management-TDS-1_A
+ network-object object Management-TDS-1_B
+ network-object object Service-I
+object-group network Management-External
+ network-object object Management-TIR-1
+object-group network Management-DMZ-2
+ network-object object Management-ETAS-1
+object-group network GroupBPCS_HPU
+ network-object object HPU-HDU-PLC
+ network-object object SCU-BPCS-PLC_A
+ network-object object SCU-BPCS-PLC_B
+object-group network GroupCA
+ description B&R Automation PLC
+ network-object object SAFE_A-CA-PLC_A
+ network-object object SAFE_B-CA-PLC_B
+object-group network GroupESXi
+ network-object object ESXi-ESXi_PC1
+ network-object object ESXi-ESXi_PC2
+ network-object object ESXi-ESXi_PC3
+ network-object object ESXi-ESXi_PC4
+object-group network GroupNWManagementDMZ-2
+ network-object object Management-ETAS-1
+object-group network GroupNWManagementOutside
+ network-object object Management-TIR-1
+object-group network GroupExternal
+ group-object GroupESXi
+ group-object GroupNWManagementDMZ-2
+ group-object GroupNWManagementOutside
+object-group network Management-EWSs
+ network-object object Management-EWS_A
+ network-object object Management-EWS_B
+ network-object object Service-I
+object-group network GroupSCU_B-PLC
+ network-object object SCU-BPCS-PLC_B
+ network-object object SCU-SPCU-R_B
+ network-object object SCU-UPS_B
+ network-object object SCU-PurgeControl-PLC_B
+ network-object object SCU-OptionalDev_B
+object-group service ESXi_Management
+ service-object icmp 
+ service-object tcp destination eq ssh 
+ service-object tcp destination eq https 
+ service-object object 902_TCP_ESXIconsole 
+ service-object tcp destination eq www 
+object-group service DE-PLC-MGMT
+ service-object object 11159_UDP 
+ service-object object 11169_TCP 
+ service-object object 4840_TCP_OPC-UA 
+ service-object tcp-udp destination range 5900 5901 
+ service-object tcp-udp destination eq sunrpc 
+ service-object tcp destination eq ftp 
+ service-object tcp destination eq ftp-data 
+ service-object tcp destination eq www 
+object-group service RD-GatewayAccess
+ service-object icmp 
+ service-object tcp destination eq https 
+ service-object tcp destination eq ssh 
+ service-object udp destination eq 3391 
+object-group network GroupWOCM-PSDS_A
+ network-object object SPCU-W_WOCM_A-PSDS-1_A
+ network-object object SPCU-W_WOCM_A-PSDS-2_A
+object-group service DCAuthenticationPorts
+ service-object tcp-udp destination eq domain 
+ service-object tcp destination eq netbios-ssn 
+ service-object udp destination eq netbios-dgm 
+ service-object object 1025-65535_TCP_RPC-dynamic-assign 
+ service-object tcp-udp destination eq 137 
+ service-object tcp-udp destination eq 389 
+ service-object tcp-udp destination eq 464 
+ service-object tcp-udp destination range 49152 65535 
+ service-object tcp destination eq 135 
+ service-object tcp destination eq 3268 
+ service-object tcp destination eq 3269 
+ service-object tcp destination eq 445 
+ service-object tcp destination eq 5985 
+ service-object tcp destination eq ldaps 
+ service-object udp destination eq ntp 
+ service-object tcp-udp destination eq 88 
+object-group service DataExchangePLC_access
+ service-object icmp 
+ service-object tcp-udp destination eq 4840 
+ service-object tcp-udp destination range 5900 5903 
+ service-object tcp-udp destination eq sunrpc 
+ service-object tcp destination eq 11169 
+ service-object tcp destination eq 20000 
+ service-object tcp destination eq ftp 
+ service-object tcp destination eq ftp-data 
+ service-object tcp destination eq www 
+ service-object udp destination eq 11159 
+ service-object udp destination eq 11160 
+object-group network GroupPLC
+ network-object object DMZ-1-DE-PLC
+ network-object object HPU-HDU-PLC
+ network-object object SAFE_A-SIS-PLC_A
+ network-object object SAFE_B-SIS-PLC_B
+ network-object object SCU-BPCS-PLC_A
+ network-object object SCU-BPCS-PLC_B
+ network-object object SCU-SPCU-R_A
+ network-object object SCU-SPCU-R_B
+ network-object object SCU-SIS-CA_B
+object-group service DM_INLINE_SERVICE_3
+ service-object icmp 
+ service-object tcp destination eq ssh 
+object-group network GroupSPCU-W-Computers
+ network-object object SPCU-W-EWS_A
+ network-object object SPCU-W-EWS_B
+ network-object object SPCU-W-Service-W
+object-group service DM_INLINE_SERVICE_5
+ service-object icmp 
+ service-object tcp destination eq ssh 
+object-group service DM_INLINE_SERVICE_6
+ service-object icmp 
+ service-object tcp destination eq ssh 
+ service-object object 3389_TCP_RDP 
+object-group service DM_INLINE_SERVICE_7
+ service-object icmp 
+ service-object tcp destination eq ssh 
+object-group service DM_INLINE_SERVICE_8
+ service-object icmp 
+ service-object tcp destination eq ssh 
+object-group service DM_INLINE_SERVICE_10
+ service-object icmp 
+ service-object tcp destination eq ssh 
+object-group service DM_INLINE_SERVICE_9
+ service-object icmp 
+ service-object tcp destination eq ssh 
+object-group network GroupWOCM-PSDS_B
+ network-object object SPCU-W_WOCM_B-PSDS-1_B
+ network-object object SPCU-W_WOCM_B-PSDS-2_B
+object-group service VNC-Viewer tcp-udp
+ port-object range 5900 5901
+object-group service DM_INLINE_TCP_1 tcp
+ group-object VNC-Viewer
+ port-object eq www
+object-group network DM_INLINE_NETWORK_4
+ network-object object DMZ-1-DE-PLC
+ group-object GroupBPCS_HPU
+ network-object object SCU-UPS_A
+ network-object object SCU-UPS_B
+ network-object object SPCU-R-PLC_A
+ network-object object SPCU-R-PLC_B
+ network-object object SCU-PurgeControl-PLC_A
+ network-object object SCU-PurgeControl-PLC_B
+ network-object object SFT-PLC
+ network-object object CIU-PLC
+ network-object object SCU-OptionalDev_A
+ network-object object SCU-OptionalDev_B
+object-group network GroupPSDT_B
+ network-object object SAFE_B-PSDT-1_B
+ network-object object SAFE_B-PSDT-2_B
+object-group network DM_INLINE_NETWORK_29
+ group-object GroupPSDT_B
+ network-object object SAFE_B-EWS_B
+object-group network GroupNWManagenent
+ network-object object Management-ETAS-1
+ network-object object Management-MSC-1
+ network-object object Management-MSH-1
+ network-object object Management-MSS-1_A
+ network-object object Management-MSS-1_B
+ network-object object Management-MSW-1_A
+ network-object object Management-MSW-1_B
+ network-object object Management-MSX-1_A
+ network-object object Management-MSX-1_B
+ network-object object Management-TAS-1
+ network-object object Management-TDS-1_A
+ network-object object Management-TDS-1_B
+ network-object object Management-TIR-1
+ network-object object Management-EWS_A
+ network-object object Management-EWS_B
+ network-object object Management-SDG-pri
+ network-object object Management-SDG-sec
+ network-object object Management-MSH-2
+ network-object object Management-MSH-3
+object-group network GroupSPCU-X-Computers
+ network-object object SPCU-X-DHI-EWS_A
+ network-object object SPCU-X-DHI-EWS_B
+ network-object object SPCU-X-EWS_A
+ network-object object SPCU-X-EWS_B
+ network-object object SPCU-X-Service-X
+object-group network GroupPSD
+ network-object object SAFE_A-PSDT-1_A
+ network-object object SAFE_A-PSDT-2_A
+ network-object object SAFE_B-PSDT-1_B
+ network-object object SAFE_B-PSDT-2_B
+object-group network GroupSIS-PLC
+ network-object object SAFE_A-SIS-PLC_A
+ network-object object SAFE_B-SIS-PLC_B
+object-group network GroupSPCU-R
+ description B&R Automation PLC
+ network-object object SCU-SPCU-R_A
+ network-object object SCU-SPCU-R_B
+object-group network GroupDMZ-1
+ network-object object DMZ-1-DE-PLC
+ network-object object DMZ-1-Printer
+ network-object object DMZ-1-RD-GW
+object-group network GroupPanels
+ network-object object SCADA-LCP-1_A
+ network-object object SCADA-LCP-1_B
+ network-object object SCADA-LCP-2_A
+ network-object object SCADA-RCP-1
+ network-object object SCADA-RCP-2
+ network-object object SCADA-RCP-3
+ network-object object SCADA-RCP-4
+ network-object object SCADA-RCP-5
+ network-object object SCADA-LCP-2_B
+object-group network GroupSCADAComputers
+ network-object object SCADA-IAS_A
+ network-object object SCADA-IAS_B
+ network-object object SCADA-LCP-1_A
+ network-object object SCADA-LCP-1_B
+ network-object object SCADA-LCP-2_A
+ network-object object SCADA-RCP-1
+ network-object object SCADA-RCP-2
+ network-object object SCADA-RCP-3
+ network-object object SCADA-RCP-4
+ network-object object SCADA-RCP-5
+ network-object object SCADA-DataBase-GR
+ network-object object SCADA-RD-HOST
+ network-object object SCADA-DC_A
+ network-object object SCADA-DC_B
+ network-object object SCADA-LCP-2_B
+ network-object object SCADA-HMI-1
+ network-object object SCADA-HMI-2
+object-group network GroupIAS
+ network-object object SCADA-IAS_A
+ network-object object SCADA-IAS_B
+object-group network GroupNWManagementInside
+ network-object object Management-MSC-1
+ network-object object Management-MSH-1
+ network-object object Management-MSS-1_A
+ network-object object Management-MSS-1_B
+ network-object object Management-MSW-1_A
+ network-object object Management-MSW-1_B
+ network-object object Management-MSX-1_A
+ network-object object Management-MSX-1_B
+ network-object object Management-TDS-1_A
+ network-object object Management-TDS-1_B
+ network-object object Management-EWS_A
+ network-object object Management-EWS_B
+ network-object object Management-SDG-pri
+ network-object object Management-SDG-sec
+ network-object object Management-MSH-2
+ network-object object Management-MSH-3
+object-group network GroupSAFE_A
+ network-object object SAFE_A-EWS_A
+ network-object object SAFE_A-PSDT-1_A
+ network-object object SAFE_A-PSDT-2_A
+ network-object object SAFE_A-CA-PLC_A
+ network-object object SAFE_A-SIS-PLC_A
+object-group network GroupSAFE_B
+ network-object object SAFE_B-PSDT-1_B
+ network-object object SAFE_B-PSDT-2_B
+ network-object object SAFE_B-CA-PLC_B
+ network-object object SAFE_B-SIS-PLC_B
+ network-object object SAFE_B-EWS_B
+object-group network GroupNWManagementEWS
+ network-object object Management-EWS_A
+ network-object object Management-EWS_B
+ network-object object Service-I
+object-group service DM_INLINE_SERVICE_11
+ service-object icmp 
+ service-object udp destination eq ntp 
+object-group service NWManagementProtocols
+ service-object icmp 
+ service-object tcp destination eq ssh 
+ service-object udp destination eq tftp 
+ service-object udp destination eq snmp 
+object-group service RDHostAccess
+ service-object object 3389_TCP_RDP 
+ service-object tcp-udp destination eq 389 
+ service-object tcp destination eq 5504 
+ service-object tcp destination eq 5985 
+ service-object tcp destination eq ftp 
+ service-object tcp destination eq www 
+ service-object tcp destination eq ftp-data 
+object-group service UtilityServerAccess
+ service-object icmp 
+ service-object tcp destination eq www 
+ service-object tcp destination eq ssh 
+ service-object object 4200_TCP_UtilityServerConsole 
+object-group service OPC-UA_Export tcp-udp
+ port-object eq 4840
+object-group protocol TCPUDP
+ protocol-object udp
+ protocol-object tcp
+object-group service B&R-Automation
+ service-object icmp 
+ service-object tcp-udp destination eq 4840 
+ service-object tcp-udp destination eq sunrpc 
+ service-object tcp destination eq ftp 
+ service-object tcp destination eq ftp-data 
+ service-object tcp destination eq www 
+ service-object udp destination eq 11159 
+ service-object object 11169_TCP 
+ service-object tcp-udp destination range 5900 5901 
+object-group service Allen-Bradley_Rockwell
+ service-object tcp destination eq 44818 
+ service-object tcp destination eq www 
+ service-object udp destination eq 2222 
+ service-object icmp 
+object-group service AADvance_Rockwell
+ service-object icmp 
+ service-object object 55555_TCP_DiagnosticCLI 
+ service-object object 2010-2011_UDP_DiscoverTool 
+ service-object object 6000_TCP_OnlineDebugger 
+ service-object object 5000_UDP_PeerToPeer 
+ service-object object 1132_TCP_WorkbenchDebugger 
+object-group service DM_INLINE_SERVICE_1
+ service-object icmp 
+ service-object object 3389_TCP_RDP 
+ service-object tcp destination eq www 
+object-group service DM_INLINE_SERVICE_2
+ service-object icmp 
+ service-object tcp destination eq https 
+object-group service DM_INLINE_SERVICE_12
+ service-object icmp 
+ service-object object 3389_TCP_RDP 
+object-group service DM_INLINE_SERVICE_13
+ service-object icmp 
+ service-object object 3389_TCP_RDP 
+object-group network GroupSCU_A-PLC
+ network-object object SCU-BPCS-PLC_A
+ network-object object SCU-SPCU-R_A
+ network-object object SCU-UPS_A
+ network-object object SCU-PurgeControl-PLC_A
+ network-object object SCU-OptionalDev_A
+object-group network GroupBPCS-PLC
+ network-object object SCU-BPCS-PLC_A
+ network-object object SCU-BPCS-PLC_B
+object-group service DM_INLINE_SERVICE_14
+ service-object object 13010_UDP_PSDCAN 
+ service-object tcp destination eq www 
+ service-object tcp destination eq telnet 
+ service-object tcp destination eq ftp 
+ service-object object 13001-13002_UDP_PSDcom 
+object-group service DM_INLINE_TCP_2 tcp
+ group-object VNC-Viewer
+ port-object eq www
+object-group network GroupPSDT_A
+ network-object object SAFE_A-PSDT-1_A
+ network-object object SAFE_A-PSDT-2_A
+object-group network GroupPSDT_B
+ network-object object SAFE_B-PSDT-1_B
+ network-object object SAFE_B-PSDT-2_B
+object-group service DM_INLINE_SERVICE_15
+ service-object icmp 
+ service-object tcp destination eq ssh 
+ service-object tcp destination eq 3391 
+ service-object tcp destination eq https 
+object-group network GroupSCU-EWS
+ network-object object SCU-EWS_A
+ network-object object SCU-EWS_B
+object-group service DM_INLINE_SERVICE_16
+ service-object icmp 
+ service-object object 3389_TCP_RDP 
+object-group service DM_INLINE_SERVICE_17
+ service-object icmp 
+ service-object object 3389_TCP_RDP 
+object-group service DM_INLINE_SERVICE_18
+ service-object icmp 
+ service-object object 3389_TCP_RDP 
+object-group network DM_INLINE_NETWORK_9
+ network-object object SAFE_A-EWS_A
+ network-object object SAFE_B-EWS_B
+object-group service DM_INLINE_SERVICE_19
+ service-object icmp 
+ service-object object 3389_TCP_RDP 
+object-group service DM_INLINE_SERVICE_20
+ service-object icmp 
+ service-object object 3389_TCP_RDP 
+object-group service DM_INLINE_SERVICE_21
+ service-object icmp 
+ service-object object 3389_TCP_RDP 
+object-group service DM_INLINE_SERVICE_4
+ service-object object 135_TCP_WIN_RM 
+ service-object object 5985_TCP_WIN_RM 
+ service-object icmp 
+object-group network GroupSCADADomainControllers
+ network-object object SCADA-DC_A
+ network-object object SCADA-DC_B
+object-group network GroupHMI
+ network-object object SCADA-HMI-1
+ network-object object SCADA-HMI-2
+object-group network DM_INLINE_NETWORK_1
+ network-object object SCADA-RD-HOST
+ group-object GroupSCADADomainControllers
+ group-object GroupHMI
+object-group network DM_INLINE_NETWORK_2
+ network-object 172.29.105.0 255.255.255.0
+ network-object object PCU-Networks
+object-group network GroupEWS
+ network-object object HPU-HDU-EWS
+ network-object object SAFE_A-EWS_A
+ network-object object SCU-EWS_A
+ network-object object SCU-EWS_B
+ network-object object SPCU-W-EWS_A
+ network-object object SPCU-W-EWS_B
+ network-object object SPCU-W-Service-W
+ network-object object SPCU-X-DHI-EWS_A
+ network-object object SPCU-X-DHI-EWS_B
+ network-object object SPCU-X-EWS_A
+ network-object object SPCU-X-EWS_B
+ network-object object SPCU-X-Service-X
+ network-object object Management-EWS_A
+ network-object object Management-EWS_B
+ network-object object Service-I
+ network-object object Management-Service-I
+ network-object object SAFE_B-EWS_B
+ network-object object CIU-EWS
+ network-object object SFT-EWS
+object-group network GroupUtilityServer
+ network-object object SPCU-W-UtilityServer
+ network-object object SPCU-X-UtilityServer
+object-group network GroupTDS
+ network-object object Management-TDS-1_A
+ network-object object Management-TDS-1_B
+object-group network DM_INLINE_NETWORK_3
+ network-object object SCADA-IAS_A
+ network-object object SCADA-IAS_B
+object-group service DM_INLINE_SERVICE_44
+ service-object icmp 
+ service-object object 4840_TCP_OPC-UA 
+ service-object tcp destination eq www 
+object-group service DM_INLINE_SERVICE_22
+ service-object icmp 
+ service-object tcp destination eq https 
+object-group service DM_INLINE_SERVICE_23
+ service-object icmp 
+ service-object tcp destination eq https 
+object-group network DM_INLINE_NETWORK_8
+ network-object object Management-EWS_A
+ network-object object Management-EWS_B
+ network-object object Management-Service-I
+object-group service DM_INLINE_SERVICE_24
+ service-object icmp 
+ service-object tcp destination eq https 
+object-group service DM_INLINE_SERVICE_25
+ service-object icmp 
+ service-object object 3389_TCP_RDP 
+object-group network GroupNWManagementDMZ-1
+ network-object object Management-TAS-1
+object-group network GroupNWManagementAll
+ group-object GroupNWManagementDMZ-1
+ group-object GroupNWManagementDMZ-2
+ group-object GroupNWManagementInside
+ group-object GroupNWManagementOutside
+object-group network DM_INLINE_NETWORK_11
+ network-object object SAFE_A-EWS_A
+ network-object object SCU-EWS_A
+ network-object object SAFE_A-CA-PLC_A
+ network-object object SAFE_B-EWS_B
+ network-object object SPCU-W-EWS_A
+ network-object object SPCU-W-EWS_B
+ network-object object SPCU-W-Service-W
+object-group network GroupPanelsDMZ-2
+ network-object object DMZ-2-RCP-4
+ network-object object DMZ-2-RCP-5
+ network-object object DMZ-2-RCP-6
+ network-object object DMZ-2-RCP-7
+ network-object object DMZ-2-RCP-8
+object-group service RignetAccess
+ service-object tcp-udp destination eq 4840 
+ service-object tcp destination eq https 
+ service-object tcp destination eq ssh 
+ service-object udp destination eq 3391 
+object-group network DM_INLINE_NETWORK_12
+ network-object object SCU-EWS_B
+ network-object object SAFE_B-EWS_B
+ network-object object SAFE_B-CA-PLC_B
+ network-object object SAFE_A-EWS_A
+ network-object object SPCU-W-EWS_A
+ network-object object SPCU-W-EWS_B
+ network-object object SPCU-W-Service-W
+object-group network DM_INLINE_NETWORK_10
+ group-object GroupWOCM-PSDS_A
+ network-object object SPCU-W-Service-W
+ network-object object SAFE_B-EWS_B
+object-group network DM_INLINE_NETWORK_13
+ group-object GroupWOCM-PSDS_B
+ network-object object SPCU-W-Service-W
+ network-object object SAFE_A-EWS_A
+object-group network DM_INLINE_NETWORK_14
+ network-object object Management-EWS_A
+ network-object object Management-EWS_B
+object-group network DM_INLINE_NETWORK_16
+ network-object object Management-EWS_A
+ network-object object Management-EWS_B
+object-group network DM_INLINE_NETWORK_17
+ network-object object SAFE_A-SIS-PLC_A
+ network-object object SAFE_B-CA-PLC_B
+object-group network DM_INLINE_NETWORK_18
+ network-object object Management-EWS_A
+ network-object object Management-EWS_B
+object-group network DM_INLINE_NETWORK_19
+ network-object object Management-EWS_A
+ network-object object Management-EWS_B
+object-group network DM_INLINE_NETWORK_20
+ network-object object Management-EWS_A
+ network-object object Management-EWS_B
+object-group network DM_INLINE_NETWORK_21
+ network-object object SPCU-R-PLC_A
+ network-object object SPCU-R-PLC_B
+object-group service Siemens-PLC
+ service-object object 102_TCP_Siemens 
+object-group service DM_INLINE_SERVICE_26
+ service-object tcp destination eq 44818 
+ service-object tcp destination eq www 
+ service-object udp destination eq 2222 
+ group-object Siemens-PLC
+object-group network DM_INLINE_NETWORK_22
+ network-object object Management-EWS_A
+ network-object object Management-EWS_B
+ network-object object Management-Service-I
+object-group network DM_INLINE_NETWORK_23
+ network-object object Management-EWS_A
+ network-object object Management-EWS_B
+object-group service DM_INLINE_TCP_3 tcp
+ port-object eq https
+ port-object eq ssh
+object-group network DM_INLINE_NETWORK_28
+ group-object GroupHMI
+ group-object GroupSCADADomainControllers
+ network-object object SCADA-RD-HOST
+object-group network DM_INLINE_NETWORK_5
+ group-object GroupPSDT_A
+ network-object object SAFE_A-EWS_A
+object-group network DM_INLINE_NETWORK_30
+ network-object object DMZ-1-DE-PLC
+ network-object object SAFE_A-CA-PLC_A
+ network-object object SAFE_A-EWS_A
+object-group network DM_INLINE_NETWORK_31
+ network-object object DMZ-1-DE-PLC
+ network-object object SAFE_B-CA-PLC_B
+ network-object object SAFE_B-EWS_B
+object-group service DM_INLINE_SERVICE_27
+ service-object icmp 
+ service-object object 502_UDP_Modbus 
+ service-object object 4840_TCP_OPC-UA 
+object-group service DM_INLINE_SERVICE_28
+ service-object icmp 
+ service-object object 502_UDP_Modbus 
+ service-object object 4840_TCP_OPC-UA 
+object-group service DM_INLINE_UDP_1 udp
+ port-object eq bootpc
+ port-object eq bootps
+object-group service DM_INLINE_UDP_27 udp
+ port-object eq bootpc
+ port-object eq bootps
+object-group network DM_INLINE_NETWORK_24
+ network-object object SPCU-X-PCR-D_A
+ network-object object SPCU-X-PCR-D_B
+object-group network DM_INLINE_NETWORK_25
+ network-object object Management-EWS_A
+ network-object object Management-EWS_B
+object-group network DM_INLINE_NETWORK_26
+ network-object object CIU-EWS
+ network-object object HPU-HDU-EWS
+ network-object object SFT-EWS
+object-group network GroupCIU
+ network-object object CIU-EWS
+ network-object object CIU-PLC
+object-group service DM_INLINE_SERVICE_29
+ group-object Allen-Bradley_Rockwell
+ group-object Siemens-PLC
+object-group service DM_INLINE_SERVICE_30
+ group-object Allen-Bradley_Rockwell
+ group-object Siemens-PLC
+object-group service DM_INLINE_SERVICE_31
+ group-object Allen-Bradley_Rockwell
+ group-object Siemens-PLC
+object-group service DM_INLINE_SERVICE_32
+ group-object Allen-Bradley_Rockwell
+ group-object Siemens-PLC
+object-group service DM_INLINE_SERVICE_33
+ group-object Allen-Bradley_Rockwell
+ group-object Siemens-PLC
+object-group service DM_INLINE_SERVICE_34
+ group-object Allen-Bradley_Rockwell
+ group-object Siemens-PLC
+object-group service DM_INLINE_SERVICE_35
+ group-object Allen-Bradley_Rockwell
+ group-object Siemens-PLC
+object-group service DM_INLINE_SERVICE_37
+ group-object Allen-Bradley_Rockwell
+ group-object Siemens-PLC
+object-group network DM_INLINE_NETWORK_27
+ network-object object SFT-PLC
+ network-object object SFT-Panel
+object-group network DM_INLINE_NETWORK_33
+ network-object object RIG-Master-Clock
+ network-object object TIR-NTP
+object-group network DM_INLINE_NETWORK_34
+ network-object object SCU-BPCS-PLC_A
+ network-object object SCU-BPCS-PLC_B
+object-group network DM_INLINE_NETWORK_35
+ network-object object SCU-PurgeControl-PLC_A
+ network-object object SCU-PurgeControl-PLC_B
+object-group service DM_INLINE_SERVICE_38
+ group-object Allen-Bradley_Rockwell
+ group-object Siemens-PLC
+object-group service DM_INLINE_SERVICE_39
+ group-object Allen-Bradley_Rockwell
+ group-object Siemens-PLC
+object-group network DM_INLINE_NETWORK_36
+ network-object object SFT-Panel
+ network-object object SFT-PLC
+object-group network DM_INLINE_NETWORK_37
+ network-object object HPU-HDU-PLC
+ network-object object HPU-Panel
+object-group network DM_INLINE_NETWORK_38
+ network-object object CIU-PLC
+ network-object object CIU-Panel
+object-group service DM_INLINE_SERVICE_40
+ service-object object 3389_TCP_RDP 
+ service-object tcp destination eq www 
+object-group service DM_INLINE_SERVICE_41
+ group-object Allen-Bradley_Rockwell
+ group-object Siemens-PLC
+object-group service DM_INLINE_SERVICE_42
+ group-object AADvance_Rockwell
+ service-object tcp destination eq www 
+object-group service DM_INLINE_SERVICE_43
+ service-object icmp 
+ group-object DE-PLC-MGMT
+ service-object tcp destination eq www 
+object-group service DM_INLINE_SERVICE_36
+ service-object object 135_TCP_WIN_RM 
+ service-object object 5413_tcp 
+ service-object object 445_TCP 
+object-group protocol DM_INLINE_PROTOCOL_1
+ protocol-object ip
+ protocol-object icmp
+object-group protocol DM_INLINE_PROTOCOL_2
+ protocol-object ip
+ protocol-object icmp
+object-group protocol DM_INLINE_PROTOCOL_5
+ protocol-object ip
+ protocol-object icmp
+object-group network DM_INLINE_NETWORK_6
+ network-object 172.30.2.0 255.255.255.0
+ network-object object Bifrost-network
+object-group service DM_INLINE_SERVICE_47
+ service-object object 4201_UDP 
+ service-object object 4221_UDP 
+object-group network DM_INLINE_NETWORK_7
+ group-object GroupPanels
+ group-object GroupPanelsDMZ-2
+object-group network DM_INLINE_NETWORK_15
+ network-object object SPCU-W_WOCM_A_DAS_A
+ network-object object SPCU-W_WOCM_B_DAS_B
+object-group service DM_INLINE_SERVICE_45
+ service-object icmp 
+ service-object tcp destination eq www 
+ service-object tcp destination eq https 
+ service-object tcp destination eq ssh 
+ service-object udp destination eq tftp 
+object-group service OPC_UA_export
+ service-object object 4840_UDP_OPC_UA 
+ service-object object 4840_TCP_OPC-UA 
+object-group service DM_INLINE_SERVICE_46
+ group-object OPC_UA_export
+ service-object udp destination eq ntp 
+object-group service DM_INLINE_SERVICE_48
+ group-object OPC_UA_export
+ service-object udp destination eq ntp 
+access-list Management-Internal_access_in remark MNG-4.001
+access-list Management-Internal_access_in extended permit udp object-group GroupNWManagementInside object DMZ-1-DE-PLC eq ntp 
+access-list Management-Internal_access_in remark MNG-4.002
+access-list Management-Internal_access_in extended permit object-group DM_INLINE_SERVICE_22 object-group DM_INLINE_NETWORK_8 object CylanceHybridBrfrost 
+access-list Management-Internal_access_in remark MNG-4.003
+access-list Management-Internal_access_in extended permit object-group ESXi_Management object-group GroupNWManagementEWS object-group GroupESXi 
+access-list Management-Internal_access_in remark MNG-4.004
+access-list Management-Internal_access_in extended permit udp object-group GroupNWManagementInside object Service-I eq syslog 
+access-list Management-Internal_access_in remark MNG-4.005
+access-list Management-Internal_access_in extended permit object-group DM_INLINE_SERVICE_40 object-group DM_INLINE_NETWORK_14 object Service-I 
+access-list Management-Internal_access_in remark MNG-4.006
+access-list Management-Internal_access_in extended permit udp object-group GroupNWManagementInside object-group GroupIAS eq snmp 
+access-list Management-Internal_access_in remark MNG-4.007
+access-list Management-Internal_access_in extended permit object-group NWManagementProtocols object-group GroupNWManagementEWS object Management-TAS-1 
+access-list Management-Internal_access_in remark MNG-4-008
+access-list Management-Internal_access_in extended permit object-group NWManagementProtocols object-group GroupNWManagementEWS object Management-TIR-1 
+access-list Management-Internal_access_in remark MNG-4.009
+access-list Management-Internal_access_in extended permit object-group NWManagementProtocols object-group GroupNWManagementEWS object Management-ETAS-1 
+access-list Management-Internal_access_in remark MNG-4.010
+access-list Management-Internal_access_in extended permit object-group UtilityServerAccess object-group GroupNWManagementEWS object-group GroupUtilityServer 
+access-list Management-Internal_access_in remark MNG-4.011
+access-list Management-Internal_access_in extended permit object-group DM_INLINE_SERVICE_15 object-group GroupNWManagementEWS object DMZ-1-RD-GW 
+access-list Management-Internal_access_in remark MNG-4.012
+access-list Management-Internal_access_in extended permit object 9100-9102_TCP_PrintPorts object-group GroupNWManagementEWS object DMZ-1-Printer 
+access-list Management-Internal_access_in remark MNG-4.013
+access-list Management-Internal_access_in extended permit object-group DM_INLINE_SERVICE_43 object-group GroupNWManagementEWS object DMZ-1-DE-PLC 
+access-list Management-Internal_access_in remark MNG-4.014
+access-list Management-Internal_access_in extended permit object-group DM_INLINE_SERVICE_16 object Management-Service-I object-group GroupSCU-EWS 
+access-list Management-Internal_access_in remark MNG-4.015
+access-list Management-Internal_access_in extended permit object-group DM_INLINE_SERVICE_17 object Management-Service-I object-group DM_INLINE_NETWORK_9 
+access-list Management-Internal_access_in remark MNG-4.016
+access-list Management-Internal_access_in extended permit object-group DM_INLINE_SERVICE_19 object Management-Service-I object-group GroupSPCU-W-Computers 
+access-list Management-Internal_access_in remark MNG-4.017
+access-list Management-Internal_access_in extended permit object-group DM_INLINE_SERVICE_20 object Management-Service-I object-group GroupSPCU-X-Computers 
+access-list Management-Internal_access_in remark MNG-4.018
+access-list Management-Internal_access_in extended permit object-group DM_INLINE_SERVICE_21 object Management-Service-I object HPU-HDU-EWS 
+access-list Management-Internal_access_in remark MNG-4.019
+access-list Management-Internal_access_in extended permit object-group DM_INLINE_SERVICE_18 object Management-Service-I object SFT-EWS 
+access-list Management-Internal_access_in remark MNG-4.020
+access-list Management-Internal_access_in extended permit object-group DM_INLINE_SERVICE_25 object Management-Service-I object CIU-EWS 
+access-list Management-Internal_access_in remark MNG-4.021
+access-list Management-Internal_access_in extended permit tcp object-group GroupNWManagementInside object Management-TIR-1 eq ssh 
+access-list Management-Internal_access_in remark MNG-4.022
+access-list Management-Internal_access_in extended permit tcp object-group GroupNWManagementInside object Management-TAS-1 eq ssh 
+access-list Management-Internal_access_in remark MNG-4.023
+access-list Management-Internal_access_in extended permit object-group DM_INLINE_SERVICE_42 object-group DM_INLINE_NETWORK_16 object-group DM_INLINE_NETWORK_17 
+access-list Management-Internal_access_in remark MNG-4.024
+access-list Management-Internal_access_in extended permit object-group DM_INLINE_SERVICE_26 object-group DM_INLINE_NETWORK_18 object-group GroupBPCS-PLC 
+access-list Management-Internal_access_in remark MNG-4.025
+access-list Management-Internal_access_in extended permit object-group B&R-Automation object-group DM_INLINE_NETWORK_20 object-group DM_INLINE_NETWORK_21 
+access-list Management-Internal_access_in remark MNG-4.026
+access-list Management-Internal_access_in extended permit object-group B&R-Automation object-group DM_INLINE_NETWORK_19 object-group GroupCA 
+access-list Management-Internal_access_in remark MNG-4.027
+access-list Management-Internal_access_in extended permit object-group DM_INLINE_SERVICE_32 object-group DM_INLINE_NETWORK_22 object HPU-PLC 
+access-list Management-Internal_access_in remark MNG-4.028
+access-list Management-Internal_access_in extended permit object-group DM_INLINE_SERVICE_33 object-group DM_INLINE_NETWORK_23 object CIU-PLC 
+access-list Management-Internal_access_in remark MNG-4.029
+access-list Management-Internal_access_in extended permit object-group DM_INLINE_SERVICE_41 object-group DM_INLINE_NETWORK_25 object SFT-Panel 
+access-list Management-Internal_access_in remark MNG-4.031
+access-list Management-Internal_access_in extended permit udp object Management-Service-I object ESXi-ESXi_PC3 eq ntp 
+access-list Management-Internal_access_in remark MNG-4.032 ***Traffic pattern managed on PCU side
+access-list Management-Internal_access_in extended permit ip object-group GroupNWManagementEWS object-group DM_INLINE_NETWORK_2 
+access-list Management-DMZ-1_in extended permit ip object Management-TAS-1 object-group Management-Internal 
+access-list DMZ-1_access_in remark DMZ-1.001
+access-list DMZ-1_access_in extended permit object-group DCAuthenticationPorts object DMZ-1-RD-GW object-group GroupSCADADomainControllers 
+access-list DMZ-1_access_in remark DMZ-1.002
+access-list DMZ-1_access_in extended permit object-group DM_INLINE_SERVICE_24 object DMZ-1-RD-GW object CylanceHybridBrfrost 
+access-list DMZ-1_access_in remark DMZ-1.003
+access-list DMZ-1_access_in extended permit udp object DMZ-1-DE-PLC object-group DM_INLINE_NETWORK_33 eq ntp 
+access-list DMZ-1_access_in remark DMZ-1.004
+access-list DMZ-1_access_in extended permit object-group RDHostAccess object DMZ-1-RD-GW object SCADA-RD-HOST 
+access-list DMZ-1_access_in remark DMZ-1.005
+access-list DMZ-1_access_in extended permit object-group DataExchangePLC_access object DMZ-1-DE-PLC object Bifrost-network 
+access-list DMZ-1_access_in remark DMZ-1.007
+access-list DMZ-1_access_in extended permit object 3389_TCP_RDP object DMZ-1-RD-GW object-group DM_INLINE_NETWORK_7 
+access-list DMZ-1_access_in remark DMZ-1.006 *** Traffic pattern managed on PCU side
+access-list DMZ-1_access_in extended permit ip 172.30.51.0 255.255.255.0 object PCU-Networks 
+access-list Management-DMZ-External_access_in remark MNG-3.001
+access-list Management-DMZ-External_access_in extended permit udp object Management-TIR-1 object DMZ-1-DE-PLC eq ntp 
+access-list Management-DMZ-External_access_in remark MNG-3.002
+access-list Management-DMZ-External_access_in extended permit udp object Management-TIR-1 object-group GroupNWManagementEWS eq tftp 
+access-list Management-DMZ-External_access_in remark MNG-3.003
+access-list Management-DMZ-External_access_in extended permit udp object Management-TIR-1 object Service-I eq syslog 
+access-list Management-DMZ-External_access_in remark MNG-3.004
+access-list Management-DMZ-External_access_in extended permit udp object Management-TIR-1 object-group GroupIAS eq snmp 
+access-list External-Linknet_access_in remark BIFROST-1.001
+access-list External-Linknet_access_in extended permit icmp object Bifrost-network any 
+access-list External-Linknet_access_in remark BIFROST-1.002
+access-list External-Linknet_access_in extended permit object-group ESXi_Management object Bifrost-network object-group GroupESXi 
+access-list External-Linknet_access_in remark BIFROST-1.003
+access-list External-Linknet_access_in extended permit object-group DM_INLINE_SERVICE_1 object Bifrost-network object Service-I 
+access-list External-Linknet_access_in remark BIFROST-1.004
+access-list External-Linknet_access_in extended permit object-group B&R-Automation object Bifrost-network object DMZ-1-DE-PLC 
+access-list External-Linknet_access_in remark BIFROST-1.005
+access-list External-Linknet_access_in extended permit object-group RD-GatewayAccess object Bifrost-network object DMZ-1-RD-GW 
+access-list External-Linknet_access_in remark BIFROST-1.006
+access-list External-Linknet_access_in extended permit object-group DM_INLINE_SERVICE_39 object Bifrost-network object-group DM_INLINE_NETWORK_34 
+access-list External-Linknet_access_in remark BIFROST-1.007
+access-list External-Linknet_access_in extended permit object-group B&R-Automation object Bifrost-network object-group GroupCA 
+access-list External-Linknet_access_in remark BIFROST-1.008
+access-list External-Linknet_access_in extended permit object-group B&R-Automation object Bifrost-network object-group GroupSPCU-R 
+access-list External-Linknet_access_in remark BIFROST-1.009
+access-list External-Linknet_access_in extended permit object-group AADvance_Rockwell object Bifrost-network object-group GroupSIS-PLC 
+access-list External-Linknet_access_in remark BIFROST-1.010
+access-list External-Linknet_access_in extended permit tcp object Bifrost-network object-group GroupTDS eq ssh 
+access-list External-Linknet_access_in remark BIFROST-1.011
+access-list External-Linknet_access_in extended permit object 3389_TCP_RDP object Bifrost-network object-group GroupEWS 
+access-list External-Linknet_access_in remark BIFROST-1.012
+access-list External-Linknet_access_in extended permit object-group UtilityServerAccess object Bifrost-network object-group GroupUtilityServer 
+access-list External-Linknet_access_in remark BIFROST-1.014
+access-list External-Linknet_access_in extended permit object-group DM_INLINE_SERVICE_29 object Bifrost-network object-group DM_INLINE_NETWORK_38 
+access-list External-Linknet_access_in remark BIFROST-1.016
+access-list External-Linknet_access_in extended permit object-group DM_INLINE_SERVICE_30 object Bifrost-network object-group DM_INLINE_NETWORK_37 
+access-list External-Linknet_access_in remark BIFROST-1.017
+access-list External-Linknet_access_in extended permit object-group DM_INLINE_SERVICE_31 object Bifrost-network object-group DM_INLINE_NETWORK_36 
+access-list External-Linknet_access_in remark BIFROST-1.018
+access-list External-Linknet_access_in extended permit object-group DM_INLINE_SERVICE_23 object CylanceHybridBrfrost object-group GroupEWS 
+access-list External-Linknet_access_in remark BIFROST-1.019
+access-list External-Linknet_access_in extended permit tcp object Bifrost-network object-group GroupNWManagenent object-group DM_INLINE_TCP_3 
+access-list External-Linknet_access_in remark BIFROST-1.020
+access-list External-Linknet_access_in extended permit object 3389_TCP_RDP object Bifrost-network object DMZ-Export-PC 
+access-list External-Linknet_access_in remark BIFROST-1.021
+access-list External-Linknet_access_in extended permit object-group DM_INLINE_SERVICE_38 object Bifrost-network object-group DM_INLINE_NETWORK_35 
+access-list External-Linknet_access_in remark BIFROST-1.022 *** Traffic pattern managed on PCU side
+access-list External-Linknet_access_in extended permit object-group DM_INLINE_PROTOCOL_1 object-group DM_INLINE_NETWORK_6 object PCU-Networks 
+access-list SCADA_access_in remark SCADA-1.001
+access-list SCADA_access_in extended permit object 53_UDP_domain-return object-group GroupSCADADomainControllers object DMZ-1-RD-GW 
+access-list SCADA_access_in remark SCADA-1.002
+access-list SCADA_access_in extended permit object-group DM_INLINE_SERVICE_11 object-group DM_INLINE_NETWORK_28 object DMZ-1-DE-PLC 
+access-list SCADA_access_in remark SCADA-1.003
+access-list SCADA_access_in extended permit object-group DM_INLINE_SERVICE_4 object-group DM_INLINE_NETWORK_1 object DMZ-1-RD-GW 
+access-list SCADA_access_in remark SCADA-1.004
+access-list SCADA_access_in extended permit object-group DM_INLINE_SERVICE_2 object-group GroupSCADAComputers object-group GroupESXi 
+access-list SCADA_access_in remark SCADA-1.005
+access-list SCADA_access_in extended permit object-group TCPUDP object-group GroupSCADAComputers object DMZ-1-DE-PLC object-group VNC-Viewer 
+access-list SCADA_access_in remark SCADA-1.006
+access-list SCADA_access_in extended permit object-group DM_INLINE_SERVICE_6 object-group GroupSCADAComputers object DMZ-1-RD-GW 
+access-list SCADA_access_in remark SCADA-1.007
+access-list SCADA_access_in extended permit object-group DM_INLINE_SERVICE_12 object-group GroupSCADAComputers object SPCU-X-Service-X 
+access-list SCADA_access_in remark SCADA-1.008
+access-list SCADA_access_in extended permit object-group DM_INLINE_SERVICE_13 object-group GroupSCADAComputers object SPCU-W-Service-W 
+access-list SCADA_access_in remark SCADA-1.009
+access-list SCADA_access_in extended permit tcp object-group GroupSCADAComputers object CylanceHybridBrfrost eq https 
+access-list SCADA_access_in remark SCADA-1.010
+access-list SCADA_access_in extended permit object 9100-9102_TCP_PrintPorts object-group GroupSCADAComputers object DMZ-1-Printer 
+access-list SCADA_access_in remark SCADA-1.011
+access-list SCADA_access_in extended permit udp object-group GroupIAS object-group GroupNWManagenent eq snmp 
+access-list SCADA_access_in remark SCADA-1.012
+access-list SCADA_access_in extended permit object-group OPC-UA_export object-group GroupIAS object DMZ-1-DE-PLC 
+access-list SCADA_access_in remark SCADA-1.013
+access-list SCADA_access_in extended permit icmp object-group GroupIAS object DMZ-1-DE-PLC 
+access-list SCADA_access_in remark SCADA-1.014
+access-list SCADA_access_in extended permit object-group DM_INLINE_SERVICE_34 object-group GroupIAS object HPU-HDU-PLC 
+access-list SCADA_access_in remark SCADA-1.015
+access-list SCADA_access_in extended permit object-group DM_INLINE_SERVICE_35 object-group GroupIAS object CIU-PLC 
+access-list SCADA_access_in remark SCADA-1.016
+access-list SCADA_access_in extended permit object-group DM_INLINE_SERVICE_37 object-group GroupIAS object-group DM_INLINE_NETWORK_27 
+access-list SCADA_access_in remark SCADA-1.017
+access-list SCADA_access_in extended permit udp object-group GroupIAS object-group GroupNWManagementOutside eq snmp 
+access-list SCADA_access_in remark SCADA-1.018
+access-list SCADA_access_in extended permit object-group DM_INLINE_SERVICE_27 object SCADA-IAS_A object SPCU-W_WOCM_A_GreasePump_A 
+access-list SCADA_access_in remark SCADA-1.019
+access-list SCADA_access_in extended permit object-group DM_INLINE_SERVICE_28 object SCADA-IAS_B object SPCU-W_WOCM_B_GreasePump_B 
+access-list SCADA_access_in remark SCADA-1.020
+access-list SCADA_access_in extended permit object-group DM_INLINE_SERVICE_44 object-group DM_INLINE_NETWORK_3 172.30.210.0 255.255.255.0 
+access-list SCADA_access_in remark SCADA-1.022
+access-list SCADA_access_in extended permit object-group DM_INLINE_SERVICE_36 object SCADA-IAS_B object SCU-OptionalDev_A 
+access-list SCADA_access_in remark SCADA-1.023 - *** Traffic pattern managed on PCU side
+access-list SCADA_access_in extended permit ip 172.30.11.0 255.255.255.0 object PCU-Networks 
+access-list Management-DMZ-1_access_in remark MNG-1.001
+access-list Management-DMZ-1_access_in extended permit udp object Management-TAS-1 object DMZ-1-DE-PLC eq ntp 
+access-list Management-DMZ-1_access_in remark MNG-1.002
+access-list Management-DMZ-1_access_in extended permit udp object Management-TAS-1 object-group GroupNWManagementEWS eq tftp 
+access-list Management-DMZ-1_access_in remark MNG-1.003
+access-list Management-DMZ-1_access_in extended permit udp object Management-TAS-1 object Management-Service-I eq syslog 
+access-list Management-DMZ-1_access_in remark MNG-1.004
+access-list Management-DMZ-1_access_in extended permit udp object Management-TAS-1 object-group GroupIAS eq snmp 
+access-list ESXi_access_in remark ESXi-1.001
+access-list ESXi_access_in extended permit udp object-group GroupESXi object DMZ-1-DE-PLC eq ntp 
+access-list ESXi_access_in remark ESXi-1.002
+access-list ESXi_access_in extended permit object-group ESXi_Management object-group GroupESXi object-group GroupNWManagementEWS 
+access-list ESXi_access_in remark ESXi-1.003
+access-list ESXi_access_in extended permit object-group ESXi_Management object-group GroupESXi object Bifrost-network 
+access-list SPCU-W_access_in remark SPCU-W-1.001
+access-list SPCU-W_access_in extended permit tcp object-group GroupSPCU-W-Computers object CylanceHybridBrfrost eq https 
+access-list SPCU-W_access_in remark SPCU-W-1.002
+access-list SPCU-W_access_in extended permit object-group DM_INLINE_SERVICE_3 object-group GroupSPCU-W-Computers object DMZ-1-RD-GW 
+access-list SPCU-W_access_in remark SPCU-W-1.003
+access-list SPCU-W_access_in extended permit udp object-group GroupSPCU-W-Computers object DMZ-1-DE-PLC eq ntp 
+access-list SPCU-W_access_in remark SPCU-W-1.004
+access-list SPCU-W_access_in extended permit object 9100-9102_TCP_PrintPorts object-group GroupSPCU-W-Computers object DMZ-1-Printer 
+access-list SPCU-W_access_in remark SPCU-W-1.005
+access-list SPCU-W_access_in extended permit tcp object-group GroupSPCU-W-Computers object-group GroupCA object-group DM_INLINE_TCP_1 
+access-list SPCU-W_access_in remark SPCU-W-1.006
+access-list SPCU-W_access_in extended permit icmp object-group GroupSPCU-W-Computers object-group GroupSAFE_A 
+access-list SPCU-W_access_in remark SPCU-W-1.007
+access-list SPCU-W_access_in extended permit icmp object-group GroupSPCU-W-Computers object-group GroupSAFE_B 
+access-list SPCU-W_access_in remark SPCU-W-1.008
+access-list SPCU-W_access_in extended permit object-group DM_INLINE_SERVICE_14 object-group GroupSPCU-W-Computers object-group GroupPSD 
+access-list SPCU-W_access_in remark SPCU-W-1.009
+access-list SPCU-W_access_in extended permit tcp object-group GroupSPCU-W-Computers object-group GroupSPCU-R object-group DM_INLINE_TCP_2 
+access-list SPCU-W_access_in remark SPCU-W-1.010
+access-list SPCU-W_access_in extended permit tcp object-group GroupSPCU-W-Computers object-group DM_INLINE_NETWORK_4 eq www 
+access-list SPCU-W_access_in remark SPCU-W-1.011
+access-list SPCU-W_access_in extended permit object 3389_TCP_RDP object-group GroupSPCU-W-Computers object-group DM_INLINE_NETWORK_26 
+access-list SPCU-W_access_in remark SPCU-W-1.012
+access-list SPCU-W_access_in extended permit udp object SPCU-W-UtilityServer object DMZ-1-DE-PLC eq ntp 
+access-list SPCU-W_access_in remark SPCU-W-WOCM-1.001
+access-list SPCU-W_access_in extended permit object 13010_UDP_PSDCAN object-group GroupWOCM-PSDS_A object-group DM_INLINE_NETWORK_5 
+access-list SPCU-W_access_in remark SPCU-W-WOCM-1.002
+access-list SPCU-W_access_in extended permit object 13010_UDP_PSDCAN object-group GroupWOCM-PSDS_B object-group DM_INLINE_NETWORK_29 
+access-list SPCU-W_access_in remark SPCU-W-WOCM-1.003
+access-list SPCU-W_access_in extended permit udp object-group GroupWOCM-PSDS_A object-group DM_INLINE_NETWORK_30 eq ntp 
+access-list SPCU-W_access_in remark SPCU-W-WOCM-1.004
+access-list SPCU-W_access_in extended permit udp object-group GroupWOCM-PSDS_B object-group DM_INLINE_NETWORK_31 eq ntp 
+access-list SPCU-W_access_in remark SPCU-W-WOCM-1.005
+access-list SPCU-W_access_in extended permit object 13001-13002_UDP_PSDcom object-group GroupWOCM-PSDS_A object-group DM_INLINE_NETWORK_11 
+access-list SPCU-W_access_in remark SPCU-W-WOCM-1.006
+access-list SPCU-W_access_in extended permit object 13001-13002_UDP_PSDcom object-group GroupWOCM-PSDS_B object-group DM_INLINE_NETWORK_12 
+access-list SPCU-W_access_in remark SPCU-W-WOCM-1.007
+access-list SPCU-W_access_in extended permit udp object SPCU-W-Service-W object ESXi-ESXi_PC3 eq ntp 
+access-list SPCU-W_access_in remark SPCU-W-WOCM-1.008 - *** Traffic pattern managed on PCU side
+access-list SPCU-W_access_in extended permit ip object SPCU-W_WOCM-nets object PCU-Networks 
+access-list SPCU-X_access_in remark SPCU-X-1.001
+access-list SPCU-X_access_in extended permit tcp object-group GroupSPCU-X-Computers object CylanceHybridBrfrost eq https 
+access-list SPCU-X_access_in remark SPCU-X-1.002
+access-list SPCU-X_access_in extended permit object-group DM_INLINE_SERVICE_5 object-group GroupSPCU-X-Computers object DMZ-1-RD-GW 
+access-list SPCU-X_access_in remark SPCU-X-1.003
+access-list SPCU-X_access_in extended permit udp object-group GroupSPCU-X-Computers object DMZ-1-DE-PLC eq ntp 
+access-list SPCU-X_access_in remark SPCU-X-1.004
+access-list SPCU-X_access_in extended permit object 9100-9102_TCP_PrintPorts object-group GroupSPCU-X-Computers object DMZ-1-Printer 
+access-list SPCU-X_access_in remark SPCU-X-1.005
+access-list SPCU-X_access_in extended permit udp object SPCU-X-UtilityServer object DMZ-1-DE-PLC eq ntp 
+access-list SPCU-X_access_in remark SPCU-X-1.006
+access-list SPCU-X_access_in extended permit udp object SPCU-X-Service-X object ESXi-ESXi_PC3 eq ntp 
+access-list SCU_A_access_in remark SCU-A-1.001
+access-list SCU_A_access_in extended permit object-group DM_INLINE_SERVICE_7 object SCU-EWS_A object DMZ-1-RD-GW 
+access-list SCU_A_access_in remark SCU-A-1.002
+access-list SCU_A_access_in extended permit ip object SCU-EWS_A 172.30.22.0 255.255.255.0 
+access-list SCU_A_access_in remark SCU-A-1.003
+access-list SCU_A_access_in extended permit ip 172.30.21.0 255.255.255.0 object SCU-EWS_B 
+access-list SCU_A_access_in remark SCU-A-1.004
+access-list SCU_A_access_in extended permit udp object-group GroupSCU_A-PLC object DMZ-1-DE-PLC eq ntp 
+access-list SCU_B_access_in remark SCU-B-1.001
+access-list SCU_B_access_in extended permit object-group DM_INLINE_SERVICE_8 object SCU-EWS_B object DMZ-1-RD-GW 
+access-list SCU_B_access_in remark SCU-B-1.002
+access-list SCU_B_access_in extended permit ip object SCU-EWS_B 172.30.21.0 255.255.255.0 
+access-list SCU_B_access_in remark SCU-B-1.003
+access-list SCU_B_access_in extended permit ip 172.30.22.0 255.255.255.0 object SCU-EWS_A 
+access-list SCU_B_access_in remark SCU-B-1.004
+access-list SCU_B_access_in extended permit udp object-group GroupSCU_B-PLC object DMZ-1-DE-PLC eq ntp 
+access-list SAFE_A_access_in remark SAFE-A-1.001
+access-list SAFE_A_access_in extended permit udp object-group GroupSAFE_A object DMZ-1-DE-PLC eq ntp 
+access-list SAFE_A_access_in remark SAFE-A-1.002
+access-list SAFE_A_access_in extended permit object-group DM_INLINE_SERVICE_9 object SAFE_A-EWS_A object DMZ-1-RD-GW 
+access-list SAFE_A_access_in remark SAFE-A-1.003
+access-list SAFE_A_access_in extended permit object 13001-13002_UDP_PSDcom object SAFE_A-CA-PLC_A object-group GroupWOCM-PSDS_A 
+access-list SAFE_A_access_in remark SAFE-A-1.004
+access-list SAFE_A_access_in extended permit object-group AADvance_Rockwell object SAFE_A-SIS-PLC_A object Bifrost-network 
+access-list SAFE_A_access_in remark SAFE-A-1.005
+access-list SAFE_A_access_in extended permit ip object SAFE_A-EWS_A object-group GroupSAFE_B 
+access-list SAFE_A_access_in remark SAFE-A-1.006
+access-list SAFE_A_access_in extended permit ip object-group GroupSAFE_A object SAFE_B-EWS_B 
+access-list SAFE_A_access_in remark SAFE-A-1.007
+access-list SAFE_A_access_in extended permit object 13001-13002_UDP_PSDcom object-group GroupPSDT_A object-group DM_INLINE_NETWORK_10 
+access-list SAFE_A_access_in remark SAFE-A-1.008
+access-list SAFE_A_access_in extended permit udp object-group GroupPSDT_A object SPCU-W-Service-W object-group DM_INLINE_UDP_1 
+access-list SAFE_B_access_in remark SAFE-B-1.001
+access-list SAFE_B_access_in extended permit udp object-group GroupSAFE_B object DMZ-1-DE-PLC eq ntp 
+access-list SAFE_B_access_in remark SAFE-B-1.002
+access-list SAFE_B_access_in extended permit object-group DM_INLINE_SERVICE_10 object SAFE_B-EWS_B object DMZ-1-RD-GW 
+access-list SAFE_B_access_in remark SAFE-B-1.003
+access-list SAFE_B_access_in extended permit object 13001-13002_UDP_PSDcom object SAFE_B-CA-PLC_B object-group GroupWOCM-PSDS_B 
+access-list SAFE_B_access_in remark SAFE-B-1.004
+access-list SAFE_B_access_in extended permit object-group AADvance_Rockwell object SAFE_B-SIS-PLC_B object Bifrost-network 
+access-list SAFE_B_access_in remark SAFE-B-1.005
+access-list SAFE_B_access_in extended permit ip object SAFE_B-EWS_B object-group GroupSAFE_A 
+access-list SAFE_B_access_in remark SAFE-B-1.006
+access-list SAFE_B_access_in extended permit ip object-group GroupSAFE_B object SAFE_A-EWS_A 
+access-list SAFE_B_access_in remark SAFE-B-1.007
+access-list SAFE_B_access_in extended permit object 13001-13002_UDP_PSDcom object-group GroupPSDT_B object-group DM_INLINE_NETWORK_13 
+access-list SAFE_B_access_in remark SAFE-B-1.008
+access-list SAFE_B_access_in extended permit udp object-group GroupPSDT_B object SPCU-W-Service-W object-group DM_INLINE_UDP_27 
+access-list DMZ-2_access_in remark DMZ-2.002
+access-list DMZ-2_access_in extended permit object-group DM_INLINE_SERVICE_46 object-group GroupPanelsDMZ-2 object DMZ-1-DE-PLC 
+access-list DMZ-2_access_in remark DMZ-2.001
+access-list DMZ-2_access_in extended permit object-group RignetAccess object-group GroupPanelsDMZ-2 object DMZ-1-RD-GW 
+access-list Management-DMZ-2_access_in remark MNG-2.001
+access-list Management-DMZ-2_access_in extended permit udp object Management-ETAS-1 object DMZ-1-DE-PLC eq ntp 
+access-list Management-DMZ-2_access_in remark MNG-2.002
+access-list Management-DMZ-2_access_in extended permit udp object Management-ETAS-1 object-group GroupNWManagementEWS eq tftp 
+access-list Management-DMZ-2_access_in remark MNG-2.003
+access-list Management-DMZ-2_access_in extended permit udp object Management-ETAS-1 object Service-I eq syslog 
+access-list Management-DMZ-2_access_in remark MNG-2.004
+access-list Management-DMZ-2_access_in extended permit udp object Management-ETAS-1 object-group GroupIAS eq snmp 
+access-list Management-PCU-Int_access_in remark MNG-5.001
+access-list Management-PCU-Int_access_in extended permit object-group DM_INLINE_PROTOCOL_2 172.29.105.0 255.255.255.0 object-group GroupNWManagementEWS 
+access-list Management-PCU-Int_access_in remark MNG-5.003
+access-list Management-PCU-Int_access_in extended permit ip object PCU-Networks object Bifrost-network 
+access-list Management-PCU-Int_access_in remark MNG-5.002
+access-list Management-PCU-Int_access_in extended permit object-group DM_INLINE_PROTOCOL_5 any any 
+access-list PCU_access_in remark PCU-1.001
+access-list PCU_access_in extended permit object-group DM_INLINE_SERVICE_45 object PCU-Networks object-group GroupNWManagementEWS 
+access-list PCU_access_in remark PCU-1.002
+access-list PCU_access_in extended permit object-group DM_INLINE_SERVICE_48 object DMZ-DE-PLC_PCU object DMZ-1-DE-PLC 
+access-list PCU_access_in remark PCU-1.003
+access-list PCU_access_in extended permit icmp object DMZ-DE-PLC_PCU object DMZ-1-DE-PLC 
+access-list PCU_access_in remark PCU-1.004
+access-list PCU_access_in extended permit object-group DM_INLINE_SERVICE_47 object PCU-SCADA-CYXENCE object-group DM_INLINE_NETWORK_15 
+access-list PCU_access_in remark PCU-1.005
+access-list PCU_access_in extended permit ip object PCU-Networks object Bifrost-network 
+access-list PCU_access_in remark PCU-1.006 - DO NOT REMOVE
+access-list PCU_access_in extended deny ip object PCU-Networks object IWOCS-Topside-Nets 
+access-list CIU_access_in remark CIU-1.001
+access-list CIU_access_in extended permit tcp object CIU-EWS object DMZ-1-RD-GW eq ssh 
+access-list CIU_access_in remark CIU-1.002
+access-list CIU_access_in extended permit udp object CIU-EWS object DMZ-1-DE-PLC eq ntp 
+access-list CIU_access_in remark CIU-1.003
+access-list CIU_access_in extended permit object 9100-9102_TCP_PrintPorts object CIU-EWS object DMZ-1-Printer 
+access-list CIU_access_in remark CIU-1.004
+access-list CIU_access_in extended permit udp object CIU-PLC object DMZ-1-DE-PLC eq ntp 
+access-list HPU/HDU_access_in remark HPU-1.001
+access-list HPU/HDU_access_in extended permit tcp object HPU-HDU-EWS object DMZ-1-RD-GW eq ssh 
+access-list HPU/HDU_access_in remark HPU-1.002
+access-list HPU/HDU_access_in extended permit udp object HPU-HDU-EWS object DMZ-1-DE-PLC eq ntp 
+access-list HPU/HDU_access_in remark HPU-1.003
+access-list HPU/HDU_access_in extended permit object 9100-9102_TCP_PrintPorts object HPU-HDU-EWS object DMZ-1-Printer 
+access-list HPU/HDU_access_in remark HPU-1.004
+access-list HPU/HDU_access_in extended permit udp object HPU-HDU-PLC object DMZ-1-DE-PLC eq ntp 
+access-list SFT_access_in remark SFT-1.001
+access-list SFT_access_in extended permit tcp object SFT-EWS object DMZ-1-RD-GW eq ssh 
+access-list SFT_access_in remark SFT-1.002
+access-list SFT_access_in extended permit udp object SFT-EWS object DMZ-1-DE-PLC eq ntp 
+access-list SFT_access_in remark SFT-1.003
+access-list SFT_access_in extended permit object 9100-9102_TCP_PrintPorts object SFT-EWS object DMZ-1-Printer 
+access-list SFT_access_in remark SFT-1.004
+access-list SFT_access_in extended permit udp object SFT-PLC object DMZ-1-DE-PLC eq ntp 
+access-list SFT_access_in remark SFT-1.005
+access-list SFT_access_in extended permit udp object SFT-Panel object DMZ-1-DE-PLC eq ntp 
+pager lines 24
+logging enable
+logging timestamp rfc5424
+logging trap notifications
+logging asdm notifications
+logging device-id hostname
+logging host Management-Internal 172.30.100.99
+mtu External-Linknet 1500
+mtu DMZ-2 1500
+mtu Management-DMZ-2 1500
+mtu Management-External 1500
+mtu DMZ-1 1500
+mtu Management-DMZ-1 1500
+mtu ESXi 1500
+mtu SCADA 1500
+mtu HPU/HDU 1500
+mtu SFT 1500
+mtu CIU 1500
+mtu SCU_A 1500
+mtu SCU_B 1500
+mtu Management-Internal 1500
+mtu Management-PCU-Int 1500
+mtu SAFE_A 1500
+mtu SAFE_B 1500
+mtu SPCU-W 1500
+mtu SPCU-X 1500
+mtu PCU 1500
+failover
+failover lan unit secondary
+failover lan interface Failover GigabitEthernet0/7
+failover link Failover GigabitEthernet0/7
+failover interface ip Failover 192.168.249.1 255.255.255.252 standby 192.168.249.2
+monitor-interface External-Linknet
+monitor-interface DMZ-2
+monitor-interface Management-DMZ-2
+monitor-interface Management-External
+monitor-interface DMZ-1
+monitor-interface Management-DMZ-1
+monitor-interface ESXi
+monitor-interface SCADA
+monitor-interface HPU/HDU
+monitor-interface SFT
+monitor-interface CIU
+monitor-interface SCU_A
+monitor-interface SCU_B
+monitor-interface Management-Internal
+monitor-interface Management-PCU-Int
+monitor-interface SAFE_A
+monitor-interface SAFE_B
+monitor-interface SPCU-W
+monitor-interface SPCU-X
+monitor-interface PCU
+icmp unreachable rate-limit 1 burst-size 1
+no asdm history enable
+arp timeout 14400
+no arp permit-nonconnected
+arp rate-limit 16384
+access-group External-Linknet_access_in in interface External-Linknet
+access-group DMZ-2_access_in in interface DMZ-2
+access-group Management-DMZ-2_access_in in interface Management-DMZ-2
+access-group Management-DMZ-External_access_in in interface Management-External
+access-group DMZ-1_access_in in interface DMZ-1
+access-group Management-DMZ-1_access_in in interface Management-DMZ-1
+access-group ESXi_access_in in interface ESXi
+access-group SCADA_access_in in interface SCADA
+access-group HPU/HDU_access_in in interface HPU/HDU
+access-group SFT_access_in in interface SFT
+access-group CIU_access_in in interface CIU
+access-group SCU_A_access_in in interface SCU_A
+access-group SCU_B_access_in in interface SCU_B
+access-group Management-Internal_access_in in interface Management-Internal
+access-group Management-PCU-Int_access_in in interface Management-PCU-Int
+access-group SAFE_A_access_in in interface SAFE_A
+access-group SAFE_B_access_in in interface SAFE_B
+access-group SPCU-W_access_in in interface SPCU-W
+access-group SPCU-X_access_in in interface SPCU-X
+access-group PCU_access_in in interface PCU
+route External-Linknet 10.41.0.0 255.255.0.0 172.30.2.9 1
+route SPCU-W 10.210.1.0 255.255.255.0 172.30.210.11 1
+route SPCU-W 10.210.2.0 255.255.255.0 172.30.210.21 1
+route SPCU-W 10.210.3.200 255.255.255.252 172.30.210.11 1
+route SPCU-W 10.210.3.232 255.255.255.252 172.30.210.21 1
+route External-Linknet 10.254.0.0 255.255.0.0 172.30.2.9 1
+route SPCU-X 10.255.1.0 255.255.255.0 172.30.220.11 1
+route SPCU-X 10.255.2.0 255.255.255.0 172.30.220.21 1
+route SPCU-X 10.255.3.200 255.255.255.252 172.30.220.11 1
+route SPCU-X 10.255.3.208 255.255.255.252 172.30.220.11 1
+route SPCU-X 10.255.3.232 255.255.255.252 172.30.220.21 1
+route SPCU-X 10.255.3.240 255.255.255.252 172.30.220.21 1
+route PCU 172.29.0.0 255.255.0.0 172.29.2.4 1
+timeout xlate 3:00:00
+timeout pat-xlate 0:00:30
+timeout conn 1:00:00 half-closed 0:10:00 udp 0:02:00 sctp 0:02:00 icmp 0:00:02
+timeout sunrpc 0:10:00 h323 0:05:00 h225 1:00:00 mgcp 0:05:00 mgcp-pat 0:05:00
+timeout sip 0:30:00 sip_media 0:02:00 sip-invite 0:03:00 sip-disconnect 0:02:00
+timeout sip-provisional-media 0:02:00 uauth 0:05:00 absolute
+timeout tcp-proxy-reassembly 0:01:00
+timeout floating-conn 0:00:00
+timeout conn-holddown 0:00:15
+timeout igp stale-route 0:01:10
+user-identity default-domain LOCAL
+aaa authentication ssh console LOCAL 
+aaa authentication login-history
+http server enable
+http 172.30.100.0 255.255.255.0 Management-Internal
+http 10.41.0.0 255.255.0.0 External-Linknet
+http 10.41.0.0 255.255.0.0 Management-Internal
+snmp-server host Management-Internal 172.30.100.92 poll community LUCKYLUKE version 2c
+snmp-server host SCADA 172.30.11.100 poll community LUCKYLUKE version 2c
+snmp-server host SCADA 172.30.11.200 poll community LUCKYLUKE version 2c
+snmp-server location IWOCS Gen2
+snmp-server contact 0.0.16b
+snmp-server community LUCKYLUKE
+crypto ipsec security-association pmtu-aging infinite
+crypto ca trustpool policy
+telnet timeout 5
+ssh stricthostkeycheck
+ssh 10.41.0.0 255.255.0.0 External-Linknet
+ssh 172.30.100.0 255.255.255.0 Management-Internal
+ssh timeout 5
+ssh version 1 2
+ssh key-exchange group dh-group1-sha1
+console timeout 0
+dhcprelay server 172.30.210.77 SPCU-W
+dhcprelay enable SAFE_A
+dhcprelay enable SAFE_B
+dhcprelay timeout 60
+no threat-detection basic-threat
+no threat-detection statistics access-list
+no threat-detection statistics tcp-intercept
+ntp server 172.30.103.4 source Management-External
+ntp server 172.30.51.10 source DMZ-1
+dynamic-access-policy-record DfltAccessPolicy
+username daffy password $sha512$5000$rePwv+dRRuqjd8WtOfk5dw==$N7edju6mM4egHfnTyAyZ2w== pbkdf2 privilege 5
+username walter password $sha512$5000$BqVkGFqZQXJ+F+9tO25NGQ==$y7AjDzHC3gI1zoExO1fxeA== pbkdf2 privilege 15
+username marvin password $sha512$5000$hUDsqswHyFV4DheAJ3ejZQ==$KIk1ynYuUgUdbsxURwG9YA== pbkdf2 privilege 15
+!
+class-map inspection_default
+ match default-inspection-traffic
+!
+!
+policy-map type inspect dns preset_dns_map
+ parameters
+  message-length maximum client auto
+  message-length maximum 512
+  no tcp-inspection
+policy-map type inspect dns migrated_dns_map_1
+ parameters
+  message-length maximum client auto
+  message-length maximum 512
+  no tcp-inspection
+policy-map global_policy
+ class inspection_default
+  inspect ftp 
+  inspect h323 h225 
+  inspect h323 ras 
+  inspect rsh 
+  inspect rtsp 
+  inspect esmtp 
+  inspect sqlnet 
+  inspect skinny  
+  inspect sunrpc 
+  inspect xdmcp 
+  inspect sip  
+  inspect netbios 
+  inspect tftp 
+  inspect ip-options 
+  inspect dns migrated_dns_map_1 
+policy-map type inspect dns migrated_dns_map_2
+ parameters
+  message-length maximum client auto
+  message-length maximum 512
+  no tcp-inspection
+!
+service-policy global_policy global
+prompt hostname context 
+no call-home reporting anonymous
+call-home
+ profile CiscoTAC-1
+  no active
+  destination address http https://tools.cisco.com/its/service/oddce/services/DDCEService
+  destination address email callhome@cisco.com
+  destination transport-method http
+  subscribe-to-alert-group diagnostic
+  subscribe-to-alert-group environment
+  subscribe-to-alert-group inventory periodic monthly
+  subscribe-to-alert-group configuration periodic monthly
+  subscribe-to-alert-group telemetry periodic daily
+: end

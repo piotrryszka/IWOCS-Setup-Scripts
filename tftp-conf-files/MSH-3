@@ -1,0 +1,324 @@
+!
+version 15.2
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+service password-encryption
+service sequence-numbers
+!
+hostname MSH-3
+!
+boot-start-marker
+boot-end-marker
+!
+!
+logging buffered 16384 informational
+enable secret 5 $1$vhjr$Zr37SWDYBA8I9LmagrxJg1
+!
+username walter privilege 15 secret 5 $1$u/LQ$NtiHcHtmKzWwA1aed/XoQ/
+username marvin privilege 15 secret 5 $1$xegf$IQ4NS5Z4evQ6LEBDGI3l90
+username daffy privilege 5 secret 5 $1$/6pG$YpDyPemQiW/4Mtpj.EBpR0
+no aaa new-model
+clock timezone CST -6 0
+clock summer-time CDT recurring
+system mtu routing 1500
+no ip source-route
+ip routing
+!
+ip vrf 100
+ description Management
+!
+ip dhcp use subscriber-id client-id
+ip dhcp subscriber-id interface-name
+!
+ip dhcp pool 14
+ network 172.30.14.0 255.255.255.0
+ default-router 172.30.14.1 
+ reserved-only
+   address 172.30.14.61 client-id "Fa1/1" ascii
+   address 172.30.14.65 client-id "Fa1/2" ascii
+   address 172.30.14.71 client-id "Fa1/3" ascii
+   address 172.30.14.72 client-id "Fa1/4" ascii
+   address 172.30.14.73 client-id "Fa1/5" ascii
+   address 172.30.14.74 client-id "Fa1/6" ascii
+   address 172.30.14.91 client-id "Fa1/7" ascii
+   cip instance 1
+!
+!
+no ip domain-lookup
+ip domain-name iwocsg2.bifrost.technipfmc.com
+login block-for 20 attempts 5 within 60
+login on-failure log
+vtp mode off
+!
+shutdown vlan 666
+!
+!
+!
+!
+!
+ptp mode e2etransparent 
+!
+!
+license boot level iplite
+!
+spanning-tree mode rapid-pvst
+spanning-tree loopguard default
+spanning-tree portfast edge bpduguard default
+spanning-tree extend system-id
+errdisable recovery cause udld
+errdisable recovery cause bpduguard
+errdisable recovery cause security-violation
+errdisable recovery cause channel-misconfig
+errdisable recovery cause pagp-flap
+errdisable recovery cause dtp-flap
+errdisable recovery cause link-flap
+errdisable recovery cause sfp-config-mismatch
+errdisable recovery cause gbic-invalid
+errdisable recovery cause psecure-violation
+errdisable recovery cause port-mode-failure
+errdisable recovery cause dhcp-rate-limit
+errdisable recovery cause pppoe-ia-rate-limit
+errdisable recovery cause mac-limit
+errdisable recovery cause vmps
+errdisable recovery cause storm-control
+errdisable recovery cause inline-power
+errdisable recovery cause arp-inspection
+errdisable recovery cause loopback
+errdisable recovery cause small-frame
+errdisable recovery cause psp
+!
+alarm profile defaultPort
+ alarm not-operating 
+ syslog not-operating 
+ notifies not-operating 
+!
+
+!
+!
+!
+!
+vlan internal allocation policy ascending
+!
+vlan 14
+ name CIU
+!
+vlan 100
+ name MANAGEMENT
+!
+vlan 666
+ name NOTINUSE
+ shutdown
+!
+vlan 888
+ name NATIVE
+no cdp run
+!
+lldp run
+!
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+interface FastEthernet1/1
+ description CIU-PLC
+ switchport access vlan 14
+ switchport mode access
+ ip dhcp relay information option server-id-override
+ ip dhcp server use subscriber-id client-id
+ storm-control broadcast level 20.00
+ storm-control multicast level 20.00
+ storm-control action shutdown
+ spanning-tree portfast edge
+!
+interface FastEthernet1/2
+ description ControlPanel
+ switchport access vlan 14
+ switchport mode access
+ ip dhcp relay information option server-id-override
+ ip dhcp server use subscriber-id client-id
+ storm-control broadcast level 20.00
+ storm-control multicast level 20.00
+ storm-control action shutdown
+ spanning-tree portfast edge
+!
+interface FastEthernet1/3
+ description FQ1
+ switchport access vlan 14
+ switchport mode access
+ ip dhcp relay information option server-id-override
+ ip dhcp server use subscriber-id client-id
+ storm-control broadcast level 20.00
+ storm-control multicast level 20.00
+ storm-control action shutdown
+ spanning-tree portfast edge
+!
+interface FastEthernet1/4
+ description FQ2
+ switchport access vlan 14
+ switchport mode access
+ ip dhcp relay information option server-id-override
+ ip dhcp server use subscriber-id client-id
+ storm-control broadcast level 20.00
+ storm-control multicast level 20.00
+ storm-control action shutdown
+ spanning-tree portfast edge
+!
+interface FastEthernet1/5
+ description FQ3
+ switchport access vlan 14
+ switchport mode access
+ ip dhcp relay information option server-id-override
+ ip dhcp server use subscriber-id client-id
+ storm-control broadcast level 20.00
+ storm-control multicast level 20.00
+ storm-control action shutdown
+ spanning-tree portfast edge
+!
+interface FastEthernet1/6
+ description FQ4
+ switchport access vlan 14
+ switchport mode access
+ ip dhcp relay information option server-id-override
+ ip dhcp server use subscriber-id client-id
+ storm-control broadcast level 20.00
+ storm-control multicast level 20.00
+ storm-control action shutdown
+ spanning-tree portfast edge
+!
+interface FastEthernet1/7
+ description EWS-CIU
+ switchport access vlan 14
+ switchport mode access
+ ip dhcp relay information option server-id-override
+ ip dhcp server use subscriber-id client-id
+ storm-control broadcast level 20.00
+ storm-control multicast level 20.00
+ storm-control action shutdown
+ spanning-tree portfast edge
+!
+interface FastEthernet1/8
+ description NotInUse
+ switchport access vlan 666
+ switchport mode access
+ shutdown
+ storm-control broadcast level 20.00
+ storm-control multicast level 20.00
+ storm-control action shutdown
+!
+interface GigabitEthernet1/1
+ description TRUNK_TO_TDS-1_A
+ switchport trunk allowed vlan 14,100
+ switchport trunk native vlan 888
+ switchport mode trunk
+ storm-control broadcast level 20.00
+ storm-control multicast level 20.00
+!
+interface GigabitEthernet1/2
+ description TRUNK_TO_TDS-1_B
+ switchport trunk allowed vlan 14,100
+ switchport trunk native vlan 888
+ switchport mode trunk
+ storm-control broadcast level 20.00
+ storm-control multicast level 20.00
+!
+interface Vlan1
+ no ip address
+ no ip redirects
+ no ip unreachables
+ no ip proxy-arp
+ shutdown
+!
+interface Vlan14
+ description CIU
+ ip address 172.30.14.4 255.255.255.0
+ no ip redirects
+ no ip unreachables
+ no ip proxy-arp
+!
+interface Vlan100
+ description Management
+ ip vrf forwarding 100
+ ip address 172.30.100.43 255.255.255.0
+ no ip redirects
+ no ip unreachables
+ no ip proxy-arp
+!
+ip forward-protocol nd
+!
+no ip http server
+no ip http secure-server
+ip tftp source-interface Vlan100
+ip route vrf 100 0.0.0.0 0.0.0.0 172.30.100.1
+ip ssh version 2
+!
+!
+logging trap notifications
+logging host 172.30.100.99 vrf 100
+snmp-server community LUCKYLUKE RO
+snmp-server location IWOCS Gen2 SPCU-W
+snmp-server contact 0.0.13
+snmp mib flash cache
+privilege exec level 5 show spanning-tree blockedports
+privilege exec level 5 show spanning-tree
+privilege exec level 5 show lldp neighbors
+privilege exec level 5 show lldp
+privilege exec level 5 show vlan
+privilege exec level 5 show running-config
+privilege exec level 5 show logging
+privilege exec level 5 show interfaces
+privilege exec level 5 show
+banner motd C
+
+                                                    
+                            TechnipFMC                      
+                     
+         ------------------ W A R N I N G -----------------           
+               This system is for authorized use only.                
+      All activities conducted on and information accessed, processed,     
+           stored or sent using this device may be examined.           
+By using the system, all users acknowledge and consent to such monitoring.
+   All unauthorized or improper use of this system shall be reported.      
+                                                                      
+                All activities performed on this device               
+                      are logged and monitored.                       
+                                                                      
+         -------------------------------------------------     
+                                                    
+                        Location  : IWOCS Generation 2
+                     Device name  : MSH-3
+                      Cabinet PN  : P6000183221 
+                      Network PN  : P6000185409
+                         Version  : B
+                        Filename  : MSH-3
+                                                     
+         -------------------------------------------------        
+
+!
+line con 0
+ logging synchronous
+ login local
+line vty 0 4
+ logging synchronous
+ login local
+ transport input ssh
+line vty 5 15
+ logging synchronous
+ login local
+ transport input ssh
+!
+ntp source Vlan100
+ntp server vrf 100 172.30.51.10 minpoll 10
+!
+!
+!
+!
+!
+!
+!
+end
