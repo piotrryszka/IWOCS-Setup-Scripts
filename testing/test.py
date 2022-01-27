@@ -381,6 +381,11 @@
 #
 # test()
 
+# DOCUMENTATION
+# https://ktbyers.github.io/netmiko/docs/netmiko/index.html
+
+
+
 from netmiko import ConnectHandler
 from getpass import getpass
 
@@ -389,9 +394,10 @@ username = 'msztaba'
 host = "pluton.kt.agh.edu.pl"
 device_type = 'linux'
 
+
 def try_netmiko(dev, hos, user, pas):
     cisco1 = {
-        "device_type": f"{dev}",
+        "device_type": f"autodetect",
         "host": f"{host}",
         "username": f"{user}",
         "password": f'{pas}',
