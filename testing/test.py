@@ -404,13 +404,17 @@ def try_netmiko(dev, hos, user, pas):
     }
 
     # Show command that we execute.
-    command = "ls"
+    commands_list = ['ls', 'pwd', 'mkdir tescik', 'ls' ,'rmdir tescik']
 
     with ConnectHandler(**cisco1) as net_connect:
-        output = net_connect.send_command(command)
+        for command in commands_list:
+            # sending command
+            output = net_connect.send_command(command)
+            # printing output of command with error handling too
+            print(output)
 
     # Automatically cleans-up the output so that only the show output is returned
 
-    print(output)
+
 
 try_netmiko(device_type, host, username, password)
