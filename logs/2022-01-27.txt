@@ -279,3 +279,6 @@ Connection has been established correctly ...
 This is a list of all saved session logs: 
 2022-01-26.txt, 2022-01-27.txt
 Do you want to delete all logs? If yes type '1', if not type anything else.
+Available languages are presented below:
+En, No
+Please choose one of possible languages: 

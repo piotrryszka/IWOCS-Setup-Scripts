@@ -380,3 +380,25 @@
 #         print("something went wrong")
 #
 # test()
+
+
+from netmiko import ConnectHandler
+from getpass import getpass
+
+cisco1 = {
+    "device_type": "cisco_ios",
+    "host": "pluton.kt.agh.edu.pl",
+    "username": "msztaba",
+    "password": '098azerty@MS',
+}
+
+# Show command that we execute.
+command = "ls"
+
+with ConnectHandler(**cisco1) as net_connect:
+    output = net_connect.send_command(command)
+
+# Automatically cleans-up the output so that only the show output is returned
+print()
+print(output)
+print()
