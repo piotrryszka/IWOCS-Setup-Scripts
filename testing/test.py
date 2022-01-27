@@ -397,6 +397,7 @@ device_type = 'linux'
 
 def try_netmiko(dev, hos, user, pas):
     cisco1 = {
+        # autodect is very useful in network devices
         "device_type": f"autodetect",
         "host": f"{host}",
         "username": f"{user}",
