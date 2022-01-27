@@ -387,6 +387,8 @@
 
 
 from netmiko import ConnectHandler
+
+# this import is not important right now
 from getpass import getpass
 
 password = '098azerty@MS'
@@ -397,7 +399,7 @@ device_type = 'linux'
 
 def try_netmiko(dev, hos, user, pas):
     cisco1 = {
-        # autodect is very useful in network devices
+        # autodetect is very useful in network devices
         "device_type": f"autodetect",
         "host": f"{host}",
         "username": f"{user}",
@@ -407,6 +409,7 @@ def try_netmiko(dev, hos, user, pas):
     # Show command that we execute.
     commands_list = ['ls', 'pwd', 'mkdir tescik', 'ls' ,'rmdir tescik']
 
+    # executing commands for network device
     with ConnectHandler(**cisco1) as net_connect:
         for command in commands_list:
             # sending command
@@ -414,8 +417,7 @@ def try_netmiko(dev, hos, user, pas):
             # printing output of command with error handling too
             print(output)
 
-    # Automatically cleans-up the output so that only the show output is returned
 
 
-
+# executing function
 try_netmiko(device_type, host, username, password)
