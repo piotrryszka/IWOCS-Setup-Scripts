@@ -50,6 +50,9 @@ host = "pluton.kt.agh.edu.pl"
 
 # check if logs are possible to read after working on network device,
 
+#TODO: ADD EXCPETIONS LIKE Netmikotimeoutexception, ssh exception etc
+# TODO: ADD encryption and decryption also, adding threads to do some configuration faster for example 3 devices at once
+
 def try_netmiko():
     cisco1 = {
         # autodetect is very useful in network devices
