@@ -46,16 +46,16 @@ def ip_connect(lang_dict, ip_number, file):
         print(decorator_1)
 
 # CONF TO TRY_NETMIKO
-# host = "pluton.kt.agh.edu.pl"
+host = "pluton.kt.agh.edu.pl"
 # device_type = 'linux'
 
-def try_netmiko(host, user, pas):
+def try_netmiko():
     cisco1 = {
         # autodetect is very useful in network devices
         "device_type": f"autodetect",
         "host": f"{host}",
-        "username": f"{user}",
-        "password": f'{pas}',
+        "username": f"{username}",
+        "password": f'{password}',
     }
 
     # Show command that we execute.

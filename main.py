@@ -59,7 +59,7 @@ while running_flag:
     # testing ssh connection, second argument to be set
     # ip_connect(lang_expressions, 1000, 'commands.txt')
 
-    try_netmiko('pluton.kt.agh.edu.pl', 'msztaba', '098azerty@MS')
+    try_netmiko()
 
     # ip_connect(lang_expressions, 1000, 'test.txt')
 
