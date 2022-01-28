@@ -48,6 +48,8 @@ def ip_connect(lang_dict, ip_number, file):
 # CONF TO TRY_NETMIKO
 host = "pluton.kt.agh.edu.pl"
 
+# check if logs are possible to read after working on network device,
+
 def try_netmiko():
     cisco1 = {
         # autodetect is very useful in network devices
