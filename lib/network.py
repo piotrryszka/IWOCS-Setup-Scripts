@@ -1,6 +1,12 @@
 # imports
+# PARAMIKO
 import paramiko
 from lib.data import decorator_1, username, password
+
+# NETMIKO
+from netmiko import ConnectHandler
+# this import is not important right now
+from getpass import getpass
 
 # need to add more arguments, like to make host, username, password correct in every case
 def ip_connect(lang_dict, ip_number, file):
@@ -38,3 +44,27 @@ def ip_connect(lang_dict, ip_number, file):
     except:
         print(lang_dict['ssh_failed'])
         print(decorator_1)
+
+# CONF TO TRY_NETMIKO
+# host = "pluton.kt.agh.edu.pl"
+# device_type = 'linux'
+
+def try_netmiko(host, user, pas):
+    cisco1 = {
+        # autodetect is very useful in network devices
+        "device_type": f"autodetect",
+        "host": f"{host}",
+        "username": f"{user}",
+        "password": f'{pas}',
+    }
+
+    # Show command that we execute.
+    commands_list = ['ls', 'pwd', 'mkdir tescik', 'ls' ,'rmdir tescik']
+
+    # executing commands for network device
+    with ConnectHandler(**cisco1) as net_connect:
+        for command in commands_list:
+            # sending command
+            output = net_connect.send_command(command)
+            # printing output of command with error handling too
+            print(output)

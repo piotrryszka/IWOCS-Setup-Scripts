@@ -7,7 +7,7 @@ from lib.booting import checking_booting
 from lib.languages import listing_languages, reading_language
 from lib.data import ip_number, decorator_1
 from lib.logging import *
-from lib.network import ip_connect
+from lib.network import ip_connect, try_netmiko
 import sys
 
 
@@ -57,7 +57,9 @@ while running_flag:
 
     # TODO: needs to be removed or moved to be done later
     # testing ssh connection, second argument to be set
-    ip_connect(lang_expressions, 1000, 'commands.txt')
+    # ip_connect(lang_expressions, 1000, 'commands.txt')
+
+    try_netmiko('pluton.kt.agh.edu.pl', 'msztaba', '098azerty@MS')
 
     # ip_connect(lang_expressions, 1000, 'test.txt')
 
