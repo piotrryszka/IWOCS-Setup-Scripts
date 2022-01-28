@@ -16,12 +16,12 @@ running_flag = True  # main flag, running program
 system_flag = True  # flag about type of system
 COM_flag = True  # flag checking COM
 device_flag = True  # flag checking device
-user_boot_flag = True
-ip_flag = False
-proper_language = False
+user_boot_flag = True # flag checking if device chosen by user is booted
+ip_flag = False # flag if ip is correctly set by user
+proper_language = False # flag if the language chosen by user is possible to be used
 
 # FIXED Variables:
-COM_speed = 9600
+COM_speed = 9600 # serial port speed
 
 
 # main project
@@ -56,13 +56,15 @@ while running_flag:
 
 
     # TODO: needs to be removed or moved to be done later
-    # testing ssh connection, second argument to be set
-    # ip_connect(lang_expressions, 1000, 'commands.txt')
+    # TODO: NETMIKO VS PARAMIKO
 
+    # testing ssh connection, second argument to be set
+    ip_connect(lang_expressions, 1000, 'commands.txt')
+
+    # checking ssh connection by netmiko
     try_netmiko()
 
     # ip_connect(lang_expressions, 1000, 'test.txt')
-
 
 
     # deleting logs
@@ -84,6 +86,7 @@ while running_flag:
             if user_COM.isnumeric() and user_COM != '0':
                 # Creating string for connection to the device
                 COM_string = "COM" + user_COM
+
 
                 # checking ip address but need to be commented
 #                 while ip_flag == False:

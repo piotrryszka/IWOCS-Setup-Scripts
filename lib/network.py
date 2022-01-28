@@ -47,7 +47,6 @@ def ip_connect(lang_dict, ip_number, file):
 
 # CONF TO TRY_NETMIKO
 host = "pluton.kt.agh.edu.pl"
-# device_type = 'linux'
 
 def try_netmiko():
     cisco1 = {

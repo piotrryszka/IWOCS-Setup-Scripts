@@ -52,3 +52,51 @@ If you want to leave any part of the program type 0 [zero] in your input!"
 This is a list of all saved session logs: 
 2022-01-26.txt, 2022-01-27.txt, 2022-01-28.txt
 Do you want to delete all logs? If yes type '1', if not type anything else.
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+
+
+Creating current timestamp:  28/01/2022 12:06:42
+
+
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+
+
+[0m[01;34mbd_lab1[0m  [01;34mbd_lab2[0m  [01;34mbd_lab3[0m  episodes_list2  [01;34messa[0m  [01;34mkat3[0m  [01;34mKAT3[0m  [01;34mKAT4[0m  [01;34mLAB6[0m  ppok  [01;34mProgramy[0m  [01;34mPROGRAMY[0m  [01;34mpublic_html[0m  [01;32mrokoko[0m  [01;34msamba[0m  [01;34msecure_html[0m  [01;32mtest1[0m  [01;34mzaliczenie[0m
+/home/msztaba
+
+[0m[01;34mbd_lab1[0m  [01;34mbd_lab2[0m  [01;34mbd_lab3[0m  episodes_list2  [01;34messa[0m  [01;34mkat3[0m  [01;34mKAT3[0m  [01;34mKAT4[0m  [01;34mLAB6[0m  ppok  [01;34mProgramy[0m  [01;34mPROGRAMY[0m  [01;34mpublic_html[0m  [01;32mrokoko[0m  [01;34msamba[0m  [01;34msecure_html[0m  [01;34mtescik[0m  [01;32mtest1[0m  [01;34mzaliczenie[0m
+
+This is a list of all saved session logs: 
+2022-01-26.txt, 2022-01-27.txt, 2022-01-28.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+
+
+Creating current timestamp:  28/01/2022 12:06:58
+
+
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+
+
+Connection has been established correctly ...
+
+
+['bd_lab1\n', 'bd_lab2\n', 'bd_lab3\n', 'episodes_list2\n', 'essa\n', 'kat3\n', 'KAT3\n', 'KAT4\n', 'LAB6\n', 'ppok\n', 'Programy\n', 'PROGRAMY\n', 'public_html\n', 'rokoko\n', 'samba\n', 'secure_html\n', 'test1\n', 'zaliczenie\n']
+['/home/msztaba\n']
+[]
+['bd_lab1\n', 'bd_lab2\n', 'bd_lab3\n', 'episodes_list2\n', 'essa\n', 'kat3\n', 'KAT3\n', 'KAT4\n', 'LAB6\n', 'ppok\n', 'Programy\n', 'PROGRAMY\n', 'public_html\n', 'rokoko\n', 'samba\n', 'secure_html\n', 'test1\n', 'zaliczenie\n']
+['/home/msztaba\n']
+[0m[01;34mbd_lab1[0m  [01;34mbd_lab2[0m  [01;34mbd_lab3[0m  episodes_list2  [01;34messa[0m  [01;34mkat3[0m  [01;34mKAT3[0m  [01;34mKAT4[0m  [01;34mLAB6[0m  ppok  [01;34mProgramy[0m  [01;34mPROGRAMY[0m  [01;34mpublic_html[0m  [01;32mrokoko[0m  [01;34msamba[0m  [01;34msecure_html[0m  [01;32mtest1[0m  [01;34mzaliczenie[0m
+/home/msztaba
+
+[0m[01;34mbd_lab1[0m  [01;34mbd_lab2[0m  [01;34mbd_lab3[0m  episodes_list2  [01;34messa[0m  [01;34mkat3[0m  [01;34mKAT3[0m  [01;34mKAT4[0m  [01;34mLAB6[0m  ppok  [01;34mProgramy[0m  [01;34mPROGRAMY[0m  [01;34mpublic_html[0m  [01;32mrokoko[0m  [01;34msamba[0m  [01;34msecure_html[0m  [01;34mtescik[0m  [01;32mtest1[0m  [01;34mzaliczenie[0m
+
+This is a list of all saved session logs: 
+2022-01-26.txt, 2022-01-27.txt, 2022-01-28.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
