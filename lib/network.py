@@ -53,6 +53,11 @@ host = "pluton.kt.agh.edu.pl"
 #TODO: ADD EXCPETIONS LIKE Netmikotimeoutexception, ssh exception etc
 # TODO: ADD encryption and decryption also, adding threads to do some configuration faster for example 3 devices at once
 
+# TODO: old keys in ssh connection, try to be able to connect to any device
+
+
+
+
 def try_netmiko():
     cisco1 = {
         # autodetect is very useful in network devices
