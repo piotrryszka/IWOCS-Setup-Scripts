@@ -7,7 +7,8 @@ from lib.booting import checking_booting
 from lib.languages import listing_languages, reading_language
 from lib.data import ip_number, decorator_1
 from lib.logging import *
-from lib.network import ip_connect, try_netmiko
+from lib.network import try_netmiko
+from lib.paramiko_ip import ip_connect
 import sys
 
 
@@ -54,17 +55,8 @@ while running_flag:
     print(lang_expressions['information_prompt'])
     print(decorator_1)
 
-
-    # TODO: needs to be removed or moved to be done later
-    # TODO: NETMIKO VS PARAMIKO
-
-    # testing ssh connection, second argument to be set
-    ip_connect(lang_expressions, 1000, 'commands.txt')
-
     # checking ssh connection by netmiko
-    try_netmiko()
-
-    # ip_connect(lang_expressions, 1000, 'test.txt')
+    try_netmiko('commands.txt')
 
 
     # deleting logs

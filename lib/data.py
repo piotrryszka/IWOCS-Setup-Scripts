@@ -124,3 +124,5 @@ decorator_1 = '\n'
 username = "msztaba"
 # needs to be hashed
 password = "098azerty@MS"
+# host for tests
+host = "pluton.kt.agh.edu.pl"
