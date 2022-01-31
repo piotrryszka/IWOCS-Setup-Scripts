@@ -1,5 +1,7 @@
 ls
 pwd
-rmdir testowanko
+mkdir blablaaa
+ls
+rmdir blablaaa
 ls
 pwd

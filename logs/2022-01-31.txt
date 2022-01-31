@@ -178,3 +178,47 @@ rmdir: failed to remove ‘testowanko’: No such file or directory
 This is a list of all saved session logs: 
 2022-01-26.txt, 2022-01-27.txt, 2022-01-28.txt, 2022-01-31.txt
 Do you want to delete all logs? If yes type '1', if not type anything else.
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+
+
+Creating current timestamp:  31/01/2022 13:00:06
+
+
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+
+
+[0m[01;34mbd_lab1[0m  [01;34mbd_lab2[0m  [01;34mbd_lab3[0m  episodes_list2  [01;34messa[0m  [01;34mkat3[0m  [01;34mKAT3[0m  [01;34mKAT4[0m  [01;34mLAB6[0m  ppok  [01;34mProgramy[0m  [01;34mPROGRAMY[0m  [01;34mpublic_html[0m  [01;32mrokoko[0m  [01;34msamba[0m  [01;34msecure_html[0m  [01;32mtest1[0m  [01;34mzaliczenie[0m
+/home/msztaba
+mkdir: cannot create directory ‘rokoko’: File exists
+[0m[01;34mbd_lab1[0m  [01;34mbd_lab2[0m  [01;34mbd_lab3[0m  episodes_list2  [01;34messa[0m  [01;34mkat3[0m  [01;34mKAT3[0m  [01;34mKAT4[0m  [01;34mLAB6[0m  ppok  [01;34mProgramy[0m  [01;34mPROGRAMY[0m  [01;34mpublic_html[0m  [01;32mrokoko[0m  [01;34msamba[0m  [01;34msecure_html[0m  [01;32mtest1[0m  [01;34mzaliczenie[0m
+rmdir: failed to remove ‘rokoko’: Not a directory
+[0m[01;34mbd_lab1[0m  [01;34mbd_lab2[0m  [01;34mbd_lab3[0m  episodes_list2  [01;34messa[0m  [01;34mkat3[0m  [01;34mKAT3[0m  [01;34mKAT4[0m  [01;34mLAB6[0m  ppok  [01;34mProgramy[0m  [01;34mPROGRAMY[0m  [01;34mpublic_html[0m  [01;32mrokoko[0m  [01;34msamba[0m  [01;34msecure_html[0m  [01;32mtest1[0m  [01;34mzaliczenie[0m
+/home/msztaba
+This is a list of all saved session logs: 
+2022-01-26.txt, 2022-01-27.txt, 2022-01-28.txt, 2022-01-31.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+
+
+Creating current timestamp:  31/01/2022 13:00:53
+
+
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+
+
+[0m[01;34mbd_lab1[0m  [01;34mbd_lab2[0m  [01;34mbd_lab3[0m  episodes_list2  [01;34messa[0m  [01;34mkat3[0m  [01;34mKAT3[0m  [01;34mKAT4[0m  [01;34mLAB6[0m  ppok  [01;34mProgramy[0m  [01;34mPROGRAMY[0m  [01;34mpublic_html[0m  [01;32mrokoko[0m  [01;34msamba[0m  [01;34msecure_html[0m  [01;32mtest1[0m  [01;34mzaliczenie[0m
+/home/msztaba
+
+[0m[01;34mbd_lab1[0m  [01;34mbd_lab2[0m  [01;34mbd_lab3[0m  [01;34mblablaaa[0m  episodes_list2  [01;34messa[0m  [01;34mkat3[0m  [01;34mKAT3[0m  [01;34mKAT4[0m  [01;34mLAB6[0m  ppok  [01;34mProgramy[0m  [01;34mPROGRAMY[0m  [01;34mpublic_html[0m  [01;32mrokoko[0m  [01;34msamba[0m  [01;34msecure_html[0m  [01;32mtest1[0m  [01;34mzaliczenie[0m
+
+[0m[01;34mbd_lab1[0m  [01;34mbd_lab2[0m  [01;34mbd_lab3[0m  episodes_list2  [01;34messa[0m  [01;34mkat3[0m  [01;34mKAT3[0m  [01;34mKAT4[0m  [01;34mLAB6[0m  ppok  [01;34mProgramy[0m  [01;34mPROGRAMY[0m  [01;34mpublic_html[0m  [01;32mrokoko[0m  [01;34msamba[0m  [01;34msecure_html[0m  [01;32mtest1[0m  [01;34mzaliczenie[0m
+/home/msztaba
+This is a list of all saved session logs: 
+2022-01-26.txt, 2022-01-27.txt, 2022-01-28.txt, 2022-01-31.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
