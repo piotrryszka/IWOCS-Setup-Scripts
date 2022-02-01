@@ -15,7 +15,7 @@ import sys
 # Program flags:
 running_flag = True  # main flag, running program
 system_flag = True  # flag about type of system
-COM_flag = True  # flag checking COM
+com_flag = True  # flag checking COM
 device_flag = True  # flag checking device
 user_boot_flag = True # flag checking if device chosen by user is booted
 ip_flag = False # flag if ip is correctly set by user
@@ -84,7 +84,7 @@ while running_flag:
     print(user_system)
     print(decorator_1)
     if user_system == '1':
-        while COM_flag:
+        while com_flag:
             # question about which COM port is user using TASK 185
             user_COM = input(lang_expressions['port_question']).lower()
             print(user_COM)

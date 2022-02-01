@@ -308,4 +308,37 @@ Type '1' if system complete, if not write anything else: 1
 
 
 Which COM port are you using?
-Type number of your COM port: 
+Type number of your COM port: Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+
+
+Creating current timestamp:  01/02/2022 14:30:26
+
+
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+
+
+This is a list of all saved session logs: 
+2022-02-01.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+1
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+
+
+Which COM port are you using?
+Type number of your COM port: 1
+
+
+
+
+Which device do you want to connect? 1
+
+
+Your list of possible devices to configure: 
+ETAS-1, TAS-1, MSC-1, SDG-1_A, SDG-1_B, TDS-1_A, TDS-1_B, MSW-1_A, MSW-1_B, MSX-1_A, MSX-1_B, MSY-1_A, MSY-1_B, MSS-1_A, MSS-1_B, MSH-1
+
+
+Which device do you want to connect? 
