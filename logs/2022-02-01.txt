@@ -287,3 +287,25 @@ Something in Norwegian language
 2022-01-26.txt, 2022-01-27.txt, 2022-01-28.txt, 2022-01-31.txt, 2022-02-01.txt
 Something in Norwegian language 0
 Something in Norwegian language 
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+
+
+Creating current timestamp:  01/02/2022 12:45:11
+
+
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+
+
+This is a list of all saved session logs: 
+2022-01-26.txt, 2022-01-27.txt, 2022-01-28.txt, 2022-01-31.txt, 2022-02-01.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+1
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+
+
+Which COM port are you using?
+Type number of your COM port: 
