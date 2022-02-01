@@ -1,5 +1,0 @@
-ls
-pwd
-mkdir testowanko
-ls
-pwd
