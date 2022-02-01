@@ -48,21 +48,29 @@ while running_flag:
         print(decorator_1)
 
     # creating_timestamp
-    creating_timestamp(lang_expressions)
+    creating_timestamp(lang_dict=lang_expressions)
     print(decorator_1)
 
     # info to user how to leave any part of program
     print(lang_expressions['information_prompt'])
     print(decorator_1)
 
-    # checking ssh connection by netmiko
-    try_netmiko('commands.txt')
+    # returning next ip number and full name of configured device to download to specified device
+    our_conf = creating_proper_configuration(user_device='test1', port_num=12, ip_add = ip_number)
+    # returning tuple with full name device and next iip number to bes used
+    actual_device = our_conf[1]
+    ip_number = our_conf[0]
+    our_conf = creating_proper_configuration(user_device='test2', port_num=24, ip_add = ip_number)
+
+
+#     checking ssh connection by netmiko
+    # try_netmiko(file='commands.txt')
 
 
     # deleting logs
     printing_logs(lang_expressions)
     user_del = input(lang_expressions['deleting_logs'])
-    deleting_files(lang_expressions,user_del)
+    deleting_files(lang_dict = lang_expressions, user_input = user_del)
 
 
     # question about complete system or one module TASK 184
@@ -82,7 +90,7 @@ while running_flag:
 
                 # checking ip address but need to be commented
 #                 while ip_flag == False:
-#                     ip_set = checking_ip_address(lang_expressions)
+#                     ip_set = checking_ip_address(lang_dict = lang_expressions)
 #                     if ip_set == True:
 #                         ip_flag = True
 #                 ip_flag = False
@@ -92,7 +100,7 @@ while running_flag:
                 print(decorator_1)
 
                 # Creating a list with all the possible devices
-                device_list = opening_device_list()
+                device_list = opening_device_list(file_name = 'project_names_of_devices.txt')
 
                 while device_flag and ip_set:
                     # User chooses the device, which one he wants to
@@ -122,32 +130,34 @@ while running_flag:
                         print(lang_expressions['wait_prompt'])
                         print(decorator_1)
 
-                        # returning next ip number and full name of configured device
-#                         our_conf = creating_proper_configuration(user_device, 12, ip_number)
+#                         # returning next ip number and full name of configured device to download to specified device
+#                         our_conf = creating_proper_configuration(user_device='test1', port_num=12, ip_add = ip_number)
+#                         returning tuple with full name device and next iip number to bes used
 #                         actual_device = our_conf[1]
 #                         ip_number = our_conf[0]
-#                         our_conf = creating_proper_configuration('sssss', 2222, ip_number)
+#                         our_conf = creating_proper_configuration(user_device='test2', port_num=24, ip_add = ip_number)
 
                         # connection set
                         try:
                             ser = Serial(COM_string, COM_speed)
 
                             # waiting for router/switch to boot
-                            user_boot_flag = checking_booting(ser)
+                            user_boot_flag = checking_booting(port = ser)
 
                             # counting number of gigabit and fast ports
-                            device_ports = checking_switch_ports(ser)
+                            device_ports = checking_switch_ports(ser_port = ser)
 
                             # checking if device is really the device, which was wanted by user
-                            proper_device = checking_device(ser, user_device, lang_expressions)
+                            proper_device = checking_device(ser_port = ser, user_device = user_device, lang_dict = lang_expressions)
 
-                            #print(device_ports)
+                        # # returning next ip number and full name of configured device to download to specified device
+#                         our_conf = creating_proper_configuration(user_device='test1', port_num=12, ip_add = ip_number)
+#                         returning tuple with full name device and next iip number to bes used
+#                         actual_device = our_conf[1]
+#                         ip_number = our_conf[0]
+#                         our_conf = creating_proper_configuration(user_device='test2', port_num=24, ip_add = ip_number)
 
-                            # getting ready to create proper_initial_configuration
-                            # creating_proper_configuration(user_device, device_ports, ip_number)
-                            our_conf = creating_proper_configuration(user_device, 12, ip_number)
-                            actual_device = our_conf[1]
-                            ip_number = our_conf[0]
+
                             #TODO: check in lab how script work if choosing new devices
 
 
@@ -156,7 +166,7 @@ while running_flag:
                                 print(decorator_1)
 
                                 # opening file with configuration
-                                stripped_list = reading_conf_files(actual_device)
+                                stripped_list = reading_conf_files(file = actual_device)
 
                                 # opening dedicated file with configuration
                                 #TODO: in the future
@@ -171,9 +181,12 @@ while running_flag:
                                 print(f"{lang_expressions['close_con']}{ser.name}.")
                                 print(decorator_1)
 
+
+
+                                # TODO:
                                 # after initial_config by serial port now, we can go to the SSH connection
                                 # needs to add arguments to define host, password etc
-                                ip_connect()
+                                try_netmiko(file='commands.txt')
 
                             else:
                                 print(lang_expressions['start_conf'])

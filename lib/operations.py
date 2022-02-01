@@ -4,8 +4,8 @@ from lib.commands import send_to_console
 # functions working on txt static_files
 
 # opening possible devices to configure
-def opening_device_list():
-    with open('static_files/project_names_of_devices.txt', 'r') as file_devices:
+def opening_device_list(file_name):
+    with open(f'static_files/{file_name}', 'r') as file_devices:
                         lines = file_devices.read()
                         list_of_lists = lines.splitlines()
                         return list_of_lists
