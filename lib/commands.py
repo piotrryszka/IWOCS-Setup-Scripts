@@ -1,4 +1,4 @@
-# functions
+# COMMANDS WORKING ON DEVICES
 
 # imports
 from serial import Serial
@@ -75,38 +75,4 @@ def checking_device(ser_port, user_device, lang_dict):
         else:
             print(lang_dict['bad_device'])
     return good_conf
-
-# deleting logs and handling logs files
-def deleting_files(lang_dict, user_input):
-    to_leave = False
-    files = os.listdir('logs')
-    # deleting files
-    if user_input == '1':
-        for file in files:
-            # cannot delete the file from today's date
-            try:
-                os.remove(f'logs/{file}')
-            except:
-                pass
-        return to_leave
-    elif user_input == '0':
-        to_leave = True
-        return to_leave
-    else:
-        return to_leave
-
-# printing accessible logs
-def printing_logs(lang_dict):
-    files = os.listdir('logs')
-    # printing files
-    print(lang_dict['print_logs'])
-    print(*files, sep = ', ')
-
-# creating_timestamp to make logs clearer
-def creating_timestamp(lang_dict):
-    # datetime object containing current date and time
-    now = datetime.now()
-    # converting data object to string
-    dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
-    print(f"{lang_dict['timestamp']}", dt_string)
 

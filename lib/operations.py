@@ -1,7 +1,8 @@
 # imports
 from lib.commands import send_to_console
+import os
 
-# functions working on txt static_files
+# FUNCTIONS WORKING ON TXT FILES
 
 # opening possible devices to configure
 def opening_device_list(file_name):
@@ -42,3 +43,22 @@ def creating_proper_configuration(user_device, port_num, ip_add):
             for row in content_list:
                 file.write(str(row) + '\n')
         return ip_add, f'initial-configuration-files/cisco-switch4010-{user_device}'
+
+# deleting logs and handling logs files
+def deleting_files(lang_dict, user_input):
+    to_leave = False
+    files = os.listdir('logs')
+    # deleting files
+    if user_input == '1':
+        for file in files:
+            # cannot delete the file from today's date
+            try:
+                os.remove(f'logs/{file}')
+            except:
+                pass
+        return to_leave
+    elif user_input == '0':
+        to_leave = True
+        return to_leave
+    else:
+        return to_leave

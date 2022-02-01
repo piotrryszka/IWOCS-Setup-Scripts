@@ -1,14 +1,15 @@
 # imports
 from serial import Serial
 from time import sleep
-from lib.commands import send_to_console, checking_switch_ports, checking_ip_address, checking_device, deleting_files, printing_logs, creating_timestamp
-from lib.operations import opening_device_list, reading_conf_files, creating_proper_configuration
+from lib.commands import send_to_console, checking_switch_ports, checking_ip_address, checking_device
+from lib.operations import opening_device_list, reading_conf_files, creating_proper_configuration, deleting_files
 from lib.booting import checking_booting
 from lib.languages import listing_languages, reading_language
 from lib.data import ip_number, decorator_1
 from lib.logging import *
 from lib.network import try_netmiko
 from lib.paramiko_ip import ip_connect
+from lib.functions import printing_logs, creating_timestamp
 import sys
 
 
