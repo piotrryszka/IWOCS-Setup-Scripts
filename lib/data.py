@@ -27,6 +27,7 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                               'timestamp': "Creating current timestamp: ",
                               'ssh_failed': "Sorry, your SSH connection cannot be established...",
                               'ssh_established': "Connection has been established correctly ...",
+                              'del_info': "You have left the script, try again...",
 
                               },
                         'No': {'information_prompt': 'Something in Norwegian language ',
@@ -57,6 +58,7 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                                'timestamp': "Something in Norwegian language ",
                                'ssh_failed': "Something in Norwegian language ",
                                'ssh_established': "Something in Norwegian language ",
+                               'del_info': "Something in Norwegian language ",
 
                                },
                         'Fr': {'information_prompt': 'Something in French language ',
@@ -87,6 +89,7 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                                'timestamp': 'Something in French language ',
                                'ssh_failed': 'Something in French language ',
                                'ssh_established': 'Something in French language ',
+                               'del_info': "Something in French language ",
                        }
                        }
 

@@ -78,6 +78,7 @@ def checking_device(ser_port, user_device, lang_dict):
 
 # deleting logs and handling logs files
 def deleting_files(lang_dict, user_input):
+    to_leave = False
     files = os.listdir('logs')
     # deleting files
     if user_input == '1':
@@ -87,10 +88,12 @@ def deleting_files(lang_dict, user_input):
                 os.remove(f'logs/{file}')
             except:
                 pass
+        return to_leave
     elif user_input == '0':
-        return
+        to_leave = True
+        return to_leave
     else:
-        pass
+        return to_leave
 
 # printing accessible logs
 def printing_logs(lang_dict):

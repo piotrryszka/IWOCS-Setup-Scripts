@@ -20,6 +20,7 @@ device_flag = True  # flag checking device
 user_boot_flag = True # flag checking if device chosen by user is booted
 ip_flag = False # flag if ip is correctly set by user
 proper_language = False # flag if the language chosen by user is possible to be used
+del_flag = False # flag to check what user want to do after deleting logs
 
 # FIXED Variables:
 COM_speed = 9600 # serial port speed
@@ -55,12 +56,12 @@ while running_flag:
     print(lang_expressions['information_prompt'])
     print(decorator_1)
 
-    # returning next ip number and full name of configured device to download to specified device
-    our_conf = creating_proper_configuration(user_device='test1', port_num=12, ip_add = ip_number)
-    # returning tuple with full name device and next iip number to bes used
-    actual_device = our_conf[1]
-    ip_number = our_conf[0]
-    our_conf = creating_proper_configuration(user_device='test2', port_num=24, ip_add = ip_number)
+#     # returning next ip number and full name of configured device to download to specified device
+#     our_conf = creating_proper_configuration(user_device='test1', port_num=12, ip_add = ip_number)
+#     # returning tuple with full name device and next iip number to bes used
+#     actual_device = our_conf[1]
+#     ip_number = our_conf[0]
+#     our_conf = creating_proper_configuration(user_device='test2', port_num=24, ip_add = ip_number)
 
 
 #     checking ssh connection by netmiko
@@ -70,8 +71,13 @@ while running_flag:
     # deleting logs
     printing_logs(lang_expressions)
     user_del = input(lang_expressions['deleting_logs'])
-    deleting_files(lang_dict = lang_expressions, user_input = user_del)
-
+    del_flag = deleting_files(lang_dict = lang_expressions, user_input = user_del)
+    print(user_del)
+    if del_flag == True:
+        print(lang_expressions['del_info'])
+        break
+    else:
+        pass
 
     # question about complete system or one module TASK 184
     user_system = input(lang_expressions['module_question']).lower()
