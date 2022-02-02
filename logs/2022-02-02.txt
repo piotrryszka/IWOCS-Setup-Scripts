@@ -1,0 +1,116 @@
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  02/02/2022 10:55:56
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-02-01.txt, 2022-02-02.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  02/02/2022 10:56:12
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  02/02/2022 10:56:52
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+Authentication to device failed.
+
+Common causes of this problem are:
+1. Invalid username and password
+2. Incorrect SSH-key file
+3. Connecting to the wrong device
+
+Device settings: autodetect pluton.kt.agh.edu.pl:22
+
+
+Authentication failed.
+This is a list of all saved session logs: 
+2022-02-01.txt, 2022-02-02.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  02/02/2022 10:57:39
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+Authentication to device failed.
+
+Common causes of this problem are:
+1. Invalid username and password
+2. Incorrect SSH-key file
+3. Connecting to the wrong device
+
+Device settings: autodetect pluton.kt.agh.edu.pl:22
+
+
+Authentication failed.
+ 
+This is a list of all saved session logs: 
+2022-02-01.txt, 2022-02-02.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  02/02/2022 11:00:07
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: autodetect plutosn.kt.agh.edu.pl:22
+
+
+ 
+This is a list of all saved session logs: 
+2022-02-01.txt, 2022-02-02.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  02/02/2022 11:08:13
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: autodetect pluton.kt.agh.edu.pl:22
+
+
+ 
+This is a list of all saved session logs: 
+2022-02-01.txt, 2022-02-02.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.

@@ -66,7 +66,7 @@ while running_flag:
 
 
 #     checking ssh connection by netmiko
-    # try_netmiko(file='commands.txt')
+    try_netmiko(file='commands.txt')
 
 
     # deleting logs

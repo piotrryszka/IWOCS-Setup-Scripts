@@ -2,10 +2,10 @@
 
 # imports
 # NETMIKO
-from netmiko import ConnectHandler
+from netmiko import ConnectHandler, NetmikoTimeoutException, NetmikoAuthenticationException
 # this import is not important right now
 from getpass import getpass
-from lib.data import password, username, host
+from lib.data import password, username, host, decorator_1
 
 # TODO: ADD EXCPETIONS LIKE Netmikotimeoutexception, ssh exception etc
 # TODO: ADD encryption and decryption also, adding threads to do some configuration faster for example 3 devices at once
@@ -28,9 +28,13 @@ def try_netmiko(file):
             commands_list = content.split("\n")
 
     # executing commands for network device
-    with ConnectHandler(**cisco1) as net_connect:
-        for command in commands_list:
-            # sending command
-            output = net_connect.send_command(command)
-            # printing output of command with error handling too
-            print(output)
+    try:
+        with ConnectHandler(**cisco1) as net_connect:
+            for command in commands_list:
+                # sending command
+                output = net_connect.send_command(command)
+                # printing output of command with error handling too
+                print(output)
+    except (NetmikoTimeoutException, NetmikoAuthenticationException) as error:
+        print(error)
+        print(decorator_1)
