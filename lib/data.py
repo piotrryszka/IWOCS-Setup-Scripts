@@ -114,9 +114,7 @@ Ir829 = ['TIR']
 # starting ip number, not changeable here, we can change it in main.py
 ip_number = 10
 
-# TODO: if it is better to have line of chars or normal empty line
-# decorator_1
-#decorator_1 = '|<----------------------------------------------------------------------------------------------------->|'
+# decorator for better user experience
 decorator_1 = ' '
 
 # ssh connection data, needs to be properly imported into main.py when adding arguments

@@ -1,3 +1,6 @@
+# LANGUAGES HANDLING
+
+# imports
 from lib.data import language_dictionary
 
 # listing every possible language

@@ -1,8 +1,8 @@
+# FUNCTIONS WORKING ON TXT FILES
+
 # imports
 from lib.commands import send_to_console
 import os
-
-# FUNCTIONS WORKING ON TXT FILES
 
 # opening possible devices to configure
 def opening_device_list(file_name):

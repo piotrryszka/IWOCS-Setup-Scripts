@@ -1,7 +1,8 @@
+# imports
 from time import sleep
 from lib.commands import send_to_console
-# waiting for router/switch to boot
 
+# waiting for router/switch to boot
 def checking_booting(port):
     correct_flag = False
     verifying_string = ''

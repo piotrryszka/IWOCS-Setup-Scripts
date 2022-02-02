@@ -1,4 +1,6 @@
 # PARAMIKO
+
+# imports
 import paramiko
 from lib.data import decorator_1, username, password
 
