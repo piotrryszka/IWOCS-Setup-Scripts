@@ -1,13 +1,10 @@
 # SSH CONNECTION
 
 # imports
-# NETMIKO
 from netmiko import ConnectHandler, NetmikoTimeoutException, NetmikoAuthenticationException
 from lib.data import password, username, decorator_1
 
-# TODO: ADD encryption and decryption also, adding threads to do some configuration faster for example 3 devices at once
 # TODO: old keys in ssh connection, try to be able to connect to any device
-
 # establishing SSH connection
 def ssh_con(file, host):
     cisco1 = {
@@ -31,6 +28,7 @@ def ssh_con(file, host):
                 output = net_connect.send_command(command)
                 # printing output of command with error handling too
                 print(output)
+    # error handling while ssh connection
     except (NetmikoTimeoutException, NetmikoAuthenticationException) as error:
         print(error)
         print(decorator_1)

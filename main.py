@@ -118,7 +118,6 @@ while running_flag:
                         if user_device in user_list:
                             choosing_device = False
 
-
                     # Checking if the device is in the list of devices
                     if user_device in device_list:
                         # asking user if device is already booted
@@ -172,8 +171,6 @@ while running_flag:
                                 print(f"{lang_expressions['proper_conf']}{user_device}.")
                                 print(f"{lang_expressions['close_con']}{ser.name}.")
                                 print(decorator_1)
-
-
 
                                 # TODO:
                                 # after initial_config by serial port now, we can go to the SSH connection
