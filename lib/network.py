@@ -18,9 +18,6 @@ def ssh_con(file, host):
         "password": f'{password}',
     }
 
-    # Show command that we execute.
-    commands_list = ['ls', 'pwd', 'mkdir tescik', 'ls' ,'rmdir tescik']
-
     # creating list with commands from file
     with open(f"tftp-conf-files/{file}", 'r') as my_file:
             content = my_file.read()
