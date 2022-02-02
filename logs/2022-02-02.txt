@@ -262,4 +262,25 @@ This is a list of all saved session logs:
 Do you want to delete all logs? If yes type '1', if not type anything else.
 Available languages are presented below:
 En, No, Fr
-Please choose one of possible languages: 
+Please choose one of possible languages: Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  02/02/2022 16:30:05
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+[0m[01;34mbd_lab1[0m  [01;34mbd_lab2[0m  [01;34mbd_lab3[0m  episodes_list2  [01;34messa[0m  [01;34mkat3[0m  [01;34mKAT3[0m  [01;34mKAT4[0m  [01;34mLAB6[0m  ppok  [01;34mProgramy[0m  [01;34mPROGRAMY[0m  [01;34mpublic_html[0m  [01;32mrokoko[0m  [01;34msamba[0m  [01;34msecure_html[0m  [01;32mtest1[0m  [01;34mzaliczenie[0m
+/home/msztaba
+
+[0m[01;34mbd_lab1[0m  [01;34mbd_lab2[0m  [01;34mbd_lab3[0m  [01;34mblablaaa[0m  episodes_list2  [01;34messa[0m  [01;34mkat3[0m  [01;34mKAT3[0m  [01;34mKAT4[0m  [01;34mLAB6[0m  ppok  [01;34mProgramy[0m  [01;34mPROGRAMY[0m  [01;34mpublic_html[0m  [01;32mrokoko[0m  [01;34msamba[0m  [01;34msecure_html[0m  [01;32mtest1[0m  [01;34mzaliczenie[0m
+
+[0m[01;34mbd_lab1[0m  [01;34mbd_lab2[0m  [01;34mbd_lab3[0m  episodes_list2  [01;34messa[0m  [01;34mkat3[0m  [01;34mKAT3[0m  [01;34mKAT4[0m  [01;34mLAB6[0m  ppok  [01;34mProgramy[0m  [01;34mPROGRAMY[0m  [01;34mpublic_html[0m  [01;32mrokoko[0m  [01;34msamba[0m  [01;34msecure_html[0m  [01;32mtest1[0m  [01;34mzaliczenie[0m
+/home/msztaba
+This is a list of all saved session logs: 
+2022-02-01.txt, 2022-02-02.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+1
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 
