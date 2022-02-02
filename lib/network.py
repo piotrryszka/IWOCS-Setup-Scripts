@@ -3,14 +3,13 @@
 # imports
 # NETMIKO
 from netmiko import ConnectHandler, NetmikoTimeoutException, NetmikoAuthenticationException
-# this import is not important right now
-from getpass import getpass
-from lib.data import password, username, host, decorator_1
+from lib.data import password, username, decorator_1
 
-# TODO: ADD EXCPETIONS LIKE Netmikotimeoutexception, ssh exception etc
 # TODO: ADD encryption and decryption also, adding threads to do some configuration faster for example 3 devices at once
 # TODO: old keys in ssh connection, try to be able to connect to any device
-def try_netmiko(file):
+
+# establishing SSH connection
+def ssh_con(file, host):
     cisco1 = {
         # autodetect is very useful in network devices
         "device_type": f"autodetect",

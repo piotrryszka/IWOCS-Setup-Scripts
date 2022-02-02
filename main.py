@@ -7,7 +7,7 @@ from lib.booting import checking_booting
 from lib.languages import listing_languages, reading_language
 from lib.data import ip_number, decorator_1
 from lib.logging import *
-from lib.network import try_netmiko
+from lib.network import ssh_con
 from lib.paramiko_ip import ip_connect
 from lib.functions import printing_logs, creating_timestamp
 import sys
@@ -57,16 +57,8 @@ while running_flag:
     print(lang_expressions['information_prompt'])
     print(decorator_1)
 
-#     # returning next ip number and full name of configured device to download to specified device
-#     our_conf = creating_proper_configuration(user_device='test1', port_num=12, ip_add = ip_number)
-#     # returning tuple with full name device and next iip number to bes used
-#     actual_device = our_conf[1]
-#     ip_number = our_conf[0]
-#     our_conf = creating_proper_configuration(user_device='test2', port_num=24, ip_add = ip_number)
-
-
 #     checking ssh connection by netmiko
-    try_netmiko(file='commands.txt')
+    ssh_con(file='commands.txt', host ='pluton.kt.agh.edu.pl')
 
 
     # deleting logs
@@ -93,7 +85,6 @@ while running_flag:
             if user_COM.isnumeric() and user_COM != '0':
                 # Creating string for connection to the device
                 COM_string = "COM" + user_COM
-
 
                 # checking ip address but need to be commented
 #                 while ip_flag == False:
@@ -137,12 +128,6 @@ while running_flag:
                         print(lang_expressions['wait_prompt'])
                         print(decorator_1)
 
-#                         # returning next ip number and full name of configured device to download to specified device
-#                         our_conf = creating_proper_configuration(user_device='test1', port_num=12, ip_add = ip_number)
-#                         returning tuple with full name device and next iip number to bes used
-#                         actual_device = our_conf[1]
-#                         ip_number = our_conf[0]
-#                         our_conf = creating_proper_configuration(user_device='test2', port_num=24, ip_add = ip_number)
 
                         # connection set
                         try:
@@ -193,7 +178,7 @@ while running_flag:
                                 # TODO:
                                 # after initial_config by serial port now, we can go to the SSH connection
                                 # needs to add arguments to define host, password etc
-                                try_netmiko(file='commands.txt')
+                                ssh_con(file='commands.txt', host="pluton.kt.agh.edu.pl")
 
                             else:
                                 print(lang_expressions['start_conf'])
