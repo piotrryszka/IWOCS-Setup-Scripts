@@ -60,6 +60,8 @@ while running_flag:
     new_host = f'172.30.100.{ip_number}'
     print(new_host)
 
+
+    # TODO
     # MOVE AFTER DEVICE IS CHOSEN ETC.
     our_conf = creating_proper_configuration(user_device='test1', port_num=12, ip_add = ip_number)
     # returning tuple with full name device and next iip number to bes used
