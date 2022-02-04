@@ -39,10 +39,10 @@ def creating_proper_configuration(user_device, port_num, ip_add):
                 ip_index = content_list.index(x)
                 content_list[ip_index] = f' ip address 172.30.100.{str(ip_add)} 255.255.255.255'
                 ip_add +=1
-        with open(f'initial-configuration-files/cisco-switch4010-{user_device}', 'w') as file:
+        with open(f'initial-configuration-files/cisco-switch4010-{user_device}-172.30.100.{str(ip_add)}', 'w') as file:
             for row in content_list:
                 file.write(str(row) + '\n')
-        return ip_add, f'initial-configuration-files/cisco-switch4010-{user_device}'
+        return ip_add, f'initial-configuration-files/cisco-switch4010-{user_device}-{str(ip_add)} '
 
 # deleting logs and handling logs files
 def deleting_files(lang_dict, user_input):

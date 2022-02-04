@@ -57,8 +57,23 @@ while running_flag:
     print(lang_expressions['information_prompt'])
     print(decorator_1)
 
-#     checking ssh connection by netmiko
-    ssh_con(file='commands.txt', host ='pluton.kt.agh.edu.pl')
+    new_host = f'172.30.100.{ip_number}'
+    print(new_host)
+
+    # MOVE AFTER DEVICE IS CHOSEN ETC.
+    our_conf = creating_proper_configuration(user_device='test1', port_num=12, ip_add = ip_number)
+    # returning tuple with full name device and next iip number to bes used
+    actual_device = our_conf[1]
+    ip_number = our_conf[0]
+    our_conf = creating_proper_configuration(user_device='test2', port_num=24, ip_add = ip_number)
+
+    new_host = f'172.30.100.{ip_number}'
+    print(new_host)
+
+
+#   checking ssh connection by netmiko
+    new_host = 'pluton.kt.agh.edu.pl'
+    ssh_con(file='commands.txt', host =new_host)
 
 
     # deleting logs

@@ -2,166 +2,7 @@ Available languages are presented below:
 En, No, Fr
 Please choose one of possible languages: En
  
-Creating current timestamp:  02/02/2022 10:55:56
- 
-"IMPORTANT ISSUE!!!
-If you want to leave any part of the program type 0 [zero] in your input!"
- 
-This is a list of all saved session logs: 
-2022-02-01.txt, 2022-02-02.txt
-Do you want to delete all logs? If yes type '1', if not type anything else.
-Available languages are presented below:
-En, No, Fr
-Please choose one of possible languages: En
- 
-Creating current timestamp:  02/02/2022 10:56:12
- 
-"IMPORTANT ISSUE!!!
-If you want to leave any part of the program type 0 [zero] in your input!"
- 
-Available languages are presented below:
-En, No, Fr
-Please choose one of possible languages: En
- 
-Creating current timestamp:  02/02/2022 10:56:52
- 
-"IMPORTANT ISSUE!!!
-If you want to leave any part of the program type 0 [zero] in your input!"
- 
-Authentication to device failed.
-
-Common causes of this problem are:
-1. Invalid username and password
-2. Incorrect SSH-key file
-3. Connecting to the wrong device
-
-Device settings: autodetect pluton.kt.agh.edu.pl:22
-
-
-Authentication failed.
-This is a list of all saved session logs: 
-2022-02-01.txt, 2022-02-02.txt
-Do you want to delete all logs? If yes type '1', if not type anything else.
-Available languages are presented below:
-En, No, Fr
-Please choose one of possible languages: En
- 
-Creating current timestamp:  02/02/2022 10:57:39
- 
-"IMPORTANT ISSUE!!!
-If you want to leave any part of the program type 0 [zero] in your input!"
- 
-Authentication to device failed.
-
-Common causes of this problem are:
-1. Invalid username and password
-2. Incorrect SSH-key file
-3. Connecting to the wrong device
-
-Device settings: autodetect pluton.kt.agh.edu.pl:22
-
-
-Authentication failed.
- 
-This is a list of all saved session logs: 
-2022-02-01.txt, 2022-02-02.txt
-Do you want to delete all logs? If yes type '1', if not type anything else.
-Available languages are presented below:
-En, No, Fr
-Please choose one of possible languages: En
- 
-Creating current timestamp:  02/02/2022 11:00:07
- 
-"IMPORTANT ISSUE!!!
-If you want to leave any part of the program type 0 [zero] in your input!"
- 
-TCP connection to device failed.
-
-Common causes of this problem are:
-1. Incorrect hostname or IP address.
-2. Wrong TCP port.
-3. Intermediate firewall blocking access.
-
-Device settings: autodetect plutosn.kt.agh.edu.pl:22
-
-
- 
-This is a list of all saved session logs: 
-2022-02-01.txt, 2022-02-02.txt
-Do you want to delete all logs? If yes type '1', if not type anything else.
-Available languages are presented below:
-En, No, Fr
-Please choose one of possible languages: Available languages are presented below:
-En, No, Fr
-Please choose one of possible languages: En
- 
-Creating current timestamp:  02/02/2022 11:08:13
- 
-"IMPORTANT ISSUE!!!
-If you want to leave any part of the program type 0 [zero] in your input!"
- 
-TCP connection to device failed.
-
-Common causes of this problem are:
-1. Incorrect hostname or IP address.
-2. Wrong TCP port.
-3. Intermediate firewall blocking access.
-
-Device settings: autodetect pluton.kt.agh.edu.pl:22
-
-
- 
-This is a list of all saved session logs: 
-2022-02-01.txt, 2022-02-02.txt
-Do you want to delete all logs? If yes type '1', if not type anything else.
-Available languages are presented below:
-En, No, Fr
-Please choose one of possible languages: En
- 
-Creating current timestamp:  02/02/2022 11:19:10
- 
-"IMPORTANT ISSUE!!!
-If you want to leave any part of the program type 0 [zero] in your input!"
- 
-[0m[01;34mbd_lab1[0m  [01;34mbd_lab2[0m  [01;34mbd_lab3[0m  episodes_list2  [01;34messa[0m  [01;34mkat3[0m  [01;34mKAT3[0m  [01;34mKAT4[0m  [01;34mLAB6[0m  ppok  [01;34mProgramy[0m  [01;34mPROGRAMY[0m  [01;34mpublic_html[0m  [01;32mrokoko[0m  [01;34msamba[0m  [01;34msecure_html[0m  [01;32mtest1[0m  [01;34mzaliczenie[0m
-/home/msztaba
-
-[0m[01;34mbd_lab1[0m  [01;34mbd_lab2[0m  [01;34mbd_lab3[0m  [01;34mblablaaa[0m  episodes_list2  [01;34messa[0m  [01;34mkat3[0m  [01;34mKAT3[0m  [01;34mKAT4[0m  [01;34mLAB6[0m  ppok  [01;34mProgramy[0m  [01;34mPROGRAMY[0m  [01;34mpublic_html[0m  [01;32mrokoko[0m  [01;34msamba[0m  [01;34msecure_html[0m  [01;32mtest1[0m  [01;34mzaliczenie[0m
-
-Available languages are presented below:
-En, No, Fr
-Please choose one of possible languages: En
- 
-Creating current timestamp:  02/02/2022 12:10:08
- 
-"IMPORTANT ISSUE!!!
-If you want to leave any part of the program type 0 [zero] in your input!"
- 
-Available languages are presented below:
-En, No, Fr
-Please choose one of possible languages: En
- 
-Creating current timestamp:  02/02/2022 12:10:27
- 
-"IMPORTANT ISSUE!!!
-If you want to leave any part of the program type 0 [zero] in your input!"
- 
-Available languages are presented below:
-En, No, Fr
-Please choose one of possible languages: En
- 
-Creating current timestamp:  02/02/2022 12:10:52
- 
-"IMPORTANT ISSUE!!!
-If you want to leave any part of the program type 0 [zero] in your input!"
- 
-[0m[01;34mbd_lab1[0m  [01;34mbd_lab2[0m  [01;34mbd_lab3[0m  episodes_list2  [01;34messa[0m  [01;34mkat3[0m  [01;34mKAT3[0m  [01;34mKAT4[0m  [01;34mLAB6[0m  ppok  [01;34mProgramy[0m  [01;34mPROGRAMY[0m  [01;34mpublic_html[0m  [01;32mrokoko[0m  [01;34msamba[0m  [01;34msecure_html[0m  [01;32mtest1[0m  [01;34mzaliczenie[0m
-/home/msztaba
-Available languages are presented below:
-En, No, Fr
-Please choose one of possible languages: En
- 
-Creating current timestamp:  02/02/2022 12:11:08
+Creating current timestamp:  04/02/2022 08:59:12
  
 "IMPORTANT ISSUE!!!
 If you want to leave any part of the program type 0 [zero] in your input!"
@@ -174,17 +15,112 @@ If you want to leave any part of the program type 0 [zero] in your input!"
 [0m[01;34mbd_lab1[0m  [01;34mbd_lab2[0m  [01;34mbd_lab3[0m  episodes_list2  [01;34messa[0m  [01;34mkat3[0m  [01;34mKAT3[0m  [01;34mKAT4[0m  [01;34mLAB6[0m  ppok  [01;34mProgramy[0m  [01;34mPROGRAMY[0m  [01;34mpublic_html[0m  [01;32mrokoko[0m  [01;34msamba[0m  [01;34msecure_html[0m  [01;32mtest1[0m  [01;34mzaliczenie[0m
 /home/msztaba
 This is a list of all saved session logs: 
-2022-02-01.txt, 2022-02-02.txt
+2022-02-02.txt, 2022-02-04.txt
 Do you want to delete all logs? If yes type '1', if not type anything else.
 Available languages are presented below:
 En, No, Fr
 Please choose one of possible languages: En
  
-Creating current timestamp:  02/02/2022 12:35:40
+Creating current timestamp:  04/02/2022 09:01:18
  
 "IMPORTANT ISSUE!!!
 If you want to leave any part of the program type 0 [zero] in your input!"
  
+172.30.100.{ip_number}
+[0m[01;34mbd_lab1[0m  [01;34mbd_lab2[0m  [01;34mbd_lab3[0m  episodes_list2  [01;34messa[0m  [01;34mkat3[0m  [01;34mKAT3[0m  [01;34mKAT4[0m  [01;34mLAB6[0m  ppok  [01;34mProgramy[0m  [01;34mPROGRAMY[0m  [01;34mpublic_html[0m  [01;32mrokoko[0m  [01;34msamba[0m  [01;34msecure_html[0m  [01;32mtest1[0m  [01;34mzaliczenie[0m
+/home/msztaba
+
+[0m[01;34mbd_lab1[0m  [01;34mbd_lab2[0m  [01;34mbd_lab3[0m  [01;34mblablaaa[0m  episodes_list2  [01;34messa[0m  [01;34mkat3[0m  [01;34mKAT3[0m  [01;34mKAT4[0m  [01;34mLAB6[0m  ppok  [01;34mProgramy[0m  [01;34mPROGRAMY[0m  [01;34mpublic_html[0m  [01;32mrokoko[0m  [01;34msamba[0m  [01;34msecure_html[0m  [01;32mtest1[0m  [01;34mzaliczenie[0m
+
+[0m[01;34mbd_lab1[0m  [01;34mbd_lab2[0m  [01;34mbd_lab3[0m  episodes_list2  [01;34messa[0m  [01;34mkat3[0m  [01;34mKAT3[0m  [01;34mKAT4[0m  [01;34mLAB6[0m  ppok  [01;34mProgramy[0m  [01;34mPROGRAMY[0m  [01;34mpublic_html[0m  [01;32mrokoko[0m  [01;34msamba[0m  [01;34msecure_html[0m  [01;32mtest1[0m  [01;34mzaliczenie[0m
+/home/msztaba
+This is a list of all saved session logs: 
+2022-02-02.txt, 2022-02-04.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  04/02/2022 09:01:36
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+172.30.100.11
+[0m[01;34mbd_lab1[0m  [01;34mbd_lab2[0m  [01;34mbd_lab3[0m  episodes_list2  [01;34messa[0m  [01;34mkat3[0m  [01;34mKAT3[0m  [01;34mKAT4[0m  [01;34mLAB6[0m  ppok  [01;34mProgramy[0m  [01;34mPROGRAMY[0m  [01;34mpublic_html[0m  [01;32mrokoko[0m  [01;34msamba[0m  [01;34msecure_html[0m  [01;32mtest1[0m  [01;34mzaliczenie[0m
+/home/msztaba
+
+[0m[01;34mbd_lab1[0m  [01;34mbd_lab2[0m  [01;34mbd_lab3[0m  [01;34mblablaaa[0m  episodes_list2  [01;34messa[0m  [01;34mkat3[0m  [01;34mKAT3[0m  [01;34mKAT4[0m  [01;34mLAB6[0m  ppok  [01;34mProgramy[0m  [01;34mPROGRAMY[0m  [01;34mpublic_html[0m  [01;32mrokoko[0m  [01;34msamba[0m  [01;34msecure_html[0m  [01;32mtest1[0m  [01;34mzaliczenie[0m
+
+[0m[01;34mbd_lab1[0m  [01;34mbd_lab2[0m  [01;34mbd_lab3[0m  episodes_list2  [01;34messa[0m  [01;34mkat3[0m  [01;34mKAT3[0m  [01;34mKAT4[0m  [01;34mLAB6[0m  ppok  [01;34mProgramy[0m  [01;34mPROGRAMY[0m  [01;34mpublic_html[0m  [01;32mrokoko[0m  [01;34msamba[0m  [01;34msecure_html[0m  [01;32mtest1[0m  [01;34mzaliczenie[0m
+/home/msztaba
+This is a list of all saved session logs: 
+2022-02-02.txt, 2022-02-04.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  04/02/2022 09:02:00
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+172.30.100.10
+172.30.100.11
+[0m[01;34mbd_lab1[0m  [01;34mbd_lab2[0m  [01;34mbd_lab3[0m  episodes_list2  [01;34messa[0m  [01;34mkat3[0m  [01;34mKAT3[0m  [01;34mKAT4[0m  [01;34mLAB6[0m  ppok  [01;34mProgramy[0m  [01;34mPROGRAMY[0m  [01;34mpublic_html[0m  [01;32mrokoko[0m  [01;34msamba[0m  [01;34msecure_html[0m  [01;32mtest1[0m  [01;34mzaliczenie[0m
+/home/msztaba
+
+[0m[01;34mbd_lab1[0m  [01;34mbd_lab2[0m  [01;34mbd_lab3[0m  [01;34mblablaaa[0m  episodes_list2  [01;34messa[0m  [01;34mkat3[0m  [01;34mKAT3[0m  [01;34mKAT4[0m  [01;34mLAB6[0m  ppok  [01;34mProgramy[0m  [01;34mPROGRAMY[0m  [01;34mpublic_html[0m  [01;32mrokoko[0m  [01;34msamba[0m  [01;34msecure_html[0m  [01;32mtest1[0m  [01;34mzaliczenie[0m
+
+[0m[01;34mbd_lab1[0m  [01;34mbd_lab2[0m  [01;34mbd_lab3[0m  episodes_list2  [01;34messa[0m  [01;34mkat3[0m  [01;34mKAT3[0m  [01;34mKAT4[0m  [01;34mLAB6[0m  ppok  [01;34mProgramy[0m  [01;34mPROGRAMY[0m  [01;34mpublic_html[0m  [01;32mrokoko[0m  [01;34msamba[0m  [01;34msecure_html[0m  [01;32mtest1[0m  [01;34mzaliczenie[0m
+/home/msztaba
+This is a list of all saved session logs: 
+2022-02-02.txt, 2022-02-04.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  04/02/2022 09:17:56
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+172.30.100.10
+172.30.100.11
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  04/02/2022 09:18:05
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+172.30.100.10
+172.30.100.11
+[0m[01;34mbd_lab1[0m  [01;34mbd_lab2[0m  [01;34mbd_lab3[0m  episodes_list2  [01;34messa[0m  [01;34mkat3[0m  [01;34mKAT3[0m  [01;34mKAT4[0m  [01;34mLAB6[0m  ppok  [01;34mProgramy[0m  [01;34mPROGRAMY[0m  [01;34mpublic_html[0m  [01;32mrokoko[0m  [01;34msamba[0m  [01;34msecure_html[0m  [01;32mtest1[0m  [01;34mzaliczenie[0m
+/home/msztaba
+
+[0m[01;34mbd_lab1[0m  [01;34mbd_lab2[0m  [01;34mbd_lab3[0m  [01;34mblablaaa[0m  episodes_list2  [01;34messa[0m  [01;34mkat3[0m  [01;34mKAT3[0m  [01;34mKAT4[0m  [01;34mLAB6[0m  ppok  [01;34mProgramy[0m  [01;34mPROGRAMY[0m  [01;34mpublic_html[0m  [01;32mrokoko[0m  [01;34msamba[0m  [01;34msecure_html[0m  [01;32mtest1[0m  [01;34mzaliczenie[0m
+
+[0m[01;34mbd_lab1[0m  [01;34mbd_lab2[0m  [01;34mbd_lab3[0m  episodes_list2  [01;34messa[0m  [01;34mkat3[0m  [01;34mKAT3[0m  [01;34mKAT4[0m  [01;34mLAB6[0m  ppok  [01;34mProgramy[0m  [01;34mPROGRAMY[0m  [01;34mpublic_html[0m  [01;32mrokoko[0m  [01;34msamba[0m  [01;34msecure_html[0m  [01;32mtest1[0m  [01;34mzaliczenie[0m
+/home/msztaba
+This is a list of all saved session logs: 
+2022-02-02.txt, 2022-02-04.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  04/02/2022 09:25:13
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+172.30.100.10
+172.30.100.11
 [0m[01;34mbd_lab1[0m  [01;34mbd_lab2[0m  [01;34mbd_lab3[0m  episodes_list2  [01;34messa[0m  [01;34mkat3[0m  [01;34mKAT3[0m  [01;34mKAT4[0m  [01;34mLAB6[0m  ppok  [01;34mProgramy[0m  [01;34mPROGRAMY[0m  [01;34mpublic_html[0m  [01;32mrokoko[0m  [01;34msamba[0m  [01;34msecure_html[0m  [01;32mtest1[0m  [01;34mzaliczenie[0m
 /home/msztaba
 
@@ -192,11 +128,13 @@ Available languages are presented below:
 En, No, Fr
 Please choose one of possible languages: En
  
-Creating current timestamp:  02/02/2022 12:45:55
+Creating current timestamp:  04/02/2022 09:25:26
  
 "IMPORTANT ISSUE!!!
 If you want to leave any part of the program type 0 [zero] in your input!"
  
+172.30.100.10
+172.30.100.11
 [0m[01;34mbd_lab1[0m  [01;34mbd_lab2[0m  [01;34mbd_lab3[0m  [01;34mblablaaa[0m  episodes_list2  [01;34messa[0m  [01;34mkat3[0m  [01;34mKAT3[0m  [01;34mKAT4[0m  [01;34mLAB6[0m  ppok  [01;34mProgramy[0m  [01;34mPROGRAMY[0m  [01;34mpublic_html[0m  [01;32mrokoko[0m  [01;34msamba[0m  [01;34msecure_html[0m  [01;32mtest1[0m  [01;34mzaliczenie[0m
 /home/msztaba
 mkdir: cannot create directory ‘blablaaa’: File exists
@@ -205,17 +143,19 @@ mkdir: cannot create directory ‘blablaaa’: File exists
 [0m[01;34mbd_lab1[0m  [01;34mbd_lab2[0m  [01;34mbd_lab3[0m  episodes_list2  [01;34messa[0m  [01;34mkat3[0m  [01;34mKAT3[0m  [01;34mKAT4[0m  [01;34mLAB6[0m  ppok  [01;34mProgramy[0m  [01;34mPROGRAMY[0m  [01;34mpublic_html[0m  [01;32mrokoko[0m  [01;34msamba[0m  [01;34msecure_html[0m  [01;32mtest1[0m  [01;34mzaliczenie[0m
 /home/msztaba
 This is a list of all saved session logs: 
-2022-02-01.txt, 2022-02-02.txt
+2022-02-02.txt, 2022-02-04.txt
 Do you want to delete all logs? If yes type '1', if not type anything else.
 Available languages are presented below:
 En, No, Fr
 Please choose one of possible languages: En
  
-Creating current timestamp:  02/02/2022 12:46:37
+Creating current timestamp:  04/02/2022 09:26:03
  
 "IMPORTANT ISSUE!!!
 If you want to leave any part of the program type 0 [zero] in your input!"
  
+172.30.100.10
+172.30.100.11
 [0m[01;34mbd_lab1[0m  [01;34mbd_lab2[0m  [01;34mbd_lab3[0m  episodes_list2  [01;34messa[0m  [01;34mkat3[0m  [01;34mKAT3[0m  [01;34mKAT4[0m  [01;34mLAB6[0m  ppok  [01;34mProgramy[0m  [01;34mPROGRAMY[0m  [01;34mpublic_html[0m  [01;32mrokoko[0m  [01;34msamba[0m  [01;34msecure_html[0m  [01;32mtest1[0m  [01;34mzaliczenie[0m
 /home/msztaba
 
@@ -224,32 +164,19 @@ If you want to leave any part of the program type 0 [zero] in your input!"
 [0m[01;34mbd_lab1[0m  [01;34mbd_lab2[0m  [01;34mbd_lab3[0m  episodes_list2  [01;34messa[0m  [01;34mkat3[0m  [01;34mKAT3[0m  [01;34mKAT4[0m  [01;34mLAB6[0m  ppok  [01;34mProgramy[0m  [01;34mPROGRAMY[0m  [01;34mpublic_html[0m  [01;32mrokoko[0m  [01;34msamba[0m  [01;34msecure_html[0m  [01;32mtest1[0m  [01;34mzaliczenie[0m
 /home/msztaba
 This is a list of all saved session logs: 
-2022-02-01.txt, 2022-02-02.txt
+2022-02-02.txt, 2022-02-04.txt
 Do you want to delete all logs? If yes type '1', if not type anything else.
 Available languages are presented below:
 En, No, Fr
 Please choose one of possible languages: En
  
-Creating current timestamp:  02/02/2022 14:21:55
+Creating current timestamp:  04/02/2022 09:26:33
  
 "IMPORTANT ISSUE!!!
 If you want to leave any part of the program type 0 [zero] in your input!"
  
-[0m[01;34mbd_lab1[0m  [01;34mbd_lab2[0m  [01;34mbd_lab3[0m  episodes_list2  [01;34messa[0m  [01;34mkat3[0m  [01;34mKAT3[0m  [01;34mKAT4[0m  [01;34mLAB6[0m  ppok  [01;34mProgramy[0m  [01;34mPROGRAMY[0m  [01;34mpublic_html[0m  [01;32mrokoko[0m  [01;34msamba[0m  [01;34msecure_html[0m  [01;32mtest1[0m  [01;34mzaliczenie[0m
-/home/msztaba
-
--bash: lsdsa: command not found
-
-[0m[01;34mbd_lab1[0m  [01;34mbd_lab2[0m  [01;34mbd_lab3[0m  episodes_list2  [01;34messa[0m  [01;34mkat3[0m  [01;34mKAT3[0m  [01;34mKAT4[0m  [01;34mLAB6[0m  ppok  [01;34mProgramy[0m  [01;34mPROGRAMY[0m  [01;34mpublic_html[0m  [01;32mrokoko[0m  [01;34msamba[0m  [01;34msecure_html[0m  [01;32mtest1[0m  [01;34mzaliczenie[0m
-Available languages are presented below:
-En, No, Fr
-Please choose one of possible languages: En
- 
-Creating current timestamp:  02/02/2022 14:22:17
- 
-"IMPORTANT ISSUE!!!
-If you want to leave any part of the program type 0 [zero] in your input!"
- 
+172.30.100.10
+172.30.100.11
 [0m[01;34mbd_lab1[0m  [01;34mbd_lab2[0m  [01;34mbd_lab3[0m  episodes_list2  [01;34messa[0m  [01;34mkat3[0m  [01;34mKAT3[0m  [01;34mKAT4[0m  [01;34mLAB6[0m  ppok  [01;34mProgramy[0m  [01;34mPROGRAMY[0m  [01;34mpublic_html[0m  [01;32mrokoko[0m  [01;34msamba[0m  [01;34msecure_html[0m  [01;32mtest1[0m  [01;34mzaliczenie[0m
 /home/msztaba
 
@@ -258,19 +185,19 @@ If you want to leave any part of the program type 0 [zero] in your input!"
 [0m[01;34mbd_lab1[0m  [01;34mbd_lab2[0m  [01;34mbd_lab3[0m  episodes_list2  [01;34messa[0m  [01;34mkat3[0m  [01;34mKAT3[0m  [01;34mKAT4[0m  [01;34mLAB6[0m  ppok  [01;34mProgramy[0m  [01;34mPROGRAMY[0m  [01;34mpublic_html[0m  [01;32mrokoko[0m  [01;34msamba[0m  [01;34msecure_html[0m  [01;32mtest1[0m  [01;34mzaliczenie[0m
 /home/msztaba
 This is a list of all saved session logs: 
-2022-02-01.txt, 2022-02-02.txt
+2022-02-02.txt, 2022-02-04.txt
 Do you want to delete all logs? If yes type '1', if not type anything else.
 Available languages are presented below:
 En, No, Fr
-Please choose one of possible languages: Available languages are presented below:
-En, No, Fr
 Please choose one of possible languages: En
  
-Creating current timestamp:  02/02/2022 16:30:05
+Creating current timestamp:  04/02/2022 09:26:57
  
 "IMPORTANT ISSUE!!!
 If you want to leave any part of the program type 0 [zero] in your input!"
  
+172.30.100.10
+172.30.100.11
 [0m[01;34mbd_lab1[0m  [01;34mbd_lab2[0m  [01;34mbd_lab3[0m  episodes_list2  [01;34messa[0m  [01;34mkat3[0m  [01;34mKAT3[0m  [01;34mKAT4[0m  [01;34mLAB6[0m  ppok  [01;34mProgramy[0m  [01;34mPROGRAMY[0m  [01;34mpublic_html[0m  [01;32mrokoko[0m  [01;34msamba[0m  [01;34msecure_html[0m  [01;32mtest1[0m  [01;34mzaliczenie[0m
 /home/msztaba
 
@@ -279,7 +206,7 @@ If you want to leave any part of the program type 0 [zero] in your input!"
 [0m[01;34mbd_lab1[0m  [01;34mbd_lab2[0m  [01;34mbd_lab3[0m  episodes_list2  [01;34messa[0m  [01;34mkat3[0m  [01;34mKAT3[0m  [01;34mKAT4[0m  [01;34mLAB6[0m  ppok  [01;34mProgramy[0m  [01;34mPROGRAMY[0m  [01;34mpublic_html[0m  [01;32mrokoko[0m  [01;34msamba[0m  [01;34msecure_html[0m  [01;32mtest1[0m  [01;34mzaliczenie[0m
 /home/msztaba
 This is a list of all saved session logs: 
-2022-02-01.txt, 2022-02-02.txt
+2022-02-02.txt, 2022-02-04.txt
 Do you want to delete all logs? If yes type '1', if not type anything else.
 1
 It is your system a complete one or it is just one module? 
