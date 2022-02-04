@@ -1,5 +1,5 @@
 !
-hostname test2
+hostname SDG-2
 !
 !
 logging buffered 16384 informational
@@ -25,7 +25,7 @@ vlan internal allocation policy ascending
 !
 lldp run
 !
-interface GigabitEthernet1/24
+interface GigabitEthernet1/12
  description SETUP-VLAN-1
  switchport access vlan 1
  switchport mode access
@@ -36,7 +36,7 @@ interface GigabitEthernet1/24
  no shutdown
 !
 interface Vlan1
- ip address 172.30.100.11 255.255.255.255
+ ip address 172.30.100.10 255.255.255.255
  no shutdown
 !
 banner motd ^C

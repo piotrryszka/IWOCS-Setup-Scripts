@@ -63,11 +63,13 @@ while running_flag:
 
     # TODO
     # MOVE AFTER DEVICE IS CHOSEN ETC.
-    our_conf = creating_proper_configuration(user_device='test1', port_num=12, ip_add = ip_number)
+    my_test2 = 'SDG-1'
+    my_test1 = 'SDG-2'
+    our_conf = creating_proper_configuration(user_device=my_test1, port_num=12, ip_add = ip_number)
     # returning tuple with full name device and next iip number to bes used
     actual_device = our_conf[1]
     ip_number = our_conf[0]
-    our_conf = creating_proper_configuration(user_device='test2', port_num=24, ip_add = ip_number)
+    our_conf = creating_proper_configuration(user_device=my_test2, port_num=24, ip_add = ip_number)
 
     new_host = f'172.30.100.{ip_number}'
     print(new_host)
@@ -137,7 +139,6 @@ while running_flag:
 
                     # Checking if the device is in the list of devices
                     if user_device in device_list:
-                        # asking user if device is already booted
                         print(decorator_1)
                         print(lang_expressions['user_choice'])
                         print(f"{COM_string} ----> {user_device}")
