@@ -1,4 +1,3 @@
-en
 conf t
 !
 version 15.2
@@ -173,7 +172,7 @@ no cdp run
 !
 lldp run
 !
-! 
+!
 !
 !
 !
@@ -531,7 +530,7 @@ logging trap notifications
 logging host 172.30.100.99 vrf 100
 !
 snmp-server community LUCKYLUKE RO
-snmp-server location IWOCS Gen2 
+snmp-server location IWOCS Gen2
 snmp-server contact 0.0.16b
 snmp mib flash cache
 privilege exec level 5 show spanning-tree blockedports
@@ -543,32 +542,30 @@ privilege exec level 5 show running-config
 privilege exec level 5 show logging
 privilege exec level 5 show interfaces
 privilege exec level 5 show
-banner motd C
+banner motd ^C
+                            TechnipFMC
 
-                                                    
-                            TechnipFMC                      
-                     
-         ------------------ W A R N I N G -----------------           
-               This system is for authorized use only.                
-      All activities conducted on and information accessed, processed,     
-           stored or sent using this device may be examined.           
+         ------------------ W A R N I N G -----------------
+               This system is for authorized use only.
+      All activities conducted on and information accessed, processed,
+           stored or sent using this device may be examined.
 By using the system, all users acknowledge and consent to such monitoring.
-   All unauthorized or improper use of this system shall be reported.      
-                                                                      
-                All activities performed on this device               
-                      are logged and monitored.                       
-                                                                      
-         -------------------------------------------------     
-                                                    
+   All unauthorized or improper use of this system shall be reported.
+
+                All activities performed on this device
+                      are logged and monitored.
+
+         -------------------------------------------------
+
                         Location  : IWOCS Generation 2
                      Device name  : TDS-1_A
-                      Cabinet PN  : P6000183221 
+                      Cabinet PN  : P6000183221
                       Network PN  : P6000185409
                          Version  : B
                         Filename  : TDS-1_A
-                                                     
-         -------------------------------------------------        
-
+
+         -------------------------------------------------
+^C
 !
 line con 0
  logging synchronous

@@ -1,6 +1,6 @@
 TODO: to chyba najwazniejsze
 TODO: NETMIKO VS PARAMIKO
-https://github.com/ktbyers/netmiko/blob/develop/EXAMPLES.md#simple-example
+https://www.reddit.com/r/networking/comments/5q5fgk/speed_up_netmiko/
 
 TODO:
 te adresy pewnie w makro,

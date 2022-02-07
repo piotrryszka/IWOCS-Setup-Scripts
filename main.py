@@ -197,7 +197,7 @@ while running_flag:
                             print(lang_expressions['waiting_ssh'])
                             sleep(10)
                             new_host = '172.30.100.10'
-                            ssh_con(file='commands.txt', host = new_host)
+                            ssh_con(file='TDS-1_A_test.txt', host = new_host)
 
                             # TODO:
                             # after initial_config by serial port now, we can go to the SSH connection

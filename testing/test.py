@@ -1,11 +1,11 @@
 # import paramiko
 #
 # def test():
-#     host = "pluton.kt.agh.edu.pl"
+#     host = "172.30.100.10"
 #     port = 22
-#     username = "msztaba"
+#     username = "walter"
 #     # needs to be hashed
-#     password = "098azerty@MS"
+#     password = "mel0n98"
 #
 #     # project-config settings
 #     # username = walter
@@ -14,26 +14,26 @@
 #
 #
 #     # creating list of commands to be executed
-#     try:
-#         with open("commands.txt", 'r') as my_file:
-#             content = my_file.read()
-#             content_list = content.split("\n")
+#     #try:
+#     with open("../tftp-conf-files/commands.txt", 'r') as my_file:
+#         content = my_file.read()
+#         content_list = content.split("\n")
 #
-#         # creating connection
-#         ssh = paramiko.SSHClient()
-#         ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-#         ssh.connect(host, port, username, password)
+#     # creating connection
+#     ssh = paramiko.SSHClient()
+#     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+#     ssh.connect(host, port, username, password)
 #
-#         # executing commands
-#         for command in content_list:
-#             stdin, stdout, stderr = ssh.exec_command(command)
-#             lines = stdout.readlines()
-#             print(lines)
+#     # executing commands
+#     for command in content_list:
+#         stdin, stdout, stderr = ssh.exec_command(command)
+#         lines = stdout.readlines()
+#         print(lines)
 #
-#         # closing connection
-#         ssh.close()
-#     except:
-#         print("something went wrong")
+#     # closing connection
+#     ssh.close()
+#     #except:
+#     print("something went wrong")
 #
 # test()
 
@@ -84,4 +84,4 @@ from lib.network import ssh_con
 
 
 new_host = '172.30.100.10'
-ssh_con(file='commands.txt', host =new_host)
+ssh_con(file='TDS-1_A_test.txt', host =new_host)

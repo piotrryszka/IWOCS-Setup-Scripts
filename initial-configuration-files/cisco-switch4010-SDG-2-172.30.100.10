@@ -1,7 +1,6 @@
 en
 conf t
 !
-hostname SDG-2
 !
 !
 logging buffered 16384 informational

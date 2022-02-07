@@ -1,1 +1,3 @@
-sh run
+do sh run
+do sh int brief
+do sh run
