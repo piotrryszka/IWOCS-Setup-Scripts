@@ -1,7 +1,1 @@
-ls
-pwd
-mkdir blablaaa
-ls
-rmdir blablaaa
-ls
-pwd
+sh run

@@ -57,27 +57,28 @@ while running_flag:
     print(lang_expressions['information_prompt'])
     print(decorator_1)
 
-    new_host = f'172.30.100.{ip_number}'
-    print(new_host)
-
+#     new_host = f'172.30.100.{ip_number}'
+#     print(new_host)
+#     new_host = '172.30.100.10'
+#     ssh_con(file='commands.txt', host =new_host)
 
     # TODO
-    # MOVE AFTER DEVICE IS CHOSEN ETC.
-    my_test2 = 'SDG-1'
-    my_test1 = 'SDG-2'
-    our_conf = creating_proper_configuration(user_device=my_test1, port_num=12, ip_add = ip_number)
-    # returning tuple with full name device and next iip number to bes used
-    actual_device = our_conf[1]
-    ip_number = our_conf[0]
-    our_conf = creating_proper_configuration(user_device=my_test2, port_num=24, ip_add = ip_number)
-
-    new_host = f'172.30.100.{ip_number}'
-    print(new_host)
+#     # MOVE AFTER DEVICE IS CHOSEN ETC.
+#     my_test2 = 'SDG-1'
+#     my_test1 = 'SDG-2'
+#     our_conf = creating_proper_configuration(user_device=my_test1, port_num=12, ip_add = ip_number)
+#     # returning tuple with full name device and next iip number to bes used
+#     actual_device = our_conf[1]
+#     ip_number = our_conf[0]
+#     our_conf = creating_proper_configuration(user_device=my_test2, port_num=24, ip_add = ip_number)
+#
+#     new_host = f'172.30.100.{ip_number}'
+#     print(new_host)
 
 
 #   checking ssh connection by netmiko
-    new_host = 'pluton.kt.agh.edu.pl'
-    ssh_con(file='commands.txt', host =new_host)
+#     new_host = 'pluton.kt.agh.edu.pl'
+#     ssh_con(file='commands.txt', host =new_host)
 
 
     # deleting logs
@@ -145,21 +146,20 @@ while running_flag:
                         print(lang_expressions['wait_prompt'])
                         print(decorator_1)
 
-
                         # connection set
-                        try:
-                            ser = Serial(COM_string, COM_speed)
 
-                            # waiting for router/switch to boot
-                            user_boot_flag = checking_booting(port = ser)
+                        ser = Serial(COM_string, COM_speed)
 
-                            # counting number of gigabit and fast ports
-                            device_ports = checking_switch_ports(ser_port = ser)
+                        # waiting for router/switch to boot
+                        user_boot_flag = checking_booting(port = ser)
 
-                            # checking if device is really the device, which was wanted by user
-                            proper_device = checking_device(ser_port = ser, user_device = user_device, lang_dict = lang_expressions)
+                        # counting number of gigabit and fast ports
+                        device_ports = checking_switch_ports(ser_port = ser)
 
-                        # # returning next ip number and full name of configured device to download to specified device
+                        # checking if device is really the device, which was wanted by user
+                        proper_device = checking_device(ser_port = ser, user_device = user_device, lang_dict = lang_expressions)
+
+                    # # returning next ip number and full name of configured device to download to specified device
 #                         our_conf = creating_proper_configuration(user_device='test1', port_num=12, ip_add = ip_number)
 #                         returning tuple with full name device and next iip number to bes used
 #                         actual_device = our_conf[1]
@@ -167,46 +167,55 @@ while running_flag:
 #                         our_conf = creating_proper_configuration(user_device='test2', port_num=24, ip_add = ip_number)
 
 
-                            #TODO: check in lab how script work if choosing new devices
+                        #TODO: check in lab how script work if choosing new devices
 
-
-                            if user_boot_flag and proper_device:
-                                print(lang_expressions['not_configured'])
-                                print(decorator_1)
-
-                                # opening file with configuration
-                                stripped_list = reading_conf_files(file = actual_device)
-
-                                # opening dedicated file with configuration
-                                #TODO: in the future
-
-                                # executing commands from the list
-                                for command in stripped_list:
-                                    send_to_console(ser, command)
-
-                                # closing connection
-                                ser.close()
-                                print(f"{lang_expressions['proper_conf']}{user_device}.")
-                                print(f"{lang_expressions['close_con']}{ser.name}.")
-                                print(decorator_1)
-
-                                # TODO:
-                                # after initial_config by serial port now, we can go to the SSH connection
-                                # needs to add arguments to define host, password etc
-                                ssh_con(file='commands.txt', host="pluton.kt.agh.edu.pl")
-
-                            else:
-                                print(lang_expressions['start_conf'])
-                                print(lang_expressions['again_prompt'])
-                                print(decorator_1)
-                                # closing connection
-                                ser.close()
-                                print(f"{lang_expressions['close_con']}{ser.name}.")
-                                print(decorator_1)
-                                break
-                        except:
-                            print(lang_expressions['not_working'])
+                        if user_boot_flag and proper_device:
+                            print(lang_expressions['not_configured'])
                             print(decorator_1)
+
+                            # opening file with configuration
+                            actual_device = 'cisco-switch4010-SDG-2-172.30.100.10'
+                            stripped_list = reading_conf_files(file = actual_device)
+
+                            # opening dedicated file with configuration
+                            #TODO: in the future
+
+                            # executing commands from the list
+                            for command in stripped_list:
+                                send_to_console(ser, command)
+
+
+
+                            # closing connection
+                            ser.close()
+                            print(f"{lang_expressions['proper_conf']}{user_device}.")
+                            print(f"{lang_expressions['close_con']}{ser.name}.")
+                            print(decorator_1)
+
+                            # SSH connection established
+                            # waiting 10 seconds to get configuration ready
+                            print(lang_expressions['waiting_ssh'])
+                            sleep(10)
+                            new_host = '172.30.100.10'
+                            ssh_con(file='commands.txt', host = new_host)
+
+                            # TODO:
+                            # after initial_config by serial port now, we can go to the SSH connection
+                            # needs to add arguments to define host, password etc
+#                           ssh_con(file='commands.txt', host="pluton.kt.agh.edu.pl")
+
+                        else:
+                            print(lang_expressions['start_conf'])
+                            print(lang_expressions['again_prompt'])
+                            print(decorator_1)
+                            # closing connection
+                            ser.close()
+                            print(f"{lang_expressions['close_con']}{ser.name}.")
+                            print(decorator_1)
+                            break
+
+                        print(lang_expressions['not_working'])
+                        print(decorator_1)
 
                     elif user_device == str(0):
                         break

@@ -28,6 +28,7 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                               'ssh_failed': "Sorry, your SSH connection cannot be established...",
                               'ssh_established': "Connection has been established correctly ...",
                               'del_info': "You have left the script, try again...",
+                              'waiting_ssh': "Waiting about 10 seconds for SSH connection to be established ...",
 
                               },
                         'No': {'information_prompt': 'Something in Norwegian language ',
@@ -59,6 +60,7 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                                'ssh_failed': "Something in Norwegian language ",
                                'ssh_established': "Something in Norwegian language ",
                                'del_info': "Something in Norwegian language ",
+                               'waiting_ssh': "Something in Norwegian language ",
 
                                },
                         'Fr': {'information_prompt': 'Something in French language ',
@@ -90,6 +92,7 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                                'ssh_failed': 'Something in French language ',
                                'ssh_established': 'Something in French language ',
                                'del_info': "Something in French language ",
+                               'waiting_ssh': "Something in French language ",
                        }
                        }
 
@@ -118,12 +121,12 @@ ip_number = 10
 decorator_1 = ' '
 
 # ssh connection data, needs to be properly imported into main.py when adding arguments
-# username = 'walter'
-# password = 'mel0n98'
+username = 'walter'
+password = 'mel0n98'
 
 # to check connection
-username = "msztaba"
+# username = "msztaba"
 # needs to be hashed
-password = "098azerty@MS"
+# password = "098azerty@MS"
 # host for tests
-host = "pluton.kt.agh.edu.pl"
+# host = "pluton.kt.agh.edu.pl"

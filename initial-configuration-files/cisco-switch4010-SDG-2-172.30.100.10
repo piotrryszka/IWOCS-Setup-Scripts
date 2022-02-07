@@ -1,3 +1,5 @@
+en
+conf t
 !
 hostname SDG-2
 !
@@ -36,7 +38,7 @@ interface GigabitEthernet1/12
  no shutdown
 !
 interface Vlan1
- ip address 172.30.100.10 255.255.255.255
+ ip address 172.30.100.10 255.255.255.0
  no shutdown
 !
 banner motd ^C
