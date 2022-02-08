@@ -76,3 +76,31 @@ def checking_device(ser_port, user_device, lang_dict):
             print(lang_dict['bad_device'])
     return good_conf
 
+# checking if tftp server is already running
+def check_tftp(lang_dict):
+    print(decorator_1)
+    print(lang_dict['tftp_server'])
+    working_flag = False
+    continue_flag = True
+    while continue_flag:
+        print(decorator_1)
+        user_input = input(lang_dict['tftp_check'])
+        print(decorator_1)
+        if user_input == '1':
+            output_netstat = str(subprocess.check_output("netstat -na | findstr /R ^UDP", shell=True)).strip()
+            # string to be found in cmd output
+            check_string = 'UDP    0.0.0.0:69'
+            if check_string in output_netstat:
+                print(lang_dict['tftp_occupied'])
+                print(decorator_1)
+                working_flag = True
+            else:
+                print(lang_dict['tftp_free'])
+                print(decorator_1)
+                working_flag = False
+                continue_flag = False
+            return working_flag
+        else:
+            continue_flag = True
+            print(lang_dict['bad_conf_ip'])
+            print(decorator_1)

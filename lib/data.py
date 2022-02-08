@@ -29,6 +29,10 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                               'ssh_established': "Connection has been established correctly ...",
                               'del_info': "You have left the script, try again...",
                               'waiting_ssh': "Waiting about 10 seconds for SSH connection to be established ...",
+                              'tftp_server': "Now it is time to check TFTP Server",
+                              'tftp_check': "If you are ready and TFTP Server is not running, please type in '1' in console. ",
+                              'tftp_occupied': 'TFTP server is already running or socket is occupied ...',
+                              'tftp_free': "Everything is fine, now you can turn on your TFTP SERVER...",
 
                               },
                         'No': {'information_prompt': 'Something in Norwegian language ',
@@ -61,6 +65,10 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                                'ssh_established': "Something in Norwegian language ",
                                'del_info': "Something in Norwegian language ",
                                'waiting_ssh': "Something in Norwegian language ",
+                               'tftp_server': "Something in Norwegian language ",
+                               'tftp_check': "Something in Norwegian language ",
+                               'tftp_occupied': "Something in Norwegian language ",
+                               'tftp_free': "Something in Norwegian language ",
 
                                },
                         'Fr': {'information_prompt': 'Something in French language ',
@@ -93,6 +101,10 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                                'ssh_established': 'Something in French language ',
                                'del_info': "Something in French language ",
                                'waiting_ssh': "Something in French language ",
+                               'tftp_server': "Something in French language ",
+                               'tftp_check': "Something in French language ",
+                               'tftp_occupied': "Something in French language ",
+                               'tftp_free': "Something in French language ",
                        }
                        }
 

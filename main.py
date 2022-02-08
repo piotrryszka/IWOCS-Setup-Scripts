@@ -1,7 +1,7 @@
 # imports
 from serial import Serial
 from time import sleep
-from lib.commands import send_to_console, checking_switch_ports, checking_ip_address, checking_device
+from lib.commands import send_to_console, checking_switch_ports, checking_ip_address, checking_device, check_tftp
 from lib.operations import opening_device_list, reading_conf_files, creating_proper_configuration, deleting_files
 from lib.booting import checking_booting
 from lib.languages import listing_languages, reading_language
@@ -22,6 +22,7 @@ user_boot_flag = True # flag checking if device chosen by user is booted
 ip_flag = False # flag if ip is correctly set by user
 proper_language = False # flag if the language chosen by user is possible to be used
 del_flag = False # flag to check what user want to do after deleting logs
+tftp_flag = True # flag to check if the port UDP 69 is taken
 
 # FIXED Variables:
 COM_speed = 9600 # serial port speed
@@ -66,6 +67,11 @@ while running_flag:
         break
     else:
         pass
+
+    # checking if server tftp is already running
+    while tftp_flag:
+        tftp_flag = check_tftp(lang_dict = lang_expressions)
+
 
     # question about complete system or one module TASK 184
     user_system = input(lang_expressions['module_question']).lower()
@@ -176,6 +182,11 @@ while running_flag:
                             print(f"{lang_expressions['proper_conf']}{user_device}.")
                             print(f"{lang_expressions['close_con']}{ser.name}.")
                             print(decorator_1)
+
+                            # checking if server tftp is already running or the port is taken
+
+
+
 
                             # SSH connection established
                             print(lang_expressions['waiting_ssh'])
