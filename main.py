@@ -57,30 +57,6 @@ while running_flag:
     print(lang_expressions['information_prompt'])
     print(decorator_1)
 
-#     new_host = f'172.30.100.{ip_number}'
-#     print(new_host)
-#     new_host = '172.30.100.10'
-#     ssh_con(file='commands.txt', host =new_host)
-
-    # TODO
-#     # MOVE AFTER DEVICE IS CHOSEN ETC.
-#     my_test2 = 'SDG-1'
-#     my_test1 = 'SDG-2'
-#     our_conf = creating_proper_configuration(user_device=my_test1, port_num=12, ip_add = ip_number)
-#     # returning tuple with full name device and next iip number to bes used
-#     actual_device = our_conf[1]
-#     ip_number = our_conf[0]
-#     our_conf = creating_proper_configuration(user_device=my_test2, port_num=24, ip_add = ip_number)
-#
-#     new_host = f'172.30.100.{ip_number}'
-#     print(new_host)
-
-
-#   checking ssh connection by netmiko
-#     new_host = 'pluton.kt.agh.edu.pl'
-#     ssh_con(file='commands.txt', host =new_host)
-
-
     # deleting logs
     printing_logs(lang_expressions)
     user_del = input(lang_expressions['deleting_logs'])
@@ -107,11 +83,11 @@ while running_flag:
                 COM_string = "COM" + user_COM
 
                 # checking ip address but need to be commented
-#                 while ip_flag == False:
-#                     ip_set = checking_ip_address(lang_dict = lang_expressions)
-#                     if ip_set == True:
-#                         ip_flag = True
-#                 ip_flag = False
+                while ip_flag == False:
+                    ip_set = checking_ip_address(lang_dict = lang_expressions)
+                    if ip_set == True:
+                        ip_flag = True
+                ip_flag = False
 
                 # this command need to be deleted before releasing
                 ip_set = True
@@ -183,6 +159,19 @@ while running_flag:
                             # executing commands from the list
                             for command in stripped_list:
                                 send_to_console(ser, command)
+
+                            # TODO
+                            #     # MOVE AFTER DEVICE IS CHOSEN ETC.
+                            #     my_test2 = 'SDG-1'
+                            #     my_test1 = 'SDG-2'
+                            #     our_conf = creating_proper_configuration(user_device=my_test1, port_num=12, ip_add = ip_number)
+                            #     # returning tuple with full name device and next iip number to bes used
+                            #     actual_device = our_conf[1]
+                            #     ip_number = our_conf[0]
+                            #     our_conf = creating_proper_configuration(user_device=my_test2, port_num=24, ip_add = ip_number)
+                            #
+                            #     new_host = f'172.30.100.{ip_number}'
+                            #     print(new_host)
 
 
 

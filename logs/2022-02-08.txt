@@ -1,0 +1,164 @@
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  08/02/2022 12:39:40
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-02-07.txt, 2022-02-08.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+3
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 6
+ 
+Please set your ip address on LAN connection to 172.30.100.91/24. Take your time...
+ 
+If you are ready and your ip address is set, please type in '1' in console.  
+Check once again your IP address and your port...
+Please set your ip address on LAN connection to 172.30.100.91/24. Take your time...
+ 
+If you are ready and your ip address is set, please type in '1' in console.  
+Check once again your IP address and your port...
+Please set your ip address on LAN connection to 172.30.100.91/24. Take your time...
+ 
+If you are ready and your ip address is set, please type in '1' in console.  
+Check once again your IP address and your port...
+Please set your ip address on LAN connection to 172.30.100.91/24. Take your time...
+ 
+If you are ready and your ip address is set, please type in '1' in console.  
+Check once again your IP address and your port...
+Please set your ip address on LAN connection to 172.30.100.91/24. Take your time...
+ 
+If you are ready and your ip address is set, please type in '1' in console.  
+Check once again your IP address and your port...
+Please set your ip address on LAN connection to 172.30.100.91/24. Take your time...
+ 
+If you are ready and your ip address is set, please type in '1' in console.  
+Check once again your IP address and your port...
+Please set your ip address on LAN connection to 172.30.100.91/24. Take your time...
+ 
+If you are ready and your ip address is set, please type in '1' in console.  
+Check once again your IP address and your port...
+Please set your ip address on LAN connection to 172.30.100.91/24. Take your time...
+ 
+If you are ready and your ip address is set, please type in '1' in console.  
+Check once again your IP address and your port...
+Please set your ip address on LAN connection to 172.30.100.91/24. Take your time...
+ 
+If you are ready and your ip address is set, please type in '1' in console.  
+Check once again your IP address and your port...
+Please set your ip address on LAN connection to 172.30.100.91/24. Take your time...
+ 
+If you are ready and your ip address is set, please type in '1' in console.  
+Check once again your IP address and your port...
+Please set your ip address on LAN connection to 172.30.100.91/24. Take your time...
+ 
+If you are ready and your ip address is set, please type in '1' in console. Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  08/02/2022 12:47:08
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-02-07.txt, 2022-02-08.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+3
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 3
+ 
+It is not a complete system, I am sorry, I can't help you.
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  08/02/2022 12:47:14
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-02-07.txt, 2022-02-08.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+3
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 6
+ 
+Please set your ip address on LAN connection to 172.30.100.91/24. Take your time...
+ 
+If you are ready and your ip address is set, please type in '1' in console.  
+Bad info try again.
+Please set your ip address on LAN connection to 172.30.100.91/24. Take your time...
+ 
+If you are ready and your ip address is set, please type in '1' in console.  
+Bad info try again.
+Please set your ip address on LAN connection to 172.30.100.91/24. Take your time...
+ 
+If you are ready and your ip address is set, please type in '1' in console.  
+Bad info try again.
+Please set your ip address on LAN connection to 172.30.100.91/24. Take your time...
+ 
+If you are ready and your ip address is set, please type in '1' in console.  
+Bad info try again.
+Please set your ip address on LAN connection to 172.30.100.91/24. Take your time...
+ 
+If you are ready and your ip address is set, please type in '1' in console.  
+Bad info try again.
+Please set your ip address on LAN connection to 172.30.100.91/24. Take your time...
+ 
+If you are ready and your ip address is set, please type in '1' in console.  
+Check once again your IP address and your port...
+Please set your ip address on LAN connection to 172.30.100.91/24. Take your time...
+ 
+If you are ready and your ip address is set, please type in '1' in console.  
+Check once again your IP address and your port...
+Please set your ip address on LAN connection to 172.30.100.91/24. Take your time...
+ 
+If you are ready and your ip address is set, please type in '1' in console.  
+Check once again your IP address and your port...
+Please set your ip address on LAN connection to 172.30.100.91/24. Take your time...
+ 
+If you are ready and your ip address is set, please type in '1' in console.  
+Check once again your IP address and your port...
+Please set your ip address on LAN connection to 172.30.100.91/24. Take your time...
+ 
+If you are ready and your ip address is set, please type in '1' in console.  
+Check once again your IP address and your port...
+Please set your ip address on LAN connection to 172.30.100.91/24. Take your time...
+ 
+If you are ready and your ip address is set, please type in '1' in console. Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  08/02/2022 12:52:13
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-02-07.txt, 2022-02-08.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+2
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 6
+ 
+Please set your ip address on LAN connection to 172.30.100.91/24. Take your time...
+ 
+If you are ready and your ip address is set, please type in '1' in console.  
+Your IP address has been configured properly...
+ 
+Which device do you want to connect? 
