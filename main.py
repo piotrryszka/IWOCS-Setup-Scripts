@@ -31,7 +31,6 @@ COM_speed = 9600 # serial port speed
 while running_flag:
 
     # choosing language
-    # it has to be in english
     while not proper_language:
         print("Available languages are presented below:")
         languages = listing_languages()
@@ -83,11 +82,11 @@ while running_flag:
                 COM_string = "COM" + user_COM
 
                 # checking ip address but need to be commented
-                while ip_flag == False:
-                    ip_set = checking_ip_address(lang_dict = lang_expressions)
-                    if ip_set == True:
-                        ip_flag = True
-                ip_flag = False
+#                 while ip_flag == False:
+#                     ip_set = checking_ip_address(lang_dict = lang_expressions)
+#                     if ip_set == True:
+#                         ip_flag = True
+#                 ip_flag = False
 
                 # this command need to be deleted before releasing
                 ip_set = True
@@ -98,7 +97,6 @@ while running_flag:
 
                 while device_flag and ip_set:
                     # User chooses the device, which one he wants to
-                    # Completed TASK 186
                     choosing_device = True
                     while choosing_device == True:
                         user_device = input(lang_expressions['device_question']).upper()
@@ -123,7 +121,6 @@ while running_flag:
                         print(decorator_1)
 
                         # connection set
-
                         ser = Serial(COM_string, COM_speed)
 
                         # waiting for router/switch to boot
@@ -174,7 +171,6 @@ while running_flag:
                             #     print(new_host)
 
 
-
                             # closing connection
                             ser.close()
                             print(f"{lang_expressions['proper_conf']}{user_device}.")
@@ -182,16 +178,12 @@ while running_flag:
                             print(decorator_1)
 
                             # SSH connection established
-                            # waiting 10 seconds to get configuration ready
                             print(lang_expressions['waiting_ssh'])
+                            # waiting 10 seconds to get configuration ready
                             sleep(10)
+                            # TODO: ADD ARGUMENTS
                             new_host = '172.30.100.10'
                             ssh_con(file='TDS-1_A_test.txt', host = new_host)
-
-                            # TODO:
-                            # after initial_config by serial port now, we can go to the SSH connection
-                            # needs to add arguments to define host, password etc
-#                           ssh_con(file='commands.txt', host="pluton.kt.agh.edu.pl")
 
                         else:
                             print(lang_expressions['start_conf'])
