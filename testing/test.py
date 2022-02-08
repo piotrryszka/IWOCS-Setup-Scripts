@@ -86,3 +86,11 @@
 # new_host = 'pluton.kt.agh.edu.pl'
 # ssh_con(file='commands.txt', host =new_host)
 
+import tftpy
+
+server = tftpy.TftpServer('../tftpboot')
+
+server.listen('0.0.0.0', 69)
+
+client = tftpy.TftpClient('tftp.digitaltorque.ca', 69)
+client.download('remote_filename', 'local_filename')
