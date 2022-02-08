@@ -1,6 +1,5 @@
-TODO: to chyba najwazniejsze
-TODO: NETMIKO VS PARAMIKO
-https://www.reddit.com/r/networking/comments/5q5fgk/speed_up_netmiko/
+TODO
+https://stackoverflow.com/questions/59888222/save-startup-configuration-from-switchs-routers-cisco-with-python-script
 
 TODO:
 te adresy pewnie w makro,

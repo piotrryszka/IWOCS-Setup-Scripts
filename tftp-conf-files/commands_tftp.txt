@@ -1,0 +1,4 @@
+copy tftp: running-config
+(adres serwera czyli lapka) 172.30.100.91
+(nazwa pliku jaka ma byc)
+(enter) \n
