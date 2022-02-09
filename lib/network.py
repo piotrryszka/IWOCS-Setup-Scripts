@@ -6,7 +6,6 @@ from lib.data import password, username, decorator_1
 from time import sleep
 from datetime import datetime
 
-
 # establishing SSH connection
 def ssh_con(file, host):
     # creating time stamp
@@ -21,21 +20,30 @@ def ssh_con(file, host):
         "session_log": f"../device-logs/{host}---{exact_time}.txt",
     }
 
-    # creating list with commands from file
-    with open(f"../tftp-conf-files/{file}") as my_file:
-            content = my_file.read()
-            commands_list = content.split("\n")
+    server_ip = '172.30.100.91'
 
-    print(commands_list)
+
+    # creating list with commands from file
+#     with open(f"../tftp-conf-files/{file}") as my_file:
+#             content = my_file.read()
+#             commands_list = content.split("\n")
+#
+#     print(commands_list)
 
     # executing commands for network device
     try:
         with ConnectHandler(**cisco1) as net_connect:
-            for com in commands_list:
-                # sending command
-                output = net_connect.send_command(com, cmd_verify=False)
-                # printing output of command with error handling too
-                print(output)
+
+            # TODO: ONE COMMAND WITH TFTP COPY
+            output = net_connect.send_command(f'copy tftp://{server_ip}/{file} start', cmd_verify=False)
+            # printing output of command with error handling too
+            print(output)
+
+#             for com in commands_list:
+#                 # sending command
+#                 output = net_connect.send_command(com, cmd_verify=False)
+#                 # printing output of command with error handling too
+#                 print(output)
     # error handling while ssh connection
     except (NetmikoTimeoutException, NetmikoAuthenticationException) as error:
         print(error)
