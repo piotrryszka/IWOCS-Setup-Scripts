@@ -85,4 +85,16 @@
 #
 # new_host = 'pluton.kt.agh.edu.pl'
 # ssh_con(file='commands.txt', host =new_host)
+import subprocess
 
+def final_tftp():
+    output_netstat = str(subprocess.check_output("netstat -na | findstr /R ^UDP", shell=True)).strip()
+    print(output_netstat)
+    check_string = 'UDP    0.0.0.0:69'
+    if check_string in output_netstat:
+        return True
+    else:
+        return False
+
+e = final_tftp()
+print(e)

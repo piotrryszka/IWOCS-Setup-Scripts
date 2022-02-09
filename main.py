@@ -9,7 +9,7 @@ from lib.data import ip_number, decorator_1
 from lib.logging import *
 from lib.network import ssh_con
 from lib.paramiko_ip import ip_connect
-from lib.functions import printing_logs, creating_timestamp, start_tftp, user_tftp
+from lib.functions import printing_logs, creating_timestamp, start_tftp, user_tftp, final_tftp
 import sys
 
 
@@ -68,6 +68,8 @@ while running_flag:
     else:
         pass
 
+
+    # TODO: move it after SSH connection
     # checking if server tftp is already running
     while tftp_flag:
         tftp_flag = check_tftp(lang_dict = lang_expressions)
@@ -75,10 +77,12 @@ while running_flag:
     # starting TFTP server
     start_tftp(lang_dict = lang_expressions)
 
+    # user instructions to set config of TFTP Server
     user_tftp(lang_dict = lang_expressions)
 
-
-
+    # checking if server is running
+    e=final_tftp()
+    print(e)
 
 
     # question about complete system or one module TASK 184
@@ -200,9 +204,23 @@ while running_flag:
                             print(lang_expressions['waiting_ssh'])
                             # waiting 10 seconds to get configuration ready
                             sleep(10)
-                            # TODO: ADD ARGUMENTS
-                            new_host = '172.30.100.10'
-                            ssh_con(file='TDS-1_A_test.txt', host = new_host)
+#                             # TODO: ADD ARGUMENTS
+#                             new_host = '172.30.100.10'
+#                             ssh_con(file='TDS-1_A_test.txt', host = new_host)
+
+#                              # checking if server tftp is already running
+#                             while tftp_flag:
+#                                 tftp_flag = check_tftp(lang_dict = lang_expressions)
+#                         
+#                             # starting TFTP server
+#                             start_tftp(lang_dict = lang_expressions)
+#
+#                             # user instructions to set config of TFTP Server
+#                             user_tftp(lang_dict = lang_expressions)
+#
+#                             # checking if server is running
+#                             e=final_tftp()
+#                             print(e)
 
                         else:
                             print(lang_expressions['start_conf'])

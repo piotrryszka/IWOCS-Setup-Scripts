@@ -45,3 +45,12 @@ def user_tftp(lang_dict):
         else:
             print(lang_dict['bad_conf_ip'])
             print(decorator_1)
+
+# final tftp check before uploading config files
+def final_tftp():
+    output_netstat = str(subprocess.check_output("netstat -na | findstr /R ^UDP", shell=True)).strip()
+    check_string = 'UDP    0.0.0.0:69'
+    if check_string in output_netstat:
+        return True
+    else:
+        return False
