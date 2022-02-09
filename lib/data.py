@@ -33,6 +33,7 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                               'tftp_check': "If you are ready and TFTP Server is not running, please type in '1' in console. ",
                               'tftp_occupied': 'TFTP server is already running or socket is occupied ...',
                               'tftp_free': "Everything is fine, now you can turn on your TFTP SERVER...",
+                              'tftp_start': "Your TFTP server is running now...",
 
                               },
                         'No': {'information_prompt': 'Something in Norwegian language ',
@@ -69,6 +70,7 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                                'tftp_check': "Something in Norwegian language ",
                                'tftp_occupied': "Something in Norwegian language ",
                                'tftp_free': "Something in Norwegian language ",
+                               'tftp_start': "Something in Norwegian language ",
 
                                },
                         'Fr': {'information_prompt': 'Something in French language ',
@@ -105,6 +107,8 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                                'tftp_check': "Something in French language ",
                                'tftp_occupied': "Something in French language ",
                                'tftp_free': "Something in French language ",
+                               'tftp_start': "Something in French language ",
+
                        }
                        }
 

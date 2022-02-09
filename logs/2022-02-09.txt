@@ -1,0 +1,118 @@
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  09/02/2022 11:04:37
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-02-08.txt, 2022-02-09.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+1
+ 
+Now it is time to check TFTP Server
+ 
+If you are ready and TFTP Server is not running, please type in '1' in console.  
+TFTP server is already running or socket is occupied ...
+ 
+ 
+Now it is time to check TFTP Server
+ 
+If you are ready and TFTP Server is not running, please type in '1' in console.  
+TFTP server is already running or socket is occupied ...
+ 
+ 
+Now it is time to check TFTP Server
+ 
+If you are ready and TFTP Server is not running, please type in '1' in console.  
+TFTP server is already running or socket is occupied ...
+ 
+ 
+Now it is time to check TFTP Server
+ 
+If you are ready and TFTP Server is not running, please type in '1' in console.  
+Bad info try again.
+ 
+ 
+If you are ready and TFTP Server is not running, please type in '1' in console.  
+Everything is fine, now you can turn on your TFTP SERVER...
+ 
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  09/02/2022 11:06:26
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-02-09.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+1
+ 
+Now it is time to check TFTP Server
+ 
+If you are ready and TFTP Server is not running, please type in '1' in console.  
+TFTP server is already running or socket is occupied ...
+ 
+ 
+Now it is time to check TFTP Server
+ 
+If you are ready and TFTP Server is not running, please type in '1' in console.  
+TFTP server is already running or socket is occupied ...
+ 
+ 
+Now it is time to check TFTP Server
+ 
+If you are ready and TFTP Server is not running, please type in '1' in console.  
+Bad info try again.
+ 
+ 
+If you are ready and TFTP Server is not running, please type in '1' in console.  
+Everything is fine, now you can turn on your TFTP SERVER...
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  09/02/2022 11:10:04
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-02-09.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+1
+ 
+Now it is time to check TFTP Server
+ 
+If you are ready and TFTP Server is not running, please type in '1' in console.  
+Everything is fine, now you can turn on your TFTP SERVER...
+ 
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  09/02/2022 11:10:27
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-02-09.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+1
+ 
+Now it is time to check TFTP Server
+ 
+If you are ready and TFTP Server is not running, please type in '1' in console.  
+Everything is fine, now you can turn on your TFTP SERVER...
+ 
+Your TFTP server is running now...
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 

@@ -9,7 +9,7 @@ from lib.data import ip_number, decorator_1
 from lib.logging import *
 from lib.network import ssh_con
 from lib.paramiko_ip import ip_connect
-from lib.functions import printing_logs, creating_timestamp
+from lib.functions import printing_logs, creating_timestamp, start_tftp
 import sys
 
 
@@ -71,6 +71,9 @@ while running_flag:
     # checking if server tftp is already running
     while tftp_flag:
         tftp_flag = check_tftp(lang_dict = lang_expressions)
+
+    # starting TFTP server
+    start_tftp(lang_dict = lang_expressions)
 
 
     # question about complete system or one module TASK 184

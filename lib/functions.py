@@ -3,6 +3,8 @@
 # imports
 import os
 from datetime import datetime
+import subprocess
+from lib.data import decorator_1
 
 # printing accessible logs
 def printing_logs(lang_dict):
@@ -18,3 +20,9 @@ def creating_timestamp(lang_dict):
     # converting data object to string
     dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
     print(f"{lang_dict['timestamp']}", dt_string)
+
+# starting tftp server to download config to device
+def start_tftp(lang_dict):
+    print(lang_dict['tftp_start'])
+    print(decorator_1)
+    subprocess.Popen([r"tftp-server/tftpd64.exe"])

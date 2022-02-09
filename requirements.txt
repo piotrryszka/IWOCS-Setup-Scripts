@@ -1,5 +1,5 @@
 pyserial==3.5
 netmiko==3.4.0
-tftpy==0.8.2
+
 ------------------------
 paramiko==2.9.2
