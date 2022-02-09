@@ -86,5 +86,3 @@
 # new_host = 'pluton.kt.agh.edu.pl'
 # ssh_con(file='commands.txt', host =new_host)
 
-import subprocess
-subprocess.Popen([r"../tftp-server/tftpd64.exe"])

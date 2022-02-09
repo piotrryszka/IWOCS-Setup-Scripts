@@ -26,3 +26,22 @@ def start_tftp(lang_dict):
     print(lang_dict['tftp_start'])
     print(decorator_1)
     subprocess.Popen([r"tftp-server/tftpd64.exe"])
+
+# instruction to set tftp server properly
+def user_tftp(lang_dict):
+    continue_flag = True
+    print(lang_dict['tftp_folder'])
+    print(decorator_1)
+    print(lang_dict['tftp_ip'])
+    print(decorator_1)
+    # user input if everything is set properly
+    while continue_flag:
+        user_input = input(lang_dict['tftp_ready'])
+        print(decorator_1)
+        if user_input =='1':
+            print('Everything was set, you can continue...')
+            print(decorator_1)
+            continue_flag = False
+        else:
+            print(lang_dict['bad_conf_ip'])
+            print(decorator_1)
