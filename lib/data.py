@@ -1,4 +1,5 @@
-# all commands in different languages
+# CONFIGURATION PACKAGE with data, variables etc.
+
 language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you want to leave any part of the program type 0 [zero] in your input!"',
                               'module_question': "It is your system a complete one or it is just one module? \nType '1' if system complete, if not write anything else: ",
                               'port_question': "Which COM port are you using?\nType number of your COM port: ",

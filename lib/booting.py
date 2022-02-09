@@ -1,3 +1,5 @@
+#CHECKING BOOTING OF NETWORK DEVICE
+
 # imports
 from time import sleep
 from lib.commands import send_to_console

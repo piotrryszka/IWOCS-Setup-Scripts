@@ -81,6 +81,7 @@ while running_flag:
     user_tftp(lang_dict = lang_expressions)
 
     # checking if server is running
+    # returning true and false -> to next while loop probably in the future
     e=final_tftp()
     print(e)
 
@@ -137,6 +138,11 @@ while running_flag:
                         print(f"{COM_string} ----> {user_device}")
                         print(lang_expressions['wait_prompt'])
                         print(decorator_1)
+
+
+                        # TODO for tests it is commented
+                        # try:
+
 
                         # connection set
                         ser = Serial(COM_string, COM_speed)
@@ -195,15 +201,11 @@ while running_flag:
                             print(f"{lang_expressions['close_con']}{ser.name}.")
                             print(decorator_1)
 
-                            # checking if server tftp is already running or the port is taken
-
-
-
-
                             # SSH connection established
                             print(lang_expressions['waiting_ssh'])
                             # waiting 10 seconds to get configuration ready
                             sleep(10)
+
 #                             # TODO: ADD ARGUMENTS
 #                             new_host = '172.30.100.10'
 #                             ssh_con(file='TDS-1_A_test.txt', host = new_host)
@@ -211,17 +213,21 @@ while running_flag:
 #                              # checking if server tftp is already running
 #                             while tftp_flag:
 #                                 tftp_flag = check_tftp(lang_dict = lang_expressions)
-#                         
+#
 #                             # starting TFTP server
 #                             start_tftp(lang_dict = lang_expressions)
 #
 #                             # user instructions to set config of TFTP Server
 #                             user_tftp(lang_dict = lang_expressions)
 #
+#                             # returning true and false -> to next while loop probably in the future
 #                             # checking if server is running
 #                             e=final_tftp()
 #                             print(e)
 
+
+                        # TODO: needs to be uncommented
+                        # except
                         else:
                             print(lang_expressions['start_conf'])
                             print(lang_expressions['again_prompt'])
