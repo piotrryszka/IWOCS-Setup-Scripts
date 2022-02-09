@@ -159,3 +159,6 @@ username = "msztaba"
 password = "098azerty@MS"
 # host for tests
 # host = "pluton.kt.agh.edu.pl"
+
+# IP address of tftp server -> user computer
+server_ip = '172.30.100.91'

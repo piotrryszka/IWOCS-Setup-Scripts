@@ -2,7 +2,7 @@
 
 # imports
 from netmiko import ConnectHandler, NetmikoTimeoutException, NetmikoAuthenticationException
-from lib.data import password, username, decorator_1
+from lib.data import password, username, decorator_1, server_ip
 from time import sleep
 from datetime import datetime
 
@@ -19,9 +19,6 @@ def ssh_con(file, host):
         # logger
         "session_log": f"../device-logs/{host}---{exact_time}.txt",
     }
-
-    server_ip = '172.30.100.91'
-
 
     # creating list with commands from file
 #     with open(f"../tftp-conf-files/{file}") as my_file:
