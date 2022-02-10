@@ -37,6 +37,7 @@ def user_tftp(lang_dict):
     # user input if everything is set properly
     while continue_flag:
         user_input = input(lang_dict['tftp_ready'])
+        print(user_input)
         print(decorator_1)
         if user_input =='1':
             print('Everything was set, you can continue...')

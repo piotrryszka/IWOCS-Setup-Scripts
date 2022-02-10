@@ -100,7 +100,7 @@ while running_flag:
                 # Creating string for connection to the device
                 COM_string = "COM" + user_COM
 
-                # checking ip address but need to be commented
+#                 # checking ip address but need to be commented
 #                 while ip_flag == False:
 #                     ip_set = checking_ip_address(lang_dict = lang_expressions)
 #                     if ip_set == True:

@@ -36,6 +36,7 @@ def checking_ip_address(lang_dict):
     print(lang_dict['ip_prompt'])
     print(decorator_1)
     user_input = input(lang_dict['ready_ip'])
+    print(user_input)
     print(decorator_1)
     IP_flag = False
     continue_flag = True
@@ -85,6 +86,7 @@ def check_tftp(lang_dict):
     while continue_flag:
         print(decorator_1)
         user_input = input(lang_dict['tftp_check'])
+        print(user_input)
         print(decorator_1)
         if user_input == '1':
             output_netstat = str(subprocess.check_output("netstat -na | findstr /R ^UDP", shell=True)).strip()
