@@ -1,0 +1,12 @@
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  11/02/2022 11:11:16
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-02-10.txt, 2022-02-11.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.

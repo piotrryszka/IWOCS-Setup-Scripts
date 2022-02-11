@@ -43,6 +43,7 @@ def creating_proper_configuration(user_device, port_num, ip_add):
                 file.write(str(row) + '\n')
             # adding one to create a new IP ADDRESS
             ip_add +=1
+        # returning tuple with new ip address and new file
         return ip_add, f'initial-configuration-files/cisco-switch4010-{user_device}-{str(ip_add)} '
 
 # deleting logs and handling logs files

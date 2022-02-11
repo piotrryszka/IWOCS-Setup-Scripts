@@ -20,14 +20,6 @@ def ssh_con(file, host):
         "session_log": f"../device-logs/{host}---{exact_time}.txt",
     }
 
-    # creating list with commands from file
-#     with open(f"../tftp-conf-files/{file}") as my_file:
-#             content = my_file.read()
-#             commands_list = content.split("\n")
-#
-#     print(commands_list)
-
-    # executing commands for network device
     try:
         with ConnectHandler(**cisco1) as net_connect:
 
@@ -36,11 +28,6 @@ def ssh_con(file, host):
             # printing output of command with error handling too
             print(output)
 
-#             for com in commands_list:
-#                 # sending command
-#                 output = net_connect.send_command(com, cmd_verify=False)
-#                 # printing output of command with error handling too
-#                 print(output)
     # error handling while ssh connection
     except (NetmikoTimeoutException, NetmikoAuthenticationException) as error:
         print(error)

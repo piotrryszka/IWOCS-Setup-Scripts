@@ -153,12 +153,11 @@ decorator_1 = ' '
 #username = 'walter'
 #password = 'mel0n98'
 
+# TESTING IN LINUX ENVIRONMENT
 # to check connection
 username = "msztaba"
 # needs to be hashed
 password = "098azerty@MS"
-# host for tests
-# host = "pluton.kt.agh.edu.pl"
 
 # IP address of tftp server -> user computer
 server_ip = '172.30.100.91'

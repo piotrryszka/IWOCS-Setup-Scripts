@@ -51,6 +51,7 @@ def user_tftp(lang_dict):
 def final_tftp():
     output_netstat = str(subprocess.check_output("netstat -na | findstr /R ^UDP", shell=True)).strip()
     check_string = 'UDP    0.0.0.0:69'
+    # checking if server works, use return in for example while loop
     if check_string in output_netstat:
         return True
     else:
