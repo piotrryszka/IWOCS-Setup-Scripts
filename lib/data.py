@@ -8,7 +8,7 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                               'wait_prompt': "Please wait patiently...",
                               'user_choice': "You have chosen this configuration...",
                               'not_configured': "Your device has not been configured yet. What do you want to do with it?",
-                              'proper_conf': 'Your device has been configured properly --->',
+                              'proper_conf': 'Your device has been configured properly ---> ',
                               'close_con': "Closed connection to ",
                               'start_conf': 'Sorry your device has some starting configuration, we could not help you...',
                               'again_prompt': 'If you want you can try again to connect to your device.',
@@ -150,14 +150,14 @@ ip_number = 10
 decorator_1 = ' '
 
 # ssh connection data, needs to be properly imported into main.py when adding arguments
-#username = 'walter'
-#password = 'mel0n98'
+username = 'walter'
+password = 'mel0n98'
 
 # TESTING IN LINUX ENVIRONMENT
 # to check connection
-username = "msztaba"
-# needs to be hashed
-password = "098azerty@MS"
+# username = "msztaba"
+# # needs to be hashed
+# password = "098azerty@MS"
 
 # IP address of tftp server -> user computer
 server_ip = '172.30.100.91'

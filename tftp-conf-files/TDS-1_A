@@ -1,5 +1,3 @@
-en
-conf t
 !
 version 15.2
 no service pad

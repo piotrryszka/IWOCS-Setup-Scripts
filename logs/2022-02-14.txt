@@ -1,0 +1,217 @@
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  14/02/2022 08:18:28
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-02-11.txt, 2022-02-14.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+2
+ 
+Now it is time to check TFTP Server
+ 
+If you are ready and TFTP Server is not running, please type in '1' in console. 1
+ 
+Everything is fine, now you can turn on your TFTP SERVER...
+ 
+Your TFTP server is running now...
+ 
+Please choose proper folder with configs in TFTP Server application...
+ 
+Please choose proper IP address in TFTP Server application...
+ 
+If you set configuration properly and you are ready, please type in '1' in console. 1
+ 
+Everything was set, you can continue...
+ 
+True
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 6
+ 
+ 
+Which device do you want to connect? TDS-1_A
+ 
+Your list of possible devices to configure: 
+TDS-1_A
+ 
+ 
+You have chosen this configuration...
+COM6 ----> TDS-1_A
+Please wait patiently...
+ 
+Device is chosen properly, let's continue...
+Your device has not been configured yet. What do you want to do with it?
+ 
+Your device has been configured properly --->TDS-1_A.
+Closed connection to COM6.
+ 
+Waiting about 10 seconds for SSH connection to be established ...
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
+Which device do you want to connect? 
+ 
+Your list of possible devices to configure: 
+TIR, ETAS-1, TAS-1, MSC-1, , SDG-1_A, SDG-1_B, , TDS-1_A, TDS-1_B, , MSW-1_A, MSW-1_B, , MSX-1_A, MSX-1_B, , MSY-1_A, MSY-1_B, , MSS-1_A, MSS-1_B, , MSH-1, MSH-2, MSH-3, MSH-4
+ 
+ 
+You have chosen this configuration...
+COM6 ----> 
+Please wait patiently...
+ 
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  14/02/2022 08:23:48
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-02-11.txt, 2022-02-14.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+2
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 6
+ 
+ 
+Which device do you want to connect? TDS-1_A
+ 
+Your list of possible devices to configure: 
+TDS-1_A
+ 
+ 
+You have chosen this configuration...
+COM6 ----> TDS-1_A
+Please wait patiently...
+ 
+Device is chosen properly, let's continue...
+Your device has not been configured yet. What do you want to do with it?
+ 
+Your device has been configured properly --->TDS-1_A.
+Closed connection to COM6.
+ 
+Waiting about 10 seconds for SSH connection to be established ...
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  14/02/2022 09:48:02
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-02-11.txt, 2022-02-14.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+1
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 6
+ 
+ 
+Which device do you want to connect? TDS-1_A
+ 
+Your list of possible devices to configure: 
+TDS-1_A
+ 
+ 
+You have chosen this configuration...
+COM6 ----> TDS-1_A
+Please wait patiently...
+ 
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  14/02/2022 09:48:23
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-02-14.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+1
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 6
+ 
+ 
+Which device do you want to connect? TDS-1_A
+ 
+Your list of possible devices to configure: 
+TDS-1_A
+ 
+ 
+You have chosen this configuration...
+COM6 ----> TDS-1_A
+Please wait patiently...
+ 
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  14/02/2022 09:59:07
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-02-14.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+1
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 6
+ 
+ 
+Which device do you want to connect? TDS-1_A
+ 
+Your list of possible devices to configure: 
+TDS-1_A
+ 
+ 
+You have chosen this configuration...
+COM6 ----> TDS-1_A
+Please wait patiently...
+ 
+Device is chosen properly, let's continue...
+Your device has not been configured yet. What do you want to do with it?
+ 
+Your device has been configured properly --->TDS-1_A.
+Closed connection to COM6.
+ 
+Waiting about 10 seconds for SSH connection to be established ...
+copy tftp://172.30.100.91/TDS-1_A_test.txt startup-config
+False
+Switch#
+Accessing tftp://172.30.100.91/TDS-1_A_test.txt...
+Loading TDS-1_A_test.txt from 172.30.100.91 (via Vlan1): !
+[OK - 14784 bytes]
+
+14784 bytes copied in 1.062 secs (13921 bytes/sec)
+Proceed with reload? [confirm]
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
+Which device do you want to connect? 
