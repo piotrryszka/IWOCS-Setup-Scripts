@@ -1,7 +1,7 @@
 # imports
 from serial import Serial
 from time import sleep
-from lib.commands import send_to_console, checking_switch_ports, checking_ip_address, checking_device, check_tftp
+from lib.commands import send_to_console, checking_switch_ports, checking_ip_address, checking_device, check_tftp, to_conf_mode
 from lib.operations import opening_device_list, reading_conf_files, creating_proper_configuration, deleting_files
 from lib.booting import checking_booting
 from lib.languages import listing_languages, reading_language
@@ -152,6 +152,10 @@ while running_flag:
                         if user_boot_flag and proper_device:
                             print(lang_expressions['not_configured'])
                             print(decorator_1)
+
+                            # going to configuration mode
+                            to_conf_mode(ser)
+
 
                             # opening file with configuration
                             actual_device = 'cisco-switch4010-SDG-2-172.30.100.10'

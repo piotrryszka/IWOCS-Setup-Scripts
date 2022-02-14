@@ -107,3 +107,8 @@ def check_tftp(lang_dict):
             print(lang_dict['bad_conf_ip'])
             print(decorator_1)
 
+# going to conf mode before handling initial configuration
+def to_conf_mode(ser_port):
+    commands_list = ['en', 'conf t']
+    for com in commands_list:
+        send_to_console(ser_port, com)
