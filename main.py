@@ -68,24 +68,8 @@ while running_flag:
     else:
         pass
 
-
-#     # TODO: move it after SSH connection
-#     # checking if server tftp is already running
-#     while tftp_flag:
-#         tftp_flag = check_tftp(lang_dict = lang_expressions)
-#
-#     # starting TFTP server
-#     start_tftp(lang_dict = lang_expressions)
-#
-#     # user instructions to set config of TFTP Server
-#     user_tftp(lang_dict = lang_expressions)
-#
-#     # checking if server is running
-#     # returning true and false -> to next while loop probably in the future
-#     e=final_tftp()
-#     print(e)
-
-
+    print(decorator_1)
+    
     # question about complete system or one module TASK 184
     user_system = input(lang_expressions['module_question']).lower()
     print(user_system)
@@ -101,11 +85,11 @@ while running_flag:
                 COM_string = "COM" + user_COM
 
 #                 # checking ip address but need to be commented
-#                 while ip_flag == False:
-#                     ip_set = checking_ip_address(lang_dict = lang_expressions)
-#                     if ip_set == True:
-#                         ip_flag = True
-#                 ip_flag = False
+                while ip_flag == False:
+                    ip_set = checking_ip_address(lang_dict = lang_expressions)
+                    if ip_set == True:
+                        ip_flag = True
+                ip_flag = False
 
                 # this command need to be deleted before releasing
                 ip_set = True
@@ -156,12 +140,12 @@ while running_flag:
                         # checking if device is really the device, which was wanted by user
                         proper_device = checking_device(ser_port = ser, user_device = user_device, lang_dict = lang_expressions)
 
-                    # # returning next ip number and full name of configured device to download to specified device
-#                         our_conf = creating_proper_configuration(user_device='test1', port_num=12, ip_add = ip_number)
-#                         returning tuple with full name device and next iip number to bes used
-#                         actual_device = our_conf[1]
-#                         ip_number = our_conf[0]
-#                         our_conf = creating_proper_configuration(user_device='test2', port_num=24, ip_add = ip_number)
+                    # returning next ip number and full name of configured device to download to specified device
+                        our_conf = creating_proper_configuration(user_device='test1aaa', port_num=device_ports, ip_add = ip_number)
+                        # returning tuple with full name device and next iip number to bes used
+                        actual_device = our_conf[1]
+                        ip_number = our_conf[0]
+                        our_conf = creating_proper_configuration(user_device='test2aaa', port_num=device_ports, ip_add = ip_number)
 
 
                         #TODO: check in lab how script work if choosing new devices
@@ -181,19 +165,6 @@ while running_flag:
                             for command in stripped_list:
                                 send_to_console(ser, command)
 
-                            # TODO
-                            #     # MOVE AFTER DEVICE IS CHOSEN ETC.
-                            #     my_test2 = 'SDG-1'
-                            #     my_test1 = 'SDG-2'
-                            #     our_conf = creating_proper_configuration(user_device=my_test1, port_num=12, ip_add = ip_number)
-                            #     # returning tuple with full name device and next iip number to bes used
-                            #     actual_device = our_conf[1]
-                            #     ip_number = our_conf[0]
-                            #     our_conf = creating_proper_configuration(user_device=my_test2, port_num=24, ip_add = ip_number)
-                            #
-                            #     new_host = f'172.30.100.{ip_number}'
-                            #     print(new_host)
-
 
                             # closing connection
                             ser.close()
@@ -206,26 +177,24 @@ while running_flag:
                             # waiting 10 seconds to get configuration ready
                             sleep(10)
 
+                             # checking if server tftp is already running
+                            while tftp_flag:
+                                tftp_flag = check_tftp(lang_dict = lang_expressions)
+
+                            # starting TFTP server
+                            start_tftp(lang_dict = lang_expressions)
+
+                            # user instructions to set config of TFTP Server
+                            user_tftp(lang_dict = lang_expressions)
+
+                            # returning true and false -> to next while loop probably in the future
+                            # checking if server is running
+                            e=final_tftp()
+                            print(e)
+
                             # TODO: ADD ARGUMENTS
                             new_host = '172.30.100.10'
                             ssh_con(file='TDS-1_A_test.txt', host = new_host)
-
-#                              # checking if server tftp is already running
-#                             while tftp_flag:
-#                                 tftp_flag = check_tftp(lang_dict = lang_expressions)
-#
-#                             # starting TFTP server
-#                             start_tftp(lang_dict = lang_expressions)
-#
-#                             # user instructions to set config of TFTP Server
-#                             user_tftp(lang_dict = lang_expressions)
-#
-#                             # returning true and false -> to next while loop probably in the future
-#                             # checking if server is running
-#                             e=final_tftp()
-#                             print(e)
-
-
 
                         # TODO: needs to be uncommented
                         # except

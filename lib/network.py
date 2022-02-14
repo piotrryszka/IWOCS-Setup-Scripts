@@ -28,19 +28,16 @@ def ssh_con(file, host):
             our_command = f'copy tftp://{server_ip}/{file} startup-config'
             print(our_command)
 
-            print(net_connect.check_config_mode())
-            print(net_connect.find_prompt())
-
             # TODO: ONE COMMAND WITH TFTP COPY
-#             net_connect.send_command('set length 0')
             output = net_connect.send_command_timing(our_command, cmd_verify=False)
             sleep(2)
+
+            # printing for tests
             output = net_connect.send_command_timing('\n', cmd_verify=False)
             print(output)
 
+            # printing for tests
             output = net_connect.send_command_timing('reload', cmd_verify=False)
-#             output = net_connect.send_command('sh run')
-            # printing output of command with error handling too
             print(output)
 
     # error handling while ssh connection

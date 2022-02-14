@@ -25,7 +25,7 @@ def creating_timestamp(lang_dict):
 def start_tftp(lang_dict):
     print(lang_dict['tftp_start'])
     print(decorator_1)
-    subprocess.Popen([r"tftp-server/tftpd64.exe"])
+    subprocess.Popen([r"tftp-server/tftpd32.exe"])
 
 # instruction to set tftp server properly
 def user_tftp(lang_dict):
