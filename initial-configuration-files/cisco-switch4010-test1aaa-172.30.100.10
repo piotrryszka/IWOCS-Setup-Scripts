@@ -25,7 +25,7 @@ vlan internal allocation policy ascending
 !
 lldp run
 !
-interface GigabitEthernet1/{'Gigabit': 28, 'Fast': 0}
+interface GigabitEthernet1/28
  description SETUP-VLAN-1
  switchport access vlan 1
  switchport mode access

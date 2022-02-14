@@ -18,6 +18,6 @@ Accessing tftp://172.30.100.91/TDS-1_A_test.txt...
 Loading TDS-1_A_test.txt from 172.30.100.91 (via Vlan1): !
 [OK - 14784 bytes]
 
-14784 bytes copied in 1.034 secs (14298 bytes/sec)
+14784 bytes copied in 1.066 secs (13869 bytes/sec)
 Switch#reload
 Proceed with reload? [confirm]

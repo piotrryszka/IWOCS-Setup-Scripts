@@ -42,7 +42,7 @@ def checking_ip_address(lang_dict):
     continue_flag = True
     while continue_flag:
         if user_input == "1":
-            output_ipconfig = str(subprocess.check_output("ipconfig /all", shell=True)).strip()
+            output_ipconfig = str(subprocess.check_output("arp -a", shell=True)).strip()
             ip_address = '172.30.100.91'
             if ip_address in output_ipconfig:
                 IP_flag = True

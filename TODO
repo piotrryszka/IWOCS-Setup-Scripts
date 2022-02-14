@@ -1,6 +1,6 @@
 TODO LIST
 
-1. TFTP Server, not sending each command separately -> DONE
+1. Move IP checking to be done later in script
 2. Adding arguments to methods/functions
 3. Be likely to handle more devices than only one
 4. Add try/except/finally in code, specially in main.py and network handling

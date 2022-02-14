@@ -126,7 +126,6 @@ while running_flag:
                         # TODO for tests it is commented
                         # try:
 
-
                         # connection set
                         ser = Serial(COM_string, COM_speed)
 
@@ -136,20 +135,26 @@ while running_flag:
                         # counting number of gigabit and fast ports
                         device_ports = checking_switch_ports(ser_port = ser)
 
+
                         # checking if device is really the device, which was wanted by user
                         proper_device = checking_device(ser_port = ser, user_device = user_device, lang_dict = lang_expressions)
 
                     # returning next ip number and full name of configured device to download to specified device
-                        our_conf = creating_proper_configuration(user_device='test1aaa', port_num=device_ports, ip_add = ip_number)
+                        our_conf = creating_proper_configuration(user_device='test1aaa', port_num=device_ports['Gigabit'], ip_add = ip_number)
                         # returning tuple with full name device and next iip number to bes used
                         actual_device = our_conf[1]
                         ip_number = our_conf[0]
-                        our_conf = creating_proper_configuration(user_device='test2aaa', port_num=device_ports, ip_add = ip_number)
+                        our_conf = creating_proper_configuration(user_device='test2aaa', port_num=device_ports['Gigabit'], ip_add = ip_number)
 
 
                         #TODO: check in lab how script work if choosing new devices
 
                         if user_boot_flag and proper_device:
+
+
+
+
+
                             print(lang_expressions['not_configured'])
                             print(decorator_1)
 
