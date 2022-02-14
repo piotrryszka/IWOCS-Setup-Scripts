@@ -8,7 +8,6 @@ from lib.languages import listing_languages, reading_language
 from lib.data import ip_number, decorator_1
 from lib.logging import *
 from lib.network import ssh_con
-from lib.paramiko_ip import ip_connect
 from lib.functions import printing_logs, creating_timestamp, start_tftp, user_tftp, final_tftp
 import sys
 
@@ -69,7 +68,7 @@ while running_flag:
         pass
 
     print(decorator_1)
-    
+
     # question about complete system or one module TASK 184
     user_system = input(lang_expressions['module_question']).lower()
     print(user_system)
