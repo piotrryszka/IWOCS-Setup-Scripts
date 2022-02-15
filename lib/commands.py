@@ -9,6 +9,7 @@ import os
 from datetime import datetime
 
 # sending commands to console
+# TODO: check wait time to be as short as possible for eexample 0.1 s
 def send_to_console(ser_fun: Serial, command: str, wait_time: float = 0.5):
     command_to_send = command + "\r\n"
     ser_fun.write(command_to_send.encode('utf-8'))

@@ -114,6 +114,13 @@ while running_flag:
                         print(lang_expressions['wait_prompt'])
                         print(decorator_1)
 
+                        # returning next ip number and full name of configured device to download to specified device
+                        our_conf = creating_proper_configuration(user_device='test1_dom', port_num=22, ip_add = ip_number)
+                        # returning tuple with full name device and next iip number to bes used
+                        actual_device = our_conf[1]
+                        ip_number = our_conf[0]
+                        our_conf = creating_proper_configuration(user_device='test2_dom', port_num=23, ip_add = ip_number)
+
                         # TODO for tests it is commented
                         # try:
 
@@ -148,8 +155,6 @@ while running_flag:
                                 if ip_set == True:
                                     ip_flag = True
                             ip_flag = False
-
-
 
                             print(lang_expressions['not_configured'])
                             print(decorator_1)

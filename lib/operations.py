@@ -33,7 +33,7 @@ def creating_proper_configuration(user_device, port_num, ip_add):
             # changing interface for whole range
             if x == 'interface GigabitEthernet1/1':
                 int_index = content_list.index(x)
-                content_list[int_index] = f'interface GigabitEthernet1/{str(port_num)}'
+                content_list[int_index] = f'interface range GigabitEthernet1/1-{str(port_num)}'
             # changing ip address
             if x == ' ip address x.x.x.x y.y.y.y':
                 ip_index = content_list.index(x)
