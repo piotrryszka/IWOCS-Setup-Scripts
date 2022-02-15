@@ -114,14 +114,6 @@ while running_flag:
                         print(lang_expressions['wait_prompt'])
                         print(decorator_1)
 
-                        # returning next ip number and full name of configured device to download to specified device
-                        our_conf = creating_proper_configuration(user_device='test1_dom', port_num=22, ip_add = ip_number)
-                        # returning tuple with full name device and next iip number to bes used
-                        actual_device = our_conf[1]
-                        print(actual_device)
-                        ip_number = our_conf[0]
-                        our_conf = creating_proper_configuration(user_device='test2_dom', port_num=23, ip_add = ip_number)
-
                         # TODO for tests it is commented
                         # try:
 
@@ -145,6 +137,10 @@ while running_flag:
                         ip_number = our_conf[0]
                         our_conf = creating_proper_configuration(user_device='test2aaa', port_num=device_ports['Gigabit'], ip_add = ip_number)
 
+                        # TODO: check in lab, proper version of configuration
+#                         our_conf = creating_proper_configuration(user_device = user_device, port_num = device_ports, ip_add = ip_number)
+#                         actual_device = our_conf[1]
+#                         ip_number = our_conf[0]
 
                         #TODO: check in lab how script work if choosing new devices
 
@@ -163,13 +159,11 @@ while running_flag:
                             # going to configuration mode
                             to_conf_mode(ser)
 
-
+                            # TODO: needs to be commented later as it is should be chosen by user
                             # opening file with configuration
                             actual_device = 'cisco-switch4010-SDG-2-172.30.100.10'
                             stripped_list = reading_conf_files(file = actual_device)
 
-                            # opening dedicated file with configuration
-                            #TODO: in the future
 
                             # executing commands from the list
                             for command in stripped_list:
