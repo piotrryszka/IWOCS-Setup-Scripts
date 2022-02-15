@@ -83,21 +83,13 @@ while running_flag:
                 # Creating string for connection to the device
                 COM_string = "COM" + user_COM
 
-#                 # checking ip address but need to be commented
-                while ip_flag == False:
-                    ip_set = checking_ip_address(lang_dict = lang_expressions)
-                    if ip_set == True:
-                        ip_flag = True
-                ip_flag = False
 
-                # this command need to be deleted before releasing
-                ip_set = True
                 print(decorator_1)
 
                 # Creating a list with all the possible devices
                 device_list = opening_device_list(file_name = 'project_names_of_devices.txt')
 
-                while device_flag and ip_set:
+                while device_flag:
                     # User chooses the device, which one he wants to
                     choosing_device = True
                     while choosing_device == True:
@@ -121,7 +113,6 @@ while running_flag:
                         print(f"{COM_string} ----> {user_device}")
                         print(lang_expressions['wait_prompt'])
                         print(decorator_1)
-
 
                         # TODO for tests it is commented
                         # try:
@@ -151,7 +142,12 @@ while running_flag:
 
                         if user_boot_flag and proper_device:
 
-
+                            # checking ip address but need to be commented
+                            while ip_flag == False:
+                                ip_set = checking_ip_address(lang_dict = lang_expressions)
+                                if ip_set == True:
+                                    ip_flag = True
+                            ip_flag = False
 
 
 
