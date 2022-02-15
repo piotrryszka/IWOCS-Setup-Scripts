@@ -118,6 +118,7 @@ while running_flag:
                         our_conf = creating_proper_configuration(user_device='test1_dom', port_num=22, ip_add = ip_number)
                         # returning tuple with full name device and next iip number to bes used
                         actual_device = our_conf[1]
+                        print(actual_device)
                         ip_number = our_conf[0]
                         our_conf = creating_proper_configuration(user_device='test2_dom', port_num=23, ip_add = ip_number)
 
