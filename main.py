@@ -130,6 +130,7 @@ while running_flag:
                         # checking if device is really the device, which was wanted by user
                         proper_device = checking_device(ser_port = ser, user_device = user_device, lang_dict = lang_expressions)
 
+                    # TODO: needs to be commented
                     # returning next ip number and full name of configured device to download to specified device
                         our_conf = creating_proper_configuration(user_device='test1aaa', port_num=device_ports['Gigabit'], ip_add = ip_number)
                         # returning tuple with full name device and next iip number to bes used
@@ -164,17 +165,20 @@ while running_flag:
                             actual_device = 'cisco-switch4010-SDG-2-172.30.100.10'
                             stripped_list = reading_conf_files(file = actual_device)
 
-
                             # executing commands from the list
                             for command in stripped_list:
                                 send_to_console(ser, command)
-
 
                             # closing connection
                             ser.close()
                             print(f"{lang_expressions['proper_conf']}{user_device}.")
                             print(f"{lang_expressions['close_con']}{ser.name}.")
                             print(decorator_1)
+
+
+                            # TODO: need to move it
+                            # TODO: first all initial configs, later all project configs
+
 
                             # SSH connection established
                             print(lang_expressions['waiting_ssh'])
