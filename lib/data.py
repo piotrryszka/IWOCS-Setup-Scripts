@@ -39,6 +39,9 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                               'tftp_ip': 'Please choose proper IP address in TFTP Server application...',
                               'tftp_ready': "If you set configuration properly and you are ready, please type in '1' in console. ",
                               'tftp_good': 'Everything was set, you can continue...',
+                              'finish_conf': "Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not. ",
+                              'ssh_move': "Now is the time to download project configs by SSH connections ...",
+
 
                               },
                         'No': {'information_prompt': 'Something in Norwegian language ',
@@ -80,6 +83,8 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                                'tftp_ip': "Something in Norwegian language ",
                                'tftp_ready': "Something in Norwegian language ",
                                'tftp_good': "Something in Norwegian language ",
+                               'finish_conf': "Something in Norwegian language ",
+                               'ssh_move': "Something in Norwegian language ",
 
                                },
                         'Fr': {'information_prompt': 'Something in French language ',
@@ -121,6 +126,8 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                                'tftp_ip': "Something in French language ",
                                'tftp_ready': "Something in French language ",
                                'tftp_good': "Something in French language ",
+                               'finish_conf': "Something in French language ",
+                               'ssh_move': "Something in French language ",
 
                        }
                        }

@@ -1303,4 +1303,107 @@ TFTP server is already running or socket is occupied ...
  
 Now it is time to check TFTP Server
  
-If you are ready and TFTP Server is not running, please type in '1' in console. 
+If you are ready and TFTP Server is not running, please type in '1' in console. Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  17/02/2022 12:17:01
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-02-17.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 6
+ 
+ 
+Which device do you want to connect? TDS-1_A
+ 
+Your list of possible devices to configure: 
+TDS-1_A
+ 
+ 
+You have chosen this configuration...
+COM6 ----> TDS-1_A
+Please wait patiently...
+ 
+Your device has not been configured yet. What do you want to do with it?
+ 
+Your device has been configured properly ---> TDS-1_A.
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not. 1
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
+Now is the time to download project configs by SSH connections ...
+ 
+Now it is time to check TFTP Server
+ 
+If you are ready and TFTP Server is not running, please type in '1' in console. Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  17/02/2022 12:19:29
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-02-17.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 5
+ 
+ 
+Which device do you want to connect? TDS-1_A
+ 
+Your list of possible devices to configure: 
+TDS-1_A
+ 
+ 
+You have chosen this configuration...
+COM5 ----> TDS-1_A
+Please wait patiently...
+ 
+Your device has not been configured yet. What do you want to do with it?
+ 
+Your device has been configured properly ---> TDS-1_A.
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not. 1
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
+Now is the time to download project configs by SSH connections ...
+ 
+Now it is time to check TFTP Server
+ 
+If you are ready and TFTP Server is not running, please type in '1' in console. 1
+ 
+Everything is fine, now you can turn on your TFTP SERVER...
+ 
+Your TFTP server is running now...
+ 
+Please choose proper folder with configs in TFTP Server application...
+ 
+Please choose proper IP address in TFTP Server application...
+ 
+If you set configuration properly and you are ready, please type in '1' in console. 1
+ 
+Everything was set, you can continue...
+ 
+True
+Waiting about 10 seconds for SSH connection to be established ...

@@ -175,7 +175,8 @@ while running_flag:
 
 
                             # question if user has finished initial configuration of devices
-                            finish_conf = input("Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not.")
+                            finish_conf = input(lang_expressions['finish_conf'])
+                            print(finish_conf)
                             if finish_conf == '1':
                                 # exit the COM connections
                                 device_flag = False
@@ -211,7 +212,7 @@ while running_flag:
 
         # SSH CONNECTIONS
         else:
-            print("Now is the time to download project configs by SSH connections ...")
+            print(lang_expressions['ssh_move'])
 
             # checking ip address but need to be commented
 #             while ip_flag == False:
@@ -240,10 +241,13 @@ while running_flag:
             # waiting 10 seconds to get configuration ready
             sleep(10)
 
+            # checking how to connect to more devices
+            for x in range(1,10):
+                print(f"checking ssh connections to 172.30.100.{x}")
 
-            # TODO: ADD ARGUMENTS
-            new_host = '172.30.100.10'
-            ssh_con(file='TDS-1_A_test.txt', host = new_host)
+#             # TODO: ADD ARGUMENTS
+#             new_host = '172.30.100.10'
+#             ssh_con(file='TDS-1_A_test.txt', host = new_host)
 
 
     else:
