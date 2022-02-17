@@ -41,7 +41,7 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                               'tftp_good': 'Everything was set, you can continue...',
                               'finish_conf': "Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not. ",
                               'ssh_move': "Now is the time to download project configs by SSH connections ...",
-
+                              'conf_files': "This is a list of possible project configurations...",
 
                               },
                         'No': {'information_prompt': 'Something in Norwegian language ',
@@ -85,6 +85,8 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                                'tftp_good': "Something in Norwegian language ",
                                'finish_conf': "Something in Norwegian language ",
                                'ssh_move': "Something in Norwegian language ",
+                               'conf_files': "Something in Norwegian language ",
+
 
                                },
                         'Fr': {'information_prompt': 'Something in French language ',
@@ -128,6 +130,7 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                                'tftp_good': "Something in French language ",
                                'finish_conf': "Something in French language ",
                                'ssh_move': "Something in French language ",
+                               'conf_files': "Something in French language ",
 
                        }
                        }

@@ -8,7 +8,7 @@ from lib.languages import listing_languages, reading_language
 from lib.data import ip_number, decorator_1
 from lib.logging import *
 from lib.network import ssh_con
-from lib.functions import printing_logs, creating_timestamp, start_tftp, user_tftp, final_tftp
+from lib.functions import printing_logs, creating_timestamp, start_tftp, user_tftp, final_tftp, printing_confs
 import sys
 
 
@@ -133,7 +133,7 @@ while running_flag:
 
                     # TODO: needs to be commented
                     # returning next ip number and full name of configured device to download to specified device
-                        # our_conf = creating_proper_configuration(user_device='test1aaa', port_num=device_ports['Gigabit'], ip_add = ip_number)
+                        # our_conf = creating_proper_configuration(user_device='test1aaa', port_num=22, ip_add = 213)
                         # returning tuple with full name device and next iip number to bes used
                         # actual_device = our_conf[1]
                         # ip_number = our_conf[0]
@@ -247,12 +247,17 @@ while running_flag:
                 print(f"checking ssh connections to 172.30.100.{x}")
 
             while ssh_flag and working_tftp:
-                print("Some stuff to do later")
-                sleep(5)
+                print("Which ip address do you want to connect?")
+                new_host = input("Please type device ip address... ")
+                print(new_host)
+                print(decorator_1)
+                # printing all possible project configurations
+                printing_confs(lang_dict = lang_expressions)
+                sleep(10)
 
-#             # TODO: ADD ARGUMENTS
-#             new_host = '172.30.100.10'
-#             ssh_con(file='TDS-1_A_test.txt', host = new_host)
+                # TODO: ADD ARGUMENTS
+#                 new_host = '172.30.100.10'
+#                 ssh_con(file='TDS-1_A_test.txt', host = new_host)
 
 
     else:

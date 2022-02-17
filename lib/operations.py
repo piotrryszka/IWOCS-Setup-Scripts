@@ -14,7 +14,7 @@ def opening_device_list(file_name):
 
 # reading commands from files (add argument to make this happen)
 def reading_conf_files(file):
-    with open(f'initial-configuration-files/{file}') as file:
+    with open(f'user-configuration-files/{file}') as file:
         # getting commands from list
         content_list = file.readlines()
         stripped_list = [s.strip() for s in content_list]
@@ -38,7 +38,7 @@ def creating_proper_configuration(user_device, port_num, ip_add):
             if x == ' ip address x.x.x.x y.y.y.y':
                 ip_index = content_list.index(x)
                 content_list[ip_index] = f' ip address 172.30.100.{str(ip_add)} 255.255.255.0'
-        with open(f'initial-configuration-files/cisco-switch4010-{user_device}-172.30.100.{str(ip_add)}', 'w') as file:
+        with open(f'user-configuration-files/cisco-switch4010-{user_device}-172.30.100.{str(ip_add)}', 'w') as file:
             for row in content_list:
                 file.write(str(row) + '\n')
             # adding one to create a new IP ADDRESS
