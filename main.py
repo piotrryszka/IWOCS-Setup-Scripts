@@ -2,7 +2,7 @@
 from serial import Serial
 from time import sleep
 from lib.commands import send_to_console, checking_switch_ports, checking_ip_address, checking_device, check_tftp, to_conf_mode
-from lib.operations import opening_device_list, reading_conf_files, creating_proper_configuration, deleting_files
+from lib.operations import opening_device_list, reading_conf_files, creating_proper_configuration, deleting_files, listing_conf
 from lib.booting import checking_booting
 from lib.languages import listing_languages, reading_language
 from lib.data import ip_number, decorator_1
@@ -56,6 +56,7 @@ while running_flag:
     # info to user how to leave any part of program
     print(lang_expressions['information_prompt'])
     print(decorator_1)
+
 
     # deleting logs
     printing_logs(lang_expressions)
@@ -178,6 +179,7 @@ while running_flag:
                             # question if user has finished initial configuration of devices
                             finish_conf = input(lang_expressions['finish_conf'])
                             print(finish_conf)
+                            print(decorator_1)
                             if finish_conf == '1':
                                 # exit the COM connections
                                 device_flag = False
@@ -251,14 +253,23 @@ while running_flag:
                 new_host = input("Please type device ip address... ")
                 print(new_host)
                 print(decorator_1)
+
+                # TODO: this printing is unnecessary because it is in the function
+                # TODO: needs deleting generally
                 # printing all possible project configurations
-                printing_confs(lang_dict = lang_expressions)
+                # printing_confs(lang_dict = lang_expressions)
                 sleep(10)
+
+                # listing possible confs to download to the device
+                user_conf = listing_conf(lang_expressions['dev_conf'])
+                print(user_conf)
 
                 # TODO: ADD ARGUMENTS
 #                 new_host = '172.30.100.10'
 #                 ssh_con(file='TDS-1_A_test.txt', host = new_host)
 
+                # ADDED ARGUMENTS
+                #ssh_con(file = user_conf, host = new_host)
 
     else:
         print(lang_expressions['not_complete'])

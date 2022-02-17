@@ -1816,4 +1816,425 @@ Which ip address do you want to connect?
 Please type device ip address... This is a list of all saved session logs: 
 ETAS-1, MSC-1, MSH-1, MSH-2, MSH-3, MSS-1_a, MSS-1_b, MSW-1_A, MSW-1_B, MSX-1_A, MSX-1_B, SDG-1_PCU, SDG-Primary, SDG-Secondary, TAS-1, TDS-1_A, TDS-1_A_test.txt, TDS-1_B, TDS-1_PCU, TIR-1_kbglab, TIR-1_PCU
 Which ip address do you want to connect?
+Please type device ip address... Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  17/02/2022 16:19:57
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-02-17.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 6
+ 
+ 
+Which device do you want to connect? TDS-1_A
+ 
+Your list of possible devices to configure: 
+TDS-1_A
+ 
+ 
+You have chosen this configuration...
+COM6 ----> TDS-1_A
+Please wait patiently...
+ 
+Your device has not been configured yet. What do you want to do with it?
+ 
+Your device has been configured properly ---> TDS-1_A.
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not. 1
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
+Now is the time to download project configs by SSH connections ...
+ 
+Now it is time to check TFTP Server
+ 
+If you are ready and TFTP Server is not running, please type in '1' in console. 1
+ 
+Everything is fine, now you can turn on your TFTP SERVER...
+ 
+Your TFTP server is running now...
+ 
+Please choose proper folder with configs in TFTP Server application...
+ 
+Please choose proper IP address in TFTP Server application...
+ 
+If you set configuration properly and you are ready, please type in '1' in console. 1
+ 
+Everything was set, you can continue...
+ 
+Waiting about 10 seconds for SSH connection to be established ...
+checking ssh connections to 172.30.100.1
+checking ssh connections to 172.30.100.2
+checking ssh connections to 172.30.100.3
+checking ssh connections to 172.30.100.4
+checking ssh connections to 172.30.100.5
+checking ssh connections to 172.30.100.6
+checking ssh connections to 172.30.100.7
+checking ssh connections to 172.30.100.8
+checking ssh connections to 172.30.100.9
+Which ip address do you want to connect?
+Please type device ip address... 172.10.20.2
+ 
+This is a list of possible project configurations...
+ETAS-1, MSC-1, MSH-1, MSH-2, MSH-3, MSS-1_a, MSS-1_b, MSW-1_A, MSW-1_B, MSX-1_A, MSX-1_B, SDG-1_PCU, SDG-Primary, SDG-Secondary, TAS-1, TDS-1_A, TDS-1_A_test.txt, TDS-1_B, TDS-1_PCU, TIR-1_kbglab, TIR-1_PCU
+Which ip address do you want to connect?
 Please type device ip address... 
+ 
+This is a list of possible project configurations...
+ETAS-1, MSC-1, MSH-1, MSH-2, MSH-3, MSS-1_a, MSS-1_b, MSW-1_A, MSW-1_B, MSX-1_A, MSX-1_B, SDG-1_PCU, SDG-Primary, SDG-Secondary, TAS-1, TDS-1_A, TDS-1_A_test.txt, TDS-1_B, TDS-1_PCU, TIR-1_kbglab, TIR-1_PCU
+Which ip address do you want to connect?
+Please type device ip address... 
+ 
+This is a list of possible project configurations...
+ETAS-1, MSC-1, MSH-1, MSH-2, MSH-3, MSS-1_a, MSS-1_b, MSW-1_A, MSW-1_B, MSX-1_A, MSX-1_B, SDG-1_PCU, SDG-Primary, SDG-Secondary, TAS-1, TDS-1_A, TDS-1_A_test.txt, TDS-1_B, TDS-1_PCU, TIR-1_kbglab, TIR-1_PCU
+Which ip address do you want to connect?
+Please type device ip address... s
+ 
+This is a list of possible project configurations...
+ETAS-1, MSC-1, MSH-1, MSH-2, MSH-3, MSS-1_a, MSS-1_b, MSW-1_A, MSW-1_B, MSX-1_A, MSX-1_B, SDG-1_PCU, SDG-Primary, SDG-Secondary, TAS-1, TDS-1_A, TDS-1_A_test.txt, TDS-1_B, TDS-1_PCU, TIR-1_kbglab, TIR-1_PCU
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  17/02/2022 16:25:40
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-02-17.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 6
+ 
+ 
+Which device do you want to connect? TDS-1_A
+ 
+Your list of possible devices to configure: 
+TDS-1_A
+ 
+ 
+You have chosen this configuration...
+COM6 ----> TDS-1_A
+Please wait patiently...
+ 
+Your device has not been configured yet. What do you want to do with it?
+ 
+Your device has been configured properly ---> TDS-1_A.
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not. 1
+ 
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
+Now is the time to download project configs by SSH connections ...
+ 
+Now it is time to check TFTP Server
+ 
+If you are ready and TFTP Server is not running, please type in '1' in console. 1
+ 
+TFTP server is already running or socket is occupied ...
+ 
+ 
+Now it is time to check TFTP Server
+ 
+If you are ready and TFTP Server is not running, please type in '1' in console. 1
+ 
+Everything is fine, now you can turn on your TFTP SERVER...
+ 
+Your TFTP server is running now...
+ 
+Please choose proper folder with configs in TFTP Server application...
+ 
+Please choose proper IP address in TFTP Server application...
+ 
+If you set configuration properly and you are ready, please type in '1' in console. 1
+ 
+Everything was set, you can continue...
+ 
+Waiting about 10 seconds for SSH connection to be established ...
+checking ssh connections to 172.30.100.1
+checking ssh connections to 172.30.100.2
+checking ssh connections to 172.30.100.3
+checking ssh connections to 172.30.100.4
+checking ssh connections to 172.30.100.5
+checking ssh connections to 172.30.100.6
+checking ssh connections to 172.30.100.7
+checking ssh connections to 172.30.100.8
+checking ssh connections to 172.30.100.9
+Which ip address do you want to connect?
+Please type device ip address... 172
+ 
+This is a list of possible project configurations...
+ETAS-1, MSC-1, MSH-1, MSH-2, MSH-3, MSS-1_a, MSS-1_b, MSW-1_A, MSW-1_B, MSX-1_A, MSX-1_B, SDG-1_PCU, SDG-Primary, SDG-Secondary, TAS-1, TDS-1_A, TDS-1_A_test.txt, TDS-1_B, TDS-1_PCU, TIR-1_kbglab, TIR-1_PCU
+Which ip address do you want to connect?
+Please type device ip address... 
+ 
+This is a list of possible project configurations...
+ETAS-1, MSC-1, MSH-1, MSH-2, MSH-3, MSS-1_a, MSS-1_b, MSW-1_A, MSW-1_B, MSX-1_A, MSX-1_B, SDG-1_PCU, SDG-Primary, SDG-Secondary, TAS-1, TDS-1_A, TDS-1_A_test.txt, TDS-1_B, TDS-1_PCU, TIR-1_kbglab, TIR-1_PCU
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  17/02/2022 16:27:43
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-02-17.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 6
+ 
+ 
+Which device do you want to connect? TDS
+ 
+Your list of possible devices to configure: 
+TDS-1_A, TDS-1_B
+ 
+Which device do you want to connect? Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  17/02/2022 16:40:25
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-02-17.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  17/02/2022 16:40:45
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+False
+This is a list of all saved session logs: 
+2022-02-17.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  17/02/2022 16:44:29
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+Please provide a proper name of configuration... This is a list of all saved session logs: 
+2022-02-17.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  17/02/2022 16:45:07
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+Please provide a proper name of configuration... This is a list of all saved session logs: 
+2022-02-17.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  17/02/2022 16:45:14
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+Please provide a proper name of configuration... This is a list of all saved session logs: 
+2022-02-17.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  17/02/2022 16:45:23
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+Please provide a proper name of configuration... This is a list of all saved session logs: 
+2022-02-17.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  17/02/2022 16:45:47
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+['ETAS-1', 'MSC-1', 'MSH-1', 'MSH-2', 'MSH-3', 'MSS-1_a', 'MSS-1_b', 'MSW-1_A', 'MSW-1_B', 'MSX-1_A', 'MSX-1_B', 'SDG-1_PCU', 'SDG-Primary', 'SDG-Secondary', 'TAS-1', 'TDS-1_A', 'TDS-1_A_test.txt', 'TDS-1_B', 'TDS-1_PCU', 'TIR-1_kbglab', 'TIR-1_PCU']
+Please provide a proper name of configuration... This is a list of all saved session logs: 
+2022-02-17.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  17/02/2022 16:46:44
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+['ETAS-1', 'MSC-1', 'MSH-1', 'MSH-2', 'MSH-3', 'MSS-1_a', 'MSS-1_b', 'MSW-1_A', 'MSW-1_B', 'MSX-1_A', 'MSX-1_B', 'SDG-1_PCU', 'SDG-Primary', 'SDG-Secondary', 'TAS-1', 'TDS-1_A', 'TDS-1_A_test.txt', 'TDS-1_B', 'TDS-1_PCU', 'TIR-1_kbglab', 'TIR-1_PCU']
+Please provide a proper name of configuration... Please provide a proper name of configuration... Please provide a proper name of configuration... Please provide a proper name of configuration... Please provide a proper name of configuration... This is a list of all saved session logs: 
+2022-02-17.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  17/02/2022 16:47:53
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+ETAS-1, MSC-1, MSH-1, MSH-2, MSH-3, MSS-1_a, MSS-1_b, MSW-1_A, MSW-1_B, MSX-1_A, MSX-1_B, SDG-1_PCU, SDG-Primary, SDG-Secondary, TAS-1, TDS-1_A, TDS-1_A_test.txt, TDS-1_B, TDS-1_PCU, TIR-1_kbglab, TIR-1_PCU
+Please provide a proper name of configuration... This is a list of all saved session logs: 
+2022-02-17.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  17/02/2022 16:48:51
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+ETAS-1, MSC-1, MSH-1, MSH-2, MSH-3, MSS-1_a, MSS-1_b, MSW-1_A, MSW-1_B, MSX-1_A, MSX-1_B, SDG-1_PCU, SDG-Primary, SDG-Secondary, TAS-1, TDS-1_A, TDS-1_A_test.txt, TDS-1_B, TDS-1_PCU, TIR-1_kbglab, TIR-1_PCU
+ 
+Please provide a proper name of configuration... 1
+ 
+Please provide a proper name of configuration... 1
+ 
+Please provide a proper name of configuration... ETAS-1
+ 
+This is a list of all saved session logs: 
+2022-02-17.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  17/02/2022 16:53:34
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-02-17.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 6
+ 
+ 
+Which device do you want to connect? TDS-1_A
+ 
+Your list of possible devices to configure: 
+TDS-1_A
+ 
+ 
+You have chosen this configuration...
+COM6 ----> TDS-1_A
+Please wait patiently...
+ 
+Your device has not been configured yet. What do you want to do with it?
+ 
+Your device has been configured properly ---> TDS-1_A.
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not. 1
+ 
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
+Now is the time to download project configs by SSH connections ...
+ 
+Now it is time to check TFTP Server
+ 
+If you are ready and TFTP Server is not running, please type in '1' in console. 1
+ 
+TFTP server is already running or socket is occupied ...
+ 
+ 
+Now it is time to check TFTP Server
+ 
+If you are ready and TFTP Server is not running, please type in '1' in console. 1
+ 
+Everything is fine, now you can turn on your TFTP SERVER...
+ 
+Your TFTP server is running now...
+ 
+Please choose proper folder with configs in TFTP Server application...
+ 
+Please choose proper IP address in TFTP Server application...
+ 
+If you set configuration properly and you are ready, please type in '1' in console. 1
+ 
+Everything was set, you can continue...
+ 
+Waiting about 10 seconds for SSH connection to be established ...
+checking ssh connections to 172.30.100.1
+checking ssh connections to 172.30.100.2
+checking ssh connections to 172.30.100.3
+checking ssh connections to 172.30.100.4
+checking ssh connections to 172.30.100.5
+checking ssh connections to 172.30.100.6
+checking ssh connections to 172.30.100.7
+checking ssh connections to 172.30.100.8
+checking ssh connections to 172.30.100.9
+Which ip address do you want to connect?
+Please type device ip address... 111
+ 
+ETAS-1, MSC-1, MSH-1, MSH-2, MSH-3, MSS-1_a, MSS-1_b, MSW-1_A, MSW-1_B, MSX-1_A, MSX-1_B, SDG-1_PCU, SDG-Primary, SDG-Secondary, TAS-1, TDS-1_A, TDS-1_A_test.txt, TDS-1_B, TDS-1_PCU, TIR-1_kbglab, TIR-1_PCU
+ 
+Please provide a proper name of configuration... E
+ 
+ETAS-1, MSC-1, MSH-1, MSH-2, MSH-3, MSS-1_a, MSS-1_b, MSW-1_A, MSW-1_B, MSX-1_A, MSX-1_B, SDG-1_PCU, SDG-Primary, SDG-Secondary, TAS-1, TDS-1_A, TDS-1_A_test.txt, TDS-1_B, TDS-1_PCU, TIR-1_kbglab, TIR-1_PCU
+ 
+Please provide a proper name of configuration... E
+ 
+ETAS-1, MSC-1, MSH-1, MSH-2, MSH-3, MSS-1_a, MSS-1_b, MSW-1_A, MSW-1_B, MSX-1_A, MSX-1_B, SDG-1_PCU, SDG-Primary, SDG-Secondary, TAS-1, TDS-1_A, TDS-1_A_test.txt, TDS-1_B, TDS-1_PCU, TIR-1_kbglab, TIR-1_PCU
+ 
+Please provide a proper name of configuration... 

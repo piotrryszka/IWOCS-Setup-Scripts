@@ -3,6 +3,9 @@
 # imports
 from lib.commands import send_to_console
 import os
+from os import listdir
+from os.path import isfile, join
+from lib.data import decorator_1
 
 # opening possible devices to configure
 def opening_device_list(file_name):
@@ -64,3 +67,23 @@ def deleting_files(lang_dict, user_input):
         return to_leave
     else:
         return to_leave
+
+# listing project configurations and making a list
+def listing_conf(lang_dict):
+    running_flag = True
+
+    # creating a list of project configs
+    onlyfiles = [f for f in listdir('tftp-conf-files') if isfile(join('tftp-conf-files', f))]
+
+    while running_flag:
+        print(*onlyfiles, sep = ', ')
+        print(decorator_1)
+
+        user_choice = input("Please provide a proper name of configuration... ")
+        print(user_choice)
+        print(decorator_1)
+        if user_choice in onlyfiles:
+            running_flag = False
+            return user_choice
+        else:
+            pass
