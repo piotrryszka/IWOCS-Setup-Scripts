@@ -118,25 +118,25 @@ while running_flag:
                         # try:
 
                         # connection set
-                        # ser = Serial(COM_string, COM_speed)
+                        ser = Serial(COM_string, COM_speed)
 
                         # waiting for router/switch to boot
-                        # user_boot_flag = checking_booting(port = ser)
+                        user_boot_flag = checking_booting(port = ser)
 
                         # counting number of gigabit and fast ports
-                        # device_ports = checking_switch_ports(ser_port = ser)
+                        device_ports = checking_switch_ports(ser_port = ser)
 
 
                         # checking if device is really the device, which was wanted by user
-                        # proper_device = checking_device(ser_port = ser, user_device = user_device, lang_dict = lang_expressions)
+                        proper_device = checking_device(ser_port = ser, user_device = user_device, lang_dict = lang_expressions)
 
                     # TODO: needs to be commented
                     # returning next ip number and full name of configured device to download to specified device
-                        # our_conf = creating_proper_configuration(user_device='test1aaa', port_num=device_ports['Gigabit'], ip_add = ip_number)
+                        our_conf = creating_proper_configuration(user_device='test1aaa', port_num=device_ports['Gigabit'], ip_add = ip_number)
                         # returning tuple with full name device and next iip number to bes used
-                        # actual_device = our_conf[1]
-                        # ip_number = our_conf[0]
-                        # our_conf = creating_proper_configuration(user_device='test2aaa', port_num=device_ports['Gigabit'], ip_add = ip_number)
+                        actual_device = our_conf[1]
+                        ip_number = our_conf[0]
+                        our_conf = creating_proper_configuration(user_device='test2aaa', port_num=device_ports['Gigabit'], ip_add = ip_number)
 
                         # TODO: check in lab, proper version of configuration
 #                         our_conf = creating_proper_configuration(user_device = user_device, port_num = device_ports, ip_add = ip_number)
@@ -145,17 +145,20 @@ while running_flag:
 
                         #TODO: check in lab how script work if choosing new devices
 
-                        # need to be deleted
-                        user_boot_flag = True
-                        proper_device = True
-
                         if user_boot_flag and proper_device:
+
+                            # checking ip address but need to be commented
+                            while ip_flag == False:
+                                ip_set = checking_ip_address(lang_dict = lang_expressions)
+                                if ip_set == True:
+                                    ip_flag = True
+                            ip_flag = False
 
                             print(lang_expressions['not_configured'])
                             print(decorator_1)
 
                             # going to configuration mode
-                            # to_conf_mode(ser)
+                            to_conf_mode(ser)
 
                             # TODO: needs to be commented later as it is should be chosen by user
                             # opening file with configuration
@@ -164,26 +167,42 @@ while running_flag:
 
                             # executing commands from the list
                             for command in stripped_list:
-                                pass
-                                # send_to_console(ser, command)
+                                send_to_console(ser, command)
 
                             # closing connection
-                            # ser.close()
+                            ser.close()
                             print(f"{lang_expressions['proper_conf']}{user_device}.")
-                            # print(f"{lang_expressions['close_con']}{ser.name}.")
+                            print(f"{lang_expressions['close_con']}{ser.name}.")
                             print(decorator_1)
 
 
-                            # question if user has finished initial configuration of devices
-                            finish_conf = input("Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not.")
-                            if finish_conf == '1':
-                                # exit the COM connections
-                                device_flag = False
-                                com_flag = False
-                            else:
-                                # configuring next device
-                                device_flag = True
-                                pass
+                            # TODO: need to move it
+                            # TODO: first all initial configs, later all project configs
+
+
+                            # SSH connection established
+                            print(lang_expressions['waiting_ssh'])
+                            # waiting 10 seconds to get configuration ready
+                            sleep(10)
+
+                             # checking if server tftp is already running
+                            while tftp_flag:
+                                tftp_flag = check_tftp(lang_dict = lang_expressions)
+
+                            # starting TFTP server
+                            start_tftp(lang_dict = lang_expressions)
+
+                            # user instructions to set config of TFTP Server
+                            user_tftp(lang_dict = lang_expressions)
+
+                            # returning true and false -> to next while loop probably in the future
+                            # checking if server is running
+                            e=final_tftp()
+                            print(e)
+
+                            # TODO: ADD ARGUMENTS
+                            new_host = '172.30.100.10'
+                            ssh_con(file='TDS-1_A_test.txt', host = new_host)
 
                         # TODO: needs to be uncommented
                         # except
@@ -204,48 +223,11 @@ while running_flag:
                         break
                     else:
                         print(lang_expressions['not_supported'])
+
             elif user_COM == str(0):
                 break
             else:
                 print(lang_expressions['not_number'])
-
-        # SSH CONNECTIONS
-        else:
-            print("Now is the time to download project configs by SSH connections ...")
-
-            # checking ip address but need to be commented
-#             while ip_flag == False:
-#                 ip_set = checking_ip_address(lang_dict = lang_expressions)
-#                 if ip_set == True:
-#                     ip_flag = True
-
-
-            # checking if server tftp is already running
-            while tftp_flag:
-                tftp_flag = check_tftp(lang_dict = lang_expressions)
-
-            # starting TFTP server
-            start_tftp(lang_dict = lang_expressions)
-
-            # user instructions to set config of TFTP Server
-            user_tftp(lang_dict = lang_expressions)
-
-            # returning true and false -> to next while loop probably in the future
-            # checking if server is running
-            e=final_tftp()
-            print(e)
-
-            # SSH connection established
-            print(lang_expressions['waiting_ssh'])
-            # waiting 10 seconds to get configuration ready
-            sleep(10)
-
-
-            # TODO: ADD ARGUMENTS
-            new_host = '172.30.100.10'
-            ssh_con(file='TDS-1_A_test.txt', host = new_host)
-
-
     else:
         print(lang_expressions['not_complete'])
         running_flag = False

@@ -1,3 +1,0 @@
-Available languages are presented below:
-En, No, Fr
-Please choose one of possible languages: 
