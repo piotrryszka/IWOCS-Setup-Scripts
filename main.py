@@ -22,6 +22,7 @@ ip_flag = False # flag if ip is correctly set by user
 proper_language = False # flag if the language chosen by user is possible to be used
 del_flag = False # flag to check what user want to do after deleting logs
 tftp_flag = True # flag to check if the port UDP 69 is taken
+ssh_flag = True # flag to configure devices by ssh connections
 
 # FIXED Variables:
 COM_speed = 9600 # serial port speed
@@ -233,8 +234,8 @@ while running_flag:
 
             # returning true and false -> to next while loop probably in the future
             # checking if server is running
-            e=final_tftp()
-            print(e)
+            working_tftp = final_tftp()
+
 
             # SSH connection established
             print(lang_expressions['waiting_ssh'])
@@ -244,6 +245,10 @@ while running_flag:
             # checking how to connect to more devices
             for x in range(1,10):
                 print(f"checking ssh connections to 172.30.100.{x}")
+
+            while ssh_flag and working_tftp:
+                print("Some stuff to do later")
+                sleep(5)
 
 #             # TODO: ADD ARGUMENTS
 #             new_host = '172.30.100.10'
