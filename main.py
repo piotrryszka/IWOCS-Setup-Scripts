@@ -132,8 +132,8 @@ while running_flag:
                         # checking if device is really the device, which was wanted by user
                         # proper_device = checking_device(ser_port = ser, user_device = user_device, lang_dict = lang_expressions)
 
-                    # TODO: needs to be commented
-                    # returning next ip number and full name of configured device to download to specified device
+                        # TODO: needs to be commented
+                        # returning next ip number and full name of configured device to download to specified device
                         # our_conf = creating_proper_configuration(user_device='test1aaa', port_num=22, ip_add = 213)
                         # returning tuple with full name device and next iip number to bes used
                         # actual_device = our_conf[1]
@@ -217,6 +217,7 @@ while running_flag:
         else:
             print(lang_expressions['ssh_move'])
 
+            # TODO: UNCOMMENT
             # checking ip address but need to be commented
 #             while ip_flag == False:
 #                 ip_set = checking_ip_address(lang_dict = lang_expressions)
@@ -250,12 +251,6 @@ while running_flag:
                 new_host = input(lang_expressions['ip_add'])
                 print(new_host)
                 print(decorator_1)
-
-                # TODO: this printing is unnecessary because it is in the function
-                # TODO: needs deleting generally
-                # printing all possible project configurations
-                # printing_confs(lang_dict = lang_expressions)
-                sleep(10)
 
                 # listing possible confs to download to the device
                 user_conf = listing_conf(lang_expressions['dev_conf'])
