@@ -242,12 +242,9 @@ while running_flag:
             # SSH connection established
             print(lang_expressions['waiting_ssh'])
             # waiting 10 seconds to get configuration ready
-            sleep(10)
+            print(decorator_1)
 
-            # checking how to connect to more devices
-            for x in range(1,10):
-                print(f"checking ssh connections to 172.30.100.{x}")
-
+            # SSH CONFIGURATION LOOP
             while ssh_flag and working_tftp:
                 print("Which ip address do you want to connect?")
                 new_host = input("Please type device ip address... ")
@@ -270,6 +267,17 @@ while running_flag:
 
                 # ADDED ARGUMENTS
                 #ssh_con(file = user_conf, host = new_host)
+
+                # question about finishing configuration by TFTP and SSH
+                user_fin = input("Have you already configured all your devices? Type '1' if yes, anything else if not... ")
+                if user_fin == '1':
+                    ssh_flag = False
+                    print("Thank you for using our script... ")
+                    print(decorator_1)
+                    break
+                else:
+                    pass
+
 
     else:
         print(lang_expressions['not_complete'])
