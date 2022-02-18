@@ -43,7 +43,10 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                               'ssh_move': "Now is the time to download project configs by SSH connections ...",
                               'conf_files': "This is a list of possible project configurations...",
                               'dev_conf': "Please provide a proper name of configuration: ",
-
+                              'ip_connect': "Which ip address do you want to connect?",
+                              'ip_add': "Please type device ip address... ",
+                              'user_finish': "Have you already configured all your devices? Type '1' if yes, anything else if not... ",
+                              'thank_you': "Thank you for using our script... ",
 
                               },
                         'No': {'information_prompt': 'Something in Norwegian language ',
@@ -89,6 +92,10 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                                'ssh_move': "Something in Norwegian language ",
                                'conf_files': "Something in Norwegian language ",
                                'dev_conf': "Something in Norwegian language ",
+                               'ip_connect': "Something in Norwegian language ",
+                               'ip_add': "Something in Norwegian language ",
+                               'user_finish': "Something in Norwegian language ",
+                               'thank_you': "Something in Norwegian language ",
 
 
 
@@ -136,6 +143,10 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                                'ssh_move': "Something in French language ",
                                'conf_files': "Something in French language ",
                                'dev_conf': "Something in French language ",
+                               'ip_connect': "Something in French language ",
+                               'ip_add': "Something in French language ",
+                               'user_finish': "Something in French language ",
+                               'thank_you': "Something in French language ",
 
                        }
                        }

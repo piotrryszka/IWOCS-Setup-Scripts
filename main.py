@@ -246,8 +246,8 @@ while running_flag:
 
             # SSH CONFIGURATION LOOP
             while ssh_flag and working_tftp:
-                print("Which ip address do you want to connect?")
-                new_host = input("Please type device ip address... ")
+                print(lang_expressions['ip_connect'])
+                new_host = input(lang_expressions['ip_add'])
                 print(new_host)
                 print(decorator_1)
 
@@ -269,10 +269,10 @@ while running_flag:
                 #ssh_con(file = user_conf, host = new_host)
 
                 # question about finishing configuration by TFTP and SSH
-                user_fin = input("Have you already configured all your devices? Type '1' if yes, anything else if not... ")
+                user_fin = input(lang_expressions['user_finish'])
                 if user_fin == '1':
                     ssh_flag = False
-                    print("Thank you for using our script... ")
+                    print(lang_expressions['thank_you'])
                     print(decorator_1)
                     break
                 else:
