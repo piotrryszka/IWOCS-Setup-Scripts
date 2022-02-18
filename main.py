@@ -128,7 +128,6 @@ while running_flag:
                         # counting number of gigabit and fast ports
                         # device_ports = checking_switch_ports(ser_port = ser)
 
-
                         # checking if device is really the device, which was wanted by user
                         # proper_device = checking_device(ser_port = ser, user_device = user_device, lang_dict = lang_expressions)
 
@@ -145,8 +144,7 @@ while running_flag:
 #                         actual_device = our_conf[1]
 #                         ip_number = our_conf[0]
 
-                        #TODO: check in lab how script work if choosing new devices
-
+                        # TODO: DELETE IT
                         # need to be deleted
                         user_boot_flag = True
                         proper_device = True
@@ -235,10 +233,8 @@ while running_flag:
             # user instructions to set config of TFTP Server
             user_tftp(lang_dict = lang_expressions)
 
-            # returning true and false -> to next while loop probably in the future
             # checking if server is running
             working_tftp = final_tftp()
-
 
             # SSH connection established
             print(lang_expressions['waiting_ssh'])
@@ -256,7 +252,6 @@ while running_flag:
                 user_conf = listing_conf(lang_expressions['dev_conf'])
                 print(user_conf)
 
-                # TODO: ADD ARGUMENTS
 #                 new_host = '172.30.100.10'
 #                 ssh_con(file='TDS-1_A_test.txt', host = new_host)
 
