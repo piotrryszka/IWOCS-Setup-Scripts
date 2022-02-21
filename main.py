@@ -2,7 +2,7 @@
 from serial import Serial
 from time import sleep
 from lib.commands import send_to_console, checking_switch_ports, checking_ip_address, checking_device, check_tftp, to_conf_mode
-from lib.operations import opening_device_list, reading_conf_files, creating_proper_configuration, deleting_files, listing_conf
+from lib.operations import opening_device_list, reading_conf_files, creating_proper_configuration, deleting_files, listing_conf, deleting_conf
 from lib.booting import checking_booting
 from lib.languages import listing_languages, reading_language
 from lib.data import ip_number, decorator_1
@@ -272,3 +272,9 @@ while running_flag:
     else:
         print(lang_expressions['not_complete'])
         running_flag = False
+
+# final question after whole script is finished
+user_del_conf = input("Do you want to delete your initial configs? ")
+print(user_del_conf)
+print(decorator_1)
+deleting_conf(lang_expressions, user_del_conf)

@@ -87,3 +87,21 @@ def listing_conf(lang_dict):
             return user_choice
         else:
             pass
+
+def deleting_conf(lang_dict, user_input):
+    to_leave = False
+    files = os.listdir('user-configuration-files')
+    # deleting files
+    if user_input == '1':
+        for file in files:
+            # cannot delete the file from today's date
+            try:
+                os.remove(f'user-configuration-files/{file}')
+            except:
+                pass
+        print("Your created configuration files has been deleted...")
+    elif user_input == '0':
+        to_leave = True
+        return to_leave
+    else:
+        return to_leave
