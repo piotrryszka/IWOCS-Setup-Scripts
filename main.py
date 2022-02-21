@@ -11,7 +11,6 @@ from lib.network import ssh_con
 from lib.functions import printing_logs, creating_timestamp, start_tftp, user_tftp, final_tftp, printing_confs
 import sys
 
-
 # Program flags:
 running_flag = True  # main flag, running program
 system_flag = True  # flag about type of system
@@ -27,10 +26,8 @@ ssh_flag = True # flag to configure devices by ssh connections
 # FIXED Variables:
 COM_speed = 9600 # serial port speed
 
-
 # main project
 while running_flag:
-
     # choosing language
     while not proper_language:
         print("Available languages are presented below:")
@@ -57,7 +54,6 @@ while running_flag:
     print(lang_expressions['information_prompt'])
     print(decorator_1)
 
-
     # deleting logs
     printing_logs(lang_expressions)
     user_del = input(lang_expressions['deleting_logs'])
@@ -69,9 +65,8 @@ while running_flag:
     else:
         pass
 
-    print(decorator_1)
-
     # question about complete system or one module TASK 184
+    print(decorator_1)
     user_system = input(lang_expressions['module_question']).lower()
     print(user_system)
     print(decorator_1)
@@ -84,7 +79,6 @@ while running_flag:
             if user_COM.isnumeric() and user_COM != '0':
                 # Creating string for connection to the device
                 COM_string = "COM" + user_COM
-
 
                 print(decorator_1)
 
@@ -222,7 +216,6 @@ while running_flag:
 #                 if ip_set == True:
 #                     ip_flag = True
 
-
             # checking if server tftp is already running
             while tftp_flag:
                 tftp_flag = check_tftp(lang_dict = lang_expressions)
@@ -267,7 +260,6 @@ while running_flag:
                     break
                 else:
                     pass
-
 
     else:
         print(lang_expressions['not_complete'])
