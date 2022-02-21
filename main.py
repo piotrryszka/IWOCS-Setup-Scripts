@@ -153,7 +153,8 @@ while running_flag:
 
                             # TODO: needs to be commented later as it is should be chosen by user
                             # opening file with configuration
-                            actual_device = 'cisco-switch4010-SDG-2-172.30.100.10'
+                            # actual_device = 'cisco-switch4010-SDG-2-172.30.100.10'
+                            actual_device = 'cisco-switch4010'
                             stripped_list = reading_conf_files(file = actual_device)
 
                             # executing commands from the list
