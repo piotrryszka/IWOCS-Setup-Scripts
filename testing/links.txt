@@ -1,6 +1,3 @@
-TODO
-https://stackoverflow.com/questions/59888222/save-startup-configuration-from-switchs-routers-cisco-with-python-script
-
 TODO:
 pozmienianie funkcji z odczytem na parametrem i wgraniem odpowiedniego configu
 przerobienie configow na pare np cisco switch na cisco switch 4010 i cisco switch 2000
