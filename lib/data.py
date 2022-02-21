@@ -47,6 +47,10 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                               'ip_add': "Please type device ip address... ",
                               'user_finish': "Have you already configured all your devices? Type '1' if yes, anything else if not... ",
                               'thank_you': "Thank you for using our script... ",
+                              'thank_you_v2': "Thank you for using our script, hope you enjoy it ...",
+                              'del_conf': "Your created configuration files has been deleted ...",
+                              'del_conf_question': "Do you want to delete your initial configs? Type '1' if yes, anything else if not ... ",
+
 
                               },
                         'No': {'information_prompt': 'Something in Norwegian language ',
@@ -96,6 +100,9 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                                'ip_add': "Something in Norwegian language ",
                                'user_finish': "Something in Norwegian language ",
                                'thank_you': "Something in Norwegian language ",
+                               'thank_you_v2': "Something in Norwegian language ",
+                               'del_conf': "Something in Norwegian language ",
+                               'del_conf_question': "Something in Norwegian language ",
 
 
 
@@ -147,6 +154,9 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                                'ip_add': "Something in French language ",
                                'user_finish': "Something in French language ",
                                'thank_you': "Something in French language ",
+                               'thank_you_v2': "Something in French language ",
+                               'del_conf': "Something in French language ",
+                               'del_conf_question': "Something in French language ",
 
                        }
                        }
@@ -178,12 +188,6 @@ decorator_1 = ' '
 # ssh connection data, needs to be properly imported into main.py when adding arguments
 username = 'walter'
 password = 'mel0n98'
-
-# TESTING IN LINUX ENVIRONMENT
-# to check connection
-# username = "msztaba"
-# # needs to be hashed
-# password = "098azerty@MS"
 
 # IP address of tftp server -> user computer
 server_ip = '172.30.100.91'

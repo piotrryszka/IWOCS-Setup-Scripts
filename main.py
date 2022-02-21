@@ -274,7 +274,7 @@ while running_flag:
         running_flag = False
 
 # final question after whole script is finished
-user_del_conf = input("Do you want to delete your initial configs? ")
+user_del_conf = input(lang_expressions['del_conf_question'])
 print(user_del_conf)
 print(decorator_1)
-deleting_conf(lang_expressions, user_del_conf)
+deleting_conf(lang_dict = lang_expressions, user_input = user_del_conf)

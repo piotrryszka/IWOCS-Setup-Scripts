@@ -413,3 +413,90 @@ It is not a complete system, I am sorry, I can't help you.
 Do you want to delete your initial configs? 1
  
 Your created configuration files has been deleted...
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  21/02/2022 09:14:10
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-02-21.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 0
+ 
+It is not a complete system, I am sorry, I can't help you.
+Do you want to delete your initial configs? 1
+ 
+Your created configuration files has been deleted ...
+Thank you for using our script, hope you enjoy it ...
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  21/02/2022 09:18:21
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-02-21.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 0
+ 
+It is not a complete system, I am sorry, I can't help you.
+Do you want to delete your initial configs? 1
+ 
+Your created configuration files has been deleted ...
+Thank you for using our script, hope you enjoy it ...
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  21/02/2022 09:18:32
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-02-21.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 0
+ 
+It is not a complete system, I am sorry, I can't help you.
+Do you want to delete your initial configs? 0
+ 
+Thank you for using our script, hope you enjoy it ...
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  21/02/2022 09:23:15
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-02-21.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 0
+ 
+It is not a complete system, I am sorry, I can't help you.
+Do you want to delete your initial configs? Type '1' if yes, anything else if not ... 1
+ 
+Your created configuration files has been deleted ...
+Thank you for using our script, hope you enjoy it ...
