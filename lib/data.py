@@ -51,7 +51,6 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                               'del_conf': "Your created configuration files has been deleted ...",
                               'del_conf_question': "Do you want to delete your initial configs? Type '1' if yes, anything else if not: ",
 
-
                               },
                         'No': {'information_prompt': 'Something in Norwegian language ',
                                'module_question': 'Something in Norwegian language ',
@@ -103,8 +102,6 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                                'thank_you_v2': "Something in Norwegian language ",
                                'del_conf': "Something in Norwegian language ",
                                'del_conf_question': "Something in Norwegian language ",
-
-
 
                                },
                         'Fr': {'information_prompt': 'Something in French language ',

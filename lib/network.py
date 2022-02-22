@@ -23,14 +23,12 @@ def ssh_con(file, host):
 
     try:
         with ConnectHandler(**cisco1) as net_connect:
-
             # TFTP configuration download command
             our_command = f'copy tftp://{server_ip}/{file} startup-config'
 
             # ONE COMMAND WITH TFTP COPY
             net_connect.send_command_timing(our_command, cmd_verify=False)
 
-            # TODO: check in LAB if it is needed to wait here
             # waiting for tftp downloaded
             sleep(2)
 

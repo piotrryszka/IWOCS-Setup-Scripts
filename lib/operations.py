@@ -76,9 +76,9 @@ def listing_conf(lang_dict):
     onlyfiles = [f for f in listdir('tftp-conf-files') if isfile(join('tftp-conf-files', f))]
 
     while running_flag:
+        # listing configuration
         print(*onlyfiles, sep = ', ')
         print(decorator_1)
-
         user_choice = input("Please provide a proper name of configuration... ")
         print(user_choice)
         print(decorator_1)

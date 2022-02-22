@@ -78,6 +78,7 @@ while running_flag:
             print(user_COM)
             print(decorator_1)
             if user_COM.isnumeric() and user_COM != '0':
+
                 # Creating string for connection to the device
                 COM_string = "COM" + user_COM
 
@@ -111,7 +112,7 @@ while running_flag:
                         print(lang_expressions['wait_prompt'])
                         print(decorator_1)
 
-                        # TODO for tests it is commented
+                        # TODO for tests it is commented (TRY AND EXCEPT)
                         # TODO: move all commands one tab
 #                         try:
 
