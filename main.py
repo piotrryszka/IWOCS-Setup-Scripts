@@ -130,11 +130,13 @@ while running_flag:
                         # TODO: needs to be commented
                         # returning next ip number and full name of configured device to download to specified device
                         our_conf = creating_proper_configuration(user_device='SDG-1', port_num=22, ip_add = ip_number)
+
+                        # adding current ip address to list
                         ip_list.append(f'172.30.100.{ip_number}')
+
                         # returning tuple with full name device and next iip number to bes used
-                        actual_device = our_conf[1]
-                        ip_number = our_conf[0]
-                        # our_conf = creating_proper_configuration(user_device='test2aaa', port_num=device_ports['Gigabit'], ip_add = ip_number)
+                        actual_device = our_conf[1] # name of device
+                        ip_number = our_conf[0] # new ip address incremented by +1
 
                         # TODO: check in lab, proper version of configuration
 #                         our_conf = creating_proper_configuration(user_device = user_device, port_num = device_ports['Gigabit'], ip_add = ip_number)
@@ -156,7 +158,6 @@ while running_flag:
 
                             # TODO: needs to be commented later as it is should be chosen by user
                             # opening file with configuration
-                            # actual_device = 'cisco-switch4010-SDG-2-172.30.100.10'
                             actual_device = 'cisco-switch-SDG-1-172.30.100.10'
                             stripped_list = reading_conf_files(file = actual_device)
 
@@ -170,7 +171,6 @@ while running_flag:
                             print(f"{lang_expressions['proper_conf']}{user_device}.")
                             # print(f"{lang_expressions['close_con']}{ser.name}.")
                             print(decorator_1)
-
 
                             # question if user has finished initial configuration of devices
                             finish_conf = input(lang_expressions['finish_conf'])
