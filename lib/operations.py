@@ -101,6 +101,7 @@ def deleting_conf(lang_dict, user_input):
             except:
                 pass
         print(lang_dict['del_conf'])
+        print(decorator_1)
     else:
         pass
     print(lang_dict['thank_you_v2'])

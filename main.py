@@ -127,14 +127,14 @@ while running_flag:
 
                         # TODO: needs to be commented
                         # returning next ip number and full name of configured device to download to specified device
-                        # our_conf = creating_proper_configuration(user_device='test1aaa', port_num=22, ip_add = 213)
+                        our_conf = creating_proper_configuration(user_device='test1aaa', port_num=22, ip_add = 213)
                         # returning tuple with full name device and next iip number to bes used
                         # actual_device = our_conf[1]
                         # ip_number = our_conf[0]
                         # our_conf = creating_proper_configuration(user_device='test2aaa', port_num=device_ports['Gigabit'], ip_add = ip_number)
 
                         # TODO: check in lab, proper version of configuration
-#                         our_conf = creating_proper_configuration(user_device = user_device, port_num = device_ports, ip_add = ip_number)
+#                         our_conf = creating_proper_configuration(user_device = user_device, port_num = device_ports['Gigabit'], ip_add = ip_number)
 #                         actual_device = our_conf[1]
 #                         ip_number = our_conf[0]
 
@@ -243,7 +243,6 @@ while running_flag:
 
                 # listing possible confs to download to the device
                 user_conf = listing_conf(lang_expressions['dev_conf'])
-                print(user_conf)
 
 #                 new_host = '172.30.100.10'
 #                 ssh_con(file='TDS-1_A_test.txt', host = new_host)
