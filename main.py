@@ -111,7 +111,7 @@ while running_flag:
                         print(decorator_1)
 
                         # TODO for tests it is commented
-                        # try:
+#                         try:
 
                         # connection set
                         # ser = Serial(COM_string, COM_speed)
@@ -182,8 +182,7 @@ while running_flag:
                                 device_flag = True
                                 pass
 
-                        # TODO: needs to be uncommented
-                        # except
+                    # TODO: needs to be uncommented
                         else:
                             print(lang_expressions['start_conf'])
                             print(lang_expressions['again_prompt'])
@@ -193,7 +192,7 @@ while running_flag:
                             print(f"{lang_expressions['close_con']}{ser.name}.")
                             print(decorator_1)
                             break
-
+#                         except:
                         print(lang_expressions['not_working'])
                         print(decorator_1)
 
@@ -258,6 +257,7 @@ while running_flag:
                     ssh_flag = False
                     print(lang_expressions['thank_you'])
                     print(decorator_1)
+                    running_flag = False
                     break
                 else:
                     pass
@@ -271,5 +271,3 @@ user_del_conf = input(lang_expressions['del_conf_question'])
 print(user_del_conf)
 print(decorator_1)
 deleting_conf(lang_dict = lang_expressions, user_input = user_del_conf)
-
-# TODO: check with devices optimal way of script working
