@@ -44,7 +44,7 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                               'conf_files': "This is a list of possible project configurations...",
                               'dev_conf': "Please provide a proper name of configuration: ",
                               'ip_connect': "Which ip address do you want to connect?",
-                              'ip_add': "Please type device ip address... ",
+                              'ip_add': "Please type device IP address: ",
                               'user_finish': "Have you already configured all your devices? Type '1' if yes, anything else if not: ",
                               'thank_you': "Thank you for using our script... ",
                               'thank_you_v2': "Thank you for using our script, hope you enjoy it ...",

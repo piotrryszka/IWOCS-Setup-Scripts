@@ -25,6 +25,7 @@ ssh_flag = True # flag to configure devices by ssh connections
 
 # FIXED Variables:
 COM_speed = 9600 # serial port speed
+ip_list = [] # empty list later filled with ip addresses
 
 # main project
 while running_flag:
@@ -111,6 +112,7 @@ while running_flag:
                         print(decorator_1)
 
                         # TODO for tests it is commented
+                        # TODO: move all commands one tab
 #                         try:
 
                         # connection set
@@ -127,10 +129,11 @@ while running_flag:
 
                         # TODO: needs to be commented
                         # returning next ip number and full name of configured device to download to specified device
-                        our_conf = creating_proper_configuration(user_device='test1aaa', port_num=22, ip_add = 213)
+                        our_conf = creating_proper_configuration(user_device='SDG-1', port_num=22, ip_add = ip_number)
+                        ip_list.append(f'172.30.100.{ip_number}')
                         # returning tuple with full name device and next iip number to bes used
-                        # actual_device = our_conf[1]
-                        # ip_number = our_conf[0]
+                        actual_device = our_conf[1]
+                        ip_number = our_conf[0]
                         # our_conf = creating_proper_configuration(user_device='test2aaa', port_num=device_ports['Gigabit'], ip_add = ip_number)
 
                         # TODO: check in lab, proper version of configuration
@@ -154,7 +157,7 @@ while running_flag:
                             # TODO: needs to be commented later as it is should be chosen by user
                             # opening file with configuration
                             # actual_device = 'cisco-switch4010-SDG-2-172.30.100.10'
-                            actual_device = 'cisco-switch-test1aaa-172.30.100.213'
+                            actual_device = 'cisco-switch-SDG-1-172.30.100.10'
                             stripped_list = reading_conf_files(file = actual_device)
 
                             # executing commands from the list
@@ -237,6 +240,8 @@ while running_flag:
             # SSH CONFIGURATION LOOP
             while ssh_flag and working_tftp:
                 print(lang_expressions['ip_connect'])
+                print(*ip_list, sep=', ')
+                print(decorator_1)
                 new_host = input(lang_expressions['ip_add'])
                 print(new_host)
                 print(decorator_1)
@@ -267,8 +272,12 @@ while running_flag:
         print(lang_expressions['not_complete'])
         running_flag = False
 
+
+# LAST COMMANDS IN SCRIPT
 # final question after whole script is finished
 user_del_conf = input(lang_expressions['del_conf_question'])
 print(user_del_conf)
 print(decorator_1)
 deleting_conf(lang_dict = lang_expressions, user_input = user_del_conf)
+
+
