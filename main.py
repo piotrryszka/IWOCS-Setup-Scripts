@@ -154,7 +154,7 @@ while running_flag:
                             # TODO: needs to be commented later as it is should be chosen by user
                             # opening file with configuration
                             # actual_device = 'cisco-switch4010-SDG-2-172.30.100.10'
-                            actual_device = 'cisco-switch4010'
+                            actual_device = 'cisco-switch-test1aaa-172.30.100.213'
                             stripped_list = reading_conf_files(file = actual_device)
 
                             # executing commands from the list
@@ -252,8 +252,10 @@ while running_flag:
 
                 # question about finishing configuration by TFTP and SSH
                 user_fin = input(lang_expressions['user_finish'])
+                print(user_fin)
                 if user_fin == '1':
                     ssh_flag = False
+                    print(decorator_1)
                     print(lang_expressions['thank_you'])
                     print(decorator_1)
                     running_flag = False

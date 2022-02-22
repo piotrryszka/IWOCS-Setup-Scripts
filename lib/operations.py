@@ -25,7 +25,7 @@ def reading_conf_files(file):
 
 # creating and reading conf files
 def creating_proper_configuration(user_device, port_num, ip_add):
-    with open('initial-configuration-files/cisco-switch4010') as f:
+    with open('initial-configuration-files/cisco-switch') as f:
         lines = f.read()
         content_list = lines.split('\n')
         for x in content_list:
@@ -41,13 +41,13 @@ def creating_proper_configuration(user_device, port_num, ip_add):
             if x == ' ip address x.x.x.x y.y.y.y':
                 ip_index = content_list.index(x)
                 content_list[ip_index] = f' ip address 172.30.100.{str(ip_add)} 255.255.255.0'
-        with open(f'user-configuration-files/cisco-switch4010-{user_device}-172.30.100.{str(ip_add)}', 'w') as file:
+        with open(f'user-configuration-files/cisco-switch-{user_device}-172.30.100.{str(ip_add)}', 'w') as file:
             for row in content_list:
                 file.write(str(row) + '\n')
             # adding one to create a new IP ADDRESS
             ip_add +=1
         # returning tuple with new ip address and new file
-        return ip_add, f'cisco-switch4010-{user_device}-172.30.100.{str(ip_add)} '
+        return ip_add, f'cisco-switch-{user_device}-172.30.100.{str(ip_add)} '
 
 # deleting logs and handling logs files
 def deleting_files(lang_dict, user_input):

@@ -40,7 +40,7 @@ interface Vlan1
  no shutdown
 !
 banner motd ^C
-                            TechnipFMC
+                            TechnipFMC                      
          -------------------------------------------------
                  INITIAL TEMPORARY SCRIPT CONFIG
          -------------------------------------------------
