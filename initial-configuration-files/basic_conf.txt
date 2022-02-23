@@ -1,8 +1,0 @@
-no
-en
-conf t
-int g1/1
-duplex full
-speed 100
-exit
-exit
