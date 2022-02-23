@@ -50,6 +50,8 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                               'thank_you_v2': "Thank you for using our script, hope you enjoy it ...",
                               'del_conf': "Your created configuration files has been deleted ...",
                               'del_conf_question': "Do you want to delete your initial configs? Type '1' if yes, anything else if not: ",
+                              'proper_ip': "This IP address is being configured now -> ",
+                              'bad_ip': "Bad IP address, try again ...",
 
                               },
                         'No': {'information_prompt': 'Something in Norwegian language ',
@@ -102,6 +104,8 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                                'thank_you_v2': "Something in Norwegian language ",
                                'del_conf': "Something in Norwegian language ",
                                'del_conf_question': "Something in Norwegian language ",
+                               'proper_ip': "Something in Norwegian language ",
+                               'bad_ip': "Something in Norwegian language ",
 
                                },
                         'Fr': {'information_prompt': 'Something in French language ',
@@ -154,6 +158,8 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                                'thank_you_v2': "Something in French language ",
                                'del_conf': "Something in French language ",
                                'del_conf_question': "Something in French language ",
+                               'proper_ip': "Something in French language ",
+                               'bad_ip': "Something in French language ",
 
                        }
                        }

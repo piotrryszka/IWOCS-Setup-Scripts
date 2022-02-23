@@ -22,6 +22,7 @@ proper_language = False # flag if the language chosen by user is possible to be 
 del_flag = False # flag to check what user want to do after deleting logs
 tftp_flag = True # flag to check if the port UDP 69 is taken
 ssh_flag = True # flag to configure devices by ssh connections
+check_flag = True # flag to check if ip address is available
 
 # FIXED Variables:
 COM_speed = 9600 # serial port speed
@@ -240,12 +241,27 @@ while running_flag:
 
             # SSH CONFIGURATION LOOP
             while ssh_flag and working_tftp:
-                print(lang_expressions['ip_connect'])
-                print(*ip_list, sep=', ')
-                print(decorator_1)
-                new_host = input(lang_expressions['ip_add'])
-                print(new_host)
-                print(decorator_1)
+
+                # choosing proper configuration
+                while check_flag:
+                    # printing ip addresses
+                    print(lang_expressions['ip_connect'])
+                    print(*ip_list, sep=', ')
+                    print(decorator_1)
+                    # taking IP input from user
+                    new_host = input(lang_expressions['ip_add'])
+                    print(new_host)
+                    print(decorator_1)
+                    # checking if ip is available
+                    if new_host in ip_list:
+                        # removing ip address
+                        ip_list.remove(new_host)
+                        print(f"{lang_expressions['proper_ip']}{new_host}")
+                        print(decorator_1)
+                        break
+                    else:
+                        print(lang_expressions['bad_ip'])
+                        print(decorator_1)
 
                 # listing possible confs to download to the device
                 user_conf = listing_conf(lang_dict = lang_expressions)
