@@ -113,3 +113,4 @@ def to_conf_mode(ser_port):
     commands_list = ['en', 'conf t']
     for com in commands_list:
         send_to_console(ser_port, com)
+

@@ -296,5 +296,3 @@ user_del_conf = input(lang_expressions['del_conf_question'])
 print(user_del_conf)
 print(decorator_1)
 deleting_conf(lang_dict = lang_expressions, user_input = user_del_conf)
-
-

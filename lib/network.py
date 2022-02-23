@@ -45,3 +45,4 @@ def ssh_con(file, host):
     except (NetmikoTimeoutException, NetmikoAuthenticationException) as error:
         print(error)
         print(decorator_1)
+

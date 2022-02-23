@@ -1,2 +1,0 @@
-TODO:
-pozmienianie funkcji z odczytem na parametrem i wgraniem odpowiedniego configu

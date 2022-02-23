@@ -24,3 +24,4 @@ class Logger(object):
 
 # catching every line from console
 sys.stdout = Logger(stream=sys.stdout)
+

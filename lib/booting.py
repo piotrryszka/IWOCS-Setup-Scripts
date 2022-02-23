@@ -21,3 +21,4 @@ def checking_booting(port):
             break
     return correct_flag
 
+

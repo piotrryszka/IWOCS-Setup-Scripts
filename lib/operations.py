@@ -108,3 +108,4 @@ def deleting_conf(lang_dict, user_input):
     else:
         pass
     print(lang_dict['thank_you_v2'])
+
