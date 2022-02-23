@@ -263,7 +263,7 @@ while running_flag:
                         print(lang_expressions['bad_ip'])
                         print(decorator_1)
 
-                # listing possible confs to download to the device
+                # listing possible confs to download to the device with prompts
                 user_conf = listing_conf(lang_dict = lang_expressions)
 
 #                 new_host = '172.30.100.10'

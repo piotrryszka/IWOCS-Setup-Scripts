@@ -52,6 +52,9 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                               'del_conf_question': "Do you want to delete your initial configs? Type '1' if yes, anything else if not: ",
                               'proper_ip': "This IP address is being configured now -> ",
                               'bad_ip': "Bad IP address, try again ...",
+                              'bad_conf_dev': "You have provided bad device configuration file, try again ...",
+                              'project_confs': 'List of available project configurations: ',
+
 
                               },
                         'No': {'information_prompt': 'Something in Norwegian language ',
@@ -106,6 +109,8 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                                'del_conf_question': "Something in Norwegian language ",
                                'proper_ip': "Something in Norwegian language ",
                                'bad_ip': "Something in Norwegian language ",
+                               'bad_conf_dev': "Something in Norwegian language ",
+                               'project_confs': "Something in Norwegian language ",
 
                                },
                         'Fr': {'information_prompt': 'Something in French language ',
@@ -160,6 +165,8 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                                'del_conf_question': "Something in French language ",
                                'proper_ip': "Something in French language ",
                                'bad_ip': "Something in French language ",
+                               'bad_conf_dev': "Something in French language ",
+                               'project_confs': "Something in French language ",
 
                        }
                        }

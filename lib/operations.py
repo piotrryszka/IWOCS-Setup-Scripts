@@ -77,6 +77,7 @@ def listing_conf(lang_dict):
 
     while running_flag:
         # listing configuration
+        print(lang_dict['project_confs'])
         print(*onlyfiles, sep = ', ')
         print(decorator_1)
         user_choice = input(lang_dict['dev_conf'])
@@ -86,6 +87,8 @@ def listing_conf(lang_dict):
             running_flag = False
             return user_choice
         else:
+            print(lang_dict['bad_conf_dev'])
+            print(decorator_1)
             pass
 
 # deleting initial configuration files created by the user while using script
