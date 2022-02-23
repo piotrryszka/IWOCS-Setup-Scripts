@@ -79,7 +79,7 @@ def listing_conf(lang_dict):
         # listing configuration
         print(*onlyfiles, sep = ', ')
         print(decorator_1)
-        user_choice = input("Please provide a proper name of configuration... ")
+        user_choice = input(lang_dict['dev_conf'])
         print(user_choice)
         print(decorator_1)
         if user_choice in onlyfiles:

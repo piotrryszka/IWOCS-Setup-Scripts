@@ -248,7 +248,7 @@ while running_flag:
                 print(decorator_1)
 
                 # listing possible confs to download to the device
-                user_conf = listing_conf(lang_expressions['dev_conf'])
+                user_conf = listing_conf(lang_dict = lang_expressions)
 
 #                 new_host = '172.30.100.10'
 #                 ssh_con(file='TDS-1_A_test.txt', host = new_host)
