@@ -47,7 +47,7 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                               'ip_add': "Please type device IP address: ",
                               'user_finish': "Have you already configured all your devices? Type '1' if yes, anything else if not: ",
                               'thank_you': "Thank you for using our script... ",
-                              'thank_you_v2': "Thank you for using our script, hope you enjoy it ...",
+                              'thank_you_v2': "Thank you for using our script, hope you enjoy it!!!",
                               'del_conf': "Your created configuration files has been deleted ...",
                               'del_conf_question': "Do you want to delete your initial configs? Type '1' if yes, anything else if not: ",
                               'proper_ip': "This IP address is being configured now -> ",

@@ -141,6 +141,8 @@ while running_flag:
                         actual_device = our_conf[1] # name of device
                         ip_number = our_conf[0] # new ip address incremented by +1
 
+                        # checking
+                        our_conf = creating_proper_configuration(user_device='TDS-1_A', port_num=22, ip_add = ip_number)
                         # TODO: check in lab, proper version of configuration
 #                         our_conf = creating_proper_configuration(user_device = user_device, port_num = device_ports['Gigabit'], ip_add = ip_number)
 #                         actual_device = our_conf[1]
@@ -270,6 +272,7 @@ while running_flag:
                 # adding device to the already configured list
                 conf_device_list.append(user_conf)
 
+                # printing devices which are already configured
                 print(lang_expressions['already_conf'])
                 if len(conf_device_list) > 0:
                     print(*conf_device_list, sep=', ')
