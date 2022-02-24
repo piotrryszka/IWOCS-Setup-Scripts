@@ -200,7 +200,9 @@ while running_flag:
                             print(f"{lang_expressions['close_con']}{ser.name}.")
                             print(decorator_1)
                             break
+                            # TODO: UNCOMMENT
 #                         except:
+                        # bad chosen device or it is not working
                         print(lang_expressions['not_working'])
                         print(decorator_1)
 
@@ -208,9 +210,12 @@ while running_flag:
                         break
                     else:
                         print(lang_expressions['not_supported'])
+
+            # leaving script by '0' input
             elif user_COM == str(0):
                 break
             else:
+                # bad user input about COM port
                 print(lang_expressions['not_number'])
 
         # SSH CONNECTIONS
@@ -284,7 +289,7 @@ while running_flag:
 #                 new_host = '172.30.100.10'
 #                 ssh_con(file='TDS-1_A_test.txt', host = new_host)
 
-                # ADDED ARGUMENTS
+                # TODO: ADDED ARGUMENTS
                 #ssh_con(file = user_conf, host = new_host)
 
                 # question about finishing configuration by TFTP and SSH
@@ -300,7 +305,6 @@ while running_flag:
                     break
                 else:
                     pass
-
     else:
         print(lang_expressions['not_complete'])
         running_flag = False
