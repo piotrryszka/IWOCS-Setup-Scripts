@@ -270,12 +270,12 @@ while running_flag:
                 # adding device to the already configured list
                 conf_device_list.append(user_conf)
 
-                print("You have already configured these devices:")
+                print(lang_expressions['already_conf'])
                 if len(conf_device_list) > 0:
                     print(*conf_device_list, sep=', ')
                     print(decorator_1)
                 else:
-                    print("You havent configured any devices yet...")
+                    print(lang_expressions['no_devices'])
                     print(decorator_1)
 
 #                 new_host = '172.30.100.10'
@@ -290,8 +290,9 @@ while running_flag:
                 if user_fin == '1':
                     ssh_flag = False
                     print(decorator_1)
-                    print(lang_expressions['thank_you'])
-                    print(decorator_1)
+                    # commented because thank you phrase is also later
+#                     print(lang_expressions['thank_you'])
+#                     print(decorator_1)
                     running_flag = False
                     break
                 else:

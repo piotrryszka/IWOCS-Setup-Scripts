@@ -54,6 +54,8 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                               'bad_ip': "Bad IP address, try again ...",
                               'bad_conf_dev': "You have provided bad device configuration file, try again ...",
                               'project_confs': 'List of available project configurations: ',
+                              'no_devices': "You haven't configured any devices yet...",
+                              'already_conf': "You have already configured these devices:",
 
 
                               },
@@ -111,6 +113,8 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                                'bad_ip': "Something in Norwegian language ",
                                'bad_conf_dev': "Something in Norwegian language ",
                                'project_confs': "Something in Norwegian language ",
+                               'no_devices': "Something in Norwegian language ",
+                               'already_conf': "Something in Norwegian language ",
 
                                },
                         'Fr': {'information_prompt': 'Something in French language ',
@@ -167,6 +171,8 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                                'bad_ip': "Something in French language ",
                                'bad_conf_dev': "Something in French language ",
                                'project_confs': "Something in French language ",
+                               'no_devices': "Something in French language ",
+                               'already_conf': "Something in French language ",
 
                        }
                        }
