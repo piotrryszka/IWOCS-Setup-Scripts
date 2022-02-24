@@ -27,6 +27,7 @@ check_flag = True # flag to check if ip address is available
 # FIXED Variables:
 COM_speed = 9600 # serial port speed
 ip_list = [] # empty list later filled with ip addresses
+conf_device_list = [] # empty list later filled with project configs downloaded
 
 # main project
 while running_flag:
@@ -265,6 +266,17 @@ while running_flag:
 
                 # listing possible confs to download to the device with prompts
                 user_conf = listing_conf(lang_dict = lang_expressions)
+
+                # adding device to the already configured list
+                conf_device_list.append(user_conf)
+
+                print("You have already configured these devices:")
+                if len(conf_device_list) > 0:
+                    print(*conf_device_list, sep=', ')
+                    print(decorator_1)
+                else:
+                    print("You havent configured any devices yet...")
+                    print(decorator_1)
 
 #                 new_host = '172.30.100.10'
 #                 ssh_con(file='TDS-1_A_test.txt', host = new_host)
