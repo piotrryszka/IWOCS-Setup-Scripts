@@ -28,7 +28,7 @@ check_flag = True # flag to check if ip address is available
 COM_speed = 9600 # serial port speed
 ip_list = [] # empty list later filled with ip addresses
 conf_device_list = [] # empty list later filled with project configs downloaded
-dictionary_devices = {} # empty dictionary to be filled with ip addresses and devices
+list_devices = [] # empty dictionary to be filled with ip addresses and devices
 
 # main project
 while running_flag:
@@ -133,7 +133,7 @@ while running_flag:
 
                         # TODO: needs to be commented
                         # returning next ip number and full name of configured device to download to specified device
-                        our_conf = creating_proper_configuration(user_device='SDG-1', port_num=22, ip_add = ip_number)
+                        our_conf = creating_proper_configuration(user_device=user_device, port_num=22, ip_add = ip_number)
 
                         # adding current ip address to list
                         ip_list.append(f'172.30.100.{ip_number}')
@@ -142,8 +142,13 @@ while running_flag:
                         actual_device = our_conf[1] # name of device
                         ip_number = our_conf[0] # new ip address incremented by +1
 
+                        # addding full device name with ip address to the list
+                        list_devices.append(actual_device)
+                        print(list_devices)
+
+
                         # checking
-                        our_conf = creating_proper_configuration(user_device='TDS-1_A', port_num=22, ip_add = ip_number)
+#                         our_conf = creating_proper_configuration(user_device='TDS-1_A', port_num=22, ip_add = ip_number)
                         # TODO: check in lab, proper version of configuration
 #                         our_conf = creating_proper_configuration(user_device = user_device, port_num = device_ports['Gigabit'], ip_add = ip_number)
 #                         actual_device = our_conf[1]
@@ -165,6 +170,8 @@ while running_flag:
                             # TODO: needs to be commented later as it is should be chosen by user
                             # opening file with configuration
                             actual_device = 'cisco-switch-SDG-1-172.30.100.10'
+                            # Remember to change it
+#                             actual_device = actual_device
                             stripped_list = reading_conf_files(file = actual_device)
 
                             # executing commands from the list
@@ -251,6 +258,11 @@ while running_flag:
 
             # information prompt about good order of restarting TFTP
             print(lang_expressions['warning_order'])
+            print(decorator_1)
+
+            # printing all possible
+            print(lang_expressions['ready_dev'])
+            print(*list_devices, sep = ', ')
             print(decorator_1)
 
             # SSH CONFIGURATION LOOP

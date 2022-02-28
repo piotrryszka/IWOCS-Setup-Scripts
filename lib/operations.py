@@ -47,7 +47,7 @@ def creating_proper_configuration(user_device, port_num, ip_add):
             # adding one to create a new IP ADDRESS
             ip_add +=1
         # returning tuple with new ip address and new file
-        return ip_add, f'cisco-switch-{user_device}-172.30.100.{str(ip_add)} '
+        return ip_add, f'cisco-switch-{user_device}-172.30.100.{str(ip_add-1)} '
 
 # deleting logs and handling logs files
 def deleting_files(lang_dict, user_input):
