@@ -50,7 +50,7 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                               'thank_you_v2': "Thank you for using our script, hope you enjoy it!!!",
                               'del_conf': "Your created configuration files has been deleted ...",
                               'del_conf_question': "Do you want to delete your initial configs? Type '1' if yes, anything else if not: ",
-                              'proper_ip': "This IP address is being configured now -> ",
+                              'proper_ip': "This IP address is being configured now: ",
                               'bad_ip': "Bad IP address, try again ...",
                               'bad_conf_dev': "You have provided bad device configuration file, try again ...",
                               'project_confs': 'List of available project configurations: ',

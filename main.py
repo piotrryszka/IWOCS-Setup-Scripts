@@ -260,7 +260,7 @@ while running_flag:
             print(lang_expressions['warning_order'])
             print(decorator_1)
 
-            # printing all possible
+            # printing all possible configurations created by the user and the script
             print(lang_expressions['ready_dev'])
             print(*list_devices, sep = ', ')
             print(decorator_1)
