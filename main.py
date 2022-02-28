@@ -28,6 +28,7 @@ check_flag = True # flag to check if ip address is available
 COM_speed = 9600 # serial port speed
 ip_list = [] # empty list later filled with ip addresses
 conf_device_list = [] # empty list later filled with project configs downloaded
+dictionary_devices = {} # empty dictionary to be filled with ip addresses and devices
 
 # main project
 while running_flag:
@@ -244,7 +245,12 @@ while running_flag:
 
             # SSH connection established
             print(lang_expressions['waiting_ssh'])
+
             # waiting 10 seconds to get configuration ready
+            print(decorator_1)
+
+            # information prompt about good order of restarting TFTP
+            print(lang_expressions['warning_order'])
             print(decorator_1)
 
             # SSH CONFIGURATION LOOP

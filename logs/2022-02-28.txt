@@ -1,0 +1,122 @@
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  28/02/2022 09:55:58
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-02-24.txt, 2022-02-28.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+2
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 6
+ 
+ 
+Which device do you want to connect? RDS
+ 
+Your list of possible devices to configure: 
+
+ 
+Which device do you want to connect? TDS-1_A
+ 
+Your list of possible devices to configure: 
+TDS-1_A
+ 
+ 
+You have chosen this configuration...
+COM6 ----> TDS-1_A
+Please wait patiently...
+ 
+Your device has not been configured yet. What do you want to do with it?
+ 
+Your device has been configured properly ---> TDS-1_A.
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 1
+ 
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
+Now is the time to download project configs by SSH connections ...
+ 
+Now it is time to check TFTP Server
+ 
+If you are ready and TFTP Server is not running, please type in '1' in console. 1
+ 
+Everything is fine, now you can turn on your TFTP SERVER...
+ 
+Your TFTP server is running now...
+ 
+Please choose proper folder with configs in TFTP Server application...
+ 
+Please choose proper IP address in TFTP Server application...
+ 
+If you set configuration properly and you are ready, please type in '1' in console. 1
+ 
+Everything was set, you can continue...
+ 
+Waiting about 10 seconds for SSH connection to be established ...
+ 
+Which ip address do you want to connect?
+172.30.100.10
+ 
+Please type device IP address: 172
+ 
+Bad IP address, try again ...
+ 
+Which ip address do you want to connect?
+172.30.100.10
+ 
+Please type device IP address: 172.30.100.10
+ 
+This IP address is being configured now -> 172.30.100.10
+ 
+List of available project configurations: 
+ETAS-1, MSC-1, MSH-1, MSH-2, MSH-3, MSS-1_a, MSS-1_b, MSW-1_A, MSW-1_B, MSX-1_A, MSX-1_B, SDG-1_PCU, SDG-Primary, SDG-Secondary, TAS-1, TDS-1_A, TDS-1_B, TDS-1_PCU, TIR-1_kbglab, TIR-1_PCU
+ 
+Please provide a proper name of configuration: ET
+ 
+You have provided bad device configuration file, try again ...
+ 
+List of available project configurations: 
+ETAS-1, MSC-1, MSH-1, MSH-2, MSH-3, MSS-1_a, MSS-1_b, MSW-1_A, MSW-1_B, MSX-1_A, MSX-1_B, SDG-1_PCU, SDG-Primary, SDG-Secondary, TAS-1, TDS-1_A, TDS-1_B, TDS-1_PCU, TIR-1_kbglab, TIR-1_PCU
+ 
+Please provide a proper name of configuration: ETAS-1
+ 
+You have already configured these devices:
+ETAS-1
+ 
+Have you already configured all your devices? Type '1' if yes, anything else if not: 2
+Which ip address do you want to connect?
+
+ 
+Please type device IP address: Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  28/02/2022 10:07:49
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-02-24.txt, 2022-02-28.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 11
+ 
+It is not a complete system, I am sorry, I can't help you.
+Do you want to delete your initial configs? Type '1' if yes, anything else if not: 1
+ 
+Your created configuration files has been deleted ...
+ 
+Thank you for using our script, hope you enjoy it!!!

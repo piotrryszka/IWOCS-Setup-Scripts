@@ -56,6 +56,7 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                               'project_confs': 'List of available project configurations: ',
                               'no_devices': "You haven't configured any devices yet...",
                               'already_conf': "You have already configured these devices:",
+                              'warning_order': "Be careful about good order of reloading devices to build topology properly!!!",
 
 
                               },
@@ -115,6 +116,7 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                                'project_confs': "Something in Norwegian language ",
                                'no_devices': "Something in Norwegian language ",
                                'already_conf': "Something in Norwegian language ",
+                               'warning_order': "Something in Norwegian language ",
 
                                },
                         'Fr': {'information_prompt': 'Something in French language ',
@@ -173,6 +175,7 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                                'project_confs': "Something in French language ",
                                'no_devices': "Something in French language ",
                                'already_conf': "Something in French language ",
+                               'warning_order': "Something in French language ",
 
                        }
                        }
