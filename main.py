@@ -169,7 +169,7 @@ while running_flag:
 
                             # TODO: needs to be commented later as it is should be chosen by user
                             # opening file with configuration
-                            actual_device = 'cisco-switch-SDG-1-172.30.100.10'
+                            actual_device = 'cisco-switch-TDS-1_A-172.30.100.10'
                             # Remember to change it
 #                             actual_device = actual_device
                             stripped_list = reading_conf_files(file = actual_device)
