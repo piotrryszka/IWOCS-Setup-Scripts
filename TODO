@@ -1,6 +1,10 @@
 TODO LIST
-1. Uncomment everything which works on the devices
-2. Adding arguments to methods/functions
-3. Be likely to handle more devices than only one
-4. Add try/except/finally in code, specially in main.py and network handling
-5. pozmienianie funkcji z odczytem na parametrem i wgraniem odpowiedniego configu
+1. Adding arguments to methods/functions
+2. Be likely to handle more devices than only one
+3. Proper config be downloaded to proper devices
+4. Think about moving 'reload' by tftp to new function
+
+TODO TOMORROW 01.03.2022
+1. Uncomment everything which is handling devices etc.
+2. Add try/except/finally in code, specially in main.py and network handling
+3. Pick up a console cable

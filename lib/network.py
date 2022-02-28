@@ -35,6 +35,7 @@ def ssh_con(file, host):
             # sending confirmation of tftp copy
             net_connect.send_command_timing('\n', cmd_verify=False)
 
+            # TODO: think about moving it to the next function
             # command for reloading
             net_connect.send_command_timing('reload', cmd_verify=False)
 
