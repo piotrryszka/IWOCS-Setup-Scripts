@@ -146,14 +146,6 @@ while running_flag:
                         list_devices.append(actual_device)
                         print(list_devices)
 
-
-                        # checking
-#                         our_conf = creating_proper_configuration(user_device='TDS-1_A', port_num=22, ip_add = ip_number)
-                        # TODO: check in lab, proper version of configuration
-#                         our_conf = creating_proper_configuration(user_device = user_device, port_num = device_ports['Gigabit'], ip_add = ip_number)
-#                         actual_device = our_conf[1]
-#                         ip_number = our_conf[0]
-
                         # TODO: DELETE IT
                         # need to be deleted
 #                         user_boot_flag = True
@@ -167,10 +159,7 @@ while running_flag:
                             # going to configuration mode
                             to_conf_mode(ser)
 
-                            # TODO: needs to be commented later as it is should be chosen by user
                             # opening file with configuration
-#                             actual_device = 'cisco-switch-TDS-1_A-172.30.100.10'
-                            # Remember to change it
                             actual_device = actual_device
                             stripped_list = reading_conf_files(file = actual_device)
 
@@ -182,11 +171,10 @@ while running_flag:
                             # closing connection
                             ser.close()
                             print(f"{lang_expressions['proper_conf']}{user_device}.")
+
+                            # TODO: Uncomment it
                             # print(f"{lang_expressions['close_con']}{ser.name}.")
                             print(decorator_1)
-
-                            # closing connection
-#                             ser.close()
 
                             # question if user has finished initial configuration of devices
                             finish_conf = input(lang_expressions['finish_conf'])

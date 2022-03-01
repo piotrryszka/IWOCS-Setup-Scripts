@@ -3,8 +3,4 @@ TODO LIST
 2. Be likely to handle more devices than only one
 3. Proper config be downloaded to proper devices
 4. Think about moving 'reload' by tftp to new function
-
-TODO TOMORROW 01.03.2022
-1. Uncomment everything which is handling devices etc.
-2. Add try/except/finally in code, specially in main.py and network handling
-3. Pick up a console cable
+5. Uncomment try/except etx. in main.py and network handling functions
