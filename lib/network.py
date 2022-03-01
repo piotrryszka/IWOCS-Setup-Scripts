@@ -18,7 +18,7 @@ def ssh_con(file, host):
         "username": f"{username}",
         "password": f'{password}',
         # session logger
-        "session_log": f"device-logs/ip: {host}|---|date: {exact_time}.txt",
+#         "session_log": f"device-logs/ {host}|---|date: {exact_time}.txt",
     }
 
     try:

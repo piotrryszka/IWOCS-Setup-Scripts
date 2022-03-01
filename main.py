@@ -120,20 +120,20 @@ while running_flag:
 #                         try:
 
                         # connection set
-                        # ser = Serial(COM_string, COM_speed)
+                        ser = Serial(COM_string, COM_speed)
 
                         # waiting for router/switch to boot
-                        # user_boot_flag = checking_booting(port = ser)
+                        user_boot_flag = checking_booting(port = ser)
 
                         # counting number of gigabit and fast ports
-                        # device_ports = checking_switch_ports(ser_port = ser)
+                        device_ports = checking_switch_ports(ser_port = ser)
 
                         # checking if device is really the device, which was wanted by user
-                        # proper_device = checking_device(ser_port = ser, user_device = user_device, lang_dict = lang_expressions)
+                        proper_device = checking_device(ser_port = ser, user_device = user_device, lang_dict = lang_expressions)
 
                         # TODO: needs to be commented
                         # returning next ip number and full name of configured device to download to specified device
-                        our_conf = creating_proper_configuration(user_device=user_device, port_num=22, ip_add = ip_number)
+                        our_conf = creating_proper_configuration(user_device = user_device, port_num = device_ports['Gigabit'], ip_add = ip_number)
 
                         # adding current ip address to list
                         ip_list.append(f'172.30.100.{ip_number}')
@@ -156,8 +156,8 @@ while running_flag:
 
                         # TODO: DELETE IT
                         # need to be deleted
-                        user_boot_flag = True
-                        proper_device = True
+#                         user_boot_flag = True
+#                         proper_device = True
 
                         if user_boot_flag and proper_device:
 
@@ -165,25 +165,28 @@ while running_flag:
                             print(decorator_1)
 
                             # going to configuration mode
-                            # to_conf_mode(ser)
+                            to_conf_mode(ser)
 
                             # TODO: needs to be commented later as it is should be chosen by user
                             # opening file with configuration
-                            actual_device = 'cisco-switch-TDS-1_A-172.30.100.10'
+#                             actual_device = 'cisco-switch-TDS-1_A-172.30.100.10'
                             # Remember to change it
-#                             actual_device = actual_device
+                            actual_device = actual_device
                             stripped_list = reading_conf_files(file = actual_device)
 
                             # executing commands from the list
                             for command in stripped_list:
                                 pass
-                                # send_to_console(ser, command)
+                                send_to_console(ser, command)
 
                             # closing connection
-                            # ser.close()
+                            ser.close()
                             print(f"{lang_expressions['proper_conf']}{user_device}.")
                             # print(f"{lang_expressions['close_con']}{ser.name}.")
                             print(decorator_1)
+
+                            # closing connection
+#                             ser.close()
 
                             # question if user has finished initial configuration of devices
                             finish_conf = input(lang_expressions['finish_conf'])
@@ -305,7 +308,7 @@ while running_flag:
                     print(decorator_1)
 
 #                 new_host = '172.30.100.10'
-#                 ssh_con(file='TDS-1_A_test.txt', host = new_host)
+                ssh_con(file='TDS-1_A.txt', host = new_host)
 
                 # TODO: ADDED ARGUMENTS
                 #ssh_con(file = user_conf, host = new_host)
