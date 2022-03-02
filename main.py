@@ -296,7 +296,7 @@ while running_flag:
                     print(decorator_1)
 
 #                 new_host = '172.30.100.10'
-                ssh_con(file='TDS-1_A.txt', host = new_host)
+                ssh_con(file=user_conf, host = new_host)
 
                 # TODO: ADDED ARGUMENTS
                 #ssh_con(file = user_conf, host = new_host)
