@@ -1,0 +1,6 @@
+1) wylistowanie wszystkich urzadzen po kolei, że - na poczatku pokazuje brak urzadzen do skonfigurowania
+2) komunikat o podpieciu COM i ogolnie wszystkie komunikaty, sprawdzic jakie COM są dostepne 
+3) rozroznienie zlego wybranego urzadzenia i czegos co ma startowa konfiguracje, jezeli jest cos innego niz initial configuration to wtedy COM sie rozlacza i mowi sie uzytkownikowi zeby odpalil PUTTY
+4) dodanie listy do urzadzen skonfigurowanych i nie pozwolenie na kolejne skonfigurowanie tego urzadzenia 
+6) restartowanie skryptu i co zostaje w pamięci, że już zostały skonfigurowane jakies urzadzenia
+7) usuniecie pytania uzytkownika o usuniecie initial configów, ma to robic bez pytania uzytkownika
