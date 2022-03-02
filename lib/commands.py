@@ -63,6 +63,8 @@ def checking_device(ser_port, user_device, lang_dict):
     check_device = send_to_console(ser_port, 'sh lic udi')
     # routers/firewall
     # TODO: to code here some lists
+    print(decorator_1)
+    print(decorator_1)
     if 'IE-4010' in check_device:
         if user_device in ie4010:
             print(lang_dict['proper_device'])

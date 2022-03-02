@@ -167,7 +167,11 @@ while running_flag:
                             for command in stripped_list:
                                 pass
                                 send_to_console(ser, command)
+                                # printing dots to inform user that script is still working
+                                print('.', end='')
 
+                            print(decorator_1)
+                            print(decorator_1)
                             # closing connection
                             ser.close()
                             print(f"{lang_expressions['proper_conf']}{user_device}.")
