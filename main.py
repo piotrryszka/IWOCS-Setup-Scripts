@@ -295,11 +295,8 @@ while running_flag:
                     print(lang_expressions['no_devices'])
                     print(decorator_1)
 
-#                 new_host = '172.30.100.10'
-                ssh_con(file=user_conf, host = new_host)
-
-                # TODO: ADDED ARGUMENTS
-                #ssh_con(file = user_conf, host = new_host)
+                # connection with specified by user IP address and project configuration
+                ssh_con(file = user_conf, host = new_host)
 
                 # question about finishing configuration by TFTP and SSH
                 user_fin = input(lang_expressions['user_finish'])
