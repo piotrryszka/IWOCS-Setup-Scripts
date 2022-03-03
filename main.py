@@ -326,9 +326,7 @@ while running_flag:
 
 
 # LAST COMMANDS IN SCRIPT
-# final question after whole script is finished
-user_del_conf = input(lang_expressions['del_conf_question'])
-print(user_del_conf)
+# deleting all user-configuration files created while the script was running
 print(decorator_1)
-deleting_conf(lang_dict = lang_expressions, user_input = user_del_conf)
+deleting_conf(lang_dict = lang_expressions)
 

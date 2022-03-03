@@ -92,20 +92,17 @@ def listing_conf(lang_dict):
             pass
 
 # deleting initial configuration files created by the user while using script
-def deleting_conf(lang_dict, user_input):
+def deleting_conf(lang_dict):
     to_leave = False
     files = os.listdir('user-configuration-files')
     # deleting files
-    if user_input == '1':
-        for file in files:
-            # cannot delete the file from today's date
-            try:
-                os.remove(f'user-configuration-files/{file}')
-            except:
-                pass
-        print(lang_dict['del_conf'])
-        print(decorator_1)
-    else:
-        pass
+    for file in files:
+        # cannot delete the file from today's date
+        try:
+            os.remove(f'user-configuration-files/{file}')
+        except:
+            pass
+    print(lang_dict['del_conf'])
+    print(decorator_1)
     print(lang_dict['thank_you_v2'])
 
