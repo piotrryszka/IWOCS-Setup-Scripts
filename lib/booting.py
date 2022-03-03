@@ -2,6 +2,7 @@
 
 # imports
 from time import sleep
+
 from lib.commands import send_to_console
 
 # waiting for router/switch to boot
