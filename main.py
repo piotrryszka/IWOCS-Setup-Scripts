@@ -98,7 +98,8 @@ while running_flag:
                         print(user_device)
                         user_list = []
                         for dev in device_list:
-                            if user_device in dev:
+                            # checking if the string provided by the user has the same beginning as possible devices to configure
+                            if dev.startswith(user_device):
                                 user_list.append(dev)
                         print(decorator_1)
                         print(lang_expressions['listing_devices'])
