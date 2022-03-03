@@ -58,6 +58,8 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                               'already_conf': "You have already configured these devices:",
                               'warning_order': "Be careful about good order of reloading devices to build topology properly!!!",
                               'ready_dev': "Your devices:",
+                              'com_cable': "Please connect your console cable to your device!",
+                              'com_accept': "If you are ready type '1', because anything else won't be accepted: ",
 
 
                               },
@@ -119,6 +121,8 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                                'already_conf': "Something in Norwegian language ",
                                'warning_order': "Something in Norwegian language ",
                                'ready_dev': "Something in Norwegian language ",
+                               'com_cable': "Something in Norwegian language ",
+                               'com_accept': "Something in Norwegian language ",
 
                                },
                         'Fr': {'information_prompt': 'Something in French language ',
@@ -179,6 +183,8 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                                'already_conf': "Something in French language ",
                                'warning_order': "Something in French language ",
                                'ready_dev': "Something in French language ",
+                               'com_cable': "Something in French language ",
+                               'com_accept': "Something in French language ",
 
                        }
                        }

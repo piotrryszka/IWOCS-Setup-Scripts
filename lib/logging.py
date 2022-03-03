@@ -4,6 +4,7 @@
 import sys
 import logging
 from datetime import datetime
+
 class Logger(object):
     # creating time stamp
     exact_time = datetime.date(datetime.now())

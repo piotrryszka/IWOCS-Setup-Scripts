@@ -6,6 +6,7 @@ from datetime import datetime
 import subprocess
 from lib.data import decorator_1
 
+
 # printing accessible logs
 def printing_logs(lang_dict):
     files = os.listdir('logs')
@@ -63,3 +64,16 @@ def printing_confs(lang_dict):
     # printing files
     print(lang_dict['conf_files'])
     print(*files, sep = ', ')
+
+# informing user to connect the console cable
+def check_com(lang_dict):
+    running_flag = True
+    while running_flag:
+        print(lang_dict['com_cable'])
+        user_choice = input(lang_dict['com_accept'])
+        print(user_choice)
+        print(decorator_1)
+        if user_choice == '1':
+            running_flag = False
+        else:
+            pass
