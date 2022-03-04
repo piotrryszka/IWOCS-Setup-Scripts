@@ -1,0 +1,366 @@
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  04/03/2022 11:00:18
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-03-03.txt, 2022-03-04.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 6
+ 
+ 
+Which device do you want to connect? T
+ 
+Your list of possible devices to configure: 
+TIR, TAS-1, TDS-1_A, TDS-1_B
+ 
+Which device do you want to connect? 
+ 
+Your list of possible devices to configure: 
+TIR, ETAS-1, TAS-1, MSC-1, , SDG-1_A, SDG-1_B, , TDS-1_A, TDS-1_B, , MSW-1_A, MSW-1_B, , MSX-1_A, MSX-1_B, , MSY-1_A, MSY-1_B, , MSS-1_A, MSS-1_B, , MSH-1, MSH-2, MSH-3, MSH-4
+ 
+ 
+You have chosen this configuration...
+COM6 ----> 
+Please wait patiently...
+ 
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  04/03/2022 11:00:41
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-03-04.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 6
+ 
+ 
+Which device do you want to connect? 
+ 
+Your list of possible devices to configure: 
+TIR, ETAS-1, TAS-1, MSC-1, , SDG-1_A, SDG-1_B, , TDS-1_A, TDS-1_B, , MSW-1_A, MSW-1_B, , MSX-1_A, MSX-1_B, , MSY-1_A, MSY-1_B, , MSS-1_A, MSS-1_B, , MSH-1, MSH-2, MSH-3, MSH-4
+ 
+ 
+You have chosen this configuration...
+COM6 ----> 
+Please wait patiently...
+ 
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  04/03/2022 11:02:31
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-03-04.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 6
+ 
+ 
+Which device do you want to connect? 
+ 
+Your list of possible devices to configure: 
+TIR, ETAS-1, TAS-1, MSC-1, , SDG-1_A, SDG-1_B, , TDS-1_A, TDS-1_B, , MSW-1_A, MSW-1_B, , MSX-1_A, MSX-1_B, , MSY-1_A, MSY-1_B, , MSS-1_A, MSS-1_B, , MSH-1, MSH-2, MSH-3, MSH-4
+ 
+27
+ 
+You have chosen this configuration...
+COM6 ----> 
+Please wait patiently...
+ 
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  04/03/2022 11:03:02
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-03-04.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 6
+ 
+ 
+Which device do you want to connect? T
+ 
+Your list of possible devices to configure: 
+TIR, TAS-1, TDS-1_A, TDS-1_B
+ 
+4
+Which device do you want to connect? Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  04/03/2022 11:03:25
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-03-04.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 6
+ 
+ 
+Which device do you want to connect?  
+ 
+Your list of possible devices to configure: 
+
+ 
+0
+Which device do you want to connect? 
+ 
+Your list of possible devices to configure: 
+TIR, ETAS-1, TAS-1, MSC-1, , SDG-1_A, SDG-1_B, , TDS-1_A, TDS-1_B, , MSW-1_A, MSW-1_B, , MSX-1_A, MSX-1_B, , MSY-1_A, MSY-1_B, , MSS-1_A, MSS-1_B, , MSH-1, MSH-2, MSH-3, MSH-4
+ 
+27
+ 
+You have chosen this configuration...
+COM6 ----> 
+Please wait patiently...
+ 
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  04/03/2022 11:03:48
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-03-04.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 6
+ 
+ 
+Which device do you want to connect? 
+ 
+Your list of possible devices to configure: 
+TIR, ETAS-1, TAS-1, MSC-1, , SDG-1_A, SDG-1_B, , TDS-1_A, TDS-1_B, , MSW-1_A, MSW-1_B, , MSX-1_A, MSX-1_B, , MSY-1_A, MSY-1_B, , MSS-1_A, MSS-1_B, , MSH-1, MSH-2, MSH-3, MSH-4
+ 
+27
+['TIR', 'ETAS-1', 'TAS-1', 'MSC-1', '', 'SDG-1_A', 'SDG-1_B', '', 'TDS-1_A', 'TDS-1_B', '', 'MSW-1_A', 'MSW-1_B', '', 'MSX-1_A', 'MSX-1_B', '', 'MSY-1_A', 'MSY-1_B', '', 'MSS-1_A', 'MSS-1_B', '', 'MSH-1', 'MSH-2', 'MSH-3', 'MSH-4']
+ 
+You have chosen this configuration...
+COM6 ----> 
+Please wait patiently...
+ 
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  04/03/2022 11:05:25
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-03-04.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 6
+ 
+ 
+Which device do you want to connect? 
+ 
+Your list of possible devices to configure: 
+TIR, ETAS-1, TAS-1, MSC-1, SDG-1_A, SDG-1_B, TDS-1_A, TDS-1_B, MSW-1_A, MSW-1_B, MSX-1_A, MSX-1_B, MSY-1_A, MSY-1_B, MSS-1_A, MSS-1_B, MSH-1, MSH-2, MSH-3, MSH-4
+ 
+20
+['TIR', 'ETAS-1', 'TAS-1', 'MSC-1', 'SDG-1_A', 'SDG-1_B', 'TDS-1_A', 'TDS-1_B', 'MSW-1_A', 'MSW-1_B', 'MSX-1_A', 'MSX-1_B', 'MSY-1_A', 'MSY-1_B', 'MSS-1_A', 'MSS-1_B', 'MSH-1', 'MSH-2', 'MSH-3', 'MSH-4']
+Which device do you want to connect? 
+ 
+Your list of possible devices to configure: 
+TIR, ETAS-1, TAS-1, MSC-1, SDG-1_A, SDG-1_B, TDS-1_A, TDS-1_B, MSW-1_A, MSW-1_B, MSX-1_A, MSX-1_B, MSY-1_A, MSY-1_B, MSS-1_A, MSS-1_B, MSH-1, MSH-2, MSH-3, MSH-4
+ 
+20
+['TIR', 'ETAS-1', 'TAS-1', 'MSC-1', 'SDG-1_A', 'SDG-1_B', 'TDS-1_A', 'TDS-1_B', 'MSW-1_A', 'MSW-1_B', 'MSX-1_A', 'MSX-1_B', 'MSY-1_A', 'MSY-1_B', 'MSS-1_A', 'MSS-1_B', 'MSH-1', 'MSH-2', 'MSH-3', 'MSH-4']
+Which device do you want to connect? 
+ 
+Your list of possible devices to configure: 
+TIR, ETAS-1, TAS-1, MSC-1, SDG-1_A, SDG-1_B, TDS-1_A, TDS-1_B, MSW-1_A, MSW-1_B, MSX-1_A, MSX-1_B, MSY-1_A, MSY-1_B, MSS-1_A, MSS-1_B, MSH-1, MSH-2, MSH-3, MSH-4
+ 
+20
+['TIR', 'ETAS-1', 'TAS-1', 'MSC-1', 'SDG-1_A', 'SDG-1_B', 'TDS-1_A', 'TDS-1_B', 'MSW-1_A', 'MSW-1_B', 'MSX-1_A', 'MSX-1_B', 'MSY-1_A', 'MSY-1_B', 'MSS-1_A', 'MSS-1_B', 'MSH-1', 'MSH-2', 'MSH-3', 'MSH-4']
+Which device do you want to connect? 
+ 
+Your list of possible devices to configure: 
+TIR, ETAS-1, TAS-1, MSC-1, SDG-1_A, SDG-1_B, TDS-1_A, TDS-1_B, MSW-1_A, MSW-1_B, MSX-1_A, MSX-1_B, MSY-1_A, MSY-1_B, MSS-1_A, MSS-1_B, MSH-1, MSH-2, MSH-3, MSH-4
+ 
+20
+['TIR', 'ETAS-1', 'TAS-1', 'MSC-1', 'SDG-1_A', 'SDG-1_B', 'TDS-1_A', 'TDS-1_B', 'MSW-1_A', 'MSW-1_B', 'MSX-1_A', 'MSX-1_B', 'MSY-1_A', 'MSY-1_B', 'MSS-1_A', 'MSS-1_B', 'MSH-1', 'MSH-2', 'MSH-3', 'MSH-4']
+Which device do you want to connect? 
+ 
+Your list of possible devices to configure: 
+TIR, ETAS-1, TAS-1, MSC-1, SDG-1_A, SDG-1_B, TDS-1_A, TDS-1_B, MSW-1_A, MSW-1_B, MSX-1_A, MSX-1_B, MSY-1_A, MSY-1_B, MSS-1_A, MSS-1_B, MSH-1, MSH-2, MSH-3, MSH-4
+ 
+20
+['TIR', 'ETAS-1', 'TAS-1', 'MSC-1', 'SDG-1_A', 'SDG-1_B', 'TDS-1_A', 'TDS-1_B', 'MSW-1_A', 'MSW-1_B', 'MSX-1_A', 'MSX-1_B', 'MSY-1_A', 'MSY-1_B', 'MSS-1_A', 'MSS-1_B', 'MSH-1', 'MSH-2', 'MSH-3', 'MSH-4']
+Which device do you want to connect? 
+ 
+Your list of possible devices to configure: 
+TIR, ETAS-1, TAS-1, MSC-1, SDG-1_A, SDG-1_B, TDS-1_A, TDS-1_B, MSW-1_A, MSW-1_B, MSX-1_A, MSX-1_B, MSY-1_A, MSY-1_B, MSS-1_A, MSS-1_B, MSH-1, MSH-2, MSH-3, MSH-4
+ 
+20
+['TIR', 'ETAS-1', 'TAS-1', 'MSC-1', 'SDG-1_A', 'SDG-1_B', 'TDS-1_A', 'TDS-1_B', 'MSW-1_A', 'MSW-1_B', 'MSX-1_A', 'MSX-1_B', 'MSY-1_A', 'MSY-1_B', 'MSS-1_A', 'MSS-1_B', 'MSH-1', 'MSH-2', 'MSH-3', 'MSH-4']
+Which device do you want to connect? 
+ 
+Your list of possible devices to configure: 
+TIR, ETAS-1, TAS-1, MSC-1, SDG-1_A, SDG-1_B, TDS-1_A, TDS-1_B, MSW-1_A, MSW-1_B, MSX-1_A, MSX-1_B, MSY-1_A, MSY-1_B, MSS-1_A, MSS-1_B, MSH-1, MSH-2, MSH-3, MSH-4
+ 
+20
+['TIR', 'ETAS-1', 'TAS-1', 'MSC-1', 'SDG-1_A', 'SDG-1_B', 'TDS-1_A', 'TDS-1_B', 'MSW-1_A', 'MSW-1_B', 'MSX-1_A', 'MSX-1_B', 'MSY-1_A', 'MSY-1_B', 'MSS-1_A', 'MSS-1_B', 'MSH-1', 'MSH-2', 'MSH-3', 'MSH-4']
+Which device do you want to connect? 
+ 
+Your list of possible devices to configure: 
+TIR, ETAS-1, TAS-1, MSC-1, SDG-1_A, SDG-1_B, TDS-1_A, TDS-1_B, MSW-1_A, MSW-1_B, MSX-1_A, MSX-1_B, MSY-1_A, MSY-1_B, MSS-1_A, MSS-1_B, MSH-1, MSH-2, MSH-3, MSH-4
+ 
+20
+['TIR', 'ETAS-1', 'TAS-1', 'MSC-1', 'SDG-1_A', 'SDG-1_B', 'TDS-1_A', 'TDS-1_B', 'MSW-1_A', 'MSW-1_B', 'MSX-1_A', 'MSX-1_B', 'MSY-1_A', 'MSY-1_B', 'MSS-1_A', 'MSS-1_B', 'MSH-1', 'MSH-2', 'MSH-3', 'MSH-4']
+Which device do you want to connect? 
+ 
+Your list of possible devices to configure: 
+TIR, ETAS-1, TAS-1, MSC-1, SDG-1_A, SDG-1_B, TDS-1_A, TDS-1_B, MSW-1_A, MSW-1_B, MSX-1_A, MSX-1_B, MSY-1_A, MSY-1_B, MSS-1_A, MSS-1_B, MSH-1, MSH-2, MSH-3, MSH-4
+ 
+20
+['TIR', 'ETAS-1', 'TAS-1', 'MSC-1', 'SDG-1_A', 'SDG-1_B', 'TDS-1_A', 'TDS-1_B', 'MSW-1_A', 'MSW-1_B', 'MSX-1_A', 'MSX-1_B', 'MSY-1_A', 'MSY-1_B', 'MSS-1_A', 'MSS-1_B', 'MSH-1', 'MSH-2', 'MSH-3', 'MSH-4']
+Which device do you want to connect? 
+ 
+Your list of possible devices to configure: 
+TIR, ETAS-1, TAS-1, MSC-1, SDG-1_A, SDG-1_B, TDS-1_A, TDS-1_B, MSW-1_A, MSW-1_B, MSX-1_A, MSX-1_B, MSY-1_A, MSY-1_B, MSS-1_A, MSS-1_B, MSH-1, MSH-2, MSH-3, MSH-4
+ 
+20
+['TIR', 'ETAS-1', 'TAS-1', 'MSC-1', 'SDG-1_A', 'SDG-1_B', 'TDS-1_A', 'TDS-1_B', 'MSW-1_A', 'MSW-1_B', 'MSX-1_A', 'MSX-1_B', 'MSY-1_A', 'MSY-1_B', 'MSS-1_A', 'MSS-1_B', 'MSH-1', 'MSH-2', 'MSH-3', 'MSH-4']
+Which device do you want to connect?  
+ 
+Your list of possible devices to configure: 
+
+ 
+0
+[]
+Which device do you want to connect? T
+ 
+Your list of possible devices to configure: 
+TIR, TAS-1, TDS-1_A, TDS-1_B
+ 
+4
+['TIR', 'TAS-1', 'TDS-1_A', 'TDS-1_B']
+Which device do you want to connect? 
+ 
+Your list of possible devices to configure: 
+TIR, ETAS-1, TAS-1, MSC-1, SDG-1_A, SDG-1_B, TDS-1_A, TDS-1_B, MSW-1_A, MSW-1_B, MSX-1_A, MSX-1_B, MSY-1_A, MSY-1_B, MSS-1_A, MSS-1_B, MSH-1, MSH-2, MSH-3, MSH-4
+ 
+20
+['TIR', 'ETAS-1', 'TAS-1', 'MSC-1', 'SDG-1_A', 'SDG-1_B', 'TDS-1_A', 'TDS-1_B', 'MSW-1_A', 'MSW-1_B', 'MSX-1_A', 'MSX-1_B', 'MSY-1_A', 'MSY-1_B', 'MSS-1_A', 'MSS-1_B', 'MSH-1', 'MSH-2', 'MSH-3', 'MSH-4']
+Which device do you want to connect? 
+ 
+Your list of possible devices to configure: 
+TIR, ETAS-1, TAS-1, MSC-1, SDG-1_A, SDG-1_B, TDS-1_A, TDS-1_B, MSW-1_A, MSW-1_B, MSX-1_A, MSX-1_B, MSY-1_A, MSY-1_B, MSS-1_A, MSS-1_B, MSH-1, MSH-2, MSH-3, MSH-4
+ 
+20
+['TIR', 'ETAS-1', 'TAS-1', 'MSC-1', 'SDG-1_A', 'SDG-1_B', 'TDS-1_A', 'TDS-1_B', 'MSW-1_A', 'MSW-1_B', 'MSX-1_A', 'MSX-1_B', 'MSY-1_A', 'MSY-1_B', 'MSS-1_A', 'MSS-1_B', 'MSH-1', 'MSH-2', 'MSH-3', 'MSH-4']
+Which device do you want to connect? 
+ 
+Your list of possible devices to configure: 
+TIR, ETAS-1, TAS-1, MSC-1, SDG-1_A, SDG-1_B, TDS-1_A, TDS-1_B, MSW-1_A, MSW-1_B, MSX-1_A, MSX-1_B, MSY-1_A, MSY-1_B, MSS-1_A, MSS-1_B, MSH-1, MSH-2, MSH-3, MSH-4
+ 
+20
+['TIR', 'ETAS-1', 'TAS-1', 'MSC-1', 'SDG-1_A', 'SDG-1_B', 'TDS-1_A', 'TDS-1_B', 'MSW-1_A', 'MSW-1_B', 'MSX-1_A', 'MSX-1_B', 'MSY-1_A', 'MSY-1_B', 'MSS-1_A', 'MSS-1_B', 'MSH-1', 'MSH-2', 'MSH-3', 'MSH-4']
+Which device do you want to connect? 
+ 
+Your list of possible devices to configure: 
+TIR, ETAS-1, TAS-1, MSC-1, SDG-1_A, SDG-1_B, TDS-1_A, TDS-1_B, MSW-1_A, MSW-1_B, MSX-1_A, MSX-1_B, MSY-1_A, MSY-1_B, MSS-1_A, MSS-1_B, MSH-1, MSH-2, MSH-3, MSH-4
+ 
+20
+['TIR', 'ETAS-1', 'TAS-1', 'MSC-1', 'SDG-1_A', 'SDG-1_B', 'TDS-1_A', 'TDS-1_B', 'MSW-1_A', 'MSW-1_B', 'MSX-1_A', 'MSX-1_B', 'MSY-1_A', 'MSY-1_B', 'MSS-1_A', 'MSS-1_B', 'MSH-1', 'MSH-2', 'MSH-3', 'MSH-4']
+Which device do you want to connect? 
+ 
+Your list of possible devices to configure: 
+TIR, ETAS-1, TAS-1, MSC-1, SDG-1_A, SDG-1_B, TDS-1_A, TDS-1_B, MSW-1_A, MSW-1_B, MSX-1_A, MSX-1_B, MSY-1_A, MSY-1_B, MSS-1_A, MSS-1_B, MSH-1, MSH-2, MSH-3, MSH-4
+ 
+20
+['TIR', 'ETAS-1', 'TAS-1', 'MSC-1', 'SDG-1_A', 'SDG-1_B', 'TDS-1_A', 'TDS-1_B', 'MSW-1_A', 'MSW-1_B', 'MSX-1_A', 'MSX-1_B', 'MSY-1_A', 'MSY-1_B', 'MSS-1_A', 'MSS-1_B', 'MSH-1', 'MSH-2', 'MSH-3', 'MSH-4']
+Which device do you want to connect? 
+ 
+Your list of possible devices to configure: 
+TIR, ETAS-1, TAS-1, MSC-1, SDG-1_A, SDG-1_B, TDS-1_A, TDS-1_B, MSW-1_A, MSW-1_B, MSX-1_A, MSX-1_B, MSY-1_A, MSY-1_B, MSS-1_A, MSS-1_B, MSH-1, MSH-2, MSH-3, MSH-4
+ 
+20
+['TIR', 'ETAS-1', 'TAS-1', 'MSC-1', 'SDG-1_A', 'SDG-1_B', 'TDS-1_A', 'TDS-1_B', 'MSW-1_A', 'MSW-1_B', 'MSX-1_A', 'MSX-1_B', 'MSY-1_A', 'MSY-1_B', 'MSS-1_A', 'MSS-1_B', 'MSH-1', 'MSH-2', 'MSH-3', 'MSH-4']
+Which device do you want to connect? 
