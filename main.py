@@ -4,10 +4,10 @@ from serial import Serial
 from time import sleep
 
 from lib.commands import send_to_console, checking_switch_ports, checking_ip_address, checking_device, check_tftp, to_conf_mode
-from lib.operations import opening_device_list, reading_conf_files, creating_proper_configuration, deleting_files, listing_conf, deleting_conf
+from lib.operations import opening_device_list, reading_conf_files, creating_proper_configuration, deleting_files, listing_conf, deleting_conf, saving_dev, list_saved_dev
 from lib.booting import checking_booting
 from lib.languages import listing_languages, reading_language
-from lib.data import ip_number, decorator_1
+from lib.data import ip_number, decorator_1, device_order
 from lib.logging import *
 from lib.network import ssh_con
 from lib.functions import printing_logs, creating_timestamp, start_tftp, user_tftp, final_tftp, printing_confs, check_com
@@ -94,6 +94,10 @@ while running_flag:
                 # Creating a list with all the possible devices
                 device_list = opening_device_list(file_name = 'project_names_of_devices.txt')
 
+                # Listing devices already configured during this session
+                list_saved_dev(lang_dict = lang_expressions)
+                print(decorator_1)
+
                 while device_flag:
                     # User chooses the device, which one he wants to
                     choosing_device = True
@@ -111,6 +115,13 @@ while running_flag:
                         print(decorator_1)
                         if user_device in user_list:
                             choosing_device = False
+
+                    # TODO: testing, move it after whole device configuration about 186 line of code
+                    saving_dev('essa')
+                    saving_dev('essa1')
+                    saving_dev('essa2')
+#                     saving_dev(user_device)
+
 
                     # Checking if the device is in the list of devices
                     if user_device in device_list:
@@ -147,14 +158,9 @@ while running_flag:
                         actual_device = our_conf[1] # name of device
                         ip_number = our_conf[0] # new ip address incremented by +1
 
-                        # addding full device name with ip address to the list
+                        # adding full device name with ip address to the list
                         list_devices.append(actual_device)
                         print(list_devices)
-
-                        # TODO: DELETE IT
-                        # need to be deleted
-#                         user_boot_flag = True
-#                         proper_device = True
 
                         if user_boot_flag and proper_device:
 
@@ -181,8 +187,7 @@ while running_flag:
                             ser.close()
                             print(f"{lang_expressions['proper_conf']}{user_device}.")
 
-                            # TODO: Uncomment it
-                            # print(f"{lang_expressions['close_con']}{ser.name}.")
+                            print(f"{lang_expressions['close_con']}{ser.name}.")
                             print(decorator_1)
 
                             # question if user has finished initial configuration of devices
@@ -225,6 +230,7 @@ while running_flag:
             else:
                 # bad user input about COM port
                 print(lang_expressions['not_number'])
+                print(decorator_1)
 
         # SSH CONNECTIONS
         else:

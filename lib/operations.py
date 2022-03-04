@@ -107,3 +107,23 @@ def deleting_conf(lang_dict):
     print(decorator_1)
     print(lang_dict['thank_you_v2'])
 
+# saving already configured devices
+def saving_dev(dev_name):
+    with open('user-configuration-files/already_conf.txt', 'a') as f:
+        f.write(dev_name)
+        f.write('\n')
+
+# listing already configured devices from the file
+def list_saved_dev(lang_dict):
+    try:
+        with open('user-configuration-files/already_conf.txt', 'r') as file:
+            content_list = file.readlines()
+            stripped_list = [s.strip() for s in content_list]
+            if len(stripped_list)> 0:
+                print(lang_dict['dev_already_conf'])
+                print(*stripped_list, sep=', ')
+            else:
+                pass
+    except:
+        print(decorator_1)
+        print(lang_dict['no_conf'])
