@@ -131,7 +131,7 @@ while running_flag:
                         print(decorator_1)
                         if user_device in user_list:
                             choosing_device = False
-                            
+
                     # TODO: needs to be move later
                     # Returning proper order of restarting devices
                     dictionary_dev = order_dev(conf_devices_list,device_order, dictionary_dev)

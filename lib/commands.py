@@ -66,6 +66,8 @@ def checking_device(ser_port, user_device, lang_dict):
     # TODO: to code here some lists
     print(decorator_1)
     print(decorator_1)
+
+    # TODO here change check it
     if 'IE-4010' in check_device:
         if user_device in ie4010:
             print(lang_dict['proper_device'])

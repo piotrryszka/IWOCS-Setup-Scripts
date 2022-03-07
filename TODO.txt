@@ -1,3 +1,6 @@
 3) rozroznienie zlego wybranego urzadzenia i czegos co ma startowa konfiguracje, jezeli jest cos innego niz initial configuration to wtedy COM sie rozlacza i mowi sie uzytkownikowi zeby odpalil PUTTY
 4) dodanie listy do urzadzen skonfigurowanych i nie pozwolenie na kolejne skonfigurowanie tego urzadzenia 
-5) 
+
+TODO jutro
+sprawdzenie czy autorestartowanie urzadzen dziala
+dodanie obslugi cisco ie2000
