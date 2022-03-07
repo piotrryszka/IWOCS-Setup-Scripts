@@ -78,3 +78,19 @@ def check_com(lang_dict):
             running_flag = False
         else:
             pass
+
+# good order of restarting devices
+def order_dev(conf_devices_list, device_order, new_dict):
+    # looking for the correct order of restarting devices
+    for x in conf_devices_list:
+        for y in device_order:
+            if x == y:
+                new_dict[device_order.index(x)] = x
+    # creating new empty dict to return it to the main.py
+    test_dict = {}
+
+    # filling new dict
+    for key in sorted(new_dict):
+        test_dict[key] = new_dict[key]
+
+    return test_dict

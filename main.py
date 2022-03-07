@@ -10,7 +10,7 @@ from lib.languages import listing_languages, reading_language
 from lib.data import ip_number, decorator_1, device_order
 from lib.logging import *
 from lib.network import ssh_con
-from lib.functions import printing_logs, creating_timestamp, start_tftp, user_tftp, final_tftp, printing_confs, check_com
+from lib.functions import printing_logs, creating_timestamp, start_tftp, user_tftp, final_tftp, printing_confs, check_com, order_dev
 
 # Program flags:
 running_flag = True  # main flag, running program
@@ -30,6 +30,7 @@ COM_speed = 9600 # serial port speed
 ip_list = [] # empty list later filled with ip addresses
 conf_device_list = [] # empty list later filled with project configs downloaded
 list_devices = [] # empty dictionary to be filled with ip addresses and devices
+dictionary_dev = {} # empty dictionary to be later filled with proper restart order
 
 # main project
 while running_flag:
@@ -130,13 +131,11 @@ while running_flag:
                         print(decorator_1)
                         if user_device in user_list:
                             choosing_device = False
-
-                    # TODO: testing, move it after whole device configuration about 186 line of code
-#                     saving_dev('TDS-1_B')
-#                     saving_dev('TAS-1')
-#                     saving_dev('MSH-1')
-#                     saving_dev(user_device)
-
+                            
+                    # TODO: needs to be move later
+                    # Returning proper order of restarting devices
+                    dictionary_dev = order_dev(conf_devices_list,device_order, dictionary_dev)
+                    print(dictionary_dev)
 
                     # Checking if the device is in the list of devices
                     if user_device in device_list:
