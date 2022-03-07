@@ -122,8 +122,9 @@ def list_saved_dev(lang_dict):
             if len(stripped_list)> 0:
                 print(lang_dict['dev_already_conf'])
                 print(*stripped_list, sep=', ')
+                # returning list with already_conf devices
+                return stripped_list
             else:
                 pass
     except:
-        print(decorator_1)
         print(lang_dict['no_conf'])

@@ -1,0 +1,565 @@
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  07/03/2022 08:57:00
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-03-04.txt, 2022-03-07.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 6
+ 
+ 
+You have already configured this devices during the session:
+essa, essa1, essa2
+ 
+Which device do you want to connect? ESSA
+ 
+Your list of possible devices to configure: 
+
+ 
+Which device do you want to connect? Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  07/03/2022 08:57:59
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-03-07.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 6
+ 
+ 
+ 
+No configured devices yet.
+ 
+Which device do you want to connect? TDS-1_A
+ 
+Your list of possible devices to configure: 
+TDS-1_A
+ 
+ 
+You have chosen this configuration...
+COM6 ----> TDS-1_A
+Please wait patiently...
+ 
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  07/03/2022 11:10:28
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-03-07.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 6
+ 
+ 
+You have already configured this devices during the session:
+TDS-1_B, TAS-1, MSH-1
+ 
+Which device do you want to connect? TD
+ 
+Your list of possible devices to configure: 
+TDS-1_A, TDS-1_B
+ 
+Which device do you want to connect? Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  07/03/2022 11:11:30
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-03-07.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 6
+ 
+ 
+You have already configured this devices during the session:
+TDS-1_B, TAS-1, MSH-1
+ 
+Which device do you want to connect? TDS-1_A
+ 
+Your list of possible devices to configure: 
+TDS-1_A
+ 
+['TIR', 'ETAS-1', 'TAS-1', 'MSC-1', 'SDG-1_A', 'SDG-1_B', 'TDS-1_A', 'TDS-1_B', 'MSW-1_A', 'MSW-1_B', 'MSX-1_A', 'MSX-1_B', 'MSY-1_A', 'MSY-1_B', 'MSS-1_A', 'MSS-1_B', 'MSH-1', 'MSH-2', 'MSH-3', 'MSH-4']
+[]
+['TIR', 'ETAS-1', 'MSC-1', 'SDG-1_A', 'SDG-1_B', 'TDS-1_A', 'MSW-1_A', 'MSW-1_B', 'MSX-1_A', 'MSX-1_B', 'MSY-1_A', 'MSY-1_B', 'MSS-1_A', 'MSS-1_B', 'MSH-2', 'MSH-3', 'MSH-4']
+[]
+ 
+You have chosen this configuration...
+COM6 ----> TDS-1_A
+Please wait patiently...
+ 
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  07/03/2022 11:14:00
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-03-07.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 6
+ 
+ 
+You have already configured this devices during the session:
+TDS-1_B, TAS-1, MSH-1
+ 
+['TIR', 'ETAS-1', 'TAS-1', 'MSC-1', 'SDG-1_A', 'SDG-1_B', 'TDS-1_A', 'TDS-1_B', 'MSW-1_A', 'MSW-1_B', 'MSX-1_A', 'MSX-1_B', 'MSY-1_A', 'MSY-1_B', 'MSS-1_A', 'MSS-1_B', 'MSH-1', 'MSH-2', 'MSH-3', 'MSH-4']
+[]
+['TIR', 'ETAS-1', 'MSC-1', 'SDG-1_A', 'SDG-1_B', 'TDS-1_A', 'MSW-1_A', 'MSW-1_B', 'MSX-1_A', 'MSX-1_B', 'MSY-1_A', 'MSY-1_B', 'MSS-1_A', 'MSS-1_B', 'MSH-2', 'MSH-3', 'MSH-4']
+[]
+Which device do you want to connect? Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  07/03/2022 11:14:20
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-03-07.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 6
+ 
+ 
+No configured devices yet.
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  07/03/2022 11:15:12
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-03-07.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 6
+ 
+ 
+No configured devices yet.
+ 
+['TIR', 'ETAS-1', 'TAS-1', 'MSC-1', 'SDG-1_A', 'SDG-1_B', 'TDS-1_A', 'TDS-1_B', 'MSW-1_A', 'MSW-1_B', 'MSX-1_A', 'MSX-1_B', 'MSY-1_A', 'MSY-1_B', 'MSS-1_A', 'MSS-1_B', 'MSH-1', 'MSH-2', 'MSH-3', 'MSH-4']
+[]
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  07/03/2022 11:16:12
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-03-07.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 6
+ 
+ 
+You have already configured this devices during the session:
+TDS-1_B, TAS-1, MSH-1
+ 
+['TIR', 'ETAS-1', 'TAS-1', 'MSC-1', 'SDG-1_A', 'SDG-1_B', 'TDS-1_A', 'TDS-1_B', 'MSW-1_A', 'MSW-1_B', 'MSX-1_A', 'MSX-1_B', 'MSY-1_A', 'MSY-1_B', 'MSS-1_A', 'MSS-1_B', 'MSH-1', 'MSH-2', 'MSH-3', 'MSH-4']
+[]
+['TIR', 'ETAS-1', 'MSC-1', 'SDG-1_A', 'SDG-1_B', 'TDS-1_A', 'MSW-1_A', 'MSW-1_B', 'MSX-1_A', 'MSX-1_B', 'MSY-1_A', 'MSY-1_B', 'MSS-1_A', 'MSS-1_B', 'MSH-2', 'MSH-3', 'MSH-4']
+[]
+Which device do you want to connect? TDS-1_B
+ 
+Your list of possible devices to configure: 
+
+ 
+Which device do you want to connect? TDS-1
+ 
+Your list of possible devices to configure: 
+TDS-1_A
+ 
+Which device do you want to connect? Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  07/03/2022 11:16:54
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-03-07.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 6
+ 
+ 
+You have already configured this devices during the session:
+TDS-1_B, TAS-1, MSH-1, TDS-1_B, TAS-1, MSH-1
+ 
+['TIR', 'ETAS-1', 'TAS-1', 'MSC-1', 'SDG-1_A', 'SDG-1_B', 'TDS-1_A', 'TDS-1_B', 'MSW-1_A', 'MSW-1_B', 'MSX-1_A', 'MSX-1_B', 'MSY-1_A', 'MSY-1_B', 'MSS-1_A', 'MSS-1_B', 'MSH-1', 'MSH-2', 'MSH-3', 'MSH-4']
+[]
+['TIR', 'ETAS-1', 'MSC-1', 'SDG-1_A', 'SDG-1_B', 'TDS-1_A', 'MSW-1_A', 'MSW-1_B', 'MSX-1_A', 'MSX-1_B', 'MSY-1_A', 'MSY-1_B', 'MSS-1_A', 'MSS-1_B', 'MSH-2', 'MSH-3', 'MSH-4']
+[]
+Which device do you want to connect? Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  07/03/2022 11:20:24
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-03-07.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 6
+ 
+ 
+You have already configured this devices during the session:
+TDS-1_B, TAS-1, MSH-1, TDS-1_B, TAS-1, MSH-1, TDS-1_B, TAS-1, MSH-1
+['TDS-1_B', 'TAS-1', 'MSH-1', 'TDS-1_B', 'TAS-1', 'MSH-1', 'TDS-1_B', 'TAS-1', 'MSH-1']
+ 
+['TIR', 'ETAS-1', 'TAS-1', 'MSC-1', 'SDG-1_A', 'SDG-1_B', 'TDS-1_A', 'TDS-1_B', 'MSW-1_A', 'MSW-1_B', 'MSX-1_A', 'MSX-1_B', 'MSY-1_A', 'MSY-1_B', 'MSS-1_A', 'MSS-1_B', 'MSH-1', 'MSH-2', 'MSH-3', 'MSH-4']
+['TDS-1_B', 'TAS-1', 'MSH-1', 'TDS-1_B', 'TAS-1', 'MSH-1', 'TDS-1_B', 'TAS-1', 'MSH-1']
+['TIR', 'ETAS-1', 'MSC-1', 'SDG-1_A', 'SDG-1_B', 'TDS-1_A', 'MSW-1_A', 'MSW-1_B', 'MSX-1_A', 'MSX-1_B', 'MSY-1_A', 'MSY-1_B', 'MSS-1_A', 'MSS-1_B', 'MSH-2', 'MSH-3', 'MSH-4']
+['TDS-1_B', 'TAS-1', 'MSH-1', 'TDS-1_B', 'TAS-1', 'MSH-1', 'TDS-1_B', 'TAS-1', 'MSH-1']
+Which device do you want to connect? Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  07/03/2022 11:25:08
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-03-07.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 6
+ 
+ 
+You have already configured this devices during the session:
+TDS-1_B, TAS-1, MSH-1, TDS-1_B, TAS-1, MSH-1, TDS-1_B, TAS-1, MSH-1
+ 
+Which device do you want to connect? TDS
+ 
+Your list of possible devices to configure: 
+TDS-1_A
+ 
+Which device do you want to connect? Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  07/03/2022 11:27:20
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-03-07.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 6
+ 
+ 
+No configured devices yet.
+ 
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  07/03/2022 11:27:53
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-03-07.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 6
+ 
+ 
+No configured devices yet.
+ 
+Which device do you want to connect? TDS
+ 
+Your list of possible devices to configure: 
+TDS-1_A, TDS-1_B
+ 
+Which device do you want to connect? TDS-1_A
+ 
+Your list of possible devices to configure: 
+TDS-1_A
+ 
+ 
+You have chosen this configuration...
+COM6 ----> TDS-1_A
+Please wait patiently...
+ 
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  07/03/2022 11:29:42
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-03-07.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 6
+ 
+ 
+You have already configured this devices during the session:
+TDS-1_B, TAS-1, MSH-1
+ 
+Which device do you want to connect? TDS-1
+ 
+Your list of possible devices to configure: 
+TDS-1_A
+ 
+Which device do you want to connect? TDS-1_A
+ 
+Your list of possible devices to configure: 
+TDS-1_A
+ 
+ 
+You have chosen this configuration...
+COM6 ----> TDS-1_A
+Please wait patiently...
+ 
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  07/03/2022 11:32:03
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-03-07.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 6
+ 
+ 
+You have already configured this devices during the session:
+TDS-1_B, TAS-1, MSH-1
+ 
+Which device do you want to connect? Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  07/03/2022 11:32:35
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-03-07.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 6
+ 
+ 
+No configured devices yet.
+ 
+Which device do you want to connect? Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  07/03/2022 11:33:44
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-03-07.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 6
+ 
+ 
+You haven't configured any device during this session.
+ 
+Which device do you want to connect? TDS
+ 
+Your list of possible devices to configure: 
+TDS-1_A, TDS-1_B
+ 
+Which device do you want to connect? TDS-1_A
+ 
+Your list of possible devices to configure: 
+TDS-1_A
+ 
+ 
+You have chosen this configuration...
+COM6 ----> TDS-1_A
+Please wait patiently...
+ 

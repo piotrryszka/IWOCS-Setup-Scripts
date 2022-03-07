@@ -58,8 +58,8 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                               'ready_dev': "Your devices:",
                               'com_cable': "Please connect your console cable to your device!",
                               'com_accept': "If you are ready type '1', because anything else won't be accepted: ",
-                              'dev_already_conf': "You have already configured this devices during the session:",
-                              'no_conf': "No configured devices yet.",
+                              'dev_already_conf': "You have already configured these devices during the session:",
+                              'no_conf': "You haven't configured any device during this session.",
 
 
                               },

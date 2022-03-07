@@ -94,9 +94,24 @@ while running_flag:
                 # Creating a list with all the possible devices
                 device_list = opening_device_list(file_name = 'project_names_of_devices.txt')
 
+                # TODO: DELETE IT
+                # TESTING
+#                 saving_dev('TDS-1_B')
+#                 saving_dev('TAS-1')
+#                 saving_dev('MSH-1')
+
                 # Listing devices already configured during this session
-                list_saved_dev(lang_dict = lang_expressions)
+                conf_devices_list = list_saved_dev(lang_dict = lang_expressions)
                 print(decorator_1)
+
+                # deleting already configured devices from available devices to be chosen by the user
+                # simple handling exceptions
+                try:
+                    for x in conf_devices_list:
+                        if x in device_list:
+                            device_list.remove(x)
+                except:
+                    pass
 
                 while device_flag:
                     # User chooses the device, which one he wants to
@@ -117,9 +132,9 @@ while running_flag:
                             choosing_device = False
 
                     # TODO: testing, move it after whole device configuration about 186 line of code
-                    saving_dev('essa')
-                    saving_dev('essa1')
-                    saving_dev('essa2')
+#                     saving_dev('TDS-1_B')
+#                     saving_dev('TAS-1')
+#                     saving_dev('MSH-1')
 #                     saving_dev(user_device)
 
 
@@ -189,6 +204,10 @@ while running_flag:
 
                             print(f"{lang_expressions['close_con']}{ser.name}.")
                             print(decorator_1)
+
+                            # TODO: Uncomment it later in LAB
+                            # saving the name of configured device to the txt file
+#                             saving_dev(user_device)
 
                             # question if user has finished initial configuration of devices
                             finish_conf = input(lang_expressions['finish_conf'])
