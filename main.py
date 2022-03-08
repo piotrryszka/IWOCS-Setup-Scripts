@@ -101,23 +101,24 @@ while running_flag:
 #                 saving_dev('TAS-1')
 #                 saving_dev('MSH-1')
 
-                # Listing devices already configured during this session
-                conf_devices_list = list_saved_dev(lang_dict = lang_expressions)
-                print(decorator_1)
-
-                # deleting already configured devices from available devices to be chosen by the user
-                # simple handling exceptions
-                try:
-                    for x in conf_devices_list:
-                        if x in device_list:
-                            device_list.remove(x)
-                except:
-                    pass
-
                 while device_flag:
                     # User chooses the device, which one he wants to
                     choosing_device = True
                     while choosing_device == True:
+
+                        # listing already configured devices from the file
+                        conf_devices_list = list_saved_dev(lang_dict = lang_expressions)
+                        print(decorator_1)
+
+                        # deleting already configured devices from available devices to be chosen by the user
+                        # simple handling exceptions
+                        try:
+                            for x in conf_devices_list:
+                                if x in device_list:
+                                    device_list.remove(x)
+                        except:
+                            pass
+
                         user_device = input(lang_expressions['device_question']).upper()
                         print(user_device)
                         user_list = []
@@ -132,13 +133,11 @@ while running_flag:
                         if user_device in user_list:
                             choosing_device = False
 
-                    # TODO: needs to be move later
-                    # Returning proper order of restarting devices
-                    dictionary_dev = order_dev(conf_devices_list,device_order, dictionary_dev)
-                    print(dictionary_dev)
-
                     # Checking if the device is in the list of devices
                     if user_device in device_list:
+
+                        saving_dev(user_device)
+
                         print(decorator_1)
                         print(lang_expressions['user_choice'])
                         print(f"{COM_string} ----> {user_device}")
@@ -195,6 +194,7 @@ while running_flag:
                                 # printing dots to inform user that script is still working
                                 print('.', end='')
 
+
                             print(decorator_1)
                             print(decorator_1)
                             # closing connection
@@ -204,7 +204,6 @@ while running_flag:
                             print(f"{lang_expressions['close_con']}{ser.name}.")
                             print(decorator_1)
 
-                            # TODO: Uncomment it later in LAB
                             # saving the name of configured device to the txt file
 #                             saving_dev(user_device)
 
@@ -289,6 +288,9 @@ while running_flag:
             print(*list_devices, sep = ', ')
             print(decorator_1)
 
+            dictionary_dev = order_dev(conf_devices_list,device_order, dictionary_dev)
+            print(dictionary_dev)
+
             # SSH CONFIGURATION LOOP
             while ssh_flag and working_tftp:
 
@@ -337,9 +339,6 @@ while running_flag:
                 if user_fin == '1':
                     ssh_flag = False
                     print(decorator_1)
-                    # commented because thank you phrase is also later
-#                     print(lang_expressions['thank_you'])
-#                     print(decorator_1)
                     running_flag = False
                     break
                 else:
