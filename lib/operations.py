@@ -129,6 +129,7 @@ def list_saved_dev(lang_dict):
     except:
         print(lang_dict['no_conf'])
 
+# the same function as above but without printing
 def list_saved_dev_no_print():
     try:
         with open('user-configuration-files/already_conf.txt', 'r') as file:
