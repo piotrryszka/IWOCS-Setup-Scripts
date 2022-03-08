@@ -4,7 +4,7 @@ from serial import Serial
 from time import sleep
 
 from lib.commands import send_to_console, checking_switch_ports, checking_ip_address, checking_device, check_tftp, to_conf_mode
-from lib.operations import opening_device_list, reading_conf_files, creating_proper_configuration, deleting_files, listing_conf, deleting_conf, saving_dev, list_saved_dev
+from lib.operations import opening_device_list, reading_conf_files, creating_proper_configuration, deleting_files, listing_conf, deleting_conf, saving_dev, list_saved_dev, list_saved_dev_no_print
 from lib.booting import checking_booting
 from lib.languages import listing_languages, reading_language
 from lib.data import ip_number, decorator_1, device_order
@@ -95,11 +95,15 @@ while running_flag:
                 # Creating a list with all the possible devices
                 device_list = opening_device_list(file_name = 'project_names_of_devices.txt')
 
-                # TODO: DELETE IT
-                # TESTING
-#                 saving_dev('TDS-1_B')
-#                 saving_dev('TAS-1')
-#                 saving_dev('MSH-1')
+                #TODO: TESTING -> DELETE IT
+                saving_dev('TDS-1_B')
+                saving_dev('TAS-1')
+                saving_dev('MSH-1')
+                conf_devices_list = list_saved_dev(lang_dict = lang_expressions)
+                print(decorator_1)
+                dictionary_dev = order_dev(conf_devices_list,device_order, dictionary_dev)
+                print(dictionary_dev)
+
 
                 while device_flag:
                     # User chooses the device, which one he wants to
@@ -288,8 +292,10 @@ while running_flag:
             print(*list_devices, sep = ', ')
             print(decorator_1)
 
+            # need to be done again to actualize the dictionary
+            conf_devices_list = list_saved_dev_no_print()
+            print(decorator_1)
             dictionary_dev = order_dev(conf_devices_list,device_order, dictionary_dev)
-            print(dictionary_dev)
 
             # SSH CONFIGURATION LOOP
             while ssh_flag and working_tftp:

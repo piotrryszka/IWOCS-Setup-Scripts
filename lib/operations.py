@@ -128,3 +128,16 @@ def list_saved_dev(lang_dict):
                 pass
     except:
         print(lang_dict['no_conf'])
+
+def list_saved_dev_no_print():
+    try:
+        with open('user-configuration-files/already_conf.txt', 'r') as file:
+            content_list = file.readlines()
+            stripped_list = [s.strip() for s in content_list]
+            if len(stripped_list)> 0:
+                # returning list with already_conf devices
+                return stripped_list
+            else:
+                pass
+    except:
+        pass

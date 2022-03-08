@@ -2,5 +2,6 @@
 4) dodanie listy do urzadzen skonfigurowanych i nie pozwolenie na kolejne skonfigurowanie tego urzadzenia 
 
 TODO jutro
-sprawdzenie czy autorestartowanie urzadzen dziala
-dodanie obslugi cisco ie2000
+problem z timeoutem przy cisco ie2000 -> wolniejsze urzadzenie + dodanie obslugi portów fastethernetowych nie tylko gigabitowych
+dac reload osobno jako funkcja kolejna, wyluskac ja z tego wgrywania po tftp
+dokonczenie automatyzacji restartu wszystkich urzadzen w odpowiedniej kolejnosci
