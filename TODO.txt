@@ -4,4 +4,4 @@
 TODO jutro
 problem z timeoutem przy cisco ie2000 -> wolniejsze urzadzenie + dodanie obslugi portów fastethernetowych nie tylko gigabitowych
 dac reload osobno jako funkcja kolejna, wyluskac ja z tego wgrywania po tftp
-dokonczenie automatyzacji restartu wszystkich urzadzen w odpowiedniej kolejnosci
+dokonczenie automatyzacji restartu wszystkich urzadzen w odpowiedniej kolejnosci TOOOOO

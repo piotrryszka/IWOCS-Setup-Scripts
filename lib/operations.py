@@ -113,32 +113,30 @@ def saving_dev(dev_name):
         f.write(dev_name)
         f.write('\n')
 
-# listing already configured devices from the file
-def list_saved_dev(lang_dict):
-    try:
-        with open('user-configuration-files/already_conf.txt', 'r') as file:
-            content_list = file.readlines()
-            stripped_list = [s.strip() for s in content_list]
-            if len(stripped_list)> 0:
-                print(lang_dict['dev_already_conf'])
-                print(*stripped_list, sep=', ')
-                # returning list with already_conf devices
-                return stripped_list
-            else:
-                pass
-    except:
-        print(lang_dict['no_conf'])
+# # listing already configured devices from the file
+# def list_saved_dev(lang_dict):
+#     try:
+#         with open('user-configuration-files/already_conf.txt', 'r') as file:
+#             content_list = file.readlines()
+#             stripped_list = [s.strip() for s in content_list]
+#             if len(stripped_list)> 0:
+#                 print(lang_dict['dev_already_conf'])
+#                 print(*stripped_list, sep=', ')
+#                 # returning list with already_conf devices
+#                 return stripped_list
+#             else:
+#                 pass
+#     except:
+#         print(lang_dict['no_conf'])
 
-# the same function as above but without printing
-def list_saved_dev_no_print():
+# listing already configured devices from the file
+def list_saved_dev():
+    d = {}
     try:
         with open('user-configuration-files/already_conf.txt', 'r') as file:
-            content_list = file.readlines()
-            stripped_list = [s.strip() for s in content_list]
-            if len(stripped_list)> 0:
-                # returning list with already_conf devices
-                return stripped_list
-            else:
-                pass
+            for line in file:
+               (key, val) = line.split()
+               d[key] = val
     except:
         pass
+    return d

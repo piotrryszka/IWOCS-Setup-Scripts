@@ -4,7 +4,7 @@ from serial import Serial
 from time import sleep
 
 from lib.commands import send_to_console, checking_switch_ports, checking_ip_address, checking_device, check_tftp, to_conf_mode
-from lib.operations import opening_device_list, reading_conf_files, creating_proper_configuration, deleting_files, listing_conf, deleting_conf, saving_dev, list_saved_dev, list_saved_dev_no_print
+from lib.operations import opening_device_list, reading_conf_files, creating_proper_configuration, deleting_files, listing_conf, deleting_conf, saving_dev, list_saved_dev
 from lib.booting import checking_booting
 from lib.languages import listing_languages, reading_language
 from lib.data import ip_number, decorator_1, device_order
@@ -31,6 +31,8 @@ ip_list = [] # empty list later filled with ip addresses
 conf_device_list = [] # empty list later filled with project configs downloaded
 list_devices = [] # empty dictionary to be filled with ip addresses and devices
 dictionary_dev = {} # empty dictionary to be later filled with proper restart order
+order_dict = {} #empty dictionary with devices model, ip addresses
+conf_devices_list = []
 
 # main project
 while running_flag:
@@ -95,15 +97,12 @@ while running_flag:
                 # Creating a list with all the possible devices
                 device_list = opening_device_list(file_name = 'project_names_of_devices.txt')
 
-                #TODO: TESTING -> DELETE IT
-                saving_dev('TDS-1_B')
-                saving_dev('TAS-1')
-                saving_dev('MSH-1')
-                conf_devices_list = list_saved_dev(lang_dict = lang_expressions)
+                # listing already conf devices
+                order_dict = list_saved_dev()
                 print(decorator_1)
-                dictionary_dev = order_dev(conf_devices_list,device_order, dictionary_dev)
-                print(dictionary_dev)
 
+                # filling dictionary with all info about devices
+                dictionary_dev = order_dev(conf_devices_list,device_order, dictionary_dev, order_dict)
 
                 while device_flag:
                     # User chooses the device, which one he wants to
@@ -111,12 +110,19 @@ while running_flag:
                     while choosing_device == True:
 
                         # listing already configured devices from the file
-                        conf_devices_list = list_saved_dev(lang_dict = lang_expressions)
+#                         conf_devices_list = list_saved_dev(lang_dict = lang_expressions)
                         print(decorator_1)
-
                         # deleting already configured devices from available devices to be chosen by the user
                         # simple handling exceptions
+                        order_dict = list_saved_dev()
+                        dictionary_dev = order_dev(conf_devices_list,device_order, dictionary_dev, order_dict)
                         try:
+                            for key in (dictionary_dev):
+                                conf_devices_list.append(dictionary_dev[key]['device'])
+                                print(key)
+                            print(dictionary_dev)
+                            print(device_list)
+                            print(conf_devices_list)
                             for x in conf_devices_list:
                                 if x in device_list:
                                     device_list.remove(x)
@@ -140,8 +146,6 @@ while running_flag:
                     # Checking if the device is in the list of devices
                     if user_device in device_list:
 
-                        saving_dev(user_device)
-
                         print(decorator_1)
                         print(lang_expressions['user_choice'])
                         print(f"{COM_string} ----> {user_device}")
@@ -153,23 +157,27 @@ while running_flag:
 #                         try:
 
                         # connection set
-                        ser = Serial(COM_string, COM_speed)
+#                         ser = Serial(COM_string, COM_speed)
 
                         # waiting for router/switch to boot
-                        user_boot_flag = checking_booting(port = ser)
+#                         user_boot_flag = checking_booting(port = ser)
 
                         # counting number of gigabit and fast ports
-                        device_ports = checking_switch_ports(ser_port = ser)
+#                         device_ports = checking_switch_ports(ser_port = ser)
 
                         # checking if device is really the device, which was wanted by user
-                        proper_device = checking_device(ser_port = ser, user_device = user_device, lang_dict = lang_expressions)
+#                         proper_device = checking_device(ser_port = ser, user_device = user_device, lang_dict = lang_expressions)
 
-                        # TODO: needs to be commented
                         # returning next ip number and full name of configured device to download to specified device
-                        our_conf = creating_proper_configuration(user_device = user_device, port_num = device_ports['Gigabit'], ip_add = ip_number)
+#                         our_conf = creating_proper_configuration(user_device = user_device, port_num = device_ports['Gigabit'], ip_add = ip_number)
+                        our_conf = creating_proper_configuration(user_device = user_device, port_num = 22, ip_add = ip_number)
+
 
                         # adding current ip address to list
                         ip_list.append(f'172.30.100.{ip_number}')
+
+                        # remembering old IP number, last octet is important
+                        ip_save = ip_number
 
                         # returning tuple with full name device and next iip number to bes used
                         actual_device = our_conf[1] # name of device
@@ -179,13 +187,17 @@ while running_flag:
                         list_devices.append(actual_device)
                         print(list_devices)
 
+                        # TODO: DELETE IT
+                        user_boot_flag = True
+                        proper_device = True
+
                         if user_boot_flag and proper_device:
 
                             print(lang_expressions['not_configured'])
                             print(decorator_1)
 
                             # going to configuration mode
-                            to_conf_mode(ser)
+#                             to_conf_mode(ser)
 
                             # opening file with configuration
                             actual_device = actual_device
@@ -194,7 +206,7 @@ while running_flag:
                             # executing commands from the list
                             for command in stripped_list:
                                 pass
-                                send_to_console(ser, command)
+#                                 send_to_console(ser, command)
                                 # printing dots to inform user that script is still working
                                 print('.', end='')
 
@@ -202,14 +214,15 @@ while running_flag:
                             print(decorator_1)
                             print(decorator_1)
                             # closing connection
-                            ser.close()
+#                             ser.close()
                             print(f"{lang_expressions['proper_conf']}{user_device}.")
 
-                            print(f"{lang_expressions['close_con']}{ser.name}.")
+#                             print(f"{lang_expressions['close_con']}{ser.name}.")
                             print(decorator_1)
 
                             # saving the name of configured device to the txt file
-#                             saving_dev(user_device)
+                            print(ip_save)
+                            saving_dev(f'{user_device} {ip_save}')
 
                             # question if user has finished initial configuration of devices
                             finish_conf = input(lang_expressions['finish_conf'])
@@ -230,8 +243,8 @@ while running_flag:
                             print(lang_expressions['again_prompt'])
                             print(decorator_1)
                             # closing connection
-                            ser.close()
-                            print(f"{lang_expressions['close_con']}{ser.name}.")
+#                             ser.close()
+#                             print(f"{lang_expressions['close_con']}{ser.name}.")
                             print(decorator_1)
                             break
                             # TODO: UNCOMMENT
