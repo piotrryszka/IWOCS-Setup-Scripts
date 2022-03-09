@@ -110,19 +110,18 @@ while running_flag:
                     while choosing_device == True:
 
                         # listing already configured devices from the file
-#                         conf_devices_list = list_saved_dev(lang_dict = lang_expressions)
                         print(decorator_1)
+
+                        # reading configured devices from txt file to dictionary
+                        order_dict = list_saved_dev()
+                        # reading full info with restart order, model and ip address to dictionary
+                        dictionary_dev = order_dev(conf_devices_list,device_order, dictionary_dev, order_dict)
+
                         # deleting already configured devices from available devices to be chosen by the user
                         # simple handling exceptions
-                        order_dict = list_saved_dev()
-                        dictionary_dev = order_dev(conf_devices_list,device_order, dictionary_dev, order_dict)
                         try:
                             for key in (dictionary_dev):
                                 conf_devices_list.append(dictionary_dev[key]['device'])
-                                print(key)
-                            print(dictionary_dev)
-                            print(device_list)
-                            print(conf_devices_list)
                             for x in conf_devices_list:
                                 if x in device_list:
                                     device_list.remove(x)
