@@ -131,6 +131,7 @@ while running_flag:
                         user_device = input(lang_expressions['device_question']).upper()
                         print(user_device)
                         user_list = []
+
                         for dev in device_list:
                             # checking if the string provided by the user has the same beginning as possible devices to configure
                             if dev.startswith(user_device):
@@ -151,7 +152,7 @@ while running_flag:
                         print(lang_expressions['wait_prompt'])
                         print(decorator_1)
 
-                        # TODO for tests it is commented (TRY AND EXCEPT)
+                        # TODO for tests it is commented (TRY AND EXCEPT) and networking commands
                         # TODO: move all commands one tab
 #                         try:
 
@@ -169,13 +170,15 @@ while running_flag:
 
                         # returning next ip number and full name of configured device to download to specified device
 #                         our_conf = creating_proper_configuration(user_device = user_device, port_num = device_ports['Gigabit'], ip_add = ip_number)
+
+                        # TODO: DELETE IT
                         our_conf = creating_proper_configuration(user_device = user_device, port_num = 22, ip_add = ip_number)
 
 
                         # adding current ip address to list
                         ip_list.append(f'172.30.100.{ip_number}')
 
-                        # remembering old IP number, last octet is important
+                        # remembering old IP number, last octet is important to save to txt file
                         ip_save = ip_number
 
                         # returning tuple with full name device and next iip number to bes used

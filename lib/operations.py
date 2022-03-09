@@ -131,12 +131,12 @@ def saving_dev(dev_name):
 
 # listing already configured devices from the file
 def list_saved_dev():
-    d = {}
+    new_dict = {}
     try:
         with open('user-configuration-files/already_conf.txt', 'r') as file:
             for line in file:
                (key, val) = line.split()
-               d[key] = val
+               new_dict[key] = val
     except:
         pass
-    return d
+    return new_dict

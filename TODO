@@ -1,6 +1,3 @@
 TODO LIST
-1. Adding arguments to methods/functions
 2. Be likely to handle more devices than only one
-3. Proper config be downloaded to proper devices
-4. Think about moving 'reload' by tftp to new function
 5. Uncomment try/except etx. in main.py and network handling functions

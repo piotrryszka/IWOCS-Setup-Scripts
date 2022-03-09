@@ -3486,4 +3486,34 @@ Your list of possible devices to configure:
 {0: {'device': 'TDS-1_A', 'ip': '192.168.1.10'}, 1: {'device': 'TDS-1_B', 'ip': '192.168.1.11'}, 4: {'device': 'TIR', 'ip': '192.168.1.12'}}
 ['ETAS-1', 'TAS-1', 'MSC-1', 'SDG-1_A', 'SDG-1_B', 'MSW-1_A', 'MSW-1_B', 'MSX-1_A', 'MSX-1_B', 'MSY-1_A', 'MSY-1_B', 'MSS-1_A', 'MSS-1_B', 'MSH-1', 'MSH-2', 'MSH-3', 'MSH-4']
 ['TDS-1_A', 'TDS-1_B', 'TIR', 'TDS-1_A', 'TDS-1_B', 'TIR']
-Which device do you want to connect? 
+Which device do you want to connect? Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  09/03/2022 16:27:55
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-03-09.txt
+Do you want to delete all logs? If yes type '1', if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 6
+ 
+ 
+ 
+ 
+{'TDS-1_A': '10', 'TDS-1_B': '11', 'TIR': '12'}
+{0: {'device': 'TDS-1_A', 'ip': '192.168.1.10'}, 1: {'device': 'TDS-1_B', 'ip': '192.168.1.11'}, 4: {'device': 'TIR', 'ip': '192.168.1.12'}}
+Which device do you want to connect? Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: 
