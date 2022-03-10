@@ -305,51 +305,59 @@ while running_flag:
             print(decorator_1)
 
             # need to be done again to actualize the dictionary
-            conf_devices_list = list_saved_dev_no_print()
+            order_dict = list_saved_dev()
+            dictionary_dev = order_dev(conf_devices_list,device_order, dictionary_dev, order_dict)
+            print(dictionary_dev)
             print(decorator_1)
-            dictionary_dev = order_dev(conf_devices_list,device_order, dictionary_dev)
 
             # SSH CONFIGURATION LOOP
             while ssh_flag and working_tftp:
 
+                # testing automating of restarting devices
+                # preparing data
+                for k in dictionary_dev.keys():
+                    print("Now this device is being configured:")
+                    print(f"Device -> {dictionary_dev[k]['device']} with IP address -> {dictionary_dev[k]['ip']}")
+                    print(decorator_1)
+
+                    # connection with specified by user IP address and project configuration
+                    ssh_con(file = dictionary_dev[k]['device'], host = dictionary_dev[k]['ip'])
+
                 # choosing proper configuration
-                while check_flag:
-                    # printing ip addresses
-                    print(lang_expressions['ip_connect'])
-                    print(*ip_list, sep=', ')
-                    print(decorator_1)
-                    # taking IP input from user
-                    new_host = input(lang_expressions['ip_add'])
-                    print(new_host)
-                    print(decorator_1)
-                    # checking if ip is available
-                    if new_host in ip_list:
-                        # removing ip address
-                        ip_list.remove(new_host)
-                        print(f"{lang_expressions['proper_ip']}{new_host}")
-                        print(decorator_1)
-                        break
-                    else:
-                        print(lang_expressions['bad_ip'])
-                        print(decorator_1)
+#                 while check_flag:
+#                     # printing ip addresses
+#                     print(lang_expressions['ip_connect'])
+#                     print(*ip_list, sep=', ')
+#                     print(decorator_1)
+#                     # taking IP input from user
+#                     new_host = input(lang_expressions['ip_add'])
+#                     print(new_host)
+#                     print(decorator_1)
+#                     # checking if ip is available
+#                     if new_host in ip_list:
+#                         # removing ip address
+#                         ip_list.remove(new_host)
+#                         print(f"{lang_expressions['proper_ip']}{new_host}")
+#                         print(decorator_1)
+#                         break
+#                     else:
+#                         print(lang_expressions['bad_ip'])
+#                         print(decorator_1)
 
                 # listing possible confs to download to the device with prompts
-                user_conf = listing_conf(lang_dict = lang_expressions)
+#                 user_conf = listing_conf(lang_dict = lang_expressions)
 
                 # adding device to the already configured list
-                conf_device_list.append(user_conf)
+#                 conf_device_list.append(user_conf)
 
                 # printing devices which are already configured
-                print(lang_expressions['already_conf'])
-                if len(conf_device_list) > 0:
-                    print(*conf_device_list, sep=', ')
-                    print(decorator_1)
-                else:
-                    print(lang_expressions['no_devices'])
-                    print(decorator_1)
-
-                # connection with specified by user IP address and project configuration
-                ssh_con(file = user_conf, host = new_host)
+#                 print(lang_expressions['already_conf'])
+#                 if len(conf_device_list) > 0:
+#                     print(*conf_device_list, sep=', ')
+#                     print(decorator_1)
+#                 else:
+#                     print(lang_expressions['no_devices'])
+#                     print(decorator_1)
 
                 # question about finishing configuration by TFTP and SSH
                 user_fin = input(lang_expressions['user_finish'])
