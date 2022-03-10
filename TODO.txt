@@ -3,4 +3,4 @@
 
 TODO jutro
 problem z timeoutem przy cisco ie2000 -> wolniejsze urzadzenie + dodanie obslugi portów fastethernetowych nie tylko gigabitowych
-spradzic restartowanie wraz ze slownikiem
+usuniecie tych niepotrzebnych rzeczy w stylu nie uzywanych outputow z data.py

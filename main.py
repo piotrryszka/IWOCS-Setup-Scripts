@@ -292,18 +292,6 @@ while running_flag:
             # SSH connection established
             print(lang_expressions['waiting_ssh'])
 
-            # waiting 10 seconds to get configuration ready
-            print(decorator_1)
-
-            # information prompt about good order of restarting TFTP
-            print(lang_expressions['warning_order'])
-            print(decorator_1)
-
-            # printing all possible configurations created by the user and the script
-            print(lang_expressions['ready_dev'])
-            print(*list_devices, sep = ', ')
-            print(decorator_1)
-
             # need to be done again to actualize the dictionary
             order_dict = list_saved_dev()
             dictionary_dev = order_dev(conf_devices_list,device_order, dictionary_dev, order_dict)
