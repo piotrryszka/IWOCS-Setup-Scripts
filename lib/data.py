@@ -60,6 +60,7 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                               'com_accept': "If you are ready type '1', because anything else won't be accepted: ",
                               'dev_already_conf': "You have already configured these devices during the session:",
                               'no_conf': "You haven't configured any device during this session.",
+                              'listing_dev': "Already configured devices:",
 
 
                               },
@@ -124,6 +125,7 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                                'com_accept': "Something in Norwegian language ",
                                'dev_already_conf': "Something in Norwegian language ",
                                'no_conf': "Something in Norwegian language ",
+                               'listing_dev': "Something in Norwegian language ",
 
                                },
                         'Fr': {'information_prompt': 'Something in French language ',
@@ -187,6 +189,7 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                                'com_accept': "Something in French language ",
                                'dev_already_conf': "Something in French language ",
                                'no_conf': "Something in French language ",
+                               'listing_dev': "Something in French language ",
 
                        }
                        }

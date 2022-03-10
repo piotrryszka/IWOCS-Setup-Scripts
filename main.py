@@ -10,7 +10,7 @@ from lib.languages import listing_languages, reading_language
 from lib.data import ip_number, decorator_1, device_order
 from lib.logging import *
 from lib.network import ssh_con
-from lib.functions import printing_logs, creating_timestamp, start_tftp, user_tftp, final_tftp, printing_confs, check_com, order_dev
+from lib.functions import printing_logs, creating_timestamp, start_tftp, user_tftp, final_tftp, printing_confs, check_com, order_dev, list_dev
 
 # Program flags:
 running_flag = True  # main flag, running program
@@ -27,11 +27,11 @@ check_flag = True # flag to check if ip address is available
 
 # FIXED Variables:
 COM_speed = 9600 # serial port speed
-ip_list = [] # empty list later filled with ip addresses
-conf_device_list = [] # empty list later filled with project configs downloaded
-list_devices = [] # empty dictionary to be filled with ip addresses and devices
+ip_list = [] # empty list later filled with ip addresses (CAN BE DELETED LATER)
+conf_device_list = [] # empty list later filled with project configs downloaded (CAN BE DELETED LATER)
+list_devices = [] # empty dictionary to be filled with ip addresses and devices (CAN BE DELETED LATER)
 dictionary_dev = {} # empty dictionary to be later filled with proper restart order
-order_dict = {} #empty dictionary with devices model, ip addresses
+order_dict = {} #empty dictionary with devices model and last octet of ip number
 conf_devices_list = []
 
 # main project
@@ -101,17 +101,11 @@ while running_flag:
                 order_dict = list_saved_dev()
                 print(decorator_1)
 
-                # filling dictionary with all info about devices
-                dictionary_dev = order_dev(conf_devices_list,device_order, dictionary_dev, order_dict)
-
                 while device_flag:
                     # User chooses the device, which one he wants to
                     choosing_device = True
+
                     while choosing_device == True:
-
-                        # listing already configured devices from the file
-                        print(decorator_1)
-
                         # reading configured devices from txt file to dictionary
                         order_dict = list_saved_dev()
                         # reading full info with restart order, model and ip address to dictionary
@@ -128,6 +122,10 @@ while running_flag:
                         except:
                             pass
 
+                        # printing already initial configured devices
+                        list_dev(device_list = conf_devices_list, lang_dict = lang_expressions)
+
+                        # question about choosing_device by the user
                         user_device = input(lang_expressions['device_question']).upper()
                         print(user_device)
                         user_list = []
@@ -223,7 +221,6 @@ while running_flag:
                             print(decorator_1)
 
                             # saving the name of configured device to the txt file
-                            print(ip_save)
                             saving_dev(f'{user_device} {ip_save}')
 
                             # question if user has finished initial configuration of devices
