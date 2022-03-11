@@ -296,16 +296,12 @@ while running_flag:
                     # connection with specified by user IP address and project configuration
                     ssh_con(file = dictionary_dev[k]['device'], host = dictionary_dev[k]['ip'])
 
-                # question about finishing configuration by TFTP and SSH
-                user_fin = input(lang_expressions['user_finish'])
-                print(user_fin)
-                if user_fin == '1':
-                    ssh_flag = False
-                    print(decorator_1)
-                    running_flag = False
-                    break
-                else:
-                    pass
+                # changing ssh_flag to False to leave the loop
+                ssh_flag = False
+
+            # leaving main part of script after configuration
+            running_flag = False
+
     else:
         print(lang_expressions['not_complete'])
         running_flag = False

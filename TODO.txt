@@ -5,3 +5,4 @@ TODO jutro
 problem z timeoutem przy cisco ie2000 -> wolniejsze urzadzenie + dodanie obslugi portów fastethernetowych nie tylko gigabitowych
 usuniecie tych niepotrzebnych rzeczy w stylu nie uzywanych outputow z data.py
 odkomentowac loger urzadzen bo to i cant troszke
+sprawdzenie czy adresy ip nie sa overlapping, zmienic sposob zapisu samego startowego adresu IP i po przejsciu przez caly skrypt restartowanie go
