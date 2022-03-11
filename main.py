@@ -23,16 +23,12 @@ proper_language = False # flag if the language chosen by user is possible to be 
 del_flag = False # flag to check what user want to do after deleting logs
 tftp_flag = True # flag to check if the port UDP 69 is taken
 ssh_flag = True # flag to configure devices by ssh connections
-check_flag = True # flag to check if ip address is available
 
 # FIXED Variables:
 COM_speed = 9600 # serial port speed
-ip_list = [] # empty list later filled with ip addresses (CAN BE DELETED LATER)
-conf_device_list = [] # empty list later filled with project configs downloaded (CAN BE DELETED LATER)
-list_devices = [] # empty dictionary to be filled with ip addresses and devices (CAN BE DELETED LATER)
 dictionary_dev = {} # empty dictionary to be later filled with proper restart order
-order_dict = {} #empty dictionary with devices model and last octet of ip number
-conf_devices_list = []
+order_dict = {} # empty dictionary with devices model and last octet of ip number
+conf_devices_list = [] #empty list later filled with already configured devices
 
 # main project
 while running_flag:
@@ -80,10 +76,8 @@ while running_flag:
     print(decorator_1)
     if user_system == '1':
         while com_flag:
-
-            check_com(lang_dict = lang_expressions)
-
             # question about which COM port is user using TASK 185
+            check_com(lang_dict = lang_expressions)
             user_COM = input(lang_expressions['port_question']).lower()
             print(user_COM)
             print(decorator_1)
@@ -172,20 +166,12 @@ while running_flag:
                         # TODO: DELETE IT
                         our_conf = creating_proper_configuration(user_device = user_device, port_num = 22, ip_add = ip_number)
 
-
-                        # adding current ip address to list
-                        ip_list.append(f'172.30.100.{ip_number}')
-
                         # remembering old IP number, last octet is important to save to txt file
                         ip_save = ip_number
 
                         # returning tuple with full name device and next iip number to bes used
                         actual_device = our_conf[1] # name of device
                         ip_number = our_conf[0] # new ip address incremented by +1
-
-                        # adding full device name with ip address to the list
-                        list_devices.append(actual_device)
-                        print(list_devices)
 
                         # TODO: DELETE IT
                         user_boot_flag = True
