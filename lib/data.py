@@ -46,6 +46,7 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                               'com_cable': "Please connect your console cable to your device!",
                               'com_accept': "If you are ready type '1', because anything else won't be accepted: ",
                               'listing_dev': "Already configured devices:",
+                              'now_device': "Now this device is being configured:",
 
                               },
                         'No': {'information_prompt': 'Something in Norwegian language ',
@@ -94,6 +95,7 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                                'com_cable': "Something in Norwegian language ",
                                'com_accept': "Something in Norwegian language ",
                                'listing_dev': "Something in Norwegian language ",
+                               'now_device': "Something in Norwegian language ",
 
                                },
                         'Fr': {'information_prompt': 'Something in French language ',
@@ -142,6 +144,7 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                                'com_cable': "Something in French language ",
                                'com_accept': "Something in French language ",
                                'listing_dev': "Something in French language ",
+                               'now_device': "Something in French language ",
 
                        }
                        }

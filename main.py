@@ -304,7 +304,7 @@ while running_flag:
                 # testing automating of restarting devices
                 # need to be reversed order to do the reload in a good way
                 for k in reversed(dictionary_dev.keys()):
-                    print("Now this device is being configured:")
+                    print(lang_expressions['now_device'])
                     print(f"{dictionary_dev[k]['device']} -> {dictionary_dev[k]['ip']}")
                     print(decorator_1)
 
