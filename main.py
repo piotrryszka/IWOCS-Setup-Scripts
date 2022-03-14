@@ -4,7 +4,7 @@ from serial import Serial
 from time import sleep
 
 from lib.commands import send_to_console, checking_switch_ports, checking_ip_address, checking_device, check_tftp, to_conf_mode
-from lib.operations import opening_device_list, reading_conf_files, creating_proper_configuration, deleting_files, listing_conf, deleting_conf, saving_dev, list_saved_dev
+from lib.operations import opening_device_list, reading_conf_files, creating_proper_configuration, deleting_files, deleting_conf, saving_dev, list_saved_dev
 from lib.booting import checking_booting
 from lib.languages import listing_languages, reading_language
 from lib.data import ip_number, decorator_1, device_order

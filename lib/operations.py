@@ -69,29 +69,6 @@ def deleting_files(lang_dict, user_input):
     else:
         return to_leave
 
-# listing project configurations and making a list
-def listing_conf(lang_dict):
-    running_flag = True
-
-    # creating a list of project configs
-    onlyfiles = [f for f in listdir('tftp-conf-files') if isfile(join('tftp-conf-files', f))]
-
-    while running_flag:
-        # listing configuration
-        print(lang_dict['project_confs'])
-        print(*onlyfiles, sep = ', ')
-        print(decorator_1)
-        user_choice = input(lang_dict['dev_conf'])
-        print(user_choice)
-        print(decorator_1)
-        if user_choice in onlyfiles:
-            running_flag = False
-            return user_choice
-        else:
-            print(lang_dict['bad_conf_dev'])
-            print(decorator_1)
-            pass
-
 # deleting initial configuration files created by the user while using script
 def deleting_conf(lang_dict):
     to_leave = False

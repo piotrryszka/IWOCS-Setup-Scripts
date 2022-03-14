@@ -18,7 +18,7 @@ def ssh_con(file, host):
         "host": f"{host}",
         "username": f"{username}",
         "password": f'{password}',
-        # TODO: UNCOMMENT IT (change way of saving)
+        # TODO: UNCOMMENT IT (change way of saving data)
         # session logger
 #         "session_log": f"device-logs/ {host}|---|date: {exact_time}.txt",
     }
