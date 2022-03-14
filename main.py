@@ -163,6 +163,8 @@ while running_flag:
 
                         # returning next ip number and full name of configured device to download to specified device
 #                         our_conf = creating_proper_configuration(user_device = user_device, port_num = device_ports['Gigabit'], ip_add = ip_number)
+
+                        # reading ip address from txt file
                         try:
                             with open('user-configuration-files/ip_number.txt', 'r') as f:
                                 new_ip = f.read()
@@ -172,6 +174,7 @@ while running_flag:
                         except:
                             pass
 
+                        # saving ip address to txt file
                         with open('user-configuration-files/ip_number.txt', 'w') as f:
                             f.write(str(ip_number))
 
