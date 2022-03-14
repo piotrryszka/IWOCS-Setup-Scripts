@@ -148,6 +148,7 @@ while running_flag:
                         # TODO: move all commands one tab
 #                         try:
 
+                        # TODO: MOVE IT AFTER this checking ip address from txt file
                         # connection set
 #                         ser = Serial(COM_string, COM_speed)
 
@@ -162,6 +163,17 @@ while running_flag:
 
                         # returning next ip number and full name of configured device to download to specified device
 #                         our_conf = creating_proper_configuration(user_device = user_device, port_num = device_ports['Gigabit'], ip_add = ip_number)
+                        try:
+                            with open('user-configuration-files/ip_number.txt', 'r') as f:
+                                new_ip = f.read()
+                                ip_number = int(new_ip) + 1
+                                print(ip_number)
+                                print(type(ip_number))
+                        except:
+                            pass
+
+                        with open('user-configuration-files/ip_number.txt', 'w') as f:
+                            f.write(str(ip_number))
 
                         # TODO: DELETE IT
                         our_conf = creating_proper_configuration(user_device = user_device, port_num = 22, ip_add = ip_number)
