@@ -148,36 +148,15 @@ while running_flag:
                         # TODO: move all commands one tab
 #                         try:
 
-                        # TODO: MOVE IT AFTER this checking ip address from txt file
-                        # connection set
-#                         ser = Serial(COM_string, COM_speed)
-#
-#                         # waiting for router/switch to boot
-#                         user_boot_flag = checking_booting(port = ser)
-#
-#                         # counting number of gigabit and fast ports
-#                         device_ports = checking_switch_ports(ser_port = ser)
-#
-#                         # checking if device is really the device, which was wanted by user
-#                         proper_device = checking_device(ser_port = ser, user_device = user_device, lang_dict = lang_expressions)
-#
-#                         # returning next ip number and full name of configured device to download to specified device
-#                         our_conf = creating_proper_configuration(user_device = user_device, port_num = device_ports['Gigabit'], ip_add = ip_number)
-
                         # reading ip address from txt file
                         try:
                             with open('user-configuration-files/ip_number.txt', 'r') as f:
                                 new_ip = f.read()
-                                ip_number = int(new_ip) + 1
-                                print(ip_number)
-                                print(type(ip_number))
+                                ip_number = int(new_ip)
                         except:
                             pass
 
-                        # saving ip address to txt file
-                        with open('user-configuration-files/ip_number.txt', 'w') as f:
-                            f.write(str(ip_number))
-
+                        # setting COM connection
                         ser = Serial(COM_string, COM_speed)
 
                         # waiting for router/switch to boot
@@ -198,6 +177,10 @@ while running_flag:
                         # returning tuple with full name device and next iip number to bes used
                         actual_device = our_conf[1] # name of device
                         ip_number = our_conf[0] # new ip address incremented by +1
+
+                        # saving ip address to txt file
+                        with open('user-configuration-files/ip_number.txt', 'w') as f:
+                            f.write(str(ip_number))
 
                         # TODO: DELETE IT
                         user_boot_flag = True
@@ -317,6 +300,8 @@ while running_flag:
                 for k in reversed(dictionary_dev.keys()):
                     print(lang_expressions['now_device'])
                     print(f"{dictionary_dev[k]['device']} -> {dictionary_dev[k]['ip']}")
+                    print(decorator_1)
+                    print("................................")
                     print(decorator_1)
 
                     # connection with specified by user IP address and project configuration

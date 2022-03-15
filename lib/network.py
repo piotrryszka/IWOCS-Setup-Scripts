@@ -44,6 +44,9 @@ def ssh_con(file, host):
             # sending confirmation of reloading copy
             net_connect.send_command_timing('\n', cmd_verify=False)
 
+            # waiting to give time to device react
+            sleep(2)
+
     # error handling while ssh connection
     except (NetmikoTimeoutException, NetmikoAuthenticationException) as error:
         print(error)
