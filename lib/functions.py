@@ -85,7 +85,7 @@ def order_dev(conf_devices_list, device_order, new_dict, order_dev_dict):
     for k in order_dev_dict:
         for y in device_order:
             if k == y:
-                new_dict[device_order.index(k)] = {'device': k, 'ip': f'192.168.1.{order_dev_dict[k]}'}
+                new_dict[device_order.index(k)] = {'device': k, 'ip': f'172.30.100.{order_dev_dict[k]}'}
     # creating new empty dict to return it to the main.py
     test_dict = {}
 
