@@ -10,7 +10,8 @@ from lib.data import password, username, decorator_1, server_ip
 # establishing SSH connection
 def ssh_con(file, host):
     # creating time stamp
-    exact_time = datetime.date(datetime.now())
+    now = datetime.now()
+    date_time = now.strftime("%m/%d/%Y")
 
     # configuration of network device
     cisco1 = {
@@ -20,7 +21,7 @@ def ssh_con(file, host):
         "password": f'{password}',
         # TODO: UNCOMMENT IT (change way of saving data)
         # session logger
-#         "session_log": f"device-logs/ {host}|---|date: {exact_time}.txt",
+        "session_log": f"device-logs/{file}---{host}.txt"
     }
 
     try:
