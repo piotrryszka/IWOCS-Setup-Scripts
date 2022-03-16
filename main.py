@@ -10,7 +10,7 @@ from lib.languages import listing_languages, reading_language
 from lib.data import ip_number, decorator_1, device_order
 from lib.logging import *
 from lib.network import ssh_con
-from lib.functions import printing_logs, creating_timestamp, start_tftp, user_tftp, final_tftp, printing_confs, check_com, order_dev, list_dev
+from lib.functions import printing_logs, creating_timestamp, start_tftp, user_tftp, final_tftp, check_com, order_dev, list_dev
 
 # Program flags:
 running_flag = True  # main flag, running program

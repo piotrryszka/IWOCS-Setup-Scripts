@@ -59,13 +59,6 @@ def final_tftp():
     else:
         return False
 
-# printing accessible project configurations
-def printing_confs(lang_dict):
-    files = os.listdir('tftp-conf-files')
-    # printing files
-    print(lang_dict['conf_files'])
-    print(*files, sep = ', ')
-
 # informing user to connect the console cable
 def check_com(lang_dict):
     running_flag = True
