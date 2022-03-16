@@ -150,7 +150,7 @@ while running_flag:
 
                         # reading ip address from txt file
                         try:
-                            with open('user-configuration-files/ip_number.txt', 'r') as f:
+                            with open('temp/ip_number.txt', 'r') as f:
                                 new_ip = f.read()
                                 ip_number = int(new_ip)
                         except:
@@ -179,7 +179,7 @@ while running_flag:
                         ip_number = our_conf[0] # new ip address incremented by +1
 
                         # saving ip address to txt file
-                        with open('user-configuration-files/ip_number.txt', 'w') as f:
+                        with open('temp/ip_number.txt', 'w') as f:
                             f.write(str(ip_number))
 
                         # TODO: DELETE IT

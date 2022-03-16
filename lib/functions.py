@@ -34,8 +34,6 @@ def user_tftp(lang_dict):
     continue_flag = True
     print(lang_dict['tftp_folder'])
     print(decorator_1)
-    print(lang_dict['tftp_ip'])
-    print(decorator_1)
     # user input if everything is set properly
     while continue_flag:
         user_input = input(lang_dict['tftp_ready'])

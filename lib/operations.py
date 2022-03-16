@@ -18,7 +18,7 @@ def opening_device_list(file_name):
 
 # reading commands from files (add argument to make this happen)
 def reading_conf_files(file):
-    with open(f'user-configuration-files/{file}') as file:
+    with open(f'temp/{file}') as file:
         # getting commands from list
         content_list = file.readlines()
         stripped_list = [s.strip() for s in content_list]
@@ -42,7 +42,7 @@ def creating_proper_configuration(user_device, port_num, ip_add):
             if x == ' ip address x.x.x.x y.y.y.y':
                 ip_index = content_list.index(x)
                 content_list[ip_index] = f' ip address 172.30.100.{str(ip_add)} 255.255.255.0'
-        with open(f'user-configuration-files/cisco-switch-{user_device}-172.30.100.{str(ip_add)}', 'w') as file:
+        with open(f'temp/cisco-switch-{user_device}-172.30.100.{str(ip_add)}', 'w') as file:
             for row in content_list:
                 file.write(str(row) + '\n')
             # adding one to create a new IP ADDRESS
@@ -72,12 +72,12 @@ def deleting_files(lang_dict, user_input):
 # deleting initial configuration files created by the user while using script
 def deleting_conf(lang_dict):
     to_leave = False
-    files = os.listdir('user-configuration-files')
+    files = os.listdir('temp')
     # deleting files
     for file in files:
         # cannot delete the file from today's date
         try:
-            os.remove(f'user-configuration-files/{file}')
+            os.remove(f'temp/{file}')
         except:
             pass
     print(lang_dict['del_conf'])
@@ -86,7 +86,7 @@ def deleting_conf(lang_dict):
 
 # saving already configured devices
 def saving_dev(dev_name):
-    with open('user-configuration-files/already_conf.txt', 'a') as f:
+    with open('temp/already_conf.txt', 'a') as f:
         f.write(dev_name)
         f.write('\n')
 
@@ -94,7 +94,7 @@ def saving_dev(dev_name):
 def list_saved_dev():
     new_dict = {}
     try:
-        with open('user-configuration-files/already_conf.txt', 'r') as file:
+        with open('temp/already_conf.txt', 'r') as file:
             for line in file:
                (key, val) = line.split()
                new_dict[key] = val

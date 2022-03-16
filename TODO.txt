@@ -1,7 +1,12 @@
 3) rozroznienie zlego wybranego urzadzenia i czegos co ma startowa konfiguracje, jezeli jest cos innego niz initial configuration to wtedy COM sie rozlacza i mowi sie uzytkownikowi zeby odpalil PUTTY
-4) dodanie listy do urzadzen skonfigurowanych i nie pozwolenie na kolejne skonfigurowanie tego urzadzenia 
+
 
 TODO jutro
 problem z timeoutem przy cisco ie2000 -> wolniejsze urzadzenie + dodanie obslugi portów fastethernetowych nie tylko gigabitowych
 usuniecie tych niepotrzebnych rzeczy w stylu nie uzywanych outputow z data.py
 logowanie urzadzen po tftp bo cos tam nie dziala z zapisem samych danych (zły format)
+
+Konfig rozbicie na jezyki i konfigi i oba w katalogu /config
+Logi w jednym katologu razem /log
+static_files zrobic protected przed uzytkownikiem
+nastepne 2 firewalle, potem ogarnianie licencje, potem upgrade software'u a na koncu czyszczenie urzadzen i oblsuga niewyczyszczonych urzadzen
