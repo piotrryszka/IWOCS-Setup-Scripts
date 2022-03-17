@@ -21,7 +21,7 @@ def ssh_con(file, host):
         "password": f'{password}',
         # TODO: UNCOMMENT IT (change way of saving data)
         # session logger
-        "session_log": f"device-logs/{file}---{host}.txt"
+#         "session_log": f"device-logs/{file}---{host}.txt"
     }
     try:
         with ConnectHandler(**cisco1) as net_connect:

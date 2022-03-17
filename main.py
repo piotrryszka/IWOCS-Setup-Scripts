@@ -268,7 +268,6 @@ while running_flag:
         else:
             print(lang_expressions['ssh_move'])
 
-            # TODO: UNCOMMENT
             # checking ip address is correctly set
             while ip_flag == False:
                 ip_set = checking_ip_address(lang_dict = lang_expressions)

@@ -1208,3 +1208,6 @@ TDS-1_A -> 172.30.100.10
 Your created configuration files has been deleted ...
  
 Thank you for using our script, hope you enjoy it!!!
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: 
