@@ -5,7 +5,7 @@ import os
 from datetime import datetime
 import subprocess
 
-from lib.data import decorator_1
+from config.data import decorator_1
 
 
 # printing accessible logs

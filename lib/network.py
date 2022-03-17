@@ -5,7 +5,7 @@ from netmiko import ConnectHandler, NetmikoTimeoutException, NetmikoAuthenticati
 from time import sleep
 from datetime import datetime
 
-from lib.data import password, username, decorator_1, server_ip
+from config.data import password, username, decorator_1, server_ip
 
 # establishing SSH connection
 def ssh_con(file, host):

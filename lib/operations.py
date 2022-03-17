@@ -5,7 +5,7 @@ import os
 from os import listdir
 from os.path import isfile, join
 
-from lib.data import decorator_1
+from config.data import decorator_1
 from lib.commands import send_to_console
 
 # opening possible devices to configure

@@ -1,7 +1,7 @@
 # LANGUAGES HANDLING
 
 # imports
-from lib.data import language_dictionary
+from config.language import language_dictionary
 
 # listing every possible language
 def listing_languages():

@@ -7,10 +7,9 @@ import subprocess
 import os
 from datetime import datetime
 
-from lib.data import ie2000, ie4010, decorator_1
+from config.data import ie2000, ie4010, decorator_1
 
 # sending commands to console
-# TODO: problems with cisco ie2000
 def send_to_console(ser_fun: Serial, command: str, wait_time: float = 0.2):
     command_to_send = command + "\r\n"
     ser_fun.write(command_to_send.encode('utf-8'))
