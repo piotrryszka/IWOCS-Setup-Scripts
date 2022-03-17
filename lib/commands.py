@@ -34,6 +34,7 @@ def checking_switch_ports(ser_port):
 
 # checking if ip address was properly set by user
 def checking_ip_address(lang_dict):
+    print(decorator_1)
     print(lang_dict['ip_prompt'])
     print(decorator_1)
     user_input = input(lang_dict['ready_ip'])
@@ -44,7 +45,7 @@ def checking_ip_address(lang_dict):
     while continue_flag:
         if user_input == "1":
             output_ipconfig = str(subprocess.check_output("ipconfig /all", shell=True)).strip()
-            ip_address = '172.30.100.91'
+            ip_address = '10.83.6.135'
             if ip_address in output_ipconfig:
                 IP_flag = True
                 print(lang_dict['good_ip'])

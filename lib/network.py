@@ -23,7 +23,6 @@ def ssh_con(file, host):
         # session logger
         "session_log": f"device-logs/{file}---{host}.txt"
     }
-
     try:
         with ConnectHandler(**cisco1) as net_connect:
             # TFTP configuration download command

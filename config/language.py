@@ -35,7 +35,7 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                               'tftp_occupied': 'TFTP server is already running or socket is occupied ...',
                               'tftp_free': "Everything is fine, now you can turn on your TFTP SERVER...",
                               'tftp_start': "Your TFTP server is running now...",
-                              'tftp_folder': "Please choose proper folder with configs (PROJECT-CONFIGS) in TFTP Server application...",
+                              'tftp_folder': "Please choose in tab 'Current Directory' in TFTP Server Application folder called PROJECT-CONFIGS!",
                               'tftp_ready': "If you set configuration properly and you are ready, please type in '1' in console. ",
                               'tftp_good': 'Everything was set, the script will now download project configs automatically!',
                               'finish_conf': "Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: ",
@@ -46,6 +46,7 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                               'com_accept': "If you are ready type '1', because anything else won't be accepted: ",
                               'listing_dev': "Already configured devices:",
                               'now_device': "Now this device is being configured:",
+                              'connect_cable': "Please connect all your devices by LAN cables!"
 
                               },
                         'No': {'information_prompt': 'Something in Norwegian language ',
@@ -94,6 +95,7 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                                'com_accept': "Something in Norwegian language ",
                                'listing_dev': "Something in Norwegian language ",
                                'now_device': "Something in Norwegian language ",
+                               'connect_cable': "Something in Norwegian language ",
 
                                },
                         'Fr': {'information_prompt': 'Something in French language ',
@@ -142,6 +144,7 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                                'com_accept': "Something in French language ",
                                'listing_dev': "Something in French language ",
                                'now_device': "Something in French language ",
+                               'connect_cable': "Something in French language ",
 
                        }
                        }

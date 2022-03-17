@@ -269,11 +269,16 @@ while running_flag:
             print(lang_expressions['ssh_move'])
 
             # TODO: UNCOMMENT
-            # checking ip address but need to be commented
-#             while ip_flag == False:
-#                 ip_set = checking_ip_address(lang_dict = lang_expressions)
-#                 if ip_set == True:
-#                     ip_flag = True
+            # checking ip address is correctly set
+            while ip_flag == False:
+                ip_set = checking_ip_address(lang_dict = lang_expressions)
+                if ip_set == True:
+                    ip_flag = True
+
+            print(decorator_1)
+
+            # reminding to user to connect LAN cables like in the configuration
+            print(lang_expressions['connect_cable'])
 
             # checking if server tftp is already running
             while tftp_flag:
