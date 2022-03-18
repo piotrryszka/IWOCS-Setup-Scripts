@@ -9,8 +9,8 @@ from lib.booting import checking_booting
 from lib.languages import listing_languages, reading_language
 from lib.logging import *
 from lib.network import ssh_con
-from lib.functions import printing_logs, creating_timestamp, start_tftp, user_tftp, final_tftp, check_com, order_dev, list_dev
-from config.data import ip_number, decorator_1, device_order
+from lib.functions import printing_logs, creating_timestamp, start_tftp, user_tftp, final_tftp, check_com, order_dev, list_dev, create_table, adding_row
+from config.data import ip_number, decorator_1, device_order, counter_table
 
 
 # Program flags:
@@ -58,6 +58,9 @@ while running_flag:
     # info to user how to leave any part of program
     print(lang_expressions['information_prompt'])
     print(decorator_1)
+
+    # creating table with configuration licenses
+    conf_table = create_table()
 
     # deleting logs
     printing_logs(lang_expressions)
@@ -223,6 +226,10 @@ while running_flag:
                             # saving the name of configured device to the txt file
                             saving_dev(f'{user_device} {ip_save}')
 
+                            # adding row with current device to the table
+                            # returning new ID to counter_table variable
+                            counter_table = adding_row(conf_table, counter_table, user_device)
+
                             # question if user has finished initial configuration of devices
                             finish_conf = input(lang_expressions['finish_conf'])
                             print(finish_conf)
@@ -266,6 +273,10 @@ while running_flag:
 
         # SSH CONNECTIONS
         else:
+            # printing already conf devices with licenses in a list
+            print(conf_table)
+
+            # going to ssh connections
             print(lang_expressions['ssh_move'])
 
             # checking ip address is correctly set

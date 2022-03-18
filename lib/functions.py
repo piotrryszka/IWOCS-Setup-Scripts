@@ -3,6 +3,7 @@
 # imports
 import os
 from datetime import datetime
+from prettytable import PrettyTable as pt
 import subprocess
 
 from config.data import decorator_1
@@ -95,3 +96,18 @@ def list_dev(device_list, lang_dict):
         print(decorator_1)
     else:
         pass
+
+# creating basic table with headers from scratch
+def create_table():
+    # printing table with devices
+    tb = pt()
+    # add headers
+    tb.field_names = ["ID", "Device", "UDI", "License", "Status", "Expiration", "OK"]
+    #returning table
+    return tb
+
+def adding_row(table, count, device):
+    table.add_row([count,f"{device}", "IE-4010-4S24P:FDO2250U0AV",'ipservices', "Active, in use", "Pernament", "OK"])
+    count+=1
+    print(table)
+    return count
