@@ -46,7 +46,8 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                               'com_accept': "If you are ready type '1', because anything else won't be accepted: ",
                               'listing_dev': "Already configured devices:",
                               'now_device': "Now this device is being configured:",
-                              'connect_cable': "Please connect all your devices by LAN cables!"
+                              'connect_cable': "Please connect all your devices by LAN cables!",
+                              'conf_lic': 'Table with devices licenses.',
 
                               },
                         'No': {'information_prompt': 'Something in Norwegian language ',
@@ -96,6 +97,7 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                                'listing_dev': "Something in Norwegian language ",
                                'now_device': "Something in Norwegian language ",
                                'connect_cable': "Something in Norwegian language ",
+                               'conf_lic': "Something in Norwegian language ",
 
                                },
                         'Fr': {'information_prompt': 'Something in French language ',
@@ -145,6 +147,7 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                                'listing_dev': "Something in French language ",
                                'now_device': "Something in French language ",
                                'connect_cable': "Something in French language ",
+                               'conf_lic': "Something in French language ",
 
                        }
                        }

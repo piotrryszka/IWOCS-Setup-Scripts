@@ -4,12 +4,10 @@ TODO IN GENERAL
 
 TODO MY OBSERVATIONS
 problem z timeoutem przy cisco ie2000 -> wolniejsze urzadzenie + dodanie obslugi portów fastethernetowych nie tylko gigabitowych
-usuniecie tych niepotrzebnych rzeczy w stylu nie uzywanych outputow z data.py
 dodanie daty/godziny czegokolwiek do logera urzadzen po tftp oraz dodanie tworzenia tych plikow wczesniej, aby sie nie wyrzucalo
 ERROR:
 paramiko.ssh_exception.SSHException: Error reading SSH protocol banner
 
 TODO NEXT
-Logi w jednym katologu razem /log
 static_files zrobic protected przed uzytkownikiem
 

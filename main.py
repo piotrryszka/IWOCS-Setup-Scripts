@@ -229,7 +229,7 @@ while running_flag:
 
                             # adding row with current device to the table
                             # returning new ID to counter_table variable
-                            counter_table = adding_row(conf_table, counter_table, user_device)
+                            counter_table = adding_row(table = conf_table,count = counter_table,device = user_device)
 
 
                             # question if user has finished initial configuration of devices
@@ -276,11 +276,12 @@ while running_flag:
         # SSH CONNECTIONS
         else:
             # printing already conf devices with licenses in a list
+            print(lang_expressions['conf_lic'])
             print(conf_table)
             print(decorator_1)
 
             # saving already configured devices
-            saving_license(conf_table)
+            saving_license(table = conf_table)
 
             # going to ssh connections
             print(lang_expressions['ssh_move'])
