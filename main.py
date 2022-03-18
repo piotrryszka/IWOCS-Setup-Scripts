@@ -4,7 +4,7 @@ from serial import Serial
 from time import sleep
 
 from lib.commands import send_to_console, checking_switch_ports, checking_ip_address, checking_device, check_tftp, to_conf_mode
-from lib.operations import opening_device_list, reading_conf_files, creating_proper_configuration, deleting_files, deleting_conf, saving_dev, list_saved_dev
+from lib.operations import opening_device_list, reading_conf_files, creating_proper_configuration, deleting_files, deleting_conf, saving_dev, list_saved_dev, saving_license
 from lib.booting import checking_booting
 from lib.languages import listing_languages, reading_language
 from lib.logging import *
@@ -230,6 +230,7 @@ while running_flag:
                             # returning new ID to counter_table variable
                             counter_table = adding_row(conf_table, counter_table, user_device)
 
+
                             # question if user has finished initial configuration of devices
                             finish_conf = input(lang_expressions['finish_conf'])
                             print(finish_conf)
@@ -275,6 +276,8 @@ while running_flag:
         else:
             # printing already conf devices with licenses in a list
             print(conf_table)
+            # saving already configured devices
+            saving_license(conf_table)
 
             # going to ssh connections
             print(lang_expressions['ssh_move'])

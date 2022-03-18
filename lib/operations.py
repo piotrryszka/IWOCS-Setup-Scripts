@@ -4,6 +4,7 @@
 import os
 from os import listdir
 from os.path import isfile, join
+from datetime import datetime
 
 from config.data import decorator_1
 from lib.commands import send_to_console
@@ -101,3 +102,15 @@ def list_saved_dev():
     except:
         pass
     return new_dict
+
+# saving already configured devices with their license status
+def saving_license(table):
+    # get the date object from datetime object
+    # creating timestamp
+    dateTimeObj = datetime.now()
+    dateObj = dateTimeObj.date()
+    timeObj = dateTimeObj.time()
+    dateStr = dateObj.strftime("%d.%m.%Y")
+    timeStr = timeObj.strftime("%Hh-%Mm")
+    with open(f'support/license-check-{dateStr}-{timeStr}.txt', 'w') as f:
+        f.write(str(table))
