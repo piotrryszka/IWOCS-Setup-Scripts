@@ -30,6 +30,7 @@ COM_speed = 9600 # serial port speed
 dictionary_dev = {} # empty dictionary to be later filled with proper restart order
 order_dict = {} # empty dictionary with devices model and last octet of ip number
 conf_devices_list = [] #empty list later filled with already configured devices
+license_dict = {} # empty dictionary later to be filled with license linked things
 
 # main project
 while running_flag:
@@ -276,6 +277,8 @@ while running_flag:
         else:
             # printing already conf devices with licenses in a list
             print(conf_table)
+            print(decorator_1)
+
             # saving already configured devices
             saving_license(conf_table)
 

@@ -11,7 +11,7 @@ from config.data import decorator_1
 
 # printing accessible logs
 def printing_logs(lang_dict):
-    files = os.listdir('logs')
+    files = os.listdir('logs/console_logs')
     # printing files
     print(lang_dict['print_logs'])
     print(*files, sep = ', ')

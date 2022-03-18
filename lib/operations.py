@@ -54,13 +54,13 @@ def creating_proper_configuration(user_device, port_num, ip_add):
 # deleting logs and handling logs files
 def deleting_files(lang_dict, user_input):
     to_leave = False
-    files = os.listdir('logs')
+    files = os.listdir('logs/console_logs')
     # deleting files
     if user_input == '1':
         for file in files:
             # cannot delete the file from today's date
             try:
-                os.remove(f'logs/{file}')
+                os.remove(f'logs/console_logs/{file}')
             except:
                 pass
         return to_leave

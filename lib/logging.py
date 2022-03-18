@@ -10,7 +10,7 @@ class Logger(object):
     exact_time = datetime.date(datetime.now())
 
     # creating object
-    def __init__(self, filename=f'logs/{exact_time}.txt', stream=sys.stdout):
+    def __init__(self, filename=f'logs/console_logs/{exact_time}.txt', stream=sys.stdout):
         self.terminal = stream
         self.log = open(filename, 'a')
 
