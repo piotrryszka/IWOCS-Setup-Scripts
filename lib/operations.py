@@ -8,6 +8,7 @@ from datetime import datetime
 
 from config.data import decorator_1
 from lib.commands import send_to_console
+from lib.functions import adding_row
 
 # opening possible devices to configure
 def opening_device_list(file_name):
@@ -114,3 +115,18 @@ def saving_license(table):
     timeStr = timeObj.strftime("%Hh-%Mm")
     with open(f'support/license-check-{dateStr}-{timeStr}.txt', 'w') as f:
         f.write(str(table))
+
+# saving info about devices and their license to file
+def saving_info_lic(counter_table, user_device):
+    with open('temp/licenses.txt', 'a') as file:
+        file.write(f'{counter_table} {user_device} UDI LICENSE STATUS EXPIRATION OK')
+        file.write('\n')
+        counter_table += 1
+        return counter_table
+
+# reading info about license from txt file
+def reading_license(conf_table):
+    with open('temp/licenses.txt', 'r') as file:
+        for line in file:
+           list_license = line.split()
+           counter_table = adding_row(table = conf_table,count = int(list_license[0]), device = list_license[1])

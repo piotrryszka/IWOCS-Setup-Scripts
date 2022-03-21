@@ -34,4 +34,4 @@ device_order = ['TDS-1_A', 'TDS-1_B', 'SDG-1_A', 'SDG-1_B', 'TIR', 'ETAS-1', 'TA
                 'MSX-1_A', 'MSX-1_B', 'MSY-1_A', 'MSY-1_B', 'MSS-1_A', 'MSS-1_B', 'MSH-1', 'MSH-2', 'MSH-3', 'MSH-4']
 
 # counter for correct ordering devices in table
-counter_table = 1
+id_number = 1

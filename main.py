@@ -4,13 +4,13 @@ from serial import Serial
 from time import sleep
 
 from lib.commands import send_to_console, checking_switch_ports, checking_ip_address, checking_device, check_tftp, to_conf_mode
-from lib.operations import opening_device_list, reading_conf_files, creating_proper_configuration, deleting_files, deleting_conf, saving_dev, list_saved_dev, saving_license
+from lib.operations import opening_device_list, reading_conf_files, creating_proper_configuration, deleting_files, deleting_conf, saving_dev, list_saved_dev, saving_license, saving_info_lic, reading_license
 from lib.booting import checking_booting
 from lib.languages import listing_languages, reading_language
 from lib.logging import *
 from lib.network import ssh_con
 from lib.functions import printing_logs, creating_timestamp, start_tftp, user_tftp, final_tftp, check_com, order_dev, list_dev, create_table, adding_row
-from config.data import ip_number, decorator_1, device_order, counter_table
+from config.data import ip_number, decorator_1, device_order, id_number
 
 
 # Program flags:
@@ -227,10 +227,20 @@ while running_flag:
                             # saving the name of configured device to the txt file
                             saving_dev(f'{user_device} {ip_save}')
 
-                            # adding row with current device to the table
-                            # returning new ID to counter_table variable
-                            counter_table = adding_row(table = conf_table,count = counter_table,device = user_device)
+                            # reading ID number from txt file
+                            try:
+                                with open('temp/id_number.txt', 'r') as f:
+                                    new_id = f.read()
+                                    id_number = int(new_id)
+                            except:
+                                pass
 
+                            # saving info about licenses and devices to the txt file with incremented ID counter
+                            id_number = saving_info_lic(id_number, user_device)
+
+                            # saving ID number to txt file
+                            with open('temp/id_number.txt', 'w') as f:
+                                f.write(str(id_number))
 
                             # question if user has finished initial configuration of devices
                             finish_conf = input(lang_expressions['finish_conf'])
@@ -277,20 +287,25 @@ while running_flag:
         else:
             # printing already conf devices with licenses in a list
             print(lang_expressions['conf_lic'])
-            print(conf_table)
-            print(decorator_1)
+
+            # reading info about licenses to table
+            reading_license(conf_table)
 
             # saving already configured devices
             saving_license(table = conf_table)
 
+            # printing table with licenses to console
+            print(conf_table)
+            print(decorator_1)
+            
             # going to ssh connections
             print(lang_expressions['ssh_move'])
 
             # checking ip address is correctly set
-            while ip_flag == False:
-                ip_set = checking_ip_address(lang_dict = lang_expressions)
-                if ip_set == True:
-                    ip_flag = True
+#             while ip_flag == False:
+#                 ip_set = checking_ip_address(lang_dict = lang_expressions)
+#                 if ip_set == True:
+#                     ip_flag = True
 
             print(decorator_1)
 
