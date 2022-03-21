@@ -99,7 +99,6 @@ def list_dev(device_list, lang_dict):
 
 # creating basic table with headers from scratch
 def create_table():
-    # printing table with devices
     tb = pt()
     # add headers
     tb.field_names = ["ID", "Device", "UDI", "License", "Status", "Expiration", "OK"]

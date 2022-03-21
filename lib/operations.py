@@ -73,7 +73,6 @@ def deleting_files(lang_dict, user_input):
 
 # deleting initial configuration files created by the user while using script
 def deleting_conf(lang_dict):
-    to_leave = False
     files = os.listdir('temp')
     # deleting files
     for file in files:

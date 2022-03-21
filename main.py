@@ -297,7 +297,7 @@ while running_flag:
             # printing table with licenses to console
             print(conf_table)
             print(decorator_1)
-            
+
             # going to ssh connections
             print(lang_expressions['ssh_move'])
 
