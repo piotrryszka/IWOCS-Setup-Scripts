@@ -129,3 +129,25 @@ def reading_license(conf_table):
         for line in file:
            list_license = line.split()
            counter_table = adding_row(table = conf_table,count = int(list_license[0]), device = list_license[1])
+
+# deleting device logs
+def deleting_dev_logs():
+    files = os.listdir('logs/device_logs')
+    # deleting files
+    for file in files:
+        # cannot delete the file from today's date
+        try:
+            os.remove(f'logs/device_logs/{file}')
+        except:
+            pass
+
+# deleting table with licenses and their status for support
+def deleting_dev_license():
+    files = os.listdir('support')
+    # deleting files
+    for file in files:
+        # cannot delete the file from today's date
+        try:
+            os.remove(f'support/{file}')
+        except:
+            pass

@@ -4,7 +4,7 @@ from serial import Serial
 from time import sleep
 
 from lib.commands import send_to_console, checking_switch_ports, checking_ip_address, checking_device, check_tftp, to_conf_mode
-from lib.operations import opening_device_list, reading_conf_files, creating_proper_configuration, deleting_files, deleting_conf, saving_dev, list_saved_dev, saving_license, saving_info_lic, reading_license
+from lib.operations import opening_device_list, reading_conf_files, creating_proper_configuration, deleting_files, deleting_conf, saving_dev, list_saved_dev, saving_license, saving_info_lic, reading_license, deleting_dev_logs, deleting_dev_license
 from lib.booting import checking_booting
 from lib.languages import listing_languages, reading_language
 from lib.logging import *
@@ -63,10 +63,12 @@ while running_flag:
     # creating table with configuration licenses
     conf_table = create_table()
 
-    # deleting logs
+    # deleting console logs, pretty table with licenses files and device logs files
     printing_logs(lang_expressions)
     user_del = input(lang_expressions['deleting_logs'])
     del_flag = deleting_files(lang_dict = lang_expressions, user_input = user_del)
+    deleting_dev_license()
+    deleting_dev_logs()
     print(user_del)
     if del_flag == True:
         print(lang_expressions['del_info'])
