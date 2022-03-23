@@ -106,8 +106,7 @@ def create_table():
     return tb
 
 # adding rows to our conf license table with devices
-# TODO: need to add more arguments
-def adding_row(table, count, device):
-    table.add_row([count,f"{device}", "IE-4010-4S24P:FDO2250U0AV",'ipservices', "Active, in use", "Pernament", "OK"])
+def adding_row(table, count, device, udi, type_license, status_license, time_license, ok):
+    table.add_row([count, device, udi, type_license, status_license, time_license, ok])
     count+=1
     return count

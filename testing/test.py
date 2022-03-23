@@ -7,22 +7,14 @@ from serial import Serial
 # TODO; pozmieniac nazwy zmiennych bo tu syf jest
 
 ser = Serial('COM6', 9600)
-e = send_to_console(ser, '\n')
-e = send_to_console(ser, '\n')
-e = send_to_console(ser, '\n')
-e = send_to_console(ser, 'en')
-
-
-
-
+send_to_console(ser, '\n')
+send_to_console(ser, '\n')
+send_to_console(ser, '\n')
+send_to_console(ser, 'en')
 
 e = send_to_console(ser, 'sh license udi', 0.5)
 
-print(e)
-
 li = list(e.split())
-# e.split('')
-print(li)
 udi = li[11]
 
 # UDI
@@ -48,37 +40,26 @@ with open('data.txt') as f:
         print(line)
         if counter < 1:
             if 'License State:' in line:
-                e = line.split()
-                our_status = e[2:]
-                print(our_status)
-                my_string = ' '.join(our_status)
+                line_read = line.split()
+                our_info = line_read[2:]
+                print(our_info)
+                state_string = ' '.join(our_info)
                 # tego my stringa wsadzic w pole STATUS
-                print(my_string)
-                flag_1 = True
+                print(state_string)
             if 'License Type:' in line:
-                e = line.split()
-                our_status = e[2:]
-                print(our_status)
-                my_string = ' '.join(our_status)
+                line_read = line.split()
+                our_info = line_read[2:]
+                print(our_info)
+                type_string = ' '.join(our_info)
                 # tego my stringa wsadzic w pole EXPIRATION
-                print(my_string)
-
-        if 'ipservices' in line:
-            print("ESSA")
+                print(type_string)
+            if 'ipservices' in line:
+                line_read = line.split()
+                our_info = line_read[3:]
+                print(our_info)
+                ipservices_string = ' '.join(our_info)
+                # tego my stringa wsadzic w pole STATUS
+                print(ipservices_string)
         if 'lanbase' in line:
             counter =+1
 
-
-
-#         data = f.read()
-#         print(data)
-
-
-
-# print(data)
-
-# content_list = data.split()
-# print(content_list)
-# li = list(e.split())
-# # e.split('')
-# print(li)

@@ -116,9 +116,9 @@ def saving_license(table):
         f.write(str(table))
 
 # saving info about devices and their license to file
-def saving_info_lic(counter_table, user_device):
+def saving_info_lic(counter_table, user_device, udi, license, status, expiration, ok):
     with open('temp/licenses.txt', 'a') as file:
-        file.write(f'{counter_table} {user_device} UDI LICENSE STATUS EXPIRATION OK')
+        file.write(f'{counter_table} {user_device} {udi} {license} {status} {expiration} {ok}')
         file.write('\n')
         counter_table += 1
         return counter_table
@@ -128,7 +128,7 @@ def reading_license(conf_table):
     with open('temp/licenses.txt', 'r') as file:
         for line in file:
            list_license = line.split()
-           counter_table = adding_row(table = conf_table,count = int(list_license[0]), device = list_license[1])
+           counter_table = adding_row(conf_table,int(list_license[0]),list_license[1], list_license[2], list_license[3], ''.join(list_license[4:-2]), list_license[-2], list_license[-1])
 
 # deleting device logs
 def deleting_dev_logs():

@@ -7,6 +7,7 @@ Index 1 Feature: ipservices
 	License Count: Non-Counted
 
 Index 2 Feature: lanbase                        
+Mar 30 01:29:28.485: %SYS-5-CONFIG_I: Configured from console by console
 	Period left: Life time
 	License Type: PermanentRightToUse
 	License State: Active, Not in Use, EULA accepted
@@ -21,6 +22,5 @@ Index 3 Feature: mrp-manager
 	License Count: 1/0/0  (Active/In-use/Violation)
 
 Index 4 Feature: mrp-client                     
-	Period left: 8  weeks 4  days 
  --More--         
 Switch#

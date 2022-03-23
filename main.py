@@ -9,7 +9,7 @@ from lib.booting import checking_booting
 from lib.languages import listing_languages, reading_language
 from lib.logging import *
 from lib.network import ssh_con
-from lib.functions import printing_logs, creating_timestamp, start_tftp, user_tftp, final_tftp, check_com, order_dev, list_dev, create_table, adding_row
+from lib.functions import printing_logs, creating_timestamp, start_tftp, user_tftp, final_tftp, check_com, order_dev, list_dev, create_table
 from config.data import ip_number, decorator_1, device_order, id_number
 
 
@@ -166,20 +166,20 @@ while running_flag:
 
                         # TODO: needs uncommenting
                         # setting COM connection
-#                         ser = Serial(COM_string, COM_speed)
+                        ser = Serial(COM_string, COM_speed)
 
                         # waiting for router/switch to boot
-#                         user_boot_flag = checking_booting(port = ser)
+                        user_boot_flag = checking_booting(port = ser)
 
                         # counting number of gigabit and fast ports
-#                         device_ports = checking_switch_ports(ser_port = ser)
+                        device_ports = checking_switch_ports(ser_port = ser)
 
                         # checking if device is really the device, which was wanted by user
-#                         proper_device = checking_device(ser_port = ser, user_device = user_device, lang_dict = lang_expressions)
+                        proper_device = checking_device(ser_port = ser, user_device = user_device, lang_dict = lang_expressions)
 
                         # returning next ip number and full name of configured device to download to specified device
-#                         our_conf = creating_proper_configuration(user_device = user_device, port_num = device_ports['Gigabit'], ip_add = ip_number)
-                        our_conf = creating_proper_configuration(user_device = user_device, port_num = 15, ip_add = ip_number)
+                        our_conf = creating_proper_configuration(user_device = user_device, port_num = device_ports['Gigabit'], ip_add = ip_number)
+#                         our_conf = creating_proper_configuration(user_device = user_device, port_num = 15, ip_add = ip_number)
 
                         # remembering old IP number, last octet is important to save to txt file
                         ip_save = ip_number
@@ -202,25 +202,67 @@ while running_flag:
                             print(decorator_1)
 
                             # going to configuration mode
-#                             to_conf_mode(ser)
+                            to_conf_mode(ser)
 
                             # opening file with configuration
                             actual_device = actual_device
                             stripped_list = reading_conf_files(file = actual_device)
 
-                            # executing commands from the list
-                            for command in stripped_list:
-                                # TODO: pass needs to be deleted
-                                pass
+                            # TODO: UNCOMMENT
+#                             # executing commands from the list
+#                             for command in stripped_list:
 #                                 send_to_console(ser, command)
-                                # printing dots to inform user that script is still working
-                                print('.', end='')
+#                                 # printing dots to inform user that script is still working
+#                                 print('.', end='')
 
 
                             print(decorator_1)
                             print(decorator_1)
+
+                            send_to_console(ser, 'exit')
+                            send_to_console(ser, '\n')
+                            send_to_console(ser, 'en')
+
+                            e = send_to_console(ser, 'sh license udi', 0.5)
+
+                            li = list(e.split())
+                            udi = li[11]
+
+                            # UDI
+                            print(udi)
+
+                            # sprawdzanie licencji oraz jej stanu
+                            e = send_to_console(ser, 'sh license', 2)
+
+
+                            with open("data.txt", "w") as text_file:
+                                text_file.write(e)
+
+                            list_of_lists = []
+
+                            with open('data.txt') as f:
+                                counter =0
+                                lines = f.readlines()
+                                for line in lines:
+                                    if counter < 1:
+                                        if 'License State:' in line:
+                                            line_read = line.split()
+                                            our_info = line_read[2:]
+                                            state_string = ' '.join(our_info)
+                                        if 'License Type:' in line:
+                                            line_read = line.split()
+                                            our_info = line_read[2:]
+                                            type_string = ' '.join(our_info)
+                                        if 'ipservices' in line:
+                                            line_read = line.split()
+                                            our_info = line_read[3:]
+                                            ipservices_string = ' '.join(our_info)
+                                    if 'lanbase' in line:
+                                        counter =+1
+
+
                             # closing connection
-#                             ser.close()
+                            ser.close()
                             print(f"{lang_expressions['proper_conf']}{user_device}.")
 
 #                             print(f"{lang_expressions['close_con']}{ser.name}.")
@@ -238,7 +280,7 @@ while running_flag:
                                 pass
 
                             # saving info about licenses and devices to the txt file with incremented ID counter
-                            id_number = saving_info_lic(id_number, user_device)
+                            id_number = saving_info_lic(id_number, user_device, udi, ipservices_string, state_string, type_string, 'OK')
 
                             # saving ID number to txt file
                             with open('temp/id_number.txt', 'w') as f:
