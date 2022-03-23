@@ -158,7 +158,7 @@ def download_license(ser):
 
     # waiting for the device to finish reading commands from initial config
     print(".............................................")
-    sleep(5)
+    sleep(15)
 
     # sending two commands to go into privilege mode
     send_to_console(ser, '\n')

@@ -1434,4 +1434,167 @@ Do you want to delete device logs, console logs and table with licenses for supp
 1
  
 It is your system a complete one or it is just one module? 
-Type '1' if system complete, if not write anything else: 
+Type '1' if system complete, if not write anything else: Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  23/03/2022 16:47:05
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-03-23.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 6
+ 
+ 
+ 
+Which device do you want to connect? TDS-1_A
+ 
+Your list of possible devices to configure: 
+TDS-1_A
+ 
+ 
+You have chosen this configuration...
+COM6 ----> TDS-1_A
+Please wait patiently...
+ 
+. 
+ 
+Device is chosen properly, let's continue...
+Your device has not been configured yet. What do you want to do with it?
+ 
+...................................................................... 
+.............................................
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  23/03/2022 16:50:52
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-03-23.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 6
+ 
+ 
+ 
+Which device do you want to connect? TDS-1_A
+ 
+Your list of possible devices to configure: 
+TDS-1_A
+ 
+ 
+You have chosen this configuration...
+COM6 ----> TDS-1_A
+Please wait patiently...
+ 
+. 
+ 
+Device is chosen properly, let's continue...
+Your device has not been configured yet. What do you want to do with it?
+ 
+...................................................................... 
+.............................................
+Your device has been configured properly ---> TDS-1_A.
+Closed connection to COM6.
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 2
+ 
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
+Already configured devices:
+TDS-1_A
+ 
+Which device do you want to connect? TDS-1_B
+ 
+Your list of possible devices to configure: 
+TDS-1_B
+ 
+ 
+You have chosen this configuration...
+COM6 ----> TDS-1_B
+Please wait patiently...
+ 
+.. 
+ 
+Device is chosen properly, let's continue...
+Your device has not been configured yet. What do you want to do with it?
+ 
+...................................................................... 
+.............................................
+Your device has been configured properly ---> TDS-1_B.
+Closed connection to COM6.
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 1
+ 
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
+Table with devices licenses.
++----+---------+---------------------------+------------+--------------+---------------------+----+
+| ID |  Device |            UDI            |  License   |    Status    |      Expiration     | OK |
++----+---------+---------------------------+------------+--------------+---------------------+----+
+| 1  | TDS-1_A | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | PermanentRightToUse | OK |
+| 2  | TDS-1_B | IE-4010-4S24P:FDO2250U0A2 | ipservices | Active,InUse | PermanentRightToUse | OK |
++----+---------+---------------------------+------------+--------------+---------------------+----+
+ 
+Now is the time to download project configs by SSH connections ...
+ 
+Please connect all your devices by LAN cables!
+ 
+Now it is time to check TFTP Server
+ 
+If you are ready and TFTP Server is not running, please type in '1' in console. 1
+ 
+Everything is fine, now you can turn on your TFTP SERVER...
+ 
+Your TFTP server is running now...
+ 
+Please choose in tab 'Current Directory' in TFTP Server Application folder called PROJECT-CONFIGS!
+ 
+If you set configuration properly and you are ready, please type in '1' in console. 1
+ 
+Everything was set, you can continue...
+ 
+Waiting about 10 seconds for SSH connection to be established ...
+ 
+Now this device is being configured:
+TDS-1_B -> 172.30.100.11
+ 
+................................
+ 
+Now this device is being configured:
+TDS-1_A -> 172.30.100.10
+ 
+................................
+ 
+ 
+Your created configuration files has been deleted ...
+ 
+Thank you for using our script, hope you enjoy it!!!
