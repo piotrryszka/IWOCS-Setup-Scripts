@@ -151,3 +151,51 @@ def deleting_dev_license():
             os.remove(f'support/{file}')
         except:
             pass
+
+# collecting license data from device
+def download_license(ser):
+
+    # sending few commands to go into privilige mode
+    send_to_console(ser, 'exit')
+    send_to_console(ser, '\n')
+    send_to_console(ser, 'en')
+
+    # sending command to get UDI
+    e = send_to_console(ser, 'sh license udi', 0.5)
+    li = list(e.split())
+    # udi data
+    udi = li[11]
+
+    # checking license and its status
+    e = send_to_console(ser, 'sh license', 2)
+
+    # creating temporary txt file
+    with open("temp/license_console.txt", "w") as text_file:
+        text_file.write(e)
+
+    # empty list
+    list_of_lists = []
+
+    # reading temporary txt file
+    with open('temp/license_console.txt', 'r') as f:
+        counter =0
+        lines = f.readlines()
+        for line in lines:
+            if counter < 1:
+                if 'License State:' in line:
+                    line_read = line.split()
+                    our_info = line_read[2:]
+                    state_string = ' '.join(our_info)
+                if 'License Type:' in line:
+                    line_read = line.split()
+                    our_info = line_read[2:]
+                    type_string = ' '.join(our_info)
+                if 'ipservices' in line:
+                    line_read = line.split()
+                    our_info = line_read[3:]
+                    ipservices_string = ' '.join(our_info)
+            if 'lanbase' in line:
+                counter =+1
+
+    # returning 4 strings to be used in license table
+    return udi, state_string, type_string, ipservices_string

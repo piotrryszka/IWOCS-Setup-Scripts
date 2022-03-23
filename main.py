@@ -4,7 +4,7 @@ from serial import Serial
 from time import sleep
 
 from lib.commands import send_to_console, checking_switch_ports, checking_ip_address, checking_device, check_tftp, to_conf_mode
-from lib.operations import opening_device_list, reading_conf_files, creating_proper_configuration, deleting_files, deleting_conf, saving_dev, list_saved_dev, saving_license, saving_info_lic, reading_license, deleting_dev_logs, deleting_dev_license
+from lib.operations import opening_device_list, reading_conf_files, creating_proper_configuration, deleting_files, deleting_conf, saving_dev, list_saved_dev, saving_license, saving_info_lic, reading_license, deleting_dev_logs, deleting_dev_license, download_license
 from lib.booting import checking_booting
 from lib.languages import listing_languages, reading_language
 from lib.logging import *
@@ -219,46 +219,15 @@ while running_flag:
                             print(decorator_1)
                             print(decorator_1)
 
-                            send_to_console(ser, 'exit')
-                            send_to_console(ser, '\n')
-                            send_to_console(ser, 'en')
+                            # checking info about license on the device
+                            # returning tuple with our data
+                            license_data = download_license(ser)
 
-                            e = send_to_console(ser, 'sh license udi', 0.5)
-
-                            li = list(e.split())
-                            udi = li[11]
-
-                            # UDI
-                            print(udi)
-
-                            # sprawdzanie licencji oraz jej stanu
-                            e = send_to_console(ser, 'sh license', 2)
-
-
-                            with open("data.txt", "w") as text_file:
-                                text_file.write(e)
-
-                            list_of_lists = []
-
-                            with open('data.txt') as f:
-                                counter =0
-                                lines = f.readlines()
-                                for line in lines:
-                                    if counter < 1:
-                                        if 'License State:' in line:
-                                            line_read = line.split()
-                                            our_info = line_read[2:]
-                                            state_string = ' '.join(our_info)
-                                        if 'License Type:' in line:
-                                            line_read = line.split()
-                                            our_info = line_read[2:]
-                                            type_string = ' '.join(our_info)
-                                        if 'ipservices' in line:
-                                            line_read = line.split()
-                                            our_info = line_read[3:]
-                                            ipservices_string = ' '.join(our_info)
-                                    if 'lanbase' in line:
-                                        counter =+1
+                            # reading license data to variables use to fill txt file
+                            udi = license_data[0]
+                            state_string = license_data[1]
+                            type_string = license_data[2]
+                            ipservices_string = license_data[3]
 
 
                             # closing connection
