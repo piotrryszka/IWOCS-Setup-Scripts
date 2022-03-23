@@ -5,6 +5,7 @@ import os
 from os import listdir
 from os.path import isfile, join
 from datetime import datetime
+from time import sleep
 
 from config.data import decorator_1
 from lib.commands import send_to_console
@@ -155,8 +156,11 @@ def deleting_dev_license():
 # collecting license data from device
 def download_license(ser):
 
-    # sending few commands to go into privilige mode
-    send_to_console(ser, 'exit')
+    # waiting for the device to finish reading commands from initial config
+    print(".............................................")
+    sleep(5)
+
+    # sending two commands to go into privilege mode
     send_to_console(ser, '\n')
     send_to_console(ser, 'en')
 

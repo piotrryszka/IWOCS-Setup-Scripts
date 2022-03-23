@@ -9,7 +9,7 @@ from lib.booting import checking_booting
 from lib.languages import listing_languages, reading_language
 from lib.logging import *
 from lib.network import ssh_con
-from lib.functions import printing_logs, creating_timestamp, start_tftp, user_tftp, final_tftp, check_com, order_dev, list_dev, create_table
+from lib.functions import printing_logs, creating_timestamp, start_tftp, user_tftp, final_tftp, check_com, order_dev, list_dev, create_table, kill_tftp
 from config.data import ip_number, decorator_1, device_order, id_number
 
 
@@ -114,14 +114,14 @@ while running_flag:
 
                         # deleting already configured devices from available devices to be chosen by the user
                         # simple handling exceptions
-                        try:
-                            for key in (dictionary_dev):
-                                conf_devices_list.append(dictionary_dev[key]['device'])
-                            for x in conf_devices_list:
-                                if x in device_list:
-                                    device_list.remove(x)
-                        except:
-                            pass
+#                         try:
+                        for key in (dictionary_dev):
+                            conf_devices_list.append(dictionary_dev[key]['device'])
+                        for x in conf_devices_list:
+                            if x in device_list:
+                                device_list.remove(x)
+#                         except:
+#                             pass
 
                         # printing already initial configured devices
                         list_dev(device_list = conf_devices_list, lang_dict = lang_expressions)
@@ -164,7 +164,6 @@ while running_flag:
                             pass
 
 
-                        # TODO: needs uncommenting
                         # setting COM connection
                         ser = Serial(COM_string, COM_speed)
 
@@ -208,15 +207,12 @@ while running_flag:
                             actual_device = actual_device
                             stripped_list = reading_conf_files(file = actual_device)
 
-                            # TODO: UNCOMMENT
-#                             # executing commands from the list
-#                             for command in stripped_list:
-#                                 send_to_console(ser, command)
-#                                 # printing dots to inform user that script is still working
-#                                 print('.', end='')
+                            # executing commands from the list
+                            for command in stripped_list:
+                                send_to_console(ser, command)
+                                # printing dots to inform user that script is still working
+                                print('.', end='')
 
-
-                            print(decorator_1)
                             print(decorator_1)
 
                             # checking info about license on the device
@@ -229,12 +225,11 @@ while running_flag:
                             type_string = license_data[2]
                             ipservices_string = license_data[3]
 
-
                             # closing connection
                             ser.close()
                             print(f"{lang_expressions['proper_conf']}{user_device}.")
 
-#                             print(f"{lang_expressions['close_con']}{ser.name}.")
+                            print(f"{lang_expressions['close_con']}{ser.name}.")
                             print(decorator_1)
 
                             # saving the name of configured device to the txt file
@@ -273,8 +268,8 @@ while running_flag:
                             print(lang_expressions['again_prompt'])
                             print(decorator_1)
                             # closing connection
-#                             ser.close()
-#                             print(f"{lang_expressions['close_con']}{ser.name}.")
+                            ser.close()
+                            print(f"{lang_expressions['close_con']}{ser.name}.")
                             print(decorator_1)
                             break
                             # TODO: UNCOMMENT
@@ -359,13 +354,16 @@ while running_flag:
                     print(decorator_1)
 
                     # connection with specified by user IP address and project configuration
-#                     ssh_con(file = dictionary_dev[k]['device'], host = dictionary_dev[k]['ip'])
+                    ssh_con(file = dictionary_dev[k]['device'], host = dictionary_dev[k]['ip'])
 
                 # changing ssh_flag to False to leave the loop
                 ssh_flag = False
 
             # leaving main part of script after configuration
             running_flag = False
+
+            # closing tftp server application
+            kill_tftp()
 
     else:
         print(lang_expressions['not_complete'])

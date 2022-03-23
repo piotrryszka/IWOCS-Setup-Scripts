@@ -12,20 +12,18 @@ def ssh_con(file, host):
     # creating time stamp
     now = datetime.now()
     date_time = now.strftime("%m/%d/%Y")
-
+    dateTimeObj = datetime.now()
+    dateObj = dateTimeObj.date()
+    dateStr = dateObj.strftime("%d.%m.%Y")
     # configuration of network device
     cisco1 = {
         "device_type": f"cisco_ios",
         "host": f"{host}",
         "username": f"{username}",
         "password": f'{password}',
-        # TODO: UNCOMMENT IT (change way of saving data)
         # session logger
         "session_log": f"logs/device_logs/{file}_{host}_{dateStr}.txt"
     }
-    dateTimeObj = datetime.now()
-    dateObj = dateTimeObj.date()
-    dateStr = dateObj.strftime("%d.%m.%Y")
     try:
         with ConnectHandler(**cisco1) as net_connect:
             # TFTP configuration download command
