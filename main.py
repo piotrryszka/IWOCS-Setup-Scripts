@@ -67,8 +67,9 @@ while running_flag:
     printing_logs(lang_expressions)
     user_del = input(lang_expressions['deleting_logs'])
     del_flag = deleting_files(lang_dict = lang_expressions, user_input = user_del)
-    deleting_dev_license()
-    deleting_dev_logs()
+    if user_del == '1':
+        deleting_dev_license()
+        deleting_dev_logs()
     print(user_del)
     if del_flag == True:
         print(lang_expressions['del_info'])
