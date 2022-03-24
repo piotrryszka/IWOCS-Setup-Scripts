@@ -6,9 +6,9 @@ TODO MY OBSERVATIONS
 problem z timeoutem przy cisco ie2000 -> wolniejsze urzadzenie + dodanie obslugi portów fastethernetowych nie tylko gigabitowych
 dodanie wartosci unknown jezeli cos sie nie potrafi wczytac przy tych licencjach (argument domyslny)
 w licencjach jezeli jest tak ipservices | Active,InUse | PermanentRightToUse to jest OK dla ie4010, a dla innych parametrow czy urzadzen (narazie nie jest ok)
-mozna sprobowac w try dac uwalenie putty za kazdym razem jak sie zaczyna skrypt zeby nie blokowac danego COMa (spytac czy mozna cos takiego zrobic)
 
 TODO NEXT
 zrobic plik z sh version i jakies porownanka czy cokolwiek (to jutro)
 static_files zrobic protected przed uzytkownikiem
 pozmieniac tam z dwukropkiem, splitowanie przy samym dzialaniu na txt plikach dla licencji
+pozmieniac cos z usuwaniem plikow, bo to nie powinno byc usuwane wszystko

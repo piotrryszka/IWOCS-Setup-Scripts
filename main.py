@@ -75,8 +75,12 @@ while running_flag:
         break
     else:
         pass
+    print(decorator_1)
 
-    kill_putty()
+    # question and function about killing putty process to make COM free
+    dec_putty = input(lang_expressions['putty_kill'])
+    print(dec_putty)
+    kill_putty(dec_putty)
 
     # question about complete system or one module TASK 184
     print(decorator_1)

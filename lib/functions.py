@@ -116,7 +116,11 @@ def kill_tftp():
     # stdout argument forbid to print on console output
     subprocess.call(["taskkill","/F","/IM","tftpd32.exe"], stdout=subprocess.DEVNULL)
 
-# closing tftp server application
-def kill_putty():
-    # stdout argument forbid to print on console output
-    subprocess.call(["taskkill","/F","/IM","puTTY.exe"], stdout=subprocess.DEVNULL)
+# closing putty application
+def kill_putty(decision):
+    if decision == '1':
+        try:
+            # stdout/stderr argument forbid to print on console output and error output
+            subprocess.call(["taskkill","/F","/IM","puTTY.exe"], stdout=subprocess.DEVNULL, stderr=subprocess. DEVNULL)
+        except:
+            pass
