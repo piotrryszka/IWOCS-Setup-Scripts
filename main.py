@@ -9,7 +9,7 @@ from lib.booting import checking_booting
 from lib.languages import listing_languages, reading_language
 from lib.logging import *
 from lib.network import ssh_con
-from lib.functions import printing_logs, creating_timestamp, start_tftp, user_tftp, final_tftp, check_com, order_dev, list_dev, create_table, kill_tftp
+from lib.functions import printing_logs, creating_timestamp, start_tftp, user_tftp, final_tftp, check_com, order_dev, list_dev, create_table, kill_tftp, kill_putty
 from config.data import ip_number, decorator_1, device_order, id_number
 
 
@@ -75,6 +75,8 @@ while running_flag:
         break
     else:
         pass
+
+    kill_putty()
 
     # question about complete system or one module TASK 184
     print(decorator_1)

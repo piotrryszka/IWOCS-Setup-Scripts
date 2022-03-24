@@ -115,3 +115,8 @@ def adding_row(table, count, device, udi, type_license, status_license, time_lic
 def kill_tftp():
     # stdout argument forbid to print on console output
     subprocess.call(["taskkill","/F","/IM","tftpd32.exe"], stdout=subprocess.DEVNULL)
+
+# closing tftp server application
+def kill_putty():
+    # stdout argument forbid to print on console output
+    subprocess.call(["taskkill","/F","/IM","puTTY.exe"], stdout=subprocess.DEVNULL)
