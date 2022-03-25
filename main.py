@@ -121,14 +121,14 @@ while running_flag:
 
                         # deleting already configured devices from available devices to be chosen by the user
                         # simple handling exceptions
-#                         try:
+                        try:
                         for key in (dictionary_dev):
                             conf_devices_list.append(dictionary_dev[key]['device'])
                         for x in conf_devices_list:
                             if x in device_list:
                                 device_list.remove(x)
-#                         except:
-#                             pass
+                        except:
+                            pass
 
                         # printing already initial configured devices
                         list_dev(device_list = conf_devices_list, lang_dict = lang_expressions)
@@ -232,6 +232,15 @@ while running_flag:
                             type_string = license_data[2]
                             ipservices_string = license_data[3]
 
+
+                            # TODO: NEEDS TESTING
+                            # checking proper configuration license for IE4010
+                            if state_string == 'ipservices' and type_string == 'Active, In Use' and ipservices_string == 'pernament':
+                                print("MAMY TO")
+                                ok_not = 'OK'
+                            else:
+                                ok_not = "NOT OK"
+
                             # closing connection
                             ser.close()
                             print(f"{lang_expressions['proper_conf']}{user_device}.")
@@ -250,8 +259,10 @@ while running_flag:
                             except:
                                 pass
 
+                            # TESTING
                             # saving info about licenses and devices to the txt file with incremented ID counter
-                            id_number = saving_info_lic(id_number, user_device, udi, ipservices_string, state_string, type_string, 'OK')
+#                             id_number = saving_info_lic(id_number, user_device, udi, ipservices_string, state_string, type_string, 'OK')
+                            id_number = saving_info_lic(id_number, user_device, udi, ipservices_string, state_string, type_string, ok_not)
 
                             # saving ID number to txt file
                             with open('temp/id_number.txt', 'w') as f:
