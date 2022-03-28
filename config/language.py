@@ -49,6 +49,8 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                               'connect_cable': "Please connect all your devices by LAN cables!",
                               'conf_lic': 'Table with devices licenses.',
                               'putty_kill': "Type 1 if you want to try close PUTTY application, if not type anything else.\n",
+                              'unknown_license': "In case of UKNNOWN, please turn on the Putty client and check the configuration manually.",
+
 
                               },
                         'No': {'information_prompt': 'Something in Norwegian language ',
@@ -100,6 +102,7 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                                'connect_cable': "Something in Norwegian language ",
                                'conf_lic': "Something in Norwegian language ",
                                'putty_kill': "Something in Norwegian language ",
+                               'unknown_license': "Something in Norwegian language ",
 
                                },
                         'Fr': {'information_prompt': 'Something in French language ',
@@ -151,6 +154,7 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                                'connect_cable': "Something in French language ",
                                'conf_lic': "Something in French language ",
                                'putty_kill': "Something in French language ",
+                               'unknown_license': "Something in French language ",
 
                        }
                        }

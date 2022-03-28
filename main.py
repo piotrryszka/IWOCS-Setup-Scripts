@@ -242,7 +242,6 @@ while running_flag:
                             # NEED TO BE MOVE
                             # checking proper configuration license for IE4010
                             if state_string == 'Active, In Use' and type_string == 'permanent' and ipservices_string == 'ipservices':
-                                print("MAMY TO")
                                 ok_not = 'OK'
                             else:
                                 ok_not = "NOT-OK"
@@ -328,6 +327,8 @@ while running_flag:
 
             # printing table with licenses to console
             print(conf_table)
+            # printing prompt about UKNNOWN in table
+            print(lang_expressions['unknown_license'])
             print(decorator_1)
 
             # going to ssh connections
