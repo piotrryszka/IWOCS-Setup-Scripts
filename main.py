@@ -4,7 +4,7 @@ from serial import Serial
 from time import sleep
 
 from lib.commands import send_to_console, checking_switch_ports, checking_ip_address, checking_device, check_tftp, to_conf_mode
-from lib.operations import opening_device_list, reading_conf_files, creating_proper_configuration, deleting_files, deleting_conf, saving_dev, list_saved_dev, saving_license, saving_info_lic, reading_license, deleting_dev_logs, deleting_dev_license, download_license
+from lib.operations import opening_device_list, reading_conf_files, creating_proper_configuration, deleting_files, deleting_conf, saving_dev, list_saved_dev, saving_license, saving_info_lic, reading_license, deleting_dev_logs, deleting_dev_license, download_license, create_pdf
 from lib.booting import checking_booting
 from lib.languages import listing_languages, reading_language
 from lib.logging import *
@@ -323,7 +323,14 @@ while running_flag:
             reading_license(conf_table)
 
             # saving already configured devices
-            saving_license(table = conf_table)
+            date_string = saving_license(table = conf_table)
+
+            # try because of the possibility to have this file open
+            # saving table to pdf to print it later for example
+            try:
+                create_pdf(date_string)
+            except:
+                pass
 
             # printing table with licenses to console
             print(conf_table)
