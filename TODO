@@ -3,9 +3,9 @@ TODO IN GENERAL
 5) Uncomment try/except etx. in main.py and network handling functions
 
 TODO MY OBSERVATIONS
-problem z timeoutem przy cisco ie2000 -> wolniejsze urzadzenie + dodanie obslugi portów fastethernetowych nie tylko gigabitowych
 dodanie wartosci unknown jezeli cos sie nie potrafi wczytac przy tych licencjach (argument domyslny)
 w licencjach jezeli jest tak ipservices | Active,InUse | PermanentRightToUse to jest OK dla ie4010, a dla innych parametrow czy urzadzen (narazie nie jest ok)
+i z tymi licencjami tez to przeniesc dalej, do innego pliku folderu itp zeby uproscic maina
 
 TODO NEXT
 zrobic plik z sh version i jakies porownanka czy cokolwiek (to jutro)

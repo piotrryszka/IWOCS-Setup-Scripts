@@ -1,0 +1,1088 @@
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  28/03/2022 08:19:32
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-03-25.txt, 2022-03-28.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 6
+ 
+ 
+ 
+Which device do you want to connect? TDS-1_A
+ 
+Your list of possible devices to configure: 
+TDS-1_A
+ 
+ 
+You have chosen this configuration...
+COM6 ----> TDS-1_A
+Please wait patiently...
+ 
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  28/03/2022 08:42:15
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-03-28.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 6
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 
+ 
+It is not number. Please try again.
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 6
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 6
+ 
+ 
+ 
+Which device do you want to connect? TDS-1_A
+ 
+Your list of possible devices to configure: 
+TDS-1_A
+ 
+ 
+You have chosen this configuration...
+COM6 ----> TDS-1_A
+Please wait patiently...
+ 
+Your device has not been configured yet. What do you want to do with it?
+ 
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  28/03/2022 08:42:37
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-03-28.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 6
+ 
+ 
+ 
+Which device do you want to connect? TDS-1_A
+ 
+Your list of possible devices to configure: 
+TDS-1_A
+ 
+ 
+You have chosen this configuration...
+COM6 ----> TDS-1_A
+Please wait patiently...
+ 
+Your device has not been configured yet. What do you want to do with it?
+ 
+...................................................................... 
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  28/03/2022 08:44:26
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-03-28.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 6
+ 
+ 
+ 
+Which device do you want to connect? TDS-1_A
+ 
+Your list of possible devices to configure: 
+TDS-1_A
+ 
+ 
+You have chosen this configuration...
+COM6 ----> TDS-1_A
+Please wait patiently...
+ 
+Your device has not been configured yet. What do you want to do with it?
+ 
+...................................................................... 
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  28/03/2022 08:45:24
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-03-28.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 6
+ 
+ 
+ 
+Which device do you want to connect? TDS-1_A
+ 
+Your list of possible devices to configure: 
+TDS-1_A
+ 
+ 
+You have chosen this configuration...
+COM6 ----> TDS-1_A
+Please wait patiently...
+ 
+Your device has not been configured yet. What do you want to do with it?
+ 
+...................................................................... 
+Your device has been configured properly ---> TDS-1_A.
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 2
+ 
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
+Already configured devices:
+TDS-1_A
+ 
+Which device do you want to connect? TDS-1_B
+ 
+Your list of possible devices to configure: 
+TDS-1_B
+ 
+ 
+You have chosen this configuration...
+COM6 ----> TDS-1_B
+Please wait patiently...
+ 
+Your device has not been configured yet. What do you want to do with it?
+ 
+...................................................................... 
+Your device has been configured properly ---> TDS-1_B.
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 2
+ 
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
+Already configured devices:
+TDS-1_A, TDS-1_B
+ 
+Which device do you want to connect? TIR
+ 
+Your list of possible devices to configure: 
+TIR
+ 
+ 
+You have chosen this configuration...
+COM6 ----> TIR
+Please wait patiently...
+ 
+Your device has not been configured yet. What do you want to do with it?
+ 
+...................................................................... 
+Your device has been configured properly ---> TIR.
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 1
+ 
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
+Table with devices licenses.
++----+---------+-----+---------+--------+------------+----+
+| ID |  Device | UDI | License | Status | Expiration | OK |
++----+---------+-----+---------+--------+------------+----+
+| 1  | TDS-1_A |  a  |    a    |   aa   |    NOT     | OK |
+| 2  | TDS-1_B |  a  |    a    |   aa   |    NOT     | OK |
+| 3  |   TIR   |  a  |    a    |   aa   |    NOT     | OK |
++----+---------+-----+---------+--------+------------+----+
+ 
+Now is the time to download project configs by SSH connections ...
+ 
+Please connect all your devices by LAN cables!
+ 
+Now it is time to check TFTP Server
+ 
+If you are ready and TFTP Server is not running, please type in '1' in console. 1
+ 
+Everything is fine, now you can turn on your TFTP SERVER...
+ 
+Your TFTP server is running now...
+ 
+Please choose in tab 'Current Directory' in TFTP Server Application folder called PROJECT-CONFIGS!
+ 
+If you set configuration properly and you are ready, please type in '1' in console. Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  28/03/2022 08:46:27
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-03-28.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 6
+ 
+ 
+ 
+Already configured devices:
+TDS-1_A, TDS-1_B, TIR
+ 
+Which device do you want to connect? TAS-1
+ 
+Your list of possible devices to configure: 
+TAS-1
+ 
+ 
+You have chosen this configuration...
+COM6 ----> TAS-1
+Please wait patiently...
+ 
+Your device has not been configured yet. What do you want to do with it?
+ 
+...................................................................... 
+Your device has been configured properly ---> TAS-1.
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 1
+ 
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
+Table with devices licenses.
++----+---------+-----+---------+--------+------------+-------+
+| ID |  Device | UDI | License | Status | Expiration |   OK  |
++----+---------+-----+---------+--------+------------+-------+
+| 1  | TDS-1_A |  a  |    a    |   aa   |    NOT     |   OK  |
+| 2  | TDS-1_B |  a  |    a    |   aa   |    NOT     |   OK  |
+| 3  |   TIR   |  a  |    a    |   aa   |    NOT     |   OK  |
+| 4  |  TAS-1  |  a  |    a    |   a    |     a      | NOTOK |
++----+---------+-----+---------+--------+------------+-------+
+ 
+Now is the time to download project configs by SSH connections ...
+ 
+Please connect all your devices by LAN cables!
+ 
+Now it is time to check TFTP Server
+ 
+If you are ready and TFTP Server is not running, please type in '1' in console. Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  28/03/2022 08:49:54
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-03-28.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 6
+ 
+ 
+ 
+Already configured devices:
+TDS-1_A, TDS-1_B, TIR, TAS-1
+ 
+Which device do you want to connect? MSC_1
+ 
+Your list of possible devices to configure: 
+
+ 
+Already configured devices:
+TDS-1_A, TDS-1_B, TIR, TAS-1
+ 
+Which device do you want to connect? MSC-1
+ 
+Your list of possible devices to configure: 
+MSC-1
+ 
+ 
+You have chosen this configuration...
+COM6 ----> MSC-1
+Please wait patiently...
+ 
+Your device has not been configured yet. What do you want to do with it?
+ 
+...................................................................... 
+Your device has been configured properly ---> MSC-1.
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 1
+ 
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
+Table with devices licenses.
++----+---------+-----+---------+--------+------------+--------+
+| ID |  Device | UDI | License | Status | Expiration |   OK   |
++----+---------+-----+---------+--------+------------+--------+
+| 1  | TDS-1_A |  a  |    a    |   aa   |    NOT     |   OK   |
+| 2  | TDS-1_B |  a  |    a    |   aa   |    NOT     |   OK   |
+| 3  |   TIR   |  a  |    a    |   aa   |    NOT     |   OK   |
+| 4  |  TAS-1  |  a  |    a    |   a    |     a      | NOTOK  |
+| 5  |  MSC-1  |  a  |    a    |   a    |     a      | NOT-OK |
++----+---------+-----+---------+--------+------------+--------+
+ 
+Now is the time to download project configs by SSH connections ...
+ 
+Please connect all your devices by LAN cables!
+ 
+Now it is time to check TFTP Server
+ 
+If you are ready and TFTP Server is not running, please type in '1' in console. Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  28/03/2022 08:51:50
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-03-28.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 6
+ 
+ 
+ 
+Already configured devices:
+TDS-1_A, TDS-1_B, TIR, TAS-1, MSC-1
+ 
+Which device do you want to connect? MSH-1
+ 
+Your list of possible devices to configure: 
+MSH-1
+ 
+ 
+You have chosen this configuration...
+COM6 ----> MSH-1
+Please wait patiently...
+ 
+Your device has not been configured yet. What do you want to do with it?
+ 
+...................................................................... 
+Your device has been configured properly ---> MSH-1.
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 1
+ 
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
+Table with devices licenses.
++----+---------+---------------------------+-----------+---------------------+------------+--------+
+| ID |  Device |            UDI            |  License  |        Status       | Expiration |   OK   |
++----+---------+---------------------------+-----------+---------------------+------------+--------+
+| 1  | TDS-1_A |             a             |     a     |          aa         |    NOT     |   OK   |
+| 2  | TDS-1_B |             a             |     a     |          aa         |    NOT     |   OK   |
+| 3  |   TIR   |             a             |     a     |          aa         |    NOT     |   OK   |
+| 4  |  TAS-1  |             a             |     a     |          a          |     a      | NOTOK  |
+| 5  |  MSC-1  |             a             |     a     |          a          |     a      | NOT-OK |
+| 6  |  MSH-1  | IE-4010-4S24P:FDO2250U0AV | permanent | ipservicesActive,In |    Use     | NOT-OK |
++----+---------+---------------------------+-----------+---------------------+------------+--------+
+ 
+Now is the time to download project configs by SSH connections ...
+ 
+Please connect all your devices by LAN cables!
+ 
+Now it is time to check TFTP Server
+ 
+If you are ready and TFTP Server is not running, please type in '1' in console. Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  28/03/2022 08:52:51
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-03-28.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 6
+ 
+ 
+ 
+Already configured devices:
+TDS-1_A, TDS-1_B, TIR, TAS-1, MSC-1, MSH-1
+ 
+Which device do you want to connect? MSH-2
+ 
+Your list of possible devices to configure: 
+MSH-2
+ 
+ 
+You have chosen this configuration...
+COM6 ----> MSH-2
+Please wait patiently...
+ 
+Your device has not been configured yet. What do you want to do with it?
+ 
+...................................................................... 
+Your device has been configured properly ---> MSH-2.
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 1
+ 
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
+Table with devices licenses.
++----+---------+---------------------------+-----------+---------------------+------------+--------+
+| ID |  Device |            UDI            |  License  |        Status       | Expiration |   OK   |
++----+---------+---------------------------+-----------+---------------------+------------+--------+
+| 1  | TDS-1_A |             a             |     a     |          aa         |    NOT     |   OK   |
+| 2  | TDS-1_B |             a             |     a     |          aa         |    NOT     |   OK   |
+| 3  |   TIR   |             a             |     a     |          aa         |    NOT     |   OK   |
+| 4  |  TAS-1  |             a             |     a     |          a          |     a      | NOTOK  |
+| 5  |  MSC-1  |             a             |     a     |          a          |     a      | NOT-OK |
+| 6  |  MSH-1  | IE-4010-4S24P:FDO2250U0AV | permanent | ipservicesActive,In |    Use     | NOT-OK |
+| 7  |  MSH-2  | IE-4010-4S24P:FDO2250U0AV | permanent |     Active,InUse    | ipservices | NOT-OK |
++----+---------+---------------------------+-----------+---------------------+------------+--------+
+ 
+Now is the time to download project configs by SSH connections ...
+ 
+Please connect all your devices by LAN cables!
+ 
+Now it is time to check TFTP Server
+ 
+If you are ready and TFTP Server is not running, please type in '1' in console. Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  28/03/2022 08:53:50
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-03-28.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 6
+ 
+ 
+ 
+Already configured devices:
+TDS-1_A, TDS-1_B, TIR, TAS-1, MSC-1, MSH-1, MSH-2
+ 
+Which device do you want to connect? MSH-3
+ 
+Your list of possible devices to configure: 
+MSH-3
+ 
+ 
+You have chosen this configuration...
+COM6 ----> MSH-3
+Please wait patiently...
+ 
+Your device has not been configured yet. What do you want to do with it?
+ 
+...................................................................... 
+Your device has been configured properly ---> MSH-3.
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 1
+ 
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
+Table with devices licenses.
++----+---------+---------------------------+------------+---------------------+------------+--------+
+| ID |  Device |            UDI            |  License   |        Status       | Expiration |   OK   |
++----+---------+---------------------------+------------+---------------------+------------+--------+
+| 1  | TDS-1_A |             a             |     a      |          aa         |    NOT     |   OK   |
+| 2  | TDS-1_B |             a             |     a      |          aa         |    NOT     |   OK   |
+| 3  |   TIR   |             a             |     a      |          aa         |    NOT     |   OK   |
+| 4  |  TAS-1  |             a             |     a      |          a          |     a      | NOTOK  |
+| 5  |  MSC-1  |             a             |     a      |          a          |     a      | NOT-OK |
+| 6  |  MSH-1  | IE-4010-4S24P:FDO2250U0AV | permanent  | ipservicesActive,In |    Use     | NOT-OK |
+| 7  |  MSH-2  | IE-4010-4S24P:FDO2250U0AV | permanent  |     Active,InUse    | ipservices | NOT-OK |
+| 8  |  MSH-3  | IE-4010-4S24P:FDO2250U0AV | ipservices |     Active,InUse    | permanent  | NOT-OK |
++----+---------+---------------------------+------------+---------------------+------------+--------+
+ 
+Now is the time to download project configs by SSH connections ...
+ 
+Please connect all your devices by LAN cables!
+ 
+Now it is time to check TFTP Server
+ 
+If you are ready and TFTP Server is not running, please type in '1' in console. Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  28/03/2022 08:54:44
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-03-28.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 6
+ 
+ 
+ 
+Already configured devices:
+TDS-1_A, TDS-1_B, TIR, TAS-1, MSC-1, MSH-1, MSH-2, MSH-3
+ 
+Which device do you want to connect? MSH-4
+ 
+Your list of possible devices to configure: 
+MSH-4
+ 
+ 
+You have chosen this configuration...
+COM6 ----> MSH-4
+Please wait patiently...
+ 
+Your device has not been configured yet. What do you want to do with it?
+ 
+...................................................................... 
+MAMY TO
+Your device has been configured properly ---> MSH-4.
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 1
+ 
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
+Table with devices licenses.
++----+---------+---------------------------+------------+---------------------+------------+--------+
+| ID |  Device |            UDI            |  License   |        Status       | Expiration |   OK   |
++----+---------+---------------------------+------------+---------------------+------------+--------+
+| 1  | TDS-1_A |             a             |     a      |          aa         |    NOT     |   OK   |
+| 2  | TDS-1_B |             a             |     a      |          aa         |    NOT     |   OK   |
+| 3  |   TIR   |             a             |     a      |          aa         |    NOT     |   OK   |
+| 4  |  TAS-1  |             a             |     a      |          a          |     a      | NOTOK  |
+| 5  |  MSC-1  |             a             |     a      |          a          |     a      | NOT-OK |
+| 6  |  MSH-1  | IE-4010-4S24P:FDO2250U0AV | permanent  | ipservicesActive,In |    Use     | NOT-OK |
+| 7  |  MSH-2  | IE-4010-4S24P:FDO2250U0AV | permanent  |     Active,InUse    | ipservices | NOT-OK |
+| 8  |  MSH-3  | IE-4010-4S24P:FDO2250U0AV | ipservices |     Active,InUse    | permanent  | NOT-OK |
+| 9  |  MSH-4  | IE-4010-4S24P:FDO2250U0AV | ipservices |     Active,InUse    | permanent  |   OK   |
++----+---------+---------------------------+------------+---------------------+------------+--------+
+ 
+Now is the time to download project configs by SSH connections ...
+ 
+Please connect all your devices by LAN cables!
+ 
+Now it is time to check TFTP Server
+ 
+If you are ready and TFTP Server is not running, please type in '1' in console. Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  28/03/2022 09:01:03
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-03-28.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 6
+ 
+ 
+ 
+Already configured devices:
+TDS-1_A, TDS-1_B, TIR, TAS-1, MSC-1, MSH-1, MSH-2, MSH-3, MSH-4
+ 
+Which device do you want to connect? T
+ 
+Your list of possible devices to configure: 
+
+ 
+Already configured devices:
+TDS-1_A, TDS-1_B, TIR, TAS-1, MSC-1, MSH-1, MSH-2, MSH-3, MSH-4
+ 
+Which device do you want to connect? S
+ 
+Your list of possible devices to configure: 
+SDG-1_A, SDG-1_B
+ 
+Already configured devices:
+TDS-1_A, TDS-1_B, TIR, TAS-1, MSC-1, MSH-1, MSH-2, MSH-3, MSH-4
+ 
+Which device do you want to connect? SDG-1_A
+ 
+Your list of possible devices to configure: 
+SDG-1_A
+ 
+ 
+You have chosen this configuration...
+COM6 ----> SDG-1_A
+Please wait patiently...
+ 
+Your device has not been configured yet. What do you want to do with it?
+ 
+...................................................................... 
+MAMY TO
+Your device has been configured properly ---> SDG-1_A.
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 1
+ 
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
+Table with devices licenses.
++----+---------+---------------------------+------------+---------------------+------------+--------+
+| ID |  Device |            UDI            |  License   |        Status       | Expiration |   OK   |
++----+---------+---------------------------+------------+---------------------+------------+--------+
+| 1  | TDS-1_A |             a             |     a      |          aa         |    NOT     |   OK   |
+| 2  | TDS-1_B |             a             |     a      |          aa         |    NOT     |   OK   |
+| 3  |   TIR   |             a             |     a      |          aa         |    NOT     |   OK   |
+| 4  |  TAS-1  |             a             |     a      |          a          |     a      | NOTOK  |
+| 5  |  MSC-1  |             a             |     a      |          a          |     a      | NOT-OK |
+| 6  |  MSH-1  | IE-4010-4S24P:FDO2250U0AV | permanent  | ipservicesActive,In |    Use     | NOT-OK |
+| 7  |  MSH-2  | IE-4010-4S24P:FDO2250U0AV | permanent  |     Active,InUse    | ipservices | NOT-OK |
+| 8  |  MSH-3  | IE-4010-4S24P:FDO2250U0AV | ipservices |     Active,InUse    | permanent  | NOT-OK |
+| 9  |  MSH-4  | IE-4010-4S24P:FDO2250U0AV | ipservices |     Active,InUse    | permanent  |   OK   |
+| 10 | SDG-1_A | IE-4010-4S24P:FDO2250U0AV | ipservices |     Active,InUse    | permanent  |   OK   |
++----+---------+---------------------------+------------+---------------------+------------+--------+
+ 
+Now is the time to download project configs by SSH connections ...
+ 
+Please connect all your devices by LAN cables!
+ 
+Now it is time to check TFTP Server
+ 
+If you are ready and TFTP Server is not running, please type in '1' in console. 1
+ 
+TFTP server is already running or socket is occupied ...
+ 
+ 
+Now it is time to check TFTP Server
+ 
+If you are ready and TFTP Server is not running, please type in '1' in console. 1
+ 
+TFTP server is already running or socket is occupied ...
+ 
+ 
+Now it is time to check TFTP Server
+ 
+If you are ready and TFTP Server is not running, please type in '1' in console. 1
+ 
+TFTP server is already running or socket is occupied ...
+ 
+ 
+Now it is time to check TFTP Server
+ 
+If you are ready and TFTP Server is not running, please type in '1' in console. 1
+ 
+Everything is fine, now you can turn on your TFTP SERVER...
+ 
+Your TFTP server is running now...
+ 
+Please choose in tab 'Current Directory' in TFTP Server Application folder called PROJECT-CONFIGS!
+ 
+If you set configuration properly and you are ready, please type in '1' in console. 1
+ 
+Everything was set, you can continue...
+ 
+Waiting about 10 seconds for SSH connection to be established ...
+ 
+Now this device is being configured:
+MSH-4 -> 172.30.100.21
+ 
+................................
+ 
+Now this device is being configured:
+MSH-3 -> 172.30.100.20
+ 
+................................
+ 
+Now this device is being configured:
+MSH-2 -> 172.30.100.19
+ 
+................................
+ 
+Now this device is being configured:
+MSH-1 -> 172.30.100.18
+ 
+................................
+ 
+Now this device is being configured:
+MSC-1 -> 172.30.100.17
+ 
+................................
+ 
+Now this device is being configured:
+TAS-1 -> 172.30.100.16
+ 
+................................
+ 
+Now this device is being configured:
+TIR -> 172.30.100.15
+ 
+................................
+ 
+Now this device is being configured:
+SDG-1_A -> 172.30.100.22
+ 
+................................
+ 
+Now this device is being configured:
+TDS-1_B -> 172.30.100.14
+ 
+................................
+ 
+Now this device is being configured:
+TDS-1_A -> 172.30.100.13
+ 
+................................
+ 
+ 
+Your created configuration files has been deleted ...
+ 
+Thank you for using our script, hope you enjoy it!!!
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  28/03/2022 09:02:18
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-03-28.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 6
+ 
+ 
+ 
+Which device do you want to connect? TDS-1_A
+ 
+Your list of possible devices to configure: 
+TDS-1_A
+ 
+ 
+You have chosen this configuration...
+COM6 ----> TDS-1_A
+Please wait patiently...
+ 
+Your device has not been configured yet. What do you want to do with it?
+ 
+...................................................................... 
+MAMY TO
+Your device has been configured properly ---> TDS-1_A.
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 1
+ 
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
+Table with devices licenses.
++----+---------+---------------------------+------------+--------------+------------+----+
+| ID |  Device |            UDI            |  License   |    Status    | Expiration | OK |
++----+---------+---------------------------+------------+--------------+------------+----+
+| 1  | TDS-1_A | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
++----+---------+---------------------------+------------+--------------+------------+----+
+ 
+Now is the time to download project configs by SSH connections ...
+ 
+Please connect all your devices by LAN cables!
+ 
+Now it is time to check TFTP Server
+ 
+If you are ready and TFTP Server is not running, please type in '1' in console. Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  28/03/2022 09:03:33
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-03-28.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 6
+ 
+ 
+ 
+Already configured devices:
+TDS-1_A
+ 
+Which device do you want to connect? TDS-1_B
+ 
+Your list of possible devices to configure: 
+TDS-1_B
+ 
+ 
+You have chosen this configuration...
+COM6 ----> TDS-1_B
+Please wait patiently...
+ 
+Your device has not been configured yet. What do you want to do with it?
+ 
+...................................................................... 
+MAMY TO
+Your device has been configured properly ---> TDS-1_B.
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 1
+ 
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
+Table with devices licenses.
++----+---------+---------------------------+------------+--------------+------------+----+
+| ID |  Device |            UDI            |  License   |    Status    | Expiration | OK |
++----+---------+---------------------------+------------+--------------+------------+----+
+| 1  | TDS-1_A | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 2  | TDS-1_B | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
++----+---------+---------------------------+------------+--------------+------------+----+
+ 
+Now is the time to download project configs by SSH connections ...
+ 
+Please connect all your devices by LAN cables!
+ 
+Now it is time to check TFTP Server
+ 
+If you are ready and TFTP Server is not running, please type in '1' in console. 1
+ 
+Everything is fine, now you can turn on your TFTP SERVER...
+ 
+Your TFTP server is running now...
+ 
+Please choose in tab 'Current Directory' in TFTP Server Application folder called PROJECT-CONFIGS!
+ 
+If you set configuration properly and you are ready, please type in '1' in console. Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  28/03/2022 09:15:29
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-03-28.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 6
+ 
+ 
+ 
+Already configured devices:
+TDS-1_A, TDS-1_B
+ 
+Which device do you want to connect? TIR
+ 
+Your list of possible devices to configure: 
+TIR
+ 
+ 
+You have chosen this configuration...
+COM6 ----> TIR
+Please wait patiently...
+ 
+Your device has not been configured yet. What do you want to do with it?
+ 
+...................................................................... 

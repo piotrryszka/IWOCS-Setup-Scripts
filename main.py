@@ -122,11 +122,11 @@ while running_flag:
                         # deleting already configured devices from available devices to be chosen by the user
                         # simple handling exceptions
                         try:
-                        for key in (dictionary_dev):
-                            conf_devices_list.append(dictionary_dev[key]['device'])
-                        for x in conf_devices_list:
-                            if x in device_list:
-                                device_list.remove(x)
+                            for key in (dictionary_dev):
+                                conf_devices_list.append(dictionary_dev[key]['device'])
+                            for x in conf_devices_list:
+                                if x in device_list:
+                                    device_list.remove(x)
                         except:
                             pass
 
@@ -172,20 +172,20 @@ while running_flag:
 
 
                         # setting COM connection
-                        ser = Serial(COM_string, COM_speed)
+#                         ser = Serial(COM_string, COM_speed)
 
                         # waiting for router/switch to boot
-                        user_boot_flag = checking_booting(port = ser)
+#                         user_boot_flag = checking_booting(port = ser)
 
                         # counting number of gigabit and fast ports
-                        device_ports = checking_switch_ports(ser_port = ser)
+#                         device_ports = checking_switch_ports(ser_port = ser)
 
                         # checking if device is really the device, which was wanted by user
-                        proper_device = checking_device(ser_port = ser, user_device = user_device, lang_dict = lang_expressions)
+#                         proper_device = checking_device(ser_port = ser, user_device = user_device, lang_dict = lang_expressions)
 
                         # returning next ip number and full name of configured device to download to specified device
-                        our_conf = creating_proper_configuration(user_device = user_device, port_num = device_ports['Gigabit'], ip_add = ip_number)
-#                         our_conf = creating_proper_configuration(user_device = user_device, port_num = 15, ip_add = ip_number)
+#                         our_conf = creating_proper_configuration(user_device = user_device, port_num = device_ports['Gigabit'], ip_add = ip_number)
+                        our_conf = creating_proper_configuration(user_device = user_device, port_num = 15, ip_add = ip_number)
 
                         # remembering old IP number, last octet is important to save to txt file
                         ip_save = ip_number
@@ -208,7 +208,7 @@ while running_flag:
                             print(decorator_1)
 
                             # going to configuration mode
-                            to_conf_mode(ser)
+#                             to_conf_mode(ser)
 
                             # opening file with configuration
                             actual_device = actual_device
@@ -216,7 +216,7 @@ while running_flag:
 
                             # executing commands from the list
                             for command in stripped_list:
-                                send_to_console(ser, command)
+#                                 send_to_console(ser, command)
                                 # printing dots to inform user that script is still working
                                 print('.', end='')
 
@@ -224,28 +224,34 @@ while running_flag:
 
                             # checking info about license on the device
                             # returning tuple with our data
-                            license_data = download_license(ser)
+#                             license_data = download_license(ser)
 
+                            # TODO: UNCOMMENT
                             # reading license data to variables use to fill txt file
-                            udi = license_data[0]
-                            state_string = license_data[1]
-                            type_string = license_data[2]
-                            ipservices_string = license_data[3]
+#                             udi = license_data[0]
+#                             state_string = license_data[1]
+#                             type_string = license_data[2]
+#                             ipservices_string = license_data[3]
 
+                            udi = ' IE-4010-4S24P:FDO2250U0AV'
+                            state_string = 'Active, In Use'
+                            type_string = 'permanent'
+                            ipservices_string = 'ipservices'
 
                             # TODO: NEEDS TESTING
+                            # NEED TO BE MOVE
                             # checking proper configuration license for IE4010
-                            if state_string == 'ipservices' and type_string == 'Active, In Use' and ipservices_string == 'pernament':
+                            if state_string == 'Active, In Use' and type_string == 'permanent' and ipservices_string == 'ipservices':
                                 print("MAMY TO")
                                 ok_not = 'OK'
                             else:
-                                ok_not = "NOT OK"
+                                ok_not = "NOT-OK"
 
                             # closing connection
-                            ser.close()
+#                             ser.close()
                             print(f"{lang_expressions['proper_conf']}{user_device}.")
 
-                            print(f"{lang_expressions['close_con']}{ser.name}.")
+#                             print(f"{lang_expressions['close_con']}{ser.name}.")
                             print(decorator_1)
 
                             # saving the name of configured device to the txt file
@@ -287,7 +293,7 @@ while running_flag:
                             print(decorator_1)
                             # closing connection
                             ser.close()
-                            print(f"{lang_expressions['close_con']}{ser.name}.")
+#                             print(f"{lang_expressions['close_con']}{ser.name}.")
                             print(decorator_1)
                             break
                             # TODO: UNCOMMENT
@@ -338,6 +344,9 @@ while running_flag:
             # reminding to user to connect LAN cables like in the configuration
             print(lang_expressions['connect_cable'])
 
+            # killing tftp server is user forgot to do so
+            kill_tftp()
+
             # checking if server tftp is already running
             while tftp_flag:
                 tftp_flag = check_tftp(lang_dict = lang_expressions)
@@ -372,7 +381,7 @@ while running_flag:
                     print(decorator_1)
 
                     # connection with specified by user IP address and project configuration
-                    ssh_con(file = dictionary_dev[k]['device'], host = dictionary_dev[k]['ip'])
+#                     ssh_con(file = dictionary_dev[k]['device'], host = dictionary_dev[k]['ip'])
 
                 # changing ssh_flag to False to leave the loop
                 ssh_flag = False
