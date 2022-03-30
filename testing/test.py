@@ -1,6 +1,7 @@
 from serial import Serial
 from lib.commands import send_to_console
 from prettytable import PrettyTable
+import os
 
 ser = Serial('COM4', 9600)
 
@@ -37,10 +38,19 @@ with open('info.txt', 'r') as my_file:
                     print(final_device)
                     print('\n')
 
+# TODO: dodac try itp
+# reading possible
+# change it later, beacuse path would be different
+files = os.listdir('../firmware/ie4010')
+# przyporzadkowanie pierwszego argumentu pliku
+file = files[0]
+
+
+
 # PRETTY TABLE MOMENT
 x = PrettyTable()
 x.field_names = ["ID", "Name", "Model", "Current Version", "New Version"]
-x.add_row(['1', "TDS-1_A", f"{final_device}", f'{act_version}', 'Newcos'])
+x.add_row(['1', "TDS-1_A", f"{final_device}", f'{act_version}', f'{file}'])
 print(x)
 
 # writing table to txt file

@@ -172,7 +172,7 @@ while running_flag:
 
 
                         # setting COM connection
-                        ser = Serial(COM_string, COM_speed)
+#                         ser = Serial(COM_string, COM_speed)
 
                         # waiting for router/switch to boot
 #                         user_boot_flag = checking_booting(port = ser)
