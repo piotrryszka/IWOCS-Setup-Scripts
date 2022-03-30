@@ -237,3 +237,7 @@ def create_pdf(date):
 
     # save the pdf with name .pdf
     pdf.output("user_files/license_table.pdf")
+
+def sh_version(ser):
+    output = send_to_console(ser, 'sh version')
+    print(output)

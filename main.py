@@ -172,7 +172,7 @@ while running_flag:
 
 
                         # setting COM connection
-#                         ser = Serial(COM_string, COM_speed)
+                        ser = Serial(COM_string, COM_speed)
 
                         # waiting for router/switch to boot
 #                         user_boot_flag = checking_booting(port = ser)
@@ -334,7 +334,8 @@ while running_flag:
 
             # printing table with licenses to console
             print(conf_table)
-            # printing prompt about UKNNOWN in table
+
+            # printing prompt about UNKNOWN in table
             print(lang_expressions['unknown_license'])
             print(decorator_1)
 

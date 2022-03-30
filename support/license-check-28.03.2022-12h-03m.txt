@@ -5,4 +5,5 @@
 | 2  | TDS-1_B | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
 | 3  |   TIR   | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
 | 4  |  TAS-1  | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 5  |  MSC-1  | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
 +----+---------+---------------------------+------------+--------------+------------+----+

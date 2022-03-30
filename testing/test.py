@@ -1,26 +1,29 @@
-# Python program to convert
-# text file to pdf file
+from serial import Serial
+from lib.commands import send_to_console
+
+ser = Serial('COM4', 9600)
 
 
-from fpdf import FPDF
+output = send_to_console(ser, 'sh version', 2)
+print(output)
+print('\n')
 
-# save FPDF() class into
-# a variable pdf
-pdf = FPDF()
+with open('info.txt', 'w') as file:
+    file.write(output)
 
-# Add a page
-pdf.add_page()
+with open('info.txt', 'r') as my_file:
+    for line in my_file:
+        if 'Version' in line:
+            my_list = line.split(',')
+            for x in my_list:
+                if 'Version' in x:
+                    x = x.strip()
+                    x = x.split(' ')
+                    # printing version
+                    print("ACTUAL VERSION")
+                    print(x[-1])
 
-# set style and size of font
-# that you want in the pdf
-pdf.set_font("Arial", size = 15)
 
-# open the text file in read mode
-f = open("myfile.txt", "r")
 
-# insert the texts in pdf
-for x in f:
-    pdf.cell(200, 10, txt = x, ln = 1, align = 'C')
-
-# save the pdf with name .pdf
-pdf.output("mygfg.pdf")
+#     lines = my_file.readlines()
+#     print(lines)
