@@ -7,7 +7,7 @@ Image text-base: 0x80010000, data-base: 0x8068C000
 
 ROM: Bootstrap program is C2950 boot loader
 
-Switch uptime is 4 hours, 26 minutes
+Switch uptime is 4 hours, 36 minutes
 System returned to ROM by power-on
 System image file is "flash:/c2940-i6k2l2q4-mz.121-22.EA11.bin"
 

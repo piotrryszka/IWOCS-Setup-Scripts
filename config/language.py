@@ -47,7 +47,7 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                               'listing_dev': "Already configured devices:",
                               'now_device': "Now this device is being configured:",
                               'connect_cable': "Please connect all your devices by LAN cables!",
-                              'conf_lic': 'Table with devices licenses.',
+                              'conf_lic': 'Table with devices licenses',
                               'putty_kill': "Type 1 if you want to try close PUTTY application, if not type anything else.\n",
                               'unknown_license': "In case of UKNNOWN, please turn on the Putty client and check the configuration manually.",
 

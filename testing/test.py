@@ -49,8 +49,14 @@ file = files[0]
 
 # PRETTY TABLE MOMENT
 x = PrettyTable()
+x.title = ('Version of software on devices')
 x.field_names = ["ID", "Name", "Model", "Current Version", "New Version"]
-x.add_row(['1', "TDS-1_A", f"{final_device}", f'{act_version}', f'{file}'])
+
+# dodac takie sprawdzanie, zeby nie dodawalo tez urzadzen na ktorych juz mamy na pewno aktualny konfig
+if act_version != file:
+    x.add_row(['1', "TDS-1_A", f"{final_device}", f'{act_version}', f'{file}'])
+else:
+    pass
 print(x)
 
 # writing table to txt file

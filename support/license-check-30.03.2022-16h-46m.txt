@@ -1,6 +1,10 @@
++----------------------------------------------------------------------------------------+
+|                              Table with devices licenses.                              |
 +----+---------+---------------------------+------------+--------------+------------+----+
 | ID |  Device |            UDI            |  License   |    Status    | Expiration | OK |
 +----+---------+---------------------------+------------+--------------+------------+----+
 | 1  | TDS-1_A | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
 | 2  |   TIR   | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 3  | TDS-1_B | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 4  |  TAS-1  | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
 +----+---------+---------------------------+------------+--------------+------------+----+

@@ -62,6 +62,7 @@ while running_flag:
 
     # creating table with configuration licenses
     conf_table = create_table()
+    conf_table.title = (lang_expressions['conf_lic'])
 
     # deleting console logs, pretty table with licenses files and device logs files
     printing_logs(lang_expressions)
@@ -316,8 +317,6 @@ while running_flag:
 
         # SSH CONNECTIONS
         else:
-            # printing already conf devices with licenses in a list
-            print(lang_expressions['conf_lic'])
 
             # reading info about licenses to table
             reading_license(conf_table)
