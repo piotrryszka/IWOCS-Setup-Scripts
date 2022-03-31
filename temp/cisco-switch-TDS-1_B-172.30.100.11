@@ -1,5 +1,5 @@
 !
-hostname TAS-1
+hostname TDS-1_B
 !
 !
 logging buffered 16384 informational
@@ -25,7 +25,7 @@ vlan internal allocation policy ascending
 !
 lldp run
 !
-interface range GigabitEthernet1/1-15
+interface range GigabitEthernet1/1-1
  description SETUP-VLAN-1
  switchport access vlan 1
  switchport mode access
@@ -36,7 +36,7 @@ interface range GigabitEthernet1/1-15
  no shutdown
 !
 interface Vlan1
- ip address 172.30.100.13 255.255.255.0
+ ip address 172.30.100.11 255.255.255.0
  no shutdown
 !
 banner motd ^C

@@ -4,7 +4,7 @@ from serial import Serial
 from time import sleep
 
 from lib.commands import send_to_console, checking_switch_ports, checking_ip_address, checking_device, check_tftp, to_conf_mode
-from lib.operations import opening_device_list, reading_conf_files, creating_proper_configuration, deleting_files, deleting_conf, saving_dev, list_saved_dev, saving_license, saving_info_lic, reading_license, deleting_dev_logs, deleting_dev_license, download_license, create_pdf
+from lib.operations import opening_device_list, reading_conf_files, creating_proper_configuration, deleting_files, deleting_conf, saving_dev, list_saved_dev, saving_license, saving_info_lic, reading_license, deleting_dev_logs, deleting_dev_license, download_license, create_pdf, sh_version, read_version
 from lib.booting import checking_booting
 from lib.languages import listing_languages, reading_language
 from lib.logging import *
@@ -173,7 +173,7 @@ while running_flag:
 
 
                         # setting COM connection
-#                         ser = Serial(COM_string, COM_speed)
+                        ser = Serial(COM_string, COM_speed)
 
                         # waiting for router/switch to boot
 #                         user_boot_flag = checking_booting(port = ser)
@@ -186,7 +186,7 @@ while running_flag:
 
                         # returning next ip number and full name of configured device to download to specified device
 #                         our_conf = creating_proper_configuration(user_device = user_device, port_num = device_ports['Gigabit'], ip_add = ip_number)
-                        our_conf = creating_proper_configuration(user_device = user_device, port_num = 15, ip_add = ip_number)
+                        our_conf = creating_proper_configuration(user_device = user_device, port_num = 1, ip_add = ip_number)
 
                         # remembering old IP number, last octet is important to save to txt file
                         ip_save = ip_number
@@ -247,9 +247,6 @@ while running_flag:
                             else:
                                 ok_not = "NOT-OK"
 
-                            # closing connection
-#                             ser.close()
-                            print(f"{lang_expressions['proper_conf']}{user_device}.")
 
 #                             print(f"{lang_expressions['close_con']}{ser.name}.")
                             print(decorator_1)
@@ -265,6 +262,12 @@ while running_flag:
                             except:
                                 pass
 
+                            # TODO: needs to be done later
+                            # sending command to switch with sh version
+                            sh_version(ser)
+
+                            read_version(id_number, user_device)
+
                             # TESTING
                             # saving info about licenses and devices to the txt file with incremented ID counter
 #                             id_number = saving_info_lic(id_number, user_device, udi, ipservices_string, state_string, type_string, 'OK')
@@ -273,6 +276,12 @@ while running_flag:
                             # saving ID number to txt file
                             with open('temp/id_number.txt', 'w') as f:
                                 f.write(str(id_number))
+
+                            # closing connection
+                            ser.close()
+                            print(f"{lang_expressions['proper_conf']}{user_device}.")
+                            print(f"{lang_expressions['close_con']}{ser.name}.")
+
 
                             # question if user has finished initial configuration of devices
                             finish_conf = input(lang_expressions['finish_conf'])

@@ -238,6 +238,42 @@ def create_pdf(date):
     # save the pdf with name .pdf
     pdf.output("user_files/license_table.pdf")
 
+# sending sh_version command and saving it output to txt file
 def sh_version(ser):
-    output = send_to_console(ser, 'sh version')
-    print(output)
+    # sending command
+    output = send_to_console(ser, 'sh version', 2)
+    # saving output to txt file
+    with open('temp/info_ver.txt', 'w') as file:
+        file.write(output)
+
+# reading info about version from txt file
+def read_version(id, user_device):
+    with open('temp/info_ver.txt', 'r') as my_file:
+        for line in my_file:
+            # looking for actual software version
+            if 'Version' in line:
+                my_list = line.split(',')
+                for x in my_list:
+                    if 'Version' in x:
+                        x = x.strip()
+                        x = x.split(' ')
+                        act_version = x[-1]
+            # looking for actual device model
+            if 'System image file' in line:
+                my_list = line.split(' ')
+                for x in my_list:
+                    if 'flash' in x:
+                        x = x.split('/')
+                        x = x[1].split('-')
+                        # printing device model
+                        final_device = x[0]
+    # TODO: dodac try itp
+    # reading possible
+    # change it later, because path would be different
+    files = os.listdir('firmware/ie4010')
+    # adding first file to an argument
+    file = str(files[0])
+    string_file = file
+    # saving data to txt file
+    with open('temp/version.txt', 'a') as file:
+        file.write(f'{id} {user_device} {final_device} {act_version} {string_file} \n')

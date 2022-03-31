@@ -1,5 +1,5 @@
 !
-hostname TDS-1_B
+hostname TIR
 !
 !
 logging buffered 16384 informational
@@ -25,7 +25,7 @@ vlan internal allocation policy ascending
 !
 lldp run
 !
-interface range GigabitEthernet1/1-15
+interface range GigabitEthernet1/1-1
  description SETUP-VLAN-1
  switchport access vlan 1
  switchport mode access
