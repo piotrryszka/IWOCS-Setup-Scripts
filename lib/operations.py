@@ -276,4 +276,5 @@ def read_version(id, user_device):
     string_file = file
     # saving data to txt file
     with open('temp/version.txt', 'a') as file:
-        file.write(f'{id} {user_device} {final_device} {act_version} {string_file} \n')
+        file.write(f'{id} {user_device} {final_device} {act_version} {string_file}')
+        file.write('\n')

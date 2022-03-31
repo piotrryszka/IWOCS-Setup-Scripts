@@ -9,7 +9,7 @@ from lib.booting import checking_booting
 from lib.languages import listing_languages, reading_language
 from lib.logging import *
 from lib.network import ssh_con
-from lib.functions import printing_logs, creating_timestamp, start_tftp, user_tftp, final_tftp, check_com, order_dev, list_dev, create_table, kill_tftp, kill_putty
+from lib.functions import printing_logs, creating_timestamp, start_tftp, user_tftp, final_tftp, check_com, order_dev, list_dev, create_table, kill_tftp, kill_putty, create_table_ver, add_row_ver
 from config.data import ip_number, decorator_1, device_order, id_number
 
 
@@ -262,15 +262,14 @@ while running_flag:
                             except:
                                 pass
 
-                            # TODO: needs to be done later
                             # sending command to switch with sh version
                             sh_version(ser)
 
+                            # saving prepared data to txt, later will be prepared table report with it
                             read_version(id_number, user_device)
 
                             # TESTING
                             # saving info about licenses and devices to the txt file with incremented ID counter
-#                             id_number = saving_info_lic(id_number, user_device, udi, ipservices_string, state_string, type_string, 'OK')
                             id_number = saving_info_lic(id_number, user_device, udi, ipservices_string, state_string, type_string, ok_not)
 
                             # saving ID number to txt file
@@ -279,6 +278,7 @@ while running_flag:
 
                             # closing connection
                             ser.close()
+                            print(decorator_1)
                             print(f"{lang_expressions['proper_conf']}{user_device}.")
                             print(f"{lang_expressions['close_con']}{ser.name}.")
 
@@ -302,7 +302,7 @@ while running_flag:
                             print(decorator_1)
                             # closing connection
                             ser.close()
-#                             print(f"{lang_expressions['close_con']}{ser.name}.")
+                            print(f"{lang_expressions['close_con']}{ser.name}.")
                             print(decorator_1)
                             break
                             # TODO: UNCOMMENT
@@ -346,6 +346,15 @@ while running_flag:
             # printing prompt about UNKNOWN in table
             print(lang_expressions['unknown_license'])
             print(decorator_1)
+
+            # creating pretty table with versions
+            ver_table = create_table_ver(lang_expressions)
+
+            # adding all rows from txt file to version table
+            add_row_ver(ver_table)
+
+            # printing version table to the console
+            print(ver_table)
 
             # going to ssh connections
             print(lang_expressions['ssh_move'])

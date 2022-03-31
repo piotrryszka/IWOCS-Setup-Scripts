@@ -584,4 +584,807 @@ Please connect all your devices by LAN cables!
  
 Now it is time to check TFTP Server
  
+If you are ready and TFTP Server is not running, please type in '1' in console. Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  31/03/2022 09:44:08
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-03-31.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 4
+ 
+ 
+ 
+Already configured devices:
+TDS-1_A, TDS-1_B, TIR
+ 
+Which device do you want to connect? MSC-1
+ 
+Your list of possible devices to configure: 
+MSC-1
+ 
+ 
+You have chosen this configuration...
+COM4 ----> MSC-1
+Please wait patiently...
+ 
+Your device has not been configured yet. What do you want to do with it?
+ 
+...................................................................... 
+ 
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  31/03/2022 09:44:43
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-03-31.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 4
+ 
+ 
+ 
+Already configured devices:
+TDS-1_A, TDS-1_B, TIR, MSC-1
+ 
+Which device do you want to connect? MSH-1
+ 
+Your list of possible devices to configure: 
+MSH-1
+ 
+ 
+You have chosen this configuration...
+COM4 ----> MSH-1
+Please wait patiently...
+ 
+Your device has not been configured yet. What do you want to do with it?
+ 
+...................................................................... 
+ 
+['1', 'TDS-1_A', 'c2940', '12.1(22)EA11', '15.9(e4)', '\n2', 'TDS-1_B', 'c2940', '12.1(22)EA11', '15.9(e4)', '\n3', 'TIR', 'c2940', '12.1(22)EA11', '15.9(e4)', '\n4', 'MSH-1', 'c2940', '12.1(22)EA11', '15.9(e4)', '\n']
+Your device has been configured properly ---> MSH-1.
+Closed connection to COM4.
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  31/03/2022 09:45:40
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-03-31.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 4
+ 
+ 
+ 
+Which device do you want to connect? TDS-1_A
+ 
+Your list of possible devices to configure: 
+TDS-1_A
+ 
+ 
+You have chosen this configuration...
+COM4 ----> TDS-1_A
+Please wait patiently...
+ 
+Your device has not been configured yet. What do you want to do with it?
+ 
+...................................................................... 
+ 
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  31/03/2022 09:47:45
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-03-31.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 4
+ 
+ 
+ 
+Already configured devices:
+TDS-1_A
+ 
+Which device do you want to connect? TIR
+ 
+Your list of possible devices to configure: 
+TIR
+ 
+ 
+You have chosen this configuration...
+COM4 ----> TIR
+Please wait patiently...
+ 
+Your device has not been configured yet. What do you want to do with it?
+ 
+...................................................................... 
+ 
+['1', 'TDS-1_A', 'c2940', '12.1(22)EA11', '15.9(e4)', '\n1', 'TIR', 'c2940', '12.1(22)EA11', '15.9(e4)', '\n']
+Your device has been configured properly ---> TIR.
+Closed connection to COM4.
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  31/03/2022 09:48:38
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-03-31.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 4
+ 
+ 
+ 
+Already configured devices:
+TDS-1_A, TIR
+ 
+Which device do you want to connect? TDS-1_B
+ 
+Your list of possible devices to configure: 
+TDS-1_B
+ 
+ 
+You have chosen this configuration...
+COM4 ----> TDS-1_B
+Please wait patiently...
+ 
+Your device has not been configured yet. What do you want to do with it?
+ 
+...................................................................... 
+ 
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  31/03/2022 09:52:04
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-03-31.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 4
+ 
+ 
+ 
+Already configured devices:
+TDS-1_A, TDS-1_B, TIR
+ 
+Which device do you want to connect? TAS-1
+ 
+Your list of possible devices to configure: 
+TAS-1
+ 
+ 
+You have chosen this configuration...
+COM4 ----> TAS-1
+Please wait patiently...
+ 
+Your device has not been configured yet. What do you want to do with it?
+ 
+...................................................................... 
+ 
+['1', 'TDS-1_A', 'c2940', '12.1(22)EA11', '15.9(e4)']
+['1', 'TIR', 'c2940', '12.1(22)EA11', '15.9(e4)']
+['2', 'TAS-1', 'c2940', '12.1(22)EA11', '15.9(e4)']
+Your device has been configured properly ---> TAS-1.
+Closed connection to COM4.
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  31/03/2022 10:33:19
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-03-31.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 4
+ 
+ 
+ 
+Already configured devices:
+TDS-1_A, TDS-1_B, TIR, TAS-1
+ 
+Which device do you want to connect? MSC-1
+ 
+Your list of possible devices to configure: 
+MSC-1
+ 
+ 
+You have chosen this configuration...
+COM4 ----> MSC-1
+Please wait patiently...
+ 
+Your device has not been configured yet. What do you want to do with it?
+ 
+...................................................................... 
+ 
+['1', 'TDS-1_A', 'c2940', '12.1(22)EA11', '15.9(e4)']
+['1', 'TIR', 'c2940', '12.1(22)EA11', '15.9(e4)']
+['2', 'TAS-1', 'c2940', '12.1(22)EA11', '15.9(e4)']
+['3', 'MSC-1', 'c2940', '12.1(22)EA11', '15.9(e4)']
+ 
+Your device has been configured properly ---> MSC-1.
+Closed connection to COM4.
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  31/03/2022 10:50:02
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-03-31.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 
+ 
+It is not a complete system, I am sorry, I can't help you.
+ 
+Your created configuration files has been deleted ...
+ 
+Thank you for using our script, hope you enjoy it!!!
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  31/03/2022 10:50:08
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-03-31.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 4
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 4
+ 
+ 
+ 
+Which device do you want to connect? TDS-1_A
+ 
+Your list of possible devices to configure: 
+TDS-1_A
+ 
+ 
+You have chosen this configuration...
+COM4 ----> TDS-1_A
+Please wait patiently...
+ 
+Your device has not been configured yet. What do you want to do with it?
+ 
+...................................................................... 
+ 
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  31/03/2022 10:50:30
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-03-31.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 4
+ 
+ 
+ 
+Already configured devices:
+TDS-1_A
+ 
+Which device do you want to connect? TDS-1_B
+ 
+Your list of possible devices to configure: 
+TDS-1_B
+ 
+ 
+You have chosen this configuration...
+COM4 ----> TDS-1_B
+Please wait patiently...
+ 
+Your device has not been configured yet. What do you want to do with it?
+ 
+...................................................................... 
+ 
+['1', 'TDS-1_B', 'c2940', '12.1(22)EA11', '15.9(e4)']
++----+---------+-------+-----------------+-------------+
+| ID |   Name  | Model | Current Version | New Version |
++----+---------+-------+-----------------+-------------+
+| 1  | TDS-1_B | c2940 |   12.1(22)EA11  |   15.9(e4)  |
++----+---------+-------+-----------------+-------------+
+ 
+Your device has been configured properly ---> TDS-1_B.
+Closed connection to COM4.
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 2
+ 
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
+Already configured devices:
+TDS-1_A, TDS-1_B
+ 
+Which device do you want to connect? TIR
+ 
+Your list of possible devices to configure: 
+TIR
+ 
+ 
+You have chosen this configuration...
+COM4 ----> TIR
+Please wait patiently...
+ 
+Your device has not been configured yet. What do you want to do with it?
+ 
+...................................................................... 
+ 
+['1', 'TDS-1_B', 'c2940', '12.1(22)EA11', '15.9(e4)']
+['2', 'TIR', 'c2940', '12.1(22)EA11', '15.9(e4)']
++----+---------+-------+-----------------+-------------+
+| ID |   Name  | Model | Current Version | New Version |
++----+---------+-------+-----------------+-------------+
+| 1  | TDS-1_B | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 2  |   TIR   | c2940 |   12.1(22)EA11  |   15.9(e4)  |
++----+---------+-------+-----------------+-------------+
+ 
+Your device has been configured properly ---> TIR.
+Closed connection to COM4.
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  31/03/2022 11:28:52
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-03-31.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 4
+ 
+ 
+ 
+Already configured devices:
+TDS-1_A, TDS-1_B, TIR
+ 
+Which device do you want to connect? TAS-1
+ 
+Your list of possible devices to configure: 
+TAS-1
+ 
+ 
+You have chosen this configuration...
+COM4 ----> TAS-1
+Please wait patiently...
+ 
+Your device has not been configured yet. What do you want to do with it?
+ 
+...................................................................... 
+ 
++----+---------+-------+-----------------+-------------+
+| ID |   Name  | Model | Current Version | New Version |
++----+---------+-------+-----------------+-------------+
+| 1  | TDS-1_B | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 2  |   TIR   | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 3  |  TAS-1  | c2940 |   12.1(22)EA11  |   15.9(e4)  |
++----+---------+-------+-----------------+-------------+
+ 
+Your device has been configured properly ---> TAS-1.
+Closed connection to COM4.
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  31/03/2022 11:34:22
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-03-31.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 4
+ 
+ 
+ 
+Already configured devices:
+TDS-1_A, TDS-1_B, TIR, TAS-1
+ 
+Which device do you want to connect? MSC-1
+ 
+Your list of possible devices to configure: 
+MSC-1
+ 
+ 
+You have chosen this configuration...
+COM4 ----> MSC-1
+Please wait patiently...
+ 
+Your device has not been configured yet. What do you want to do with it?
+ 
+...................................................................... 
+ 
++------------------------------------------------------+
+|              Table with device versions              |
++----+---------+-------+-----------------+-------------+
+| ID |   Name  | Model | Current Version | New Version |
++----+---------+-------+-----------------+-------------+
+| 1  | TDS-1_B | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 2  |   TIR   | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 3  |  TAS-1  | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 4  |  MSC-1  | c2940 |   12.1(22)EA11  |   15.9(e4)  |
++----+---------+-------+-----------------+-------------+
+ 
+Your device has been configured properly ---> MSC-1.
+Closed connection to COM4.
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  31/03/2022 11:42:28
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-03-31.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 4
+ 
+ 
+ 
+Already configured devices:
+TDS-1_A, TDS-1_B, TIR, TAS-1, MSC-1
+ 
+Which device do you want to connect? Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  31/03/2022 11:45:12
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-03-31.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 4
+ 
+ 
+ 
+Which device do you want to connect? TDS-1_A
+ 
+Your list of possible devices to configure: 
+TDS-1_A
+ 
+ 
+You have chosen this configuration...
+COM4 ----> TDS-1_A
+Please wait patiently...
+ 
+Your device has not been configured yet. What do you want to do with it?
+ 
+...................................................................... 
+ 
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  31/03/2022 11:45:44
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-03-31.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 4
+ 
+ 
+ 
+Which device do you want to connect? TDS-1_A
+ 
+Your list of possible devices to configure: 
+TDS-1_A
+ 
+ 
+You have chosen this configuration...
+COM4 ----> TDS-1_A
+Please wait patiently...
+ 
+Your device has not been configured yet. What do you want to do with it?
+ 
+...................................................................... 
+ 
+ 
+Your device has been configured properly ---> TDS-1_A.
+Closed connection to COM4.
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 2
+ 
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
+Already configured devices:
+TDS-1_A
+ 
+Which device do you want to connect? TDS-1_B
+ 
+Your list of possible devices to configure: 
+TDS-1_B
+ 
+ 
+You have chosen this configuration...
+COM4 ----> TDS-1_B
+Please wait patiently...
+ 
+Your device has not been configured yet. What do you want to do with it?
+ 
+...................................................................... 
+ 
+ 
+Your device has been configured properly ---> TDS-1_B.
+Closed connection to COM4.
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 2
+ 
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
+Already configured devices:
+TDS-1_A, TDS-1_B
+ 
+Which device do you want to connect? TIR
+ 
+Your list of possible devices to configure: 
+TIR
+ 
+ 
+You have chosen this configuration...
+COM4 ----> TIR
+Please wait patiently...
+ 
+Your device has not been configured yet. What do you want to do with it?
+ 
+...................................................................... 
+ 
+ 
+Your device has been configured properly ---> TIR.
+Closed connection to COM4.
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 1
+ 
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
++----------------------------------------------------------------------------------------+
+|                              Table with devices licenses                               |
++----+---------+---------------------------+------------+--------------+------------+----+
+| ID |  Device |            UDI            |  License   |    Status    | Expiration | OK |
++----+---------+---------------------------+------------+--------------+------------+----+
+| 1  | TDS-1_A | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 2  | TDS-1_B | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 3  |   TIR   | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
++----+---------+---------------------------+------------+--------------+------------+----+
+In case of UKNNOWN, please turn on the Putty client and check the configuration manually.
+ 
++------------------------------------------------------+
+|              Table with device versions              |
++----+---------+-------+-----------------+-------------+
+| ID |   Name  | Model | Current Version | New Version |
++----+---------+-------+-----------------+-------------+
+| 1  | TDS-1_A | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 2  | TDS-1_B | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 3  |   TIR   | c2940 |   12.1(22)EA11  |   15.9(e4)  |
++----+---------+-------+-----------------+-------------+
+Now is the time to download project configs by SSH connections ...
+ 
+Please connect all your devices by LAN cables!
+ 
+Now it is time to check TFTP Server
+ 
 If you are ready and TFTP Server is not running, please type in '1' in console. 

@@ -127,3 +127,18 @@ def kill_putty(decision):
             subprocess.call(["taskkill","/F","/IM","puTTY.exe"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         except:
             pass
+
+def create_table_ver(lang_dict):
+    tb = pt()
+    # add headers
+    tb.title = lang_dict['ver_table']
+    tb.field_names = ["ID", "Name", "Model", "Current Version", "New Version"]
+    #returning table
+    return tb
+
+# adding rows in version table
+def add_row_ver(table):
+    with open('temp/version.txt', 'r') as text_file:
+        for line in text_file:
+            version_list = line.split()
+            table.add_row(version_list)
