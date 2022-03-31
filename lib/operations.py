@@ -278,3 +278,13 @@ def read_version(id, user_device):
     with open('temp/version.txt', 'a') as file:
         file.write(f'{id} {user_device} {final_device} {act_version} {string_file}')
         file.write('\n')
+
+# saving version table to txt
+def saving_ver_table(table):
+    dateTimeObj = datetime.now()
+    dateObj = dateTimeObj.date()
+    timeObj = dateTimeObj.time()
+    dateStr = dateObj.strftime("%d.%m.%Y")
+    timeStr = timeObj.strftime("%Hh-%Mm")
+    with open(f'support/version-check-{dateStr}-{timeStr}.txt', 'w') as f:
+        f.write(str(table))

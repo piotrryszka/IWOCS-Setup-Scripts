@@ -4,7 +4,7 @@ from serial import Serial
 from time import sleep
 
 from lib.commands import send_to_console, checking_switch_ports, checking_ip_address, checking_device, check_tftp, to_conf_mode
-from lib.operations import opening_device_list, reading_conf_files, creating_proper_configuration, deleting_files, deleting_conf, saving_dev, list_saved_dev, saving_license, saving_info_lic, reading_license, deleting_dev_logs, deleting_dev_license, download_license, create_pdf, sh_version, read_version
+from lib.operations import opening_device_list, reading_conf_files, creating_proper_configuration, deleting_files, deleting_conf, saving_dev, list_saved_dev, saving_license, saving_info_lic, reading_license, deleting_dev_logs, deleting_dev_license, download_license, create_pdf, sh_version, read_version, saving_ver_table
 from lib.booting import checking_booting
 from lib.languages import listing_languages, reading_language
 from lib.logging import *
@@ -281,6 +281,7 @@ while running_flag:
                             print(decorator_1)
                             print(f"{lang_expressions['proper_conf']}{user_device}.")
                             print(f"{lang_expressions['close_con']}{ser.name}.")
+                            print(decorator_1)
 
 
                             # question if user has finished initial configuration of devices
@@ -353,8 +354,12 @@ while running_flag:
             # adding all rows from txt file to version table
             add_row_ver(ver_table)
 
+            # saving version table to txt file
+            saving_ver_table(ver_table)
+
             # printing version table to the console
             print(ver_table)
+            print(decorator_1)
 
             # going to ssh connections
             print(lang_expressions['ssh_move'])
