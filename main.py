@@ -24,6 +24,7 @@ proper_language = False # flag if the language chosen by user is possible to be 
 del_flag = False # flag to check what user want to do after deleting logs
 tftp_flag = True # flag to check if the port UDP 69 is taken
 ssh_flag = True # flag to configure devices by ssh connections
+update_flag = True # flag to check if user wants to download some new software versions
 
 # FIXED Variables:
 COM_speed = 9600 # serial port speed
@@ -226,6 +227,7 @@ while running_flag:
                             # checking info about license on the device
                             # returning tuple with our data
 #                             license_data = download_license(ser)
+#                             print(license_data)
 
                             # TODO: UNCOMMENT
                             # reading license data to variables use to fill txt file
@@ -248,7 +250,6 @@ while running_flag:
                                 ok_not = "NOT-OK"
 
 
-#                             print(f"{lang_expressions['close_con']}{ser.name}.")
                             print(decorator_1)
 
                             # saving the name of configured device to the txt file
@@ -361,8 +362,39 @@ while running_flag:
             print(ver_table)
             print(decorator_1)
 
+            # checking if user want to upload new license to the device
+            while update_flag:
+                # question to user if he want to update sth
+                user_update = input("If you want to download new versions of software type '1', anything else won't be accepted. ")
+                print(user_update)
+                if user_update == '1':
+                    # question which device user wants to update
+                    user_up_dev = input("Which device do you want to update? ")
+                    print(user_up_dev)
+                    # reading possible devices from version txt file
+                    with open('temp/version.txt') as file:
+                        data = file.read()
+                        print(data)
+                        # checking if device is possible to update
+                        if user_up_dev in data:
+                            data_list = data.split('\n')
+                            print(data_list)
+                            for element in data_list:
+                                if user_up_dev in element:
+                                    data_final = element.split(' ')
+                                    print(element)
+                                    print(data_final)
+
+                else:
+                    # leaving update version loop
+                    update_flag = False
+
+
             # going to ssh connections
             print(lang_expressions['ssh_move'])
+
+            # updating software by tftp and LAN connections
+
 
             # checking ip address is correctly set
 #             while ip_flag == False:

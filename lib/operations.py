@@ -157,6 +157,10 @@ def deleting_dev_license():
 
 # collecting license data from device
 def download_license(ser):
+    # crating empty strings
+    state_string = ''
+    type_string = ''
+    ipservices_string = ''
 
     # waiting for the device to finish reading commands from initial config
     print(".............................................")
@@ -198,14 +202,17 @@ def download_license(ser):
                         line_read = line.split()
                         our_info = line_read[2:]
                         state_string = ' '.join(our_info)
+#                         print(state_string)
                     if 'License Type:' in line:
                         line_read = line.split()
                         our_info = line_read[2:]
                         type_string = ' '.join(our_info)
+#                         print(state_string)
                     if 'ipservices' in line:
                         line_read = line.split()
                         our_info = line_read[3:]
                         ipservices_string = ' '.join(our_info)
+#                         print(ipservices_string)
                 if 'lanbase' in line:
                     counter =+1
     except:
