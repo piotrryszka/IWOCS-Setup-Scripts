@@ -50,7 +50,9 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                               'conf_lic': 'Table with devices licenses',
                               'putty_kill': "Type 1 if you want to try close PUTTY application, if not type anything else.\n",
                               'unknown_license': "In case of UKNNOWN, please turn on the Putty client and check the configuration manually.",
-                              'ver_table': 'Table with device versions'
+                              'ver_table': 'Table with device versions',
+                              'ver_update': "If you want to download new versions of software type '1', anything else won't be accepted. ",
+                              'ver_dev': "Which device do you want to update? ",
 
 
                               },
@@ -105,6 +107,8 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                                'putty_kill': "Something in Norwegian language ",
                                'unknown_license': "Something in Norwegian language ",
                                'ver_table': "Something in Norwegian language ",
+                               'ver_update': "Something in Norwegian language ",
+                               'ver_dev': "Something in Norwegian language ",
 
                                },
                         'Fr': {'information_prompt': 'Something in French language ',
@@ -158,6 +162,8 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                                'putty_kill': "Something in French language ",
                                'unknown_license': "Something in French language ",
                                'ver_table': "Something in French language ",
+                               'ver_update': "Something in French language ",
+                               'ver_dev': "Something in French language ",
 
                        }
                        }

@@ -9,7 +9,7 @@ from lib.booting import checking_booting
 from lib.languages import listing_languages, reading_language
 from lib.logging import *
 from lib.network import ssh_con
-from lib.functions import printing_logs, creating_timestamp, start_tftp, user_tftp, final_tftp, check_com, order_dev, list_dev, create_table, kill_tftp, kill_putty, create_table_ver, add_row_ver
+from lib.functions import printing_logs, creating_timestamp, start_tftp, user_tftp, final_tftp, check_com, order_dev, list_dev, create_table, kill_tftp, kill_putty, create_table_ver, add_row_ver, prepare_software
 from config.data import ip_number, decorator_1, device_order, id_number
 
 
@@ -32,6 +32,7 @@ dictionary_dev = {} # empty dictionary to be later filled with proper restart or
 order_dict = {} # empty dictionary with devices model and last octet of ip number
 conf_devices_list = [] #empty list later filled with already configured devices
 license_dict = {} # empty dictionary later to be filled with license linked things
+update_list = [] # empty list later filled with devices to update software on them
 
 # main project
 while running_flag:
@@ -363,31 +364,8 @@ while running_flag:
             print(decorator_1)
 
             # checking if user want to upload new license to the device
-            while update_flag:
-                # question to user if he want to update sth
-                user_update = input("If you want to download new versions of software type '1', anything else won't be accepted. ")
-                print(user_update)
-                if user_update == '1':
-                    # question which device user wants to update
-                    user_up_dev = input("Which device do you want to update? ")
-                    print(user_up_dev)
-                    # reading possible devices from version txt file
-                    with open('temp/version.txt') as file:
-                        data = file.read()
-                        print(data)
-                        # checking if device is possible to update
-                        if user_up_dev in data:
-                            data_list = data.split('\n')
-                            print(data_list)
-                            for element in data_list:
-                                if user_up_dev in element:
-                                    data_final = element.split(' ')
-                                    print(element)
-                                    print(data_final)
-
-                else:
-                    # leaving update version loop
-                    update_flag = False
+            update_list = prepare_software(lang_expressions)
+            print(update_list)
 
 
             # going to ssh connections

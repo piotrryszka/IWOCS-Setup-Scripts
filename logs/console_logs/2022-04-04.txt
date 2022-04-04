@@ -1799,4 +1799,1983 @@ Which device do you want to update? MSC-1
 ['1 TDS-1_A c2940 12.1(22)EA11 15.9(e4)', '2 TDS-1_B c2940 12.1(22)EA11 15.9(e4)', '3 MSC-1 c2940 12.1(22)EA11 15.9(e4)', '4 SDG-1_A c2940 12.1(22)EA11 15.9(e4)', '']
 3 MSC-1 c2940 12.1(22)EA11 15.9(e4)
 ['3', 'MSC-1', 'c2940', '12.1(22)EA11', '15.9(e4)']
+If you want to download new versions of software type '1', anything else won't be accepted. Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  04/04/2022 12:20:57
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-04-04.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 4
+ 
+ 
+ 
+Already configured devices:
+TDS-1_A, TDS-1_B, SDG-1_A, MSC-1
+ 
+Which device do you want to connect? MSH-2
+ 
+Your list of possible devices to configure: 
+MSH-2
+ 
+ 
+You have chosen this configuration...
+COM4 ----> MSH-2
+Please wait patiently...
+ 
+Your device has not been configured yet. What do you want to do with it?
+ 
+...................................................................... 
+ 
+ 
+Your device has been configured properly ---> MSH-2.
+Closed connection to COM4.
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 1
+ 
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
++----------------------------------------------------------------------------------------+
+|                              Table with devices licenses                               |
++----+---------+---------------------------+------------+--------------+------------+----+
+| ID |  Device |            UDI            |  License   |    Status    | Expiration | OK |
++----+---------+---------------------------+------------+--------------+------------+----+
+| 1  | TDS-1_A | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 2  | TDS-1_B | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 3  |  MSC-1  | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 4  | SDG-1_A | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 5  |  MSH-2  | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
++----+---------+---------------------------+------------+--------------+------------+----+
+In case of UKNNOWN, please turn on the Putty client and check the configuration manually.
+ 
++------------------------------------------------------+
+|              Table with device versions              |
++----+---------+-------+-----------------+-------------+
+| ID |   Name  | Model | Current Version | New Version |
++----+---------+-------+-----------------+-------------+
+| 1  | TDS-1_A | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 2  | TDS-1_B | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 3  |  MSC-1  | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 4  | SDG-1_A | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 5  |  MSH-2  | c2940 |   12.1(22)EA11  |   15.9(e4)  |
++----+---------+-------+-----------------+-------------+
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. 1
+Which device do you want to update? 1
+1 TDS-1_A c2940 12.1(22)EA11 15.9(e4)
+2 TDS-1_B c2940 12.1(22)EA11 15.9(e4)
+3 MSC-1 c2940 12.1(22)EA11 15.9(e4)
+4 SDG-1_A c2940 12.1(22)EA11 15.9(e4)
+5 MSH-2 c2940 12.1(22)EA11 15.9(e4)
+If you want to download new versions of software type '1', anything else won't be accepted. Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  04/04/2022 12:21:40
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-04-04.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 4
+ 
+ 
+ 
+Which device do you want to connect? TDS-1_A
+ 
+Your list of possible devices to configure: 
+TDS-1_A
+ 
+ 
+You have chosen this configuration...
+COM4 ----> TDS-1_A
+Please wait patiently...
+ 
+Your device has not been configured yet. What do you want to do with it?
+ 
+...................................................................... 
+ 
+ 
+Your device has been configured properly ---> TDS-1_A.
+Closed connection to COM4.
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 2
+ 
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
+Already configured devices:
+TDS-1_A
+ 
+Which device do you want to connect? TDS-1_B
+ 
+Your list of possible devices to configure: 
+TDS-1_B
+ 
+ 
+You have chosen this configuration...
+COM4 ----> TDS-1_B
+Please wait patiently...
+ 
+Your device has not been configured yet. What do you want to do with it?
+ 
+...................................................................... 
+ 
+ 
+Your device has been configured properly ---> TDS-1_B.
+Closed connection to COM4.
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 1
+ 
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
++----------------------------------------------------------------------------------------+
+|                              Table with devices licenses                               |
++----+---------+---------------------------+------------+--------------+------------+----+
+| ID |  Device |            UDI            |  License   |    Status    | Expiration | OK |
++----+---------+---------------------------+------------+--------------+------------+----+
+| 1  | TDS-1_A | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 2  | TDS-1_B | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
++----+---------+---------------------------+------------+--------------+------------+----+
+In case of UKNNOWN, please turn on the Putty client and check the configuration manually.
+ 
++------------------------------------------------------+
+|              Table with device versions              |
++----+---------+-------+-----------------+-------------+
+| ID |   Name  | Model | Current Version | New Version |
++----+---------+-------+-----------------+-------------+
+| 1  | TDS-1_A | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 2  | TDS-1_B | c2940 |   12.1(22)EA11  |   15.9(e4)  |
++----+---------+-------+-----------------+-------------+
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. 1
+Which device do you want to update? 1
+1 TDS-1_A c2940 12.1(22)EA11 15.9(e4)
+[['1', 'TDS-1_A', 'c2940', '12.1(22)EA11', '15.9(e4)']]
+2 TDS-1_B c2940 12.1(22)EA11 15.9(e4)
+[['1', 'TDS-1_A', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['2', 'TDS-1_B', 'c2940', '12.1(22)EA11', '15.9(e4)']]
+If you want to download new versions of software type '1', anything else won't be accepted. Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  04/04/2022 12:28:47
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-04-04.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 4
+ 
+ 
+ 
+Already configured devices:
+TDS-1_A, TDS-1_B
+ 
+Which device do you want to connect? TAS-1
+ 
+Your list of possible devices to configure: 
+TAS-1
+ 
+ 
+You have chosen this configuration...
+COM4 ----> TAS-1
+Please wait patiently...
+ 
+Your device has not been configured yet. What do you want to do with it?
+ 
+...................................................................... 
+ 
+ 
+Your device has been configured properly ---> TAS-1.
+Closed connection to COM4.
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 1
+ 
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
++----------------------------------------------------------------------------------------+
+|                              Table with devices licenses                               |
++----+---------+---------------------------+------------+--------------+------------+----+
+| ID |  Device |            UDI            |  License   |    Status    | Expiration | OK |
++----+---------+---------------------------+------------+--------------+------------+----+
+| 1  | TDS-1_A | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 2  | TDS-1_B | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 3  |  TAS-1  | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
++----+---------+---------------------------+------------+--------------+------------+----+
+In case of UKNNOWN, please turn on the Putty client and check the configuration manually.
+ 
++------------------------------------------------------+
+|              Table with device versions              |
++----+---------+-------+-----------------+-------------+
+| ID |   Name  | Model | Current Version | New Version |
++----+---------+-------+-----------------+-------------+
+| 1  | TDS-1_A | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 2  | TDS-1_B | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 3  |  TAS-1  | c2940 |   12.1(22)EA11  |   15.9(e4)  |
++----+---------+-------+-----------------+-------------+
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. 1
+Which device do you want to update? 1
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  04/04/2022 12:29:14
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-04-04.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 4
+ 
+ 
+ 
+Already configured devices:
+TDS-1_A, TDS-1_B, TAS-1
+ 
+Which device do you want to connect? SDG-1_A
+ 
+Your list of possible devices to configure: 
+SDG-1_A
+ 
+ 
+You have chosen this configuration...
+COM4 ----> SDG-1_A
+Please wait patiently...
+ 
+Your device has not been configured yet. What do you want to do with it?
+ 
+...................................................................... 
+ 
+ 
+Your device has been configured properly ---> SDG-1_A.
+Closed connection to COM4.
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 1
+ 
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
++----------------------------------------------------------------------------------------+
+|                              Table with devices licenses                               |
++----+---------+---------------------------+------------+--------------+------------+----+
+| ID |  Device |            UDI            |  License   |    Status    | Expiration | OK |
++----+---------+---------------------------+------------+--------------+------------+----+
+| 1  | TDS-1_A | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 2  | TDS-1_B | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 3  |  TAS-1  | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 4  | SDG-1_A | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
++----+---------+---------------------------+------------+--------------+------------+----+
+In case of UKNNOWN, please turn on the Putty client and check the configuration manually.
+ 
++------------------------------------------------------+
+|              Table with device versions              |
++----+---------+-------+-----------------+-------------+
+| ID |   Name  | Model | Current Version | New Version |
++----+---------+-------+-----------------+-------------+
+| 1  | TDS-1_A | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 2  | TDS-1_B | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 3  |  TAS-1  | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 4  | SDG-1_A | c2940 |   12.1(22)EA11  |   15.9(e4)  |
++----+---------+-------+-----------------+-------------+
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. 1
+Which device do you want to update? 1
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  04/04/2022 12:29:36
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-04-04.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 4
+ 
+ 
+ 
+Already configured devices:
+TDS-1_A, TDS-1_B, SDG-1_A, TAS-1
+ 
+Which device do you want to connect? TIR
+ 
+Your list of possible devices to configure: 
+TIR
+ 
+ 
+You have chosen this configuration...
+COM4 ----> TIR
+Please wait patiently...
+ 
+Your device has not been configured yet. What do you want to do with it?
+ 
+...................................................................... 
+ 
+ 
+Your device has been configured properly ---> TIR.
+Closed connection to COM4.
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 1
+ 
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
++----------------------------------------------------------------------------------------+
+|                              Table with devices licenses                               |
++----+---------+---------------------------+------------+--------------+------------+----+
+| ID |  Device |            UDI            |  License   |    Status    | Expiration | OK |
++----+---------+---------------------------+------------+--------------+------------+----+
+| 1  | TDS-1_A | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 2  | TDS-1_B | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 3  |  TAS-1  | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 4  | SDG-1_A | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 5  |   TIR   | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
++----+---------+---------------------------+------------+--------------+------------+----+
+In case of UKNNOWN, please turn on the Putty client and check the configuration manually.
+ 
++------------------------------------------------------+
+|              Table with device versions              |
++----+---------+-------+-----------------+-------------+
+| ID |   Name  | Model | Current Version | New Version |
++----+---------+-------+-----------------+-------------+
+| 1  | TDS-1_A | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 2  | TDS-1_B | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 3  |  TAS-1  | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 4  | SDG-1_A | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 5  |   TIR   | c2940 |   12.1(22)EA11  |   15.9(e4)  |
++----+---------+-------+-----------------+-------------+
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. 1
+Which device do you want to update? 1
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  04/04/2022 12:30:04
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-04-04.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 4
+ 
+ 
+ 
+Already configured devices:
+TDS-1_A, TDS-1_B, SDG-1_A, TIR, TAS-1
+ 
+Which device do you want to connect? MSC-1
+ 
+Your list of possible devices to configure: 
+MSC-1
+ 
+ 
+You have chosen this configuration...
+COM4 ----> MSC-1
+Please wait patiently...
+ 
+Your device has not been configured yet. What do you want to do with it?
+ 
+...................................................................... 
+ 
+ 
+Your device has been configured properly ---> MSC-1.
+Closed connection to COM4.
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 1
+ 
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
++----------------------------------------------------------------------------------------+
+|                              Table with devices licenses                               |
++----+---------+---------------------------+------------+--------------+------------+----+
+| ID |  Device |            UDI            |  License   |    Status    | Expiration | OK |
++----+---------+---------------------------+------------+--------------+------------+----+
+| 1  | TDS-1_A | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 2  | TDS-1_B | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 3  |  TAS-1  | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 4  | SDG-1_A | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 5  |   TIR   | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 6  |  MSC-1  | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
++----+---------+---------------------------+------------+--------------+------------+----+
+In case of UKNNOWN, please turn on the Putty client and check the configuration manually.
+ 
++------------------------------------------------------+
+|              Table with device versions              |
++----+---------+-------+-----------------+-------------+
+| ID |   Name  | Model | Current Version | New Version |
++----+---------+-------+-----------------+-------------+
+| 1  | TDS-1_A | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 2  | TDS-1_B | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 3  |  TAS-1  | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 4  | SDG-1_A | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 5  |   TIR   | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 6  |  MSC-1  | c2940 |   12.1(22)EA11  |   15.9(e4)  |
++----+---------+-------+-----------------+-------------+
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. 1
+Which device do you want to update? 1
+['TIR\n', 'ETAS-1\n', 'TAS-1\n', 'MSC-1\n', 'SDG-1_A\n', 'SDG-1_B\n', 'TDS-1_A\n', 'TDS-1_B\n', 'MSW-1_A\n', 'MSW-1_B\n', 'MSX-1_A\n', 'MSX-1_B\n', 'MSY-1_A\n', 'MSY-1_B\n', 'MSS-1_A\n', 'MSS-1_B\n', 'MSH-1\n', 'MSH-2\n', 'MSH-3\n', 'MSH-4']
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  04/04/2022 12:30:55
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-04-04.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 4
+ 
+ 
+ 
+Already configured devices:
+TDS-1_A, TDS-1_B, SDG-1_A, TIR, TAS-1, MSC-1
+ 
+Which device do you want to connect? MSH-1
+ 
+Your list of possible devices to configure: 
+MSH-1
+ 
+ 
+You have chosen this configuration...
+COM4 ----> MSH-1
+Please wait patiently...
+ 
+Your device has not been configured yet. What do you want to do with it?
+ 
+...................................................................... 
+ 
+ 
+Your device has been configured properly ---> MSH-1.
+Closed connection to COM4.
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 1
+ 
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
++----------------------------------------------------------------------------------------+
+|                              Table with devices licenses                               |
++----+---------+---------------------------+------------+--------------+------------+----+
+| ID |  Device |            UDI            |  License   |    Status    | Expiration | OK |
++----+---------+---------------------------+------------+--------------+------------+----+
+| 1  | TDS-1_A | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 2  | TDS-1_B | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 3  |  TAS-1  | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 4  | SDG-1_A | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 5  |   TIR   | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 6  |  MSC-1  | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 7  |  MSH-1  | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
++----+---------+---------------------------+------------+--------------+------------+----+
+In case of UKNNOWN, please turn on the Putty client and check the configuration manually.
+ 
++------------------------------------------------------+
+|              Table with device versions              |
++----+---------+-------+-----------------+-------------+
+| ID |   Name  | Model | Current Version | New Version |
++----+---------+-------+-----------------+-------------+
+| 1  | TDS-1_A | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 2  | TDS-1_B | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 3  |  TAS-1  | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 4  | SDG-1_A | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 5  |   TIR   | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 6  |  MSC-1  | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 7  |  MSH-1  | c2940 |   12.1(22)EA11  |   15.9(e4)  |
++----+---------+-------+-----------------+-------------+
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. 1
+Which device do you want to update? 1
+['TIR\n', 'ETAS-1\n', 'TAS-1\n', 'MSC-1\n', 'SDG-1_A\n', 'SDG-1_B\n', 'TDS-1_A\n', 'TDS-1_B\n', 'MSW-1_A\n', 'MSW-1_B\n', 'MSX-1_A\n', 'MSX-1_B\n', 'MSY-1_A\n', 'MSY-1_B\n', 'MSS-1_A\n', 'MSS-1_B\n', 'MSH-1\n', 'MSH-2\n', 'MSH-3\n', 'MSH-4']
+['TIR\n', 'ETAS-1\n', 'TAS-1\n', 'MSC-1\n', 'SDG-1_A\n', 'SDG-1_B\n', 'TDS-1_A\n', 'TDS-1_B\n', 'MSW-1_A\n', 'MSW-1_B\n', 'MSX-1_A\n', 'MSX-1_B\n', 'MSY-1_A\n', 'MSY-1_B\n', 'MSS-1_A\n', 'MSS-1_B\n', 'MSH-1\n', 'MSH-2\n', 'MSH-3\n', 'MSH-4']
+[['1', 'TDS-1_A', 'c2940', '12.1(22)EA11', '15.9(e4)']]
+[['1', 'TDS-1_A', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['2', 'TDS-1_B', 'c2940', '12.1(22)EA11', '15.9(e4)']]
+[['1', 'TDS-1_A', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['2', 'TDS-1_B', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['3', 'TAS-1', 'c2940', '12.1(22)EA11', '15.9(e4)']]
+[['1', 'TDS-1_A', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['2', 'TDS-1_B', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['3', 'TAS-1', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['4', 'SDG-1_A', 'c2940', '12.1(22)EA11', '15.9(e4)']]
+[['1', 'TDS-1_A', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['2', 'TDS-1_B', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['3', 'TAS-1', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['4', 'SDG-1_A', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['5', 'TIR', 'c2940', '12.1(22)EA11', '15.9(e4)']]
+[['1', 'TDS-1_A', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['2', 'TDS-1_B', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['3', 'TAS-1', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['4', 'SDG-1_A', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['5', 'TIR', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['6', 'MSC-1', 'c2940', '12.1(22)EA11', '15.9(e4)']]
+[['1', 'TDS-1_A', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['2', 'TDS-1_B', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['3', 'TAS-1', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['4', 'SDG-1_A', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['5', 'TIR', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['6', 'MSC-1', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['7', 'MSH-1', 'c2940', '12.1(22)EA11', '15.9(e4)']]
+If you want to download new versions of software type '1', anything else won't be accepted. Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  04/04/2022 12:31:50
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-04-04.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  04/04/2022 12:32:00
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-04-04.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 4
+ 
+ 
+ 
+Already configured devices:
+TDS-1_A, TDS-1_B, SDG-1_A, TIR, TAS-1, MSC-1, MSH-1
+ 
+Which device do you want to connect? MSH-2
+ 
+Your list of possible devices to configure: 
+MSH-2
+ 
+ 
+You have chosen this configuration...
+COM4 ----> MSH-2
+Please wait patiently...
+ 
+Your device has not been configured yet. What do you want to do with it?
+ 
+...................................................................... 
+ 
+ 
+Your device has been configured properly ---> MSH-2.
+Closed connection to COM4.
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 1
+ 
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
++----------------------------------------------------------------------------------------+
+|                              Table with devices licenses                               |
++----+---------+---------------------------+------------+--------------+------------+----+
+| ID |  Device |            UDI            |  License   |    Status    | Expiration | OK |
++----+---------+---------------------------+------------+--------------+------------+----+
+| 1  | TDS-1_A | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 2  | TDS-1_B | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 3  |  TAS-1  | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 4  | SDG-1_A | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 5  |   TIR   | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 6  |  MSC-1  | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 7  |  MSH-1  | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 8  |  MSH-2  | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
++----+---------+---------------------------+------------+--------------+------------+----+
+In case of UKNNOWN, please turn on the Putty client and check the configuration manually.
+ 
++------------------------------------------------------+
+|              Table with device versions              |
++----+---------+-------+-----------------+-------------+
+| ID |   Name  | Model | Current Version | New Version |
++----+---------+-------+-----------------+-------------+
+| 1  | TDS-1_A | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 2  | TDS-1_B | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 3  |  TAS-1  | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 4  | SDG-1_A | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 5  |   TIR   | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 6  |  MSC-1  | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 7  |  MSH-1  | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 8  |  MSH-2  | c2940 |   12.1(22)EA11  |   15.9(e4)  |
++----+---------+-------+-----------------+-------------+
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. 1
+Which device do you want to update? 1
+['TIR\n', 'ETAS-1\n', 'TAS-1\n', 'MSC-1\n', 'SDG-1_A\n', 'SDG-1_B\n', 'TDS-1_A\n', 'TDS-1_B\n', 'MSW-1_A\n', 'MSW-1_B\n', 'MSX-1_A\n', 'MSX-1_B\n', 'MSY-1_A\n', 'MSY-1_B\n', 'MSS-1_A\n', 'MSS-1_B\n', 'MSH-1\n', 'MSH-2\n', 'MSH-3\n', 'MSH-4']
+TIR
+
+TIR
+
+ETAS-1
+
+ETAS-1
+
+TAS-1
+
+TAS-1
+
+MSC-1
+
+MSC-1
+
+SDG-1_A
+
+SDG-1_A
+
+SDG-1_B
+
+SDG-1_B
+
+TDS-1_A
+
+TDS-1_A
+
+TDS-1_B
+
+TDS-1_B
+
+MSW-1_A
+
+MSW-1_A
+
+MSW-1_B
+
+MSW-1_B
+
+MSX-1_A
+
+MSX-1_A
+
+MSX-1_B
+
+MSX-1_B
+
+MSY-1_A
+
+MSY-1_A
+
+MSY-1_B
+
+MSY-1_B
+
+MSS-1_A
+
+MSS-1_A
+
+MSS-1_B
+
+MSS-1_B
+
+MSH-1
+
+MSH-1
+
+MSH-2
+
+MSH-2
+
+MSH-3
+
+MSH-3
+
+MSH-4
+MSH-4
+['TIR\n', 'ETAS-1\n', 'TAS-1\n', 'MSC-1\n', 'SDG-1_A\n', 'SDG-1_B\n', 'TDS-1_A\n', 'TDS-1_B\n', 'MSW-1_A\n', 'MSW-1_B\n', 'MSX-1_A\n', 'MSX-1_B\n', 'MSY-1_A\n', 'MSY-1_B\n', 'MSS-1_A\n', 'MSS-1_B\n', 'MSH-1\n', 'MSH-2\n', 'MSH-3\n', 'MSH-4']
+[['1', 'TDS-1_A', 'c2940', '12.1(22)EA11', '15.9(e4)']]
+[['1', 'TDS-1_A', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['2', 'TDS-1_B', 'c2940', '12.1(22)EA11', '15.9(e4)']]
+[['1', 'TDS-1_A', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['2', 'TDS-1_B', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['3', 'TAS-1', 'c2940', '12.1(22)EA11', '15.9(e4)']]
+[['1', 'TDS-1_A', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['2', 'TDS-1_B', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['3', 'TAS-1', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['4', 'SDG-1_A', 'c2940', '12.1(22)EA11', '15.9(e4)']]
+[['1', 'TDS-1_A', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['2', 'TDS-1_B', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['3', 'TAS-1', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['4', 'SDG-1_A', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['5', 'TIR', 'c2940', '12.1(22)EA11', '15.9(e4)']]
+[['1', 'TDS-1_A', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['2', 'TDS-1_B', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['3', 'TAS-1', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['4', 'SDG-1_A', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['5', 'TIR', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['6', 'MSC-1', 'c2940', '12.1(22)EA11', '15.9(e4)']]
+[['1', 'TDS-1_A', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['2', 'TDS-1_B', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['3', 'TAS-1', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['4', 'SDG-1_A', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['5', 'TIR', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['6', 'MSC-1', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['7', 'MSH-1', 'c2940', '12.1(22)EA11', '15.9(e4)']]
+[['1', 'TDS-1_A', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['2', 'TDS-1_B', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['3', 'TAS-1', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['4', 'SDG-1_A', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['5', 'TIR', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['6', 'MSC-1', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['7', 'MSH-1', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['8', 'MSH-2', 'c2940', '12.1(22)EA11', '15.9(e4)']]
+If you want to download new versions of software type '1', anything else won't be accepted. Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  04/04/2022 12:35:04
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-04-04.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 4
+ 
+ 
+ 
+Already configured devices:
+TDS-1_A, TDS-1_B, SDG-1_A, TIR, TAS-1, MSC-1, MSH-1, MSH-2
+ 
+Which device do you want to connect? MSH-3
+ 
+Your list of possible devices to configure: 
+MSH-3
+ 
+ 
+You have chosen this configuration...
+COM4 ----> MSH-3
+Please wait patiently...
+ 
+Your device has not been configured yet. What do you want to do with it?
+ 
+...................................................................... 
+ 
+ 
+Your device has been configured properly ---> MSH-3.
+Closed connection to COM4.
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 1
+ 
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
++----------------------------------------------------------------------------------------+
+|                              Table with devices licenses                               |
++----+---------+---------------------------+------------+--------------+------------+----+
+| ID |  Device |            UDI            |  License   |    Status    | Expiration | OK |
++----+---------+---------------------------+------------+--------------+------------+----+
+| 1  | TDS-1_A | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 2  | TDS-1_B | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 3  |  TAS-1  | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 4  | SDG-1_A | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 5  |   TIR   | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 6  |  MSC-1  | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 7  |  MSH-1  | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 8  |  MSH-2  | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 9  |  MSH-3  | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
++----+---------+---------------------------+------------+--------------+------------+----+
+In case of UKNNOWN, please turn on the Putty client and check the configuration manually.
+ 
++------------------------------------------------------+
+|              Table with device versions              |
++----+---------+-------+-----------------+-------------+
+| ID |   Name  | Model | Current Version | New Version |
++----+---------+-------+-----------------+-------------+
+| 1  | TDS-1_A | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 2  | TDS-1_B | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 3  |  TAS-1  | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 4  | SDG-1_A | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 5  |   TIR   | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 6  |  MSC-1  | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 7  |  MSH-1  | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 8  |  MSH-2  | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 9  |  MSH-3  | c2940 |   12.1(22)EA11  |   15.9(e4)  |
++----+---------+-------+-----------------+-------------+
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. 1
+Which device do you want to update? 1
+['TIR\n', 'ETAS-1\n', 'TAS-1\n', 'MSC-1\n', 'SDG-1_A\n', 'SDG-1_B\n', 'TDS-1_A\n', 'TDS-1_B\n', 'MSW-1_A\n', 'MSW-1_B\n', 'MSX-1_A\n', 'MSX-1_B\n', 'MSY-1_A\n', 'MSY-1_B\n', 'MSS-1_A\n', 'MSS-1_B\n', 'MSH-1\n', 'MSH-2\n', 'MSH-3\n', 'MSH-4']
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  04/04/2022 12:35:43
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-04-04.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 4
+ 
+ 
+ 
+Already configured devices:
+TDS-1_A, TDS-1_B, SDG-1_A, TIR, TAS-1, MSC-1, MSH-1, MSH-2, MSH-3
+ 
+Which device do you want to connect? SDG-1_B
+ 
+Your list of possible devices to configure: 
+SDG-1_B
+ 
+ 
+You have chosen this configuration...
+COM4 ----> SDG-1_B
+Please wait patiently...
+ 
+Your device has not been configured yet. What do you want to do with it?
+ 
+...................................................................... 
+ 
+ 
+Your device has been configured properly ---> SDG-1_B.
+Closed connection to COM4.
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 1
+ 
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
++----------------------------------------------------------------------------------------+
+|                              Table with devices licenses                               |
++----+---------+---------------------------+------------+--------------+------------+----+
+| ID |  Device |            UDI            |  License   |    Status    | Expiration | OK |
++----+---------+---------------------------+------------+--------------+------------+----+
+| 1  | TDS-1_A | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 2  | TDS-1_B | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 3  |  TAS-1  | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 4  | SDG-1_A | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 5  |   TIR   | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 6  |  MSC-1  | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 7  |  MSH-1  | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 8  |  MSH-2  | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 9  |  MSH-3  | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 10 | SDG-1_B | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
++----+---------+---------------------------+------------+--------------+------------+----+
+In case of UKNNOWN, please turn on the Putty client and check the configuration manually.
+ 
++------------------------------------------------------+
+|              Table with device versions              |
++----+---------+-------+-----------------+-------------+
+| ID |   Name  | Model | Current Version | New Version |
++----+---------+-------+-----------------+-------------+
+| 1  | TDS-1_A | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 2  | TDS-1_B | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 3  |  TAS-1  | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 4  | SDG-1_A | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 5  |   TIR   | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 6  |  MSC-1  | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 7  |  MSH-1  | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 8  |  MSH-2  | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 9  |  MSH-3  | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 10 | SDG-1_B | c2940 |   12.1(22)EA11  |   15.9(e4)  |
++----+---------+-------+-----------------+-------------+
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. 1
+Which device do you want to update? 1
+['TIR\n', 'ETAS-1\n', 'TAS-1\n', 'MSC-1\n', 'SDG-1_A\n', 'SDG-1_B\n', 'TDS-1_A\n', 'TDS-1_B\n', 'MSW-1_A\n', 'MSW-1_B\n', 'MSX-1_A\n', 'MSX-1_B\n', 'MSY-1_A\n', 'MSY-1_B\n', 'MSS-1_A\n', 'MSS-1_B\n', 'MSH-1\n', 'MSH-2\n', 'MSH-3\n', 'MSH-4']
+['!', 'hostname SDG-1_B', '!', '!', 'logging buffered 16384 informational', 'enable secret 5 $1$vhjr$Zr37SWDYBA8I9LmagrxJg1', '!', 'username walter privilege 15 secret 5 $1$u/LQ$NtiHcHtmKzWwA1aed/XoQ/', 'username marvin privilege 15 secret 5 $1$xegf$IQ4NS5Z4evQ6LEBDGI3l90', 'username daffy privilege 5 secret 5 $1$/6pG$YpDyPemQiW/4Mtpj.EBpR0', 'no aaa new-model', 'clock timezone GMT 0 0', 'system mtu routing 1500', 'no ip source-route', 'ip routing', '!', 'no ip domain-lookup', 'ip domain-name setup.technipfmc.com', 'vtp mode off', '!', 'license boot level ipservices', '!', 'transceiver type all', 'vlan internal allocation policy ascending', '!', 'lldp run', '!', 'interface range GigabitEthernet1/1-1', 'description SETUP-VLAN-1', 'switchport access vlan 1', 'switchport mode access', 'power inline never', 'storm-control broadcast level 20.00', 'storm-control multicast level 20.00', 'storm-control action shutdown', 'no shutdown', '!', 'interface Vlan1', 'ip address 172.30.100.19 255.255.255.0', 'no shutdown', '!', 'banner motd ^C', 'TechnipFMC', '-------------------------------------------------', 'INITIAL TEMPORARY SCRIPT CONFIG', '-------------------------------------------------', '^C', '!', 'line con 0', 'logging synchronous', 'login local', 'line vty 0 4', 'logging synchronous', 'login local', 'transport input ssh', 'line vty 5 15', 'logging synchronous', 'login local', 'transport input ssh', '!', '!', '!', '!', '!', '!', '!', 'crypto key generate rsa mod 2048', '!', 'end', '']
+[['1', 'TDS-1_A', 'c2940', '12.1(22)EA11', '15.9(e4)']]
+[['1', 'TDS-1_A', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['2', 'TDS-1_B', 'c2940', '12.1(22)EA11', '15.9(e4)']]
+[['1', 'TDS-1_A', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['2', 'TDS-1_B', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['3', 'TAS-1', 'c2940', '12.1(22)EA11', '15.9(e4)']]
+[['1', 'TDS-1_A', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['2', 'TDS-1_B', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['3', 'TAS-1', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['4', 'SDG-1_A', 'c2940', '12.1(22)EA11', '15.9(e4)']]
+[['1', 'TDS-1_A', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['2', 'TDS-1_B', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['3', 'TAS-1', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['4', 'SDG-1_A', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['5', 'TIR', 'c2940', '12.1(22)EA11', '15.9(e4)']]
+[['1', 'TDS-1_A', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['2', 'TDS-1_B', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['3', 'TAS-1', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['4', 'SDG-1_A', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['5', 'TIR', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['6', 'MSC-1', 'c2940', '12.1(22)EA11', '15.9(e4)']]
+[['1', 'TDS-1_A', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['2', 'TDS-1_B', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['3', 'TAS-1', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['4', 'SDG-1_A', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['5', 'TIR', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['6', 'MSC-1', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['7', 'MSH-1', 'c2940', '12.1(22)EA11', '15.9(e4)']]
+[['1', 'TDS-1_A', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['2', 'TDS-1_B', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['3', 'TAS-1', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['4', 'SDG-1_A', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['5', 'TIR', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['6', 'MSC-1', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['7', 'MSH-1', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['8', 'MSH-2', 'c2940', '12.1(22)EA11', '15.9(e4)']]
+[['1', 'TDS-1_A', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['2', 'TDS-1_B', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['3', 'TAS-1', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['4', 'SDG-1_A', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['5', 'TIR', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['6', 'MSC-1', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['7', 'MSH-1', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['8', 'MSH-2', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['9', 'MSH-3', 'c2940', '12.1(22)EA11', '15.9(e4)']]
+[['1', 'TDS-1_A', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['2', 'TDS-1_B', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['3', 'TAS-1', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['4', 'SDG-1_A', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['5', 'TIR', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['6', 'MSC-1', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['7', 'MSH-1', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['8', 'MSH-2', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['9', 'MSH-3', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['10', 'SDG-1_B', 'c2940', '12.1(22)EA11', '15.9(e4)']]
+If you want to download new versions of software type '1', anything else won't be accepted. Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  04/04/2022 12:36:29
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-04-04.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 
+ 
+It is not a complete system, I am sorry, I can't help you.
+ 
+Your created configuration files has been deleted ...
+ 
+Thank you for using our script, hope you enjoy it!!!
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  04/04/2022 12:36:35
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-04-04.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 4
+ 
+ 
+ 
+Which device do you want to connect? TDS-1_A
+ 
+Your list of possible devices to configure: 
+TDS-1_A
+ 
+ 
+You have chosen this configuration...
+COM4 ----> TDS-1_A
+Please wait patiently...
+ 
+Your device has not been configured yet. What do you want to do with it?
+ 
+...................................................................... 
+ 
+ 
+Your device has been configured properly ---> TDS-1_A.
+Closed connection to COM4.
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 2
+ 
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
+Already configured devices:
+TDS-1_A
+ 
+Which device do you want to connect? TDS-1_B
+ 
+Your list of possible devices to configure: 
+TDS-1_B
+ 
+ 
+You have chosen this configuration...
+COM4 ----> TDS-1_B
+Please wait patiently...
+ 
+Your device has not been configured yet. What do you want to do with it?
+ 
+...................................................................... 
+ 
+ 
+Your device has been configured properly ---> TDS-1_B.
+Closed connection to COM4.
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 1
+ 
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
++----------------------------------------------------------------------------------------+
+|                              Table with devices licenses                               |
++----+---------+---------------------------+------------+--------------+------------+----+
+| ID |  Device |            UDI            |  License   |    Status    | Expiration | OK |
++----+---------+---------------------------+------------+--------------+------------+----+
+| 1  | TDS-1_A | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 2  | TDS-1_B | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
++----+---------+---------------------------+------------+--------------+------------+----+
+In case of UKNNOWN, please turn on the Putty client and check the configuration manually.
+ 
++------------------------------------------------------+
+|              Table with device versions              |
++----+---------+-------+-----------------+-------------+
+| ID |   Name  | Model | Current Version | New Version |
++----+---------+-------+-----------------+-------------+
+| 1  | TDS-1_A | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 2  | TDS-1_B | c2940 |   12.1(22)EA11  |   15.9(e4)  |
++----+---------+-------+-----------------+-------------+
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. 1
+Which device do you want to update? 1
+['TIR\n', 'ETAS-1\n', 'TAS-1\n', 'MSC-1\n', 'SDG-1_A\n', 'SDG-1_B\n', 'TDS-1_A\n', 'TDS-1_B\n', 'MSW-1_A\n', 'MSW-1_B\n', 'MSX-1_A\n', 'MSX-1_B\n', 'MSY-1_A\n', 'MSY-1_B\n', 'MSS-1_A\n', 'MSS-1_B\n', 'MSH-1\n', 'MSH-2\n', 'MSH-3\n', 'MSH-4']
+['TIR', 'ETAS-1', 'TAS-1', 'MSC-1', 'SDG-1_A', 'SDG-1_B', 'TDS-1_A', 'TDS-1_B', 'MSW-1_A', 'MSW-1_B', 'MSX-1_A', 'MSX-1_B', 'MSY-1_A', 'MSY-1_B', 'MSS-1_A', 'MSS-1_B', 'MSH-1', 'MSH-2', 'MSH-3', 'MSH-4']
+[['1', 'TDS-1_A', 'c2940', '12.1(22)EA11', '15.9(e4)']]
+[['1', 'TDS-1_A', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['2', 'TDS-1_B', 'c2940', '12.1(22)EA11', '15.9(e4)']]
+If you want to download new versions of software type '1', anything else won't be accepted. Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  04/04/2022 12:46:24
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-04-04.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 
+ 
+It is not a complete system, I am sorry, I can't help you.
+ 
+Your created configuration files has been deleted ...
+ 
+Thank you for using our script, hope you enjoy it!!!
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  04/04/2022 12:46:29
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-04-04.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 4
+ 
+ 
+ 
+Which device do you want to connect? TDS-1_A
+ 
+Your list of possible devices to configure: 
+TDS-1_A
+ 
+ 
+You have chosen this configuration...
+COM4 ----> TDS-1_A
+Please wait patiently...
+ 
+Your device has not been configured yet. What do you want to do with it?
+ 
+...................................................................... 
+ 
+ 
+Your device has been configured properly ---> TDS-1_A.
+Closed connection to COM4.
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 2
+ 
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
+Already configured devices:
+TDS-1_A
+ 
+Which device do you want to connect? TDS-1_B
+ 
+Your list of possible devices to configure: 
+TDS-1_B
+ 
+ 
+You have chosen this configuration...
+COM4 ----> TDS-1_B
+Please wait patiently...
+ 
+Your device has not been configured yet. What do you want to do with it?
+ 
+...................................................................... 
+ 
+ 
+Your device has been configured properly ---> TDS-1_B.
+Closed connection to COM4.
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 1
+ 
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
++----------------------------------------------------------------------------------------+
+|                              Table with devices licenses                               |
++----+---------+---------------------------+------------+--------------+------------+----+
+| ID |  Device |            UDI            |  License   |    Status    | Expiration | OK |
++----+---------+---------------------------+------------+--------------+------------+----+
+| 1  | TDS-1_A | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 2  | TDS-1_B | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
++----+---------+---------------------------+------------+--------------+------------+----+
+In case of UKNNOWN, please turn on the Putty client and check the configuration manually.
+ 
++------------------------------------------------------+
+|              Table with device versions              |
++----+---------+-------+-----------------+-------------+
+| ID |   Name  | Model | Current Version | New Version |
++----+---------+-------+-----------------+-------------+
+| 1  | TDS-1_A | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 2  | TDS-1_B | c2940 |   12.1(22)EA11  |   15.9(e4)  |
++----+---------+-------+-----------------+-------------+
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. 1
+Which device do you want to update? 1
+['TIR\n', 'ETAS-1\n', 'TAS-1\n', 'MSC-1\n', 'SDG-1_A\n', 'SDG-1_B\n', 'TDS-1_A\n', 'TDS-1_B\n', 'MSW-1_A\n', 'MSW-1_B\n', 'MSX-1_A\n', 'MSX-1_B\n', 'MSY-1_A\n', 'MSY-1_B\n', 'MSS-1_A\n', 'MSS-1_B\n', 'MSH-1\n', 'MSH-2\n', 'MSH-3\n', 'MSH-4']
+If you want to download new versions of software type '1', anything else won't be accepted. 1
+Which device do you want to update? T
+['TIR\n', 'ETAS-1\n', 'TAS-1\n', 'MSC-1\n', 'SDG-1_A\n', 'SDG-1_B\n', 'TDS-1_A\n', 'TDS-1_B\n', 'MSW-1_A\n', 'MSW-1_B\n', 'MSX-1_A\n', 'MSX-1_B\n', 'MSY-1_A\n', 'MSY-1_B\n', 'MSS-1_A\n', 'MSS-1_B\n', 'MSH-1\n', 'MSH-2\n', 'MSH-3\n', 'MSH-4']
+If you want to download new versions of software type '1', anything else won't be accepted. 1
+Which device do you want to update? 1
+['TIR\n', 'ETAS-1\n', 'TAS-1\n', 'MSC-1\n', 'SDG-1_A\n', 'SDG-1_B\n', 'TDS-1_A\n', 'TDS-1_B\n', 'MSW-1_A\n', 'MSW-1_B\n', 'MSX-1_A\n', 'MSX-1_B\n', 'MSY-1_A\n', 'MSY-1_B\n', 'MSS-1_A\n', 'MSS-1_B\n', 'MSH-1\n', 'MSH-2\n', 'MSH-3\n', 'MSH-4']
+If you want to download new versions of software type '1', anything else won't be accepted. Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  04/04/2022 12:47:38
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-04-04.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 4
+ 
+ 
+ 
+Already configured devices:
+TDS-1_A, TDS-1_B
+ 
+Which device do you want to connect? TIR
+ 
+Your list of possible devices to configure: 
+TIR
+ 
+ 
+You have chosen this configuration...
+COM4 ----> TIR
+Please wait patiently...
+ 
+Your device has not been configured yet. What do you want to do with it?
+ 
+...................................................................... 
+ 
+ 
+Your device has been configured properly ---> TIR.
+Closed connection to COM4.
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 1
+ 
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
++----------------------------------------------------------------------------------------+
+|                              Table with devices licenses                               |
++----+---------+---------------------------+------------+--------------+------------+----+
+| ID |  Device |            UDI            |  License   |    Status    | Expiration | OK |
++----+---------+---------------------------+------------+--------------+------------+----+
+| 1  | TDS-1_A | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 2  | TDS-1_B | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 3  |   TIR   | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
++----+---------+---------------------------+------------+--------------+------------+----+
+In case of UKNNOWN, please turn on the Putty client and check the configuration manually.
+ 
++------------------------------------------------------+
+|              Table with device versions              |
++----+---------+-------+-----------------+-------------+
+| ID |   Name  | Model | Current Version | New Version |
++----+---------+-------+-----------------+-------------+
+| 1  | TDS-1_A | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 2  | TDS-1_B | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 3  |   TIR   | c2940 |   12.1(22)EA11  |   15.9(e4)  |
++----+---------+-------+-----------------+-------------+
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. 1
+Which device do you want to update? 1
+['TIR\n', 'ETAS-1\n', 'TAS-1\n', 'MSC-1\n', 'SDG-1_A\n', 'SDG-1_B\n', 'TDS-1_A\n', 'TDS-1_B\n', 'MSW-1_A\n', 'MSW-1_B\n', 'MSX-1_A\n', 'MSX-1_B\n', 'MSY-1_A\n', 'MSY-1_B\n', 'MSS-1_A\n', 'MSS-1_B\n', 'MSH-1\n', 'MSH-2\n', 'MSH-3\n', 'MSH-4']
+If you want to download new versions of software type '1', anything else won't be accepted. TIR
+Now is the time to download project configs by SSH connections ...
+ 
+Please connect all your devices by LAN cables!
+ 
+Now it is time to check TFTP Server
+ 
+If you are ready and TFTP Server is not running, please type in '1' in console. Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  04/04/2022 12:47:59
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-04-04.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 4
+ 
+ 
+ 
+Already configured devices:
+TDS-1_A, TDS-1_B, TIR
+ 
+Which device do you want to connect? TAS-1
+ 
+Your list of possible devices to configure: 
+TAS-1
+ 
+ 
+You have chosen this configuration...
+COM4 ----> TAS-1
+Please wait patiently...
+ 
+Your device has not been configured yet. What do you want to do with it?
+ 
+...................................................................... 
+ 
+ 
+Your device has been configured properly ---> TAS-1.
+Closed connection to COM4.
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 1
+ 
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
++----------------------------------------------------------------------------------------+
+|                              Table with devices licenses                               |
++----+---------+---------------------------+------------+--------------+------------+----+
+| ID |  Device |            UDI            |  License   |    Status    | Expiration | OK |
++----+---------+---------------------------+------------+--------------+------------+----+
+| 1  | TDS-1_A | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 2  | TDS-1_B | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 3  |   TIR   | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 4  |  TAS-1  | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
++----+---------+---------------------------+------------+--------------+------------+----+
+In case of UKNNOWN, please turn on the Putty client and check the configuration manually.
+ 
++------------------------------------------------------+
+|              Table with device versions              |
++----+---------+-------+-----------------+-------------+
+| ID |   Name  | Model | Current Version | New Version |
++----+---------+-------+-----------------+-------------+
+| 1  | TDS-1_A | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 2  | TDS-1_B | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 3  |   TIR   | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 4  |  TAS-1  | c2940 |   12.1(22)EA11  |   15.9(e4)  |
++----+---------+-------+-----------------+-------------+
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. 1
+Which device do you want to update? TIR
+['TIR\n', 'ETAS-1\n', 'TAS-1\n', 'MSC-1\n', 'SDG-1_A\n', 'SDG-1_B\n', 'TDS-1_A\n', 'TDS-1_B\n', 'MSW-1_A\n', 'MSW-1_B\n', 'MSX-1_A\n', 'MSX-1_B\n', 'MSY-1_A\n', 'MSY-1_B\n', 'MSS-1_A\n', 'MSS-1_B\n', 'MSH-1\n', 'MSH-2\n', 'MSH-3\n', 'MSH-4']
+EEEEEEEEEEEEEEEEEE
+If you want to download new versions of software type '1', anything else won't be accepted. 1
+Which device do you want to update? T
+['TIR\n', 'ETAS-1\n', 'TAS-1\n', 'MSC-1\n', 'SDG-1_A\n', 'SDG-1_B\n', 'TDS-1_A\n', 'TDS-1_B\n', 'MSW-1_A\n', 'MSW-1_B\n', 'MSX-1_A\n', 'MSX-1_B\n', 'MSY-1_A\n', 'MSY-1_B\n', 'MSS-1_A\n', 'MSS-1_B\n', 'MSH-1\n', 'MSH-2\n', 'MSH-3\n', 'MSH-4']
+EEEEEEEEEEEEEEEEEE
+EEEEEEEEEEEEEEEEEE
+EEEEEEEEEEEEEEEEEE
+EEEEEEEEEEEEEEEEEE
+If you want to download new versions of software type '1', anything else won't be accepted. Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  04/04/2022 12:48:56
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-04-04.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 4
+ 
+ 
+ 
+Already configured devices:
+TDS-1_A, TDS-1_B, TIR, TAS-1
+ 
+Which device do you want to connect? MSC-1
+ 
+Your list of possible devices to configure: 
+MSC-1
+ 
+ 
+You have chosen this configuration...
+COM4 ----> MSC-1
+Please wait patiently...
+ 
+Your device has not been configured yet. What do you want to do with it?
+ 
+...................................................................... 
+ 
+ 
+Your device has been configured properly ---> MSC-1.
+Closed connection to COM4.
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 1
+ 
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
++----------------------------------------------------------------------------------------+
+|                              Table with devices licenses                               |
++----+---------+---------------------------+------------+--------------+------------+----+
+| ID |  Device |            UDI            |  License   |    Status    | Expiration | OK |
++----+---------+---------------------------+------------+--------------+------------+----+
+| 1  | TDS-1_A | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 2  | TDS-1_B | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 3  |   TIR   | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 4  |  TAS-1  | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 5  |  MSC-1  | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
++----+---------+---------------------------+------------+--------------+------------+----+
+In case of UKNNOWN, please turn on the Putty client and check the configuration manually.
+ 
++------------------------------------------------------+
+|              Table with device versions              |
++----+---------+-------+-----------------+-------------+
+| ID |   Name  | Model | Current Version | New Version |
++----+---------+-------+-----------------+-------------+
+| 1  | TDS-1_A | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 2  | TDS-1_B | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 3  |   TIR   | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 4  |  TAS-1  | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 5  |  MSC-1  | c2940 |   12.1(22)EA11  |   15.9(e4)  |
++----+---------+-------+-----------------+-------------+
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. 1
+Which device do you want to update? 1
+['TIR\n', 'ETAS-1\n', 'TAS-1\n', 'MSC-1\n', 'SDG-1_A\n', 'SDG-1_B\n', 'TDS-1_A\n', 'TDS-1_B\n', 'MSW-1_A\n', 'MSW-1_B\n', 'MSX-1_A\n', 'MSX-1_B\n', 'MSY-1_A\n', 'MSY-1_B\n', 'MSS-1_A\n', 'MSS-1_B\n', 'MSH-1\n', 'MSH-2\n', 'MSH-3\n', 'MSH-4']
+If you want to download new versions of software type '1', anything else won't be accepted. 1
+Which device do you want to update? TAS-1
+['TIR\n', 'ETAS-1\n', 'TAS-1\n', 'MSC-1\n', 'SDG-1_A\n', 'SDG-1_B\n', 'TDS-1_A\n', 'TDS-1_B\n', 'MSW-1_A\n', 'MSW-1_B\n', 'MSX-1_A\n', 'MSX-1_B\n', 'MSY-1_A\n', 'MSY-1_B\n', 'MSS-1_A\n', 'MSS-1_B\n', 'MSH-1\n', 'MSH-2\n', 'MSH-3\n', 'MSH-4']
+EEEEEEEEEEEEEEEEEE
+If you want to download new versions of software type '1', anything else won't be accepted. 2
+Now is the time to download project configs by SSH connections ...
+ 
+Please connect all your devices by LAN cables!
+ 
+Now it is time to check TFTP Server
+ 
+If you are ready and TFTP Server is not running, please type in '1' in console. Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  04/04/2022 13:08:53
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-04-04.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 4
+ 
+ 
+ 
+Already configured devices:
+TDS-1_A, TDS-1_B, TIR, TAS-1, MSC-1
+ 
+Which device do you want to connect? MSH-1
+ 
+Your list of possible devices to configure: 
+MSH-1
+ 
+ 
+You have chosen this configuration...
+COM4 ----> MSH-1
+Please wait patiently...
+ 
+Your device has not been configured yet. What do you want to do with it?
+ 
+...................................................................... 
+ 
+ 
+Your device has been configured properly ---> MSH-1.
+Closed connection to COM4.
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 1
+ 
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
++----------------------------------------------------------------------------------------+
+|                              Table with devices licenses                               |
++----+---------+---------------------------+------------+--------------+------------+----+
+| ID |  Device |            UDI            |  License   |    Status    | Expiration | OK |
++----+---------+---------------------------+------------+--------------+------------+----+
+| 1  | TDS-1_A | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 2  | TDS-1_B | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 3  |   TIR   | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 4  |  TAS-1  | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 5  |  MSC-1  | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 6  |  MSH-1  | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
++----+---------+---------------------------+------------+--------------+------------+----+
+In case of UKNNOWN, please turn on the Putty client and check the configuration manually.
+ 
++------------------------------------------------------+
+|              Table with device versions              |
++----+---------+-------+-----------------+-------------+
+| ID |   Name  | Model | Current Version | New Version |
++----+---------+-------+-----------------+-------------+
+| 1  | TDS-1_A | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 2  | TDS-1_B | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 3  |   TIR   | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 4  |  TAS-1  | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 5  |  MSC-1  | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 6  |  MSH-1  | c2940 |   12.1(22)EA11  |   15.9(e4)  |
++----+---------+-------+-----------------+-------------+
+ 
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. 1
+Which device do you want to update? 1
+['TIR\n', 'ETAS-1\n', 'TAS-1\n', 'MSC-1\n', 'SDG-1_A\n', 'SDG-1_B\n', 'TDS-1_A\n', 'TDS-1_B\n', 'MSW-1_A\n', 'MSW-1_B\n', 'MSX-1_A\n', 'MSX-1_B\n', 'MSY-1_A\n', 'MSY-1_B\n', 'MSS-1_A\n', 'MSS-1_B\n', 'MSH-1\n', 'MSH-2\n', 'MSH-3\n', 'MSH-4']
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. 1
+Which device do you want to update? TDS
+['TIR\n', 'ETAS-1\n', 'TAS-1\n', 'MSC-1\n', 'SDG-1_A\n', 'SDG-1_B\n', 'TDS-1_A\n', 'TDS-1_B\n', 'MSW-1_A\n', 'MSW-1_B\n', 'MSX-1_A\n', 'MSX-1_B\n', 'MSY-1_A\n', 'MSY-1_B\n', 'MSS-1_A\n', 'MSS-1_B\n', 'MSH-1\n', 'MSH-2\n', 'MSH-3\n', 'MSH-4']
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. 1
+Which device do you want to update? TDS-1_A
+['TIR\n', 'ETAS-1\n', 'TAS-1\n', 'MSC-1\n', 'SDG-1_A\n', 'SDG-1_B\n', 'TDS-1_A\n', 'TDS-1_B\n', 'MSW-1_A\n', 'MSW-1_B\n', 'MSX-1_A\n', 'MSX-1_B\n', 'MSY-1_A\n', 'MSY-1_B\n', 'MSS-1_A\n', 'MSS-1_B\n', 'MSH-1\n', 'MSH-2\n', 'MSH-3\n', 'MSH-4']
+TEST PRINT -> PREPARING DATA TO UPDATE DEVICES
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. 2
+[['1', 'TDS-1_A', 'c2940', '12.1(22)EA11', '15.9(e4)']]
+Now is the time to download project configs by SSH connections ...
+ 
+Please connect all your devices by LAN cables!
+ 
+Now it is time to check TFTP Server
+ 
+If you are ready and TFTP Server is not running, please type in '1' in console. Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  04/04/2022 13:11:17
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-04-04.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 4
+ 
+ 
+ 
+Which device do you want to connect? TDS-1_A
+ 
+Your list of possible devices to configure: 
+TDS-1_A
+ 
+ 
+You have chosen this configuration...
+COM4 ----> TDS-1_A
+Please wait patiently...
+ 
+Your device has not been configured yet. What do you want to do with it?
+ 
+...................................................................... 
+ 
+ 
+Your device has been configured properly ---> TDS-1_A.
+Closed connection to COM4.
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 2
+ 
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
+Already configured devices:
+TDS-1_A
+ 
+Which device do you want to connect? TAS-1
+ 
+Your list of possible devices to configure: 
+TAS-1
+ 
+ 
+You have chosen this configuration...
+COM4 ----> TAS-1
+Please wait patiently...
+ 
+Your device has not been configured yet. What do you want to do with it?
+ 
+...................................................................... 
+ 
+ 
+Your device has been configured properly ---> TAS-1.
+Closed connection to COM4.
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 2
+ 
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
+Already configured devices:
+TDS-1_A, TAS-1
+ 
+Which device do you want to connect? TIR
+ 
+Your list of possible devices to configure: 
+TIR
+ 
+ 
+You have chosen this configuration...
+COM4 ----> TIR
+Please wait patiently...
+ 
+Your device has not been configured yet. What do you want to do with it?
+ 
+...................................................................... 
+ 
+ 
+Your device has been configured properly ---> TIR.
+Closed connection to COM4.
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 1
+ 
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
++----------------------------------------------------------------------------------------+
+|                              Table with devices licenses                               |
++----+---------+---------------------------+------------+--------------+------------+----+
+| ID |  Device |            UDI            |  License   |    Status    | Expiration | OK |
++----+---------+---------------------------+------------+--------------+------------+----+
+| 1  | TDS-1_A | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 2  |  TAS-1  | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 3  |   TIR   | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
++----+---------+---------------------------+------------+--------------+------------+----+
+In case of UKNNOWN, please turn on the Putty client and check the configuration manually.
+ 
++------------------------------------------------------+
+|              Table with device versions              |
++----+---------+-------+-----------------+-------------+
+| ID |   Name  | Model | Current Version | New Version |
++----+---------+-------+-----------------+-------------+
+| 1  | TDS-1_A | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 2  |  TAS-1  | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 3  |   TIR   | c2940 |   12.1(22)EA11  |   15.9(e4)  |
++----+---------+-------+-----------------+-------------+
+ 
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. 1
+Which device do you want to update? 1
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. 1
+Which device do you want to update? TDS-1_A
+TEST PRINT -> PREPARING DATA TO UPDATE DEVICES
+You have chosen bad device, try again...
+You have chosen bad device, try again...
+You have chosen bad device, try again...
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. 1
+Which device do you want to update? SDG-1_A
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. 1
+Which device do you want to update? TDS-1_A
+TEST PRINT -> PREPARING DATA TO UPDATE DEVICES
+You have chosen bad device, try again...
+You have chosen bad device, try again...
+You have chosen bad device, try again...
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. 1
+Which device do you want to update? TAS-1
+You have chosen bad device, try again...
+TEST PRINT -> PREPARING DATA TO UPDATE DEVICES
+You have chosen bad device, try again...
+You have chosen bad device, try again...
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  04/04/2022 13:13:52
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-04-04.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 4
+ 
+ 
+ 
+Already configured devices:
+TDS-1_A, TIR, TAS-1
+ 
+Which device do you want to connect? MSC-1
+ 
+Your list of possible devices to configure: 
+MSC-1
+ 
+ 
+You have chosen this configuration...
+COM4 ----> MSC-1
+Please wait patiently...
+ 
+Your device has not been configured yet. What do you want to do with it?
+ 
+...................................................................... 
+ 
+ 
+Your device has been configured properly ---> MSC-1.
+Closed connection to COM4.
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 1
+ 
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
++----------------------------------------------------------------------------------------+
+|                              Table with devices licenses                               |
++----+---------+---------------------------+------------+--------------+------------+----+
+| ID |  Device |            UDI            |  License   |    Status    | Expiration | OK |
++----+---------+---------------------------+------------+--------------+------------+----+
+| 1  | TDS-1_A | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 2  |  TAS-1  | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 3  |   TIR   | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 4  |  MSC-1  | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
++----+---------+---------------------------+------------+--------------+------------+----+
+In case of UKNNOWN, please turn on the Putty client and check the configuration manually.
+ 
++------------------------------------------------------+
+|              Table with device versions              |
++----+---------+-------+-----------------+-------------+
+| ID |   Name  | Model | Current Version | New Version |
++----+---------+-------+-----------------+-------------+
+| 1  | TDS-1_A | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 2  |  TAS-1  | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 3  |   TIR   | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 4  |  MSC-1  | c2940 |   12.1(22)EA11  |   15.9(e4)  |
++----+---------+-------+-----------------+-------------+
+ 
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. 1
+Which device do you want to update? 1
+You have chosen bad device, try again...
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. 1
+Which device do you want to update? TDS-1_A
+TEST PRINT -> PREPARING DATA TO UPDATE DEVICES
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. 1
+Which device do you want to update? tAS-1
+You have chosen bad device, try again...
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. TAS-1
+[['1', 'TDS-1_A', 'c2940', '12.1(22)EA11', '15.9(e4)']]
+Now is the time to download project configs by SSH connections ...
+ 
+Please connect all your devices by LAN cables!
+ 
+Now it is time to check TFTP Server
+ 
+If you are ready and TFTP Server is not running, please type in '1' in console. Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  04/04/2022 13:15:33
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-04-04.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 4
+ 
+ 
+ 
+Already configured devices:
+TDS-1_A, TIR, TAS-1, MSC-1
+ 
+Which device do you want to connect? MSH-1
+ 
+Your list of possible devices to configure: 
+MSH-1
+ 
+ 
+You have chosen this configuration...
+COM4 ----> MSH-1
+Please wait patiently...
+ 
+Your device has not been configured yet. What do you want to do with it?
+ 
+...................................................................... 
+ 
+ 
+Your device has been configured properly ---> MSH-1.
+Closed connection to COM4.
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 1
+ 
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
++----------------------------------------------------------------------------------------+
+|                              Table with devices licenses                               |
++----+---------+---------------------------+------------+--------------+------------+----+
+| ID |  Device |            UDI            |  License   |    Status    | Expiration | OK |
++----+---------+---------------------------+------------+--------------+------------+----+
+| 1  | TDS-1_A | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 2  |  TAS-1  | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 3  |   TIR   | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 4  |  MSC-1  | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 5  |  MSH-1  | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
++----+---------+---------------------------+------------+--------------+------------+----+
+In case of UKNNOWN, please turn on the Putty client and check the configuration manually.
+ 
++------------------------------------------------------+
+|              Table with device versions              |
++----+---------+-------+-----------------+-------------+
+| ID |   Name  | Model | Current Version | New Version |
++----+---------+-------+-----------------+-------------+
+| 1  | TDS-1_A | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 2  |  TAS-1  | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 3  |   TIR   | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 4  |  MSC-1  | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 5  |  MSH-1  | c2940 |   12.1(22)EA11  |   15.9(e4)  |
++----+---------+-------+-----------------+-------------+
+ 
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. 1
+Which device do you want to update? TDS-1_A
+TEST PRINT -> PREPARING DATA TO UPDATE DEVICES
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. 1
+Which device do you want to update? TAS-1
+TEST PRINT -> PREPARING DATA TO UPDATE DEVICES
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. 1
+Which device do you want to update? MSC-2
+You have chosen bad device, try again...
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. 1
+Which device do you want to update? MSH-3
+You have chosen bad device, try again...
+ 
 If you want to download new versions of software type '1', anything else won't be accepted. 
