@@ -86,6 +86,24 @@ while running_flag:
     print(dec_putty)
     kill_putty(dec_putty)
 
+    test_list = [['1', 'MSC-1', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['1', 'TDS-1_A', 'c2940', '12.1(22)EA11', '15.9(e4)']]
+
+    # TODO: MOVE IT LATER
+    with open('temp/already_conf.txt') as file:
+        lines = file.readlines()
+        stripped = [s.strip() for s in lines]
+        for element in stripped:
+            new_strip = element.split(' ')
+            for name in test_list:
+                if new_strip[0] == name[1]:
+                    print("MAMY TOOOOOOOO")
+                    name.append(f'172.30.100.{new_strip[1]}')
+
+    print(test_list)
+
+
+
+
     # question about complete system or one module TASK 184
     print(decorator_1)
     user_system = input(lang_expressions['module_question']).lower()
@@ -363,10 +381,17 @@ while running_flag:
             print(ver_table)
             print(decorator_1)
 
+
+            # TODO: HERE WORKING
             # checking if user want to upload new license to the device
             update_list = prepare_software(lang_expressions)
             print(update_list)
 
+#             with open('/temp/already_conf.txt') as file:
+
+
+            for element in update_list:
+                print(element[1])
 
             # going to ssh connections
             print(lang_expressions['ssh_move'])

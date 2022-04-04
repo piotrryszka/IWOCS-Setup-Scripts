@@ -3778,4 +3778,519 @@ If you want to download new versions of software type '1', anything else won't b
 Which device do you want to update? MSH-3
 You have chosen bad device, try again...
  
-If you want to download new versions of software type '1', anything else won't be accepted. 
+If you want to download new versions of software type '1', anything else won't be accepted. Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  04/04/2022 14:20:07
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-04-04.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 4
+ 
+ 
+ 
+Already configured devices:
+TDS-1_A, TIR, TAS-1, MSC-1, MSH-1
+ 
+Which device do you want to connect? MSC-2
+ 
+Your list of possible devices to configure: 
+
+ 
+Already configured devices:
+TDS-1_A, TIR, TAS-1, MSC-1, MSH-1
+ 
+Which device do you want to connect? MSH-2
+ 
+Your list of possible devices to configure: 
+MSH-2
+ 
+ 
+You have chosen this configuration...
+COM4 ----> MSH-2
+Please wait patiently...
+ 
+Your device has not been configured yet. What do you want to do with it?
+ 
+...................................................................... 
+ 
+ 
+Your device has been configured properly ---> MSH-2.
+Closed connection to COM4.
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 1
+ 
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
++----------------------------------------------------------------------------------------+
+|                              Table with devices licenses                               |
++----+---------+---------------------------+------------+--------------+------------+----+
+| ID |  Device |            UDI            |  License   |    Status    | Expiration | OK |
++----+---------+---------------------------+------------+--------------+------------+----+
+| 1  | TDS-1_A | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 2  |  TAS-1  | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 3  |   TIR   | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 4  |  MSC-1  | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 5  |  MSH-1  | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 6  |  MSH-2  | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
++----+---------+---------------------------+------------+--------------+------------+----+
+In case of UKNNOWN, please turn on the Putty client and check the configuration manually.
+ 
++------------------------------------------------------+
+|              Table with device versions              |
++----+---------+-------+-----------------+-------------+
+| ID |   Name  | Model | Current Version | New Version |
++----+---------+-------+-----------------+-------------+
+| 1  | TDS-1_A | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 2  |  TAS-1  | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 3  |   TIR   | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 4  |  MSC-1  | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 5  |  MSH-1  | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 6  |  MSH-2  | c2940 |   12.1(22)EA11  |   15.9(e4)  |
++----+---------+-------+-----------------+-------------+
+ 
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. 1
+Which device do you want to update? 1
+You have chosen bad device, try again...
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. 1
+Which device do you want to update? TDS-1_A
+TEST PRINT -> PREPARING DATA TO UPDATE DEVICES
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. 2
+[['1', 'TDS-1_A', 'c2940', '12.1(22)EA11', '15.9(e4)']]
+Now is the time to download project configs by SSH connections ...
+ 
+Please connect all your devices by LAN cables!
+ 
+Now it is time to check TFTP Server
+ 
+If you are ready and TFTP Server is not running, please type in '1' in console. Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  04/04/2022 15:29:42
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-04-04.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 1
+ 
+ 
+ 
+Already configured devices:
+TDS-1_A, TIR, TAS-1, MSC-1, MSH-1, MSH-2
+ 
+Which device do you want to connect? Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  04/04/2022 15:29:51
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-04-04.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 4
+ 
+ 
+ 
+Already configured devices:
+TDS-1_A, TIR, TAS-1, MSC-1, MSH-1, MSH-2
+ 
+Which device do you want to connect? MSH-3
+ 
+Your list of possible devices to configure: 
+MSH-3
+ 
+ 
+You have chosen this configuration...
+COM4 ----> MSH-3
+Please wait patiently...
+ 
+Your device has not been configured yet. What do you want to do with it?
+ 
+...................................................................... 
+ 
+ 
+Your device has been configured properly ---> MSH-3.
+Closed connection to COM4.
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 1
+ 
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
++----------------------------------------------------------------------------------------+
+|                              Table with devices licenses                               |
++----+---------+---------------------------+------------+--------------+------------+----+
+| ID |  Device |            UDI            |  License   |    Status    | Expiration | OK |
++----+---------+---------------------------+------------+--------------+------------+----+
+| 1  | TDS-1_A | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 2  |  TAS-1  | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 3  |   TIR   | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 4  |  MSC-1  | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 5  |  MSH-1  | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 6  |  MSH-2  | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 7  |  MSH-3  | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
++----+---------+---------------------------+------------+--------------+------------+----+
+In case of UKNNOWN, please turn on the Putty client and check the configuration manually.
+ 
++------------------------------------------------------+
+|              Table with device versions              |
++----+---------+-------+-----------------+-------------+
+| ID |   Name  | Model | Current Version | New Version |
++----+---------+-------+-----------------+-------------+
+| 1  | TDS-1_A | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 2  |  TAS-1  | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 3  |   TIR   | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 4  |  MSC-1  | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 5  |  MSH-1  | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 6  |  MSH-2  | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 7  |  MSH-3  | c2940 |   12.1(22)EA11  |   15.9(e4)  |
++----+---------+-------+-----------------+-------------+
+ 
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. 1
+Which device do you want to update? TDS-1_A
+TEST PRINT -> PREPARING DATA TO UPDATE DEVICES
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. 2
+[['1', 'TDS-1_A', 'c2940', '12.1(22)EA11', '15.9(e4)']]
+TDS-1_A
+Now is the time to download project configs by SSH connections ...
+ 
+Please connect all your devices by LAN cables!
+ 
+Now it is time to check TFTP Server
+ 
+If you are ready and TFTP Server is not running, please type in '1' in console. Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  04/04/2022 15:38:12
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-04-04.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else.
+1
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  04/04/2022 15:38:20
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-04-04.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else.
+1
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  04/04/2022 15:39:42
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-04-04.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else.
+1
+['TDS-1_A', '10\n']
+['TAS-1', '11\n']
+['TIR', '12\n']
+['MSC-1', '13\n']
+['MSH-1', '14\n']
+['MSH-2', '15\n']
+['MSH-3', '16\n']
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  04/04/2022 15:40:13
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-04-04.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else.
+1
+['TDS-1_A', '10\n']
+['TAS-1', '11\n']
+['TIR', '12\n']
+['MSC-1', '13\n']
+['MSH-1', '14\n']
+['MSH-2', '15\n']
+['MSH-3', '16\n']
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  04/04/2022 15:40:25
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-04-04.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else.
+1
+['TDS-1_A', '10\n']
+['TAS-1', '11\n']
+['TIR', '12\n']
+['MSC-1', '13\n']
+['MSH-1', '14\n']
+['MSH-2', '15\n']
+['MSH-3', '16\n']
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  04/04/2022 15:40:53
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-04-04.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else.
+1
+['TDS-1_A 10\n', 'TAS-1 11\n', 'TIR 12\n', 'MSC-1 13\n', 'MSH-1 14\n', 'MSH-2 15\n', 'MSH-3 16\n']
+['TDS-1_A', '10\n']
+['TAS-1', '11\n']
+['TIR', '12\n']
+['MSC-1', '13\n']
+['MSH-1', '14\n']
+['MSH-2', '15\n']
+['MSH-3', '16\n']
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  04/04/2022 15:41:38
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-04-04.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else.
+1
+['TDS-1_A 10\n', 'TAS-1 11\n', 'TIR 12\n', 'MSC-1 13\n', 'MSH-1 14\n', 'MSH-2 15\n', 'MSH-3 16\n']
+TDS-1_A 10
+
+['TDS-1_A', '10\n']
+TAS-1 11
+
+['TAS-1', '11\n']
+TIR 12
+
+['TIR', '12\n']
+MSC-1 13
+
+['MSC-1', '13\n']
+MSH-1 14
+
+['MSH-1', '14\n']
+MSH-2 15
+
+['MSH-2', '15\n']
+MSH-3 16
+
+['MSH-3', '16\n']
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  04/04/2022 15:45:51
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-04-04.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else.
+1
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  04/04/2022 15:46:01
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-04-04.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else.
+1
+['TDS-1_A', '10']
+['TAS-1', '11']
+['TIR', '12']
+['MSC-1', '13']
+['MSH-1', '14']
+['MSH-2', '15']
+['MSH-3', '16']
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  04/04/2022 15:56:11
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-04-04.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else.
+1
+MAMY TOOOOOOOO
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  04/04/2022 15:56:43
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-04-04.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else.
+1
+MAMY TOOOOOOOO
+[['1', 'MSC-1', 'c2940', '12.1(22)EA11', '15.9(e4)', '172.30.100.13']]
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  04/04/2022 15:57:47
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-04-04.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else.
+1
+MAMY TOOOOOOOO
+MAMY TOOOOOOOO
+[['1', 'MSC-1', 'c2940', '12.1(22)EA11', '15.9(e4)', '172.30.100.13'], ['1', 'TDS-1_A', 'c2940', '12.1(22)EA11', '15.9(e4)', '172.30.100.10']]
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 
