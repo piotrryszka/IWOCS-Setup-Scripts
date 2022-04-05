@@ -4,7 +4,7 @@ from serial import Serial
 from time import sleep
 
 from lib.commands import send_to_console, checking_switch_ports, checking_ip_address, checking_device, check_tftp, to_conf_mode
-from lib.operations import opening_device_list, reading_conf_files, creating_proper_configuration, deleting_files, deleting_conf, saving_dev, list_saved_dev, saving_license, saving_info_lic, reading_license, deleting_dev_logs, deleting_dev_license, download_license, create_pdf, sh_version, read_version, saving_ver_table
+from lib.operations import opening_device_list, reading_conf_files, creating_proper_configuration, deleting_files, deleting_conf, saving_dev, list_saved_dev, saving_license, saving_info_lic, reading_license, deleting_dev_logs, deleting_dev_license, download_license, create_pdf, sh_version, read_version, saving_ver_table, add_ip
 from lib.booting import checking_booting
 from lib.languages import listing_languages, reading_language
 from lib.logging import *
@@ -89,16 +89,7 @@ while running_flag:
     test_list = [['1', 'MSC-1', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['1', 'TDS-1_A', 'c2940', '12.1(22)EA11', '15.9(e4)']]
 
     # TODO: MOVE IT LATER
-    with open('temp/already_conf.txt') as file:
-        lines = file.readlines()
-        stripped = [s.strip() for s in lines]
-        for element in stripped:
-            new_strip = element.split(' ')
-            for name in test_list:
-                if new_strip[0] == name[1]:
-                    print("MAMY TOOOOOOOO")
-                    name.append(f'172.30.100.{new_strip[1]}')
-
+    test_list = add_ip(test_list)
     print(test_list)
 
 
@@ -193,7 +184,7 @@ while running_flag:
 
 
                         # setting COM connection
-                        ser = Serial(COM_string, COM_speed)
+#                         ser = Serial(COM_string, COM_speed)
 
                         # waiting for router/switch to boot
 #                         user_boot_flag = checking_booting(port = ser)
@@ -283,7 +274,7 @@ while running_flag:
                                 pass
 
                             # sending command to switch with sh version
-                            sh_version(ser)
+#                             sh_version(ser)
 
                             # saving prepared data to txt, later will be prepared table report with it
                             read_version(id_number, user_device)
@@ -297,10 +288,10 @@ while running_flag:
                                 f.write(str(id_number))
 
                             # closing connection
-                            ser.close()
+#                             ser.close()
                             print(decorator_1)
                             print(f"{lang_expressions['proper_conf']}{user_device}.")
-                            print(f"{lang_expressions['close_con']}{ser.name}.")
+#                             print(f"{lang_expressions['close_con']}{ser.name}.")
                             print(decorator_1)
 
 
@@ -466,5 +457,5 @@ while running_flag:
 # LAST COMMANDS IN SCRIPT
 # deleting all user-configuration files created while the script was running
 print(decorator_1)
-deleting_conf(lang_dict = lang_expressions)
+# deleting_conf(lang_dict = lang_expressions)
 

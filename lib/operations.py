@@ -295,3 +295,16 @@ def saving_ver_table(table):
     timeStr = timeObj.strftime("%Hh-%Mm")
     with open(f'support/version-check-{dateStr}-{timeStr}.txt', 'w') as f:
         f.write(str(table))
+
+# adding ip to the already configured devices to update software
+def add_ip(dev_list):
+    with open('temp/already_conf.txt') as file:
+        lines = file.readlines()
+        stripped = [s.strip() for s in lines]
+        for element in stripped:
+            new_strip = element.split(' ')
+            for name in dev_list:
+                if new_strip[0] == name[1]:
+                    print("MAMY TOOOOOOOO")
+                    name.append(f'172.30.100.{new_strip[1]}')
+    return dev_list
