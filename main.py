@@ -381,6 +381,7 @@ while running_flag:
             # praca nad wgrywaniem softu po tftp do roznych urzadzen
             # tutaj bedzie tworzona ta lista, mozna przesunac pozniej, ale to przed wgrywaniem konfigu projektowego trzeba bedzie robic
             for element in update_list:
+                # JAKIES WATKI PODODAWAC
                 print(f'Now upgrading software in {element[1]} device with this IP address {element[-1]}')
 
 #             checking ip address is correctly set
