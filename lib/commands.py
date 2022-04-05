@@ -45,7 +45,7 @@ def checking_ip_address(lang_dict):
     while continue_flag:
         if user_input == "1":
             output_ipconfig = str(subprocess.check_output("ipconfig /all", shell=True)).strip()
-            ip_address = '10.83.6.135'
+            ip_address = '172.30.100.91'
             if ip_address in output_ipconfig:
                 IP_flag = True
                 print(lang_dict['good_ip'])

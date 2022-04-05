@@ -1,5 +1,5 @@
 !
-hostname MSH-3
+hostname TDS-1_B
 !
 !
 logging buffered 16384 informational
@@ -36,7 +36,7 @@ interface range GigabitEthernet1/1-1
  no shutdown
 !
 interface Vlan1
- ip address 172.30.100.16 255.255.255.0
+ ip address 172.30.100.11 255.255.255.0
  no shutdown
 !
 banner motd ^C

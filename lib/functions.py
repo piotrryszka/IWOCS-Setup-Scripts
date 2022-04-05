@@ -154,10 +154,12 @@ def prepare_software(lang_dict):
         print(decorator_1)
         user_update = input(lang_dict['ver_update'])
         print(user_update)
+        print(decorator_1)
         if user_update == '1':
             # question which device user wants to update
             user_up_dev = input(lang_dict['ver_dev']).upper()
             print(user_up_dev)
+            print(decorator_1)
             # reading possible devices from version txt file
             with open('temp/version.txt') as file:
                 data = file.read()

@@ -305,6 +305,5 @@ def add_ip(dev_list):
             new_strip = element.split(' ')
             for name in dev_list:
                 if new_strip[0] == name[1]:
-                    print("MAMY TOOOOOOOO")
                     name.append(f'172.30.100.{new_strip[1]}')
     return dev_list

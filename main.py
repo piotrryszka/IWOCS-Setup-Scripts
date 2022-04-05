@@ -86,15 +86,6 @@ while running_flag:
     print(dec_putty)
     kill_putty(dec_putty)
 
-    test_list = [['1', 'MSC-1', 'c2940', '12.1(22)EA11', '15.9(e4)'], ['1', 'TDS-1_A', 'c2940', '12.1(22)EA11', '15.9(e4)']]
-
-    # TODO: MOVE IT LATER
-    test_list = add_ip(test_list)
-    print(test_list)
-
-
-
-
     # question about complete system or one module TASK 184
     print(decorator_1)
     user_system = input(lang_expressions['module_question']).lower()
@@ -340,10 +331,10 @@ while running_flag:
         else:
 
             # reading info about licenses to table
-            reading_license(conf_table)
+#             reading_license(conf_table)
 
             # saving already configured devices
-            date_string = saving_license(table = conf_table)
+#             date_string = saving_license(table = conf_table)
 
             # try because of the possibility to have this file open
             # saving table to pdf to print it later for example
@@ -352,8 +343,9 @@ while running_flag:
             except:
                 pass
 
+            # TODO: UNCOMMENT IT
             # printing table with licenses to console
-            print(conf_table)
+#             print(conf_table)
 
             # printing prompt about UNKNOWN in table
             print(lang_expressions['unknown_license'])
@@ -376,13 +368,17 @@ while running_flag:
             # TODO: HERE WORKING
             # checking if user want to upload new license to the device
             update_list = prepare_software(lang_expressions)
+
+            # updating version software list with ip addresses
+            update_list = add_ip(update_list)
+            print(lang_expressions['upd_dev'])
             print(update_list)
 
-#             with open('/temp/already_conf.txt') as file:
-
-
+            # TODO:
+            # praca nad wgrywaniem softu po tftp do roznych urzadzen
+            # tutaj bedzie tworzona ta lista, mozna przesunac pozniej, ale to przed wgrywaniem konfigu projektowego trzeba bedzie robic
             for element in update_list:
-                print(element[1])
+                print(f'Now upgrading software in {element[1]} device with this IP address {element[-1]}')
 
             # going to ssh connections
             print(lang_expressions['ssh_move'])
@@ -390,7 +386,7 @@ while running_flag:
             # updating software by tftp and LAN connections
 
 
-            # checking ip address is correctly set
+#             checking ip address is correctly set
 #             while ip_flag == False:
 #                 ip_set = checking_ip_address(lang_dict = lang_expressions)
 #                 if ip_set == True:

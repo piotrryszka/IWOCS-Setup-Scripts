@@ -4,8 +4,12 @@ TODO IN GENERAL
 
 TODO MY OBSERVATIONS
 w licencjach jezeli jest tak ipservices | Active,InUse | PermanentRightToUse to jest OK dla ie4010, a dla innych parametrow czy urzadzen (narazie nie jest ok)
-i z tymi licencjami tez to przeniesc dalej, do innego pliku folderu itp zeby uproscic maina
+
 
 TODO NEXT
 pozmieniac tam z dwukropkiem, splitowanie przy samym dzialaniu na txt plikach dla licencji
 dorobienie tego zeby uzytkownik mogl sobie wybrac ktore rzeczy chce wgrac, zupgradeowac wersje softu
+pousuwac rozne rzeczy niepotrzebne, np z tego tftp server zostawic samego execa
+
+TODO FINAL
+PY2EXE i zrobienie z tego skryptu odpalanego na wszystkich mozliwych urzadzeniach

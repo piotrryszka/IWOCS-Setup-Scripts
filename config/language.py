@@ -53,6 +53,8 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                               'ver_table': 'Table with device versions',
                               'ver_update': "If you want to download new versions of software type '1', anything else won't be accepted. ",
                               'ver_dev': "Which device do you want to update? ",
+                              'upd_dev': "List of devices to have updated software:",
+
 
 
                               },
@@ -109,6 +111,7 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                                'ver_table': "Something in Norwegian language ",
                                'ver_update': "Something in Norwegian language ",
                                'ver_dev': "Something in Norwegian language ",
+                               'upd_dev': "Something in Norwegian language ",
 
                                },
                         'Fr': {'information_prompt': 'Something in French language ',
@@ -164,6 +167,7 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                                'ver_table': "Something in French language ",
                                'ver_update': "Something in French language ",
                                'ver_dev': "Something in French language ",
+                               'upd_dev': "Something in French language ",
 
                        }
                        }
