@@ -1,64 +1,41 @@
-from serial import Serial
-from lib.commands import send_to_console
-from prettytable import PrettyTable
-import os
+import _thread
+import time
+import threading
 
-ser = Serial('COM4', 9600)
+# Define a function for the thread
+def print_time( threadName, delay):
+   count = 0
+   while count < 5:
+      time.sleep(delay)
+      count += 1
+      print ("%s: %s" % ( threadName, time.ctime(time.time()) ))
 
-output = send_to_console(ser, 'sh version', 2)
-# print(output)
-# print('\n')
+def print_star(delay):
+    while 1:
+        time.sleep(delay)
+        print('*')
 
-with open('info.txt', 'w') as file:
-    file.write(output)
-
-with open('info.txt', 'r') as my_file:
-    for line in my_file:
-        # looking for actual software version
-        if 'Version' in line:
-            my_list = line.split(',')
-            for x in my_list:
-                if 'Version' in x:
-                    x = x.strip()
-                    x = x.split(' ')
-                    # printing version
-                    print("ACTUAL VERSION")
-                    act_version = x[-1]
-                    print(act_version)
-        # looking for actual device model
-        if 'System image file' in line:
-            my_list = line.split(' ')
-            for x in my_list:
-                if 'flash' in x:
-                    x = x.split('/')
-                    x = x[1].split('-')
-                    # printing device model
-                    final_device = x[0]
-                    print('DEVICE MODEL')
-                    print(final_device)
-                    print('\n')
-
-# TODO: dodac try itp
-# reading possible
-# change it later, beacuse path would be different
-files = os.listdir('../firmware/ie4010')
-# przyporzadkowanie pierwszego argumentu pliku
-file = files[0]
+def counting_process(delay):
+    while 1:
+        time.sleep(delay)
+        e = threading.active_count()
+        print(e)
 
 
 
-# PRETTY TABLE MOMENT
-x = PrettyTable()
-x.title = ('Version of software on devices')
-x.field_names = ["ID", "Name", "Model", "Current Version", "New Version"]
+# Create threads as follows
+try:
+   _thread.start_new_thread( print_time, ("Thread-1", 1, ) )
+   _thread.start_new_thread( print_time, ("Thread-2", 1, ) )
+   _thread.start_new_thread(print_star, (0.5,))
+   _thread.start_new_thread(counting_process, (2,))
+   e = threading.active_count()
+   print(e)
 
-# dodac takie sprawdzanie, zeby nie dodawalo tez urzadzen na ktorych juz mamy na pewno aktualny konfig
-if act_version != file:
-    x.add_row(['1', "TDS-1_A", f"{final_device}", f'{act_version}', f'{file}'])
-else:
-    pass
-print(x)
+except:
+   print ("Error: unable to start thread")
 
-# writing table to txt file
-with open('table_version.txt', 'w') as file:
-    file.write(str(x))
+
+while 1:
+   pass
+

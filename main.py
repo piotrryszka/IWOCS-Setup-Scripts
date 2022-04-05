@@ -364,7 +364,6 @@ while running_flag:
             print(ver_table)
             print(decorator_1)
 
-
             # TODO: HERE WORKING
             # checking if user want to upload new license to the device
             update_list = prepare_software(lang_expressions)
@@ -374,17 +373,15 @@ while running_flag:
             print(lang_expressions['upd_dev'])
             print(update_list)
 
+            # going to ssh connections
+            print(lang_expressions['ssh_move'])
+
+            # updating software by tftp and LAN connections
             # TODO:
             # praca nad wgrywaniem softu po tftp do roznych urzadzen
             # tutaj bedzie tworzona ta lista, mozna przesunac pozniej, ale to przed wgrywaniem konfigu projektowego trzeba bedzie robic
             for element in update_list:
                 print(f'Now upgrading software in {element[1]} device with this IP address {element[-1]}')
-
-            # going to ssh connections
-            print(lang_expressions['ssh_move'])
-
-            # updating software by tftp and LAN connections
-
 
 #             checking ip address is correctly set
 #             while ip_flag == False:
@@ -423,7 +420,6 @@ while running_flag:
 
             # SSH CONFIGURATION LOOP
             while ssh_flag and working_tftp:
-
                 # testing automating of restarting devices
                 # need to be reversed order to do the reload in a good way
                 for k in reversed(dictionary_dev.keys()):
@@ -432,7 +428,6 @@ while running_flag:
                     print(decorator_1)
                     print("................................")
                     print(decorator_1)
-
                     # connection with specified by user IP address and project configuration
 #                     ssh_con(file = dictionary_dev[k]['device'], host = dictionary_dev[k]['ip'])
 
@@ -453,5 +448,6 @@ while running_flag:
 # LAST COMMANDS IN SCRIPT
 # deleting all user-configuration files created while the script was running
 print(decorator_1)
+# TODO: UNCOMMENT IT
 # deleting_conf(lang_dict = lang_expressions)
 
