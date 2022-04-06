@@ -5,6 +5,7 @@ import os
 from datetime import datetime
 from prettytable import PrettyTable as pt
 import subprocess
+from pythonping import ping
 
 from config.data import decorator_1
 
@@ -187,3 +188,40 @@ def prepare_software(lang_dict):
             update_flag = False
     # returning list with the devices needs to be updated
     return update_list
+
+# checking if the device is available by ping
+def check_ping(lang_dict):
+    # empty string
+    result = ''
+    # creating table
+    tb = pt()
+    # add header
+    tb.title = lang_dict['ping_tab']
+    # add columns
+    tb.field_names = ["Name", "IP Address", "PING Status"]
+    # opening txt file with device name and ip address
+    with open('temp/already_conf.txt', 'r') as file:
+        lines = file.readlines()
+        # stripping lines
+        stripped = [s.strip() for s in lines]
+        print(lang_dict['ping_wait'])
+        for element in stripped:
+            # splitting element in line
+            new_strip = element.split(' ')
+            # setting parameters to function, sending 1 ICMP packet
+            ping_output = ping(f'172.30.100.{new_strip[1]}', verbose=False, count = 1)
+            for response in ping_output:
+                # printing dots to console to make sure that something is happening in script
+                print('.', end='')
+                # checking if the ping was successful
+                if response.error_message == None:
+                    result = "✓"
+                else:
+                    result = "x"
+                # adding rows
+                tb.add_row([new_strip[0],f'172.30.100.{new_strip[1]}', result])
+    print(decorator_1)
+    print(decorator_1)
+    print(tb)
+    # returning table to save it to file
+    return tb

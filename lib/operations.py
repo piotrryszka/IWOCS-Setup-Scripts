@@ -307,3 +307,13 @@ def add_ip(dev_list):
                 if new_strip[0] == name[1]:
                     name.append(f'172.30.100.{new_strip[1]}')
     return dev_list
+
+# saving ping table to txt
+def saving_ping_table(table):
+    dateTimeObj = datetime.now()
+    dateObj = dateTimeObj.date()
+    timeObj = dateTimeObj.time()
+    dateStr = dateObj.strftime("%d.%m.%Y")
+    timeStr = timeObj.strftime("%Hh-%Mm")
+    with open(f'support/ping-check-{dateStr}-{timeStr}.txt', 'w') as f:
+        f.write(str(table))

@@ -4,12 +4,12 @@ from serial import Serial
 from time import sleep
 
 from lib.commands import send_to_console, checking_switch_ports, checking_ip_address, checking_device, check_tftp, to_conf_mode
-from lib.operations import opening_device_list, reading_conf_files, creating_proper_configuration, deleting_files, deleting_conf, saving_dev, list_saved_dev, saving_license, saving_info_lic, reading_license, deleting_dev_logs, deleting_dev_license, download_license, create_pdf, sh_version, read_version, saving_ver_table, add_ip
+from lib.operations import opening_device_list, reading_conf_files, creating_proper_configuration, deleting_files, deleting_conf, saving_dev, list_saved_dev, saving_license, saving_info_lic, reading_license, deleting_dev_logs, deleting_dev_license, download_license, create_pdf, sh_version, read_version, saving_ver_table, add_ip, saving_ping_table
 from lib.booting import checking_booting
 from lib.languages import listing_languages, reading_language
 from lib.logging import *
 from lib.network import ssh_con
-from lib.functions import printing_logs, creating_timestamp, start_tftp, user_tftp, final_tftp, check_com, order_dev, list_dev, create_table, kill_tftp, kill_putty, create_table_ver, add_row_ver, prepare_software
+from lib.functions import printing_logs, creating_timestamp, start_tftp, user_tftp, final_tftp, check_com, order_dev, list_dev, create_table, kill_tftp, kill_putty, create_table_ver, add_row_ver, prepare_software, check_ping
 from config.data import ip_number, decorator_1, device_order, id_number
 
 
@@ -413,6 +413,15 @@ while running_flag:
 
             # SSH connection established
             print(lang_expressions['waiting_ssh'])
+            print(decorator_1)
+
+            # TODO: PING CHECK, TABLE WITH IT
+            # checking if all devices can ping each other
+            ping_table = check_ping(lang_expressions)
+
+            # saving ping table to txt file
+            saving_ping_table(ping_table)
+
 
             # need to be done again to actualize the dictionary
             order_dict = list_saved_dev()

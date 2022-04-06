@@ -54,8 +54,8 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                               'ver_update': "If you want to download new versions of software type '1', anything else won't be accepted. ",
                               'ver_dev': "Which device do you want to update? ",
                               'upd_dev': "List of devices to have updated software:",
-
-
+                              'ping_tab': "PING Table",
+                              'ping_wait': "Checking ip connections, please wait a moment...",
 
                               },
                         'No': {'information_prompt': 'Something in Norwegian language ',
@@ -112,6 +112,8 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                                'ver_update': "Something in Norwegian language ",
                                'ver_dev': "Something in Norwegian language ",
                                'upd_dev': "Something in Norwegian language ",
+                               'ping_tab': "Something in Norwegian language ",
+                               'ping_wait': "Something in Norwegian language ",
 
                                },
                         'Fr': {'information_prompt': 'Something in French language ',
@@ -168,6 +170,8 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                                'ver_update': "Something in French language ",
                                'ver_dev': "Something in French language ",
                                'upd_dev': "Something in French language ",
+                               'ping_tab': "Something in French language ",
+                               'ping_wait': "Something in French language ",
 
                        }
                        }
