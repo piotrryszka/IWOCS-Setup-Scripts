@@ -3288,3 +3288,129 @@ TDS-1_A -> 172.30.100.10
 ................................
  
  
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  06/04/2022 18:43:17
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-04-06.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 4
+ 
+ 
+ 
+Already configured devices:
+TDS-1_A, TAS-1
+ 
+Which device do you want to connect? TDS-1_B
+ 
+Your list of possible devices to configure: 
+TDS-1_B
+ 
+ 
+You have chosen this configuration...
+COM4 ----> TDS-1_B
+Please wait patiently...
+ 
+Your device has not been configured yet. What do you want to do with it?
+ 
+...................................................................... 
+ 
+ 
+Your device has been configured properly ---> TDS-1_B.
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 1
+ 
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
+In case of UKNNOWN, please turn on the Putty client and check the configuration manually.
+ 
++------------------------------------------------------+
+|              Table with device versions              |
++----+---------+-------+-----------------+-------------+
+| ID |   Name  | Model | Current Version | New Version |
++----+---------+-------+-----------------+-------------+
+| 1  | TDS-1_A | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 1  |  TAS-1  | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 2  | TDS-1_B | c2940 |   12.1(22)EA11  |   15.9(e4)  |
++----+---------+-------+-----------------+-------------+
+ 
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. 1
+ 
+Which device do you want to update? TDS
+ 
+You have chosen bad device, try again...
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. TDS-1_b
+ 
+List of devices to have updated software:
+[]
+Now is the time to download project configs by SSH connections ...
+ 
+Please connect all your devices by LAN cables!
+ 
+Now it is time to check TFTP Server
+ 
+If you are ready and TFTP Server is not running, please type in '1' in console. 1
+ 
+Everything is fine, now you can turn on your TFTP SERVER...
+ 
+Your TFTP server is running now...
+ 
+Please choose in tab 'Current Directory' in TFTP Server Application folder called PROJECT-CONFIGS!
+ 
+If you set configuration properly and you are ready, please type in '1' in console. 1
+ 
+Everything was set, you can continue...
+ 
+Waiting about 10 seconds for SSH connection to be established ...
+ 
+Checking ip connections, please wait a moment...
+... 
+ 
++---------------------------------------+
+|               PING Table              |
++---------+---------------+-------------+
+|   Name  |   IP Address  | PING Status |
++---------+---------------+-------------+
+| TDS-1_A | 172.30.100.10 |      x      |
+|  TAS-1  | 172.30.100.10 |      x      |
+| TDS-1_B | 172.30.100.11 |      x      |
++---------+---------------+-------------+
+ 
+Now this device is being configured:
+TAS-1 -> 172.30.100.10
+ 
+................................
+ 
+Now this device is being configured:
+TDS-1_B -> 172.30.100.11
+ 
+................................
+ 
+Now this device is being configured:
+TDS-1_A -> 172.30.100.10
+ 
+................................
+ 
+ 
