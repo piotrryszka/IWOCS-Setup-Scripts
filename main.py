@@ -370,8 +370,11 @@ while running_flag:
 
             # updating version software list with ip addresses
             update_list = add_ip(update_list)
-            print(lang_expressions['upd_dev'])
-            print(update_list)
+
+            # not printing empty list
+            if len(update_list) > 0:
+                print(lang_expressions['upd_dev'])
+                print(update_list)
 
             # going to ssh connections
             print(lang_expressions['ssh_move'])

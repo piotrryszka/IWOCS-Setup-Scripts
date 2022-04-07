@@ -157,35 +157,25 @@ def prepare_software(lang_dict):
         print(user_update)
         print(decorator_1)
         if user_update == '1':
-            # question which device user wants to update
-            user_up_dev = input(lang_dict['ver_dev']).upper()
-            print(user_up_dev)
+            # question which devices user wants to update
+            user_dev_list = list(map(str, input(lang_dict['ver_dev']).split()))
+            user_dev_list = list(dict.fromkeys(user_dev_list))
+            print(*user_dev_list, sep=', ')
             print(decorator_1)
             # reading possible devices from version txt file
             with open('temp/version.txt') as file:
-                data = file.read()
-                # reading all devices to check the device choice
-                with open('static_files/project_names_of_devices.txt') as my_file:
-                    data_text = my_file.readlines()
-                    # stripping elements from list
-                    stripped_data_ver = [e.strip() for e in data_text]
-                    test_flag = False
-                    for element in stripped_data_ver:
-                        if element == user_up_dev:
-                            test_flag = True
-                # checking if device is possible to update
-                if user_up_dev in data and test_flag:
-                    data_list = data.split('\n')
-                    for element in data_list:
-                        if user_up_dev in element:
-                            data_final = element.split(' ')
-                            update_list.append(data_final)
-                            print("TEST PRINT -> PREPARING DATA TO UPDATE DEVICES")
-                else:
-                    print(lang_dict['bad_device'])
-        else:
-            # leaving update version loop
-            update_flag = False
+                new_list = []
+                data = file.readlines()
+                # stripping data
+                stripped_data = [e.strip() for e in data]
+                # splitting data into small elements
+                for element in stripped_data:
+                    element = element.split(' ')
+                    new_list.append(element)
+                # checking if the device is correct
+                for x in new_list:
+                    if x[0] in user_dev_list:
+                        update_list.append(x)
     # returning list with the devices needs to be updated
     return update_list
 
