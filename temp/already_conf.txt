@@ -1,3 +1,4 @@
 TDS-1_A 10
 TAS-1 10
 TDS-1_B 11
+TIR 12

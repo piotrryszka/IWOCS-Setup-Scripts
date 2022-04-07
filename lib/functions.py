@@ -215,9 +215,9 @@ def check_ping(lang_dict):
                 print('.', end='')
                 # checking if the ping was successful
                 if response.error_message == None:
-                    result = "✓"
+                    result = "OK"
                 else:
-                    result = "x"
+                    result = " "
                 # adding rows
                 tb.add_row([new_strip[0],f'172.30.100.{new_strip[1]}', result])
     print(decorator_1)
