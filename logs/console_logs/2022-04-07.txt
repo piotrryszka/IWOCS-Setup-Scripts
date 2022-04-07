@@ -891,4 +891,199 @@ Please connect all your devices by LAN cables!
  
 Now it is time to check TFTP Server
  
-If you are ready and TFTP Server is not running, please type in '1' in console. 
+If you are ready and TFTP Server is not running, please type in '1' in console. Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  07/04/2022 12:16:30
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-04-07.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 4
+ 
+ 
+ 
+Already configured devices:
+TDS-1_A, TDS-1_B, SDG-1_A, SDG-1_B, TIR, TAS-1, MSC-1, MSW-1_A, MSH-1, MSH-2, MSH-3, MSH-4
+ 
+Which device do you want to connect? MSW-1_B
+ 
+Your list of possible devices to configure: 
+MSW-1_B
+ 
+ 
+You have chosen this configuration...
+COM4 ----> MSW-1_B
+Please wait patiently...
+ 
+Your device has not been configured yet. What do you want to do with it?
+ 
+...................................................................... 
+ 
+ 
+Your device has been configured properly ---> MSW-1_B.
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 1
+ 
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
+In case of UKNNOWN, please turn on the Putty client and check the configuration manually.
+ 
++------------------------------------------------------+
+|              Table with device versions              |
++----+---------+-------+-----------------+-------------+
+| ID |   Name  | Model | Current Version | New Version |
++----+---------+-------+-----------------+-------------+
+| 1  | TDS-1_A | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 1  |  TAS-1  | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 2  | TDS-1_B | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 3  |   TIR   | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 4  |  MSC-1  | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 5  |  MSH-1  | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 6  |  MSH-2  | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 7  |  MSH-3  | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 8  |  MSH-4  | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 9  | SDG-1_A | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 10 | SDG-1_B | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 11 | MSW-1_A | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 12 | MSW-1_B | c2940 |   12.1(22)EA11  |   15.9(e4)  |
++----+---------+-------+-----------------+-------------+
+ 
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. 1
+ 
+Which device do you want to update? Type ID numbers from table above!Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  07/04/2022 12:49:47
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-04-07.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 4
+ 
+ 
+ 
+Already configured devices:
+TDS-1_A, TDS-1_B, SDG-1_A, SDG-1_B, TIR, TAS-1, MSC-1, MSW-1_A, MSW-1_B, MSH-1, MSH-2, MSH-3, MSH-4
+ 
+Which device do you want to connect? MS
+ 
+Your list of possible devices to configure: 
+MSX-1_A, MSX-1_B, MSY-1_A, MSY-1_B, MSS-1_A, MSS-1_B
+ 
+Already configured devices:
+TDS-1_A, TDS-1_B, SDG-1_A, SDG-1_B, TIR, TAS-1, MSC-1, MSW-1_A, MSW-1_B, MSH-1, MSH-2, MSH-3, MSH-4
+ 
+Which device do you want to connect? MSX-1_A
+ 
+Your list of possible devices to configure: 
+MSX-1_A
+ 
+ 
+You have chosen this configuration...
+COM4 ----> MSX-1_A
+Please wait patiently...
+ 
+Your device has not been configured yet. What do you want to do with it?
+ 
+...................................................................... 
+ 
+ 
+Your device has been configured properly ---> MSX-1_A.
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 1
+ 
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
+In case of UKNNOWN, please turn on the Putty client and check the configuration manually.
+ 
++------------------------------------------------------+
+|              Table with device versions              |
++----+---------+-------+-----------------+-------------+
+| ID |   Name  | Model | Current Version | New Version |
++----+---------+-------+-----------------+-------------+
+| 1  | TDS-1_A | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 1  |  TAS-1  | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 2  | TDS-1_B | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 3  |   TIR   | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 4  |  MSC-1  | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 5  |  MSH-1  | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 6  |  MSH-2  | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 7  |  MSH-3  | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 8  |  MSH-4  | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 9  | SDG-1_A | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 10 | SDG-1_B | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 11 | MSW-1_A | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 12 | MSW-1_B | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 13 | MSX-1_A | c2940 |   12.1(22)EA11  |   15.9(e4)  |
++----+---------+-------+-----------------+-------------+
+ 
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. 1
+ 
+Which device do you want to update? Type ID numbers from table above: 1
+ 
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. 1
+ 
+Which device do you want to update? Type ID numbers from table above: 2, 3, 4, 5, 6, 8
+ 
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. 2
+ 
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. 2
+ 
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. 2
+ 
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. s
+ 
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. 1
+ 
+Which device do you want to update? Type ID numbers from table above: 1, 2, 3, 4
+ 
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. 2
+ 
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. 

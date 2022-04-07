@@ -176,6 +176,8 @@ def prepare_software(lang_dict):
                 for x in new_list:
                     if x[0] in user_dev_list:
                         update_list.append(x)
+        else:
+            update_flag = False
     # returning list with the devices needs to be updated
     return update_list
 

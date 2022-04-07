@@ -374,10 +374,12 @@ while running_flag:
             # not printing empty list
             if len(update_list) > 0:
                 print(lang_expressions['upd_dev'])
-                print(update_list)
+                print(*update_list, sep = ', ')
+                print(decorator_1)
 
             # going to ssh connections
             print(lang_expressions['ssh_move'])
+            print(decorator_1)
 
             # updating software by tftp and LAN connections
             # TODO:
