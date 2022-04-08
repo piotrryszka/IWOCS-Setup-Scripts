@@ -24,8 +24,8 @@ def ssh_con(file, host):
         # session logger
         "session_log": f"logs/device_logs/{file}_{host}_{dateStr}.txt"
     }
-    try:
-        with ConnectHandler(**cisco1) as net_connect:
+    with ConnectHandler(**cisco1) as net_connect:
+        try:
             # TFTP configuration download command
             our_command = f'copy tftp://{server_ip}/{file} startup-config'
 
@@ -48,8 +48,8 @@ def ssh_con(file, host):
             # waiting to give time to device react
             sleep(2)
 
-    # error handling while ssh connection
-    except (NetmikoTimeoutException, NetmikoAuthenticationException) as error:
-        print(error)
-        print(decorator_1)
+         # error handling while ssh connection
+        except (NetmikoTimeoutException, NetmikoAuthenticationException) as error:
+            print(error)
+            print(decorator_1)
 

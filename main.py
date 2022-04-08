@@ -366,7 +366,8 @@ while running_flag:
             # not printing empty list
             if len(update_list) > 0:
                 print(lang_expressions['upd_dev'])
-                print(*update_list, sep = ', ')
+                for x in range(0,len(update_list)-1):
+                    print(update_list[x][1], end = ', ')
                 print(decorator_1)
 
             # going to ssh connections
@@ -428,6 +429,8 @@ while running_flag:
             dictionary_dev = order_dev(conf_devices_list,device_order, dictionary_dev, order_dict)
             print(decorator_1)
 
+            print("................................")
+
             # SSH CONFIGURATION LOOP
             while ssh_flag and working_tftp:
                 # testing automating of restarting devices
@@ -436,15 +439,17 @@ while running_flag:
                     print(lang_expressions['now_device'])
                     print(f"{dictionary_dev[k]['device']} -> {dictionary_dev[k]['ip']}")
                     print(decorator_1)
-                    print("................................")
-                    print(decorator_1)
                     # connection with specified by user IP address and project configuration
                     # try and except to not crash the script
                     try:
                         ssh_con(file = dictionary_dev[k]['device'], host = dictionary_dev[k]['ip'])
                     except:
-                        print(f"Sorry cant reach the {dictionary_dev[k]['device']} and {dictionary_dev[k]['ip']}")
-
+                        print(lang_expressions['no_con_dev'])
+                        print(f"{dictionary_dev[k]['device']} <--> {dictionary_dev[k]['ip']}")
+                        print(decorator_1)
+                    finally:
+                        print("................................")
+                        print(decorator_1)
                 # changing ssh_flag to False to leave the loop
                 ssh_flag = False
 
