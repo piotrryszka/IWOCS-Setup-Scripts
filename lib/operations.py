@@ -6,7 +6,6 @@ from os import listdir
 from os.path import isfile, join
 from datetime import datetime
 from time import sleep
-from fpdf import FPDF
 
 from config.data import decorator_1
 from lib.commands import send_to_console
@@ -222,28 +221,6 @@ def download_license(ser):
 
     # returning 4 strings to be used in license table
     return udi, state_string, type_string, ipservices_string
-
-# create pdf file with configuration license table
-def create_pdf(date):
-    # a variable pdf
-    pdf = FPDF()
-
-    # Add a page
-    pdf.add_page()
-
-    # set style and size of font
-    # that you want in the pdf
-    pdf.set_font("Arial", size = 12)
-
-    # open the text file in read mode
-    f = open(f"{date}", "r")
-
-    # insert the texts in pdf
-    for x in f:
-        pdf.cell(200, 10, txt = x, ln = 1, align = 'C')
-
-    # save the pdf with name .pdf
-    pdf.output("user_files/license_table.pdf")
 
 # sending sh_version command and saving it output to txt file
 def sh_version(ser):

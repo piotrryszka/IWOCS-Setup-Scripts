@@ -4,7 +4,7 @@ from serial import Serial
 from time import sleep
 
 from lib.commands import send_to_console, checking_switch_ports, checking_ip_address, checking_device, check_tftp, to_conf_mode
-from lib.operations import opening_device_list, reading_conf_files, creating_proper_configuration, deleting_files, deleting_conf, saving_dev, list_saved_dev, saving_license, saving_info_lic, reading_license, deleting_dev_logs, deleting_dev_license, download_license, create_pdf, sh_version, read_version, saving_ver_table, add_ip, saving_ping_table
+from lib.operations import opening_device_list, reading_conf_files, creating_proper_configuration, deleting_files, deleting_conf, saving_dev, list_saved_dev, saving_license, saving_info_lic, reading_license, deleting_dev_logs, deleting_dev_license, download_license, sh_version, read_version, saving_ver_table, add_ip, saving_ping_table
 from lib.booting import checking_booting
 from lib.languages import listing_languages, reading_language
 from lib.logging import *
@@ -335,13 +335,6 @@ while running_flag:
             # saving already configured devices
 #             date_string = saving_license(table = conf_table)
 
-            # try because of the possibility to have this file open
-            # saving table to pdf to print it later for example
-            try:
-                create_pdf(date_string)
-            except:
-                pass
-
             # TODO: UNCOMMENT IT
             # printing table with licenses to console
 #             print(conf_table)
@@ -446,7 +439,11 @@ while running_flag:
                     print("................................")
                     print(decorator_1)
                     # connection with specified by user IP address and project configuration
-#                     ssh_con(file = dictionary_dev[k]['device'], host = dictionary_dev[k]['ip'])
+                    # try and except to not crash the script
+                    try:
+                        ssh_con(file = dictionary_dev[k]['device'], host = dictionary_dev[k]['ip'])
+                    except:
+                        print(f"Sorry cant reach the {dictionary_dev[k]['device']} and {dictionary_dev[k]['ip']}")
 
                 # changing ssh_flag to False to leave the loop
                 ssh_flag = False

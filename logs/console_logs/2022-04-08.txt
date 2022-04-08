@@ -237,3 +237,445 @@ TDS-1_A -> 172.30.100.10
 ................................
  
  
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  08/04/2022 12:07:10
+ 
+"IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!"
+ 
+This is a list of all saved session logs: 
+2022-04-08.txt
+Do you want to delete device logs, console logs and table with licenses for support team? If yes type '1', if not type anything else.
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else.
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 4
+ 
+ 
+Already configured devices:
+TDS-1_A, TDS-1_B, SDG-1_A, SDG-1_B, TIR, TAS-1, MSC-1, MSW-1_A, MSW-1_B, MSX-1_A, MSX-1_B, MSY-1_A, MSH-1, MSH-2, MSH-3, MSH-4
+ 
+Which device do you want to connect? MS
+ 
+Your list of possible devices to configure: 
+MSY-1_B, MSS-1_A, MSS-1_B
+ 
+Already configured devices:
+TDS-1_A, TDS-1_B, SDG-1_A, SDG-1_B, TIR, TAS-1, MSC-1, MSW-1_A, MSW-1_B, MSX-1_A, MSX-1_B, MSY-1_A, MSH-1, MSH-2, MSH-3, MSH-4
+ 
+Which device do you want to connect? MS-1_B
+ 
+Your list of possible devices to configure: 
+
+ 
+Already configured devices:
+TDS-1_A, TDS-1_B, SDG-1_A, SDG-1_B, TIR, TAS-1, MSC-1, MSW-1_A, MSW-1_B, MSX-1_A, MSX-1_B, MSY-1_A, MSH-1, MSH-2, MSH-3, MSH-4
+ 
+Which device do you want to connect? MS
+ 
+Your list of possible devices to configure: 
+MSY-1_B, MSS-1_A, MSS-1_B
+ 
+Already configured devices:
+TDS-1_A, TDS-1_B, SDG-1_A, SDG-1_B, TIR, TAS-1, MSC-1, MSW-1_A, MSW-1_B, MSX-1_A, MSX-1_B, MSY-1_A, MSH-1, MSH-2, MSH-3, MSH-4
+ 
+Which device do you want to connect? MSY-1_B
+ 
+Your list of possible devices to configure: 
+MSY-1_B
+ 
+ 
+You have chosen this configuration...
+COM4 ----> MSY-1_B
+Please wait patiently...
+ 
+Your device has not been configured yet. What do you want to do with it?
+ 
+...................................................................... 
+ 
+ 
+Your device has been configured properly ---> MSY-1_B.
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 1
+ 
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
+In case of UKNNOWN, please turn on the Putty client and check the configuration manually.
+ 
++------------------------------------------------------+
+|              Table with device versions              |
++----+---------+-------+-----------------+-------------+
+| ID |   Name  | Model | Current Version | New Version |
++----+---------+-------+-----------------+-------------+
+| 1  | TDS-1_A | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 1  |  TAS-1  | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 2  | TDS-1_B | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 3  |   TIR   | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 4  |  MSC-1  | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 5  |  MSH-1  | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 6  |  MSH-2  | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 7  |  MSH-3  | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 8  |  MSH-4  | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 9  | SDG-1_A | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 10 | SDG-1_B | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 11 | MSW-1_A | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 12 | MSW-1_B | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 13 | MSX-1_A | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 14 | MSX-1_B | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 15 | MSY-1_A | c2940 |   12.1(22)EA11  |   15.9(e4)  |
+| 16 | MSY-1_B | c2940 |   12.1(22)EA11  |   15.9(e4)  |
++----+---------+-------+-----------------+-------------+
+ 
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. 1
+ 
+Which device do you want to update? Type ID numbers from table above: 1, 2, 3, 4, 5
+ 
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. 2
+ 
+List of devices to have updated software:
+['1', 'TDS-1_A', 'c2940', '12.1(22)EA11', '15.9(e4)', '172.30.100.10'], ['1', 'TAS-1', 'c2940', '12.1(22)EA11', '15.9(e4)', '172.30.100.10'], ['2', 'TDS-1_B', 'c2940', '12.1(22)EA11', '15.9(e4)', '172.30.100.11'], ['3', 'TIR', 'c2940', '12.1(22)EA11', '15.9(e4)', '172.30.100.12'], ['4', 'MSC-1', 'c2940', '12.1(22)EA11', '15.9(e4)', '172.30.100.13'], ['5', 'MSH-1', 'c2940', '12.1(22)EA11', '15.9(e4)', '172.30.100.14']
+ 
+Now is the time to download project configs by SSH connections ...
+ 
+Now upgrading software in TDS-1_A device with this IP address 172.30.100.10
+Now upgrading software in TAS-1 device with this IP address 172.30.100.10
+Now upgrading software in TDS-1_B device with this IP address 172.30.100.11
+Now upgrading software in TIR device with this IP address 172.30.100.12
+Now upgrading software in MSC-1 device with this IP address 172.30.100.13
+Now upgrading software in MSH-1 device with this IP address 172.30.100.14
+ 
+Please connect all your devices by LAN cables!
+ 
+Now it is time to move into TFTP Server application.
+ 
+If you are ready and TFTP Server is not running, please type in '1' in console. 1
+ 
+Everything is fine, now you can turn on your TFTP SERVER...
+ 
+Your TFTP server is running now...
+ 
+Please choose in tab 'Current Directory' in TFTP Server Application folder called PROJECT-CONFIGS!
+ 
+If you set configuration properly and you are ready, please type in '1' in console. 1
+ 
+Everything was set, you can continue...
+ 
+Waiting about 10 seconds for SSH connection to be established ...
+ 
+Checking ip connections with configured network devices, please wait a moment.
+................. 
+ 
++---------------------------------------+
+|               PING Table              |
++---------+---------------+-------------+
+|   Name  |   IP Address  | PING Status |
++---------+---------------+-------------+
+| TDS-1_A | 172.30.100.10 |             |
+|  TAS-1  | 172.30.100.10 |             |
+| TDS-1_B | 172.30.100.11 |             |
+|   TIR   | 172.30.100.12 |             |
+|  MSC-1  | 172.30.100.13 |             |
+|  MSH-1  | 172.30.100.14 |             |
+|  MSH-2  | 172.30.100.15 |             |
+|  MSH-3  | 172.30.100.16 |             |
+|  MSH-4  | 172.30.100.17 |             |
+| SDG-1_A | 172.30.100.18 |             |
+| SDG-1_B | 172.30.100.19 |             |
+| MSW-1_A | 172.30.100.20 |             |
+| MSW-1_B | 172.30.100.21 |             |
+| MSX-1_A | 172.30.100.22 |             |
+| MSX-1_B | 172.30.100.23 |             |
+| MSY-1_A | 172.30.100.24 |             |
+| MSY-1_B | 172.30.100.25 |             |
++---------+---------------+-------------+
+If the fields are empty, check the connection manually by yourself.
+ 
+Now this device is being configured:
+MSH-4 -> 172.30.100.17
+ 
+................................
+ 
+TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.30.100.17:22
+
+
+ 
+Now this device is being configured:
+MSH-3 -> 172.30.100.16
+ 
+................................
+ 
+TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.30.100.16:22
+
+
+ 
+Now this device is being configured:
+MSH-2 -> 172.30.100.15
+ 
+................................
+ 
+TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.30.100.15:22
+
+
+ 
+Now this device is being configured:
+MSH-1 -> 172.30.100.14
+ 
+................................
+ 
+TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.30.100.14:22
+
+
+ 
+Now this device is being configured:
+MSY-1_B -> 172.30.100.25
+ 
+................................
+ 
+TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.30.100.25:22
+
+
+ 
+Now this device is being configured:
+MSY-1_A -> 172.30.100.24
+ 
+................................
+ 
+TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.30.100.24:22
+
+
+ 
+Now this device is being configured:
+MSX-1_B -> 172.30.100.23
+ 
+................................
+ 
+TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.30.100.23:22
+
+
+ 
+Now this device is being configured:
+MSX-1_A -> 172.30.100.22
+ 
+................................
+ 
+TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.30.100.22:22
+
+
+ 
+Now this device is being configured:
+MSW-1_B -> 172.30.100.21
+ 
+................................
+ 
+TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.30.100.21:22
+
+
+ 
+Now this device is being configured:
+MSW-1_A -> 172.30.100.20
+ 
+................................
+ 
+TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.30.100.20:22
+
+
+ 
+Now this device is being configured:
+MSC-1 -> 172.30.100.13
+ 
+................................
+ 
+TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.30.100.13:22
+
+
+ 
+Now this device is being configured:
+TAS-1 -> 172.30.100.10
+ 
+................................
+ 
+TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.30.100.10:22
+
+
+ 
+Now this device is being configured:
+TIR -> 172.30.100.12
+ 
+................................
+ 
+TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.30.100.12:22
+
+
+ 
+Now this device is being configured:
+SDG-1_B -> 172.30.100.19
+ 
+................................
+ 
+TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.30.100.19:22
+
+
+ 
+Now this device is being configured:
+SDG-1_A -> 172.30.100.18
+ 
+................................
+ 
+TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.30.100.18:22
+
+
+ 
+Now this device is being configured:
+TDS-1_B -> 172.30.100.11
+ 
+................................
+ 
+TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.30.100.11:22
+
+
+ 
+Now this device is being configured:
+TDS-1_A -> 172.30.100.10
+ 
+................................
+ 
+TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.30.100.10:22
+
+
+ 
+ 
