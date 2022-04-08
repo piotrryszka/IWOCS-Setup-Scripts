@@ -8,7 +8,6 @@ w licencjach jezeli jest tak ipservices | Active,InUse | PermanentRightToUse to 
 TODO NEXT
 pozmieniac tam z dwukropkiem, splitowanie przy samym dzialaniu na txt plikach dla licencji
 dorobienie tego zeby uzytkownik mogl sobie wybrac ktore rzeczy chce wgrac, zupgradeowac wersje softu
-i to z tym softem ma byc wczytywane tak ze uzytkownik chce np upgrade urzadzen 1,2,4 a nie tak jak teraz ze kazde osobno
 pousuwac rozne rzeczy niepotrzebne, np z tego tftp server zostawic samego execa
 
 TODO WIELOWATKOWOSC

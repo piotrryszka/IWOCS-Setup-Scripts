@@ -30,7 +30,7 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                               'ssh_established': "Connection has been established correctly ...",
                               'del_info': "You have left the script, try again...",
                               'waiting_ssh': "Waiting about 10 seconds for SSH connection to be established ...",
-                              'tftp_server': "Now it is time to check TFTP Server",
+                              'tftp_server': "Now it is time to move into TFTP Server application.",
                               'tftp_check': "If you are ready and TFTP Server is not running, please type in '1' in console. ",
                               'tftp_occupied': 'TFTP server is already running or socket is occupied ...',
                               'tftp_free': "Everything is fine, now you can turn on your TFTP SERVER...",
@@ -55,7 +55,8 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                               'ver_dev': "Which device do you want to update? Type ID numbers from table above: ",
                               'upd_dev': "List of devices to have updated software:",
                               'ping_tab': "PING Table",
-                              'ping_wait': "Checking ip connections, please wait a moment...",
+                              'ping_wait': "Checking ip connections with configured network devices, please wait a moment.",
+                              'check_ping': "If the fields are empty, check the connection manually by yourself."
 
                               },
                         'No': {'information_prompt': 'Something in Norwegian language ',
@@ -114,6 +115,7 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                                'upd_dev': "Something in Norwegian language ",
                                'ping_tab': "Something in Norwegian language ",
                                'ping_wait': "Something in Norwegian language ",
+                               'check_ping': "Something in Norwegian language ",
 
                                },
                         'Fr': {'information_prompt': 'Something in French language ',
@@ -172,6 +174,7 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                                'upd_dev': "Something in French language ",
                                'ping_tab': "Something in French language ",
                                'ping_wait': "Something in French language ",
+                               'check_ping': "Something in French language ",
 
                        }
                        }

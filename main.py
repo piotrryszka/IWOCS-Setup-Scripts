@@ -97,7 +97,6 @@ while running_flag:
             check_com(lang_dict = lang_expressions)
             user_COM = input(lang_expressions['port_question']).lower()
             print(user_COM)
-            print(decorator_1)
             if user_COM.isnumeric() and user_COM != '0':
 
                 # Creating string for connection to the device
@@ -424,8 +423,11 @@ while running_flag:
             # checking if all devices can ping each other
             ping_table = check_ping(lang_expressions)
 
-            # saving ping table to txt file
+            # saving ping table to txt file and printing it to console
             saving_ping_table(ping_table)
+
+            # printing information what to do if the table is not correct
+            print(lang_expressions['check_ping'])
 
 
             # need to be done again to actualize the dictionary
