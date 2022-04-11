@@ -330,14 +330,14 @@ while running_flag:
         else:
 
             # reading info about licenses to table
-#             reading_license(conf_table)
+            reading_license(conf_table)
 
             # saving already configured devices
-#             date_string = saving_license(table = conf_table)
+            date_string = saving_license(table = conf_table)
 
             # TODO: UNCOMMENT IT
             # printing table with licenses to console
-#             print(conf_table)
+            print(conf_table)
 
             # printing prompt about UNKNOWN in table
             print(lang_expressions['unknown_license'])
@@ -354,6 +354,7 @@ while running_flag:
 
             # printing version table to the console
             print(ver_table)
+            print(lang_expressions['info_ver'])
             print(decorator_1)
 
             # TODO: HERE WORKING
@@ -366,7 +367,7 @@ while running_flag:
             # not printing empty list
             if len(update_list) > 0:
                 print(lang_expressions['upd_dev'])
-                for x in range(0,len(update_list)-1):
+                for x in range(0,len(update_list)):
                     print(update_list[x][1], end = ', ')
                 print(decorator_1)
 

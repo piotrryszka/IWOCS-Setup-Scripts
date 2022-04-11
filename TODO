@@ -8,7 +8,6 @@ w licencjach jezeli jest tak ipservices | Active,InUse | PermanentRightToUse to 
 TODO NEXT
 pozmieniac tam z dwukropkiem, splitowanie przy samym dzialaniu na txt plikach dla licencji
 dorobienie tego zeby uzytkownik mogl sobie wybrac ktore rzeczy chce wgrac, zupgradeowac wersje softu
-pousuwac rozne rzeczy niepotrzebne, np z tego tftp server zostawic samego execa
 
 TODO WIELOWATKOWOSC
 https://www.tutorialspoint.com/python3/python_multithreading.htm

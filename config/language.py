@@ -58,6 +58,7 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                               'ping_wait': "Checking ip connections with configured network devices, please wait a moment.",
                               'check_ping': "If the fields are empty, check the connection manually by yourself.",
                               'no_con_dev': "Sorry, this device is unavailable:",
+                              'info_ver': "If field 'New Version' is empty, check if you downloaded new versions of software into /FIRMWARE folder.",
 
                               },
                         'No': {'information_prompt': 'Something in Norwegian language ',
@@ -118,6 +119,7 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                                'ping_wait': "Something in Norwegian language ",
                                'check_ping': "Something in Norwegian language ",
                                'no_con_dev': "Something in Norwegian language ",
+                               'info_ver': "Something in Norwegian language ",
 
                                },
                         'Fr': {'information_prompt': 'Something in French language ',
@@ -178,6 +180,7 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                                'ping_wait': "Something in French language ",
                                'check_ping': "Something in French language ",
                                'no_con_dev': "Something in French language ",
+                               'info_ver': "Something in French language ",
 
                        }
                        }

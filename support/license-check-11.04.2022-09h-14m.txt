@@ -1,0 +1,16 @@
++----------------------------------------------------------------------------------------+
+|                              Table with devices licenses                               |
++----+---------+---------------------------+------------+--------------+------------+----+
+| ID |  Device |            UDI            |  License   |    Status    | Expiration | OK |
++----+---------+---------------------------+------------+--------------+------------+----+
+| 1  | TDS-1_A | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 2  | TDS-1_B | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 3  |   TIR   | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 4  |  TAS-1  | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 5  | SDG-1_A | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 6  |  MSC-1  | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 7  |  MSH-1  | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 8  |  MSH-2  | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 9  |  MSH-3  | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 10 |  MSH-4  | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
++----+---------+---------------------------+------------+--------------+------------+----+

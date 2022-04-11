@@ -146,8 +146,6 @@ def add_row_ver(table):
 
 # function to prepare which device need to be updated
 def prepare_software(lang_dict):
-    # empty list to return devices
-    update_list = []
     # flag to be updated to leave loop
     update_flag = True
     while update_flag:
@@ -157,6 +155,8 @@ def prepare_software(lang_dict):
         print(user_update)
         print(decorator_1)
         if user_update == '1':
+            # empty list to return devices
+            update_list = []
             # question which devices user wants to update
             user_dev_list = list(map(str, input(lang_dict['ver_dev']).split()))
             user_dev_list = list(dict.fromkeys(user_dev_list))
@@ -176,6 +176,7 @@ def prepare_software(lang_dict):
                 for x in new_list:
                     if x[0] in user_dev_list:
                         update_list.append(x)
+                print(update_list)
         else:
             update_flag = False
     # returning list with the devices needs to be updated
