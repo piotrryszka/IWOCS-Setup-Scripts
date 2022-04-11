@@ -7,7 +7,7 @@ import subprocess
 import os
 from datetime import datetime
 
-from config.data import ie2000, ie4010, decorator_1
+from config.data import ie2000, ie4010, decorator_1, commands_list
 
 # sending commands to console
 def send_to_console(ser_fun: Serial, command: str, wait_time: float = 0.2):
@@ -119,3 +119,11 @@ def to_conf_mode(ser_port):
     for com in commands_list:
         send_to_console(ser_port, com)
 
+# sending commands from list to check the status of topology
+def check_status(dictionary_dev, lang_expressions):
+    for command in commands_list:
+        print(command)
+    for k in reversed(dictionary_dev.keys()):
+                    print(lang_expressions['now_device'])
+                    print(f"{dictionary_dev[k]['device']} -> {dictionary_dev[k]['ip']}")
+                    print(decorator_1)

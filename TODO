@@ -8,6 +8,8 @@ w licencjach jezeli jest tak ipservices | Active,InUse | PermanentRightToUse to 
 TODO NEXT
 pozmieniac tam z dwukropkiem, splitowanie przy samym dzialaniu na txt plikach dla licencji
 dorobienie tego zeby uzytkownik mogl sobie wybrac ktore rzeczy chce wgrac, zupgradeowac wersje softu
+sh lldp neighbour, show tech
+hub ip zawsze taki sam
 
 TODO WIELOWATKOWOSC
 https://www.tutorialspoint.com/python3/python_multithreading.htm

@@ -7,7 +7,7 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                               'listing_devices': "Your list of possible devices to configure: ",
                               'wait_prompt': "Please wait patiently...",
                               'user_choice': "You have chosen this configuration...",
-                              'not_configured': "Your device has not been configured yet. What do you want to do with it?",
+                              'not_configured': "Your device has not been configured yet. Downloading initial config already started.",
                               'proper_conf': 'Your device has been configured properly ---> ',
                               'close_con': "Closed connection to ",
                               'start_conf': 'Sorry your device has some starting configuration, we could not help you...',
@@ -59,6 +59,8 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                               'check_ping': "If the fields are empty, check the connection manually by yourself.",
                               'no_con_dev': "Sorry, this device is unavailable:",
                               'info_ver': "If field 'New Version' is empty, check if you downloaded new versions of software into /FIRMWARE folder.",
+                              'project_conf': "Now the projects configs are downloaded to the devices.",
+
 
                               },
                         'No': {'information_prompt': 'Something in Norwegian language ',
@@ -120,6 +122,7 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                                'check_ping': "Something in Norwegian language ",
                                'no_con_dev': "Something in Norwegian language ",
                                'info_ver': "Something in Norwegian language ",
+                               'project_conf': "Something in Norwegian language ",
 
                                },
                         'Fr': {'information_prompt': 'Something in French language ',
@@ -181,6 +184,7 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                                'check_ping': "Something in French language ",
                                'no_con_dev': "Something in French language ",
                                'info_ver': "Something in French language ",
+                               'project_conf': "Something in French language ",
 
                        }
                        }

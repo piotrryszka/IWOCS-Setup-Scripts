@@ -35,3 +35,6 @@ device_order = ['TDS-1_A', 'TDS-1_B', 'SDG-1_A', 'SDG-1_B', 'TIR', 'ETAS-1', 'TA
 
 # counter for correct ordering devices in table
 id_number = 1
+
+# list of commands on devices to prepare txt files with configuration
+commands_list = ['sh lldp nei', 'show tech']

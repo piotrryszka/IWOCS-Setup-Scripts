@@ -3,7 +3,7 @@ import sys
 from serial import Serial
 from time import sleep
 
-from lib.commands import send_to_console, checking_switch_ports, checking_ip_address, checking_device, check_tftp, to_conf_mode
+from lib.commands import send_to_console, checking_switch_ports, checking_ip_address, checking_device, check_tftp, to_conf_mode, check_status
 from lib.operations import opening_device_list, reading_conf_files, creating_proper_configuration, deleting_files, deleting_conf, saving_dev, list_saved_dev, saving_license, saving_info_lic, reading_license, deleting_dev_logs, deleting_dev_license, download_license, sh_version, read_version, saving_ver_table, add_ip, saving_ping_table
 from lib.booting import checking_booting
 from lib.languages import listing_languages, reading_language
@@ -279,9 +279,10 @@ while running_flag:
 
                             # closing connection
 #                             ser.close()
-                            print(decorator_1)
                             print(f"{lang_expressions['proper_conf']}{user_device}.")
 #                             print(f"{lang_expressions['close_con']}{ser.name}.")
+                            print(decorator_1)
+                            print('---------------------------------------------------')
                             print(decorator_1)
 
 
@@ -370,6 +371,7 @@ while running_flag:
                 for x in range(0,len(update_list)):
                     print(update_list[x][1], end = ', ')
                 print(decorator_1)
+                print(decorator_1)
 
             # going to ssh connections
             print(lang_expressions['ssh_move'])
@@ -381,7 +383,7 @@ while running_flag:
             # tutaj bedzie tworzona ta lista, mozna przesunac pozniej, ale to przed wgrywaniem konfigu projektowego trzeba bedzie robic
             for element in update_list:
                 # JAKIES WATKI PODODAWAC
-                print(f'Now upgrading software in {element[1]} device with this IP address {element[-1]}')
+                print(f'Now upgrading software in {element[1]} device with this IP address {element[-1]}!')
 
 #             checking ip address is correctly set
 #             while ip_flag == False:
@@ -430,6 +432,9 @@ while running_flag:
             dictionary_dev = order_dev(conf_devices_list,device_order, dictionary_dev, order_dict)
             print(decorator_1)
 
+            # printing prompt about going to project configs
+            print(lang_expressions['project_conf'])
+            print(decorator_1)
             print("................................")
 
             # SSH CONFIGURATION LOOP
@@ -453,6 +458,13 @@ while running_flag:
                         print(decorator_1)
                 # changing ssh_flag to False to leave the loop
                 ssh_flag = False
+
+            # TODO:
+            # HERE WORKING ON COMMANDS TO CHECK THE WHOLE TOPOLOGY
+            # NEED TO ESTABLISH SSH CONNECTIONS
+            check_status(dictionary_dev, lang_expressions)
+
+
 
             # leaving main part of script after configuration
             running_flag = False
