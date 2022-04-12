@@ -8,6 +8,7 @@ import os
 from datetime import datetime
 
 from config.data import ie2000, ie4010, decorator_1, commands_list
+from lib.network import ssh_download
 
 # sending commands to console
 def send_to_console(ser_fun: Serial, command: str, wait_time: float = 0.2):

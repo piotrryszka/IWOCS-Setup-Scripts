@@ -541,3 +541,6 @@ Now this device is being configured:
 TDS-1_A -> 172.30.100.10 <------>show tech
  
  
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: 
