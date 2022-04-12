@@ -59,7 +59,8 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                               'check_ping': "If the fields are empty, check the connection manually by yourself.",
                               'no_con_dev': "Sorry, this device is unavailable:",
                               'info_ver': "If field 'New Version' is empty, check if you downloaded new versions of software into /FIRMWARE folder.",
-                              'project_conf': "Now the projects configs are downloaded to the devices.",
+                              'project_conf': "Now the projects configs are downloaded to the network devices.",
+                              'download_com': "We are moving into collecting outputs from already configured network devices!",
 
 
                               },
@@ -123,6 +124,7 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                                'no_con_dev': "Something in Norwegian language ",
                                'info_ver': "Something in Norwegian language ",
                                'project_conf': "Something in Norwegian language ",
+                               'download_com': "Something in Norwegian language ",
 
                                },
                         'Fr': {'information_prompt': 'Something in French language ',
@@ -185,6 +187,7 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                                'no_con_dev': "Something in French language ",
                                'info_ver': "Something in French language ",
                                'project_conf': "Something in French language ",
+                               'download_com': "Something in French language ",
 
                        }
                        }

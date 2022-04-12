@@ -436,6 +436,7 @@ while running_flag:
             print(lang_expressions['project_conf'])
             print(decorator_1)
             print("................................")
+            print(decorator_1)
 
             # SSH CONFIGURATION LOOP
             while ssh_flag and working_tftp:
@@ -462,6 +463,9 @@ while running_flag:
             # TODO:
             # HERE WORKING ON COMMANDS TO CHECK THE WHOLE TOPOLOGY
             # NEED TO ESTABLISH SSH CONNECTIONS
+            print(lang_expressions['download_com'])
+            print(decorator_1)
+
             check_status(dictionary_dev, lang_expressions)
 
 
