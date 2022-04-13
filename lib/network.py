@@ -5,7 +5,7 @@ from netmiko import ConnectHandler, NetmikoTimeoutException, NetmikoAuthenticati
 from time import sleep
 from datetime import datetime
 
-from config.data import password, username, decorator_1, server_ip
+from config.data import password, username, decorator_1, server_ip, commands_list
 
 # establishing SSH connection and downloading project configs
 def ssh_con(file, host):
@@ -54,7 +54,7 @@ def ssh_con(file, host):
             print(decorator_1)
 
 # sending commands to download input from devices
-def ssh_download(file, host, command_list):
+def ssh_download(host, device, command):
     # creating time stamp
     now = datetime.now()
     date_time = now.strftime("%m/%d/%Y")
@@ -64,33 +64,31 @@ def ssh_download(file, host, command_list):
     # configuration of network device
     cisco1 = {
         "device_type": f"cisco_ios",
+#         "device_type": f"autodetect",
         "host": f"{host}",
         "username": f"{username}",
         "password": f'{password}',
         # session logger
-        "session_log": f"logs/project_logs/{file}_{host}_{dateStr}.txt"
+#         "session_log": f"logs/project_logs/{device}_{host}_{dateStr}.txt"
     }
     with ConnectHandler(**cisco1) as net_connect:
         try:
-            # loop for sending commands
-            for command in command_list:
-                # assigning command to sending command
-                our_command = command
+            # assigning command to sending command
+            our_command = command
 
-                # TODO: need to add some variable to catch output from commands
-                # command sends to network device
-                net_connect.send_command_timing(our_command, cmd_verify=False)
+            print(our_command, host, device)
+            # sending 'enter' to clear CLI window
+            net_connect.send_command('\n', cmd_verify=False)
 
-                # waiting for download whole input
-                sleep(1)
+            # command sent to network device
+            command_output = net_connect.send_command(our_command, cmd_verify=False)
 
-                # sending confirmation of tftp copy
-                net_connect.send_command_timing('\n', cmd_verify=False)
+            print(str(command_output))
 
-                # waiting to give time to device react
-                sleep(1)
+            # waiting to give time to device react
+            sleep(1)
 
-         # error handling while ssh connection
+        # error handling while ssh connection
         except (NetmikoTimeoutException, NetmikoAuthenticationException) as error:
             print(error)
             print(decorator_1)

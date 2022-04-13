@@ -42,6 +42,3 @@
 #    pass
 #
 # # NEED TO FINISH THREADS AS WELL
-
-from config.data import commands_list
-print(commands_list)

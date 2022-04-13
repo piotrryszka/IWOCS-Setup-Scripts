@@ -1,0 +1,5 @@
+terminal width 511
+[msztaba@pluton ~]$ terminal width 511
+-bash: terminal: command not found
+[msztaba@pluton ~]$ 
+[msztaba@pluton ~]$ exit

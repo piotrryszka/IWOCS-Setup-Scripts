@@ -10,7 +10,7 @@ from lib.languages import listing_languages, reading_language
 from lib.logging import *
 from lib.network import ssh_con, ssh_download
 from lib.functions import printing_logs, creating_timestamp, start_tftp, user_tftp, final_tftp, check_com, order_dev, list_dev, create_table, kill_tftp, kill_putty, create_table_ver, add_row_ver, prepare_software, check_ping
-from config.data import ip_number, decorator_1, device_order, id_number
+from config.data import ip_number, decorator_1, device_order, id_number, commands_list
 
 
 # Program flags:
@@ -464,9 +464,28 @@ while running_flag:
             # HERE WORKING ON COMMANDS TO CHECK THE WHOLE TOPOLOGY
             # NEED TO ESTABLISH SSH CONNECTIONS
             print(lang_expressions['download_com'])
+            print("................................")
             print(decorator_1)
 
-            check_status(dictionary_dev, lang_expressions)
+            # TODO:
+            # CAN BE DELETED LATER
+#             check_status(dictionary_dev, lang_expressions)
+
+            # loop to send commands to every ip address and device
+            for k in reversed(dictionary_dev.keys()):
+                for command in commands_list:
+                    print(lang_expressions['collect_data'])
+                    print(f"IP: {dictionary_dev[k]['ip']}, Device: {dictionary_dev[k]['device']}, Command: {command}")
+                    print(decorator_1)
+                    try:
+                        ssh_download(host = dictionary_dev[k]['ip'], device = dictionary_dev[k]['device'], command = command)
+                    except:
+                        print(lang_expressions['no_con_dev'])
+                        print(f"{dictionary_dev[k]['device']} <--> {dictionary_dev[k]['ip']}")
+                        print(decorator_1)
+                    finally:
+                        print("................................")
+                        print(decorator_1)
 
 
 

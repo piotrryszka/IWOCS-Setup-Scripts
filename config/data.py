@@ -25,6 +25,10 @@ decorator_1 = ' '
 # ssh connection data, needs to be properly imported into main.py when adding arguments
 username = 'walter'
 password = 'mel0n98'
+# TODO: DELETE IT
+# username = 'msztaba'
+# password = '098azerty@MS'
+
 
 # IP address of tftp server -> user computer
 server_ip = '172.30.100.91'

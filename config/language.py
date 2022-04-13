@@ -61,6 +61,7 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                               'info_ver': "If field 'New Version' is empty, check if you downloaded new versions of software into /FIRMWARE folder.",
                               'project_conf': "Now the projects configs are downloaded to the network devices.",
                               'download_com': "We are moving into collecting outputs from already configured network devices!",
+                              'collect_data': "Collecting data from this network device by SSH connection with this command:",
 
 
                               },
@@ -125,6 +126,7 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                                'info_ver': "Something in Norwegian language ",
                                'project_conf': "Something in Norwegian language ",
                                'download_com': "Something in Norwegian language ",
+                               'collect_data': "Something in Norwegian language ",
 
                                },
                         'Fr': {'information_prompt': 'Something in French language ',
@@ -188,6 +190,7 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                                'info_ver': "Something in French language ",
                                'project_conf': "Something in French language ",
                                'download_com': "Something in French language ",
+                               'collect_data': "Something in French language ",
 
                        }
                        }
