@@ -63,7 +63,6 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                               'download_com': "We are moving into collecting outputs from already configured network devices!",
                               'collect_data': "Collecting data from this network device by SSH connection with this command:",
 
-
                               },
                         'No': {'information_prompt': 'Something in Norwegian language ',
                                'module_question': 'Something in Norwegian language ',

@@ -463,6 +463,7 @@ while running_flag:
 
             # project configs downloaded, now collecting data from devices
             print(lang_expressions['download_com'])
+            print(decorator_1)
             print("................................")
             print(decorator_1)
 

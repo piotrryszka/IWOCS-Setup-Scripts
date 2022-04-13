@@ -12,4 +12,5 @@
 | 7  |  MSH-2  | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
 | 8  |  MSH-3  | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
 | 9  |  MSH-4  | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
+| 10 | SDG-1_A | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | permanent  | OK |
 +----+---------+---------------------------+------------+--------------+------------+----+
