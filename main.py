@@ -3,7 +3,7 @@ import sys
 from serial import Serial
 from time import sleep
 
-from lib.commands import send_to_console, checking_switch_ports, checking_ip_address, checking_device, check_tftp, to_conf_mode, check_status
+from lib.commands import send_to_console, checking_switch_ports, checking_ip_address, checking_device, check_tftp, to_conf_mode
 from lib.operations import opening_device_list, reading_conf_files, creating_proper_configuration, deleting_files, deleting_conf, saving_dev, list_saved_dev, saving_license, saving_info_lic, reading_license, deleting_dev_logs, deleting_dev_license, download_license, sh_version, read_version, saving_ver_table, add_ip, saving_ping_table
 from lib.booting import checking_booting
 from lib.languages import listing_languages, reading_language
@@ -381,9 +381,10 @@ while running_flag:
             # TODO:
             # praca nad wgrywaniem softu po tftp do roznych urzadzen
             # tutaj bedzie tworzona ta lista, mozna przesunac pozniej, ale to przed wgrywaniem konfigu projektowego trzeba bedzie robic
-            for element in update_list:
-                # JAKIES WATKI PODODAWAC
-                print(f'Now upgrading software in {element[1]} device with this IP address {element[-1]}!')
+            if len(update_list)>0:
+                for element in update_list:
+                    # JAKIES WATKI PODODAWAC
+                    print(f'Now upgrading software in {element[1]} device with this IP address {element[-1]}!')
 
 #             checking ip address is correctly set
 #             while ip_flag == False:
@@ -460,16 +461,10 @@ while running_flag:
                 # changing ssh_flag to False to leave the loop
                 ssh_flag = False
 
-            # TODO:
-            # HERE WORKING ON COMMANDS TO CHECK THE WHOLE TOPOLOGY
-            # NEED TO ESTABLISH SSH CONNECTIONS
+            # project configs downloaded, now collecting data from devices
             print(lang_expressions['download_com'])
             print("................................")
             print(decorator_1)
-
-            # TODO:
-            # CAN BE DELETED LATER
-#             check_status(dictionary_dev, lang_expressions)
 
             # loop to send commands to every ip address and device
             for k in reversed(dictionary_dev.keys()):
@@ -486,8 +481,6 @@ while running_flag:
                     finally:
                         print("................................")
                         print(decorator_1)
-
-
 
             # leaving main part of script after configuration
             running_flag = False

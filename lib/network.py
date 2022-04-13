@@ -1,4 +1,4 @@
-# SSH CONNECTION
+# SSH CONNECTIONS
 
 # imports
 from netmiko import ConnectHandler, NetmikoTimeoutException, NetmikoAuthenticationException
@@ -64,26 +64,29 @@ def ssh_download(host, device, command):
     # configuration of network device
     cisco1 = {
         "device_type": f"cisco_ios",
-#         "device_type": f"autodetect",
         "host": f"{host}",
         "username": f"{username}",
         "password": f'{password}',
         # session logger
-#         "session_log": f"logs/project_logs/{device}_{host}_{dateStr}.txt"
+        "session_log": f"logs/project_logs/{device}_{host}_{dateStr}.txt"
     }
     with ConnectHandler(**cisco1) as net_connect:
         try:
             # assigning command to sending command
             our_command = command
 
-            print(our_command, host, device)
             # sending 'enter' to clear CLI window
             net_connect.send_command('\n', cmd_verify=False)
 
             # command sent to network device
             command_output = net_connect.send_command(our_command, cmd_verify=False)
 
-            print(str(command_output))
+            # replacing spaces in command with - char
+            command = command.replace(' ', '-')
+
+            # opening file and saving an output to the file
+            with open(f'support/show-tech/{device}___{command}___{dateStr}.txt', 'w') as file:
+                file.write(e)
 
             # waiting to give time to device react
             sleep(1)

@@ -1,5 +1,5 @@
 !
-hostname TDS-1_B
+hostname TAS-1
 !
 !
 logging buffered 16384 informational

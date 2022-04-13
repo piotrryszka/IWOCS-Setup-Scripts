@@ -119,12 +119,3 @@ def to_conf_mode(ser_port):
     commands_list = ['en', 'conf t']
     for com in commands_list:
         send_to_console(ser_port, com)
-
-#TODO: Need to add some new shh connection
-# sending commands from list to check the status of topology
-def check_status(dictionary_dev, lang_expressions):
-    for k in reversed(dictionary_dev.keys()):
-        for command in commands_list:
-                    print(lang_expressions['now_device'])
-                    print(f"{dictionary_dev[k]['device']} -> {dictionary_dev[k]['ip']} <------> {command}")
-                    print(decorator_1)

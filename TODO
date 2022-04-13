@@ -9,7 +9,6 @@ TODO NEXT
 pozmieniac tam z dwukropkiem, splitowanie przy samym dzialaniu na txt plikach dla licencji
 dorobienie tego zeby uzytkownik mogl sobie wybrac ktore rzeczy chce wgrac, zupgradeowac wersje softu
 hub ip zawsze taki sam JAKI TEN ADRES?
-dodac kolejna funkcje sluzaca do polaczen po ssh, aby mozna sie polaczyc i wgrac te komendy + obsluga jej w innej funkcji
 
 TODO WIELOWATKOWOSC
 https://www.tutorialspoint.com/python3/python_multithreading.htm
