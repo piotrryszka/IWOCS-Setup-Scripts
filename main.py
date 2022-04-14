@@ -9,7 +9,7 @@ from lib.booting import checking_booting
 from lib.languages import listing_languages, reading_language
 from lib.logging import *
 from lib.network import ssh_con, ssh_download
-from lib.functions import printing_logs, creating_timestamp, start_tftp, user_tftp, final_tftp, check_com, order_dev, list_dev, create_table, kill_tftp, kill_putty, create_table_ver, add_row_ver, prepare_software, check_ping
+from lib.functions import printing_logs, creating_timestamp, start_tftp, user_tftp, final_tftp, check_com, order_dev, list_dev, create_table, kill_tftp, kill_putty, create_table_ver, add_row_ver, prepare_software, check_ping, check_license
 from config.data import ip_number, decorator_1, device_order, id_number, commands_list
 
 
@@ -241,13 +241,9 @@ while running_flag:
                             type_string = 'permanent'
                             ipservices_string = 'ipservices'
 
-                            # TODO: NEEDS TESTING
-                            # NEED TO BE MOVE
+
                             # checking proper configuration license for IE4010
-                            if state_string == 'Active, In Use' and type_string == 'permanent' and ipservices_string == 'ipservices':
-                                ok_not = 'OK'
-                            else:
-                                ok_not = "NOT-OK"
+                            ok_not = check_license(udi, state_string, type_string, ipservices_string)
 
 
                             print(decorator_1)

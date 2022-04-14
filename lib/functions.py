@@ -221,3 +221,13 @@ def check_ping(lang_dict):
     print(tb)
     # returning table to save it to file
     return tb
+
+
+# function to test correctness of licenses of different network devices
+def check_license(udi, state_string, type_string, ipservices_string):
+    # checking for IE4010
+    if state_string == 'Active, In Use' and type_string == 'permanent' and ipservices_string == 'ipservices':
+        ok_not = 'OK'
+    else:
+        ok_not = "NOT-OK"
+    return ok_not
