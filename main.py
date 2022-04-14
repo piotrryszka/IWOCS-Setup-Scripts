@@ -9,7 +9,7 @@ from lib.booting import checking_booting
 from lib.languages import listing_languages, reading_language
 from lib.logging import *
 from lib.network import ssh_con, ssh_download
-from lib.functions import printing_logs, creating_timestamp, start_tftp, user_tftp, final_tftp, check_com, order_dev, list_dev, create_table, kill_tftp, kill_putty, create_table_ver, add_row_ver, prepare_software, check_ping, check_license
+from lib.functions import printing_logs, creating_timestamp, start_tftp, user_tftp, final_tftp, check_com, order_dev, list_dev, create_table, kill_tftp, kill_putty, create_table_ver, add_row_ver, prepare_software, check_ping, check_license, create_dir
 from config.data import ip_number, decorator_1, device_order, id_number, commands_list
 
 
@@ -467,6 +467,8 @@ while running_flag:
 
             # loop to send commands to every ip address and device
             for k in reversed(dictionary_dev.keys()):
+                # creating directories for different files
+                create_dir(dictionary_dev[k]['device'], lang_expressions)
                 for command in commands_list:
                     print(lang_expressions['collect_data'])
                     print(f"IP: {dictionary_dev[k]['ip']}, Device: {dictionary_dev[k]['device']}, Command: {command}")

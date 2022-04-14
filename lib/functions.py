@@ -235,3 +235,16 @@ def check_license(udi, state_string, type_string, ipservices_string):
         ok_not = "NOT-OK"
     # returning variable tu put in the table
     return ok_not
+
+# function to create proper directories for different devices
+def create_dir(name_dev, lang_dict):
+    # create directories
+    dirName = name_dev
+    try:
+        # create target Directory
+        os.mkdir(f'support/show-tech/{dirName}')
+    # error handling
+    except FileExistsError:
+        print(lang_dict['dir_exists'] , dirName)
+    except:
+        print(lang_dict['unknown_error'])

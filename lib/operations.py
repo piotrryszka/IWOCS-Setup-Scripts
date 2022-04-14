@@ -162,8 +162,7 @@ def download_license(ser = 'COM1'):
     ipservices_string = ''
 
     try:
-        # waiting for the device to finish reading commands from initial config
-        print(".............................................")
+        # waiting for the device to finish reading commands from initial config, need to be tested how long it should be
         sleep(15)
 
         # sending two commands to go into privilege mode

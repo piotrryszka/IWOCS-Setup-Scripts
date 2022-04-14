@@ -62,6 +62,8 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                               'project_conf': "Now the projects configs are downloaded to the network devices.",
                               'download_com': "We are moving into collecting outputs from already configured network devices!",
                               'collect_data': "Collecting data from this network device by SSH connection with this command:",
+                              'dir_exists': "This directory already exists --> ",
+                              'unknown_error': "Unknown error, check the directories of script",
 
                               },
                         'No': {'information_prompt': 'Something in Norwegian language ',
@@ -126,6 +128,8 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                                'project_conf': "Something in Norwegian language ",
                                'download_com': "Something in Norwegian language ",
                                'collect_data': "Something in Norwegian language ",
+                               'dir_exists': "Something in Norwegian language ",
+                               'unknown_error': "Something in Norwegian language ",
 
                                },
                         'Fr': {'information_prompt': 'Something in French language ',
@@ -190,6 +194,8 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                                'project_conf': "Something in French language ",
                                'download_com': "Something in French language ",
                                'collect_data': "Something in French language ",
+                               'dir_exists': "Something in French language ",
+                               'unknown_error': "Something in French language ",
 
                        }
                        }
