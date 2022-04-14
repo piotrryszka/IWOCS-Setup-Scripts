@@ -86,7 +86,7 @@ def ssh_download(host, device, command):
 
             # opening file and saving an output to the file
             with open(f'support/{device}/{command}___{dateStr}.txt', 'w') as file:
-                file.write(e)
+                file.write(command_output)
 
             # waiting to give time to device react
             sleep(1)

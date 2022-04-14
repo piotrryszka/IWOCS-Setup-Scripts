@@ -246,5 +246,7 @@ def create_dir(name_dev, lang_dict):
     # error handling
     except FileExistsError:
         print(lang_dict['dir_exists'] , dirName)
+        print(decorator_1)
     except:
         print(lang_dict['unknown_error'])
+        print(decorator_1)

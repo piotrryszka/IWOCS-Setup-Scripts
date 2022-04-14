@@ -113,9 +113,9 @@ def saving_license(table):
     timeObj = dateTimeObj.time()
     dateStr = dateObj.strftime("%d.%m.%Y")
     timeStr = timeObj.strftime("%Hh-%Mm")
-    with open(f'support/license-check-{dateStr}-{timeStr}.txt', 'w') as f:
+    with open(f'support/info_tables/license-check-{dateStr}-{timeStr}.txt', 'w') as f:
         f.write(str(table))
-    return f'support/license-check-{dateStr}-{timeStr}.txt'
+    return f'support/info_tables/license-check-{dateStr}-{timeStr}.txt'
 
 # saving info about devices and their license to file
 def saving_info_lic(counter_table, user_device, udi, license, status, expiration, ok):
@@ -272,7 +272,7 @@ def saving_ver_table(table):
     timeObj = dateTimeObj.time()
     dateStr = dateObj.strftime("%d.%m.%Y")
     timeStr = timeObj.strftime("%Hh-%Mm")
-    with open(f'support/version-check-{dateStr}-{timeStr}.txt', 'w') as f:
+    with open(f'support/info_tables/version-check-{dateStr}-{timeStr}.txt', 'w') as f:
         f.write(str(table))
 
 # adding ip to the already configured devices to update software
@@ -294,5 +294,5 @@ def saving_ping_table(table):
     timeObj = dateTimeObj.time()
     dateStr = dateObj.strftime("%d.%m.%Y")
     timeStr = timeObj.strftime("%Hh-%Mm")
-    with open(f'support/ping-check-{dateStr}-{timeStr}.txt', 'w') as f:
+    with open(f'support/info_tables/ping-check-{dateStr}-{timeStr}.txt', 'w') as f:
         f.write(str(table))

@@ -12,4 +12,8 @@
 | 7  |  MSH-2  |          UNKNOWN          |  UNKNOWN   |   UNKNOWN    |   UNKNOWN   | UNKNOWN |
 | 8  |  MSH-3  |          UNKNOWN          |  UNKNOWN   |   UNKNOWN    |   UNKNOWN   | UNKNOWN |
 | 9  |  MSH-4  |          UNKNOWN          |  UNKNOWN   |   UNKNOWN    |   UNKNOWN   | UNKNOWN |
+| 10 | SDG-1_B |          UNKNOWN          |  UNKNOWN   |   UNKNOWN    |   UNKNOWN   | UNKNOWN |
+| 11 | SDG-1_A |          UNKNOWN          |  UNKNOWN   |   UNKNOWN    |   UNKNOWN   | UNKNOWN |
+| 12 | MSW-1_A |          UNKNOWN          |  UNKNOWN   |   UNKNOWN    |   UNKNOWN   | UNKNOWN |
+| 13 | MSW-1_B |          UNKNOWN          |  UNKNOWN   |   UNKNOWN    |   UNKNOWN   | UNKNOWN |
 +----+---------+---------------------------+------------+--------------+-------------+---------+

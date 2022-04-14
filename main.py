@@ -218,7 +218,7 @@ while running_flag:
 
                             # executing commands from the list
                             for command in stripped_list:
-#                                 send_to_console(ser, command)
+                                # send_to_console(ser, command)
                                 # printing dots to inform user that script is still working
                                 print('.', end='')
 
@@ -302,8 +302,8 @@ while running_flag:
                             print(lang_expressions['again_prompt'])
                             print(decorator_1)
                             # closing connection
-                            ser.close()
-                            print(f"{lang_expressions['close_con']}{ser.name}.")
+                            # ser.close()
+                            # print(f"{lang_expressions['close_con']}{ser.name}.")
                             print(decorator_1)
                             break
                             # TODO: UNCOMMENT
@@ -366,7 +366,7 @@ while running_flag:
             # not printing empty list
             if len(update_list) > 0:
                 print(lang_expressions['upd_dev'])
-                for x in range(0,len(update_list)):
+                for x in range(0, len(update_list)):
                     print(update_list[x][1], end = ', ')
                 print(decorator_1)
                 print(decorator_1)
