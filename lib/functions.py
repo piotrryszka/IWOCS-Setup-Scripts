@@ -228,6 +228,10 @@ def check_license(udi, state_string, type_string, ipservices_string):
     # checking for IE4010
     if state_string == 'Active, In Use' and type_string == 'permanent' and ipservices_string == 'ipservices':
         ok_not = 'OK'
+    # handling problem with reading one of the variables
+    elif state_string == 'UNKNOWN' or type_string == 'UNKNOWN' or ipservices_string == 'UNKNOWN':
+        ok_not = "UNKNOWN"
     else:
         ok_not = "NOT-OK"
+    # returning variable tu put in the table
     return ok_not

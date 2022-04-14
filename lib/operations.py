@@ -155,19 +155,22 @@ def deleting_dev_license():
             pass
 
 # collecting license data from device
-def download_license(ser):
+def download_license(ser = 'COM1'):
     # crating empty strings
     state_string = ''
     type_string = ''
     ipservices_string = ''
 
-    # waiting for the device to finish reading commands from initial config
-    print(".............................................")
-    sleep(15)
+    try:
+        # waiting for the device to finish reading commands from initial config
+        print(".............................................")
+        sleep(15)
 
-    # sending two commands to go into privilege mode
-    send_to_console(ser, '\n')
-    send_to_console(ser, 'en')
+        # sending two commands to go into privilege mode
+        send_to_console(ser, '\n')
+        send_to_console(ser, 'en')
+    except:
+        pass
 
     # try and except to not fail during the script and arguments
 

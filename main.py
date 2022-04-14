@@ -224,22 +224,24 @@ while running_flag:
 
                             print(decorator_1)
 
+                            # TODO: UNCOMMENT IT
                             # checking info about license on the device
                             # returning tuple with our data
 #                             license_data = download_license(ser)
-#                             print(license_data)
+                            license_data = download_license()
 
                             # TODO: UNCOMMENT
                             # reading license data to variables use to fill txt file
-#                             udi = license_data[0]
-#                             state_string = license_data[1]
-#                             type_string = license_data[2]
-#                             ipservices_string = license_data[3]
+                            udi = license_data[0]
+                            state_string = license_data[1]
+                            type_string = license_data[2]
+                            ipservices_string = license_data[3]
 
-                            udi = ' IE-4010-4S24P:FDO2250U0AV'
-                            state_string = 'Active, In Use'
-                            type_string = 'permanent'
-                            ipservices_string = 'ipservices'
+#                           # testing variables (delete it later)
+#                             udi = ' IE-4010-4S24P:FDO2250U0AV'
+#                             state_string = 'Active, In Use'
+#                             type_string = 'permanent'
+#                             ipservices_string = 'ipservices'
 
 
                             # checking proper configuration license for IE4010
