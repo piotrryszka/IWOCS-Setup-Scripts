@@ -128,7 +128,7 @@ while running_flag:
                         # deleting already configured devices from available devices to be chosen by the user
                         # simple handling exceptions
                         try:
-                            for key in (dictionary_dev):
+                            for key in dictionary_dev:
                                 conf_devices_list.append(dictionary_dev[key]['device'])
                             for x in conf_devices_list:
                                 if x in device_list:
@@ -269,6 +269,7 @@ while running_flag:
 #                             sh_version(ser)
 
                             # saving prepared data to txt, later will be prepared table report with it
+                            # TUTAJ ROBOTA
                             read_version(id_number, user_device)
 
                             # TESTING

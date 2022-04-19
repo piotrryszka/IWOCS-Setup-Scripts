@@ -9,4 +9,5 @@
 | 4  |  TAS-1  | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
 | 5  | SDG-1_B | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
 | 6  | SDG-1_A | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 7  |  MSC-1  | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
 +----+---------+---------+---------+---------+------------+---------+

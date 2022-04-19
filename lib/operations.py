@@ -295,7 +295,8 @@ def read_version(id, user_device):
     # TODO: dodac try itp
     # reading possible
     # change it later, because path would be different
-    files = os.listdir('firmware/ie4010')
+
+    files = os.listdir(f'firmware/{final_device}')
     # adding first file to an argument
     file = str(files[0])
     string_file = file
