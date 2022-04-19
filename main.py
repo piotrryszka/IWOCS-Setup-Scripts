@@ -178,20 +178,20 @@ while running_flag:
 
 
                         # setting COM connection
-#                         ser = Serial(COM_string, COM_speed)
+                        ser = Serial(COM_string, COM_speed)
 
                         # waiting for router/switch to boot
-#                         user_boot_flag = checking_booting(port = ser)
+                        user_boot_flag = checking_booting(port = ser)
 
                         # counting number of gigabit and fast ports
-#                         device_ports = checking_switch_ports(ser_port = ser)
+                        device_ports = checking_switch_ports(ser_port = ser)
 
                         # checking if device is really the device, which was wanted by user
-#                         proper_device = checking_device(ser_port = ser, user_device = user_device, lang_dict = lang_expressions)
+                        proper_device = checking_device(ser_port = ser, user_device = user_device, lang_dict = lang_expressions)
 
                         # returning next ip number and full name of configured device to download to specified device
-#                         our_conf = creating_proper_configuration(user_device = user_device, port_num = device_ports['Gigabit'], ip_add = ip_number)
-                        our_conf = creating_proper_configuration(user_device = user_device, port_num = 1, ip_add = ip_number)
+                        our_conf = creating_proper_configuration(user_device = user_device, port_num = device_ports['Gigabit'], ip_add = ip_number)
+                        # our_conf = creating_proper_configuration(user_device = user_device, port_num = 1, ip_add = ip_number)
 
                         # remembering old IP number, last octet is important to save to txt file
                         ip_save = ip_number
@@ -204,17 +204,13 @@ while running_flag:
                         with open('temp/ip_number.txt', 'w') as f:
                             f.write(str(ip_number))
 
-                        # TODO: DELETE IT
-                        user_boot_flag = True
-                        proper_device = True
-
                         if user_boot_flag and proper_device:
 
                             print(lang_expressions['not_configured'])
                             print(decorator_1)
 
                             # going to configuration mode
-#                             to_conf_mode(ser)
+                            to_conf_mode(ser)
 
                             # opening file with configuration
                             actual_device = actual_device
@@ -222,7 +218,7 @@ while running_flag:
 
                             # executing commands from the list
                             for command in stripped_list:
-                                # send_to_console(ser, command)
+                                send_to_console(ser, command)
                                 # printing dots to inform user that script is still working
                                 print('.', end='')
 
@@ -231,8 +227,8 @@ while running_flag:
                             # TODO: UNCOMMENT IT
                             # checking info about license on the device
                             # returning tuple with our data
-#                             license_data = download_license(ser)
-                            license_data = download_license()
+                            license_data = download_license(ser)
+                            # license_data = download_license()
 
                             # TODO: UNCOMMENT
                             # reading license data to variables use to fill txt file
@@ -241,16 +237,8 @@ while running_flag:
                             type_string = license_data[2]
                             ipservices_string = license_data[3]
 
-#                           # testing variables (delete it later)
-#                             udi = ' IE-4010-4S24P:FDO2250U0AV'
-#                             state_string = 'Active, In Use'
-#                             type_string = 'permanent'
-#                             ipservices_string = 'ipservices'
-
-
                             # checking proper configuration license for IE4010
                             ok_not = check_license(udi, state_string, type_string, ipservices_string)
-
 
                             print(decorator_1)
 
@@ -266,7 +254,7 @@ while running_flag:
                                 pass
 
                             # sending command to switch with sh version
-#                             sh_version(ser)
+                            sh_version(ser)
 
                             # saving prepared data to txt, later will be prepared table report with it
                             # TUTAJ ROBOTA
@@ -281,9 +269,9 @@ while running_flag:
                                 f.write(str(id_number))
 
                             # closing connection
-#                             ser.close()
+                            ser.close()
                             print(f"{lang_expressions['proper_conf']}{user_device}.")
-#                             print(f"{lang_expressions['close_con']}{ser.name}.")
+                            print(f"{lang_expressions['close_con']}{ser.name}.")
                             print(decorator_1)
                             print('---------------------------------------------------')
                             print(decorator_1)
@@ -306,9 +294,10 @@ while running_flag:
                             print(lang_expressions['start_conf'])
                             print(lang_expressions['again_prompt'])
                             print(decorator_1)
+
                             # closing connection
-                            # ser.close()
-                            # print(f"{lang_expressions['close_con']}{ser.name}.")
+                            ser.close()
+                            print(f"{lang_expressions['close_con']}{ser.name}.")
                             print(decorator_1)
                             break
                             # TODO: UNCOMMENT
@@ -390,6 +379,8 @@ while running_flag:
             # going to ssh connections
             print(lang_expressions['ssh_move'])
             print(decorator_1)
+
+            # TODO: UNCOMMENT CHECKING COM CONNECTION
 #             checking ip address is correctly set
 #             while ip_flag == False:
 #                 ip_set = checking_ip_address(lang_dict = lang_expressions)
@@ -421,7 +412,6 @@ while running_flag:
             print(lang_expressions['waiting_ssh'])
             print(decorator_1)
 
-            # TODO: PING CHECK, TABLE WITH IT
             # checking if all devices can ping each other
             ping_table = check_ping(lang_expressions)
 
@@ -430,7 +420,6 @@ while running_flag:
 
             # printing information what to do if the table is not correct
             print(lang_expressions['check_ping'])
-
 
             # need to be done again to actualize the dictionary
             order_dict = list_saved_dev()
