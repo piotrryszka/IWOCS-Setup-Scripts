@@ -292,10 +292,9 @@ def read_version(id, user_device):
                         x = x[1].split('-')
                         # printing device model
                         final_device = x[0]
-    # TODO: dodac try itp
+
     # reading possible
     # change it later, because path would be different
-
     files = os.listdir(f'firmware/{final_device}')
     # adding first file to an argument
     file = str(files[0])

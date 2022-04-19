@@ -488,7 +488,6 @@ while running_flag:
         print(lang_expressions['not_complete'])
         running_flag = False
 
-
 # LAST COMMANDS IN SCRIPT
 # deleting all user-configuration files created while the script was running
 print(decorator_1)
