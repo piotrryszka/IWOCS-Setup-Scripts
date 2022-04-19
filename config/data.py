@@ -1,8 +1,8 @@
 # CONFIGURATION PACKAGE with data, variables etc.
 
 # devices possible to be ie2000
-ie2000 = ['TAS-1', 'MSC-1', 'MSH-1', 'MSH-2', 'MSH-3', 'MSH-4', 'MSW-1_A', 'MSW-1_B', 'MSX-1_A','MSX-1_B',
-              'MSY-1_A', 'MSY-1_B', 'MSS-1_A', 'MSS-1_B'  ]
+ie2000 = ['TAS-1', 'MSC-1', 'MSH-1', 'MSH-2', 'MSH-3', 'MSH-4', 'MSW-1_A', 'MSW-1_B', 'MSX-1_A', 'MSX-1_B',
+          'MSY-1_A', 'MSY-1_B', 'MSS-1_A', 'MSS-1_B']
 
 # devices possible to be ie4010
 ie4010 = ['TDS-1_A', 'TDS-1_B']
@@ -42,4 +42,3 @@ commands_list = ['sh lldp nei', 'show tech']
 # TODO: ping it or do something with it whatever
 # adding ip address of hub to check ping
 ip_hub = '172.30.103.4'
-
