@@ -113,9 +113,9 @@ def saving_license(table):
     timeObj = dateTimeObj.time()
     dateStr = dateObj.strftime("%d.%m.%Y")
     timeStr = timeObj.strftime("%Hh-%Mm")
-    with open(f'support/info_tables/license-check-{dateStr}-{timeStr}.txt', 'w') as f:
+    with open(f'support/info_tables/license/license-check-{dateStr}-{timeStr}.txt', 'w') as f:
         f.write(str(table))
-    return f'support/info_tables/license-check-{dateStr}-{timeStr}.txt'
+    return f'support/info_tables/license/license-check-{dateStr}-{timeStr}.txt'
 
 # saving info about devices and their license to file
 def saving_info_lic(counter_table, user_device, udi, license, status, expiration, ok):
@@ -143,14 +143,53 @@ def deleting_dev_logs():
         except:
             pass
 
-# deleting table with licenses and their status for support
-def deleting_dev_license():
-    files = os.listdir('support')
+# deleting project logs
+def deleting_project_logs():
+    files = os.listdir('logs/project_logs')
     # deleting files
     for file in files:
         # cannot delete the file from today's date
         try:
-            os.remove(f'support/{file}')
+            os.remove(f'logs/project_logs/{file}')
+        except:
+            pass
+
+# deleting table with licenses and their status for support
+def deleting_dev_license():
+    files = os.listdir('support/info_tables/license')
+    # deleting files
+    for file in files:
+        # cannot delete the file from today's date
+        try:
+            os.remove(f'support/info_tables/license/{file}')
+            os.remove(f'support/info_tables/license/{file}')
+            os.remove(f'support/info_tables/license/{file}')
+        except:
+            pass
+
+# deleting tables with versions tables
+def deleting_dev_version():
+    files = os.listdir('support/info_tables/version')
+    # deleting files
+    for file in files:
+        # cannot delete the file from today's date
+        try:
+            os.remove(f'support/info_tables/version/{file}')
+            os.remove(f'support/info_tables/version/{file}')
+            os.remove(f'support/info_tables/version/{file}')
+        except:
+            pass
+
+# deleting tables with ping tables
+def deleting_dev_ping():
+    files = os.listdir('support/info_tables/ping')
+    # deleting files
+    for file in files:
+        # cannot delete the file from today's date
+        try:
+            os.remove(f'support/info_tables/ping/{file}')
+            os.remove(f'support/info_tables/ping/{file}')
+            os.remove(f'support/info_tables/ping/{file}')
         except:
             pass
 
@@ -272,7 +311,7 @@ def saving_ver_table(table):
     timeObj = dateTimeObj.time()
     dateStr = dateObj.strftime("%d.%m.%Y")
     timeStr = timeObj.strftime("%Hh-%Mm")
-    with open(f'support/info_tables/version-check-{dateStr}-{timeStr}.txt', 'w') as f:
+    with open(f'support/info_tables/version/version-check-{dateStr}-{timeStr}.txt', 'w') as f:
         f.write(str(table))
 
 # adding ip to the already configured devices to update software
@@ -294,5 +333,5 @@ def saving_ping_table(table):
     timeObj = dateTimeObj.time()
     dateStr = dateObj.strftime("%d.%m.%Y")
     timeStr = timeObj.strftime("%Hh-%Mm")
-    with open(f'support/info_tables/ping-check-{dateStr}-{timeStr}.txt', 'w') as f:
+    with open(f'support/info_tables/ping/ping-check-{dateStr}-{timeStr}.txt', 'w') as f:
         f.write(str(table))

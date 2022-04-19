@@ -178,6 +178,7 @@ def prepare_software(lang_dict):
                 for x in new_list:
                     if x[0] in user_dev_list:
                         update_list.append(x)
+            update_flag = False
         else:
             update_flag = False
     if counter == 0:

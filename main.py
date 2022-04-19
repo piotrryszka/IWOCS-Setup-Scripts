@@ -4,7 +4,7 @@ from serial import Serial
 from time import sleep
 
 from lib.commands import send_to_console, checking_switch_ports, checking_ip_address, checking_device, check_tftp, to_conf_mode
-from lib.operations import opening_device_list, reading_conf_files, creating_proper_configuration, deleting_files, deleting_conf, saving_dev, list_saved_dev, saving_license, saving_info_lic, reading_license, deleting_dev_logs, deleting_dev_license, download_license, sh_version, read_version, saving_ver_table, add_ip, saving_ping_table
+from lib.operations import opening_device_list, reading_conf_files, creating_proper_configuration, deleting_files, deleting_conf, saving_dev, list_saved_dev, saving_license, saving_info_lic, reading_license, deleting_dev_logs, deleting_dev_license, download_license, sh_version, read_version, saving_ver_table, add_ip, saving_ping_table, deleting_dev_ping, deleting_dev_version, deleting_project_logs
 from lib.booting import checking_booting
 from lib.languages import listing_languages, reading_language
 from lib.logging import *
@@ -71,8 +71,12 @@ while running_flag:
     user_del = input(lang_expressions['deleting_logs'])
     del_flag = deleting_files(lang_dict = lang_expressions, user_input = user_del)
     if user_del == '1':
+        # calling functions to delete support and logs files
         deleting_dev_license()
         deleting_dev_logs()
+        deleting_dev_version()
+        deleting_dev_ping()
+        deleting_project_logs()
     print(user_del)
     if del_flag == True:
         print(lang_expressions['del_info'])
@@ -369,21 +373,22 @@ while running_flag:
                 for x in range(0, len(update_list)):
                     print(update_list[x][1], end = ', ')
                 print(decorator_1)
-                print(decorator_1)
 
-            # going to ssh connections
-            print(lang_expressions['ssh_move'])
-            print(decorator_1)
 
             # updating software by tftp and LAN connections
             # TODO:
             # praca nad wgrywaniem softu po tftp do roznych urzadzen
             # tutaj bedzie tworzona ta lista, mozna przesunac pozniej, ale to przed wgrywaniem konfigu projektowego trzeba bedzie robic
-            if len(update_list)>0:
+            if len(update_list) > 0:
                 for element in update_list:
                     # JAKIES WATKI PODODAWAC
                     print(f'Now upgrading software in {element[1]} device with this IP address {element[-1]}!')
 
+            print(decorator_1)
+
+            # going to ssh connections
+            print(lang_expressions['ssh_move'])
+            print(decorator_1)
 #             checking ip address is correctly set
 #             while ip_flag == False:
 #                 ip_set = checking_ip_address(lang_dict = lang_expressions)
