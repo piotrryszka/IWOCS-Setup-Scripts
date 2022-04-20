@@ -460,6 +460,11 @@ while running_flag:
             print("................................")
             print(decorator_1)
 
+            # print('czekanko')
+            # for i in range(0,300):
+            #     sleep(1)
+            #     print('.', end='')
+
             # loop to send commands to every ip address and device
             for k in reversed(dictionary_dev.keys()):
                 # creating directories for different files

@@ -226,8 +226,9 @@ def check_ping(lang_dict):
 
 # function to test correctness of licenses of different network devices
 def check_license(udi, state_string, type_string, ipservices_string):
+    # TODO: need to add handling this one for IE2000
     # checking for IE4010
-    if state_string == 'Active,InUse' and type_string == 'PermanentRightToUse' and ipservices_string == 'ipservices':
+    if state_string == 'Active, In Use' and type_string == 'PermanentRightToUse' and ipservices_string == 'ipservices':
         ok_not = 'OK'
     # handling problem with reading one of the variables
     elif state_string == 'UNKNOWN' or type_string == 'UNKNOWN' or ipservices_string == 'UNKNOWN':

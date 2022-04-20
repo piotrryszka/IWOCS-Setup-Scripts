@@ -1,0 +1,18 @@
+sh license
+Index 1 Feature: ipservices     
+	Period left: Life time
+	License Type: PermanentRightToUse
+	License State: Active, In Use
+	License Priority: High
+	License Count: Non-Counted
+
+Index 2 Feature: lanbase        
+	Period left: Life time
+	License Type: PermanentRightToUse
+	License State: Active, Not in Use, EULA accepted
+	License Priority: High
+	License Count: Non-Counted
+
+
+TDS-1_A#
+TDS-1_A#
