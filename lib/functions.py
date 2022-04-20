@@ -134,7 +134,7 @@ def create_table_ver(lang_dict):
     # add headers
     tb.title = lang_dict['ver_table']
     tb.field_names = ["ID", "Name", "Model", "Current Version", "New Version"]
-    #returning table
+    # returning table
     return tb
 
 # adding rows in version table
