@@ -7,7 +7,7 @@ from prettytable import PrettyTable as pt
 import subprocess
 from pythonping import ping
 
-from config.data import decorator_1, count_ping
+from config.data import decorator_1, count_ping, ip_hub
 
 
 # printing accessible logs
@@ -252,3 +252,19 @@ def create_dir(name_dev, lang_dict):
     except:
         print(lang_dict['unknown_error'])
         print(decorator_1)
+
+# TODO: needs upgrading
+# pinging hub ip address
+def check_hub_ping():
+    ping_status = False
+    ping_output = ping(f'{ip_hub}', verbose=False, count=count_ping)
+    for response in ping_output:
+        # printing dots to console to make sure that something is happening in script
+        print('.', end='')
+        # checking if the ping was successful
+        if response.error_message == None:
+            # ping works, device could be reached
+            ping_status = True
+    # TODO: need to be done later
+    # returning status of ping
+    return ping_status

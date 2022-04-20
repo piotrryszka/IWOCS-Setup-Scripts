@@ -1,6 +1,6 @@
 # Config file with all languages and all prompts translated to proper language
 
-language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you want to leave any part of the program type 0 [zero] in your input!"',
+language_dictionary = {'En': {'information_prompt': 'IMPORTANT ISSUE!!!\nIf you want to leave any part of the program type 0 [zero] in your input!',
                               'module_question': "It is your system a complete one or it is just one module? \nType '1' if system complete, if not write anything else: ",
                               'port_question': "Which COM port are you using?\nType number of your COM port: ",
                               'device_question': "Which device do you want to connect? ",
@@ -23,7 +23,7 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                               'bad_conf_ip': "Bad info try again.",
                               'proper_device': "Device is chosen properly, let's continue...",
                               'bad_device': "You have chosen bad device, try again...",
-                              'deleting_logs': "Do you want to delete device logs, console logs and table with licenses, ping and versions for support team? If yes type '1', if not type anything else.\n",
+                              'deleting_logs': "Do you want to delete device logs, console logs and table with licenses, ping and versions for support team? If yes type '1', if not type anything else:\n",
                               'print_logs': "This is a list of all saved session logs: ",
                               'timestamp': "Creating current timestamp: ",
                               'ssh_failed': "Sorry, your SSH connection cannot be established...",
@@ -48,7 +48,7 @@ language_dictionary = {'En': {'information_prompt': '"IMPORTANT ISSUE!!!\nIf you
                               'now_device': "Now this device is being configured:",
                               'connect_cable': "Please connect all your devices by LAN cables!",
                               'conf_lic': 'Table with devices licenses',
-                              'putty_kill': "Type 1 if you want to try close PUTTY application, if not type anything else.\n",
+                              'putty_kill': "Type 1 if you want to try close PUTTY application, if not type anything else:\n",
                               'unknown_license': "In case of UKNNOWN, please turn on the Putty client and check the configuration manually.",
                               'ver_table': 'Table with device versions',
                               'ver_update': "If you want to download new versions of software type '1', anything else won't be accepted. ",

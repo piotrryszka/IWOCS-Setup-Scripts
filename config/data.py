@@ -43,4 +43,5 @@ commands_list = ['sh lldp nei', 'show tech']
 # adding ip address of hub to check ping
 ip_hub = '172.30.103.4'
 
+# counter of sends ICMP packets while checking LAN connection
 count_ping = 1

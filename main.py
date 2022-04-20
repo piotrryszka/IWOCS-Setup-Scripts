@@ -106,8 +106,6 @@ while running_flag:
                 # Creating string for connection to the device
                 COM_string = "COM" + user_COM
 
-                print(decorator_1)
-
                 # Creating a list with all the possible devices
                 device_list = opening_device_list(file_name = 'project_names_of_devices.txt')
 
@@ -381,11 +379,11 @@ while running_flag:
             print(decorator_1)
 
             # TODO: UNCOMMENT CHECKING COM CONNECTION
-#             checking ip address is correctly set
-#             while ip_flag == False:
-#                 ip_set = checking_ip_address(lang_dict = lang_expressions)
-#                 if ip_set == True:
-#                     ip_flag = True
+            # checking ip address is correctly set
+            while ip_flag == False:
+                ip_set = checking_ip_address(lang_dict = lang_expressions)
+                if ip_set == True:
+                    ip_flag = True
 
             print(decorator_1)
 
@@ -464,6 +462,8 @@ while running_flag:
             # for i in range(0,300):
             #     sleep(1)
             #     print('.', end='')
+
+            # TODO: NEED TO WORK ABOUT IT HERE
 
             # loop to send commands to every ip address and device
             for k in reversed(dictionary_dev.keys()):
