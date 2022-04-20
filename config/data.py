@@ -42,3 +42,5 @@ commands_list = ['sh lldp nei', 'show tech']
 # TODO: ping it or do something with it whatever
 # adding ip address of hub to check ping
 ip_hub = '172.30.103.4'
+
+count_ping = 1

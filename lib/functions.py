@@ -7,7 +7,7 @@ from prettytable import PrettyTable as pt
 import subprocess
 from pythonping import ping
 
-from config.data import decorator_1
+from config.data import decorator_1, count_ping
 
 
 # printing accessible logs
@@ -206,7 +206,7 @@ def check_ping(lang_dict):
             # splitting element in line
             new_strip = element.split(' ')
             # setting parameters to function, sending 1 ICMP packet
-            ping_output = ping(f'172.30.100.{new_strip[1]}', verbose=False, count = 1)
+            ping_output = ping(f'172.30.100.{new_strip[1]}', verbose=False, count = count_ping)
             for response in ping_output:
                 # printing dots to console to make sure that something is happening in script
                 print('.', end='')
@@ -227,7 +227,7 @@ def check_ping(lang_dict):
 # function to test correctness of licenses of different network devices
 def check_license(udi, state_string, type_string, ipservices_string):
     # checking for IE4010
-    if state_string == 'Active, In Use' and type_string == 'permanent' and ipservices_string == 'ipservices':
+    if state_string == 'Active,InUse' and type_string == 'PermanentRightToUse' and ipservices_string == 'ipservices':
         ok_not = 'OK'
     # handling problem with reading one of the variables
     elif state_string == 'UNKNOWN' or type_string == 'UNKNOWN' or ipservices_string == 'UNKNOWN':

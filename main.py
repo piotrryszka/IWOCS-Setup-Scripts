@@ -491,6 +491,5 @@ while running_flag:
 # LAST COMMANDS IN SCRIPT
 # deleting all user-configuration files created while the script was running
 print(decorator_1)
-# TODO: UNCOMMENT IT
-# deleting_conf(lang_dict = lang_expressions)
+deleting_conf(lang_dict = lang_expressions)
 
