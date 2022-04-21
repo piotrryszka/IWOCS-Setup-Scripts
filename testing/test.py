@@ -42,3 +42,6 @@
 #    pass
 #
 # # NEED TO FINISH THREADS AS WELL
+
+from config.data import dict_ip
+print(dict_ip)
