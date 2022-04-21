@@ -1,0 +1,193 @@
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  21/04/2022 08:53:03
+ 
+IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!
+ 
+This is a list of all saved session logs: 
+2022-04-20.txt, 2022-04-21.txt
+Do you want to delete device logs, console logs and table with licenses, ping and versions for support team? If yes type '1', if not type anything else:
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else:
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 4
+ 
+Which device do you want to connect? TDS-1_A
+ 
+Your list of possible devices to configure: 
+TDS-1_A
+ 
+ 
+You have chosen this configuration...
+COM4 ----> TDS-1_A
+Please wait patiently...
+ 
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+ 
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  21/04/2022 08:57:37
+ 
+IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!
+ 
+This is a list of all saved session logs: 
+2022-04-21.txt
+Do you want to delete device logs, console logs and table with licenses, ping and versions for support team? If yes type '1', if not type anything else:
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else:
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 4
+ 
+Which device do you want to connect? TDS-1_A
+ 
+Your list of possible devices to configure: 
+TDS-1_A
+ 
+ 
+You have chosen this configuration...
+COM4 ----> TDS-1_A
+Please wait patiently...
+ 
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+ 
+Your device has been configured properly ---> TDS-1_A.
+ 
+---------------------------------------------------
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 1
+ 
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
++-------------------------------------------------------------------+
+|                    Table with devices licenses                    |
++----+---------+---------+---------+---------+------------+---------+
+| ID |  Device |   UDI   | License |  Status | Expiration |    OK   |
++----+---------+---------+---------+---------+------------+---------+
+| 1  | TDS-1_A | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
++----+---------+---------+---------+---------+------------+---------+
+In case of UKNNOWN, please turn on the Putty client and check the configuration manually.
+ 
++-------------------------------------------------------+
+|               Table with device versions              |
++----+---------+--------+-----------------+-------------+
+| ID |   Name  | Model  | Current Version | New Version |
++----+---------+--------+-----------------+-------------+
+| 1  | TDS-1_A | ie4010 |      Image      |   15.9(e4)  |
++----+---------+--------+-----------------+-------------+
+If field 'New Version' is empty, check if you downloaded new versions of software into /FIRMWARE folder.
+ 
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. 1
+ 
+Which device do you want to update? Type ID numbers from table above: 1
+ 
+List of devices to have updated software:
+TDS-1_A,  
+Now upgrading software in TDS-1_A device with this IP address 172.30.100.10!
+ 
+Now is the time to download project configs by SSH connections ...
+ 
+ 
+Please set your ip address on LAN connection to 172.30.100.91/24. Take your time...
+ 
+If you are ready and your ip address is set, please type in '1' in console. 1
+ 
+Check once again your IP address and your port...
+ 
+Please set your ip address on LAN connection to 172.30.100.91/24. Take your time...
+ 
+If you are ready and your ip address is set, please type in '1' in console. 1
+ 
+Check once again your IP address and your port...
+ 
+Please set your ip address on LAN connection to 172.30.100.91/24. Take your time...
+ 
+If you are ready and your ip address is set, please type in '1' in console. 1
+ 
+Check once again your IP address and your port...
+ 
+Please set your ip address on LAN connection to 172.30.100.91/24. Take your time...
+ 
+If you are ready and your ip address is set, please type in '1' in console. Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  21/04/2022 09:04:32
+ 
+IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!
+ 
+This is a list of all saved session logs: 
+2022-04-21.txt
+Do you want to delete device logs, console logs and table with licenses, ping and versions for support team? If yes type '1', if not type anything else:
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else:
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 4
+ 
+Which device do you want to connect? TDS-1_A
+ 
+Your list of possible devices to configure: 
+TDS-1_A
+ 
+ 
+You have chosen this configuration...
+COM4 ----> TDS-1_A
+Please wait patiently...
+ 
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+ 
+Cisco IOS Software, IE4010  Software (IE4010-UNIVERSALK9-M), Version 15.2(4)EC2 RELEASE SOFTWARE (fc1)
+
+BOOTLDR: IE4010  Boot Loader (IE4010-HBOOT-M) Version 15.2(4r)EC, RELEASE SOFTWRE (fc1)
+
+Version ID                      : V01
+
+Switch Ports Model                     SW Version            SW Image
+
+Your device has been configured properly ---> TDS-1_A.
+ 
+---------------------------------------------------
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 
