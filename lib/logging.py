@@ -5,6 +5,7 @@ import sys
 import logging
 from datetime import datetime
 
+
 class Logger(object):
     # creating time stamp
     exact_time = datetime.date(datetime.now())
@@ -23,6 +24,6 @@ class Logger(object):
     def flush(self):
         pass
 
-# catching every line from console
-sys.stdout = Logger(stream=sys.stdout)
 
+# catching every line from user console
+sys.stdout = Logger(stream=sys.stdout)

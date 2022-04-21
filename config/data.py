@@ -19,8 +19,9 @@ Ir829 = ['TIR']
 # starting ip number if there is no txt file with current ip address
 ip_number = 10
 
-# decorator for better user experience
+# decorators for better user experience
 decorator_1 = ' '
+decorator_2 = '................................'
 
 # ssh connection data, needs to be properly imported into main.py when adding arguments
 username = 'walter'

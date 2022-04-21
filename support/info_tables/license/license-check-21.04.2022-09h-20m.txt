@@ -3,5 +3,5 @@
 +----+--------+---------+---------+---------+------------+---------+
 | ID | Device |   UDI   | License |  Status | Expiration |    OK   |
 +----+--------+---------+---------+---------+------------+---------+
-| 1  | TAS-1  | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 1  |  TIR   | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
 +----+--------+---------+---------+---------+------------+---------+

@@ -229,9 +229,6 @@ def download_license(ser = 'COM1'):
         with open("temp/license_console.txt", "w") as text_file:
             text_file.write(e)
 
-        # empty list
-        list_of_lists = []
-
         # reading temporary txt file
         with open('temp/license_console.txt', 'r') as f:
             counter =0
