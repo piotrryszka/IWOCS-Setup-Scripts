@@ -10,7 +10,7 @@ from lib.languages import listing_languages, reading_language
 from lib.logging import *
 from lib.network import ssh_con, ssh_download
 from lib.functions import printing_logs, creating_timestamp, start_tftp, user_tftp, final_tftp, check_com, order_dev, list_dev, create_table, kill_tftp, kill_putty, create_table_ver, add_row_ver, prepare_software, check_ping, check_license, create_dir
-from config.data import ip_number, decorator_1, device_order, id_number, commands_list, decorator_2
+from config.data import ip_number, decorator_1, device_order, id_number, commands_list, decorator_2, dict_ip
 
 
 # Program flags:
@@ -470,13 +470,13 @@ while running_flag:
                 create_dir(dictionary_dev[k]['device'], lang_expressions)
                 for command in commands_list:
                     print(lang_expressions['collect_data'])
-                    print(f"IP: {dictionary_dev[k]['ip']}, Device: {dictionary_dev[k]['device']}, Command: {command}")
+                    print(f"IP: {dict_ip[dictionary_dev[k]['device']]}, Device: {dictionary_dev[k]['device']}, Command: {command}")
                     print(decorator_1)
                     try:
-                        ssh_download(host = dictionary_dev[k]['ip'], device = dictionary_dev[k]['device'], command = command)
+                        ssh_download(host = dict_ip[dictionary_dev[k]['device']], device = dictionary_dev[k]['device'], command = command)
                     except:
                         print(lang_expressions['no_con_dev'])
-                        print(f"{dictionary_dev[k]['device']} <--> {dictionary_dev[k]['ip']}")
+                        print(f"{dictionary_dev[k]['device']} <--> {dict_ip[dictionary_dev[k]['device']]}")
                         print(decorator_1)
                     finally:
                         print(decorator_2)

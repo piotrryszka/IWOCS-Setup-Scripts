@@ -45,3 +45,7 @@
 
 from config.data import dict_ip
 print(dict_ip)
+
+for k in dict_ip:
+    ee = dict_ip.get(k)
+    print(ee)

@@ -60,7 +60,7 @@ language_dictionary = {'En': {'information_prompt': 'IMPORTANT ISSUE!!!\nIf you 
                               'no_con_dev': "Sorry, this device is unavailable:",
                               'info_ver': "If field 'New Version' is empty, check if you downloaded new versions of software into /FIRMWARE folder.",
                               'project_conf': "Now the projects configs are downloaded to the network devices.",
-                              'download_com': "We are moving into collecting outputs from already configured network devices!",
+                              'download_com': "We are moving into collecting outputs from already project configured network devices!",
                               'collect_data': "Collecting data from this network device by SSH connection with this command:",
                               'dir_exists': "This directory already exists --> ",
                               'unknown_error': "Unknown error, check the directories of script",
