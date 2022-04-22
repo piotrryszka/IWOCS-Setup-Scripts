@@ -9,7 +9,7 @@ from lib.booting import checking_booting
 from lib.languages import listing_languages, reading_language
 from lib.logging import *
 from lib.network import ssh_con, ssh_download
-from lib.functions import printing_logs, creating_timestamp, start_tftp, user_tftp, final_tftp, check_com, order_dev, list_dev, create_table, kill_tftp, kill_putty, create_table_ver, add_row_ver, prepare_software, check_ping, check_license, create_dir
+from lib.functions import printing_logs, creating_timestamp, start_tftp, user_tftp, final_tftp, check_com, order_dev, list_dev, create_table, kill_tftp, kill_putty, create_table_ver, add_row_ver, prepare_software, check_ping, check_license, create_dir, ping_projects
 from config.data import ip_number, decorator_1, device_order, id_number, commands_list, decorator_2, dict_ip
 
 
@@ -462,7 +462,9 @@ while running_flag:
             print(decorator_2)
             print(decorator_1)
 
-            # TODO: NEED TO WORK ABOUT IT HERE
+            # check ping connection
+            # loop to send commands to every ip address with configured devices
+            ping_projects(lang_expressions, dictionary_dev)
 
             # loop to send commands to every ip address and device
             for k in reversed(dictionary_dev.keys()):

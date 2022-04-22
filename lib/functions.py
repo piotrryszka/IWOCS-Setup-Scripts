@@ -7,7 +7,7 @@ from prettytable import PrettyTable as pt
 import subprocess
 from pythonping import ping
 
-from config.data import decorator_1, count_ping, ip_hub
+from config.data import decorator_1, count_ping, ip_hub, dict_ip
 
 
 # printing accessible logs
@@ -268,3 +268,44 @@ def check_hub_ping():
     # TODO: need to be done later
     # returning status of ping
     return ping_status
+
+# checking project config connection by ping
+def ping_projects(lang_dict, dict_dev):
+    # printing prompt what is done now
+    print(lang_dict['current_ping'])
+    # creating pretty table object and configuring it
+    tb = pt()
+    # adding name of columns
+    tb.field_names = ['Name of device', 'IP', 'Status']
+    # adding title to pretty table
+    tb.title = 'Checking connection to project configs'
+    for k in reversed(dict_dev.keys()):
+        # sending ping
+        ping_output = ping(f"{dict_ip[dict_dev[k]['device']]}", verbose=False, count=count_ping)
+        # printing dots to console to make sure that something is happening in script
+        print('.', end='')
+        for response in ping_output:
+            # printing dots to console to make sure that something is happening in script
+            print('.', end='')
+            # checking if the ping was successful
+            if response.error_message == None:
+                # ping works, device could be reached
+                ping_status = 'OK'
+            else:
+                ping_status = " "
+        tb.add_row([dict_dev[k]['device'], dict_ip[dict_dev[k]['device']], ping_status])
+    print(decorator_1)
+    print(decorator_1)
+    # printing tb table to console
+    print(tb)
+    print(lang_dict['check_ping'])
+    print(decorator_1)
+
+    # saving table to txt file
+    dateTimeObj = datetime.now()
+    dateObj = dateTimeObj.date()
+    timeObj = dateTimeObj.time()
+    dateStr = dateObj.strftime("%d.%m.%Y")
+    timeStr = timeObj.strftime("%Hh-%Mm")
+    with open(f'support/info_tables/ping_project/ping-project-check-{dateStr}-{timeStr}.txt', 'w') as f:
+        f.write(str(tb))

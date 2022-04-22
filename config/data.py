@@ -14,7 +14,7 @@ asa_fpr = ['SDG_A', 'SDG_B']
 C1111 = ['ETAS-1']
 
 # devices possible to be IR829
-Ir829 = ['TIR']
+Ir829 = ['TIR-1']
 
 # starting ip number if there is no txt file with current ip address
 ip_number = 10
@@ -31,7 +31,7 @@ password = 'mel0n98'
 server_ip = '172.30.100.91'
 
 # correct order of restarting devices
-device_order = ['TDS-1_A', 'TDS-1_B', 'SDG-1_A', 'SDG-1_B', 'TIR', 'ETAS-1', 'TAS-1', 'MSC-1', 'MSW-1_A', 'MSW-1_B',
+device_order = ['TDS-1_A', 'TDS-1_B', 'SDG-1_A', 'SDG-1_B', 'TIR-1', 'ETAS-1', 'TAS-1', 'MSC-1', 'MSW-1_A', 'MSW-1_B',
                 'MSX-1_A', 'MSX-1_B', 'MSY-1_A', 'MSY-1_B', 'MSS-1_A', 'MSS-1_B', 'MSH-1', 'MSH-2', 'MSH-3', 'MSH-4']
 
 # counter for correct ordering devices in table
