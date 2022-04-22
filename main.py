@@ -233,7 +233,6 @@ while running_flag:
                             # license_data = download_license(ser)
                             license_data = download_license()
 
-                            # TODO: UNCOMMENT
                             # reading license data to variables use to fill txt file
                             udi = license_data[0]
                             state_string = license_data[1]
@@ -456,15 +455,18 @@ while running_flag:
                 # changing ssh_flag to False to leave the loop
                 ssh_flag = False
 
+            # check ping connection
+            # loop to send commands to every ip address with configured devices
+            ping_projects(lang_expressions, dictionary_dev)
+
+            print(decorator_2)
+            print(decorator_1)
+
             # project configs downloaded, now collecting data from devices
             print(lang_expressions['download_com'])
             print(decorator_1)
             print(decorator_2)
             print(decorator_1)
-
-            # check ping connection
-            # loop to send commands to every ip address with configured devices
-            ping_projects(lang_expressions, dictionary_dev)
 
             # loop to send commands to every ip address and device
             for k in reversed(dictionary_dev.keys()):

@@ -17,7 +17,6 @@ def opening_device_list(file_name):
                         lines = file_devices.read()
                         list_of_lists = lines.splitlines()
                         return list_of_lists
-                        file_devices.close()
 
 # reading commands from files (add argument to make this happen)
 def reading_conf_files(file):

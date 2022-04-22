@@ -5,5 +5,5 @@
 +----+---------+---------+---------+---------+------------+---------+
 | 1  | TDS-1_A | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
 | 2  |  TIR-1  | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
-| 3  | SDG-1_B | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 3  | TDS-1_B | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
 +----+---------+---------+---------+---------+------------+---------+

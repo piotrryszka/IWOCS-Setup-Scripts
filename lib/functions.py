@@ -103,7 +103,7 @@ def create_table():
     tb = pt()
     # add headers
     tb.field_names = ["ID", "Device", "UDI", "License", "Status", "Expiration", "OK"]
-    #returning table
+    # returning table
     return tb
 
 # adding rows to our conf license table with devices
@@ -206,12 +206,12 @@ def check_ping(lang_dict):
             # splitting element in line
             new_strip = element.split(' ')
             # setting parameters to function, sending 1 ICMP packet
-            ping_output = ping(f'172.30.100.{new_strip[1]}', verbose=False, count = count_ping)
+            ping_output = ping(f'172.30.100.{new_strip[1]}', count=count_ping)
             for response in ping_output:
                 # printing dots to console to make sure that something is happening in script
                 print('.', end='')
                 # checking if the ping was successful
-                if response.error_message == None:
+                if response.error_message is None:
                     result = "OK"
                 else:
                     result = " "
@@ -257,12 +257,12 @@ def create_dir(name_dev, lang_dict):
 # pinging hub ip address
 def check_hub_ping():
     ping_status = False
-    ping_output = ping(f'{ip_hub}', verbose=False, count=count_ping)
+    ping_output = ping(f'{ip_hub}', count=count_ping)
     for response in ping_output:
         # printing dots to console to make sure that something is happening in script
         print('.', end='')
         # checking if the ping was successful
-        if response.error_message == None:
+        if response.error_message is None:
             # ping works, device could be reached
             ping_status = True
     # TODO: need to be done later
@@ -288,7 +288,7 @@ def ping_projects(lang_dict, dict_dev):
             # printing dots to console to make sure that something is happening in script
             print('.', end='')
             # checking if the ping was successful
-            if response.error_message == None:
+            if response.error_message is None:
                 # ping works, device could be reached
                 ping_status = 'OK'
             else:

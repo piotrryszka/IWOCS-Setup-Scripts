@@ -1,5 +1,5 @@
 !
-hostname SDG-1_B
+hostname TDS-1_B
 !
 !
 logging buffered 16384 informational

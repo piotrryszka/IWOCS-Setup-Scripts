@@ -8,10 +8,6 @@ w licencjach jezeli jest tak ipservices | Active,InUse | PermanentRightToUse to 
 TODO NEXT
 pozmieniac tam z dwukropkiem, splitowanie przy samym dzialaniu na txt plikach dla licencji
 obsluga tej wersji softu ulepszyc jutro, lepszy UX i musi byc przekazywanie co to za model, aby poprawnie wczytac jego mozliwa nowa wersje softu
-przesunac te kropki i zrobic kolejnego decoratora
-
-SSH ZBIERANIE WYNIKOW KOMEND, JAKI ADRES IP TAM MA BYĆ
-
 
 TODO WIELOWATKOWOSC
 https://www.tutorialspoint.com/python3/python_multithreading.htm

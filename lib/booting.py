@@ -10,7 +10,7 @@ def checking_booting(port):
     correct_flag = False
     verifying_string = ''
     counter = 0
-    while correct_flag == False:
+    while not correct_flag:
         verifying_string += send_to_console(port, "\r\n\r")
         sleep(3)
         counter += 1

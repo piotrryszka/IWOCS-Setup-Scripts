@@ -26,4 +26,4 @@ class Logger(object):
 
 
 # catching every line from user console
-sys.stdout = Logger(stream=sys.stdout)
+sys.stdout = Logger(stream = sys.stdout)
