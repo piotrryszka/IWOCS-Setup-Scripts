@@ -252,3 +252,77 @@ TDS-1_A <--> 172.30.100.101
 ................................
  
  
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  25/04/2022 10:50:09
+ 
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  25/04/2022 10:50:22
+ 
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  25/04/2022 10:50:32
+ 
+There is more than one available license in this folders:
+If you are ready type anything what you wantThere is more than one available license in this folders:
+If you are ready type anything what you wantThere is more than one available license in this folders:
+If you are ready type anything what you wantThere is more than one available license in this folders:
+If you are ready type anything what you wantAvailable languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  25/04/2022 10:51:58
+ 
+There is more than one available license in this folders:
+ie2000, ie4010
+If you are ready type anything what you want: There is more than one available license in this folders:
+ie4010
+If you are ready type anything what you want: IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!
+ 
+This is a list of all saved session logs: 
+2022-04-25.txt
+Do you want to delete device logs, console logs and table with licenses, ping and versions for support team? If yes type '1', if not type anything else:
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else:
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  25/04/2022 10:57:17
+ 
+IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!
+ 
+This is a list of all saved session logs: 
+2022-04-25.txt
+Do you want to delete device logs, console logs and table with licenses, ping and versions for support team? If yes type '1', if not type anything else:
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else:
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  25/04/2022 10:57:27
+ 
+There is more than one available license in this folders:
+ie4010
+If you are ready type anything what you want: 1
+ 
+There is more than one available license in this folders:
+ie4010
+If you are ready type anything what you want: 

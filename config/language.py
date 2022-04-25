@@ -64,7 +64,10 @@ language_dictionary = {'En': {'information_prompt': 'IMPORTANT ISSUE!!!\nIf you 
                               'collect_data': "Collecting data from this network device by SSH connection with this command:",
                               'dir_exists': "This directory already exists --> ",
                               'unknown_error': "Unknown error, check the directories of script",
-                              'current_ping': "Checking project connection by ping..."
+                              'current_ping': "Checking project connection by ping...",
+                              'available_lic': "There is more than one available license in this folders:",
+                              'user_acc': "If you are readyt, ype anything what you want: ",
+
 
                               },
                         'No': {'information_prompt': 'Something in Norwegian language ',
@@ -132,6 +135,8 @@ language_dictionary = {'En': {'information_prompt': 'IMPORTANT ISSUE!!!\nIf you 
                                'dir_exists': "Something in Norwegian language ",
                                'unknown_error': "Something in Norwegian language ",
                                'current_ping': "Something in Norwegian language ",
+                               'available_lic': "Something in Norwegian language ",
+                               'user_acc': "Something in Norwegian language ",
 
                                },
                         'Fr': {'information_prompt': 'Something in French language ',
@@ -199,6 +204,8 @@ language_dictionary = {'En': {'information_prompt': 'IMPORTANT ISSUE!!!\nIf you 
                                'dir_exists': "Something in French language ",
                                'unknown_error': "Something in French language ",
                                'current_ping': "Something in French language ",
+                               'available_lic': "Something in French language ",
+                               'user_acc': "Something in French language ",
 
                        }
                        }

@@ -331,3 +331,26 @@ def saving_ping_table(table):
     timeStr = timeObj.strftime("%Hh-%Mm")
     with open(f'support/info_tables/ping/ping-check-{dateStr}-{timeStr}.txt', 'w') as f:
         f.write(str(table))
+
+# checking if their is only one license in each folder
+def checking_stat_lic(lang_dict):
+    # listing directories of files
+    files = os.listdir(f'firmware')
+    running_flag = True
+    while running_flag:
+        # list with wrong folders
+        list_dic = []
+        counter = 0
+        for dic in files:
+            licenses = os.listdir(f'firmware/{dic}')
+            if len(licenses) > 1:
+                counter += 1
+                list_dic.append(dic)
+        if counter == 0:
+            running_flag = False
+        else:
+            print(lang_dict['available_lic'])
+            print(*list_dic, sep=', ')
+            user_input = input(lang_dict['user_acc'])
+            print(user_input)
+            print(decorator_1)

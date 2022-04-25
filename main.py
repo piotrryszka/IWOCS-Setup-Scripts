@@ -4,7 +4,7 @@ from serial import Serial
 from time import sleep
 
 from lib.commands import send_to_console, checking_switch_ports, checking_ip_address, checking_device, check_tftp, to_conf_mode
-from lib.operations import opening_device_list, reading_conf_files, creating_proper_configuration, deleting_files, deleting_conf, saving_dev, list_saved_dev, saving_license, saving_info_lic, reading_license, deleting_dev_logs, deleting_dev_license, download_license, sh_version, read_version, saving_ver_table, add_ip, saving_ping_table, deleting_dev_ping, deleting_dev_version, deleting_project_logs
+from lib.operations import opening_device_list, reading_conf_files, creating_proper_configuration, deleting_files, deleting_conf, saving_dev, list_saved_dev, saving_license, saving_info_lic, reading_license, deleting_dev_logs, deleting_dev_license, download_license, sh_version, read_version, saving_ver_table, add_ip, saving_ping_table, deleting_dev_ping, deleting_dev_version, deleting_project_logs, checking_stat_lic
 from lib.booting import checking_booting
 from lib.languages import listing_languages, reading_language
 from lib.logging import *
@@ -57,6 +57,10 @@ while running_flag:
     # creating_timestamp
     creating_timestamp(lang_dict=lang_expressions)
     print(decorator_1)
+
+    # checkinf possible version of software to be downloaded
+    checking_stat_lic(lang_expressions)
+
 
     # info to user how to leave any part of program
     print(lang_expressions['information_prompt'])
