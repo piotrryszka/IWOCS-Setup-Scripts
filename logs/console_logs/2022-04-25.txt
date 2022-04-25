@@ -1,0 +1,254 @@
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  25/04/2022 08:04:24
+ 
+IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!
+ 
+This is a list of all saved session logs: 
+2022-04-22.txt, 2022-04-25.txt
+Do you want to delete device logs, console logs and table with licenses, ping and versions for support team? If yes type '1', if not type anything else:
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else:
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 4
+ 
+Already configured devices:
+TDS-1_A, TDS-1_B, TIR-1
+ 
+Which device do you want to connect? TAS-1
+ 
+Your list of possible devices to configure: 
+TAS-1
+ 
+ 
+You have chosen this configuration...
+COM4 ----> TAS-1
+Please wait patiently...
+ 
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+ 
+Your device has been configured properly ---> TAS-1.
+ 
+---------------------------------------------------
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 1
+ 
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
++-------------------------------------------------------------------+
+|                    Table with devices licenses                    |
++----+---------+---------+---------+---------+------------+---------+
+| ID |  Device |   UDI   | License |  Status | Expiration |    OK   |
++----+---------+---------+---------+---------+------------+---------+
+| 1  | TDS-1_A | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 2  |  TIR-1  | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 3  | TDS-1_B | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 4  |  TAS-1  | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
++----+---------+---------+---------+---------+------------+---------+
+In case of UKNNOWN, please turn on the Putty client and check the configuration manually.
+ 
++-------------------------------------------------------+
+|               Table with device versions              |
++----+---------+--------+-----------------+-------------+
+| ID |   Name  | Model  | Current Version | New Version |
++----+---------+--------+-----------------+-------------+
+| 1  | TDS-1_A | ie4010 |      Image      |   15.9(e4)  |
+| 2  |  TIR-1  | ie4010 |      Image      |   15.9(e4)  |
+| 3  | TDS-1_B | ie4010 |      Image      |   15.9(e4)  |
+| 4  |  TAS-1  | ie4010 |      Image      |   15.9(e4)  |
++----+---------+--------+-----------------+-------------+
+If field 'New Version' is empty, check if you downloaded new versions of software into /FIRMWARE folder.
+ 
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. 1
+ 
+Which device do you want to update? Type ID numbers from table above: 1, 2, 3
+ 
+List of devices to have updated software:
+TDS-1_A, TIR-1, TDS-1_B,  
+Now upgrading software in TDS-1_A device with this IP address 172.30.100.10!
+Now upgrading software in TIR-1 device with this IP address 172.30.100.11!
+Now upgrading software in TDS-1_B device with this IP address 172.30.100.12!
+ 
+Now is the time to download project configs by SSH connections ...
+ 
+ 
+Please connect all your devices by LAN cables!
+ 
+Now it is time to move into TFTP Server application.
+ 
+If you are ready and TFTP Server is not running, please type in '1' in console: 1
+ 
+Everything is fine, now you can turn on your TFTP SERVER...
+ 
+Your TFTP server is running now...
+ 
+Please choose in tab 'Current Directory' in TFTP Server Application folder called PROJECT-CONFIGS!
+ 
+If you set configuration properly and you are ready, please type in '1' in console. 1
+ 
+Everything was set, you can continue...
+ 
+Waiting about 10 seconds for SSH connection to be established ...
+ 
+Checking ip connections with configured network devices, please wait a moment.
+.... 
+ 
++---------------------------------------+
+|               PING Table              |
++---------+---------------+-------------+
+|   Name  |   IP Address  | PING Status |
++---------+---------------+-------------+
+| TDS-1_A | 172.30.100.10 |             |
+|  TIR-1  | 172.30.100.11 |             |
+| TDS-1_B | 172.30.100.12 |             |
+|  TAS-1  | 172.30.100.13 |             |
++---------+---------------+-------------+
+If the fields are empty, check the connection manually by yourself.
+ 
+Now the projects configs are downloaded to the network devices.
+ 
+................................
+ 
+Now this device is being configured:
+TAS-1 -> 172.30.100.13
+ 
+Sorry, this device is unavailable:
+TAS-1 <--> 172.30.100.13
+ 
+................................
+ 
+Now this device is being configured:
+TIR-1 -> 172.30.100.11
+ 
+Sorry, this device is unavailable:
+TIR-1 <--> 172.30.100.11
+ 
+................................
+ 
+Now this device is being configured:
+TDS-1_B -> 172.30.100.12
+ 
+Sorry, this device is unavailable:
+TDS-1_B <--> 172.30.100.12
+ 
+................................
+ 
+Now this device is being configured:
+TDS-1_A -> 172.30.100.10
+ 
+Sorry, this device is unavailable:
+TDS-1_A <--> 172.30.100.10
+ 
+................................
+ 
+Checking project connection by ping...
+........ 
+ 
++------------------------------------------+
+|  Checking connection to project configs  |
++----------------+----------------+--------+
+| Name of device |       IP       | Status |
++----------------+----------------+--------+
+|     TAS-1      |  172.30.101.4  |        |
+|     TIR-1      |  172.30.103.4  |        |
+|    TDS-1_B     | 172.30.100.201 |        |
+|    TDS-1_A     | 172.30.100.101 |        |
++----------------+----------------+--------+
+If the fields are empty, check the connection manually by yourself.
+ 
+................................
+ 
+We are moving into collecting outputs from already project configured network devices!
+ 
+................................
+ 
+This directory already exists -->  TAS-1
+ 
+Collecting data from this network device by SSH connection with this command:
+IP: 172.30.101.4, Device: TAS-1, Command: sh lldp nei
+ 
+Sorry, this device is unavailable:
+TAS-1 <--> 172.30.101.4
+ 
+................................
+ 
+Collecting data from this network device by SSH connection with this command:
+IP: 172.30.101.4, Device: TAS-1, Command: show tech
+ 
+Sorry, this device is unavailable:
+TAS-1 <--> 172.30.101.4
+ 
+................................
+ 
+This directory already exists -->  TIR-1
+ 
+Collecting data from this network device by SSH connection with this command:
+IP: 172.30.103.4, Device: TIR-1, Command: sh lldp nei
+ 
+Sorry, this device is unavailable:
+TIR-1 <--> 172.30.103.4
+ 
+................................
+ 
+Collecting data from this network device by SSH connection with this command:
+IP: 172.30.103.4, Device: TIR-1, Command: show tech
+ 
+Sorry, this device is unavailable:
+TIR-1 <--> 172.30.103.4
+ 
+................................
+ 
+This directory already exists -->  TDS-1_B
+ 
+Collecting data from this network device by SSH connection with this command:
+IP: 172.30.100.201, Device: TDS-1_B, Command: sh lldp nei
+ 
+Sorry, this device is unavailable:
+TDS-1_B <--> 172.30.100.201
+ 
+................................
+ 
+Collecting data from this network device by SSH connection with this command:
+IP: 172.30.100.201, Device: TDS-1_B, Command: show tech
+ 
+Sorry, this device is unavailable:
+TDS-1_B <--> 172.30.100.201
+ 
+................................
+ 
+This directory already exists -->  TDS-1_A
+ 
+Collecting data from this network device by SSH connection with this command:
+IP: 172.30.100.101, Device: TDS-1_A, Command: sh lldp nei
+ 
+Sorry, this device is unavailable:
+TDS-1_A <--> 172.30.100.101
+ 
+................................
+ 
+Collecting data from this network device by SSH connection with this command:
+IP: 172.30.100.101, Device: TDS-1_A, Command: show tech
+ 
+Sorry, this device is unavailable:
+TDS-1_A <--> 172.30.100.101
+ 
+................................
+ 
+ 

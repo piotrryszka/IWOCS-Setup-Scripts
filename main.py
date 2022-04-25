@@ -351,7 +351,6 @@ while running_flag:
             print(lang_expressions['info_ver'])
             print(decorator_1)
 
-            # TODO: HERE WORKING
             # checking if user want to upload new license to the device
             update_list = prepare_software(lang_expressions)
 
