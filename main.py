@@ -509,3 +509,4 @@ while running_flag:
 # deleting all user-configuration files created while the script was running
 print(decorator_1)
 # deleting_conf(lang_dict = lang_expressions)
+
