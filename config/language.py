@@ -66,8 +66,8 @@ language_dictionary = {'En': {'information_prompt': 'IMPORTANT ISSUE!!!\nIf you 
                               'dir_exists': "This directory already exists --> ",
                               'unknown_error': "Unknown error, check the directories of script",
                               'current_ping': "Checking project connection by ping...",
-                              'available_lic': "There is more than one available license in this folders:",
-                              'user_acc': "If you are readyt, ype anything what you want: ",
+                              'available_lic': "There is more than one available software version in this folders:",
+                              'user_acc': "If you are ready, type anything what you want: ",
 
 
                               },

@@ -9,6 +9,7 @@ TODO NEXT
 pozmieniac tam z dwukropkiem, splitowanie przy samym dzialaniu na txt plikach dla licencji
 obsluga tej wersji softu ulepszyc jutro, lepszy UX i musi byc przekazywanie co to za model, aby poprawnie wczytac jego mozliwa nowa wersje softu
 funkcja do napisania do wysylania tych ssh polaczen caly czas
+podsumowanie zrobic jakies
 
 TODO WIELOWATKOWOSC
 https://www.tutorialspoint.com/python3/python_multithreading.htm

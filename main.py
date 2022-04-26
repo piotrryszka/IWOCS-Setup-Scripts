@@ -3,36 +3,41 @@ import sys
 from serial import Serial
 from time import sleep
 
-from lib.commands import send_to_console, checking_switch_ports, checking_ip_address, checking_device, check_tftp, to_conf_mode
-from lib.operations import opening_device_list, reading_conf_files, creating_proper_configuration, deleting_files, deleting_conf, saving_dev, list_saved_dev, saving_license, saving_info_lic, reading_license, deleting_dev_logs, deleting_dev_license, download_license, sh_version, read_version, saving_ver_table, add_ip, saving_ping_table, deleting_dev_ping, deleting_dev_version, deleting_project_logs, checking_stat_lic
+from lib.commands import send_to_console, checking_switch_ports, checking_ip_address, checking_device, check_tftp, \
+    to_conf_mode
+from lib.operations import opening_device_list, reading_conf_files, creating_proper_configuration, deleting_files, \
+    deleting_conf, saving_dev, list_saved_dev, saving_license, saving_info_lic, reading_license, deleting_dev_logs, \
+    deleting_dev_license, download_license, sh_version, read_version, saving_ver_table, add_ip, saving_ping_table, \
+    deleting_dev_ping, deleting_dev_version, deleting_project_logs, checking_stat_lic, deleting_dev_pro_ping
 from lib.booting import checking_booting
 from lib.languages import listing_languages, reading_language
 from lib.logging import *
 from lib.network import ssh_con, ssh_download
-from lib.functions import printing_logs, creating_timestamp, start_tftp, user_tftp, final_tftp, check_com, order_dev, list_dev, create_table, kill_tftp, kill_putty, create_table_ver, add_row_ver, prepare_software, check_ping, check_license, create_dir, ping_projects
+from lib.functions import printing_logs, creating_timestamp, start_tftp, user_tftp, final_tftp, check_com, order_dev, \
+    list_dev, create_table, kill_tftp, kill_putty, create_table_ver, add_row_ver, prepare_software, check_ping, \
+    check_license, create_dir, ping_projects
 from config.data import ip_number, decorator_1, device_order, id_number, commands_list, decorator_2, dict_ip
-
 
 # Program flags:
 running_flag = True  # main flag, running program
 system_flag = True  # flag about type of system
 com_flag = True  # flag checking COM
 device_flag = True  # flag checking device
-user_boot_flag = True # flag checking if device chosen by user is booted
-ip_flag = False # flag if ip is correctly set by user
-proper_language = False # flag if the language chosen by user is possible to be used
-del_flag = False # flag to check what user want to do after deleting logs
-tftp_flag = True # flag to check if the port UDP 69 is taken
-ssh_flag = True # flag to configure devices by ssh connections
-update_flag = True # flag to check if user wants to download some new software versions
+user_boot_flag = True  # flag checking if device chosen by user is booted
+ip_flag = False  # flag if ip is correctly set by user
+proper_language = False  # flag if the language chosen by user is possible to be used
+del_flag = False  # flag to check what user want to do after deleting logs
+tftp_flag = True  # flag to check if the port UDP 69 is taken
+ssh_flag = True  # flag to configure devices by ssh connections
+update_flag = True  # flag to check if user wants to download some new software versions
 
 # FIXED Variables:
-COM_speed = 9600 # serial port speed
-dictionary_dev = {} # empty dictionary to be later filled with proper restart order
-order_dict = {} # empty dictionary with devices model and last octet of ip number
-conf_devices_list = [] #empty list later filled with already configured devices
-license_dict = {} # empty dictionary later to be filled with license linked things
-update_list = [] # empty list later filled with devices to update software on them
+COM_speed = 9600  # serial port speed
+dictionary_dev = {}  # empty dictionary to be later filled with proper restart order
+order_dict = {}  # empty dictionary with devices model and last octet of ip number
+conf_devices_list = []  # empty list later filled with already configured devices
+license_dict = {}  # empty dictionary later to be filled with license linked things
+update_list = []  # empty list later filled with devices to update software on them
 
 # main project
 while running_flag:
@@ -40,7 +45,7 @@ while running_flag:
     while not proper_language:
         print("Available languages are presented below:")
         languages = listing_languages()
-        print(*languages, sep = ', ')
+        print(*languages, sep=', ')
         user_language = input("Please choose one of possible languages: ").title()
         print(user_language)
         if user_language in languages:
@@ -61,7 +66,6 @@ while running_flag:
     # checkinf possible version of software to be downloaded
     checking_stat_lic(lang_expressions)
 
-
     # info to user how to leave any part of program
     print(lang_expressions['information_prompt'])
     print(decorator_1)
@@ -73,7 +77,7 @@ while running_flag:
     # deleting console logs, pretty table with licenses files and device logs files
     printing_logs(lang_expressions)
     user_del = input(lang_expressions['deleting_logs'])
-    del_flag = deleting_files(lang_dict = lang_expressions, user_input = user_del)
+    del_flag = deleting_files(lang_dict=lang_expressions, user_input=user_del)
     if user_del == '1':
         # calling functions to delete support and logs files
         deleting_dev_license()
@@ -81,8 +85,9 @@ while running_flag:
         deleting_dev_version()
         deleting_dev_ping()
         deleting_project_logs()
+        deleting_dev_pro_ping()
     print(user_del)
-    if del_flag == True:
+    if del_flag:
         print(lang_expressions['del_info'])
         break
     else:
@@ -102,7 +107,7 @@ while running_flag:
     if user_system == '1':
         while com_flag:
             # question about which COM port is user using TASK 185
-            check_com(lang_dict = lang_expressions)
+            check_com(lang_dict=lang_expressions)
             user_COM = input(lang_expressions['port_question']).lower()
             print(user_COM)
             if user_COM.isnumeric() and user_COM != '0':
@@ -111,7 +116,7 @@ while running_flag:
                 COM_string = "COM" + user_COM
 
                 # Creating a list with all the possible devices
-                device_list = opening_device_list(file_name = 'project_names_of_devices.txt')
+                device_list = opening_device_list(file_name='project_names_of_devices.txt')
 
                 # listing already conf devices
                 order_dict = list_saved_dev()
@@ -125,7 +130,7 @@ while running_flag:
                         # reading configured devices from txt file to dictionary
                         order_dict = list_saved_dev()
                         # reading full info with restart order, model and ip address to dictionary
-                        dictionary_dev = order_dev(conf_devices_list,device_order, dictionary_dev, order_dict)
+                        dictionary_dev = order_dev(conf_devices_list, device_order, dictionary_dev, order_dict)
 
                         # deleting already configured devices from available devices to be chosen by the user
                         # simple handling exceptions
@@ -139,7 +144,7 @@ while running_flag:
                             pass
 
                         # printing already initial configured devices
-                        list_dev(device_list = conf_devices_list, lang_dict = lang_expressions)
+                        list_dev(device_list=conf_devices_list, lang_dict=lang_expressions)
 
                         # question about choosing_device by the user
                         user_device = input(lang_expressions['device_question']).upper()
@@ -168,7 +173,7 @@ while running_flag:
 
                         # TODO for tests it is commented (TRY AND EXCEPT) and networking commands
                         # TODO: move all commands one tab
-#                         try:
+                        #                         try:
 
                         # reading ip address from txt file
                         try:
@@ -194,14 +199,14 @@ while running_flag:
 
                         # returning next ip number and full name of configured device to download to specified device
                         # our_conf = creating_proper_configuration(user_device = user_device, port_num = device_ports['Gigabit'], ip_add = ip_number)
-                        our_conf = creating_proper_configuration(user_device = user_device, port_num = 1, ip_add = ip_number)
+                        our_conf = creating_proper_configuration(user_device=user_device, port_num=1, ip_add=ip_number)
 
                         # remembering old IP number, last octet is important to save to txt file
                         ip_save = ip_number
 
                         # returning tuple with full name device and next iip number to bes used
-                        actual_device = our_conf[1] # name of device
-                        ip_number = our_conf[0] # new ip address incremented by +1
+                        actual_device = our_conf[1]  # name of device
+                        ip_number = our_conf[0]  # new ip address incremented by +1
 
                         # saving ip address to txt file
                         with open('temp/ip_number.txt', 'w') as f:
@@ -221,7 +226,7 @@ while running_flag:
 
                             # opening file with configuration
                             actual_device = actual_device
-                            stripped_list = reading_conf_files(file = actual_device)
+                            stripped_list = reading_conf_files(file=actual_device)
 
                             # executing commands from the list
                             for command in stripped_list:
@@ -268,7 +273,8 @@ while running_flag:
 
                             # TESTING
                             # saving info about licenses and devices to the txt file with incremented ID counter
-                            id_number = saving_info_lic(id_number, user_device, udi, ipservices_string, state_string, type_string, ok_not)
+                            id_number = saving_info_lic(id_number, user_device, udi, ipservices_string, state_string,
+                                                        type_string, ok_not)
 
                             # saving ID number to txt file
                             with open('temp/id_number.txt', 'w') as f:
@@ -282,7 +288,6 @@ while running_flag:
                             print('---------------------------------------------------')
                             print(decorator_1)
 
-
                             # question if user has finished initial configuration of devices
                             finish_conf = input(lang_expressions['finish_conf'])
                             print(finish_conf)
@@ -295,7 +300,7 @@ while running_flag:
                                 # configuring next device
                                 device_flag = True
 
-                    # TODO: needs to be uncommented
+                        # TODO: needs to be uncommented
                         else:
                             print(lang_expressions['start_conf'])
                             print(lang_expressions['again_prompt'])
@@ -307,7 +312,7 @@ while running_flag:
                             print(decorator_1)
                             break
                             # TODO: UNCOMMENT
-#                         except:
+                        #                         except:
                         # bad chosen device or it is not working
                         print(lang_expressions['not_working'])
                         print(decorator_1)
@@ -332,7 +337,7 @@ while running_flag:
             reading_license(conf_table)
 
             # saving already configured devices
-            date_string = saving_license(table = conf_table)
+            date_string = saving_license(table=conf_table)
 
             # printing table with licenses to console
             print(conf_table)
@@ -365,9 +370,8 @@ while running_flag:
             if len(update_list) > 0:
                 print(lang_expressions['upd_dev'])
                 for x in range(0, len(update_list)):
-                    print(update_list[x][1], end = ', ')
+                    print(update_list[x][1], end=', ')
                 print(decorator_1)
-
 
             # updating software by tftp and LAN connections
             # TODO:
@@ -401,13 +405,13 @@ while running_flag:
 
             # checking if server tftp is already running
             while tftp_flag:
-                tftp_flag = check_tftp(lang_dict = lang_expressions)
+                tftp_flag = check_tftp(lang_dict=lang_expressions)
 
             # starting TFTP server
-            start_tftp(lang_dict = lang_expressions)
+            start_tftp(lang_dict=lang_expressions)
 
             # user instructions to set config of TFTP Server
-            user_tftp(lang_dict = lang_expressions)
+            user_tftp(lang_dict=lang_expressions)
 
             # checking if server is running
             working_tftp = final_tftp()
@@ -427,7 +431,7 @@ while running_flag:
 
             # need to be done again to actualize the dictionary
             order_dict = list_saved_dev()
-            dictionary_dev = order_dev(conf_devices_list,device_order, dictionary_dev, order_dict)
+            dictionary_dev = order_dev(conf_devices_list, device_order, dictionary_dev, order_dict)
             print(decorator_1)
 
             # printing prompt about going to project configs
@@ -447,7 +451,7 @@ while running_flag:
                     # connection with specified by user IP address and project configuration
                     # try and except to not crash the script
                     try:
-                        ssh_con(file = dictionary_dev[k]['device'], host = dictionary_dev[k]['ip'])
+                        ssh_con(file=dictionary_dev[k]['device'], host=dictionary_dev[k]['ip'])
                     except:
                         print(lang_expressions['no_con_dev'])
                         print(f"{dictionary_dev[k]['device']} <--> {dictionary_dev[k]['ip']}")
@@ -477,10 +481,12 @@ while running_flag:
                 create_dir(dictionary_dev[k]['device'], lang_expressions)
                 for command in commands_list:
                     print(lang_expressions['collect_data'])
-                    print(f"IP: {dict_ip[dictionary_dev[k]['device']]}, Device: {dictionary_dev[k]['device']}, Command: {command}")
+                    print(
+                        f"IP: {dict_ip[dictionary_dev[k]['device']]}, Device: {dictionary_dev[k]['device']}, Command: {command}")
                     print(decorator_1)
                     try:
-                        ssh_download(host = dict_ip[dictionary_dev[k]['device']], device = dictionary_dev[k]['device'], command = command)
+                        ssh_download(host=dict_ip[dictionary_dev[k]['device']], device=dictionary_dev[k]['device'],
+                                     command=command)
                     except:
                         print(lang_expressions['no_con_dev'])
                         print(f"{dictionary_dev[k]['device']} <--> {dict_ip[dictionary_dev[k]['device']]}")
@@ -503,4 +509,3 @@ while running_flag:
 # deleting all user-configuration files created while the script was running
 print(decorator_1)
 # deleting_conf(lang_dict = lang_expressions)
-

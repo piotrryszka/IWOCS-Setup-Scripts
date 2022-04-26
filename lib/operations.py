@@ -161,8 +161,6 @@ def deleting_dev_license():
         # cannot delete the file from today's date
         try:
             os.remove(f'support/info_tables/license/{file}')
-            os.remove(f'support/info_tables/license/{file}')
-            os.remove(f'support/info_tables/license/{file}')
         except:
             pass
 
@@ -173,8 +171,6 @@ def deleting_dev_version():
     for file in files:
         # cannot delete the file from today's date
         try:
-            os.remove(f'support/info_tables/version/{file}')
-            os.remove(f'support/info_tables/version/{file}')
             os.remove(f'support/info_tables/version/{file}')
         except:
             pass
@@ -187,8 +183,17 @@ def deleting_dev_ping():
         # cannot delete the file from today's date
         try:
             os.remove(f'support/info_tables/ping/{file}')
-            os.remove(f'support/info_tables/ping/{file}')
-            os.remove(f'support/info_tables/ping/{file}')
+        except:
+            pass
+
+# deleting tables with project ping tables
+def deleting_dev_pro_ping():
+    files = os.listdir('support/info_tables/ping_project')
+    # deleting files
+    for file in files:
+        # cannot delete the file from today's date
+        try:
+            os.remove(f'support/info_tables/ping_project/{file}')
         except:
             pass
 
