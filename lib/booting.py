@@ -1,4 +1,4 @@
-#CHECKING BOOTING OF NETWORK DEVICE
+# CHECKING BOOTING OF NETWORK DEVICE
 
 # imports
 from time import sleep

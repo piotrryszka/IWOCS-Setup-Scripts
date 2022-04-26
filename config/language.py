@@ -1,3 +1,4 @@
+
 # Config file with all languages and all prompts translated to proper language
 
 language_dictionary = {'En': {'information_prompt': 'IMPORTANT ISSUE!!!\nIf you want to leave any part of the program type 0 [zero] in your input!',

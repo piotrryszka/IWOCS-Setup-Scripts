@@ -1,4 +1,0 @@
-1 TDS-1_A ie4010 Image 15.9(e4)
-2 TIR-1 ie4010 Image 15.9(e4)
-3 TDS-1_B ie4010 Image 15.9(e4)
-4 TAS-1 ie4010 Image 15.9(e4)
