@@ -85,7 +85,7 @@ def ssh_download(host, device, command):
             command = command.replace(' ', '-')
 
             # opening file and saving an output to the file
-            with open(f'support/{device}/{command}___{dateStr}.txt', 'w') as file:
+            with open(f'support/show-tech/{device}/{command}___{dateStr}.txt', 'w') as file:
                 file.write(command_output)
 
             # waiting to give time to device react

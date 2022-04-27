@@ -39,7 +39,8 @@ device_order = ['TDS-1_A', 'TDS-1_B', 'SDG-1_A', 'SDG-1_B', 'TIR-1', 'ETAS-1', '
 id_number = 1
 
 # list of commands on devices to prepare txt files with configuration
-commands_list = ['sh lldp nei', 'show tech']
+# commands_list = ['sh lldp nei', 'show tech']
+commands_list = ['sh lldp nei', 'show run']
 
 # adding ip address of hub to check ping
 ip_hub = '172.30.103.4'

@@ -42,4 +42,51 @@
 #    pass
 #
 # # NEED TO FINISH THREADS AS WELL
+from netmiko import ConnectHandler, NetmikoTimeoutException, NetmikoAuthenticationException
+from time import sleep
+from datetime import datetime
 
+from config.data import password, username, decorator_1, server_ip
+
+def ssh_download(host, device, command):
+    # creating timestamp
+    now = datetime.now()
+    date_time = now.strftime("%m/%d/%Y")
+    dateTimeObj = datetime.now()
+    dateObj = dateTimeObj.date()
+    dateStr = dateObj.strftime("%d.%m.%Y")
+    # configuration of network device
+    cisco1 = {
+        "device_type": f"cisco_ios",
+        "host": f"{host}",
+        "username": f"{username}",
+        "password": f'{password}',
+        # session logger
+        "session_log": f"../logs/project_logs/{device}_{host}_{dateStr}.txt"
+    }
+    with ConnectHandler(**cisco1) as net_connect:
+        # assigning command to sending command
+        our_command = command
+
+        # sending 'enter' to clear CLI window
+        net_connect.send_command('\n', cmd_verify=False)
+
+        # command sent to network device
+        command_output = net_connect.send_command(our_command, cmd_verify=False)
+        sleep(5)
+        # replacing spaces in command with - char
+        command = command.replace(' ', '-')
+
+        # opening file and saving an output to the file
+        with open(f'../support/show-tech/{device}/{command}___{dateStr}', 'w') as file:
+            file.write(command_output)
+
+        print('eee')
+
+
+        # error handling while ssh connection
+    # except (NetmikoTimeoutException, NetmikoAuthenticationException) as error:
+    #     print(error)
+    #     print(decorator_1)
+
+ssh_download('172.30.100.101', 'TDS-1_A', 'show run')

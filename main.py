@@ -465,7 +465,7 @@ while running_flag:
             # TODO: need to work on it
             # waiting to do check connections
             print('waiting')
-            sleep(300)
+            sleep(222)
 
             # check ping connection
             # loop to send commands to every ip address with configured devices
