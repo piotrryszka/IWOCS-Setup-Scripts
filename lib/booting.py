@@ -22,5 +22,3 @@ def checking_booting(port):
         elif counter > 100:
             break
     return correct_flag
-
-

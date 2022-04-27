@@ -8,14 +8,15 @@ import os
 from datetime import datetime
 
 from config.data import ie2000, ie4010, decorator_1, commands_list
-from lib.network import ssh_download
+
 
 # sending commands to console
 def send_to_console(ser_fun: Serial, command: str, wait_time: float = 0.2):
     command_to_send = command + "\r\n"
     ser_fun.write(command_to_send.encode('utf-8'))
     sleep(wait_time)
-    return ser_fun.read(ser_fun.inWaiting()).decode('utf-8')
+    string_send = ser_fun.read(ser_fun.inWaiting()).decode('utf-8')
+    return string_send
 
 # counting gigabit and fast ports in devices
 def checking_switch_ports(ser_port):
