@@ -68,6 +68,7 @@ language_dictionary = {'En': {'information_prompt': 'IMPORTANT ISSUE!!!\nIf you 
                               'current_ping': "Checking project connection by ping...",
                               'available_lic': "There is more than one available software version in this folders:",
                               'user_acc': "If you are ready, type anything what you want: ",
+                              'ping_project': "Checking booting devices by project IP, please wait...",
 
 
                               },
@@ -138,6 +139,7 @@ language_dictionary = {'En': {'information_prompt': 'IMPORTANT ISSUE!!!\nIf you 
                                'current_ping': "Something in Norwegian language ",
                                'available_lic': "Something in Norwegian language ",
                                'user_acc': "Something in Norwegian language ",
+                               'ping_project': "Something in Norwegian language ",
 
                                },
                         'Fr': {'information_prompt': 'Something in French language ',
@@ -207,6 +209,7 @@ language_dictionary = {'En': {'information_prompt': 'IMPORTANT ISSUE!!!\nIf you 
                                'current_ping': "Something in French language ",
                                'available_lic': "Something in French language ",
                                'user_acc': "Something in French language ",
+                               'ping_project': "Something in French language ",
 
                        }
                        }

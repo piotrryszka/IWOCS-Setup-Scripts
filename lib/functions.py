@@ -324,6 +324,8 @@ def check_booting_ping(lang_dict, dict_dev):
     for k in reversed(dict_dev.keys()):
         temporary_list.append(dict_ip[dict_dev[k]['device']])
 
+    print(lang_dict['ping_project'])
+
     while running_flag and count_time <= finish_time:
         for k in reversed(dict_dev.keys()):
             # pinging by ip address already configured devices
@@ -342,3 +344,5 @@ def check_booting_ping(lang_dict, dict_dev):
         count_time += sleep_time
         # sleep function
         sleep(sleep_time)
+    print(decorator_1)
+    print(decorator_1)

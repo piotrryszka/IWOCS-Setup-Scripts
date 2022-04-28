@@ -372,6 +372,7 @@ while running_flag:
                 for x in range(0, len(update_list)):
                     print(update_list[x][1], end=', ')
                 print(decorator_1)
+                print(decorator_1)
 
             # updating software by tftp and LAN connections
             # TODO:
