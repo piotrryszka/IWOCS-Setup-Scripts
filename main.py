@@ -15,7 +15,7 @@ from lib.logging import *
 from lib.network import ssh_con, ssh_download
 from lib.functions import printing_logs, creating_timestamp, start_tftp, user_tftp, final_tftp, check_com, order_dev, \
     list_dev, create_table, kill_tftp, kill_putty, create_table_ver, add_row_ver, prepare_software, check_ping, \
-    check_license, create_dir, ping_projects
+    check_license, create_dir, ping_projects, check_booting_ping
 from config.data import ip_number, decorator_1, device_order, id_number, commands_list, decorator_2, dict_ip
 
 # Program flags:
@@ -126,7 +126,7 @@ while running_flag:
                     # User chooses the device, which one he wants to
                     choosing_device = True
 
-                    while choosing_device == True:
+                    while choosing_device:
                         # reading configured devices from txt file to dictionary
                         order_dict = list_saved_dev()
                         # reading full info with restart order, model and ip address to dictionary
@@ -186,20 +186,20 @@ while running_flag:
                         # TODO: testing needs to be uncommented
 
                         # setting COM connection
-                        ser = Serial(COM_string, COM_speed)
+                        # ser = Serial(COM_string, COM_speed)
 
                         # waiting for router/switch to boot
-                        user_boot_flag = checking_booting(port = ser)
+                        # user_boot_flag = checking_booting(port = ser)
 
                         # counting number of gigabit and fast ports
-                        device_ports = checking_switch_ports(ser_port = ser)
+                        # device_ports = checking_switch_ports(ser_port = ser)
 
                         # checking if device is really the device, which was wanted by user
-                        proper_device = checking_device(ser_port = ser, user_device = user_device, lang_dict = lang_expressions)
+                        # proper_device = checking_device(ser_port = ser, user_device = user_device, lang_dict = lang_expressions)
 
                         # returning next ip number and full name of configured device to download to specified device
-                        our_conf = creating_proper_configuration(user_device = user_device, port_num = device_ports['Gigabit'], ip_add = ip_number)
-                        # our_conf = creating_proper_configuration(user_device=user_device, port_num=1, ip_add=ip_number)
+                        # our_conf = creating_proper_configuration(user_device = user_device, port_num = device_ports['Gigabit'], ip_add = ip_number)
+                        our_conf = creating_proper_configuration(user_device=user_device, port_num=1, ip_add=ip_number)
 
                         # remembering old IP number, last octet is important to save to txt file
                         ip_save = ip_number
@@ -222,7 +222,7 @@ while running_flag:
                             print(decorator_1)
 
                             # going to configuration mode
-                            to_conf_mode(ser)
+                            # to_conf_mode(ser)
 
                             # opening file with configuration
                             actual_device = actual_device
@@ -230,7 +230,7 @@ while running_flag:
 
                             # executing commands from the list
                             for command in stripped_list:
-                                send_to_console(ser, command)
+                                # send_to_console(ser, command)
                                 # printing dots to inform user that script is still working
                                 print('.', end='')
 
@@ -239,8 +239,8 @@ while running_flag:
                             # TODO: UNCOMMENT IT
                             # checking info about license on the device
                             # returning tuple with our data
-                            license_data = download_license(ser)
-                            # license_data = download_license()
+                            # license_data = download_license(ser)
+                            license_data = download_license()
 
                             # reading license data to variables use to fill txt file
                             udi = license_data[0]
@@ -265,7 +265,7 @@ while running_flag:
                                 pass
 
                             # sending command to switch with sh version
-                            sh_version(ser)
+                            # sh_version(ser)
 
                             # saving prepared data to txt, later will be prepared table report with it
                             # TUTAJ ROBOTA
@@ -281,7 +281,7 @@ while running_flag:
                                 f.write(str(id_number))
 
                             # closing connection
-                            ser.close()
+                            # ser.close()
                             print(f"{lang_expressions['proper_conf']}{user_device}.")
                             # print(f"{lang_expressions['close_con']}{ser.name}.")
                             print(decorator_1)
@@ -307,8 +307,8 @@ while running_flag:
                             print(decorator_1)
 
                             # closing connection
-                            ser.close()
-                            print(f"{lang_expressions['close_con']}{ser.name}.")
+                            # ser.close()
+                            # print(f"{lang_expressions['close_con']}{ser.name}.")
                             print(decorator_1)
                             break
                             # TODO: UNCOMMENT
@@ -464,8 +464,7 @@ while running_flag:
 
             # TODO: need to work on it
             # waiting to do check connections
-            print('waiting')
-            sleep(222)
+            check_booting_ping(lang_expressions, dictionary_dev)
 
             # check ping connection
             # loop to send commands to every ip address with configured devices
@@ -513,5 +512,5 @@ while running_flag:
 # LAST COMMANDS IN SCRIPT
 # deleting all user-configuration files created while the script was running
 print(decorator_1)
-deleting_conf(lang_dict = lang_expressions)
+# deleting_conf(lang_dict = lang_expressions)
 

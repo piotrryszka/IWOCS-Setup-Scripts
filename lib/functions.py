@@ -6,8 +6,9 @@ from datetime import datetime
 from prettytable import PrettyTable as pt
 import subprocess
 from pythonping import ping
+from time import sleep
 
-from config.data import decorator_1, count_ping, ip_hub, dict_ip
+from config.data import decorator_1, count_ping, ip_hub, dict_ip, sleep_time, finish_time
 
 
 # printing accessible logs
@@ -309,3 +310,35 @@ def ping_projects(lang_dict, dict_dev):
     timeStr = timeObj.strftime("%Hh-%Mm")
     with open(f'support/info_tables/ping_project/ping-project-check-{dateStr}-{timeStr}.txt', 'w') as f:
         f.write(str(tb))
+
+# checking if the device has booted after downloading project config
+def check_booting_ping(lang_dict, dict_dev):
+    # flag to run function
+    running_flag = True
+    # counter of time
+    count_time = 0
+    # temporary list to be filled with ip addresses
+    temporary_list = []
+
+    # adding address to temporary list
+    for k in reversed(dict_dev.keys()):
+        temporary_list.append(dict_ip[dict_dev[k]['device']])
+
+    while running_flag and count_time <= finish_time:
+        for k in reversed(dict_dev.keys()):
+            # pinging by ip address already configured devices
+            ping_output = ping(f"{dict_ip[dict_dev[k]['device']]}", verbose=False, count=count_ping)
+            for response in ping_output:
+                # printing dots to console to make sure that something is happening in script
+                print('.', end='')
+                # checking if the ping was successful
+                if response.error_message is None:
+                    # deleting ip address to ping
+                    temporary_list.remove(dict_ip[dict_dev[k]['device']])
+            if len(temporary_list) == 0:
+                running_flag = False
+                break
+        # adding time to counter of time
+        count_time += sleep_time
+        # sleep function
+        sleep(sleep_time)

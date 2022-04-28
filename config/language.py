@@ -53,7 +53,7 @@ language_dictionary = {'En': {'information_prompt': 'IMPORTANT ISSUE!!!\nIf you 
                               'unknown_license': "In case of UKNNOWN, please turn on the Putty client and check the configuration manually.",
                               'ver_table': 'Table with device versions',
                               'ver_update': "If you want to download new versions of software type '1', anything else won't be accepted. ",
-                              'ver_dev': "Which device do you want to update? Type ID numbers from table above: ",
+                              'ver_dev': "Which device do you want to update? Type ID numbers divided by space from table above: ",
                               'upd_dev': "List of devices to have updated software:",
                               'ping_tab': "PING Table",
                               'ping_wait': "Checking ip connections with configured network devices, please wait a moment.",
