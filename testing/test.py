@@ -41,9 +41,3 @@
 # while 1:
 #    pass
 #
-# # NEED TO FINISH THREADS AS WELL
-d = {'k1': 1, 'k2': 2, 'k3': 3}
-
-del d['k2']
-print(d)
-# {'k1': 1, 'k3': 3}
