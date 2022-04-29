@@ -282,13 +282,15 @@ def read_version(id, user_device):
                 for x in my_list:
                     x = x.strip()
                     x = x.split(' ')
-                    print(x)
+                    # getting device model
                     if 'Software' in x and 'IOS' not in x:
                         final_device = x[0]
-                        print(final_device)
-                    if 'Version' in x:
+                    # getting actual version number
+                    if 'Version' in x and final_device == 'IE4010':
+                        act_version = x[-4]
+                    # getting actual version number
+                    if 'Version' in x and final_device == 'IE2000':
                         act_version = x[-1]
-                        print(act_version)
     files = os.listdir(f'firmware/{final_device}')
     # adding first file to an argument
     file = str(files[0])
