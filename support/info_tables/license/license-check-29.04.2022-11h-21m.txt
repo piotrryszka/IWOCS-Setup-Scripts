@@ -4,5 +4,4 @@
 | ID |  Device |   UDI   | License |  Status | Expiration |    OK   |
 +----+---------+---------+---------+---------+------------+---------+
 | 1  | TDS-1_A | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
-| 2  | TDS-1_B | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
 +----+---------+---------+---------+---------+------------+---------+

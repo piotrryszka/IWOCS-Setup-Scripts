@@ -276,26 +276,19 @@ def sh_version(ser):
 def read_version(id, user_device):
     with open('temp/info_ver.txt', 'r') as my_file:
         for line in my_file:
-            # looking for actual software version
-            if 'Version' in line:
-                my_list = line.split(',')
+            # looking for actual device model and version number
+            if 'Cisco IOS Software' in line:
+                my_list = line.split(', ')
                 for x in my_list:
-                    if 'Version' in x:
-                        x = x.strip()
-                        x = x.split(' ')
-                        act_version = x[-1]
-            # looking for actual device model
-            if 'System image file' in line:
-                my_list = line.split(' ')
-                for x in my_list:
-                    if 'flash' in x:
-                        x = x.split('/')
-                        x = x[1].split('-')
-                        # printing device model
+                    x = x.strip()
+                    x = x.split(' ')
+                    print(x)
+                    if 'Software' in x and 'IOS' not in x:
                         final_device = x[0]
-
-    # reading possible
-    # change it later, because path would be different
+                        print(final_device)
+                    if 'Version' in x:
+                        act_version = x[-1]
+                        print(act_version)
     files = os.listdir(f'firmware/{final_device}')
     # adding first file to an argument
     file = str(files[0])
