@@ -222,7 +222,6 @@ def download_license(ser = 'COM1'):
         li = list(e.split())
         # udi data
         udi = li[11]
-        print(udi)
     except:
         udi = "UNKNOWN"
 

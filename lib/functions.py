@@ -330,8 +330,6 @@ def check_booting_ping(lang_dict, dict_dev):
         for ip_add in temporary_list:
             # pinging by ip address already configured devices
             ping_output = ping(f"{ip_add}", verbose=False, count=count_ping)
-            print(f"aktualny ping -> {ip_add}")
-            print(temporary_list)
             for response in ping_output:
                 # printing dots to console to make sure that something is happening in script
                 print('.', end='')
@@ -339,7 +337,6 @@ def check_booting_ping(lang_dict, dict_dev):
                 if response.error_message is None:
                     # deleting ip address to ping
                     temporary_list.remove(ip_add)
-                    print(temporary_list)
             if len(temporary_list) == 0:
                 running_flag = False
                 break

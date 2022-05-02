@@ -173,7 +173,6 @@ while running_flag:
 
                         # TODO for tests it is commented (TRY AND EXCEPT) and networking commands
                         # TODO: move all commands one tab
-                        #                         try:
 
                         # reading ip address from txt file
                         try:
@@ -184,143 +183,141 @@ while running_flag:
                             pass
 
                         # TODO: testing needs to be uncommented
+                        # STARTING BIG TRY WINDOWS
+                        try:
+                            # setting COM connection
+                            ser = Serial(COM_string, COM_speed)
 
-                        # setting COM connection
-                        ser = Serial(COM_string, COM_speed)
+                            # waiting for router/switch to boot
+                            user_boot_flag = checking_booting(port = ser)
 
-                        # waiting for router/switch to boot
-                        user_boot_flag = checking_booting(port = ser)
+                            # counting number of gigabit and fast ports
+                            device_ports = checking_switch_ports(ser_port = ser)
 
-                        # counting number of gigabit and fast ports
-                        device_ports = checking_switch_ports(ser_port = ser)
+                            # checking if device is really the device, which was wanted by user
+                            proper_device = checking_device(ser_port = ser, user_device = user_device, lang_dict = lang_expressions)
 
-                        # checking if device is really the device, which was wanted by user
-                        proper_device = checking_device(ser_port = ser, user_device = user_device, lang_dict = lang_expressions)
+                            # returning next ip number and full name of configured device to download to specified device
+                            our_conf = creating_proper_configuration(user_device = user_device, port_num = device_ports['Gigabit'], ip_add = ip_number)
+                            # our_conf = creating_proper_configuration(user_device=user_device, port_num=1, ip_add=ip_number)
 
-                        # returning next ip number and full name of configured device to download to specified device
-                        our_conf = creating_proper_configuration(user_device = user_device, port_num = device_ports['Gigabit'], ip_add = ip_number)
-                        # our_conf = creating_proper_configuration(user_device=user_device, port_num=1, ip_add=ip_number)
+                            # remembering old IP number, last octet is important to save to txt file
+                            ip_save = ip_number
 
-                        # remembering old IP number, last octet is important to save to txt file
-                        ip_save = ip_number
+                            # returning tuple with full name device and next iip number to bes used
+                            actual_device = our_conf[1]  # name of device
+                            ip_number = our_conf[0]  # new ip address incremented by +1
 
-                        # returning tuple with full name device and next iip number to bes used
-                        actual_device = our_conf[1]  # name of device
-                        ip_number = our_conf[0]  # new ip address incremented by +1
+                            # saving ip address to txt file
+                            with open('temp/ip_number.txt', 'w') as f:
+                                f.write(str(ip_number))
 
-                        # saving ip address to txt file
-                        with open('temp/ip_number.txt', 'w') as f:
-                            f.write(str(ip_number))
+                            # # TODO: DELETE IT
+                            # user_boot_flag = True
+                            # proper_device = True
 
-                        # # TODO: DELETE IT
-                        # user_boot_flag = True
-                        # proper_device = True
+                            if user_boot_flag and proper_device:
 
-                        if user_boot_flag and proper_device:
+                                print(lang_expressions['not_configured'])
+                                print(decorator_1)
 
-                            print(lang_expressions['not_configured'])
+                                # going to configuration mode
+                                to_conf_mode(ser)
+
+                                # opening file with configuration
+                                actual_device = actual_device
+                                stripped_list = reading_conf_files(file=actual_device)
+
+                                # executing commands from the list
+                                for command in stripped_list:
+                                    send_to_console(ser, command)
+                                    # printing dots to inform user that script is still working
+                                    print('.', end='')
+
+                                print(decorator_1)
+
+                                # TODO: UNCOMMENT IT
+                                # checking info about license on the device
+                                # returning tuple with our data
+                                license_data = download_license(ser)
+                                # license_data = download_license()
+
+                                # reading license data to variables use to fill txt file
+                                udi = license_data[0]
+                                state_string = license_data[1]
+                                type_string = license_data[2]
+                                ipservices_string = license_data[3]
+
+                                # checking proper configuration license for IE4010
+                                ok_not = check_license(udi, state_string, type_string, ipservices_string)
+
+                                print(decorator_1)
+
+                                # saving the name of configured device to the txt file
+                                saving_dev(f'{user_device} {ip_save}')
+
+                                # reading ID number from txt file
+                                try:
+                                    with open('temp/id_number.txt', 'r') as f:
+                                        new_id = f.read()
+                                        id_number = int(new_id)
+                                except:
+                                    pass
+
+                                # sending command to switch with sh version
+                                sh_version(ser)
+
+                                # saving prepared data to txt, later will be prepared table report with it
+                                # TUTAJ ROBOTA
+                                read_version(id_number, user_device)
+
+                                # TESTING
+                                # saving info about licenses and devices to the txt file with incremented ID counter
+                                id_number = saving_info_lic(id_number, user_device, udi, ipservices_string, state_string,
+                                                            type_string, ok_not)
+
+                                # saving ID number to txt file
+                                with open('temp/id_number.txt', 'w') as f:
+                                    f.write(str(id_number))
+
+                                # closing connection
+                                ser.close()
+                                print(f"{lang_expressions['proper_conf']}{user_device}.")
+                                print(f"{lang_expressions['close_con']}{ser.name}.")
+                                print(decorator_1)
+                                print('---------------------------------------------------')
+                                print(decorator_1)
+
+                        except:
+                            # bad chosen device or it is not working
+                            print(lang_expressions['not_working'])
                             print(decorator_1)
 
-                            # going to configuration mode
-                            to_conf_mode(ser)
-
-                            # opening file with configuration
-                            actual_device = actual_device
-                            stripped_list = reading_conf_files(file=actual_device)
-
-                            # executing commands from the list
-                            for command in stripped_list:
-                                send_to_console(ser, command)
-                                # printing dots to inform user that script is still working
-                                print('.', end='')
-
-                            print(decorator_1)
-
-                            # TODO: UNCOMMENT IT
-                            # checking info about license on the device
-                            # returning tuple with our data
-                            license_data = download_license(ser)
-                            # license_data = download_license()
-
-                            # reading license data to variables use to fill txt file
-                            udi = license_data[0]
-                            state_string = license_data[1]
-                            type_string = license_data[2]
-                            ipservices_string = license_data[3]
-
-                            # checking proper configuration license for IE4010
-                            ok_not = check_license(udi, state_string, type_string, ipservices_string)
-
-                            print(decorator_1)
-
-                            # saving the name of configured device to the txt file
-                            saving_dev(f'{user_device} {ip_save}')
-
-                            # reading ID number from txt file
-                            try:
-                                with open('temp/id_number.txt', 'r') as f:
-                                    new_id = f.read()
-                                    id_number = int(new_id)
-                            except:
-                                pass
-
-                            # sending command to switch with sh version
-                            sh_version(ser)
-
-                            # saving prepared data to txt, later will be prepared table report with it
-                            # TUTAJ ROBOTA
-                            read_version(id_number, user_device)
-
-                            # TESTING
-                            # saving info about licenses and devices to the txt file with incremented ID counter
-                            id_number = saving_info_lic(id_number, user_device, udi, ipservices_string, state_string,
-                                                        type_string, ok_not)
-
-                            # saving ID number to txt file
-                            with open('temp/id_number.txt', 'w') as f:
-                                f.write(str(id_number))
-
-                            # closing connection
-                            ser.close()
-                            print(f"{lang_expressions['proper_conf']}{user_device}.")
-                            print(f"{lang_expressions['close_con']}{ser.name}.")
-                            print(decorator_1)
-                            print('---------------------------------------------------')
-                            print(decorator_1)
-
-                            # question if user has finished initial configuration of devices
-                            finish_conf = input(lang_expressions['finish_conf'])
-                            print(finish_conf)
-                            print(decorator_1)
-                            if finish_conf == '1':
-                                # exit the COM connections
-                                device_flag = False
-                                com_flag = False
-                            else:
-                                # configuring next device
-                                device_flag = True
-
-                        # TODO: needs to be uncommented
-                        else:
-                            print(lang_expressions['start_conf'])
-                            print(lang_expressions['again_prompt'])
-                            print(decorator_1)
-
-                            # closing connection
-                            ser.close()
-                            print(f"{lang_expressions['close_con']}{ser.name}.")
-                            print(decorator_1)
-                            break
-                            # TODO: UNCOMMENT
-                        #                         except:
-                        # bad chosen device or it is not working
-                        print(lang_expressions['not_working'])
+                        # question if user has finished initial configuration of devices
+                        finish_conf = input(lang_expressions['finish_conf'])
+                        print(finish_conf)
                         print(decorator_1)
+                        if finish_conf == '1':
+                            # exit the COM connections
+                            device_flag = False
+                            com_flag = False
+                        else:
+                            # configuring next device
+                            device_flag = True
 
+                    # TODO: needs to be uncommented
                     elif user_device == str(0):
                         break
                     else:
-                        print(lang_expressions['not_supported'])
+                        print(lang_expressions['start_conf'])
+                        print(lang_expressions['again_prompt'])
+                        print(decorator_1)
+
+                        # closing connection
+                        ser.close()
+                        print(f"{lang_expressions['close_con']}{ser.name}.")
+                        print(decorator_1)
+                        break
 
             # leaving script by '0' input
             elif user_COM == str(0):
@@ -433,7 +430,6 @@ while running_flag:
             # need to be done again to actualize the dictionary
             order_dict = list_saved_dev()
             dictionary_dev = order_dev(conf_devices_list, device_order, dictionary_dev, order_dict)
-            print(dictionary_dev)
             print(decorator_1)
 
             # printing prompt about going to project configs

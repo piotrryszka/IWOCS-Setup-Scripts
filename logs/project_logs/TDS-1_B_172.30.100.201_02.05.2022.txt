@@ -37,7 +37,7 @@ TDS-1_B#show tech
 ------------------ show clock ------------------
 
 
-*18:01:58.845 CST Sun Jan 1 2006
+*18:01:53.347 CST Sun Jan 1 2006
 
 ------------------ show version ------------------
 
@@ -114,7 +114,7 @@ Building configuration...
 
 Current configuration : 14716 bytes
 !
-! Last configuration change at 18:00:44 CST Sun Jan 1 2006
+! Last configuration change at 18:00:45 CST Sun Jan 1 2006
 !
 version 15.2
 no service pad
@@ -706,7 +706,7 @@ Directory of flash:/
     2  -rwx       46604   Jan 1 2006 18:01:13 -06:00  pnap.dat
     3  drwx         512  Mar 29 2011 20:48:41 -05:00  ie4010-universalk9-mz.152-4.EC2
   608  drwx         512  Mar 29 2011 20:48:43 -05:00  dc_profile_dir
-  611  -rwx       10264   Jan 1 2006 18:00:48 -06:00  multiple-fs
+  611  -rwx       10264   Jan 1 2006 18:00:50 -06:00  multiple-fs
 
 122185728 bytes total (90960384 bytes free)
 Directory of sdflash:/
@@ -716,7 +716,7 @@ Directory of sdflash:/
   607  -rw-         294   Jan 2 2006 00:00:22 -06:00  env_vars
   608  drw-           0  Mar 30 2011 02:38:24 -05:00  dc_profile_dir
   610  -rw-           0   Jan 3 2006 00:12:48 -06:00  ssh.enable
-  611  -rw-       15224   Jan 2 2006 00:03:16 -06:00  config.text
+  611  -rw-       15224   Jan 2 2006 00:18:04 -06:00  config.text
 
 951762944 bytes total (912850944 bytes free)
 Directory of system:/
@@ -801,34 +801,34 @@ Minimum process stacks:
  8420/9000   EEM ED RF
  5412/6000   MDFS Reload
  3796/6000   EEM Shell Director
- 8920/12000  master cfg mgr init process
  5316/6000   vqpc_shim_create_addr_tbl
- 5276/6000   SPAN Subsystem
- 5384/6000   bulk config process
+ 5280/6000   SPAN Subsystem
+ 8920/12000  master cfg mgr init process
+ 5380/6000   bulk config process
  4948/6000   hpm bulk_vlan_state process
  2616/6000   Profinet Get hostname Process
- 5432/6000   Profinet Get sysContact Process
- 5428/6000   Profinet Get sysLocation Process
+ 5428/6000   Profinet Get sysContact Process
+ 5432/6000   Profinet Get sysLocation Process
  5228/6000   REP LSL Hello PP Process
 59004/60000  EEM Auto Registration Proc
  8184/9000   CDP Protocol
  2356/3000   LIM WAVL
  5220/6000   SASL MAIN
- 5008/6000   LICENSE AGENT DEFAULT
+ 5004/6000   LICENSE AGENT DEFAULT
 10472/12000  PnP Agent Discovery
+ 8428/9000   cdp init process
  9084/12000  Auto configuration builtin tempalte creation
-16656/24000  Init
- 8432/9000   cdp init process
+16652/24000  Init
  5228/6000   RADIUS INITCONFIG
- 5416/6000   CTS server list swact
- 3048/6000   morenolite_check_ssh_configure
- 2508/6000   enable_sshon_sdflash
- 5388/6000   Hulc Backup Interface Process
- 6504/12000  SSH Process
+ 5412/6000   CTS server list swact
+ 3044/6000   morenolite_check_ssh_configure
+ 2512/6000   enable_sshon_sdflash
+ 5392/6000   Hulc Backup Interface Process
+ 6500/12000  SSH Process
 
 Interrupt level stacks:
 Level    Called Unused/Size  Name
-  4     2166428   8276/9000  CPU NETWORK INTERFACE CHIP
+  4     1917726   8284/9000  CPU NETWORK INTERFACE CHIP
   5           0   9000/9000  Test Interrupt Handler
   6        4028   8932/9000  NS16550 VECTOR
 
@@ -866,7 +866,7 @@ Vlan11 is up, line protocol is up
   Encapsulation ARPA, loopback not set
   Keepalive not supported 
   ARP type: ARPA, ARP Timeout 04:00:00
-  Last input 00:00:48, output 00:00:48, output hang never
+  Last input 00:00:44, output 00:00:44, output hang never
   Last clearing of "show interface" counters never
   Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
   Queueing strategy: fifo
@@ -890,7 +890,7 @@ Vlan12 is up, line protocol is up
   Encapsulation ARPA, loopback not set
   Keepalive not supported 
   ARP type: ARPA, ARP Timeout 04:00:00
-  Last input 00:00:48, output 00:00:48, output hang never
+  Last input 00:00:44, output 00:00:44, output hang never
   Last clearing of "show interface" counters never
   Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
   Queueing strategy: fifo
@@ -914,7 +914,7 @@ Vlan22 is up, line protocol is up
   Encapsulation ARPA, loopback not set
   Keepalive not supported 
   ARP type: ARPA, ARP Timeout 04:00:00
-  Last input never, output 00:00:48, output hang never
+  Last input never, output 00:00:44, output hang never
   Last clearing of "show interface" counters never
   Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
   Queueing strategy: fifo
@@ -943,13 +943,13 @@ Vlan100 is up, line protocol is up
   Input queue: 2/75/0/0 (size/max/drops/flushes); Total output drops: 0
   Queueing strategy: fifo
   Output queue: 0/40 (size/max)
-  5 minute input rate 7000 bits/sec, 7 packets/sec
-  5 minute output rate 5000 bits/sec, 6 packets/sec
-     416 packets input, 34044 bytes, 0 no buffer
+  5 minute input rate 6000 bits/sec, 8 packets/sec
+  5 minute output rate 5000 bits/sec, 5 packets/sec
+     420 packets input, 34202 bytes, 0 no buffer
      Received 0 broadcasts (0 IP multicasts)
      0 runts, 0 giants, 0 throttles 
      0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
-     477 packets output, 93314 bytes, 0 underruns
+     472 packets output, 92952 bytes, 0 underruns
      0 output errors, 2 interface resets
      0 unknown protocol drops
      0 output buffer failures, 0 output buffers swapped out
@@ -1289,13 +1289,13 @@ GigabitEthernet1/12 is up, line protocol is up (connected)
   Output queue: 0/40 (size/max)
   5 minute input rate 9000 bits/sec, 9 packets/sec
   5 minute output rate 6000 bits/sec, 7 packets/sec
-     761 packets input, 68616 bytes, 0 no buffer
-     Received 448 broadcasts (383 multicasts)
+     738 packets input, 67755 bytes, 0 no buffer
+     Received 444 broadcasts (374 multicasts)
      0 runts, 0 giants, 0 throttles 
      0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
-     0 watchdog, 383 multicast, 0 pause input
+     0 watchdog, 374 multicast, 0 pause input
      0 input packets with dribble condition detected
-     618 packets output, 99708 bytes, 0 underruns
+     576 packets output, 81402 bytes, 0 underruns
      0 output errors, 0 collisions, 1 interface resets
      0 unknown protocol drops
      0 babbles, 0 late collision, 0 deferred
@@ -2193,13 +2193,13 @@ GigabitEthernet1/28 is administratively down, line protocol is down (disabled)
 
 
      Transmit GigabitEthernet1/12             Receive
-       185682 Bytes                            72710 Bytes                    
-          609 Unicast frames                     373 Unicast frames           
-          146 Multicast frames                   383 Multicast frames         
-            6 Broadcast frames                    65 Broadcast frames         
-            0 Too old frames                   30862 Unicast bytes            
-            0 Deferred frames                  33124 Multicast bytes          
-            0 MTU exceeded frames               5484 Broadcast bytes          
+       184706 Bytes                            73005 Bytes                    
+          604 Unicast frames                     371 Unicast frames           
+          138 Multicast frames                   374 Multicast frames         
+            6 Broadcast frames                    70 Broadcast frames         
+            0 Too old frames                   30678 Unicast bytes            
+            0 Deferred frames                  33307 Multicast bytes          
+            0 MTU exceeded frames               5804 Broadcast bytes          
             0 1 collision frames                   0 Alignment errors         
             0 2 collision frames                   0 FCS errors               
             0 3 collision frames                   0 Oversize frames          
@@ -2207,8 +2207,8 @@ GigabitEthernet1/28 is administratively down, line protocol is down (disabled)
             0 5 collision frames                   0 Collision fragments      
             0 6 collision frames       
             0 7 collision frames                   9 Minimum size frames      
-            0 8 collision frames                 748 65 to 127 byte frames    
-            0 9 collision frames                  56 128 to 255 byte frames   
+            0 8 collision frames                 737 65 to 127 byte frames    
+            0 9 collision frames                  61 128 to 255 byte frames   
             0 10 collision frames                  5 256 to 511 byte frames   
             0 11 collision frames                  3 512 to 1023 byte frames  
             0 12 collision frames                  0 1024 to 1518 byte frames 
@@ -2219,8 +2219,8 @@ GigabitEthernet1/28 is administratively down, line protocol is down (disabled)
             0 Late collisions                      0 Invalid frames, too large
             0 VLAN discard frames                  0 Valid frames, too large  
             0 Excess defer frames                  0 Invalid frames, too small
-            8 64 byte frames                       0 Valid frames, too small  
-          525 127 byte frames          
+            9 64 byte frames                       0 Valid frames, too small  
+          511 127 byte frames          
             6 255 byte frames                      0 Too old frames           
            24 511 byte frames                      0 Valid oversize frames    
           198 1023 byte frames                     0 System FCS error frames  
@@ -2849,12 +2849,12 @@ CPU Heartbeat Statistics
 
 Tx Success Tx Fail    1st Thr    2nd Thr    Unthr      RetryCtMax
 ---------- ---------- ---------- ---------- ---------- ----------
-      1760          0          0          0          0          1
+      1638          0          0          0          0          1
 
 Rx Delay
          0          1          2          3          4 
 ---------- ---------- ---------- ---------- ---------- 
-      1760          0          0          0          0 
+      1638          0          0          0          0 
 
 AddlDelay AdvanceCnt
 ---------- ----------
@@ -2863,7 +2863,7 @@ AddlDelay AdvanceCnt
 Rx Retries by RetryCount
          0          1          2          3          4          5          6 
 ---------- ---------- ---------- ---------- ---------- ---------- ---------- 
-      1760          0          0          0          0          0          0 
+      1639          0          0          0          0          0          0 
 
          7          8          9 
 ---------- ---------- ---------- 
@@ -2876,21 +2876,21 @@ AddlRetry
 cpu-queue-frames  retrieved  dropped    invalid    hol-block  stray
 ----------------- ---------- ---------- ---------- ---------- ----------
 rpc               0          0          0          0          0         
-stp               250        0          0          0          0         
+stp               232        0          0          0          0         
 ipc               0          0          0          0          0         
-routing protocol  71         0          0          0          0         
+routing protocol  77         0          0          0          0         
 L2 protocol       6          0          0          0          0         
 rpc               0          0          0          0          0         
 sw forwarding     0          0          0          0          0         
-host              405        0          0          0          0         
-broadcast         65         0          0          0          0         
+host              411        0          0          0          0         
+broadcast         69         0          0          0          0         
 cbt-to-spt        0          0          0          0          0         
-igmp snooping     40         0          0          0          0         
+igmp snooping     42         0          0          0          0         
 icmp              0          0          0          0          0         
 logging           0          0          0          0          0         
 rpf-fail          0          0          0          0          0         
 dstats            0          0          0          0          0         
-cpu heartbeat     1760       0          0          0          0         
+cpu heartbeat     1639       0          0          0          0         
 -------Supervisor ASIC exception status-------
 Receive overrun    00000000   Transmit overrun 00000000
 FrameSignatureErr  00000000  
@@ -2901,52 +2901,52 @@ DescriptorTableOffset     		1E2C0000
 
 q_num 	start 	end 	count 	current pop 	q_size 	stats 	disable
 0      	0x0000 	0x0000 	0x0000 	0x0000 	0x0000 	0x0000 	0x0000 	1
-1      	0x9810 	0x988F 	0x0000 	0x988A 	0x0004 	0x0080 	0x0000 	0
-2      	0x9890 	0x989B 	0x0000 	0x9890 	0x0000 	0x000C 	0x0000 	0
-3      	0x98A0 	0x991F 	0x0000 	0x98E7 	0x0001 	0x0080 	0x0000 	0
-4      	0x9920 	0x995F 	0x0000 	0x9926 	0x0001 	0x0040 	0x0000 	0
+1      	0x8410 	0x848F 	0x0000 	0x8478 	0x0005 	0x0080 	0x0000 	0
+2      	0x8490 	0x849B 	0x0000 	0x8490 	0x0000 	0x000C 	0x0000 	0
+3      	0x84A0 	0x851F 	0x0000 	0x84ED 	0x0001 	0x0080 	0x0000 	0
+4      	0x8520 	0x855F 	0x0000 	0x8526 	0x0001 	0x0040 	0x0000 	0
 5      	0x0000 	0x0000 	0x0000 	0x0000 	0x0000 	0x0000 	0x0000 	1
-6      	0x9970 	0x99EF 	0x0000 	0x9970 	0x0000 	0x0080 	0x0000 	0
-7      	0x99F0 	0x9A6F 	0x0000 	0x9A05 	0x0001 	0x0080 	0x0000 	0
-8      	0x9A70 	0x9AAF 	0x0000 	0x9A71 	0x0001 	0x0040 	0x0000 	0
-9      	0x9AB0 	0x9ABF 	0x0000 	0x9AB0 	0x0000 	0x0010 	0x0000 	0
-10     	0x9AC0 	0x9AFF 	0x0000 	0x9AE8 	0x0001 	0x0040 	0x0000 	0
-11     	0x9B00 	0x9B0F 	0x0000 	0x9B00 	0x0000 	0x0010 	0x0000 	0
-12     	0x9B10 	0x9B1F 	0x0000 	0x9B10 	0x0000 	0x0010 	0x0000 	0
-13     	0x9B20 	0x9B2F 	0x0000 	0x9B20 	0x0000 	0x0010 	0x0000 	0
+6      	0x8570 	0x85EF 	0x0000 	0x8570 	0x0000 	0x0080 	0x0000 	0
+7      	0x85F0 	0x866F 	0x0000 	0x860B 	0x0001 	0x0080 	0x0000 	0
+8      	0x8670 	0x86AF 	0x0000 	0x8675 	0x0001 	0x0040 	0x0000 	0
+9      	0x86B0 	0x86BF 	0x0000 	0x86B0 	0x0000 	0x0010 	0x0000 	0
+10     	0x86C0 	0x86FF 	0x0000 	0x86EA 	0x0001 	0x0040 	0x0000 	0
+11     	0x8700 	0x870F 	0x0000 	0x8700 	0x0000 	0x0010 	0x0000 	0
+12     	0x8710 	0x871F 	0x0000 	0x8710 	0x0000 	0x0010 	0x0000 	0
+13     	0x8720 	0x872F 	0x0000 	0x8720 	0x0000 	0x0010 	0x0000 	0
 14     	0x0000 	0x0000 	0x0000 	0x0000 	0x0000 	0x0000 	0x0000 	1
-15     	0x9B40 	0x9B43 	0x0000 	0x9B40 	0x0001 	0x0004 	0x0000 	0
+15     	0x8740 	0x8743 	0x0001 	0x8743 	0x0001 	0x0004 	0x0000 	0
 -------PCIe Supervisor Rx SW Pointers-------
 q_num 	start 	end 	sw_read sw_cnt unfill(#|ptr|max) to_pop offset exception
 0      	0x0000 	0x0000 	0x0000  0 	0|0x0000|0 	0 	0 	0
-1      	0x9810 	0x988F 	0x988A  0 	0|0x0000|0 	0 	0 	0
-2      	0x9890 	0x989B 	0x9890  0 	0|0x0000|0 	0 	0 	0
-3      	0x98A0 	0x991F 	0x98E7  0 	0|0x0000|0 	0 	0 	0
-4      	0x9920 	0x995F 	0x9926  0 	0|0x0000|0 	0 	0 	0
+1      	0x8410 	0x848F 	0x8478  0 	0|0x0000|0 	0 	0 	0
+2      	0x8490 	0x849B 	0x8490  0 	0|0x0000|0 	0 	0 	0
+3      	0x84A0 	0x851F 	0x84ED  0 	0|0x0000|0 	0 	0 	0
+4      	0x8520 	0x855F 	0x8526  0 	0|0x0000|0 	0 	0 	0
 5      	0x0000 	0x0000 	0x0000  0 	0|0x0000|0 	0 	0 	0
-6      	0x9970 	0x99EF 	0x9970  0 	0|0x0000|0 	0 	0 	0
-7      	0x99F0 	0x9A6F 	0x9A05  0 	0|0x0000|0 	0 	0 	0
-8      	0x9A70 	0x9AAF 	0x9A71  0 	0|0x0000|0 	0 	0 	0
-9      	0x9AB0 	0x9ABF 	0x9AB0  0 	0|0x0000|0 	0 	0 	0
-10     	0x9AC0 	0x9AFF 	0x9AE8  0 	0|0x0000|0 	0 	0 	0
-11     	0x9B00 	0x9B0F 	0x9B00  0 	0|0x0000|0 	0 	0 	0
-12     	0x9B10 	0x9B1F 	0x9B10  0 	0|0x0000|0 	0 	0 	0
-13     	0x9B20 	0x9B2F 	0x9B20  0 	0|0x0000|0 	0 	0 	0
+6      	0x8570 	0x85EF 	0x8570  0 	0|0x0000|0 	0 	0 	0
+7      	0x85F0 	0x866F 	0x860B  0 	0|0x0000|0 	0 	0 	0
+8      	0x8670 	0x86AF 	0x8675  0 	0|0x0000|0 	0 	0 	0
+9      	0x86B0 	0x86BF 	0x86B0  0 	0|0x0000|0 	0 	0 	0
+10     	0x86C0 	0x86FF 	0x86EA  0 	0|0x0000|0 	0 	0 	0
+11     	0x8700 	0x870F 	0x8700  0 	0|0x0000|0 	0 	0 	0
+12     	0x8710 	0x871F 	0x8710  0 	0|0x0000|0 	0 	0 	0
+13     	0x8720 	0x872F 	0x8720  0 	0|0x0000|0 	0 	0 	0
 14     	0x0000 	0x0000 	0x0000  0 	0|0x0000|0 	0 	0 	0
-15     	0x9B40 	0x9B43 	0x9B40  0 	0|0x0000|1 	0 	0 	0
+15     	0x8740 	0x8743 	0x8743  0 	0|0x0000|1 	0 	0 	0
 ------PCIe Supervisor Rx SW Info-------------
 q_num 	offset 	pop|max  idle|max
 0      	0 	0|0 	0|0
-1      	0 	4|5 	0|0
+1      	0 	5|5 	0|0
 2      	0 	0|0 	0|0
 3      	0 	1|1 	0|0
 4      	0 	1|1 	0|0
 5      	0 	0|0 	0|0
 6      	0 	0|0 	0|0
-7      	0 	1|1 	0|0
+7      	0 	1|1 	0|1
 8      	0 	1|1 	0|0
 9      	0 	0|0 	0|0
-10     	0 	1|1 	0|0
+10     	0 	1|2 	0|0
 11     	0 	0|0 	0|0
 12     	0 	0|0 	0|0
 13     	0 	0|0 	0|0
@@ -2956,9 +2956,9 @@ q_num 	offset 	pop|max  idle|max
 DescriptorTableOffset     		1E280000
 
 q_num 	start 	end 	count 	current pushcnt pushptr qselect weight disable 
-0      	0xCE00 	0xCEFF 	0x0000 	0xCE77 	0x0001 	0xCE76 	0x0000 	30 0
-1      	0xCF00 	0xCF7F 	0x0000 	0xCF3C 	0x0001 	0xCF3B 	0x0001 	10 0
-2      	0xCF80 	0xCFBF 	0x0000 	0xCF80 	0x0000 	0x0000 	0x0000 	30 0
+0      	0xC400 	0xC4FF 	0x0000 	0xC4F7 	0x0001 	0xC4F6 	0x0000 	30 0
+1      	0xC500 	0xC57F 	0x0000 	0xC536 	0x0001 	0xC535 	0x0001 	10 0
+2      	0xC580 	0xC5BF 	0x0000 	0xC580 	0x0000 	0x0000 	0x0000 	30 0
 3      	0x0000 	0x0000 	0x0000 	0x0000 	0x0000 	0x0000 	0x0000 	0 1
 4      	0x0000 	0x0000 	0x0000 	0x0000 	0x0000 	0x0000 	0x0000 	0 1
 5      	0x0000 	0x0000 	0x0000 	0x0000 	0x0000 	0x0000 	0x0000 	0 1
@@ -2966,9 +2966,9 @@ q_num 	start 	end 	count 	current pushcnt pushptr qselect weight disable
 7      	0x0000 	0x0000 	0x0000 	0x0000 	0x0000 	0x0000 	0x0000 	0 1
 -------PCIe Supervisor Tx SW Pointers-------
 q_num 	start 	end 	sw_write txdone tx_cnt txdone_cnt
-0      	0xCE00 	0xCEFF 	0xCE77 	0xCE77 	1911 	1911
-1      	0xCF00 	0xCF7F 	0xCF3C 	0xCF3C 	700 	700
-2      	0xCF80 	0xCFBF 	0xCF80 	0xCF80 	0 	0
+0      	0xC400 	0xC4FF 	0xC4F7 	0xC4F7 	1783 	1783
+1      	0xC500 	0xC57F 	0xC536 	0xC536 	694 	694
+2      	0xC580 	0xC5BF 	0xC580 	0xC580 	0 	0
 3      	0x0000 	0x0000 	0x0000 	0x0000 	0 	0
 4      	0x0000 	0x0000 	0x0000 	0x0000 	0 	0
 5      	0x0000 	0x0000 	0x0000 	0x0000 	0 	0
@@ -3053,7 +3053,7 @@ Directory of flash:/
     2  -rwx       46604   Jan 1 2006 18:01:13 -06:00  pnap.dat
     3  drwx         512  Mar 29 2011 20:48:41 -05:00  ie4010-universalk9-mz.152-4.EC2
   608  drwx         512  Mar 29 2011 20:48:43 -05:00  dc_profile_dir
-  611  -rwx       10264   Jan 1 2006 18:00:48 -06:00  multiple-fs
+  611  -rwx       10264   Jan 1 2006 18:00:50 -06:00  multiple-fs
 
 122185728 bytes total (90960384 bytes free)
 
@@ -3670,7 +3670,7 @@ Directory of flash:/
 608          0 Mar 30 2011 07:38:24 dc_profile_dir
 609     238194 Mar 30 2011 07:34:14 dc_profile_dir/dc_default_profiles.txt
 610          0 Jan 03 2006 06:12:48 ssh.enable
-611      15224 Jan 02 2006 06:03:16 config.text
+611      15224 Jan 02 2006 06:18:04 config.text
 
 912850944 bytes available (38912000 bytes used)
 
@@ -3706,115 +3706,115 @@ No data inconsistency errors have been recorded.
 
 
                 Head    Total(b)     Used(b)     Free(b)   Lowest(b)  Largest(b)
-Processor    75FD478   934283960    67617912   866666048   375324432   499009008
-      I/O   1E000000    16777216     8316136     8461080     8461080     8460568
+Processor    75FD478   934283960    73415424   860868536   370523484   504195288
+      I/O   1E000000    16777216     8305148     8472068     8472068     8471784
 Driver te    4300000     1048576          44     1048532     1048532     1048532
 
 ------------------ show process memory sorted ------------------
 
 
-Processor Pool Total:  934283960 Used:   67633104 Free:  866650856
-      I/O Pool Total:   16777216 Used:    8316112 Free:    8461104
+Processor Pool Total:  934283960 Used:   73430632 Free:  860853328
+      I/O Pool Total:   16777216 Used:    8305124 Free:    8472092
 Driver te Pool Total:    1048576 Used:         40 Free:    1048536
 
  PID TTY  Allocated      Freed    Holding    Getbufs    Retbufs Process
-   0   0  103102608   48972252   49632564          0          0 *Init*          
-   0   0    8643712    6374048    2230796    8328735     928178 *Dead*          
- 411   0    1263396      17252    1253312          0          0 EEM Server      
-  89   0     803180     265524     453560          0          0 Stack Mgr Notifi
+   0   0  103074612   49035504   49621972          0          0 *Init*          
+   0   0    8650340    6379664    2231176    8328735     928178 *Dead*          
+ 411   0    1263476      17252    1253392          0          0 EEM Server      
+  89   0     804720     267784     453536          0          0 Stack Mgr Notifi
    0   0          0          0     394808          0          0 *MallocLite*    
-  74   0     389648       6964     392756          0          0 EEM ED Identity 
+  74   0     369796       6964     372904          0          0 EEM ED Identity 
  395   0     281572       4964     286776     100548          0 EEM ED Syslog   
-   1   0     250212       6256     252792          0          0 Chunk Manager   
+   1   0     255256       6132     257836          0          0 Chunk Manager   
  393   0     207792       4964     212996      67468          0 EEM ED Generic  
- 364   0     138696        288     151576          0          0 Crypto IKEv2    
- 144   1   29340188   29231352     120752          0          0 SSH Process     
- 449   0     106424       1344     115312          0          0 IP Connected Rou
- 249   0     129516       6024     114316          0          0 DTP Protocol    
- 377   0     440420     366492      87164          0          0 Crypto CA       
- 184   0     825384     754100      84452      35532          0 HQM Stack Proces
- 185   0     419500     401716      78952      10152          0 HRPC qos request
+ 364   0     138756        348     151576          0          0 Crypto IKEv2    
+ 459   0    1026036     885268     148236          0          0 Snmp Flash Cache
+ 144   1   29353032   29244152     120832          0          0 SSH Process     
+ 449   0     109460       1152     118540          0          0 IP Connected Rou
+ 249   0     129696       5976     114544          0          0 DTP Protocol    
+ 184   0     788424     708248      93344      40608          0 HQM Stack Proces
+ 185   0     405388     378712      87844      15228          0 HRPC qos request
+ 377   0     431968     358728      86476          0          0 Crypto CA       
  262   0      71336          0      78504          0          0 Switch Backup In
  157   0      65812        232      72748          0          0 REP Helper Proc 
- 459   0     434156     371600      70024          0          0 Snmp Flash Cache
- 466   0     798472          0      66044          0          0 Profinet User   
+ 466   0     798472          0      65992          0          0 Profinet User   
  177   0          0          0      61168          0          0 HL3U PBR bkgrd p
- 140   0        232       8396      61168          0          0 HACL Acl Manager
+ 140   0        232       8368      61168          0          0 HACL Acl Manager
  235   0          0          0      61040          0          0 Profinet EventRe
  410   0          0          0      61040          0          0 Profinet Config 
- 471   0          0          0      61040          0          0 Profinet Topolog
- 470   0          0          0      61040          0          0 Profinet Etherne
- 469   0          0          0      61040          0          0 Profinet Alarm  
- 468   0          0          0      61040          0          0 Profinet Provide
- 467   0          0          0      61040          0          0 Profinet Consume
+ 470   0          0          0      61040          0          0 Profinet Topolog
+ 469   0          0          0      61040          0          0 Profinet Etherne
+ 468   0          0          0      61040          0          0 Profinet Alarm  
+ 467   0          0          0      61040          0          0 Profinet Provide
  465   0          0          0      61040          0          0 Profinet IO-plfm
+ 464   0          0          0      61040          0          0 Profinet Consume
  211   0          0          0      61040          0          0 Profinet HwUdp  
  385   0          0          0      61040          0          0 Profinet Supervi
- 257   0          0          0      61040          0          0 Profinet Service
  358   0          0          0      61040          0          0 Profinet Service
- 441   0          0          0      61040          0          0 Profinet Cmdev  
  210   0          0          0      61040          0          0 Profinet HwEth  
-  67   0      96964      85304      58872          0          0 IF-MGR control p
+ 441   0          0          0      61040          0          0 Profinet Cmdev  
+ 257   0          0          0      61040          0          0 Profinet Service
+  67   0      97024      85304      58932          0          0 IF-MGR control p
  205   0      49352          0      56520          0          0 ACCT Periodic Pr
  350   0      49584        232      56520          0          0 Timer Library   
- 412   0      87596      28084      51896          0          0 Call Home proces
- 370   0      38612        232      51548          0          0 Crypto IKMP     
-  76   0      46168      62776      50772          0          0 EEM ED ND       
- 288   0      37328          0      50496          0          0 IP RIB Update   
- 362   0      19140          0      44180          0          0 LICENSE AGENT   
-  15   0      42488       5724      43932          0          0 ARP Input       
- 450   0      43764        232      42644          0          0 DHCPD Receive   
+ 412   0      87464      28084      51820          0          0 Call Home proces
+ 370   0      38608        232      51544          0          0 Crypto IKMP     
+  76   0      46168      66292      50772          0          0 EEM ED ND       
+ 288   0      37292          0      50460          0          0 IP RIB Update   
+ 323   0      19248          0      44336          0          0 LICENSE AGENT   
+  15   0      42848       6148      43868          0          0 ARP Input       
+ 450   0      43816        232      42696          0          0 DHCPD Receive   
  226   0      33012          0      40180          0          0 IP ARP Retry Age
   52   0      26908        232      39844      15228          0 Logger          
- 448   0     252892     230828      35516       2340          0 VLAN Manager    
-  20   0     300356       9600      34840          0          0 Entity MIB API  
+ 448   0     252892     230828      35548       2340          0 VLAN Manager    
+  20   0     366164       9600      34836          0          0 Entity MIB API  
  317   0      17012        212      29968          0          0 ADJ resolve proc
  281   0      35460       4300      29240          0          0 CEF: IPv4 proces
  238   0       3168          0      28336          0          0 SMI Director DB 
+ 344   0      23020      54188      27124          0          0 MLDSN L2MCM     
   60   0      16844          0      27012          0          0 Per-Second Jobs 
- 344   0      23376      54960      26972          0          0 MLDSN L2MCM     
  442   0      13520        464      26224          0          0 RBM CORE        
  389   0      23000       4296      26108          0          0 DCM Core Thread 
  436   0      20756       4964      25960          0          0 EEM ED SNMP Obje
- 337   0      89256      61828      25948          0          0 IGMPSN L2MCM    
+ 337   0      88696      60808      25924          0          0 IGMPSN L2MCM    
  240   0        748          0      25916          0          0 SMI Backup Proce
  399   0          0          0      25168          0          0 Common Industria
  127   0          0          0      25168          0          0 HRPC pm request 
-  38   0          0          0      25168          0          0 Crash writer    
  373   0          0          0      25168          0          0 Crypto ACL      
+  38   0          0          0      25168          0          0 Crash writer    
  386   0        232        232      25168          0          0 ASP Process Crea
  203   0      16816        232      23752          0          0 AAA Server      
  243   0      10276        232      23212          0          0 SMI IBC Download
-  43   0     590736     571408      22000          0          0 crypto sw pk pro
  419   0      12632        904      21896          0          0 EEM Policy Direc
+  43   0    1260228    1240828      21884          0          0 crypto sw pk pro
  424   0      16640       4964      21844          0          0 EEM ED CRASH    
  425   0      16640       4964      21844          0          0 EEM ED DS       
  428   0      16504       4964      21708          0          0 EEM ED Interface
  256   0      14448        504      21112          0          0 IOS Kernel Clock
- 275   0      15648        812      21016          0          0 CEF background p
-  50   0     100948       1492      20944          0          0 Net Background  
+ 275   0      15908        840      21068          0          0 CEF background p
+  50   0     104316       1492      20752          0          0 Net Background  
   30   0      13220          0      20388          0          0 IPC Seat Manager
  223   0      11724          0      18892          0          0 TRACK Client thr
- 225   0       5432          0      18600          0          0 IP ARP Adjacency
+ 225   0       5520          0      18688          0          0 IP ARP Adjacency
  375   0       4708          0      17876          0          0 IPSec background
- 325   0      10756        232      17692          0          0 REP BPA/EPA Proc
+ 325   0      10276        232      17212          0          0 REP BPA/EPA Proc
  429   0      11620       5124      16824          0          0 EEM ED IOSWD    
  439   0      11492       4964      16696          0          0 EEM ED Timer    
- 327   0      14404       4896      16676          0          0 SR CapMan Proces
  394   0      11436       4964      16640          0          0 EEM ED Routing  
  437   0      11436       4964      16640          0          0 EEM ED SNMP Noti
+ 327   0      14332       4896      16604          0          0 SR CapMan Proces
  434   0      11392       4964      16596          0          0 EEM ED RPC      
  430   0      11348       4964      16552          0          0 EEM ED Ipsla    
- 423   0      11340       4964      16544          0          0 EEM ED Counter  
  426   0      11340       4964      16544          0          0 EEM ED Env      
- 422   0      11340       4964      16544          0          0 EEM ED Config   
+ 423   0      11340       4964      16544          0          0 EEM ED Counter  
  421   0      11340       4964      16544          0          0 EEM ED CLI      
+ 438   0      11340       4964      16544          0          0 EEM ED Test     
  427   0      11340       4964      16544          0          0 EM ED GOLD      
  432   0      11340       4964      16544          0          0 EEM ED OIR      
  431   0      11340       4964      16544          0          0 EEM ED None     
- 438   0      11340       4964      16544          0          0 EEM ED Test     
+ 422   0      11340       4964      16544          0          0 EEM ED Config   
  435   0      11340       4964      16544          0          0 EEM ED SNMP     
- 472   0       8460          0      15420          0          0 SSH Event handle
+ 472   0       8524          0      15424          0          0 SSH Event handle
  319   0       5044          0      15212          0          0 IPv6 RIB Event H
  234   0       8400        444      15124          0          0 MKA             
  294   0      44844          0      15076          0          0 TCP Protocols   
@@ -3822,193 +3822,193 @@ Driver te Pool Total:    1048576 Used:         40 Free:    1048536
  418   0       8060        240      14884          0          0 snmp dcm ma shim
  361   0       4708          0      14876          0          0 Consoleless Acce
  458   0       1600        232      14536          0          0 SNMP Traps      
- 440   0       8332       7120      14380          0          0 Syslog          
+ 440   0       8312       7100      14380          0          0 Syslog          
  417   0       8964       1728      14324          0          0 DCM snmp dp Thre
- 456   0       1268        232      14208          0          0 IP SNMPV6       
- 453   0       1252        232      14196          0          0 IP SNMP         
+ 453   0       1252        232      14220          0          0 IP SNMP         
+ 456   0       1268        232      14216          0          0 IP SNMPV6       
  380   0        888          0      14056          0          0 PKI OCSP        
   54   0        772          0      13948          0          0 CTS CORE        
- 372   0       6820       5668      13760          0          0 IPSEC key engine
- 359   0        788        232      13724          0          0 TPLUS           
+ 372   0       6868       5668      13760          0          0 IPSEC key engine
+  55   0        788        848      13724          0          0 SXP CORE        
  352   0        788        232      13724          0          0 LDAP process    
-  55   0        788        820      13724          0          0 SXP CORE        
- 413   0       7012        496      13676          0          0 EEM Helper Threa
+ 359   0        788        232      13724          0          0 TPLUS           
  300   0       6724        232      13660          0          0 Dot1x Supplicant
+ 413   0       7028        496      13636          0          0 EEM Helper Threa
  311   0        464          0      13632          0          0 MRIB RP Proxy   
  242   0        440          0      13608          0          0 SMI IBC client p
- 283   0       7660        232      13512          0          0 MDFS LC Process 
+ 283   0       7608        232      13504          0          0 MDFS LC Process 
  414   0       8832      13468      13424          0          0 Bulkstat-Client 
  276   0        216          0      13384          0          0 fib_fib_bfd_sb e
- 224   0        216          0      13384          0          0 CEF switching ba
- 282   0        216          0      13384          0          0 ADJ background  
- 310   0        216          0      13384          0          0 MFIB Master back
  289   0        216          0      13384          0          0 Collection proce
-  19   0          0          0      13212          0          0 Policy Manager  
- 454   0          0          0      13204          0          0 PDU DISPATCHER  
- 455   0          0          0      13200          0          0 SNMP ENGINE     
+ 282   0        216          0      13384          0          0 ADJ background  
+ 224   0        216          0      13384          0          0 CEF switching ba
+ 310   0        216          0      13384          0          0 MFIB Master back
  357   0       1180       1180      13172          0          0 LOCAL AAA       
  378   0        232        232      13168          0          0 Crypto PKI-CRL  
- 388   0          0          0      13168          0          0 Test AAA Client 
- 113   0          0          0      13168          0          0 HRPC vlan reques
  379   0          0          0      13168          0          0 Crypto PKI-Rev-P
  110   0          0          0      13168          0          0 HVLAN main bkgrd
- 376   0          0          0      13168          0          0 RSA background p
- 132   0          0          0      13168          0          0 HCEF ADJ Refresh
  381   0          0          0      13168          0          0 PKI Revocation  
   41   0          0          0      13168          0          0 License IPC serv
+ 388   0          0          0      13168          0          0 Test AAA Client 
+  40   0          0          0      13168          0          0 License IPC stat
+ 376   0          0          0      13168          0          0 RSA background p
+  98   0          0          0      13168          0          0 HIPC bkgrd proce
+ 132   0          0          0      13168          0          0 HCEF ADJ Refresh
+ 113   0          0          0      13168          0          0 HRPC vlan reques
+  46   0        232        232      13168          0          0 XML Proxy Client
  369   0        232        232      13168          0          0 Crypto IKE Dispa
  368   0          0          0      13168          0          0 Crypto INT      
  366   0          0          0      13168          0          0 encrypt proc    
- 105   0          0          0      13168          0          0 HRPC hrcmd reque
-  98   0          0          0      13168          0          0 HIPC bkgrd proce
-  46   0        232        232      13168          0          0 XML Proxy Client
   51   0          0          0      13168          0          0 IDB Work        
-  40   0          0          0      13168          0          0 License IPC stat
+ 105   0          0          0      13168          0          0 HRPC hrcmd reque
   88   0          0          0      13168          0          0 Stack Mgr       
- 233   0        232        232      13168          0          0 KRB5 AAA        
+ 455   0          0          0      13168          0          0 SNMP ENGINE     
+ 454   0          0          0      13168          0          0 PDU DISPATCHER  
  220   0        232        232      13168          0          0 Ethernet LMI    
- 460   0        232        232      13168          0          0 NTP             
+ 312   0        232        232      13168          0          0 Tunnel          
  271   0          0          0      13168          0          0 XDR receive     
+ 460   0        232        232      13168          0          0 NTP             
+ 284   0        232        232      13168          0          0 Auth Manager    
  202   0        232        232      13168          0          0 Ethernet Msec Ti
  201   0        232        232      13168          0          0 Ethernet Timer C
  150   0          0          0      13168          0          0 HULC DOT1X Proce
  200   0        232        232      13168          0          0 Ethernet CFM    
+ 305   0          0          0      13168          0          0 EPM ACL PLUG-IN 
+  19   0          0          0      13168          0          0 Policy Manager  
  230   0        232        232      13168          0          0 MDFS MFIB Proces
  175   0          0          0      13168          0          0 HL3U bkgrd proce
- 284   0        232        232      13168          0          0 Auth Manager    
- 457   0          0          0      13168          0          0 SNMP ConfCopyPro
  287   0          0          0      13168          0          0 Routing Topology
- 312   0        232        232      13168          0          0 Tunnel          
  293   0          0          0      13168          0          0 TCP Timer       
- 305   0          0          0      13168          0          0 EPM ACL PLUG-IN 
- 462   0          0          0      13080          0          0 hulc cfg mgr mas
+ 233   0        232        232      13168          0          0 KRB5 AAA        
+ 457   0          0          0      13168          0          0 SNMP ConfCopyPro
+ 362   0          0          0      13080          0          0 hulc cfg mgr mas
  299   0       5280        232      12216          0          0 Cluster Base    
-  93   0       6420       4336      12212          0          0 hrpc <- response
- 236   0       5276        232      12212          0          0 REP Topology cha
- 101   0       5276        232      12212          0          0 Hulc Port-Securi
  186   0       5044          0      12212          0          0 HRPC span reques
-   0   0      12180     327752      12180          0          0 *Sched*         
+ 101   0       5276        232      12212          0          0 Hulc Port-Securi
+ 236   0       5276        232      12212          0          0 REP Topology cha
+  93   0       6460       4376      12212          0          0 hrpc <- response
+ 461   0      35756       5280      12200          0          0 SpanTree Helper 
+   0   0      12180     313152      12180          0          0 *Sched*         
   75   0       7136       5164      12140          0          0 EEM ED MAT      
- 124   0      32792       6344      12076          0          0 SpanTree Helper 
  384   0       4940        232      11880          0          0 VTP Trap Process
    6   0       4652        232      11640          0          0 Check heaps     
- 406   0      20008      53176      11576          0          0 PM Callback     
- 296   0      13616      12352      11432          0          0 HTTP CORE       
- 452   0       4560        404      11320          0          0 LLDP Protocol   
+ 406   0      19808      52380      11576          0          0 PM Callback     
+ 296   0      13720      12352      11536          0          0 HTTP CORE       
+ 452   0       4476        388      11296          0          0 LLDP Protocol   
  392   0       4280        240      11140          0          0 dcm_cli_provider
  313   0        988        232      10924          0          0 MVPN Mgr Process
- 341   0      13848        232      10744          0          0 L2TRACE SERVER  
+ 341   0      13824        232      10680          0          0 L2TRACE SERVER  
  125   0        588        240      10516          0          0 hpm main process
+ 241   0       3464        232      10400          0          0 SMI IBC server p
  314   0        448        232      10384          0          0 Multicast Offloa
  280   0        216          0      10384          0          0 Tunnel FIB      
- 241   0       3404        232      10340          0          0 SMI IBC server p
- 433   0      12860      20144      10268          0          0 IP Background   
+ 433   0      14012      21476      10268          0          0 IP Background   
  360   0        232        232      10188          0          0 HULC Consoless A
  277   0          0          0      10176          0          0 IP IRDP         
- 263   0        232        232      10168          0          0 IP Host Track Pr
  318   0          0          0      10168          0          0 IPv6 RIB Cleanup
- 383   0          0          0      10168          0          0 Licensing MIB pr
- 229   0        232        232      10168          0          0 IP ARP Track    
+ 263   0        232        232      10168          0          0 IP Host Track Pr
+ 316   0        232       1460      10168          0          0 static          
+ 330   0          0          0      10168          0          0 HULC_WCCP_BACKGR
  172   0        232        232      10168          0          0 Hulc LED Process
  285   0          0          0      10168          0          0 EPM MAIN PROCESS
- 330   0          0          0      10168          0          0 HULC_WCCP_BACKGR
- 161   0          0          0      10168          0          0 HRPC Smart Insta
- 371   0          0          0      10168          0          0 IPSEC manual key
- 193   0        232        232      10168          0          0 image mgr       
- 316   0        232       1460      10168          0          0 static          
  221   0        232        232      10168          0          0 Ethernet OAM Pro
-  90   0        920        920      10168          0          0 Adjust Regions  
- 322   0        368        368      10168          0          0 QoS stats proces
+ 383   0          0          0      10168          0          0 Licensing MIB pr
+ 161   0          0          0      10168          0          0 HRPC Smart Insta
+ 193   0        232        232      10168          0          0 image mgr       
+  90   0        904        904      10168          0          0 Adjust Regions  
+ 229   0        232        232      10168          0          0 IP ARP Track    
+ 322   0        360        360      10168          0          0 QoS stats proces
  320   0          0          0      10168          0          0 IPv6 Static Hand
- 415   0      10832        464      10120          0          0 CTS credentials 
- 323   0          0          0      10040          0          0 Connection Mgr  
+ 371   0          0          0      10168          0          0 IPSEC manual key
+ 415   0      10792        464      10120          0          0 CTS credentials 
+ 124   0          0          0      10080          0          0 Connection Mgr  
  391   0       2412          0       9580          0          0 dcm_cli_engine  
  222   0       1896          0       9064          0          0 TRACK Main threa
- 290   0      32072      30696       8544          0          0 NIST rng proc   
+ 290   0      32268      30892       8544          0          0 NIST rng proc   
  196   0       8172          0       8172          0          0 HL2MCM          
  208   0        888          0       8056          0          0 Auth-proxy HTTP 
+ 363   0     212812     211852       7992          0          0 crypto engine pr
  197   0       7932          0       7932          0          0 HL2MCM          
- 363   0     214500     213600       7932          0          0 crypto engine pr
- 326   0        364          0       7532          0          0 Service Routing 
+ 326   0        360          0       7528          0          0 Service Routing 
   39   0        340          0       7508          0          0 Exception contro
  259   0        532        232       7468          0          0 UDLD            
  260   0        216          0       7384          0          0 Port-Security   
  307   0        216          0       7384          0          0 CEF RP Backgroun
- 405   0        216          0       7384          0          0 Online Diag EEM 
  302   0        448        232       7384          0          0 Dot1x Supplicant
  301   0        448        232       7384          0          0 Dot1x Supplicant
  268   0        216          0       7384          0          0 XDR background p
- 244   0       7020        232       7384          0          0 Spanning Tree   
+ 244   0       1736        232       7384          0          0 Spanning Tree   
+ 405   0        216          0       7384          0          0 Online Diag EEM 
  343   0        104          0       7272          0          0 Marvell wk-a Pow
- 464   0        216          0       7256          0          0 DHCPD Database  
+ 463   0        216          0       7256          0          0 DHCPD Database  
   24   0          0          0       7220          0          0 IPC Dynamic Cach
  181   0          0          0       7212          0          0 HRPC show_forwar
- 403   0          0          0       7208          0          0 L2NAT Stats Proc
   66   0        232        232       7204          0          0 SD Flash Init   
  239   0          0          0       7204          0          0 SMI CDP Update H
  328   0          0          0       7200          0          0 SNMP Timers     
  206   0          0          0       7192          0          0 AAA System Acct 
-  17   0          0          0       7176          0          0 CEF MIB API     
- 228   0          0          0       7168          0          0 ICMP event handl
+ 204   0          0          0       7168          0          0 AAA ACCT Proc   
+  86   0          0          0       7168          0          0 HRPC asic-stats 
+  85   0          0          0       7168          0          0 PSP Timer       
  199   0          0          0       7168          0          0 IOT TWTI Trigger
   91   0          0          0       7168          0          0 hrpc -> response
  195   0       2760       2760       7168          0          0 Power RPS Proces
-  85   0          0          0       7168          0          0 PSP Timer       
-  86   0          0          0       7168          0          0 HRPC asic-stats 
+ 228   0          0          0       7168          0          0 ICMP event handl
+ 194   0          0          0       7168          0          0 HRFS OIR Proc   
  191   0          0          0       7168          0          0 HRPC hrcli-event
- 204   0          0          0       7168          0          0 AAA ACCT Proc   
+ 198   0        232        232       7168          0          0 HULC Alarm Conta
  190   0          0          0       7168          0          0 Hulc Blue Beacon
  237   0          0          0       7168          0          0 RIB LM VALIDATE 
- 198   0        232        232       7168          0          0 HULC Alarm Conta
- 232   0          0          0       7168          0          0 IPv6 ping proces
+ 189   0          0          0       7168          0          0 Hulc Reload Mana
+ 207   0          0          0       7168          0          0 Webauth client  
   83   0          0          0       7168          0          0 HRPC actual powe
  188   0          0          0       7168          0          0 HRPC system post
- 187   0          0          0       7168          0          0 HULC PTP platfor
- 194   0          0          0       7168          0          0 HRFS OIR Proc   
- 209   0          0          0       7168          0          0 IP Admin SM Proc
+ 232   0          0          0       7168          0          0 IPv6 ping proces
   11   0          0          0       7168          0          0 HUSB Console    
+ 209   0          0          0       7168          0          0 IP Admin SM Proc
+ 245   0        232        232       7168          0          0 SpanTree Msg    
   81   0          0          0       7168          0          0 HRPC hnetwpol re
  247   0        232        232       7168          0          0 CDP Forward Proc
  248   0          0          0       7168          0          0 802.1x switch   
- 189   0          0          0       7168          0          0 Hulc Reload Mana
+ 187   0          0          0       7168          0          0 HULC PTP platfor
  250   0          0          0       7168          0          0 HRPC dai request
-  13   0    1483752    1483752       7168          0          0 Licensing Auto U
+  13   0    1483296    1483296       7168          0          0 Licensing Auto U
  252   0          0          0       7168          0          0 HRPC power down 
  253   0          0          0       7168          0          0 HRPC ip device t
- 207   0          0          0       7168          0          0 Webauth client  
+ 254   0          0          0       7168          0          0 HRPC ip source g
  255   0          0          0       7168          0          0 HULC IP Source g
   80   0        232        232       7168          0          0 HLPIP Sync Proce
   79   0          0          0       7168          0          0 HRPC lpip reques
  258   0        232        232       7168          0          0 PI MATM Aging Pr
  183   0          0          0       7168          0          0 HULC SNMP Proces
- 182   0          0          0       7168          0          0 HRPC snmp reques
- 261   0        232        232       7168          0          0 PTP protocol eng
-   9   0        232        232       7168          0          0 Timers          
   18   0          0          0       7168          0          0 AAA_SERVER_DEADT
+ 261   0        232        232       7168          0          0 PTP protocol eng
   82   0          0          0       7168          0          0 HRPC EnergyWise 
- 245   0        232        232       7168          0          0 SpanTree Msg    
+ 219   0        232        232       7168          0          0 EFP Errd        
+ 264   0          0          0       7168          0          0 Link State Group
+  12   0   13573356   13575448       7168          0          0 License Client N
  266   0        232        232       7168          0          0 Ethchnl         
  267   0          0          0       7168          0          0 VMATM Callback  
-  12   0   13532176   13534268       7168          0          0 License Client N
- 269   0          0          0       7168          0          0 XDR mcast       
  217   0          0          0       7168          0          0 EAP Framework   
+ 269   0          0          0       7168          0          0 XDR mcast       
+ 216   0        232        232       7168          0          0 Dot1x Mgr Proces
  180   0          0          0       7168          0          0 HRPC dtp request
  272   0          0          0       7168          0          0 IPC LC Message H
  273   0          0          0       7168          0          0 XDR RP Test Back
  274   0          0          0       7168          0          0 FRR Background P
   78   0        572        572       7168          0          0 flash monitor pr
  179   0        232        232       7168          0          0 platform OBFL   
- 254   0          0          0       7168          0          0 HRPC ip source g
+ 218   0          0          0       7168          0          0 EAP Test        
  278   0          0          0       7168          0          0 CEF RF HULC Conv
  279   0        232        232       7168          0          0 IP ACL XDR LC Ba
-  14   0    4942700    4943552       7168          0          0 Image License br
+  14   0    4960352    4961204       7168          0          0 Image License br
   77   0        232        232       7168          0          0 DownWhenLooped  
  176   0          0          0       7168          0          0 HRPC hl3u reques
- 174   0       1728       1728       7168          0          0 hl3mm           
+ 174   0       1152       1152       7168          0          0 hl3mm           
  173   0          0          0       7168          0          0 HRPC hl3mm reque
- 171   0          0          0       7168          0          0 HRPC hled reques
- 216   0        232        232       7168          0          0 Dot1x Mgr Proces
- 264   0          0          0       7168          0          0 Link State Group
+ 215   0          0          0       7168          0          0 DHCP Snooping db
+ 286   0          0          0       7168          0          0 Critical Auth   
+ 170   0          0          0       7168          0          0 HRPC l2pt qnq rp
  169   0          0          0       7168          0          0 HRPC iec_load_ba
  168   0          0          0       7168          0          0 HRPC vqpc reques
  167   0          0          0       7168          0          0 HRPC hudld reque
@@ -4022,18 +4022,18 @@ Driver te Pool Total:    1048576 Used:         40 Free:    1048536
  298   0          0          0       7168          0          0 Cluster RARP    
  163   0        232        232       7168          0          0 HSTP Sync Proces
  162   0        232        232       7168          0          0 Hulc Storm Contr
- 215   0          0          0       7168          0          0 DHCP Snooping db
  214   0          0          0       7168          0          0 DHCP Snooping   
+ 213   0        232        232       7168          0          0 AAA Dictionary R
  303   0          0          0       7168          0          0 DSensor HTTP    
  304   0          0          0       7168          0          0 EPM Downlad Mana
  160   0          0          0       7168          0          0 SMI MSG Retry Pr
  306   0          0          0       7168          0          0 Timer Handler Pr
- 219   0        232        232       7168          0          0 EFP Errd        
- 218   0          0          0       7168          0          0 EAP Test        
+ 182   0          0          0       7168          0          0 HRPC snmp reques
+   9   0        232        232       7168          0          0 Timers          
  309   0          0          0       7168          0          0 DCT Bkgd Process
  159   0          0          0       7168          0          0 HRPC sdm request
  158   0          0          0       7168          0          0 HULC REP monitor
- 213   0        232        232       7168          0          0 AAA Dictionary R
+ 212   0          0          0       7168          0          0 HRPC hl2mcm igmp
  156   0          0          0       7168          0          0 HRPC rep request
  265   0          0          0       7168          0          0 MMN bkgrd proces
  315   0          0          0       7168          0          0 RARP Input      
@@ -4044,53 +4044,53 @@ Driver te Pool Total:    1048576 Used:         40 Free:    1048536
  149   0          0          0       7168          0          0 HRPC dot1x reque
  321   0          0          0       7168          0          0 MAB Framework   
  148   0          0          0       7168          0          0 HRPC cts request
- 147   0        232        232       7168          0          0 Hulc CTS Process
- 324   0        232        232       7168          0          0 REP LSL Proc    
   73   0          0          0       7168          0          0 SFF8472         
- 146   0          0          0       7168          0          0 HULC CISP Proces
+ 324   0        232        232       7168          0          0 REP LSL Proc    
   72   0          0          0       7168          0          0 HC Counter Timer
+ 147   0        232        232       7168          0          0 Hulc CTS Process
+  71   0          0          0       7168          0          0 Transport Port A
  178   0          0          0       7168          0          0 HL3U PBR n-h res
  329   0          0          0       7168          0          0 HRPC hwccp reque
- 145   0          0          0       7168          0          0 HRPC cdp request
+ 146   0          0          0       7168          0          0 HULC CISP Proces
  331   0        232        232       7168          0          0 HCFM RX Process 
  332   0          0          0       7168          0          0 HRPC dhcp snoopi
  333   0          0          0       7168          0          0 HULC DHCP Snoopi
  334   0          0          0       7168          0          0 HRPC sisf reques
- 335   0          0        236       7168          0          0 HULC SISF Proces
+ 335   0          0        232       7168          0          0 HULC SISF Proces
  336   0          0          0       7168          0          0 HULC SISF Source
-  71   0          0          0       7168          0          0 Transport Port A
+  70   0          0          0       7168          0          0 AggMgr Process  
  338   0          0          0       7168          0          0 IGMPSN MRD      
  339   0          0          0       7168          0          0 IGMPSN          
  340   0          0          0       7168          0          0 IGMPQR          
-  16   0      17536      17536       7168          0          0 ARP Background  
+ 145   0          0          0       7168          0          0 HRPC cdp request
  342   0          0          0       7168          0          0 Inline Power    
- 286   0          0          0       7168          0          0 Critical Auth   
-  70   0          0          0       7168          0          0 AggMgr Process  
+ 171   0          0          0       7168          0          0 HRPC hled reques
+  69   0          0          0       7168          0          0 NTI Example Proc
  345   0          0          0       7168          0          0 MRD             
  346   0          0          0       7168          0          0 MLD_SNOOP       
  347   0          0          0       7168          0          0 HRPC hl2mcm mlds
- 348   0      37168          0       7168          0          0 MDFS RP process 
+ 348   0      37008          0       7168          0          0 MDFS RP process 
  349   0        232        232       7168          0          0 AAA Cached Serve
-  69   0          0          0       7168          0          0 NTI Example Proc
+  68   0          0          0       7168          0          0 IF-MGR event pro
  351   0        232        232       7168          0          0 ENABLE AAA      
- 143   0          0          0       7168          0          0 HRPC backup inte
+  16   0      17920      17920       7168          0          0 ARP Background  
  353   0        232        232       7168          0          0 Crypto Support  
  354   0          0          0       7168          0          0 IPSECv6 PS Proc 
  355   0          0          0       7168          0          0 Key chain liveke
  356   0        232        232       7168          0          0 LINE AAA        
+ 143   0          0          0       7168          0          0 HRPC backup inte
+ 308   0        232        356       7168          0          0 Flow Exporter Ti
  142   0          0          0       7168          0          0 HULC alarms Proc
-  68   0          0          0       7168          0          0 IF-MGR event pro
  141   0          0          0       7168          0          0 HRPC aim request
- 170   0          0          0       7168          0          0 HRPC l2pt qnq rp
+  17   0          0          0       7168          0          0 CEF MIB API     
  139   0          0          0       7168          0          0 HRPC acl request
- 212   0          0          0       7168          0          0 HRPC hl2mcm igmp
  138   0          0          0       7168          0          0 HACL Queue Proce
    8   0          0          0       7168          0          0 DiscardQ Backgro
  365   0          0          0       7168          0          0 IKEv2 AAA handle
  137   0          0          0       7168          0          0 hl3mm_rp        
- 367   0        232        556       7168          0          0 CRYPTO MAP FREE 
+ 367   0        232        568       7168          0          0 CRYPTO MAP FREE 
  136   0          0          0       7168          0          0 hl3mm_mrib_rp   
- 135   0       1728       1728       7168          0          0 hl3mm_mfib_ipv6 
+ 135   0       1152       1152       7168          0          0 hl3mm_mfib_ipv6 
  134   0          0          0       7168          0          0 HRPC hl3mm ipv6 
  131   0          0          0       7168          0          0 HRPC hcmp reques
  130   0          0          0       7168          0          0 hpm vp events ca
@@ -4118,14 +4118,14 @@ Driver te Pool Total:    1048576 Used:         40 Free:    1048536
   58   0        232        232       7168          0          0 Compute load avg
    5   0          0          0       7168          0          0 IPC ISSU Dispatc
  396   0          0          0       7168          0          0 Syslog Traps    
- 397   0        560        560       7168          0          0 URPF stats      
+ 397   0        532        532       7168          0          0 URPF stats      
  398   0          0          0       7168          0          0 vlmap logger    
   57   0          0          0       7168          0          0 Net Input       
  400   0          0          0       7168          0          0 HCD Process     
  401   0          0          0       7168          0          0 HRPC cable diagn
  402   0          0          0       7168          0          0 HRPC archive_dnl
- 308   0        232        356       7168          0          0 Flow Exporter Ti
- 404   0          0        384       7168          0          0 DiagCard1/-1    
+ 403   0          0          0       7168          0          0 L2NAT Stats Proc
+ 404   0          0        324       7168          0          0 DiagCard1/-1    
   92   0          0          0       7168          0          0 hrpc -> request 
  109   0          0          0       7168          0          0 HRPC hulc misc r
  407   0          0          0       7168          0          0 HULC FNF        
@@ -4154,38 +4154,38 @@ Driver te Pool Total:    1048576 Used:         40 Free:    1048536
   27   0          0          0       7168          0          0 IPC Periodic Tim
  246   0          0          0       7168          0          0 Spanning Tree St
  445   0          0          0       7168          0          0 HULC Link Diag  
-  21   0          0          0       7168          0          0 IFS Agent Manage
+  26   0          0          0       7168          0          0 IPC Zone Manager
   37   0     540328     540328       7168          0          0 PrstVbl         
   36   0          0          0       7168          0          0 IPC Session Deta
   35   0          0          0       7168          0          0 IPC Loadometer  
   34   0          0          0       7168          0          0 IPC Keep Alive M
   33   0          0          0       7168          0          0 IPC Seat TX Cont
   32   0          0          0       7168          0          0 IPC Seat RX Cont
- 443   0          0          0       7168          0          0 IP SLAs Ethernet
+  25   0          0          0       7168          0          0 IPC Session Serv
   31   0          0          0       7168          0          0 IPC Check Queue 
   29   0          0          0       7168          0          0 IPC Process leve
-  22   0          0          0       7168          0          0 IPC Event Notifi
+ 443   0          0          0       7168          0          0 IP SLAs Ethernet
  444   0          0          0       7168          0          0 HRPC eee request
-  28   0          0          0       7168          0          0 IPC Deferred Por
-  26   0          0          0       7168          0          0 IPC Zone Manager
-  25   0          0          0       7168          0          0 IPC Session Serv
   23   0          0          0       7168          0          0 IPC Mcast Pendin
-   3   0          0          0       7084          0          0 MDFS LC Download
- 463   0          0          0       7080          0          0 hulc running con
- 408   0          0          0       7040          0          0 DHCPD Timer     
- 104   0          0          0       7040          0          0 HCMP sync proces
- 461   0          0       1240       7040          0          0 SpanTree Flush  
+  21   0          0          0       7168          0          0 IFS Agent Manage
+  28   0          0          0       7168          0          0 IPC Deferred Por
+  22   0          0          0       7168          0          0 IPC Event Notifi
+ 408   0          0          0       7092          0          0 hulc running con
+   3   0          0          0       7040          0          0 MDFS LC Download
+ 471   0          0       1240       7040          0          0 SpanTree Flush  
  192   0          0          0       7040          0          0 cts ha policy pr
+ 462   0          0          0       7040          0          0 DHCPD Timer     
+ 104   0          0          0       7040          0          0 HCMP sync proces
  451   0        216          0       4408          0          0 Secure Login    
+  61   0        232          0       4400          0          0 Async write proc
   64   0        232          0       4400          0          0 Async write proc
   62   0        232          0       4400          0          0 Async write proc
-  61   0        232          0       4400          0          0 Async write proc
   63   0        232          0       4400          0          0 Async write proc
  231   0        216          0       4384          0          0 ADJ NSF process 
-  87   0          0          0       4188          0          0 HRPC hsm request
+  87   0          0          0       4168          0          0 HRPC hsm request
    2   0        232        232       4168          0          0 Load Meter      
-  84   0          0          0       4168          0          0 WDT Informant Pr
  155   0          0          0       4168          0          0 HRPC system mtu 
+  84   0          0          0       4168          0          0 WDT Informant Pr
   10   0          0          0       4168          0          0 WATCH_AFS       
  133   0          0          0       4168          0          0 hl3md_rpfq_thrl_
  251   0          0          0       4168          0          0 HULC DAI Process
@@ -4194,111 +4194,111 @@ Driver te Pool Total:    1048576 Used:         40 Free:    1048536
  447   0        232        232       4168          0          0 CSRT RAPID TRANS
  446   0        232        232       4168          0          0 STP FAST TRANSIT
   56   0          0          0       4168          0          0 Inode Table Dest
-                                 62024436 Total
+                                 62097860 Total
 
 ------------------ show process cpu ------------------
 
 
-CPU utilization for five seconds: 79%/0%; one minute: 23%; five minutes: 6%
+CPU utilization for five seconds: 51%/0%; one minute: 20%; five minutes: 6%
  PID Runtime(ms)     Invoked      uSecs   5Sec   1Min   5Min TTY Process 
-   1          17         121        140  0.00%  0.00%  0.00%   0 Chunk Manager    
-   2           0          18          0  0.00%  0.00%  0.00%   0 Load Meter       
-   3           0           6          0  0.00%  0.00%  0.00%   0 MDFS LC Download 
+   1           8         121         66  0.00%  0.00%  0.00%   0 Chunk Manager    
+   2           0          16          0  0.00%  0.00%  0.00%   0 Load Meter       
+   3           0           5          0  0.00%  0.00%  0.00%   0 MDFS LC Download 
    4           0           1          0  0.00%  0.00%  0.00%   0 Retransmission o 
    5           0           1          0  0.00%  0.00%  0.00%   0 IPC ISSU Dispatc 
-   6         196          17      11529  0.00%  0.13%  0.04%   0 Check heaps      
+   6         199          17      11705  0.00%  0.15%  0.05%   0 Check heaps      
    7           0           1          0  0.00%  0.00%  0.00%   0 Pool Manager     
    8           0           1          0  0.00%  0.00%  0.00%   0 DiscardQ Backgro 
    9           0           2          0  0.00%  0.00%  0.00%   0 Timers           
-  10           6         137         43  0.05%  0.00%  0.00%   0 WATCH_AFS        
-  11           4         321         12  0.05%  0.00%  0.00%   0 HUSB Console     
-  12         105           8      13125  0.00%  0.00%  0.00%   0 License Client N 
-  13          35           3      11666  0.00%  0.03%  0.00%   0 Licensing Auto U 
+  10           0         137          0  0.00%  0.00%  0.00%   0 WATCH_AFS        
+  11           7         301         23  0.05%  0.00%  0.00%   0 HUSB Console     
+  12         108           8      13500  0.00%  0.00%  0.00%   0 License Client N 
+  13          28           3       9333  0.00%  0.03%  0.00%   0 Licensing Auto U 
   14          35          10       3500  0.00%  0.00%  0.00%   0 Image License br 
-  15           0          31          0  0.00%  0.00%  0.00%   0 ARP Input        
-  16           6         132         45  0.00%  0.00%  0.00%   0 ARP Background   
+  15          13          34        382  0.00%  0.01%  0.00%   0 ARP Input        
+  16          17         126        134  0.00%  0.00%  0.00%   0 ARP Background   
   17           0           1          0  0.00%  0.00%  0.00%   0 CEF MIB API      
   18           0           1          0  0.00%  0.00%  0.00%   0 AAA_SERVER_DEADT 
   19           0           1          0  0.00%  0.00%  0.00%   0 Policy Manager   
-  20          14           5       2800  0.00%  0.00%  0.00%   0 Entity MIB API   
+  20          18           6       3000  0.00%  0.00%  0.00%   0 Entity MIB API   
   21           0           1          0  0.00%  0.00%  0.00%   0 IFS Agent Manage 
-  22           0          24          0  0.00%  0.00%  0.00%   0 IPC Event Notifi 
-  23           0         105          0  0.00%  0.00%  0.00%   0 IPC Mcast Pendin 
-  24           0           3          0  0.00%  0.00%  0.00%   0 IPC Dynamic Cach 
+  22           0          23          0  0.00%  0.00%  0.00%   0 IPC Event Notifi 
+  23           6         100         60  0.00%  0.00%  0.00%   0 IPC Mcast Pendin 
+  24           0           2          0  0.00%  0.00%  0.00%   0 IPC Dynamic Cach 
   25           0           1          0  0.00%  0.00%  0.00%   0 IPC Session Serv 
   26           0           1          0  0.00%  0.00%  0.00%   0 IPC Zone Manager 
-  27           0         105          0  0.00%  0.00%  0.00%   0 IPC Periodic Tim 
-  28           4         105         38  0.00%  0.00%  0.00%   0 IPC Deferred Por 
+  27           0         100          0  0.00%  0.00%  0.00%   0 IPC Periodic Tim 
+  28           0         100          0  0.00%  0.00%  0.00%   0 IPC Deferred Por 
   29           0           1          0  0.00%  0.00%  0.00%   0 IPC Process leve 
-  30           0           8          0  0.00%  0.00%  0.00%   0 IPC Seat Manager 
+  30           0           7          0  0.00%  0.00%  0.00%   0 IPC Seat Manager 
   31           0           7          0  0.00%  0.00%  0.00%   0 IPC Check Queue  
   32           0           1          0  0.00%  0.00%  0.00%   0 IPC Seat RX Cont 
   33           0           1          0  0.00%  0.00%  0.00%   0 IPC Seat TX Cont 
-  34           0          13          0  0.00%  0.00%  0.00%   0 IPC Keep Alive M 
-  35           0          24          0  0.00%  0.00%  0.00%   0 IPC Loadometer   
+  34           0          12          0  0.00%  0.00%  0.00%   0 IPC Keep Alive M 
+  35           0          23          0  0.00%  0.00%  0.00%   0 IPC Loadometer   
   36           0           1          0  0.00%  0.00%  0.00%   0 IPC Session Deta 
-  37         126           6      21000  0.00%  0.04%  0.02%   0 PrstVbl          
+  37         111           6      18500  0.00%  0.05%  0.02%   0 PrstVbl          
   38           0           1          0  0.00%  0.00%  0.00%   0 Crash writer     
   39           0           1          0  0.00%  0.00%  0.00%   0 Exception contro 
   40           0           1          0  0.00%  0.00%  0.00%   0 License IPC stat 
   41           0           1          0  0.00%  0.00%  0.00%   0 License IPC serv 
-  42           0          82          0  0.00%  0.00%  0.00%   0 GraphIt          
-  43        1259         110      11445  0.00%  0.62%  0.28%   0 crypto sw pk pro 
+  42           0          75          0  0.00%  0.00%  0.00%   0 GraphIt          
+  43        2173         177      12276  0.00%  1.27%  0.51%   0 crypto sw pk pro 
   44           0           1          0  0.00%  0.00%  0.00%   0 client_entity_se 
   45           0           2          0  0.00%  0.00%  0.00%   0 SMART            
   46           0           2          0  0.00%  0.00%  0.00%   0 XML Proxy Client 
   47           0           1          0  0.00%  0.00%  0.00%   0 ARP Snoop        
-  48           4         106         37  0.00%  0.00%  0.00%   0 Dynamic ARP Insp 
+  48           3         101         29  0.00%  0.00%  0.00%   0 Dynamic ARP Insp 
   49           0           1          0  0.00%  0.00%  0.00%   0 Critical Bkgnd   
-  50          11          82        134  0.00%  0.00%  0.00%   0 Net Background   
+  50          26          87        298  0.00%  0.00%  0.00%   0 Net Background   
   51           0           1          0  0.00%  0.00%  0.00%   0 IDB Work         
-  52           4          16        250  0.00%  0.00%  0.00%   0 Logger           
-  53           7          77         90  0.00%  0.00%  0.00%   0 TTY Background   
+  52           3          16        187  0.00%  0.00%  0.00%   0 Logger           
+  53          11          71        154  0.00%  0.00%  0.00%   0 TTY Background   
   54           0           3          0  0.00%  0.00%  0.00%   0 CTS CORE         
   55           0           6          0  0.00%  0.00%  0.00%   0 SXP CORE         
   56           0           1          0  0.00%  0.00%  0.00%   0 Inode Table Dest 
   57           0           1          0  0.00%  0.00%  0.00%   0 Net Input        
-  58           0          18          0  0.00%  0.00%  0.00%   0 Compute load avg 
-  59          35           3      11666  0.29%  0.03%  0.00%   0 Per-minute Jobs  
-  60          75         108        694  0.23%  0.07%  0.02%   0 Per-Second Jobs  
+  58           0          17          0  0.00%  0.00%  0.00%   0 Compute load avg 
+  59          21           2      10500  0.00%  0.00%  0.00%   0 Per-minute Jobs  
+  60         148         102       1450  0.05%  0.11%  0.04%   0 Per-Second Jobs  
   61           0           1          0  0.00%  0.00%  0.00%   0 Async write proc 
   62           0           1          0  0.00%  0.00%  0.00%   0 Async write proc 
   63           0           1          0  0.00%  0.00%  0.00%   0 Async write proc 
   64           0           1          0  0.00%  0.00%  0.00%   0 Async write proc 
-  65           4           3       1333  0.05%  0.00%  0.00%   0 DFS flush period 
-  66           7           2       3500  0.00%  0.00%  0.00%   0 SD Flash Init    
-  67           4           6        666  0.00%  0.00%  0.00%   0 IF-MGR control p 
-  68           0           8          0  0.00%  0.00%  0.00%   0 IF-MGR event pro 
+  65           0           2          0  0.00%  0.00%  0.00%   0 DFS flush period 
+  66          11           2       5500  0.00%  0.00%  0.00%   0 SD Flash Init    
+  67           0           6          0  0.00%  0.00%  0.00%   0 IF-MGR control p 
+  68           0           7          0  0.00%  0.00%  0.00%   0 IF-MGR event pro 
   69           0           1          0  0.00%  0.00%  0.00%   0 NTI Example Proc 
   70           0           1          0  0.00%  0.00%  0.00%   0 AggMgr Process   
   71           0           1          0  0.00%  0.00%  0.00%   0 Transport Port A 
-  72           0          28          0  0.00%  0.00%  0.00%   0 HC Counter Timer 
+  72           4          26        153  0.00%  0.00%  0.00%   0 HC Counter Timer 
   73           0           1          0  0.00%  0.00%  0.00%   0 SFF8472          
-  74           0           4          0  0.00%  0.00%  0.00%   0 EEM ED Identity  
+  74           4           4       1000  0.00%  0.00%  0.00%   0 EEM ED Identity  
   75           0           4          0  0.00%  0.00%  0.00%   0 EEM ED MAT       
-  76           3          26        115  0.00%  0.00%  0.00%   0 EEM ED ND        
-  77           4        1508          2  0.00%  0.00%  0.00%   0 DownWhenLooped   
-  78           0          42          0  0.00%  0.00%  0.00%   0 flash monitor pr 
+  76           0          25          0  0.00%  0.00%  0.00%   0 EEM ED ND        
+  77           7        1392          5  0.05%  0.00%  0.00%   0 DownWhenLooped   
+  78           0          39          0  0.00%  0.00%  0.00%   0 flash monitor pr 
   79           0           1          0  0.00%  0.00%  0.00%   0 HRPC lpip reques 
   80           0           2          0  0.00%  0.00%  0.00%   0 HLPIP Sync Proce 
   81           0           1          0  0.00%  0.00%  0.00%   0 HRPC hnetwpol re 
   82           0           1          0  0.00%  0.00%  0.00%   0 HRPC EnergyWise  
   83           0           1          0  0.00%  0.00%  0.00%   0 HRPC actual powe 
-  84           0         107          0  0.00%  0.00%  0.00%   0 WDT Informant Pr 
-  85           0           5          0  0.00%  0.00%  0.00%   0 PSP Timer        
+  84           0         101          0  0.00%  0.00%  0.00%   0 WDT Informant Pr 
+  85           0           4          0  0.00%  0.00%  0.00%   0 PSP Timer        
   86           0           1          0  0.00%  0.00%  0.00%   0 HRPC asic-stats  
   87           0           1          0  0.00%  0.00%  0.00%   0 HRPC hsm request 
   88           0           7          0  0.00%  0.00%  0.00%   0 Stack Mgr        
-  89         118           8      14750  0.00%  0.00%  0.00%   0 Stack Mgr Notifi 
+  89         139           8      17375  0.00%  0.00%  0.00%   0 Stack Mgr Notifi 
   90           0          24          0  0.00%  0.00%  0.00%   0 Adjust Regions   
-  91           7          81         86  0.05%  0.00%  0.00%   0 hrpc -> response 
+  91           0          86          0  0.00%  0.00%  0.00%   0 hrpc -> response 
   92           0          37          0  0.00%  0.00%  0.00%   0 hrpc -> request  
-  93           3          51         58  0.00%  0.00%  0.00%   0 hrpc <- response 
+  93           4          50         80  0.00%  0.00%  0.00%   0 hrpc <- response 
   94           0           1          0  0.00%  0.00%  0.00%   0 HRPC hcomp reque 
   95           0           3          0  0.00%  0.00%  0.00%   0 HULC Device Mana 
   96           0           3          0  0.00%  0.00%  0.00%   0 HRPC hdm non blo 
   97           0           2          0  0.00%  0.00%  0.00%   0 HRPC hdm blockin 
-  98           0          20          0  0.00%  0.00%  0.00%   0 HIPC bkgrd proce 
+  98           0          19          0  0.00%  0.00%  0.00%   0 HIPC bkgrd proce 
   99           0           1          0  0.00%  0.00%  0.00%   0 RTTYS Process    
  100           0           1          0  0.00%  0.00%  0.00%   0 HRPC hautosecure 
  101           0           6          0  0.00%  0.00%  0.00%   0 Hulc Port-Securi 
@@ -4310,41 +4310,41 @@ CPU utilization for five seconds: 79%/0%; one minute: 23%; five minutes: 6%
  107           0           1          0  0.00%  0.00%  0.00%   0 HULC EMAC Proces 
  108           0           1          0  0.00%  0.00%  0.00%   0 HRPC isis reques 
  109           0           1          0  0.00%  0.00%  0.00%   0 HRPC hulc misc r 
- 110           0          32          0  0.00%  0.00%  0.00%   0 HVLAN main bkgrd 
+ 110           0          31          0  0.00%  0.00%  0.00%   0 HVLAN main bkgrd 
  111           0           2          0  0.00%  0.00%  0.00%   0 HVLAN Mapped Vla 
  112           0           2          0  0.00%  0.00%  0.00%   0 Vlan shutdown Pr 
  113           0           3          0  0.00%  0.00%  0.00%   0 HRPC vlan reques 
  114           0           1          0  0.00%  0.00%  0.00%   0 HULC VLAN REF Ba 
  115           0           1          0  0.00%  0.00%  0.00%   0 HRPC ilp request 
  116           0           2          0  0.00%  0.00%  0.00%   0 Inline Power Twt 
- 117           0           6          0  0.00%  0.00%  0.00%   0 Strider Tcam Mem 
+ 117           0           5          0  0.00%  0.00%  0.00%   0 Strider Tcam Mem 
  118           0           1          0  0.00%  0.00%  0.00%   0 HRPC hlfm reques 
- 119          21        2231          9  0.17%  0.01%  0.00%   0 HLFM address lea 
- 120           0          82          0  0.00%  0.00%  0.00%   0 HLFM aging proce 
- 121           0          23          0  0.00%  0.00%  0.00%   0 HLFM address ret 
- 122           0           1          0  0.00%  0.00%  0.00%   0 HULC PM Vector P 
+ 119          37        2048         18  0.00%  0.00%  0.00%   0 HLFM address lea 
+ 120           0          76          0  0.00%  0.00%  0.00%   0 HLFM aging proce 
+ 121           0          21          0  0.00%  0.00%  0.00%   0 HLFM address ret 
+ 122           4           1       4000  0.00%  0.00%  0.00%   0 HULC PM Vector P 
  123           0           1          0  0.00%  0.00%  0.00%   0 HPM Msg Retry Pr 
- 124           7           5       1400  0.00%  0.00%  0.00%   0 SpanTree Helper  
- 125          92         722        127  0.11%  0.03%  0.00%   0 hpm main process 
+ 124           0           1          0  0.00%  0.00%  0.00%   0 Connection Mgr   
+ 125          77         585        131  0.00%  0.00%  0.00%   0 hpm main process 
  126           0          10          0  0.00%  0.00%  0.00%   0 HPM Stack Sync P 
  127           0           1          0  0.00%  0.00%  0.00%   0 HRPC pm request  
- 128           8          82         97  0.11%  0.00%  0.00%   0 hpm counter proc 
+ 128          23          77        298  0.05%  0.01%  0.00%   0 hpm counter proc 
  129           0           1          0  0.00%  0.00%  0.00%   0 HRPC pm-counters 
  130           0           1          0  0.00%  0.00%  0.00%   0 hpm vp events ca 
  131           0           1          0  0.00%  0.00%  0.00%   0 HRPC hcmp reques 
  132           0           1          0  0.00%  0.00%  0.00%   0 HCEF ADJ Refresh 
  133           0           1          0  0.00%  0.00%  0.00%   0 hl3md_rpfq_thrl_ 
  134           0           1          0  0.00%  0.00%  0.00%   0 HRPC hl3mm ipv6  
- 135           0          67          0  0.00%  0.00%  0.00%   0 hl3mm_mfib_ipv6  
- 136           0          46          0  0.00%  0.00%  0.00%   0 hl3mm_mrib_rp    
- 137           0          46          0  0.00%  0.00%  0.00%   0 hl3mm_rp         
+ 135           0          61          0  0.00%  0.00%  0.00%   0 hl3mm_mfib_ipv6  
+ 136           0          43          0  0.00%  0.00%  0.00%   0 hl3mm_mrib_rp    
+ 137           0          43          0  0.00%  0.00%  0.00%   0 hl3mm_rp         
  138           0           1          0  0.00%  0.00%  0.00%   0 HACL Queue Proce 
  139           0           1          0  0.00%  0.00%  0.00%   0 HRPC acl request 
- 140           0          37          0  0.00%  0.00%  0.00%   0 HACL Acl Manager 
+ 140           0          38          0  0.00%  0.00%  0.00%   0 HACL Acl Manager 
  141           0           1          0  0.00%  0.00%  0.00%   0 HRPC aim request 
- 142          16          92        173  0.05%  0.01%  0.00%   0 HULC alarms Proc 
+ 142          13          86        151  0.00%  0.00%  0.00%   0 HULC alarms Proc 
  143           0           1          0  0.00%  0.00%  0.00%   0 HRPC backup inte 
- 144        3573         249      14349 53.13%  4.67%  0.97%   1 SSH Process      
+ 144        3978         258      15418 26.21%  2.41%  0.50%   1 SSH Process      
  145           0           1          0  0.00%  0.00%  0.00%   0 HRPC cdp request 
  146           0           1          0  0.00%  0.00%  0.00%   0 HULC CISP Proces 
  147           0           5          0  0.00%  0.00%  0.00%   0 Hulc CTS Process 
@@ -4362,7 +4362,7 @@ CPU utilization for five seconds: 79%/0%; one minute: 23%; five minutes: 6%
  159           0           1          0  0.00%  0.00%  0.00%   0 HRPC sdm request 
  160           0           1          0  0.00%  0.00%  0.00%   0 SMI MSG Retry Pr 
  161           0           1          0  0.00%  0.00%  0.00%   0 HRPC Smart Insta 
- 162          66         398        165  0.29%  0.05%  0.01%   0 Hulc Storm Contr 
+ 162          65         369        176  0.17%  0.04%  0.01%   0 Hulc Storm Contr 
  163           0           2          0  0.00%  0.00%  0.00%   0 HSTP Sync Proces 
  164           0           1          0  0.00%  0.00%  0.00%   0 HRPC stp_cli req 
  165           0           1          0  0.00%  0.00%  0.00%   0 HRPC stp_state_s 
@@ -4372,37 +4372,37 @@ CPU utilization for five seconds: 79%/0%; one minute: 23%; five minutes: 6%
  169           0           1          0  0.00%  0.00%  0.00%   0 HRPC iec_load_ba 
  170           0           1          0  0.00%  0.00%  0.00%   0 HRPC l2pt qnq rp 
  171           0           1          0  0.00%  0.00%  0.00%   0 HRPC hled reques 
- 172        7324        1985       3689  8.39%  5.86%  1.86%   0 Hulc LED Process 
+ 172        6754        1834       3682  8.31%  5.47%  1.66%   0 Hulc LED Process 
  173           0           1          0  0.00%  0.00%  0.00%   0 HRPC hl3mm reque 
- 174           0          66          0  0.00%  0.00%  0.00%   0 hl3mm            
- 175          16          66        242  0.00%  0.01%  0.00%   0 HL3U bkgrd proce 
+ 174           0          61          0  0.00%  0.00%  0.00%   0 hl3mm            
+ 175          20          62        322  0.05%  0.01%  0.00%   0 HL3U bkgrd proce 
  176           0           1          0  0.00%  0.00%  0.00%   0 HRPC hl3u reques 
- 177           0          40          0  0.00%  0.00%  0.00%   0 HL3U PBR bkgrd p 
+ 177           0          38          0  0.00%  0.00%  0.00%   0 HL3U PBR bkgrd p 
  178           0           1          0  0.00%  0.00%  0.00%   0 HL3U PBR n-h res 
  179           0           2          0  0.00%  0.00%  0.00%   0 platform OBFL    
  180           0           1          0  0.00%  0.00%  0.00%   0 HRPC dtp request 
  181           0           1          0  0.00%  0.00%  0.00%   0 HRPC show_forwar 
  182           0           1          0  0.00%  0.00%  0.00%   0 HRPC snmp reques 
  183           0           1          0  0.00%  0.00%  0.00%   0 HULC SNMP Proces 
- 184         133          38       3500  0.11%  0.10%  0.03%   0 HQM Stack Proces 
- 185          69          69       1000  0.05%  0.04%  0.01%   0 HRPC qos request 
+ 184         125          37       3378  0.17%  0.10%  0.03%   0 HQM Stack Proces 
+ 185          66          67        985  0.05%  0.04%  0.01%   0 HRPC qos request 
  186           0           1          0  0.00%  0.00%  0.00%   0 HRPC span reques 
  187           0           2          0  0.00%  0.00%  0.00%   0 HULC PTP platfor 
  188           0           1          0  0.00%  0.00%  0.00%   0 HRPC system post 
  189           0           1          0  0.00%  0.00%  0.00%   0 Hulc Reload Mana 
  190           0           1          0  0.00%  0.00%  0.00%   0 Hulc Blue Beacon 
  191           0           1          0  0.00%  0.00%  0.00%   0 HRPC hrcli-event 
- 192           0           6          0  0.00%  0.00%  0.00%   0 cts ha policy pr 
+ 192           0           5          0  0.00%  0.00%  0.00%   0 cts ha policy pr 
  193           0           2          0  0.00%  0.00%  0.00%   0 image mgr        
  194           0           1          0  0.00%  0.00%  0.00%   0 HRFS OIR Proc    
- 195         373          28      13321  0.00%  0.04%  0.02%   0 Power RPS Proces 
- 196           4           5        800  0.00%  0.00%  0.00%   0 HL2MCM           
- 197           4           5        800  0.00%  0.00%  0.00%   0 HL2MCM           
- 198           0          82          0  0.00%  0.00%  0.00%   0 HULC Alarm Conta 
- 199           0         178          0  0.00%  0.00%  0.00%   0 IOT TWTI Trigger 
- 200           0           2          0  0.00%  0.00%  0.00%   0 Ethernet CFM     
- 201           4         479          8  0.00%  0.00%  0.00%   0 Ethernet Timer C 
- 202          11        8381          1  0.00%  0.00%  0.00%   0 Ethernet Msec Ti 
+ 195         380          26      14615  0.00%  0.05%  0.02%   0 Power RPS Proces 
+ 196           0           5          0  0.00%  0.00%  0.00%   0 HL2MCM           
+ 197           6           5       1200  0.00%  0.00%  0.00%   0 HL2MCM           
+ 198           7          76         92  0.00%  0.00%  0.00%   0 HULC Alarm Conta 
+ 199           3         166         18  0.00%  0.00%  0.00%   0 IOT TWTI Trigger 
+ 200           4           2       2000  0.00%  0.00%  0.00%   0 Ethernet CFM     
+ 201           0         440          0  0.00%  0.00%  0.00%   0 Ethernet Timer C 
+ 202          10        7624          1  0.00%  0.00%  0.00%   0 Ethernet Msec Ti 
  203           0           8          0  0.00%  0.00%  0.00%   0 AAA Server       
  204           0           1          0  0.00%  0.00%  0.00%   0 AAA ACCT Proc    
  205           0           1          0  0.00%  0.00%  0.00%   0 ACCT Periodic Pr 
@@ -4422,19 +4422,19 @@ CPU utilization for five seconds: 79%/0%; one minute: 23%; five minutes: 6%
  219           0           2          0  0.00%  0.00%  0.00%   0 EFP Errd         
  220           0           2          0  0.00%  0.00%  0.00%   0 Ethernet LMI     
  221           0           2          0  0.00%  0.00%  0.00%   0 Ethernet OAM Pro 
- 222           4           1       4000  0.00%  0.00%  0.00%   0 TRACK Main threa 
+ 222           0           1          0  0.00%  0.00%  0.00%   0 TRACK Main threa 
  223           0           1          0  0.00%  0.00%  0.00%   0 TRACK Client thr 
- 224           0           2          0  0.00%  0.00%  0.00%   0 CEF switching ba 
- 225           3           3       1000  0.00%  0.00%  0.00%   0 IP ARP Adjacency 
- 226          11        2339          4  0.05%  0.00%  0.00%   0 IP ARP Retry Age 
- 227         157         376        417  0.71%  0.17%  0.04%   0 IP Input         
+ 224           4           2       2000  0.00%  0.00%  0.00%   0 CEF switching ba 
+ 225           7           3       2333  0.00%  0.00%  0.00%   0 IP ARP Adjacency 
+ 226          15        2153          6  0.00%  0.01%  0.00%   0 IP ARP Retry Age 
+ 227         202         373        541  0.77%  0.19%  0.04%   0 IP Input         
  228           0           1          0  0.00%  0.00%  0.00%   0 ICMP event handl 
- 229           0         157          0  0.00%  0.00%  0.00%   0 IP ARP Track     
- 230           3         782          3  0.05%  0.00%  0.00%   0 MDFS MFIB Proces 
+ 229           0         145          0  0.00%  0.00%  0.00%   0 IP ARP Track     
+ 230           3         718          4  0.00%  0.00%  0.00%   0 MDFS MFIB Proces 
  231           0           1          0  0.00%  0.00%  0.00%   0 ADJ NSF process  
  232           0           1          0  0.00%  0.00%  0.00%   0 IPv6 ping proces 
  233           0           2          0  0.00%  0.00%  0.00%   0 KRB5 AAA         
- 234           0           2          0  0.00%  0.00%  0.00%   0 MKA              
+ 234           4           2       2000  0.00%  0.00%  0.00%   0 MKA              
  235           0           2          0  0.00%  0.00%  0.00%   0 Profinet EventRe 
  236           0           2          0  0.00%  0.00%  0.00%   0 REP Topology cha 
  237           0           2          0  0.00%  0.00%  0.00%   0 RIB LM VALIDATE  
@@ -4444,30 +4444,30 @@ CPU utilization for five seconds: 79%/0%; one minute: 23%; five minutes: 6%
  241           0           2          0  0.00%  0.00%  0.00%   0 SMI IBC server p 
  242           0           1          0  0.00%  0.00%  0.00%   0 SMI IBC client p 
  243           0           2          0  0.00%  0.00%  0.00%   0 SMI IBC Download 
- 244          33         161        204  0.00%  0.03%  0.00%   0 Spanning Tree    
- 245           0           5          0  0.00%  0.00%  0.00%   0 SpanTree Msg     
+ 244          21         115        182  0.00%  0.00%  0.00%   0 Spanning Tree    
+ 245           0           4          0  0.00%  0.00%  0.00%   0 SpanTree Msg     
  246           0           3          0  0.00%  0.00%  0.00%   0 Spanning Tree St 
  247           0           2          0  0.00%  0.00%  0.00%   0 CDP Forward Proc 
  248           0           2          0  0.00%  0.00%  0.00%   0 802.1x switch    
- 249           7           9        777  0.00%  0.00%  0.00%   0 DTP Protocol     
+ 249           7          10        700  0.00%  0.00%  0.00%   0 DTP Protocol     
  250           0           1          0  0.00%  0.00%  0.00%   0 HRPC dai request 
  251           0           1          0  0.00%  0.00%  0.00%   0 HULC DAI Process 
  252           0           1          0  0.00%  0.00%  0.00%   0 HRPC power down  
  253           0           1          0  0.00%  0.00%  0.00%   0 HRPC ip device t 
  254           0           1          0  0.00%  0.00%  0.00%   0 HRPC ip source g 
  255           0           1          0  0.00%  0.00%  0.00%   0 HULC IP Source g 
- 256          20          90        222  0.05%  0.01%  0.00%   0 IOS Kernel Clock 
+ 256          30          83        361  0.00%  0.01%  0.00%   0 IOS Kernel Clock 
  257           0           4          0  0.00%  0.00%  0.00%   0 Profinet Service 
- 258           4          81         49  0.00%  0.00%  0.00%   0 PI MATM Aging Pr 
- 259           0         803          0  0.00%  0.00%  0.00%   0 UDLD             
- 260           0           4          0  0.00%  0.00%  0.00%   0 Port-Security    
- 261           7          75         93  0.00%  0.00%  0.00%   0 PTP protocol eng 
+ 258           3          75         40  0.00%  0.00%  0.00%   0 PI MATM Aging Pr 
+ 259          15         741         20  0.05%  0.00%  0.00%   0 UDLD             
+ 260           0           3          0  0.00%  0.00%  0.00%   0 Port-Security    
+ 261           6          64         93  0.00%  0.00%  0.00%   0 PTP protocol eng 
  262           0           2          0  0.00%  0.00%  0.00%   0 Switch Backup In 
  263           0           2          0  0.00%  0.00%  0.00%   0 IP Host Track Pr 
  264           0           1          0  0.00%  0.00%  0.00%   0 Link State Group 
  265           0           2          0  0.00%  0.00%  0.00%   0 MMN bkgrd proces 
- 266           0          11          0  0.00%  0.00%  0.00%   0 Ethchnl          
- 267           6           4       1500  0.00%  0.00%  0.00%   0 VMATM Callback   
+ 266           0          10          0  0.00%  0.00%  0.00%   0 Ethchnl          
+ 267           4           4       1000  0.00%  0.00%  0.00%   0 VMATM Callback   
  268           0           1          0  0.00%  0.00%  0.00%   0 XDR background p 
  269           0           2          0  0.00%  0.00%  0.00%   0 XDR mcast        
  270           0           1          0  0.00%  0.00%  0.00%   0 XDR RP Ping Back 
@@ -4475,59 +4475,59 @@ CPU utilization for five seconds: 79%/0%; one minute: 23%; five minutes: 6%
  272           0           1          0  0.00%  0.00%  0.00%   0 IPC LC Message H 
  273           0           1          0  0.00%  0.00%  0.00%   0 XDR RP Test Back 
  274           0           2          0  0.00%  0.00%  0.00%   0 FRR Background P 
- 275          14          13       1076  0.00%  0.00%  0.00%   0 CEF background p 
+ 275          17          12       1416  0.00%  0.00%  0.00%   0 CEF background p 
  276           0           1          0  0.00%  0.00%  0.00%   0 fib_fib_bfd_sb e 
  277           0           1          0  0.00%  0.00%  0.00%   0 IP IRDP          
  278           0           1          0  0.00%  0.00%  0.00%   0 CEF RF HULC Conv 
- 279           0          10          0  0.00%  0.00%  0.00%   0 IP ACL XDR LC Ba 
+ 279           0           9          0  0.00%  0.00%  0.00%   0 IP ACL XDR LC Ba 
  280           0           1          0  0.00%  0.00%  0.00%   0 Tunnel FIB       
- 281          17          46        369  0.00%  0.00%  0.00%   0 CEF: IPv4 proces 
- 282           3          88         34  0.05%  0.00%  0.00%   0 ADJ background   
+ 281          14          44        318  0.00%  0.00%  0.00%   0 CEF: IPv4 proces 
+ 282          15          82        182  0.00%  0.01%  0.00%   0 ADJ background   
  283           3           3       1000  0.00%  0.00%  0.00%   0 MDFS LC Process  
  284           0           3          0  0.00%  0.00%  0.00%   0 Auth Manager     
  285           0           1          0  0.00%  0.00%  0.00%   0 EPM MAIN PROCESS 
  286           0           2          0  0.00%  0.00%  0.00%   0 Critical Auth    
  287           0           2          0  0.00%  0.00%  0.00%   0 Routing Topology 
- 288          15           7       2142  0.00%  0.00%  0.00%   0 IP RIB Update    
+ 288          10           7       1428  0.00%  0.00%  0.00%   0 IP RIB Update    
  289           0           3          0  0.00%  0.00%  0.00%   0 Collection proce 
- 290          92           3      30666  0.00%  0.00%  0.00%   0 NIST rng proc    
- 291           8         162         49  0.00%  0.00%  0.00%   0 SVM UT Process   
+ 290          90           3      30000  0.00%  0.00%  0.00%   0 NIST rng proc    
+ 291           4         181         22  0.00%  0.00%  0.00%   0 SVM UT Process   
  292           0           1          0  0.00%  0.00%  0.00%   0 CMD HANDLER      
- 293           6         127         47  0.00%  0.00%  0.00%   0 TCP Timer        
- 294           0           6          0  0.00%  0.00%  0.00%   0 TCP Protocols    
- 295           0          80          0  0.00%  0.00%  0.00%   0 Socket Timers    
- 296           7           5       1400  0.00%  0.00%  0.00%   0 HTTP CORE        
- 297           0           4          0  0.00%  0.00%  0.00%   0 Cluster L2       
- 298           0          10          0  0.00%  0.00%  0.00%   0 Cluster RARP     
- 299           0          13          0  0.00%  0.00%  0.00%   0 Cluster Base     
+ 293           0         125          0  0.00%  0.00%  0.00%   0 TCP Timer        
+ 294           4           6        666  0.00%  0.00%  0.00%   0 TCP Protocols    
+ 295           0          74          0  0.00%  0.00%  0.00%   0 Socket Timers    
+ 296           4           5        800  0.00%  0.00%  0.00%   0 HTTP CORE        
+ 297           0           3          0  0.00%  0.00%  0.00%   0 Cluster L2       
+ 298           0           9          0  0.00%  0.00%  0.00%   0 Cluster RARP     
+ 299           0          12          0  0.00%  0.00%  0.00%   0 Cluster Base     
  300           0           2          0  0.00%  0.00%  0.00%   0 Dot1x Supplicant 
  301           0           2          0  0.00%  0.00%  0.00%   0 Dot1x Supplicant 
  302           0           2          0  0.00%  0.00%  0.00%   0 Dot1x Supplicant 
  303           0           1          0  0.00%  0.00%  0.00%   0 DSensor HTTP     
  304           0           1          0  0.00%  0.00%  0.00%   0 EPM Downlad Mana 
- 305           0          19          0  0.00%  0.00%  0.00%   0 EPM ACL PLUG-IN  
+ 305           0          18          0  0.00%  0.00%  0.00%   0 EPM ACL PLUG-IN  
  306           0           1          0  0.00%  0.00%  0.00%   0 Timer Handler Pr 
  307           0           1          0  0.00%  0.00%  0.00%   0 CEF RP Backgroun 
- 308           0           9          0  0.00%  0.00%  0.00%   0 Flow Exporter Ti 
+ 308           0           7          0  0.00%  0.00%  0.00%   0 Flow Exporter Ti 
  309           0           1          0  0.00%  0.00%  0.00%   0 DCT Bkgd Process 
  310           0           4          0  0.00%  0.00%  0.00%   0 MFIB Master back 
  311           0           1          0  0.00%  0.00%  0.00%   0 MRIB RP Proxy    
  312           0           2          0  0.00%  0.00%  0.00%   0 Tunnel           
- 313           0           9          0  0.00%  0.00%  0.00%   0 MVPN Mgr Process 
+ 313           0           8          0  0.00%  0.00%  0.00%   0 MVPN Mgr Process 
  314           0           2          0  0.00%  0.00%  0.00%   0 Multicast Offloa 
  315           0           1          0  0.00%  0.00%  0.00%   0 RARP Input       
- 316           0           6          0  0.00%  0.00%  0.00%   0 static           
+ 316           4           6        666  0.00%  0.00%  0.00%   0 static           
  317           0           3          0  0.00%  0.00%  0.00%   0 ADJ resolve proc 
  318           0           1          0  0.00%  0.00%  0.00%   0 IPv6 RIB Cleanup 
  319           0           1          0  0.00%  0.00%  0.00%   0 IPv6 RIB Event H 
  320           0           1          0  0.00%  0.00%  0.00%   0 IPv6 Static Hand 
  321           0           1          0  0.00%  0.00%  0.00%   0 MAB Framework    
- 322           0           5          0  0.00%  0.00%  0.00%   0 QoS stats proces 
- 323           0           1          0  0.00%  0.00%  0.00%   0 Connection Mgr   
+ 322           0           4          0  0.00%  0.00%  0.00%   0 QoS stats proces 
+ 323           0           1          0  0.00%  0.00%  0.00%   0 LICENSE AGENT    
  324           0           2          0  0.00%  0.00%  0.00%   0 REP LSL Proc     
- 325           0           2          0  0.00%  0.00%  0.00%   0 REP BPA/EPA Proc 
+ 325           3           2       1500  0.00%  0.00%  0.00%   0 REP BPA/EPA Proc 
  326           0           3          0  0.00%  0.00%  0.00%   0 Service Routing  
- 327          20          11       1818  0.00%  0.00%  0.00%   0 SR CapMan Proces 
+ 327          21          11       1909  0.00%  0.00%  0.00%   0 SR CapMan Proces 
  328           0           4          0  0.00%  0.00%  0.00%   0 SNMP Timers      
  329           0           1          0  0.00%  0.00%  0.00%   0 HRPC hwccp reque 
  330           0           1          0  0.00%  0.00%  0.00%   0 HULC_WCCP_BACKGR 
@@ -4537,50 +4537,50 @@ CPU utilization for five seconds: 79%/0%; one minute: 23%; five minutes: 6%
  334           0           1          0  0.00%  0.00%  0.00%   0 HRPC sisf reques 
  335           0           2          0  0.00%  0.00%  0.00%   0 HULC SISF Proces 
  336           0           1          0  0.00%  0.00%  0.00%   0 HULC SISF Source 
- 337          11          28        392  0.00%  0.00%  0.00%   0 IGMPSN L2MCM     
+ 337           3          27        111  0.00%  0.00%  0.00%   0 IGMPSN L2MCM     
  338           0           1          0  0.00%  0.00%  0.00%   0 IGMPSN MRD       
  339           0           1          0  0.00%  0.00%  0.00%   0 IGMPSN           
  340           0           1          0  0.00%  0.00%  0.00%   0 IGMPQR           
  341           0           3          0  0.00%  0.00%  0.00%   0 L2TRACE SERVER   
- 342         135         186        725  0.00%  0.04%  0.02%   0 Inline Power     
- 343          15         195         76  0.17%  0.01%  0.00%   0 Marvell wk-a Pow 
- 344           4          28        142  0.00%  0.00%  0.00%   0 MLDSN L2MCM      
+ 342         141         164        859  0.00%  0.06%  0.02%   0 Inline Power     
+ 343          12         182         65  0.05%  0.00%  0.00%   0 Marvell wk-a Pow 
+ 344          12          26        461  0.00%  0.00%  0.00%   0 MLDSN L2MCM      
  345           0           1          0  0.00%  0.00%  0.00%   0 MRD              
  346           0           1          0  0.00%  0.00%  0.00%   0 MLD_SNOOP        
  347           0           1          0  0.00%  0.00%  0.00%   0 HRPC hl2mcm mlds 
- 348           7         840          8  0.00%  0.00%  0.00%   0 MDFS RP process  
+ 348          14         783         17  0.05%  0.00%  0.00%   0 MDFS RP process  
  349           0           2          0  0.00%  0.00%  0.00%   0 AAA Cached Serve 
- 350           0         157          0  0.00%  0.00%  0.00%   0 Timer Library    
+ 350           0         145          0  0.00%  0.00%  0.00%   0 Timer Library    
  351           0           2          0  0.00%  0.00%  0.00%   0 ENABLE AAA       
  352           0           3          0  0.00%  0.00%  0.00%   0 LDAP process     
  353           0           2          0  0.00%  0.00%  0.00%   0 Crypto Support   
  354           0           1          0  0.00%  0.00%  0.00%   0 IPSECv6 PS Proc  
  355           0           1          0  0.00%  0.00%  0.00%   0 Key chain liveke 
  356           0           2          0  0.00%  0.00%  0.00%   0 LINE AAA         
- 357          11         198         55  0.00%  0.01%  0.00%   0 LOCAL AAA        
+ 357          15         198         75  0.00%  0.01%  0.00%   0 LOCAL AAA        
  358           0           4          0  0.00%  0.00%  0.00%   0 Profinet Service 
  359           0           2          0  0.00%  0.00%  0.00%   0 TPLUS            
  360           0           2          0  0.00%  0.00%  0.00%   0 HULC Consoless A 
  361           0           1          0  0.00%  0.00%  0.00%   0 Consoleless Acce 
- 362           0           1          0  0.00%  0.00%  0.00%   0 LICENSE AGENT    
- 363          53          12       4416  0.00%  0.01%  0.00%   0 crypto engine pr 
- 364          14          89        157  0.00%  0.00%  0.00%   0 Crypto IKEv2     
+ 362           0           1          0  0.00%  0.00%  0.00%   0 hulc cfg mgr mas 
+ 363          52          12       4333  0.00%  0.02%  0.00%   0 crypto engine pr 
+ 364          21          83        253  0.05%  0.00%  0.00%   0 Crypto IKEv2     
  365           0           1          0  0.00%  0.00%  0.00%   0 IKEv2 AAA handle 
  366           0           1          0  0.00%  0.00%  0.00%   0 encrypt proc     
  367           0           3          0  0.00%  0.00%  0.00%   0 CRYPTO MAP FREE  
  368           0           1          0  0.00%  0.00%  0.00%   0 Crypto INT       
  369           0           2          0  0.00%  0.00%  0.00%   0 Crypto IKE Dispa 
- 370           3           3       1000  0.00%  0.00%  0.00%   0 Crypto IKMP      
+ 370           0           3          0  0.00%  0.00%  0.00%   0 Crypto IKMP      
  371           0           1          0  0.00%  0.00%  0.00%   0 IPSEC manual key 
- 372           7           6       1166  0.00%  0.00%  0.00%   0 IPSEC key engine 
+ 372          10           6       1666  0.00%  0.00%  0.00%   0 IPSEC key engine 
  373           0           1          0  0.00%  0.00%  0.00%   0 Crypto ACL       
  374           0           1          0  0.00%  0.00%  0.00%   0 Crypto PAS Proc  
  375           0           1          0  0.00%  0.00%  0.00%   0 IPSec background 
  376           0           1          0  0.00%  0.00%  0.00%   0 RSA background p 
- 377         116           4      29000  0.00%  0.04%  0.01%   0 Crypto CA        
+ 377         115           4      28750  0.00%  0.05%  0.02%   0 Crypto CA        
  378           0           3          0  0.00%  0.00%  0.00%   0 Crypto PKI-CRL   
  379           0           1          0  0.00%  0.00%  0.00%   0 Crypto PKI-Rev-P 
- 380           0           1          0  0.00%  0.00%  0.00%   0 PKI OCSP         
+ 380           3           1       3000  0.00%  0.00%  0.00%   0 PKI OCSP         
  381           0           1          0  0.00%  0.00%  0.00%   0 PKI Revocation   
  382           0           2          0  0.00%  0.00%  0.00%   0 REP Switch Helpe 
  383           0           1          0  0.00%  0.00%  0.00%   0 Licensing MIB pr 
@@ -4589,106 +4589,106 @@ CPU utilization for five seconds: 79%/0%; one minute: 23%; five minutes: 6%
  386           0           4          0  0.00%  0.00%  0.00%   0 ASP Process Crea 
  387           0           4          0  0.00%  0.00%  0.00%   0 AAA SEND STOP EV 
  388           0           1          0  0.00%  0.00%  0.00%   0 Test AAA Client  
- 389           3           8        375  0.00%  0.00%  0.00%   0 DCM Core Thread  
+ 389           0           8          0  0.00%  0.00%  0.00%   0 DCM Core Thread  
  390           0           2          0  0.00%  0.00%  0.00%   0 DHCP Security He 
  391           0           1          0  0.00%  0.00%  0.00%   0 dcm_cli_engine   
  392           0           3          0  0.00%  0.00%  0.00%   0 dcm_cli_provider 
  393           4           4       1000  0.00%  0.00%  0.00%   0 EEM ED Generic   
  394           0           4          0  0.00%  0.00%  0.00%   0 EEM ED Routing   
- 395           3          25        120  0.00%  0.00%  0.00%   0 EEM ED Syslog    
+ 395           3          23        130  0.00%  0.00%  0.00%   0 EEM ED Syslog    
  396           0           1          0  0.00%  0.00%  0.00%   0 Syslog Traps     
- 397           0           4          0  0.00%  0.00%  0.00%   0 URPF stats       
- 398           4           2       2000  0.00%  0.00%  0.00%   0 vlmap logger     
- 399          18         237         75  0.05%  0.02%  0.00%   0 Common Industria 
+ 397           0           3          0  0.00%  0.00%  0.00%   0 URPF stats       
+ 398           0           2          0  0.00%  0.00%  0.00%   0 vlmap logger     
+ 399           4         207         19  0.00%  0.00%  0.00%   0 Common Industria 
  400           0           1          0  0.00%  0.00%  0.00%   0 HCD Process      
  401           0           1          0  0.00%  0.00%  0.00%   0 HRPC cable diagn 
  402           0           1          0  0.00%  0.00%  0.00%   0 HRPC archive_dnl 
  403           0           9          0  0.00%  0.00%  0.00%   0 L2NAT Stats Proc 
  404           0           2          0  0.00%  0.00%  0.00%   0 DiagCard1/-1     
  405           0           1          0  0.00%  0.00%  0.00%   0 Online Diag EEM  
- 406          12          90        133  0.00%  0.00%  0.00%   0 PM Callback      
+ 406           4          68         58  0.00%  0.00%  0.00%   0 PM Callback      
  407           0           1          0  0.00%  0.00%  0.00%   0 HULC FNF         
- 408           0           1          0  0.00%  0.00%  0.00%   0 DHCPD Timer      
- 409           0           8          0  0.00%  0.00%  0.00%   0 dhcp snooping sw 
+ 408           0           3          0  0.00%  0.00%  0.00%   0 hulc running con 
+ 409           0           7          0  0.00%  0.00%  0.00%   0 dhcp snooping sw 
  410           0           3          0  0.00%  0.00%  0.00%   0 Profinet Config  
  411          18          46        391  0.00%  0.00%  0.00%   0 EEM Server       
- 412           7           3       2333  0.00%  0.00%  0.00%   0 Call Home proces 
- 413           3          13        230  0.00%  0.00%  0.00%   0 EEM Helper Threa 
- 414          10          12        833  0.00%  0.00%  0.00%   0 Bulkstat-Client  
+ 412          11           3       3666  0.00%  0.00%  0.00%   0 Call Home proces 
+ 413           0          13          0  0.00%  0.00%  0.00%   0 EEM Helper Threa 
+ 414          13          11       1181  0.00%  0.00%  0.00%   0 Bulkstat-Client  
  415           0           4          0  0.00%  0.00%  0.00%   0 CTS credentials  
  416           0           2          0  0.00%  0.00%  0.00%   0 Call Home Timer  
- 417           0           6          0  0.00%  0.00%  0.00%   0 DCM snmp dp Thre 
- 418           3           3       1000  0.00%  0.00%  0.00%   0 snmp dcm ma shim 
+ 417           4           6        666  0.00%  0.00%  0.00%   0 DCM snmp dp Thre 
+ 418           0           3          0  0.00%  0.00%  0.00%   0 snmp dcm ma shim 
  419           0           2          0  0.00%  0.00%  0.00%   0 EEM Policy Direc 
  420           0           1          0  0.00%  0.00%  0.00%   0 Rom Random Updat 
  421           0           4          0  0.00%  0.00%  0.00%   0 EEM ED CLI       
- 422           0           4          0  0.00%  0.00%  0.00%   0 EEM ED Config    
+ 422           3           4        750  0.00%  0.00%  0.00%   0 EEM ED Config    
  423           0           4          0  0.00%  0.00%  0.00%   0 EEM ED Counter   
  424           0           4          0  0.00%  0.00%  0.00%   0 EEM ED CRASH     
- 425           3           4        750  0.00%  0.00%  0.00%   0 EEM ED DS        
- 426           4           4       1000  0.00%  0.00%  0.00%   0 EEM ED Env       
+ 425           4           4       1000  0.00%  0.00%  0.00%   0 EEM ED DS        
+ 426           0           4          0  0.00%  0.00%  0.00%   0 EEM ED Env       
  427           0           4          0  0.00%  0.00%  0.00%   0 EM ED GOLD       
  428           4           4       1000  0.00%  0.00%  0.00%   0 EEM ED Interface 
  429           0           4          0  0.00%  0.00%  0.00%   0 EEM ED IOSWD     
  430           0           4          0  0.00%  0.00%  0.00%   0 EEM ED Ipsla     
  431           0           4          0  0.00%  0.00%  0.00%   0 EEM ED None      
  432           0           4          0  0.00%  0.00%  0.00%   0 EEM ED OIR       
- 433          13           9       1444  0.00%  0.00%  0.00%   0 IP Background    
- 434           3           4        750  0.00%  0.00%  0.00%   0 EEM ED RPC       
- 435           0           4          0  0.00%  0.00%  0.00%   0 EEM ED SNMP      
- 436           0           4          0  0.00%  0.00%  0.00%   0 EEM ED SNMP Obje 
- 437           3           4        750  0.00%  0.00%  0.00%   0 EEM ED SNMP Noti 
- 438           0           4          0  0.00%  0.00%  0.00%   0 EEM ED Test      
- 439           0           6          0  0.00%  0.00%  0.00%   0 EEM ED Timer     
+ 433          10           8       1250  0.00%  0.00%  0.00%   0 IP Background    
+ 434           0           4          0  0.00%  0.00%  0.00%   0 EEM ED RPC       
+ 435           3           4        750  0.00%  0.00%  0.00%   0 EEM ED SNMP      
+ 436           3           4        750  0.00%  0.00%  0.00%   0 EEM ED SNMP Obje 
+ 437           0           4          0  0.00%  0.00%  0.00%   0 EEM ED SNMP Noti 
+ 438           3           4        750  0.00%  0.00%  0.00%   0 EEM ED Test      
+ 439           0           5          0  0.00%  0.00%  0.00%   0 EEM ED Timer     
  440           7           7       1000  0.00%  0.00%  0.00%   0 Syslog           
  441           0           1          0  0.00%  0.00%  0.00%   0 Profinet Cmdev   
  442           3           4        750  0.00%  0.00%  0.00%   0 RBM CORE         
  443           0           1          0  0.00%  0.00%  0.00%   0 IP SLAs Ethernet 
  444           0           1          0  0.00%  0.00%  0.00%   0 HRPC eee request 
- 445           0          83          0  0.00%  0.00%  0.00%   0 HULC Link Diag   
+ 445           0          76          0  0.00%  0.00%  0.00%   0 HULC Link Diag   
  446           0           2          0  0.00%  0.00%  0.00%   0 STP FAST TRANSIT 
  447           0           2          0  0.00%  0.00%  0.00%   0 CSRT RAPID TRANS 
- 448         210           8      26250  0.00%  0.00%  0.00%   0 VLAN Manager     
- 449           3          25        120  0.00%  0.00%  0.00%   0 IP Connected Rou 
- 450           8          82         97  0.00%  0.00%  0.00%   0 DHCPD Receive    
+ 448         265           9      29444  0.00%  0.00%  0.00%   0 VLAN Manager     
+ 449           3          24        125  0.00%  0.00%  0.00%   0 IP Connected Rou 
+ 450          19          76        250  0.00%  0.01%  0.00%   0 DHCPD Receive    
  451           0           2          0  0.00%  0.00%  0.00%   0 Secure Login     
- 452           0           8          0  0.00%  0.00%  0.00%   0 LLDP Protocol    
+ 452           0           7          0  0.00%  0.00%  0.00%   0 LLDP Protocol    
  453           0           2          0  0.00%  0.00%  0.00%   0 IP SNMP          
  454           0           1          0  0.00%  0.00%  0.00%   0 PDU DISPATCHER   
- 455          34       13968          2  0.00%  0.00%  0.00%   0 SNMP ENGINE      
+ 455           0          22          0  0.00%  0.00%  0.00%   0 SNMP ENGINE      
  456           0           2          0  0.00%  0.00%  0.00%   0 IP SNMPV6        
  457           0           1          0  0.00%  0.00%  0.00%   0 SNMP ConfCopyPro 
- 458          14           4       3500  0.00%  0.01%  0.00%   0 SNMP Traps       
- 459         167           6      27833  0.00%  0.00%  0.00%   0 Snmp Flash Cache 
- 460           0          86          0  0.00%  0.00%  0.00%   0 NTP              
- 461           0           2          0  0.00%  0.00%  0.00%   0 SpanTree Flush   
- 462           0           1          0  0.00%  0.00%  0.00%   0 hulc cfg mgr mas 
- 463           0           3          0  0.00%  0.00%  0.00%   0 hulc running con 
- 464           0           2          0  0.00%  0.00%  0.00%   0 DHCPD Database   
- 465           8        2254          3  0.05%  0.00%  0.00%   0 Profinet IO-plfm 
- 466          42          11       3818  0.00%  0.01%  0.00%   0 Profinet User    
- 467           0           1          0  0.00%  0.00%  0.00%   0 Profinet Consume 
- 468           0           1          0  0.00%  0.00%  0.00%   0 Profinet Provide 
- 469           0           1          0  0.00%  0.00%  0.00%   0 Profinet Alarm   
- 470           0        1832          0  0.00%  0.00%  0.00%   0 Profinet Etherne 
- 471           4          16        250  0.00%  0.00%  0.00%   0 Profinet Topolog 
- 472           3           2       1500  0.00%  0.00%  0.00%   0 SSH Event handle
+ 458          10           4       2500  0.00%  0.01%  0.00%   0 SNMP Traps       
+ 459        1176          24      49000  0.00%  0.04%  0.01%   0 Snmp Flash Cache 
+ 460           0          78          0  0.00%  0.00%  0.00%   0 NTP              
+ 461           3           4        750  0.00%  0.00%  0.00%   0 SpanTree Helper  
+ 462           0           1          0  0.00%  0.00%  0.00%   0 DHCPD Timer      
+ 463           0           2          0  0.00%  0.00%  0.00%   0 DHCPD Database   
+ 464           0           1          0  0.00%  0.00%  0.00%   0 Profinet Consume 
+ 465          10        2061          4  0.00%  0.00%  0.00%   0 Profinet IO-plfm 
+ 466          46          11       4181  0.00%  0.02%  0.00%   0 Profinet User    
+ 467           0           1          0  0.00%  0.00%  0.00%   0 Profinet Provide 
+ 468           0           1          0  0.00%  0.00%  0.00%   0 Profinet Alarm   
+ 469           4        1638          2  0.00%  0.00%  0.00%   0 Profinet Etherne 
+ 470           0          15          0  0.00%  0.00%  0.00%   0 Profinet Topolog 
+ 471           0           2          0  0.00%  0.00%  0.00%   0 SpanTree Flush   
+ 472           0           2          0  0.00%  0.00%  0.00%   0 SSH Event handle
 
 ------------------ show process cpu history ------------------
 
                                                                   
                                                                   
                                                                   
-      722222333333333322222222222222222222222222222222222222223333
-      999999111110000044444888882222222222222225555533333222229999
+      555522222333332222222222222222222222222222222222255555222222
+      111188888333337777744444777772222233333666663333366666888887
   100                                                           
    90                                                           
-   80 *                                                         
-   70 *                                                         
-   60 *                                                         
-   50 *                                                         
-   40 *                                                       **
-   30 ****************     *****               *****          **
+   80                                                           
+   70                                                           
+   60                                                  *****    
+   50 ****                                             *****    
+   40 ****                                             *****    
+   30 *******************     *****          *****     *********
    20 **********************************************************
    10 **********************************************************
      0....5....1....1....2....2....3....3....4....4....5....5....6
@@ -4698,14 +4698,14 @@ CPU utilization for five seconds: 79%/0%; one minute: 23%; five minutes: 6%
                                                                   
                                                                   
                                                                   
-      3                                                           
-      9                                                           
+      5                                                           
+      6                                                           
   100                                                           
    90                                                           
    80                                                           
    70                                                           
-   60                                                           
-   50                                                           
+   60 *                                                         
+   50 *                                                         
    40 *                                                         
    30 *                                                         
    20 #                                                         
@@ -4774,40 +4774,40 @@ No active filter modules.
 
 Log Buffer (16384 bytes):
 
-*Jan  2 00:00:00.859: %IOS_LICENSE_IMAGE_APPLICATION-6-LICENSE_LEVEL: Module name = ie4010 Next reboot level = ipservices and License = ipservices
-*Jan  2 00:00:32.251: %LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan1, changed state to down
-*Jan  2 00:00:33.673: %SPANTREE-5-EXTENDED_SYSID: Extended SysId enabled for type vlan
-000006: *Jan  2 00:00:39.157: %SYS-5-LOG_CONFIG_CHANGE: Buffer logging: level informational, xml disabled, filtering disabled, size (16384)
-000007: *Jan  2 00:00:39.171: %SYS-6-CLOCKUPDATE: System clock has been updated from 00:00:39 UTC Mon Jan 2 2006 to 18:00:39 CST Sun Jan 1 2006, configured from console by console.
-000008: *Jan  2 00:00:39.175: %SYS-6-CLOCKUPDATE: System clock has been updated from 18:00:39 CST Sun Jan 1 2006 to 18:00:39 CST Sun Jan 1 2006, configured from console by console.
-000009: *Jan  2 00:00:42.240: %LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan11, changed state to down
-000010: *Jan  2 00:00:42.240: %LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan12, changed state to down
-000011: *Jan  2 00:00:42.282: %LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan22, changed state to down
-000012: *Jan  2 00:00:42.282: %LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan100, changed state to down
-000013: *Jan  2 00:00:42.307: %SYS-6-LOGGINGHOST_STARTSTOP: Logging to host 172.30.100.99 port 0 CLI Request Triggered
-000014: *Jan  2 00:00:43.121: %SYS-5-CONFIG_I: Configured from memory by console
-000015: *Jan  2 00:00:43.139: %FLASH-6-DEVICE_INSERTED: Flash device inserted
-000016: *Jan  2 00:00:43.425: %PLATFORM_ENV-6-FRU_PS_OIR: FRU Power Supply 1 inserted
-000018: *Jan  2 00:00:43.855: %SYS-5-CONFIG_I: Configured from console by console
-000019: *Jan  2 00:00:43.880: %SYS-5-RESTART: System restarted --
+*Jan  2 00:00:00.873: %IOS_LICENSE_IMAGE_APPLICATION-6-LICENSE_LEVEL: Module name = ie4010 Next reboot level = ipservices and License = ipservices
+*Jan  2 00:00:32.761: %LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan1, changed state to down
+*Jan  2 00:00:34.183: %SPANTREE-5-EXTENDED_SYSID: Extended SysId enabled for type vlan
+000006: *Jan  2 00:00:39.776: %SYS-5-LOG_CONFIG_CHANGE: Buffer logging: level informational, xml disabled, filtering disabled, size (16384)
+000007: *Jan  2 00:00:39.790: %SYS-6-CLOCKUPDATE: System clock has been updated from 00:00:39 UTC Mon Jan 2 2006 to 18:00:39 CST Sun Jan 1 2006, configured from console by console.
+000008: *Jan  2 00:00:39.794: %SYS-6-CLOCKUPDATE: System clock has been updated from 18:00:39 CST Sun Jan 1 2006 to 18:00:39 CST Sun Jan 1 2006, configured from console by console.
+000009: *Jan  2 00:00:42.859: %LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan11, changed state to down
+000010: *Jan  2 00:00:42.862: %LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan12, changed state to down
+000011: *Jan  2 00:00:42.897: %LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan22, changed state to down
+000012: *Jan  2 00:00:42.897: %LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan100, changed state to down
+000013: *Jan  2 00:00:42.922: %SYS-6-LOGGINGHOST_STARTSTOP: Logging to host 172.30.100.99 port 0 CLI Request Triggered
+000014: *Jan  2 00:00:43.831: %SYS-5-CONFIG_I: Configured from memory by console
+000015: *Jan  2 00:00:43.897: %FLASH-6-DEVICE_INSERTED: Flash device inserted
+000016: *Jan  2 00:00:44.184: %PLATFORM_ENV-6-FRU_PS_OIR: FRU Power Supply 1 inserted
+000018: *Jan  2 00:00:44.806: %LINK-5-CHANGED: Interface GigabitEthernet1/26, changed state to administratively down
+000019: *Jan  2 00:00:44.806: %LINK-5-CHANGED: Interface GigabitEthernet1/27, changed state to administratively down
+000020: *Jan  2 00:00:44.806: %LINK-5-CHANGED: Interface GigabitEthernet1/28, changed state to administratively down
+000021: *Jan  2 00:00:44.900: %LINK-5-CHANGED: Interface Vlan1, changed state to administratively down
+000022: *Jan  2 00:00:45.120: %SYS-5-RESTART: System restarted --
 Cisco IOS Software, IE4010  Software (IE4010-UNIVERSALK9-M), Version 15.2(4)EC2, RELEASE SOFTWARE (fc1)
 Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2016 by Cisco Systems, Inc.
 Compiled Thu 08-Dec-16 13:39 by prod_rel_team
-000020: *Jan  2 00:00:44.180: %LINK-5-CHANGED: Interface GigabitEthernet1/26, changed state to administratively down
-000021: *Jan  2 00:00:44.180: %LINK-5-CHANGED: Interface GigabitEthernet1/27, changed state to administratively down
-000022: *Jan  2 00:00:44.187: %LINK-5-CHANGED: Interface GigabitEthernet1/28, changed state to administratively down
-000023: *Jan  2 00:00:44.208: %LINK-5-CHANGED: Interface Vlan1, changed state to administratively down
-000024: *Jan  2 00:00:44.268: %SYS-6-LOGGINGHOST_STARTSTOP: Logging to host 172.30.100.99 port 514 (100) started - CLI initiated
-000025: *Jan  2 00:00:46.421: %USB_CONSOLE-6-MEDIA_RJ45: Console media-type is RJ45.
-000026: *Jan  2 00:00:46.529: %POWER_SUPPLIES-5-PWR_OK: Power supply 1 is functioning
-000028: *Jan  2 00:00:59.266: %SSH-5-ENABLED: SSH 1.99 has been enabled
-000029: *Jan  2 00:01:10.965: %LINK-3-UPDOWN: Interface GigabitEthernet1/12, changed state to up
-000030: *Jan  2 00:01:11.982: %LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan11, changed state to up
-000031: *Jan  2 00:01:11.986: %LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan12, changed state to up
-000032: *Jan  2 00:01:12.003: %LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan100, changed state to up
-000033: *Jan  2 00:01:12.017: %LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan22, changed state to up
-000034: *Jan  2 00:01:12.972: %LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet1/12, changed state to up
+000023: *Jan  2 00:00:45.180: %SYS-5-CONFIG_I: Configured from console by console
+000024: *Jan  2 00:00:45.481: %SYS-6-LOGGINGHOST_STARTSTOP: Logging to host 172.30.100.99 port 514 (100) started - CLI initiated
+000025: *Jan  2 00:00:46.417: %USB_CONSOLE-6-MEDIA_RJ45: Console media-type is RJ45.
+000026: *Jan  2 00:00:47.298: %POWER_SUPPLIES-5-PWR_OK: Power supply 1 is functioning
+000028: *Jan  2 00:01:01.797: %SSH-5-ENABLED: SSH 1.99 has been enabled
+000029: *Jan  2 00:01:09.029: %LINK-3-UPDOWN: Interface GigabitEthernet1/12, changed state to up
+000030: *Jan  2 00:01:10.056: %LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan11, changed state to up
+000031: *Jan  2 00:01:10.077: %LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan12, changed state to up
+000032: *Jan  2 00:01:10.077: %LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan22, changed state to up
+000033: *Jan  2 00:01:10.081: %LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan100, changed state to up
+000034: *Jan  2 00:01:11.035: %LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet1/12, changed state to up
 
 ------------------ show env all ------------------
 
@@ -4815,7 +4815,7 @@ SYSTEM TEMPERATURE is OK
 System Temperature Value: 46 Degree Celsius
 POWER SUPPLY 1A TEMPERATURE: OK
 POWER SUPPLY 1B TEMPERATURE: Not Present
-POWER SUPPLY 1A Temperature Value: 48 Degree Celsius
+POWER SUPPLY 1A Temperature Value: 49 Degree Celsius
 POWER SUPPLY 1A Critical Temperature Thresh: 110 Degree Celsius
 POWER SUPPLY 1A Over Temperature Thresh: 95 Degree Celsius
 SW  PID                 Serial#     Status           Sys Pwr  PoE Pwr  Watts
@@ -5701,7 +5701,7 @@ GigabitEthernet1/1 (gpn: 1, port-number: 1)
  000A: 0000 1000Base-T Status                     :  0000 0000 0000 0000 
  000F: 3000 IEEE Extended Status                  :  0011 0000 0000 0000 
  0010: 0000 PHY Extended Control                  :  0000 0000 0000 0000 
- 0011: 0000 PHY Extended Status                   :  0000 0000 0000 0000 
+ 0011: 2000 PHY Extended Status                   :  0010 0000 0000 0000 
  001E: 0000 Test Register                         :  0000 0000 0000 0000 
  0018: 0400 Shadow 0h, Auxiliary Control          :  0000 0100 0000 0000 
  001C: 5C01 Shadow 16h, 1000Base-X Ctrl 2         :  0101 1100 0000 0001 
@@ -5771,7 +5771,7 @@ GigabitEthernet1/3 (gpn: 3, port-number: 3)
  000A: 0000 1000Base-T Status                     :  0000 0000 0000 0000 
  000F: 3000 IEEE Extended Status                  :  0011 0000 0000 0000 
  0010: 0000 PHY Extended Control                  :  0000 0000 0000 0000 
- 0011: 0000 PHY Extended Status                   :  0000 0000 0000 0000 
+ 0011: 2000 PHY Extended Status                   :  0010 0000 0000 0000 
  001E: 0000 Test Register                         :  0000 0000 0000 0000 
  0018: 0400 Shadow 0h, Auxiliary Control          :  0000 0100 0000 0000 
  001C: 5C01 Shadow 16h, 1000Base-X Ctrl 2         :  0101 1100 0000 0001 
@@ -5806,7 +5806,7 @@ GigabitEthernet1/4 (gpn: 4, port-number: 4)
  000A: 0000 1000Base-T Status                     :  0000 0000 0000 0000 
  000F: 3000 IEEE Extended Status                  :  0011 0000 0000 0000 
  0010: 0000 PHY Extended Control                  :  0000 0000 0000 0000 
- 0011: 2000 PHY Extended Status                   :  0010 0000 0000 0000 
+ 0011: 0001 PHY Extended Status                   :  0000 0000 0000 0001 
  001E: 0000 Test Register                         :  0000 0000 0000 0000 
  0018: 0400 Shadow 0h, Auxiliary Control          :  0000 0100 0000 0000 
  001C: 5C01 Shadow 16h, 1000Base-X Ctrl 2         :  0101 1100 0000 0001 
@@ -5911,7 +5911,7 @@ GigabitEthernet1/7 (gpn: 7, port-number: 7)
  000A: 0000 1000Base-T Status                     :  0000 0000 0000 0000 
  000F: 3000 IEEE Extended Status                  :  0011 0000 0000 0000 
  0010: 0000 PHY Extended Control                  :  0000 0000 0000 0000 
- 0011: 2000 PHY Extended Status                   :  0010 0000 0000 0000 
+ 0011: 0000 PHY Extended Status                   :  0000 0000 0000 0000 
  001E: 0000 Test Register                         :  0000 0000 0000 0000 
  0018: 0400 Shadow 0h, Auxiliary Control          :  0000 0100 0000 0000 
  001C: 5C01 Shadow 16h, 1000Base-X Ctrl 2         :  0101 1100 0000 0001 
@@ -5946,7 +5946,7 @@ GigabitEthernet1/8 (gpn: 8, port-number: 8)
  000A: 0000 1000Base-T Status                     :  0000 0000 0000 0000 
  000F: 3000 IEEE Extended Status                  :  0011 0000 0000 0000 
  0010: 0000 PHY Extended Control                  :  0000 0000 0000 0000 
- 0011: 0000 PHY Extended Status                   :  0000 0000 0000 0000 
+ 0011: 2000 PHY Extended Status                   :  0010 0000 0000 0000 
  001E: 0000 Test Register                         :  0000 0000 0000 0000 
  0018: 0400 Shadow 0h, Auxiliary Control          :  0000 0100 0000 0000 
  001C: 5C01 Shadow 16h, 1000Base-X Ctrl 2         :  0101 1100 0000 0001 
@@ -6016,7 +6016,7 @@ GigabitEthernet1/10 (gpn: 10, port-number: 10)
  000A: 0000 1000Base-T Status                     :  0000 0000 0000 0000 
  000F: 3000 IEEE Extended Status                  :  0011 0000 0000 0000 
  0010: 0000 PHY Extended Control                  :  0000 0000 0000 0000 
- 0011: 2000 PHY Extended Status                   :  0010 0000 0000 0000 
+ 0011: 0000 PHY Extended Status                   :  0000 0000 0000 0000 
  001E: 0000 Test Register                         :  0000 0000 0000 0000 
  0018: 0400 Shadow 0h, Auxiliary Control          :  0000 0100 0000 0000 
  001C: 5C01 Shadow 16h, 1000Base-X Ctrl 2         :  0101 1100 0000 0001 
@@ -6081,9 +6081,9 @@ GigabitEthernet1/12 (gpn: 12, port-number: 12)
  0005: C1E1 Auto-Negotiation Link Partner         :  1100 0001 1110 0001 
  0006: 006D Auto-Negotiation Expansion Reg        :  0000 0000 0110 1101 
  0007: 2001 Next Page Transmit Register           :  0010 0000 0000 0001 
- 0008: 48A6 Link Partner Next Page Rx Regi        :  0100 1000 1010 0110 
+ 0008: 4F3D Link Partner Next Page Rx Regi        :  0100 1111 0011 1101 
  0009: 0F00 1000Base-T Control                    :  0000 1111 0000 0000 
- 000A: 7800 1000Base-T Status                     :  0111 1000 0000 0000 
+ 000A: 3800 1000Base-T Status                     :  0011 1000 0000 0000 
  000F: 3000 IEEE Extended Status                  :  0011 0000 0000 0000 
  0010: 0000 PHY Extended Control                  :  0000 0000 0000 0000 
  0011: 2301 PHY Extended Status                   :  0010 0011 0000 0001 
@@ -6156,7 +6156,7 @@ GigabitEthernet1/14 (gpn: 14, port-number: 14)
  000A: 0000 1000Base-T Status                     :  0000 0000 0000 0000 
  000F: 3000 IEEE Extended Status                  :  0011 0000 0000 0000 
  0010: 0000 PHY Extended Control                  :  0000 0000 0000 0000 
- 0011: 0000 PHY Extended Status                   :  0000 0000 0000 0000 
+ 0011: 2000 PHY Extended Status                   :  0010 0000 0000 0000 
  001E: 0000 Test Register                         :  0000 0000 0000 0000 
  0018: 0400 Shadow 0h, Auxiliary Control          :  0000 0100 0000 0000 
  001C: 5C01 Shadow 16h, 1000Base-X Ctrl 2         :  0101 1100 0000 0001 
@@ -6191,7 +6191,7 @@ GigabitEthernet1/15 (gpn: 15, port-number: 15)
  000A: 0000 1000Base-T Status                     :  0000 0000 0000 0000 
  000F: 3000 IEEE Extended Status                  :  0011 0000 0000 0000 
  0010: 0000 PHY Extended Control                  :  0000 0000 0000 0000 
- 0011: 2000 PHY Extended Status                   :  0010 0000 0000 0000 
+ 0011: 0000 PHY Extended Status                   :  0000 0000 0000 0000 
  001E: 0000 Test Register                         :  0000 0000 0000 0000 
  0018: 0400 Shadow 0h, Auxiliary Control          :  0000 0100 0000 0000 
  001C: 5C01 Shadow 16h, 1000Base-X Ctrl 2         :  0101 1100 0000 0001 
@@ -6261,7 +6261,7 @@ GigabitEthernet1/17 (gpn: 17, port-number: 17)
  000A: 0000 1000Base-T Status                     :  0000 0000 0000 0000 
  000F: 3000 IEEE Extended Status                  :  0011 0000 0000 0000 
  0010: 0000 PHY Extended Control                  :  0000 0000 0000 0000 
- 0011: 0000 PHY Extended Status                   :  0000 0000 0000 0000 
+ 0011: 2000 PHY Extended Status                   :  0010 0000 0000 0000 
  001E: 0000 Test Register                         :  0000 0000 0000 0000 
  0018: 0400 Shadow 0h, Auxiliary Control          :  0000 0100 0000 0000 
  001C: 5C01 Shadow 16h, 1000Base-X Ctrl 2         :  0101 1100 0000 0001 
@@ -6366,7 +6366,7 @@ GigabitEthernet1/20 (gpn: 20, port-number: 20)
  000A: 0000 1000Base-T Status                     :  0000 0000 0000 0000 
  000F: 3000 IEEE Extended Status                  :  0011 0000 0000 0000 
  0010: 0000 PHY Extended Control                  :  0000 0000 0000 0000 
- 0011: 2001 PHY Extended Status                   :  0010 0000 0000 0001 
+ 0011: 0000 PHY Extended Status                   :  0000 0000 0000 0000 
  001E: 0000 Test Register                         :  0000 0000 0000 0000 
  0018: 0400 Shadow 0h, Auxiliary Control          :  0000 0100 0000 0000 
  001C: 5C01 Shadow 16h, 1000Base-X Ctrl 2         :  0101 1100 0000 0001 
@@ -6401,7 +6401,7 @@ GigabitEthernet1/21 (gpn: 21, port-number: 21)
  000A: 0000 1000Base-T Status                     :  0000 0000 0000 0000 
  000F: 3000 IEEE Extended Status                  :  0011 0000 0000 0000 
  0010: 0000 PHY Extended Control                  :  0000 0000 0000 0000 
- 0011: 0000 PHY Extended Status                   :  0000 0000 0000 0000 
+ 0011: 2000 PHY Extended Status                   :  0010 0000 0000 0000 
  001E: 0000 Test Register                         :  0000 0000 0000 0000 
  0018: 0400 Shadow 0h, Auxiliary Control          :  0000 0100 0000 0000 
  001C: 5C01 Shadow 16h, 1000Base-X Ctrl 2         :  0101 1100 0000 0001 
@@ -6471,7 +6471,7 @@ GigabitEthernet1/23 (gpn: 23, port-number: 23)
  000A: 0000 1000Base-T Status                     :  0000 0000 0000 0000 
  000F: 3000 IEEE Extended Status                  :  0011 0000 0000 0000 
  0010: 0000 PHY Extended Control                  :  0000 0000 0000 0000 
- 0011: 0000 PHY Extended Status                   :  0000 0000 0000 0000 
+ 0011: 2000 PHY Extended Status                   :  0010 0000 0000 0000 
  001E: 0000 Test Register                         :  0000 0000 0000 0000 
  0018: 0400 Shadow 0h, Auxiliary Control          :  0000 0100 0000 0000 
  001C: 5C01 Shadow 16h, 1000Base-X Ctrl 2         :  0101 1100 0000 0001 
@@ -6506,7 +6506,7 @@ GigabitEthernet1/24 (gpn: 24, port-number: 24)
  000A: 0000 1000Base-T Status                     :  0000 0000 0000 0000 
  000F: 3000 IEEE Extended Status                  :  0011 0000 0000 0000 
  0010: 0000 PHY Extended Control                  :  0000 0000 0000 0000 
- 0011: 2000 PHY Extended Status                   :  0010 0000 0000 0000 
+ 0011: 0000 PHY Extended Status                   :  0000 0000 0000 0000 
  001E: 0000 Test Register                         :  0000 0000 0000 0000 
  0018: 0400 Shadow 0h, Auxiliary Control          :  0000 0100 0000 0000 
  001C: 5C01 Shadow 16h, 1000Base-X Ctrl 2         :  0101 1100 0000 0001 
@@ -6535,7 +6535,7 @@ Port asic port num    : 4
 XCVR init completed   : 0
 Embedded PHY          : not present
 SFP presence index    : 12
-SFP iter cnt          : 633
+SFP iter cnt          : 582
 SFP failed oper flag  : 0x0
 IIC error cnt         : 0
 IIC error dsb cnt     : 0
@@ -6593,7 +6593,7 @@ stackCable
  000A: 0000 1000Base-T Status                     :  0000 0000 0000 0000 
  000F: 3000 IEEE Extended Status                  :  0011 0000 0000 0000 
  0010: 0000 PHY Extended Control                  :  0000 0000 0000 0000 
- 0011: 2000 PHY Extended Status                   :  0010 0000 0000 0000 
+ 0011: 0000 PHY Extended Status                   :  0000 0000 0000 0000 
  001E: 0000 Test Register                         :  0000 0000 0000 0000 
  0018: 4400 Shadow 0h, Auxiliary Control          :  0100 0100 0000 0000 
  001C: 5C01 Shadow 16h, 1000Base-X Ctrl 2         :  0101 1100 0000 0001 
@@ -6622,7 +6622,7 @@ Port asic port num    : 3
 XCVR init completed   : 0
 Embedded PHY          : not present
 SFP presence index    : 13
-SFP iter cnt          : 633
+SFP iter cnt          : 582
 SFP failed oper flag  : 0x0
 IIC error cnt         : 0
 IIC error dsb cnt     : 0
@@ -6709,7 +6709,7 @@ Port asic port num    : 2
 XCVR init completed   : 0
 Embedded PHY          : not present
 SFP presence index    : 14
-SFP iter cnt          : 633
+SFP iter cnt          : 582
 SFP failed oper flag  : 0x0
 IIC error cnt         : 0
 IIC error dsb cnt     : 0
@@ -6796,7 +6796,7 @@ Port asic port num    : 1
 XCVR init completed   : 0
 Embedded PHY          : not present
 SFP presence index    : 15
-SFP iter cnt          : 633
+SFP iter cnt          : 582
 SFP failed oper flag  : 0x0
 IIC error cnt         : 0
 IIC error dsb cnt     : 0
@@ -7308,9 +7308,9 @@ Port ID        Type       Name                    (current/peak/total)
    10000.B     unicast               RP: MRIB.control.RIL                 
    10000.C     unicast               MDFS RP: Statistics                  
   port_index = 0  seat_id = 0x10000   last sent = 0     last heard = 0    
-     rcv pending/peak/total       = 0/2/8
+     rcv pending/peak/total       = 0/2/7
      stateful_mode = 0     peer_port = 0,    peer_seat = 0
-     rcv bundling related msgs bdl/sub/nonbdl/err = 0/0/8/0
+     rcv bundling related msgs bdl/sub/nonbdl/err = 0/0/7/0
 
 
    10000.D     unicast               Slot 1 : MDFS.control.RIL            
@@ -7346,14 +7346,14 @@ RPC packets: current/peak/total
 
                                                     Rx Side     Tx Side
 
- Total Frames                                                8           8
- Total from Local Ports                                      8           8
+ Total Frames                                                7           7
+ Total from Local Ports                                      7           7
  Total Protocol Control Frames                               0           0
  Total Frames Dropped                                        0           0
 
                              Service Usage
 
- Total via Unreliable Connection-Less Service                8           8
+ Total via Unreliable Connection-Less Service                7           7
  Total via Unreliable Sequenced Connection-Less Svc          0           0
  Total via Reliable Connection-Oriented Service              0           0
  Total Messages via Fragmentation                            0           0
@@ -7368,7 +7368,7 @@ RPC packets: current/peak/total
 
                              Device Drivers
 
- Total via Local Driver                                      8           8
+ Total via Local Driver                                      7           7
  Total via Platform Driver                                   0           0
  Total Frames Dropped by Platform Drivers                    0           0
  Total Frames Sent when media is quiesced                                0
@@ -7415,10 +7415,10 @@ RPC packets: current/peak/total
 
           IPC Message Bundling Statistics
 
- Seat-level    Tx Bundling (bdl/sub/nonbdl/urgent/err)  0/0/8/0/0
- Seat-level    Rx Bundling (bdl/sub/nonbdl/err)         0/0/8/0
- Session-level Tx Bundling (bdl/sub/nonbdl/urgent/err)  0/0/8/0/0
- Session-level Rx Bundling (bdl/sub/nonbdl/err)         0/0/8/0
+ Seat-level    Tx Bundling (bdl/sub/nonbdl/urgent/err)  0/0/7/0/0
+ Seat-level    Rx Bundling (bdl/sub/nonbdl/err)         0/0/7/0
+ Session-level Tx Bundling (bdl/sub/nonbdl/urgent/err)  0/0/7/0/0
+ Session-level Rx Bundling (bdl/sub/nonbdl/err)         0/0/7/0
 
 
 
@@ -7665,7 +7665,7 @@ Request Class              Outstanding   Min Seq    Max Seq   Throttled
   (0x0B)stp_cli                0             0          0           0    
   (0x0C)hfbm                   0             0          0           0    
   (0x0D)acl                    0             0          0           0    
-  (0x0E)qos                    1             52         52          0    
+  (0x0E)qos                    1             51         51          0    
   (0x0F)sdm                    0             0          0           0    
   (0x10)span                   0             0          0           0    
   (0x11)hsm                    0             0          0           0    
@@ -7927,8 +7927,8 @@ Controller Instance 0, Address 0x52
    Priority             Reg 0x15     = High
  
 
-  MCU temperature     Reg 0x2C    = 114
-  Vee Voltage         Reg 0x2E/2F = 15065
+  MCU temperature     Reg 0x2C    = 115
+  Vee Voltage         Reg 0x2E/2F = 15067
   Firmware Revision   Reg 0x41    = 64
   WdogTimer Disable   Reg 0x42    = 11
   WdogTimer Status    Reg 0x42    = 1
@@ -8003,8 +8003,8 @@ Controller Instance 1, Address 0x50
    Priority             Reg 0x15     = High
  
 
-  MCU temperature     Reg 0x2C    = 114
-  Vee Voltage         Reg 0x2E/2F = 15065
+  MCU temperature     Reg 0x2C    = 115
+  Vee Voltage         Reg 0x2E/2F = 15067
   Firmware Revision   Reg 0x41    = 64
   WdogTimer Disable   Reg 0x42    = 11
   WdogTimer Status    Reg 0x42    = 1
@@ -8079,7 +8079,7 @@ Controller Instance 2, Address 0x4A
    Priority             Reg 0x15     = High
  
 
-  MCU temperature     Reg 0x2C    = 118
+  MCU temperature     Reg 0x2C    = 117
   Vee Voltage         Reg 0x2E/2F = 15106
   Firmware Revision   Reg 0x41    = 64
   WdogTimer Disable   Reg 0x42    = 11
@@ -8155,7 +8155,7 @@ Controller Instance 3, Address 0x48
    Priority             Reg 0x15     = High
  
 
-  MCU temperature     Reg 0x2C    = 118
+  MCU temperature     Reg 0x2C    = 117
   Vee Voltage         Reg 0x2E/2F = 15106
   Firmware Revision   Reg 0x41    = 64
   WdogTimer Disable   Reg 0x42    = 11
@@ -8308,7 +8308,7 @@ Controller Instance 5, Address 0x44
  
 
   MCU temperature     Reg 0x2C    = 118
-  Vee Voltage         Reg 0x2E/2F = 15063
+  Vee Voltage         Reg 0x2E/2F = 15061
   Firmware Revision   Reg 0x41    = 64
   WdogTimer Disable   Reg 0x42    = 11
   WdogTimer Status    Reg 0x42    = 1
@@ -8448,30 +8448,30 @@ Phase1.5 SAs under negotiation:         0
 
 ------------------ show crypto key mypubkey rsa ------------------
 
-% Key pair was generated at: 18:00:59 CST Jan 1 2006
+% Key pair was generated at: 18:01:01 CST Jan 1 2006
 Key name: TDS-1_B.iwocsg2.bifrost.technipfmc.com
 Key type: RSA KEYS
  Storage Device: not specified
  Usage: General Purpose Key
  Key is not exportable. Redundancy enabled.
  Key Data:
-  30819F30 0D06092A 864886F7 0D010101 05000381 8D003081 89028181 00B473D8 
-  F8F4A8F0 4D9CF517 B1F83E6C 851135EB AF43414F 28BB9EC7 595B013F DCE3DCA3 
-  3E9385B2 96540538 3DE7971B C68C893B 5D8F7155 9CBF13CC E4618B29 F3140FFE 
-  9DB4B789 3CC28E90 94F27C11 F4AF022C 599EAEB9 D2E56277 650B6C16 AB092FB6 
-  DE0AD147 3E92C6DA C8D16D8D 9BD0E612 AAA9DED4 7398E75D 3D0D3E73 5F020301 
+  30819F30 0D06092A 864886F7 0D010101 05000381 8D003081 89028181 00CF1A3C 
+  6D2F7ED5 6DE06E0D 1790E0A5 9B33E7EB AC078459 B1B537D3 6A132AE9 5EBD6294 
+  6F87C7B7 514E43DB 3C689957 CC48A5EB BAEB2E05 F165CCC0 39FE7BE1 E57C3CE0 
+  8D75BEB2 46BC7021 220A9ECE FFD7AD33 6059D9AE BCA8FBA0 111492B1 29441C38 
+  93ED415D 4C994CA3 8D6373A1 0B8CE9A5 60AB1A71 13B3A1D0 36D11DC2 B1020301 
   0001
-% Key pair was generated at: 18:00:59 CST Jan 1 2006
+% Key pair was generated at: 18:01:02 CST Jan 1 2006
 Key name: TDS-1_B.iwocsg2.bifrost.technipfmc.com.server
 Key type: RSA KEYS
 Temporary key
  Usage: Encryption Key
  Key is not exportable.
  Key Data:
-  307C300D 06092A86 4886F70D 01010105 00036B00 30680261 00BD9AD4 72E86B27 
-  487165CD 7D05A197 6FFBF6F5 9780086F C6D024CC A2E5EECE 1B238DD1 A3DF36CB 
-  7C0D8705 205C9C13 B66A5569 A66AEC8E 234B54AE F3E919FB 6D0E59CE 8671C3E0 
-  86244546 BA489421 D525781D E6E26991 DF3FAAEC E5DD1483 53020301 0001
+  307C300D 06092A86 4886F70D 01010105 00036B00 30680261 00B69A65 A6EAC14D 
+  FAAD2867 7E071510 A8B515A8 99FE45CC 76F0B7DB FCCA1E42 88D244F9 CCBD9790 
+  9B08A799 3E6379F2 E1F17082 66085996 ADCACB49 8FE96F73 737E17D5 C1AFD1DE 
+  E1E1A193 9F655E08 0597DC49 8F2137B0 13BA9C69 3319ADE7 AB020301 0001
 
 ------------------ remote command all show license file ------------------
 
@@ -8527,8 +8527,8 @@ Free Region Manager:
 
 
                 Head    Total(b)     Used(b)     Free(b)   Lowest(b)  Largest(b)
-Processor    75FD478   934283960    67607700   866676260   375324432   499009008
-      I/O   1E000000    16777216     8316136     8461080     8461080     8460568
+Processor    75FD478   934283960    73405168   860878792   370523484   504205572
+      I/O   1E000000    16777216     8305148     8472068     8472068     8471784
 Driver te    4300000     1048576          44     1048532     1048532     1048532
 
 -------------- Top 100 allocator pc summary -----------
@@ -8538,25 +8538,25 @@ Allocator PC Summary for: Processor
 Displayed first 2048 Allocator PCs only
 
     PC          Total   Count  Name
-0x02E2B43C   13888600       3  (fragment)
+0x02E2B43C   19623280       3  (fragment)
 0x03D068B0    4577856     474  Process Stack
 0x03C0EB68    3000704   44128  Init
-0x03207B50    2535820    2065  *Packet Header*
+0x03207B50    2550556    2077  *Packet Header*
 0x03D43B64    1999276      45  XOS_MEM_BASE
 0x03568E88    1262772      63  mifs NOR Sector
 0x03C0EAF8    1235628       1  Init
 0x016F2A90     720140       2   mfib_linecard
 0x02E08F50     715256      58  TW Buckets
 0x03C0EBF4     706092       1  Init
-0x03BF77AC     684032    5120  Init
 0x03BF77E0     684032    5120  Init
-0x007147F4     682724      88  Init
+0x03BF77AC     684032    5120  Init
+0x007147F4     682668      88  Init
 0x03BFE1FC     665644       1  Init
 0x006F1124     645176       7  event_trace_tbs
 0x01330EF8     617564    6708  Init
 0x017EB08C     592296       1  LC message chunk
 0x00120494     589964       2  xdr_events
-0x034C3228     552600     450  *Packet Header*
+0x034C3228     556284     453  *Packet Header*
 0x03C3A63C     544812       1  Init
 0x03CA5BF8     544812       1  Init
 0x01B53788     524428       2  cef_ipv4
@@ -8571,37 +8571,40 @@ Displayed first 2048 Allocator PCs only
 0x03BFED10     439496       2  Init
 0x0124EA10     409740       2  oce_events
 0x03207BB4     408688     239  *Packet Data*
-0x034C42B4     406468     331  *Packet Header*
+0x034C42B4     407696     332  *Packet Header*
 0x016C1580     400140       2  mfib_events
-0x0156BA80     394576    3185  IPC Thread
+0x0156BA80     394480    3185  IPC Message
 0x001C3548     394380       2  adjacency
 0x02C02CD0     393480       6  STP Port Control Block Chunk
-0x02E600B0     360660     472  Process
+0x02E600B0     360648     472  Process
 0x03428658     327724       1  HRM: rewrite MAD array
 0x018447A4     300484       2  multicast topology
 0x03BFEBB4     287976       2  Init
+0x0156B8E4     262320       4  IPC Message Hea
 0x012B6258     262284       2  cef_linecard
 0x011E22F8     262232       2  CEF: hash table
 0x011EC7F8     225420       2  cef_interface
-0x012FCBDC     200016       7  FMD FO node chunk
+0x012FCBDC     200016       7  FMD Get Attr
 0x01EE454C     196748       2  nti
 0x00EBA708     196740       3  Init
+0x02EB1CDC     196652       1  VACL_LOG
 0x0341C4E4     196652       1  HRM: destination array
 0x03C0EABC     176556       1  Init
 0x03C0EBB8     176556       1  Init
 0x00B85BD0     174652    2542  Init
 0x035D32CC     168084      29  Hulc Monitoring port pkt stats
 0x03938B00     163884       1  Init
-0x03F06994     160352     476  *Init*
+0x03F06994     160464     476  *Init*
 0x0045F734     157176    1108  hulc_flash init
 0x02DE2E28     152140       2  tp_ss_events
 0x01A44228     152140       2  ipsec_event
 0x01A4425C     152140       2  ipsec_error
 0x01A44290     152140       2  ipsec_exception
-0x02E168F4     149996     670  *Init*
-0x038B4B70     145588       2  PM port_data
+0x02E168F4     150068     670  *Init*
+0x038B4B70     145584       2  PM port_data
 0x02B0B0BC     144760     235  Init
 0x00A43308     140140       2  cfd
+0x02FDED20     140000     200  Snmp Flash Cache
 0x0356E6C0     139592       8  mifs sector buf
 0x03215B98     139384      38  *Hardware IDB*
 0x01EB8E08     131992       4  TAL: MTRIE n08
@@ -8609,23 +8612,23 @@ Displayed first 2048 Allocator PCs only
 0x03211B6C     131116       1  *Init*
 0x03089AE4     125264       3  Stack Mgr Notifier
 0x011006B0     114100      25  EEM Server
-0x011005F4     114100      25  EEM Server
 0x01100620     114100      25  EEM Server
-0x02E59D0C     111112     478  Process Events
-0x02DF599C     110172      38  dampening
+0x011005F4     114100      25  EEM Server
+0x02E59D0C     111128     478  Process Events
+0x02DF599C     110172      38  keepalive
 0x03CA9BD4     103976       1  MMN macs vlan data
 0x0131F600     102272     752  Init
 0x0356FB34     100220       5  mifs sector buffers
 0x00A30DC0     100044       1  Init
 0x00A30CAC     100044       1  Init
 0x03EFD2BC      98988      28  RIB LM nodes
-0x00709DF4      98468    1294  Parser Linkage
+0x00709DF4      98532    1294  Parser Linkage
 0x0124669C      91304       4  OCE reinject ha
 0x03E4D184      89256      90  Init
-0x013651D8      88140       2  fnf_mon
 0x00982DF4      87516    1287  Crypto IKEv2
 0x037C3994      87020       1  Init
-0x02E16594      86128      42  Reg Function 12
+0x02BF76F0      85436       1  Spanning Tree Opt Port Block
+0x02E16594      84084      41  Reg Function 12
 0x0069BE50      82676       1  AAA attr list handle IDs
 0x02E59698      81760      40  Message Rcvr
 0x02E02F50      80352       8  List Elements
@@ -8635,17 +8638,14 @@ Displayed first 2048 Allocator PCs only
 0x03623544      77824    1024  Init
 0x03A55950      76840      34  HWIF-QM-SB
 0x0341EEA0      75308       1  Init
-0x038AA190      74356      29  PM port sub-block
-0x011FACC4      72140       2  cef_loop_events
-0x03C1DAA0      71336       1  Switch Backup If Chunk
 
 
 Allocator PC Summary for: I/O
 
     PC          Total   Count  Name
-0x03207BB4    7350608    2658  *Packet Data*
+0x03207BB4    7361024    2664  *Packet Data*
 0x034C2D08     917636       3  Init
-0x02E2B43C      35100       1  (fragment)
+0x02E2B43C      13696       1  (fragment)
 0x034C2BA8       3628       1  Init
 0x034C2A98       3436       1  Init
 0x02E87B3C       3116       1  Init
@@ -8666,7 +8666,7 @@ Allocator PC Summary for: Driver text
 ------------------ show wsma summary ------------------
 
 WSMA Schema Version: 1.0, Baseline Tracking: rel15.1.151207
-WSMA Summary 1, T:91635
+WSMA Summary 1, T:86018
 
 
 ------------------ show wsma profiles ------------------
@@ -8687,44 +8687,44 @@ WSMA Service Statistics:
 
 Buffer elements:
      2831 in free list 
-     6067 hits, 0 misses, 2266 created
+     6051 hits, 0 misses, 2266 created
 
 Public buffer pools:
-Small buffers, 104 bytes (total 128, permanent 50, peak 128 @ 00:01:30):
+Small buffers, 104 bytes (total 128, permanent 50, peak 128 @ 00:01:25):
      127 in free list (20 min, 150 max allowed)
-     484 hits, 26 misses, 0 trims, 78 created
+     496 hits, 26 misses, 0 trims, 78 created
      0 failures (0 no memory)
-Middle buffers, 600 bytes (total 55, permanent 25, peak 55 @ 00:01:31):
+Middle buffers, 600 bytes (total 55, permanent 25, peak 55 @ 00:01:25):
      54 in free list (10 min, 150 max allowed)
-     1406 hits, 10 misses, 0 trims, 30 created
+     1405 hits, 10 misses, 0 trims, 30 created
      0 failures (0 no memory)
-Big buffers, 1536 bytes (total 86, permanent 50, peak 86 @ 00:01:24):
-     70 in free list (5 min, 150 max allowed)
-     401 hits, 12 misses, 0 trims, 36 created
+Big buffers, 1536 bytes (total 92, permanent 50, peak 92 @ 00:01:18):
+     76 in free list (5 min, 150 max allowed)
+     374 hits, 14 misses, 0 trims, 42 created
      0 failures (0 no memory)
 VeryBig buffers, 4520 bytes (total 10, permanent 10):
      10 in free list (0 min, 100 max allowed)
      0 hits, 0 misses, 0 trims, 0 created
      0 failures (0 no memory)
-Large buffers, 5024 bytes (total 1, permanent 0, peak 1 @ 00:02:12):
+Large buffers, 5024 bytes (total 1, permanent 0, peak 1 @ 00:02:07):
      1 in free list (0 min, 10 max allowed)
      0 hits, 0 misses, 0 trims, 1 created
      0 failures (0 no memory)
-Huge buffers, 18024 bytes (total 1, permanent 0, peak 1 @ 00:02:12):
+Huge buffers, 18024 bytes (total 1, permanent 0, peak 1 @ 00:02:07):
      1 in free list (0 min, 4 max allowed)
      0 hits, 0 misses, 0 trims, 1 created
      0 failures (0 no memory)
 
 Interface buffer pools:
-Generic ED Pool buffers, 512 bytes (total 101, permanent 100, peak 101 @ 00:01:34):
+Generic ED Pool buffers, 512 bytes (total 101, permanent 100, peak 101 @ 00:01:29):
      101 in free list (100 min, 100 max allowed)
      0 hits, 0 misses
-Syslog ED Pool buffers, 600 bytes (total 133, permanent 132, peak 133 @ 00:01:34):
+Syslog ED Pool buffers, 600 bytes (total 133, permanent 132, peak 133 @ 00:01:29):
      104 in free list (132 min, 132 max allowed)
      29 hits, 0 misses
 IPC buffers, 2048 bytes (total 300, permanent 300):
      297 in free list (150 min, 500 max allowed)
-     19 hits, 0 fallbacks, 0 trims, 0 created
+     17 hits, 0 fallbacks, 0 trims, 0 created
      0 failures (0 no memory)
 RxQFB buffers, 2176 bytes (total 904, permanent 904):
      904 in free list (0 min, 904 max allowed)
@@ -8735,16 +8735,16 @@ RxQ2 buffers, 2176 bytes (total 14, permanent 14):
      0 failures (0 no memory)
 RxQ1 buffers, 2176 bytes (total 153, permanent 153):
      25 in free list (0 min, 153 max allowed)
-     414 hits, 0 fallbacks
+     405 hits, 0 fallbacks
 RxQ4 buffers, 2176 bytes (total 76, permanent 76):
      12 in free list (0 min, 76 max allowed)
      70 hits, 0 misses
 RxQ15 buffers, 2176 bytes (total 4, permanent 4):
-     0 in free list (0 min, 4 max allowed)
-     1926 hits, 1922 misses
+     1 in free list (0 min, 4 max allowed)
+     1813 hits, 1810 misses
 RxQ10 buffers, 2176 bytes (total 76, permanent 76):
      12 in free list (0 min, 76 max allowed)
-     108 hits, 0 fallbacks
+     106 hits, 0 fallbacks
 RxQ13 buffers, 2176 bytes (total 19, permanent 19):
      3 in free list (0 min, 19 max allowed)
      16 hits, 0 misses
@@ -8756,16 +8756,16 @@ RxQ12 buffers, 2176 bytes (total 19, permanent 19):
      16 hits, 0 misses
 RxQ7 buffers, 2176 bytes (total 192, permanent 192):
      63 in free list (0 min, 192 max allowed)
-     868 hits, 0 misses
+     869 hits, 0 misses
 RxQ8 buffers, 2176 bytes (total 76, permanent 76):
      12 in free list (0 min, 76 max allowed)
-     139 hits, 0 misses
+     138 hits, 0 misses
 RxQ6 buffers, 2176 bytes (total 153, permanent 153):
      25 in free list (0 min, 153 max allowed)
      128 hits, 0 fallbacks
 RxQ3 buffers, 2176 bytes (total 153, permanent 153):
      25 in free list (0 min, 153 max allowed)
-     207 hits, 0 fallbacks
+     208 hits, 0 fallbacks
 RxQ11 buffers, 2176 bytes (total 19, permanent 19):
      3 in free list (0 min, 19 max allowed)
      16 hits, 0 misses
@@ -8776,7 +8776,7 @@ IPC Medium buffers, 16384 bytes (total 2, permanent 2):
      2 in free list (1 min, 8 max allowed)
      0 hits, 0 fallbacks, 0 trims, 0 created
      0 failures (0 no memory)
-IPC Large buffers, 65535 bytes (total 3, permanent 2, peak 17 @ 00:02:07):
+IPC Large buffers, 65535 bytes (total 3, permanent 2, peak 17 @ 00:02:02):
      3 in free list (1 min, 8 max allowed)
      0 hits, 0 misses, 0 trims, 1 created
      0 failures (0 no memory)
@@ -8794,12 +8794,14 @@ Number of Buffers used by packets generated by system:  128
 Number of Buffers used by incoming packets:               0
 
 Statistics for the Middle pool
+Output IDB   :      Vl100 count:        1
+Caller pc    : 0x 1AD0E08 count:        1
 Number of Buffers used by packets generated by system:   55
 Number of Buffers used by incoming packets:               0
 
 Statistics for the Big pool
 Caller pc    : 0x 36A40C0 count:       16
-Number of Buffers used by packets generated by system:   86
+Number of Buffers used by packets generated by system:   92
 Number of Buffers used by incoming packets:               0
 
 Statistics for the VeryBig pool
@@ -8855,8 +8857,8 @@ Number of Buffers used by packets generated by system:    4
 Number of Buffers used by incoming packets:               0
 
 Statistics for the RxQ10 pool
-Caller pc    : 0x 34C3228 count:       44
-Caller pc    : 0x 34C42B4 count:       20
+Caller pc    : 0x 34C3228 count:       42
+Caller pc    : 0x 34C42B4 count:       22
 Number of Buffers used by packets generated by system:   76
 Number of Buffers used by incoming packets:               0
 
@@ -8891,8 +8893,8 @@ Number of Buffers used by packets generated by system:  153
 Number of Buffers used by incoming packets:               0
 
 Statistics for the RxQ3 pool
-Caller pc    : 0x 34C3228 count:       79
-Caller pc    : 0x 34C42B4 count:       49
+Caller pc    : 0x 34C3228 count:       80
+Caller pc    : 0x 34C42B4 count:       48
 Number of Buffers used by packets generated by system:  153
 Number of Buffers used by incoming packets:               0
 
@@ -8993,7 +8995,7 @@ Redirection Task - Never Run
 
 
 ------------------ show pnp services ------------------
-Service name: XML Discovery Service, Run Count: 1 (S=1/F=0/O=0), Status: Last Run Success, Elapsed Time: 6749 ms
+Service name: XML Discovery Service, Run Count: 1 (S=1/F=0/O=0), Status: Last Run Success, Elapsed Time: 7431 ms
 Service name: XML Capability Service, Status: Never Run
 Service name: XML Certificate-Install Service, Status: Never Run
 Service name: XML Config-Change Service, Status: Never Run
@@ -9022,9 +9024,9 @@ Service name: XML Work-Info Service, Status: Never Run
 
 ------------------ show pnp trace ------------------
 
-[01/01/06 18:00:44.019 CST 1 441] Info: Startup config exists
-[01/01/06 18:00:44.019 CST 2 441] Info: HW reset status is: 0
-[01/01/06 18:00:44.019 CST 3 441] start_pnpa_discovery: Discovery did not start due to presence of startup config or is a standby
+[01/01/06 18:00:45.270 CST 1 441] Info: Startup config exists
+[01/01/06 18:00:45.270 CST 2 441] Info: HW reset status is: 0
+[01/01/06 18:00:45.270 CST 3 441] start_pnpa_discovery: Discovery did not start due to presence of startup config or is a standby
 3 entries printed
 
 
