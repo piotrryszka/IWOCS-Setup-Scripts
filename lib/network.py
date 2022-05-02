@@ -68,18 +68,29 @@ def ssh_download(host, device, command):
         "username": f"{username}",
         "password": f'{password}',
         # session logger
-        "session_log": f"logs/project_logs/{device}_{host}_{dateStr}.txt"
+        "session_log": f"logs/project_logs/{device}_{host}_{dateStr}.txt",
+        # enabling waiting for the output much longer
+        "fast_cli": False
     }
     with ConnectHandler(**cisco1) as net_connect:
         try:
             # assigning command to sending command
             our_command = command
 
+            # changing length of terminal to catch commands
+            net_connect.send_command('terminal length 0', cmd_verify=False)
+
             # sending 'enter' to clear CLI window
             net_connect.send_command('\n', cmd_verify=False)
 
             # command sent to network device
-            command_output = net_connect.send_command(our_command, cmd_verify=False)
+            if our_command == 'show tech':
+                command_output = net_connect.send_command_expect(our_command, cmd_verify=False)
+            else:
+                command_output = net_connect.send_command(our_command, cmd_verify=False)
+
+            # changing length of terminal to basic
+            net_connect.send_command('terminal length 24', cmd_verify=False)
 
             # replacing spaces in command with - char
             command = command.replace(' ', '-')

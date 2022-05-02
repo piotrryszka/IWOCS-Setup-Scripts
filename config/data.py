@@ -40,7 +40,7 @@ id_number = 1
 
 # list of commands on devices to prepare txt files with configuration
 # commands_list = ['sh lldp nei', 'show tech']
-commands_list = ['sh lldp nei', 'show run']
+commands_list = ['sh lldp nei', 'show run', 'show tech']
 
 # adding ip address of hub to check ping
 ip_hub = '172.30.103.4'
@@ -54,9 +54,6 @@ dict_ip = {'TDS-1_A': '172.30.100.101', 'TDS-1_B': '172.30.100.201', 'MSC-1': '1
            'MSW-1_B': '172.30.100.203', 'MSX-1_A': '172.30.100.105', 'MSX-1_B': '172.30.100.205', 'MSS-1_A': '172.30.100.107',
            'MSS-1_B': '172.30.100.207', 'MSY-1_A': '172.30.100.108', 'MSY-1_B': '172.30.100.208', 'TIR-1': '172.30.103.4',
            'ETAS-1': '172.30.102.4', 'TAS-1': '172.30.101.4', 'SDG-1_A': '172.30.100.1', 'SDG-1_B': '172.30.100.2'}
-
-# TODO: TESTS
-# dict_ip = {'TDS-1_A': 'www.interia.pl', 'TDS-1_B': 'www.onetsss.pl'}
 
 # sleep time -> break between sending ping
 sleep_time = 3

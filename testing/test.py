@@ -40,54 +40,62 @@
 #
 # while 1:
 #    pass
-
-import os
-from datetime import datetime
-from prettytable import PrettyTable as pt
-import subprocess
-from pythonping import ping
+from netmiko import ConnectHandler, NetmikoTimeoutException, NetmikoAuthenticationException
 from time import sleep
+from datetime import datetime
 
-from config.data import decorator_1, count_ping, ip_hub, dict_ip, sleep_time, finish_time
+from config.data import password, username, decorator_1, server_ip
 
+def ssh_download(host, device, command):
+    # creating timestamp
+    now = datetime.now()
+    date_time = now.strftime("%m/%d/%Y")
+    dateTimeObj = datetime.now()
+    dateObj = dateTimeObj.date()
+    dateStr = dateObj.strftime("%d.%m.%Y")
+    # configuration of network device
+    cisco1 = {
+        "device_type": f"cisco_ios",
+        "host": f"{host}",
+        "username": f"{username}",
+        "password": f'{password}',
+        # session logger
+        "session_log": f"../logs/project_logs/{device}_{host}_{dateStr}.txt",
+        "fast_cli": False
+    }
+    with ConnectHandler(**cisco1) as net_connect:
+        try:
+            # assigning command to sending command
+            our_command = command
 
-# checking if the device has booted after downloading project config
-def check_booting_ping(dict_dev):
-    # flag to run function
-    running_flag = True
-    # counter of time
-    count_time = 0
-    # temporary list to be filled with ip addresses
-    temporary_list = []
+            net_connect.send_command('terminal length 0', cmd_verify=False)
 
-    # adding address to temporary list
-    for k in reversed(dict_dev.keys()):
-        temporary_list.append(dict_ip[dict_dev[k]['device']])
+            # sending 'enter' to clear CLI window
+            net_connect.send_command('\n', cmd_verify=False)
 
-
-    while running_flag and count_time <= finish_time:
-        for k in reversed(dict_dev.keys()):
-            # pinging by ip address already configured devices
-            ping_output = ping(f"{dict_ip[dict_dev[k]['device']]}", verbose=False, count=count_ping)
-            print(dict_ip[dict_dev[k]['device']])
-            for response in ping_output:
-                # printing dots to console to make sure that something is happening in script
-                print('.', end='')
-                # checking if the ping was successful
-                if response.error_message is None:
-                    # deleting ip address to ping
-                    temporary_list.remove(dict_ip[dict_dev[k]['device']])
-            if len(temporary_list) == 0:
-                running_flag = False
-                break
-        # adding time to counter of time
-        count_time += sleep_time
-        # sleep function
-        sleep(sleep_time)
-    print(decorator_1)
-    print(decorator_1)
-
-dictionary_dev = {0: {'device': 'TDS-1_A', 'ip': '172.30.100.10'}, 1: {'device': 'TDS-1_B', 'ip': '172.30.100.11'},}
+            # command sent to network device
+            if our_command == 'show tech':
+                print('eeeee')
+                command_output = net_connect.send_command_expect(our_command, cmd_verify=False)
+            else:
+                command_output = net_connect.send_command(our_command, cmd_verify=False)
 
 
-check_booting_ping(dict_dev=dictionary_dev)
+            net_connect.send_command('terminal length 24', cmd_verify=False)
+
+            # replacing spaces in command with - char
+            command = command.replace(' ', '-')
+
+            # opening file and saving an output to the file
+            with open(f'../support/show-tech/{device}/{command}___{dateStr}.txt', 'w') as file:
+                file.write(command_output)
+
+            # waiting to give time to device react
+            sleep(1)
+
+        # error handling while ssh connection
+        except (NetmikoTimeoutException, NetmikoAuthenticationException) as error:
+            print(error)
+            print(decorator_1)
+
+ssh_download('172.30.100.101', 'TDS-1_A', 'show tech')
