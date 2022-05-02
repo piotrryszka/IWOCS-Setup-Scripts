@@ -1,16 +1,15 @@
 sh version
-Cisco IOS Software, IE4010  Software (IE4010-UNIVERSALK9-M), Version 15.2(6)E1, RELEASE SOFTWARE (fc4)
+Cisco IOS Software, IE4010  Software (IE4010-UNIVERSALK9-M), Version 15.2(4)EC2, RELEASE SOFTWARE (fc1)
 Technical Support: http://www.cisco.com/techsupport
-Copyright (c) 1986-2018 by Cisco Systems, Inc.
-Compiled Tue 06-Mar-18 07:42 by prod_rel_team
+Copyright (c) 1986-2016 by Cisco Systems, Inc.
+Compiled Thu 08-Dec-16 13:39 by prod_rel_team
 
 ROM: Bootstrap program is IE4010 boot loader
 BOOTLDR: IE4010  Boot Loader (IE4010-HBOOT-M) Version 15.2(4r)EC, RELEASE SOFTWARE (fc1)
 
-TDS-1_A uptime is 22 minutes
+TDS-1_A uptime is 4 days, 20 hours, 0 minutes
 System returned to ROM by power-on
-System restarted at 01:26:52 GMT Wed Mar 30 2011
-System image file is "sdflash:/ie4010-universalk9-mz.152-6.E1/ie4010-universalk9-mz.152-6.E1.bin"
+System image file is "sdflash:/ie4010-universalk9-mz.152-4.EC2/ie4010-universalk9-mz.152-4.EC2.bin"
 Last reload reason: Reload command
 
 
@@ -19,5 +18,6 @@ This product contains cryptographic features and is subject to United
 States and local country laws governing import, export, transfer and
 use. Delivery of Cisco cryptographic products does not imply
 third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
  --More--         
 TDS-1_A#

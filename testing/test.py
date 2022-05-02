@@ -40,30 +40,54 @@
 #
 # while 1:
 #    pass
-#
 
-# reading info about version from txt file
-def read_version():
-    with open('ie4010_show_version.txt', 'r') as my_file:
-        for line in my_file:
-            # looking for actual device model and version number
-            if 'Cisco IOS Software' in line:
-                my_list = line.split(', ')
-                for x in my_list:
-                    x = x.strip()
-                    x = x.split(' ')
-                    # getting device model
-                    if 'Software' in x and 'IOS' not in x:
-                        final_device = x[0]
-                        print(final_device)
-                    # getting actual version number
-                    if 'Version' in x and final_device == 'IE4010':
-                        print(x)
-                        act_version = x[-4]
-                        print(act_version)
-                    if 'Version' in x and final_device == 'IE2000':
-                        print(x)
-                        act_version = x[-1]
-                        print(act_version)
+import os
+from datetime import datetime
+from prettytable import PrettyTable as pt
+import subprocess
+from pythonping import ping
+from time import sleep
 
-read_version()
+from config.data import decorator_1, count_ping, ip_hub, dict_ip, sleep_time, finish_time
+
+
+# checking if the device has booted after downloading project config
+def check_booting_ping(dict_dev):
+    # flag to run function
+    running_flag = True
+    # counter of time
+    count_time = 0
+    # temporary list to be filled with ip addresses
+    temporary_list = []
+
+    # adding address to temporary list
+    for k in reversed(dict_dev.keys()):
+        temporary_list.append(dict_ip[dict_dev[k]['device']])
+
+
+    while running_flag and count_time <= finish_time:
+        for k in reversed(dict_dev.keys()):
+            # pinging by ip address already configured devices
+            ping_output = ping(f"{dict_ip[dict_dev[k]['device']]}", verbose=False, count=count_ping)
+            print(dict_ip[dict_dev[k]['device']])
+            for response in ping_output:
+                # printing dots to console to make sure that something is happening in script
+                print('.', end='')
+                # checking if the ping was successful
+                if response.error_message is None:
+                    # deleting ip address to ping
+                    temporary_list.remove(dict_ip[dict_dev[k]['device']])
+            if len(temporary_list) == 0:
+                running_flag = False
+                break
+        # adding time to counter of time
+        count_time += sleep_time
+        # sleep function
+        sleep(sleep_time)
+    print(decorator_1)
+    print(decorator_1)
+
+dictionary_dev = {0: {'device': 'TDS-1_A', 'ip': '172.30.100.10'}, 1: {'device': 'TDS-1_B', 'ip': '172.30.100.11'},}
+
+
+check_booting_ping(dict_dev=dictionary_dev)

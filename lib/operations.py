@@ -279,6 +279,7 @@ def read_version(id, user_device):
             # looking for actual device model and version number
             if 'Cisco IOS Software' in line:
                 my_list = line.split(', ')
+                counter = line.count(',')
                 for x in my_list:
                     x = x.strip()
                     x = x.split(' ')
@@ -286,7 +287,10 @@ def read_version(id, user_device):
                     if 'Software' in x and 'IOS' not in x:
                         final_device = x[0]
                     # getting actual version number
-                    if 'Version' in x and final_device == 'IE4010':
+                    # need to handle comas
+                    if 'Version' in x and final_device == 'IE4010' and counter == 3:
+                        act_version = x[-1]
+                    if 'Version' in x and final_device == 'IE4010' and counter == 2:
                         act_version = x[-4]
                     # getting actual version number
                     if 'Version' in x and final_device == 'IE2000':
