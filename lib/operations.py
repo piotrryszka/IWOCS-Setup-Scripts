@@ -222,6 +222,7 @@ def download_license(ser = 'COM1'):
         li = list(e.split())
         # udi data
         udi = li[11]
+        print(udi)
     except:
         udi = "UNKNOWN"
 
@@ -238,22 +239,25 @@ def download_license(ser = 'COM1'):
             counter =0
             lines = f.readlines()
             for line in lines:
-                if counter < 1:
-                    if 'License State:' in line:
-                        line_read = line.split()
-                        our_info = line_read[2:]
-                        state_string = ' '.join(our_info)
-#                         print(state_string)
-                    if 'License Type:' in line:
-                        line_read = line.split()
-                        our_info = line_read[2:]
-                        type_string = ' '.join(our_info)
-#                         print(state_string)
-                    if 'ipservices' in line:
-                        line_read = line.split()
-                        our_info = line_read[3:]
-                        ipservices_string = ' '.join(our_info)
-#                         print(ipservices_string)
+                if 'IE-4010' in udi:
+                    if counter < 1:
+                        if 'License State:' in line:
+                            line_read = line.split()
+                            our_info = line_read[2:]
+                            state_string = ' '.join(our_info)
+    #                         print(state_string)
+                        if 'License Type:' in line:
+                            line_read = line.split()
+                            our_info = line_read[2:]
+                            type_string = ' '.join(our_info)
+    #                         print(state_string)
+                        if 'ipservices' in line:
+                            line_read = line.split()
+                            our_info = line_read[3:]
+                            ipservices_string = ' '.join(our_info)
+    #                         print(ipservices_string)
+                if 'IE-2000' in udi:
+                    print('ESA')
                 if 'lanbase' in line:
                     counter =+1
     except:

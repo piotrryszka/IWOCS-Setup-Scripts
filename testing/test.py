@@ -40,62 +40,84 @@
 #
 # while 1:
 #    pass
-from netmiko import ConnectHandler, NetmikoTimeoutException, NetmikoAuthenticationException
-from time import sleep
+# reading temporary txt file
+import os
+from os import listdir
+from os.path import isfile, join
 from datetime import datetime
+from time import sleep
 
-from config.data import password, username, decorator_1, server_ip
+from config.data import decorator_1
+from lib.commands import send_to_console
+from lib.functions import adding_row
 
-def ssh_download(host, device, command):
-    # creating timestamp
-    now = datetime.now()
-    date_time = now.strftime("%m/%d/%Y")
-    dateTimeObj = datetime.now()
-    dateObj = dateTimeObj.date()
-    dateStr = dateObj.strftime("%d.%m.%Y")
-    # configuration of network device
-    cisco1 = {
-        "device_type": f"cisco_ios",
-        "host": f"{host}",
-        "username": f"{username}",
-        "password": f'{password}',
-        # session logger
-        "session_log": f"../logs/project_logs/{device}_{host}_{dateStr}.txt",
-        "fast_cli": False
-    }
-    with ConnectHandler(**cisco1) as net_connect:
-        try:
-            # assigning command to sending command
-            our_command = command
+def download_license(ser = 'COM7'):
+    # crating empty strings
+    state_string = ''
+    type_string = ''
+    ipservices_string = ''
 
-            net_connect.send_command('terminal length 0', cmd_verify=False)
+    try:
+        # waiting for the device to finish reading commands from initial config, need to be tested how long it should be
+        sleep(15)
 
-            # sending 'enter' to clear CLI window
-            net_connect.send_command('\n', cmd_verify=False)
+        # sending two commands to go into privilege mode
+        send_to_console(ser, '\n')
+        send_to_console(ser, 'en')
+    except:
+        pass
 
-            # command sent to network device
-            if our_command == 'show tech':
-                print('eeeee')
-                command_output = net_connect.send_command_expect(our_command, cmd_verify=False)
-            else:
-                command_output = net_connect.send_command(our_command, cmd_verify=False)
+    # try and except to not fail during the script and arguments
 
+    # sending command to get UDI
+# try:
+    e = send_to_console(ser, 'sh license udi', 0.5)
+    print(e)
+    li = list(e.split())
+    # udi data
+    udi = li[11]
+# except:
+    udi = "UNKNOWN"
 
-            net_connect.send_command('terminal length 24', cmd_verify=False)
+    # checking license and its status
+    try:
+        e = send_to_console(ser, 'sh license', 2)
 
-            # replacing spaces in command with - char
-            command = command.replace(' ', '-')
+        # creating temporary txt file
+        with open("temp/license_console.txt", "w") as text_file:
+            text_file.write(e)
 
-            # opening file and saving an output to the file
-            with open(f'../support/show-tech/{device}/{command}___{dateStr}.txt', 'w') as file:
-                file.write(command_output)
+        # reading temporary txt file
+        with open('temp/license_console.txt', 'r') as f:
+            counter =0
+            lines = f.readlines()
+            print(lines)
+            for line in lines:
+                if counter < 1:
+                    if 'License State:' in line:
+                        line_read = line.split()
+                        our_info = line_read[2:]
+                        state_string = ' '.join(our_info)
+                        print(state_string)
+                    if 'License Type:' in line:
+                        line_read = line.split()
+                        our_info = line_read[2:]
+                        type_string = ' '.join(our_info)
+                        print(state_string)
+                    if 'ipservices' in line:
+                        line_read = line.split()
+                        our_info = line_read[3:]
+                        ipservices_string = ' '.join(our_info)
+                        print(ipservices_string)
+                if 'lanbase' in line:
+                    counter =+1
+    except:
+        state_string = 'UNKNOWN'
+        type_string = 'UNKNOWN'
+        ipservices_string = 'UNKNOWN'
 
-            # waiting to give time to device react
-            sleep(1)
+    # returning 4 strings to be used in license table
+    return udi, state_string, type_string, ipservices_string
 
-        # error handling while ssh connection
-        except (NetmikoTimeoutException, NetmikoAuthenticationException) as error:
-            print(error)
-            print(decorator_1)
-
-ssh_download('172.30.100.101', 'TDS-1_A', 'show tech')
+e = download_license('COM7')
+print(e)
