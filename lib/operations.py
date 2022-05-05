@@ -223,19 +223,21 @@ def download_license(ser = 'COM1'):
         # udi data
         udi = li[11]
     except:
-        udi = "UNKNOWN"
+        # udi = "UNKNOWN"
+        udi = 'IE-2000'
 
     # checking license and its status
     try:
-        e = send_to_console(ser, 'sh license', 2)
-
-        # creating temporary txt file
-        with open("temp/license_console.txt", "w") as text_file:
-            text_file.write(e)
+        # e = send_to_console(ser, 'sh license', 2)
+        #
+        # # creating temporary txt file
+        # with open("temp/license_console.txt", "w") as text_file:
+        #     text_file.write(e)
 
         # reading temporary txt file
         with open('temp/license_console.txt', 'r') as f:
-            counter =0
+            counter = 0
+            counter_ie2000 = 0
             lines = f.readlines()
             for line in lines:
                 if 'IE-4010' in udi:
@@ -244,21 +246,34 @@ def download_license(ser = 'COM1'):
                             line_read = line.split()
                             our_info = line_read[2:]
                             state_string = ' '.join(our_info)
-    #                         print(state_string)
                         if 'License Type:' in line:
                             line_read = line.split()
                             our_info = line_read[2:]
                             type_string = ' '.join(our_info)
-    #                         print(state_string)
                         if 'ipservices' in line:
                             line_read = line.split()
                             our_info = line_read[3:]
                             ipservices_string = ' '.join(our_info)
-    #                         print(ipservices_string)
                 if 'IE-2000' in udi:
-                    print('ESA')
+                    if 'iplite' in line:
+                        counter_ie2000 = 0
+                    if counter_ie2000 == 0:
+                        if 'License Type:' in line:
+                            line_read = line.split()
+                            our_info = line_read[2:]
+                            type_string = ' '.join(our_info)
+                        if 'License State:' in line:
+                            line_read = line.split()
+                            our_info = line_read[2:]
+                            state_string = ' '.join(our_info)
+                        if 'iplite' in line:
+                            line_read = line.split()
+                            our_info = line_read[3:]
+                            ipservices_string = ' '.join(our_info)
+                    if 'mrp-manager' in line:
+                        counter_ie2000 += 1
                 if 'lanbase' in line:
-                    counter =+1
+                    counter =+ 1
     except:
         state_string = 'UNKNOWN'
         type_string = 'UNKNOWN'

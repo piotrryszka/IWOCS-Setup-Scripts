@@ -41,74 +41,102 @@
 # while 1:
 #    pass
 # reading temporary txt file
-import os
-from os import listdir
-from os.path import isfile, join
-from datetime import datetime
-from time import sleep
 
-from config.data import decorator_1
-from lib.commands import send_to_console
-from lib.functions import adding_row
+# udi = 'IE-4010'
+#
+# with open('ie2000_show_license.txt', 'r') as f:
+#     counter = 0
+#     lines = f.readlines()
+#     for line in lines:
+#         print(line)
+#         print('EEEE')
+#         if 'IE-4010' in udi:
+#             if counter < 1:
+#                 if 'License State:' in line:
+#                     line_read = line.split()
+#                     our_info = line_read[2:]
+#                     state_string = ' '.join(our_info)
+#                     # print(state_string)
+#                 if 'License Type:' in line:
+#                     line_read = line.split()
+#                     our_info = line_read[2:]
+#                     type_string = ' '.join(our_info)
+#                     print(type_string)
+#                 if 'ipservices' in line:
+#                     line_read = line.split()
+#                     our_info = line_read[3:]
+#                     ipservices_string = ' '.join(our_info)
+#                     # print(ipservices_string)
+#         if 'IE-2000' in udi:
+#             if 'License Type:' in line:
+#                 line_read = line.split()
+#                 our_info = line_read[2:]
+#                 type_string = ' '.join(our_info)
+#                 print(type_string)
+#
+# state_string = 'UNKNOWN'
+# type_string = 'UNKNOWN'
+# ipservices_string = 'UNKNOWN'
 
-def download_license(ser = 'COM7'):
+# collecting license data from device
+def download_license(ser = 'COM1'):
     # crating empty strings
     state_string = ''
     type_string = ''
     ipservices_string = ''
 
-    try:
-        # waiting for the device to finish reading commands from initial config, need to be tested how long it should be
-        sleep(15)
-
-        # sending two commands to go into privilege mode
-        send_to_console(ser, '\n')
-        send_to_console(ser, 'en')
-    except:
-        pass
-
     # try and except to not fail during the script and arguments
 
     # sending command to get UDI
-# try:
-    e = send_to_console(ser, 'sh license udi', 0.5)
-    print(e)
-    li = list(e.split())
-    # udi data
-    udi = li[11]
-# except:
-    udi = "UNKNOWN"
+    try:
+        udi = 'IE-2000'
+        # udi = 'IE-4010'
+    except:
+        udi = "UNKNOWN"
 
     # checking license and its status
     try:
-        e = send_to_console(ser, 'sh license', 2)
-
-        # creating temporary txt file
-        with open("temp/license_console.txt", "w") as text_file:
-            text_file.write(e)
+        # e = send_to_console(ser, 'sh license', 2)
 
         # reading temporary txt file
-        with open('temp/license_console.txt', 'r') as f:
-            counter =0
+        with open('ie2000_show_license.txt', 'r') as f:
+        # with open('license_console.txt', 'r') as f:
+            counter = 0
+            counter_ie2000 = 0
             lines = f.readlines()
-            print(lines)
             for line in lines:
-                if counter < 1:
-                    if 'License State:' in line:
-                        line_read = line.split()
-                        our_info = line_read[2:]
-                        state_string = ' '.join(our_info)
-                        print(state_string)
-                    if 'License Type:' in line:
-                        line_read = line.split()
-                        our_info = line_read[2:]
-                        type_string = ' '.join(our_info)
-                        print(state_string)
-                    if 'ipservices' in line:
-                        line_read = line.split()
-                        our_info = line_read[3:]
-                        ipservices_string = ' '.join(our_info)
-                        print(ipservices_string)
+                if 'IE-4010' in udi:
+                    if counter < 1:
+                        if 'License State:' in line:
+                            line_read = line.split()
+                            our_info = line_read[2:]
+                            state_string = ' '.join(our_info)
+                        if 'License Type:' in line:
+                            line_read = line.split()
+                            our_info = line_read[2:]
+                            type_string = ' '.join(our_info)
+                        if 'ipservices' in line:
+                            line_read = line.split()
+                            our_info = line_read[3:]
+                            ipservices_string = ' '.join(our_info)
+                if 'IE-2000' in udi:
+                    if 'iplite' in line:
+                        counter_ie2000 = 0
+                    if counter_ie2000 == 0:
+                        if 'License Type:' in line:
+                            line_read = line.split()
+                            our_info = line_read[2:]
+                            type_string = ' '.join(our_info)
+                        if 'License State:' in line:
+                            line_read = line.split()
+                            our_info = line_read[2:]
+                            state_string = ' '.join(our_info)
+                        if 'iplite' in line:
+                            line_read = line.split()
+                            our_info = line_read[3:]
+                            ipservices_string = ' '.join(our_info)
+                    if 'mrp-manager' in line:
+                        counter_ie2000 +=1
                 if 'lanbase' in line:
                     counter =+1
     except:
@@ -119,5 +147,4 @@ def download_license(ser = 'COM7'):
     # returning 4 strings to be used in license table
     return udi, state_string, type_string, ipservices_string
 
-e = download_license('COM7')
-print(e)
+print(download_license())

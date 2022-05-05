@@ -1,14 +1,9 @@
 TODO IN GENERAL
 3) rozroznienie zlego wybranego urzadzenia i czegos co ma startowa konfiguracje, jezeli jest cos innego niz initial configuration to wtedy COM sie rozlacza i mowi sie uzytkownikowi zeby odpalil PUTTY
-5) Uncomment try/except etx. in main.py and network handling functions
-
-TODO MY OBSERVATIONS
-w licencjach jezeli jest tak ipservices | Active,InUse | PermanentRightToUse to jest OK dla ie4010, a dla innych parametrow czy urzadzen (narazie nie jest ok)
 
 TODO NEXT
 obsluga tej wersji softu ulepszyc jutro, lepszy UX i musi byc przekazywanie co to za model, aby poprawnie wczytac jego mozliwa nowa wersje softu
 podsumowanie zrobic jakiesc
-dodanie tej obslugi licencji dla ie2000 tez
 
 TODO WIELOWATKOWOSC
 https://www.tutorialspoint.com/python3/python_multithreading.htm
