@@ -496,4 +496,6 @@ In case of UKNNOWN, please turn on the Putty client and check the configuration 
 If field 'New Version' is empty, check if you downloaded new versions of software into /FIRMWARE folder.
  
  
-If you want to download new versions of software type '1', anything else won't be accepted. 
+If you want to download new versions of software type '1', anything else won't be accepted. Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: 

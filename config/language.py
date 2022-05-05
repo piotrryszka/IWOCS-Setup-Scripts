@@ -37,7 +37,7 @@ language_dictionary = {'En': {'information_prompt': 'IMPORTANT ISSUE!!!\nIf you 
                               'tftp_free': "Everything is fine, now you can turn on your TFTP SERVER...",
                               'tftp_start': "Your TFTP server is running now...",
                               'tftp_folder': "Please choose in tab 'Current Directory' in TFTP Server Application folder called PROJECT-CONFIGS!",
-                              'tftp_ready': "If you set configuration properly and you are ready, please type in '1' in console. ",
+                              'tftp_ready': "If you set configuration properly and you are ready, please type in '1' in console: ",
                               'tftp_good': 'Everything was set, the script will now download project configs automatically!',
                               'finish_conf': "Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: ",
                               'ssh_move': "Now is the time to download project configs by SSH connections ...",
