@@ -241,7 +241,7 @@ while running_flag:
                             print(decorator_1)
 
                             if user_device in ie2000:
-                                print('eeeeeeeeeeeeeeee')
+                                print(lang_expressions['ie2000_wait'])
                                 sleep(120)
 
                             # TODO: UNCOMMENT IT

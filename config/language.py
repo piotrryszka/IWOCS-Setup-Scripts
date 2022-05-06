@@ -69,6 +69,7 @@ language_dictionary = {'En': {'information_prompt': 'IMPORTANT ISSUE!!!\nIf you 
                               'available_lic': "There is more than one available software version in this folders:",
                               'user_acc': "If you are ready, type anything what you want: ",
                               'ping_project': "Checking booting devices by project IP, please wait...",
+                              'ie2000_wait': "Please wait, because IE2000 is working a little bit longer...",
 
 
                               },
@@ -140,6 +141,7 @@ language_dictionary = {'En': {'information_prompt': 'IMPORTANT ISSUE!!!\nIf you 
                                'available_lic': "Something in Norwegian language ",
                                'user_acc': "Something in Norwegian language ",
                                'ping_project': "Something in Norwegian language ",
+                               'ie2000_wait': "Something in Norwegian language ",
 
                                },
                         'Fr': {'information_prompt': 'Something in French language ',
@@ -210,6 +212,7 @@ language_dictionary = {'En': {'information_prompt': 'IMPORTANT ISSUE!!!\nIf you 
                                'available_lic': "Something in French language ",
                                'user_acc': "Something in French language ",
                                'ping_project': "Something in French language ",
+                               'ie2000_wait': "Something in French language ",
 
                        }
                        }

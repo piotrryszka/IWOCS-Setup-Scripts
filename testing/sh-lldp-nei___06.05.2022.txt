@@ -3,8 +3,6 @@ Capability codes:
     (W) WLAN Access Point, (P) Repeater, (S) Station, (O) Other
 
 Device ID           Local Intf     Hold-time  Capability      Port ID
-TDS-1_B.iwocsg2.bifrGi1/12         120        B,R             port-012
-MSH-1.iwocsg2.bifrosGi1/19         120        B,R             Gi1/1
-902e.16c8.3bf7      Gi1/9          3601                       902e.16c8.3bf7
+TDS-1_A.iwocsg2.bifrGi1/12         120        B,R             port-012
 
-Total entries displayed: 3
+Total entries displayed: 1

@@ -208,4 +208,4 @@ def ssh_download(host, device, command):
         #     print(error)
         #     print(decorator_1)
 
-ssh_download('172.30.100.41', 'MSH-1', 'sh lldp nei')
+ssh_download('172.30.100.41', 'MSH-1', 'sh run')
