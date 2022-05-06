@@ -218,7 +218,7 @@ def download_license(ser = 'COM1'):
 
     # sending command to get UDI
     try:
-        e = send_to_console(ser, 'sh license udi', 0.5)
+        e = send_to_console(ser, 'sh license udi', 3)
         li = list(e.split())
         # udi data
         udi = li[11]
@@ -227,7 +227,10 @@ def download_license(ser = 'COM1'):
 
     # checking license and its status
     try:
-        e = send_to_console(ser, 'sh license', 2)
+        if 'IE-2000' in udi:
+            e = send_to_console(ser, 'sh license', 15)
+        else:
+            e = send_to_console(ser, 'sh license', 2)
 
         # creating temporary txt file
         with open("temp/license_console.txt", "w") as text_file:
@@ -284,7 +287,7 @@ def download_license(ser = 'COM1'):
 # sending sh_version command and saving it output to txt file
 def sh_version(ser):
     # sending command
-    output = send_to_console(ser, 'sh version', 2)
+    output = send_to_console(ser, 'sh version', 5)
     # saving output to txt file
     with open('temp/info_ver.txt', 'w') as file:
         file.write(output)

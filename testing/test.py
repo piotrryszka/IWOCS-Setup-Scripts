@@ -148,7 +148,64 @@
 #     return udi, state_string, type_string, ipservices_string
 #
 # print(download_license())
+from netmiko import ConnectHandler, NetmikoTimeoutException, NetmikoAuthenticationException
+from time import sleep
+from datetime import datetime
 
-udi = 'IE-4010-4S24P:FDO2250U0AV'
-if 'IE-4010' in udi:
-    print('ee')
+from config.data import password, username, decorator_1, server_ip
+
+
+def ssh_download(host, device, command):
+    # creating timestamp
+    now = datetime.now()
+    date_time = now.strftime("%m/%d/%Y")
+    dateTimeObj = datetime.now()
+    dateObj = dateTimeObj.date()
+    dateStr = dateObj.strftime("%d.%m.%Y")
+    # configuration of network device
+    cisco1 = {
+        "device_type": f"cisco_ios",
+        "host": f"{host}",
+        "username": f"{username}",
+        "password": f'{password}',
+        # session logger
+        "session_log": f"../logs/project_logs/{device}_{host}_{dateStr}.txt",
+        # enabling waiting for the output much longer
+        "fast_cli": False
+    }
+    with ConnectHandler(**cisco1) as net_connect:
+        # try:
+        # assigning command to sending command
+        our_command = command
+
+        # changing length of terminal to catch commands
+        # net_connect.send_command('terminal length 0', cmd_verify=False)
+
+        # sending 'enter' to clear CLI window
+        net_connect.send_command('\n', cmd_verify=False)
+
+        # command sent to network device
+        if our_command == 'show tech':
+            command_output = net_connect.send_command_expect(our_command, cmd_verify=False)
+        else:
+            command_output = net_connect.send_command(our_command, cmd_verify=False)
+
+        # changing length of terminal to basic
+        # net_connect.send_command('terminal length 24', cmd_verify=False)
+
+        # replacing spaces in command with - char
+        command = command.replace(' ', '-')
+
+        # opening file and saving an output to the file
+        with open(f'{command}___{dateStr}.txt', 'w') as file:
+            file.write(command_output)
+
+        # waiting to give time to device react
+        sleep(1)
+
+        # error handling while ssh connection
+        # except (NetmikoTimeoutException, NetmikoAuthenticationException) as error:
+        #     print(error)
+        #     print(decorator_1)
+
+ssh_download('172.30.100.41', 'MSH-1', 'sh lldp nei')

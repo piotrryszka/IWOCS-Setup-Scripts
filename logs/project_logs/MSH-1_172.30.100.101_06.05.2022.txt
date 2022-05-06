@@ -1,0 +1,50 @@
+C
+
+                                                    
+                            TechnipFMC                      
+                     
+         ------------------ W A R N I N G -----------------           
+               This system is for authorized use only.                
+      All activities conducted on and information accessed, processed,     
+           stored or sent using this device may be examined.           
+By using the system, all users acknowledge and consent to such monitoring.
+   All unauthorized or improper use of this system shall be reported.      
+                                                                      
+                All activities performed on this device               
+                      are logged and monitored.                       
+                                                                      
+         -------------------------------------------------     
+                                                    
+                        Location  : IWOCS Generation 2
+                     Device name  : TDS-1_A
+                      Cabinet PN  : P6000183221 
+                      Network PN  : P6000185409
+                         Version  : B
+                        Filename  : TDS-1_A
+                                                     
+         -------------------------------------------------        
+
+TDS-1_A#terminal width 511
+TDS-1_A#terminal length 0
+TDS-1_A#
+TDS-1_A#
+TDS-1_A#terminal length 0
+TDS-1_A#
+TDS-1_A#
+TDS-1_A#
+TDS-1_A#sh lldp nei
+Capability codes:
+    (R) Router, (B) Bridge, (T) Telephone, (C) DOCSIS Cable Device
+    (W) WLAN Access Point, (P) Repeater, (S) Station, (O) Other
+
+Device ID           Local Intf     Hold-time  Capability      Port ID
+TDS-1_B.iwocsg2.bifrGi1/12         120        B,R             port-012
+MSH-1.iwocsg2.bifrosGi1/19         120        B,R             Gi1/1
+902e.16c8.3bf7      Gi1/9          3601                       902e.16c8.3bf7
+
+Total entries displayed: 3
+
+TDS-1_A#
+TDS-1_A#terminal length 24
+TDS-1_A#
+TDS-1_A#exit

@@ -64,13 +64,14 @@ def checking_ip_address(lang_dict):
 # checking type of device
 def checking_device(ser_port, user_device, lang_dict):
     good_conf = False
-    check_device = send_to_console(ser_port, 'sh lic udi')
+    check_device = send_to_console(ser_port, 'sh lic udi', 3)
+    print(check_device)
     # routers/firewall
     # TODO: to code here some lists
+
     print(decorator_1)
     print(decorator_1)
 
-    # TODO here change check it
     if 'IE-4010' in check_device:
         if user_device in ie4010:
             print(lang_dict['proper_device'])

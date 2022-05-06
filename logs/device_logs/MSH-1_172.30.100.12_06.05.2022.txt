@@ -1,0 +1,23 @@
+C
+
+TechnipFMC
+
+-------------------------------------------------
+
+INITIAL TEMPORARY SCRIPT CONFIG
+
+-------------------------------------------------
+
+
+MSH-1#terminal width 511
+MSH-1#terminal length 0
+MSH-1#
+MSH-1#copy tftp://172.30.100.91/MSH-1 startup-config
+Destination filename [startup-config]? 
+Accessing tftp://172.30.100.91/MSH-1...
+Loading MSH-1 from 172.30.100.91 (via Vlan1): !
+[OK - 7791 bytes]
+
+7791 bytes copied in 0.352 secs (22134 bytes/sec)
+MSH-1#reload
+Proceed with reload? [confirm]
