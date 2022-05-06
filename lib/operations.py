@@ -223,16 +223,15 @@ def download_license(ser = 'COM1'):
         # udi data
         udi = li[11]
     except:
-        # udi = "UNKNOWN"
-        udi = 'IE-2000'
+        udi = "UNKNOWN"
 
     # checking license and its status
     try:
-        # e = send_to_console(ser, 'sh license', 2)
-        #
-        # # creating temporary txt file
-        # with open("temp/license_console.txt", "w") as text_file:
-        #     text_file.write(e)
+        e = send_to_console(ser, 'sh license', 2)
+
+        # creating temporary txt file
+        with open("temp/license_console.txt", "w") as text_file:
+            text_file.write(e)
 
         # reading temporary txt file
         with open('temp/license_console.txt', 'r') as f:
