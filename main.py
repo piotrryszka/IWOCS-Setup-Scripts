@@ -293,7 +293,7 @@ while running_flag:
                             print(f"{lang_expressions['proper_conf']}{user_device}.")
                             print(f"{lang_expressions['close_con']}{ser.name}.")
                             print(decorator_1)
-                            print('---------------------------------------------------')
+                            print(decorator_2)
                             print(decorator_1)
 
                         # except:
