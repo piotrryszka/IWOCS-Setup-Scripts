@@ -15,13 +15,9 @@ MSH-1#
 MSH-1#copy tftp://172.30.100.91/MSH-1 startup-config
 Destination filename [startup-config]? 
 Accessing tftp://172.30.100.91/MSH-1...
-%Error opening tftp://172.30.100.91/MSH-1 (No such file or directory)
+Loading MSH-1 from 172.30.100.91 (via Vlan1): !
+[OK - 7791 bytes]
+
+7791 bytes copied in 0.377 secs (20666 bytes/sec)
 MSH-1#reload
-
-System configuration has been modified. Save? [yes/no]: 
-% Please answer 'yes' or 'no'.
-
-System configuration has been modified. Save? [yes/no]: 
-% Please answer 'yes' or 'no'.
-
-System configuration has been modified. Save? [yes/no]: exit
+Proceed with reload? [confirm]

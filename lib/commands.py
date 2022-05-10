@@ -65,7 +65,6 @@ def checking_ip_address(lang_dict):
 def checking_device(ser_port, user_device, lang_dict):
     good_conf = False
     check_device = send_to_console(ser_port, 'sh lic udi', 3)
-    print(check_device)
     # routers/firewall
     # TODO: to code here some lists
 

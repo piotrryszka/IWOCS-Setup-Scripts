@@ -1,0 +1,2780 @@
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  10/05/2022 10:11:08
+ 
+IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!
+ 
+This is a list of all saved session logs: 
+2022-05-06.txt, 2022-05-10.txt
+Do you want to delete device logs, console logs and table with licenses, ping and versions for support team? If yes type '1', if not type anything else:
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else:
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 7
+ 
+Which device do you want to connect? TDS-1_A
+ 
+Your list of possible devices to configure: 
+TDS-1_A
+ 
+ 
+You have chosen this configuration...
+COM7 ----> TDS-1_A
+Please wait patiently...
+ 
+.......................sh lic udi
+Device#	  PID			SN		UDI
+-----------------------------------------------------------------------------
+*1  	  IE-4010-4S24P         FDO2250U0AV     IE-4010-4S24P:FDO2250U0AV
+
+Switch#
+Switch#
+ 
+ 
+Device is chosen properly, let's continue...
+Info for debugging:
+True
+True
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+ 
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  10/05/2022 10:14:56
+ 
+IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!
+ 
+This is a list of all saved session logs: 
+2022-05-10.txt
+Do you want to delete device logs, console logs and table with licenses, ping and versions for support team? If yes type '1', if not type anything else:
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else:
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 7
+ 
+Already configured devices:
+TDS-1_A
+ 
+Which device do you want to connect? Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  10/05/2022 10:15:10
+ 
+IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!
+ 
+This is a list of all saved session logs: 
+2022-05-10.txt
+Do you want to delete device logs, console logs and table with licenses, ping and versions for support team? If yes type '1', if not type anything else:
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else:
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 7
+ 
+Which device do you want to connect? TDS-1_A
+ 
+Your list of possible devices to configure: 
+TDS-1_A
+ 
+ 
+You have chosen this configuration...
+COM7 ----> TDS-1_A
+Please wait patiently...
+ 
+................tch#
+Switch#term len 0
+Switch#
+Switch#sh run
+Building configuration...
+
+Current configuration : 2016 bytes
+!
+! Last configuration change at 01:28:09 UTC Wed Mar 30 2011
+!
+version 15.2
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname Switch
+!
+boot-start-marker
+boot-end-marker
+!
+!
+!
+no aaa new-model
+system mtu routing 1500
+!
+!
+!
+vtp mode off
+!
+!
+!
+!
+!
+ptp mode e2etransparent 
+!
+!
+!
+license boot level ipservices
+!
+spanning-tree mode rapid-pvst
+spanning-tree extend system-id
+!
+alarm profile defaultPort
+ alarm not-operating 
+ syslog not-operating 
+ notifies not-operating 
+!
+!
+
+!
+!
+!
+!
+!
+transceiver type all
+!
+vlan 11
+ name SCADA
+!
+vlan 12
+ name HPU/HDU
+!
+vlan 13
+ name SFT
+!
+vlan 14
+ name CIU
+!
+vlan 21
+ name SCU_A
+!
+vlan 22
+ name SCU_B
+!
+vlan 100
+ name MANAGEMENT
+!
+vlan 105
+ name MANAGEMENT-PCU
+!
+vlan 201
+ name SAFE_A
+!
+vlan 202
+ name SAFE_B
+!
+vlan 210
+ name SPCU-W
+!
+vlan 220
+ name SPCU-X
+!
+vlan 229
+ name PCU
+!
+vlan 666
+ name NOTINUSE
+!
+vlan 888
+ name NATIVE
+!
+lldp run
+!
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface GigabitEthernet1/1
+!
+interface GigabitEthernet1/2
+!
+interface GigabitEthernet1/3
+!
+interface GigabitEthernet1/4
+!
+interface GigabitEthernet1/5
+!
+interface GigabitEthernet1/6
+!
+interface GigabitEthernet1/7
+!
+interface GigabitEthernet1/8
+!
+interface GigabitEthernet1/9
+!
+interface GigabitEthernet1/10
+!
+interface GigabitEthernet1/11
+!
+interface GigabitEthernet1/12
+!
+interface GigabitEthernet1/13
+!
+interface GigabitEthernet1/14
+!
+interface GigabitEthernet1/15
+!
+interface GigabitEthernet1/16
+!
+interface GigabitEthernet1/17
+!
+interface GigabitEthernet1/18
+!
+interface GigabitEthernet1/19
+!
+interface GigabitEthernet1/20
+!
+interface GigabitEthernet1/21
+!
+interface GigabitEthernet1/22
+!
+interface GigabitEthernet1/23
+!
+interface GigabitEthernet1/24
+!
+interface GigabitEthernet1/25
+!
+interface GigabitEthernet1/26
+!
+interface GigabitEthernet1/27
+!
+interface GigabitEthernet1/28
+!
+interface Vlan1
+ no ip address
+!
+ip forward-prot
+ 
+ 
+Info for debugging:
+True
+False
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  10/05/2022 10:17:12
+ 
+IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!
+ 
+This is a list of all saved session logs: 
+2022-05-10.txt
+Do you want to delete device logs, console logs and table with licenses, ping and versions for support team? If yes type '1', if not type anything else:
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else:
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 7
+ 
+Which device do you want to connect? TDS-1_A
+ 
+Your list of possible devices to configure: 
+TDS-1_A
+ 
+ 
+You have chosen this configuration...
+COM7 ----> TDS-1_A
+Please wait patiently...
+ 
+..........................................sh lic udi
+Device#	  PID			SN		UDI
+-----------------------------------------------------------------------------
+*1  	  IE-4010-4S24P         FDO2250U0AV     IE-4010-4S24P:FDO2250U0AV
+
+Switch#
+Switch#
+ 
+ 
+Device is chosen properly, let's continue...
+Info for debugging:
+True
+True
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+ 
+Your device has been configured properly ---> TDS-1_A.
+Closed connection to COM7.
+ 
+................................
+ 
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 2
+ 
+Already configured devices:
+TDS-1_A
+ 
+Which device do you want to connect? TDS-1_B
+ 
+Your list of possible devices to configure: 
+TDS-1_B
+ 
+ 
+You have chosen this configuration...
+COM7 ----> TDS-1_B
+Please wait patiently...
+ 
+..sh lic udi
+Device#	  PID			SN		UDI
+-----------------------------------------------------------------------------
+*1  	  IE-4010-4S24P         FDO2250U0A2     IE-4010-4S24P:FDO2250U0A2
+
+Switch#
+Switch#
+ 
+ 
+Device is chosen properly, let's continue...
+Info for debugging:
+True
+True
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+ 
+Your device has been configured properly ---> TDS-1_B.
+Closed connection to COM7.
+ 
+................................
+ 
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 2
+ 
+Already configured devices:
+TDS-1_A, TDS-1_B
+ 
+Which device do you want to connect? MSC-1
+ 
+Your list of possible devices to configure: 
+MSC-1
+ 
+ 
+You have chosen this configuration...
+COM7 ----> MSC-1
+Please wait patiently...
+ 
+.. len 24
+Switch#
+Switch#sh lic udi
+Device#	  PID			SN		UDI
+-----------------------------------------------------------------------------
+*1  	  IE-2000-16TC-G-E      FDO2251J1U4     IE-2000-16TC-G-E:FDO2251J1U4
+
+Switch#
+Switch#
+ 
+ 
+Device is chosen properly, let's continue...
+Info for debugging:
+True
+True
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+Please wait, because IE2000 is working a little bit longer...
+ 
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  10/05/2022 10:27:54
+ 
+IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!
+ 
+This is a list of all saved session logs: 
+2022-05-10.txt
+Do you want to delete device logs, console logs and table with licenses, ping and versions for support team? If yes type '1', if not type anything else:
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else:
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 7
+ 
+Which device do you want to connect? TDS-1_A
+ 
+Your list of possible devices to configure: 
+TDS-1_A
+ 
+ 
+You have chosen this configuration...
+COM7 ----> TDS-1_A
+Please wait patiently...
+ 
+..sh lic udi
+Device#	  PID			SN		UDI
+-----------------------------------------------------------------------------
+*1  	  IE-2000-16TC-G-E      FDO2251J1U4     IE-2000-16TC-G-E:FDO2251J1U4
+
+Switch#
+Switch#
+ 
+ 
+You have chosen bad device, try again...
+Info for debugging:
+True
+False
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  10/05/2022 10:29:33
+ 
+IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!
+ 
+This is a list of all saved session logs: 
+2022-05-10.txt
+Do you want to delete device logs, console logs and table with licenses, ping and versions for support team? If yes type '1', if not type anything else:
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else:
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 7
+ 
+Which device do you want to connect? MSC-1
+ 
+Your list of possible devices to configure: 
+MSC-1
+ 
+ 
+You have chosen this configuration...
+COM7 ----> MSC-1
+Please wait patiently...
+ 
+..............................................term len 24
+Switch#
+Switch#sh lic udi
+Device#	  PID			SN		UDI
+-----------------------------------------------------------------------------
+*1  	  IE-2000-16TC-G-E      FDO2251J1U4     IE-2000-16TC-G-E:FDO2251J1U4
+
+Switch#
+Switch#
+ 
+ 
+Device is chosen properly, let's continue...
+Info for debugging:
+True
+True
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+Please wait about 3 minutes, because IE2000 is working a little bit slower...
+ 
+Your device has been configured properly ---> MSC-1.
+Closed connection to COM7.
+ 
+................................
+ 
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 2
+ 
+Already configured devices:
+MSC-1
+ 
+Which device do you want to connect? TDS-1_B
+ 
+Your list of possible devices to configure: 
+TDS-1_B
+ 
+ 
+You have chosen this configuration...
+COM7 ----> TDS-1_B
+Please wait patiently...
+ 
+..sh lic udi
+Device#	  PID			SN		UDI
+-----------------------------------------------------------------------------
+*1  	  IE-4010-4S24P         FDO2250U0A2     IE-4010-4S24P:FDO2250U0A2
+
+Switch#
+Switch#
+ 
+ 
+Device is chosen properly, let's continue...
+Info for debugging:
+True
+True
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+ 
+Your device has been configured properly ---> TDS-1_B.
+Closed connection to COM7.
+ 
+................................
+ 
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 2
+ 
+Already configured devices:
+MSC-1, TDS-1_B
+ 
+Which device do you want to connect? TDS-1_A
+ 
+Your list of possible devices to configure: 
+TDS-1_A
+ 
+ 
+You have chosen this configuration...
+COM7 ----> TDS-1_A
+Please wait patiently...
+ 
+..sh lic udi
+Device#	  PID			SN		UDI
+-----------------------------------------------------------------------------
+*1  	  IE-4010-4S24P         FDO2250U0AV     IE-4010-4S24P:FDO2250U0AV
+
+Switch#
+Switch#
+ 
+ 
+Device is chosen properly, let's continue...
+Info for debugging:
+True
+True
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+ 
+Your device has been configured properly ---> TDS-1_A.
+Closed connection to COM7.
+ 
+................................
+ 
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 1
+ 
++----------------------------------------------------------------------------------------------------+
+|                                    Table with devices licenses                                     |
++----+---------+------------------------------+------------+--------------+---------------------+----+
+| ID |  Device |             UDI              |  License   |    Status    |      Expiration     | OK |
++----+---------+------------------------------+------------+--------------+---------------------+----+
+| 1  |  MSC-1  | IE-2000-16TC-G-E:FDO2251J1U4 |   iplite   | Active,InUse |      Permanent      | OK |
+| 2  | TDS-1_B |  IE-4010-4S24P:FDO2250U0A2   | ipservices | Active,InUse | PermanentRightToUse | OK |
+| 3  | TDS-1_A |  IE-4010-4S24P:FDO2250U0AV   | ipservices | Active,InUse | PermanentRightToUse | OK |
++----+---------+------------------------------+------------+--------------+---------------------+----+
+In case of UKNNOWN, please turn on the Putty client and check the configuration manually.
+ 
++--------------------------------------------------------+
+|               Table with device versions               |
++----+---------+--------+-----------------+--------------+
+| ID |   Name  | Model  | Current Version | New Version  |
++----+---------+--------+-----------------+--------------+
+| 1  |  MSC-1  | IE2000 |    15.2(7)E4    | 15.9(e42000) |
+| 2  | TDS-1_B | IE4010 |    15.2(4)EC2   |   15.9(e4)   |
+| 3  | TDS-1_A | IE4010 |    15.2(6)E1    |   15.9(e4)   |
++----+---------+--------+-----------------+--------------+
+If field 'New Version' is empty, check if you downloaded new versions of software into /FIRMWARE folder.
+ 
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. 1
+ 
+Which device do you want to update? Type ID numbers divided by space from table above: 1
+ 
+List of devices to have updated software:
+MSC-1,  
+ 
+Now upgrading software in MSC-1 device with this IP address 172.30.100.10!
+ 
+Now is the time to download project configs by SSH connections ...
+ 
+ 
+Please connect all your devices by LAN cables!
+ 
+Now it is time to move into TFTP Server application.
+ 
+If you are ready and TFTP Server is not running, please type in '1' in console: 1
+ 
+Everything is fine, now you can turn on your TFTP SERVER...
+ 
+Your TFTP server is running now...
+ 
+Please choose in tab 'Current Directory' in TFTP Server Application folder called PROJECT-CONFIGS!
+ 
+If you set configuration properly and you are ready, please type in '1' in console: 1
+ 
+Everything was set, you can continue...
+ 
+Waiting about 10 seconds for SSH connection to be established ...
+ 
+Checking ip connections with configured network devices, please wait a moment.
+... 
+ 
++---------------------------------------+
+|               PING Table              |
++---------+---------------+-------------+
+|   Name  |   IP Address  | PING Status |
++---------+---------------+-------------+
+|  MSC-1  | 172.30.100.10 |      OK     |
+| TDS-1_B | 172.30.100.11 |      OK     |
+| TDS-1_A | 172.30.100.12 |      OK     |
++---------+---------------+-------------+
+If the fields are empty, check the connection manually by yourself.
+ 
+Now the projects configs are downloaded to the network devices.
+ 
+................................
+ 
+Now this device is being configured:
+MSC-1 -> 172.30.100.10
+ 
+................................
+ 
+Now this device is being configured:
+TDS-1_B -> 172.30.100.11
+ 
+................................
+ 
+Now this device is being configured:
+TDS-1_A -> 172.30.100.12
+ 
+................................
+ 
+Checking booting devices by project IP, please wait...
+..................................................................................................................Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  10/05/2022 11:00:02
+ 
+IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!
+ 
+This is a list of all saved session logs: 
+2022-05-10.txt
+Do you want to delete device logs, console logs and table with licenses, ping and versions for support team? If yes type '1', if not type anything else:
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else:
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 7
+ 
+Which device do you want to connect? TDS-1_A
+ 
+Your list of possible devices to configure: 
+TDS-1_A
+ 
+ 
+You have chosen this configuration...
+COM7 ----> TDS-1_A
+Please wait patiently...
+ 
+.sh lic udi
+Device#	  PID			SN		UDI
+-----------------------------------------------------------------------------
+*1  	  IE-4010-4S24P         FDO2250U0AV     IE-4010-4S24P:FDO2250U0AV
+
+Switch#
+Switch#
+ 
+ 
+Device is chosen properly, let's continue...
+Info for debugging:
+True
+True
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+ 
+Your device has been configured properly ---> TDS-1_A.
+Closed connection to COM7.
+ 
+................................
+ 
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 2
+ 
+Already configured devices:
+TDS-1_A
+ 
+Which device do you want to connect? TDS-1_B
+ 
+Your list of possible devices to configure: 
+TDS-1_B
+ 
+ 
+You have chosen this configuration...
+COM7 ----> TDS-1_B
+Please wait patiently...
+ 
+..sh lic udi
+Device#	  PID			SN		UDI
+-----------------------------------------------------------------------------
+*1  	  IE-4010-4S24P         FDO2250U0A2     IE-4010-4S24P:FDO2250U0A2
+
+Switch#
+Switch#
+ 
+ 
+Device is chosen properly, let's continue...
+Info for debugging:
+True
+True
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+ 
+Your device has been configured properly ---> TDS-1_B.
+Closed connection to COM7.
+ 
+................................
+ 
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 2
+ 
+Already configured devices:
+TDS-1_A, TDS-1_B
+ 
+Which device do you want to connect? MSH-1
+ 
+Your list of possible devices to configure: 
+MSH-1
+ 
+ 
+You have chosen this configuration...
+COM7 ----> MSH-1
+Please wait patiently...
+ 
+.term len 24
+Switch#
+Switch#sh lic udi
+Device#	  PID			SN		UDI
+-----------------------------------------------------------------------------
+*1  	  IE-2000-16TC-G-E      FDO2251J1U4     IE-2000-16TC-G-E:FDO2251J1U4
+
+Switch#
+Switch#
+ 
+ 
+Device is chosen properly, let's continue...
+Info for debugging:
+True
+True
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+Please wait about 3 minutes, because IE2000 is working a little bit slower...
+ 
+Your device has been configured properly ---> MSH-1.
+Closed connection to COM7.
+ 
+................................
+ 
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 1
+ 
++----------------------------------------------------------------------------------------------------+
+|                                    Table with devices licenses                                     |
++----+---------+------------------------------+------------+--------------+---------------------+----+
+| ID |  Device |             UDI              |  License   |    Status    |      Expiration     | OK |
++----+---------+------------------------------+------------+--------------+---------------------+----+
+| 1  | TDS-1_A |  IE-4010-4S24P:FDO2250U0AV   | ipservices | Active,InUse | PermanentRightToUse | OK |
+| 2  | TDS-1_B |  IE-4010-4S24P:FDO2250U0A2   | ipservices | Active,InUse | PermanentRightToUse | OK |
+| 3  |  MSH-1  | IE-2000-16TC-G-E:FDO2251J1U4 |   iplite   | Active,InUse |      Permanent      | OK |
++----+---------+------------------------------+------------+--------------+---------------------+----+
+In case of UKNNOWN, please turn on the Putty client and check the configuration manually.
+ 
++--------------------------------------------------------+
+|               Table with device versions               |
++----+---------+--------+-----------------+--------------+
+| ID |   Name  | Model  | Current Version | New Version  |
++----+---------+--------+-----------------+--------------+
+| 1  | TDS-1_A | IE4010 |    15.2(6)E1    |   15.9(e4)   |
+| 2  | TDS-1_B | IE4010 |    15.2(4)EC2   |   15.9(e4)   |
+| 3  |  MSH-1  | IE2000 |    15.2(7)E4    | 15.9(e42000) |
++----+---------+--------+-----------------+--------------+
+If field 'New Version' is empty, check if you downloaded new versions of software into /FIRMWARE folder.
+ 
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. 1
+ 
+Which device do you want to update? Type ID numbers divided by space from table above: 1
+ 
+List of devices to have updated software:
+TDS-1_A,  
+ 
+Now upgrading software in TDS-1_A device with this IP address 172.30.100.10!
+ 
+Now is the time to download project configs by SSH connections ...
+ 
+ 
+Please connect all your devices by LAN cables!
+ 
+Now it is time to move into TFTP Server application.
+ 
+If you are ready and TFTP Server is not running, please type in '1' in console: 1
+ 
+Everything is fine, now you can turn on your TFTP SERVER...
+ 
+Your TFTP server is running now...
+ 
+Please choose in tab 'Current Directory' in TFTP Server Application folder called PROJECT-CONFIGS!
+ 
+If you set configuration properly and you are ready, please type in '1' in console: 1
+ 
+Everything was set, you can continue...
+ 
+Waiting about 10 seconds for SSH connection to be established ...
+ 
+Checking ip connections with configured network devices, please wait a moment.
+... 
+ 
++---------------------------------------+
+|               PING Table              |
++---------+---------------+-------------+
+|   Name  |   IP Address  | PING Status |
++---------+---------------+-------------+
+| TDS-1_A | 172.30.100.10 |      OK     |
+| TDS-1_B | 172.30.100.11 |      OK     |
+|  MSH-1  | 172.30.100.12 |      OK     |
++---------+---------------+-------------+
+If the fields are empty, check the connection manually by yourself.
+ 
+Now the projects configs are downloaded to the network devices.
+ 
+................................
+ 
+Now this device is being configured:
+MSH-1 -> 172.30.100.12
+ 
+................................
+ 
+Now this device is being configured:
+TDS-1_B -> 172.30.100.11
+ 
+................................
+ 
+Now this device is being configured:
+TDS-1_A -> 172.30.100.10
+ 
+................................
+ 
+Checking booting devices by project IP, please wait...
+.............................................. 
+ 
+Checking project connection by ping...
+...... 
+ 
++------------------------------------------+
+|  Checking connection to project configs  |
++----------------+----------------+--------+
+| Name of device |       IP       | Status |
++----------------+----------------+--------+
+|     MSH-1      | 172.30.100.41  |   OK   |
+|    TDS-1_B     | 172.30.100.201 |   OK   |
+|    TDS-1_A     | 172.30.100.101 |   OK   |
++----------------+----------------+--------+
+If the fields are empty, check the connection manually by yourself.
+ 
+................................
+ 
+We are moving into collecting outputs from already project configured network devices!
+ 
+................................
+ 
+This directory already exists -->  MSH-1
+ 
+Collecting data from this network device by SSH connection with this command:
+IP: 172.30.100.41, Device: MSH-1, Command: sh lldp nei
+ 
+Sorry, this device is unavailable:
+MSH-1 <--> 172.30.100.41
+ 
+................................
+ 
+Collecting data from this network device by SSH connection with this command:
+IP: 172.30.100.41, Device: MSH-1, Command: show run
+ 
+Sorry, this device is unavailable:
+MSH-1 <--> 172.30.100.41
+ 
+................................
+ 
+Collecting data from this network device by SSH connection with this command:
+IP: 172.30.100.41, Device: MSH-1, Command: show tech
+ 
+Sorry, this device is unavailable:
+MSH-1 <--> 172.30.100.41
+ 
+................................
+ 
+This directory already exists -->  TDS-1_B
+ 
+Collecting data from this network device by SSH connection with this command:
+IP: 172.30.100.201, Device: TDS-1_B, Command: sh lldp nei
+ 
+................................
+ 
+Collecting data from this network device by SSH connection with this command:
+IP: 172.30.100.201, Device: TDS-1_B, Command: show run
+ 
+................................
+ 
+Collecting data from this network device by SSH connection with this command:
+IP: 172.30.100.201, Device: TDS-1_B, Command: show tech
+ 
+................................
+ 
+This directory already exists -->  TDS-1_A
+ 
+Collecting data from this network device by SSH connection with this command:
+IP: 172.30.100.101, Device: TDS-1_A, Command: sh lldp nei
+ 
+................................
+ 
+Collecting data from this network device by SSH connection with this command:
+IP: 172.30.100.101, Device: TDS-1_A, Command: show run
+ 
+................................
+ 
+Collecting data from this network device by SSH connection with this command:
+IP: 172.30.100.101, Device: TDS-1_A, Command: show tech
+ 
+................................
+ 
+ 
+Your created configuration files has been deleted ...
+ 
+Thank you for using our script, hope you enjoy it!!!
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  10/05/2022 11:21:58
+ 
+IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!
+ 
+This is a list of all saved session logs: 
+2022-05-10.txt
+Do you want to delete device logs, console logs and table with licenses, ping and versions for support team? If yes type '1', if not type anything else:
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else:
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 7
+ 
+Which device do you want to connect? TDS-1_A
+ 
+Your list of possible devices to configure: 
+TDS-1_A
+ 
+ 
+You have chosen this configuration...
+COM7 ----> TDS-1_A
+Please wait patiently...
+ 
+............................................sh lic udi
+Device#	  PID			SN		UDI
+-----------------------------------------------------------------------------
+*1  	  IE-4010-4S24P         FDO2250U0AV     IE-4010-4S24P:FDO2250U0AV
+
+Switch#
+Switch#
+ 
+ 
+Device is chosen properly, let's continue...
+Info for debugging:
+True
+True
+Your device has not been configured yet. Downloading initial config already started.
+ 
+......................................................................Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  10/05/2022 11:27:52
+ 
+IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!
+ 
+This is a list of all saved session logs: 
+2022-05-10.txt
+Do you want to delete device logs, console logs and table with licenses, ping and versions for support team? If yes type '1', if not type anything else:
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else:
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 7
+ 
+Which device do you want to connect? TDS-1_A
+ 
+Your list of possible devices to configure: 
+TDS-1_A
+ 
+ 
+You have chosen this configuration...
+COM7 ----> TDS-1_A
+Please wait patiently...
+ 
+.............................................sh lic udi
+Device#	  PID			SN		UDI
+-----------------------------------------------------------------------------
+*1  	  IE-4010-4S24P         FDO2250U0AV     IE-4010-4S24P:FDO2250U0AV
+
+Switch#
+Switch#
+ 
+ 
+Device is chosen properly, let's continue...
+Info for debugging:
+True
+True
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+ 
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  10/05/2022 11:32:35
+ 
+IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!
+ 
+This is a list of all saved session logs: 
+2022-05-10.txt
+Do you want to delete device logs, console logs and table with licenses, ping and versions for support team? If yes type '1', if not type anything else:
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else:
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 7
+ 
+Which device do you want to connect? TDS-1_A
+ 
+Your list of possible devices to configure: 
+TDS-1_A
+ 
+ 
+You have chosen this configuration...
+COM7 ----> TDS-1_A
+Please wait patiently...
+ 
+.........................................sh lic udi
+Device#	  PID			SN		UDI
+-----------------------------------------------------------------------------
+*1  	  IE-4010-4S24P         FDO2250U0AV     IE-4010-4S24P:FDO2250U0AV
+
+Switch#
+Switch#
+ 
+ 
+Device is chosen properly, let's continue...
+Info for debugging:
+True
+True
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+ 
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  10/05/2022 11:38:12
+ 
+IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!
+ 
+This is a list of all saved session logs: 
+2022-05-10.txt
+Do you want to delete device logs, console logs and table with licenses, ping and versions for support team? If yes type '1', if not type anything else:
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else:
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 7
+ 
+Already configured devices:
+TDS-1_A
+ 
+Which device do you want to connect? Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  10/05/2022 11:38:24
+ 
+IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!
+ 
+This is a list of all saved session logs: 
+2022-05-10.txt
+Do you want to delete device logs, console logs and table with licenses, ping and versions for support team? If yes type '1', if not type anything else:
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else:
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 7
+ 
+Which device do you want to connect? TDS-1_A
+ 
+Your list of possible devices to configure: 
+TDS-1_A
+ 
+ 
+You have chosen this configuration...
+COM7 ----> TDS-1_A
+Please wait patiently...
+ 
+.........................................sh lic udi
+Device#	  PID			SN		UDI
+-----------------------------------------------------------------------------
+*1  	  IE-4010-4S24P         FDO2250U0AV     IE-4010-4S24P:FDO2250U0AV
+
+Switch#
+Switch#
+ 
+ 
+Device is chosen properly, let's continue...
+Info for debugging:
+True
+True
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+czekanko
+ 
+Your device has been configured properly ---> TDS-1_A.
+Closed connection to COM7.
+ 
+................................
+ 
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 2
+ 
+Already configured devices:
+TDS-1_A
+ 
+Which device do you want to connect? TDS-1_B
+ 
+Your list of possible devices to configure: 
+TDS-1_B
+ 
+ 
+You have chosen this configuration...
+COM7 ----> TDS-1_B
+Please wait patiently...
+ 
+..sh lic udi
+Device#	  PID			SN		UDI
+-----------------------------------------------------------------------------
+*1  	  IE-4010-4S24P         FDO2250U0A2     IE-4010-4S24P:FDO2250U0A2
+
+Switch#
+Switch#
+ 
+ 
+Device is chosen properly, let's continue...
+Info for debugging:
+True
+True
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+czekanko
+ 
+Your device has been configured properly ---> TDS-1_B.
+Closed connection to COM7.
+ 
+................................
+ 
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 2
+ 
+Already configured devices:
+TDS-1_A, TDS-1_B
+ 
+Which device do you want to connect? MSH-1
+ 
+Your list of possible devices to configure: 
+MSH-1
+ 
+ 
+You have chosen this configuration...
+COM7 ----> MSH-1
+Please wait patiently...
+ 
+..sh lic udi
+Device#	  PID			SN		UDI
+-----------------------------------------------------------------------------
+*1  	  IE-2000-16TC-G-E      FDO2251J1U4     IE-2000-16TC-G-E:FDO2251J1U4
+
+Switch#
+Switch#
+ 
+ 
+Device is chosen properly, let's continue...
+Info for debugging:
+True
+True
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+Please wait about 3 minutes, because IE2000 is working a little bit slower...
+ 
+Your device has been configured properly ---> MSH-1.
+Closed connection to COM7.
+ 
+................................
+ 
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 1
+ 
++----------------------------------------------------------------------------------------------------+
+|                                    Table with devices licenses                                     |
++----+---------+------------------------------+------------+--------------+---------------------+----+
+| ID |  Device |             UDI              |  License   |    Status    |      Expiration     | OK |
++----+---------+------------------------------+------------+--------------+---------------------+----+
+| 1  | TDS-1_A |  IE-4010-4S24P:FDO2250U0AV   | ipservices | Active,InUse | PermanentRightToUse | OK |
+| 2  | TDS-1_B |  IE-4010-4S24P:FDO2250U0A2   | ipservices | Active,InUse | PermanentRightToUse | OK |
+| 3  |  MSH-1  | IE-2000-16TC-G-E:FDO2251J1U4 |   iplite   | Active,InUse |      Permanent      | OK |
++----+---------+------------------------------+------------+--------------+---------------------+----+
+In case of UKNNOWN, please turn on the Putty client and check the configuration manually.
+ 
++--------------------------------------------------------+
+|               Table with device versions               |
++----+---------+--------+-----------------+--------------+
+| ID |   Name  | Model  | Current Version | New Version  |
++----+---------+--------+-----------------+--------------+
+| 1  | TDS-1_A | IE4010 |    15.2(6)E1    |   15.9(e4)   |
+| 2  | TDS-1_B | IE4010 |    15.2(4)EC2   |   15.9(e4)   |
+| 3  |  MSH-1  | IE2000 |    15.2(7)E4    | 15.9(e42000) |
++----+---------+--------+-----------------+--------------+
+If field 'New Version' is empty, check if you downloaded new versions of software into /FIRMWARE folder.
+ 
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. 1
+ 
+Which device do you want to update? Type ID numbers divided by space from table above: 1
+ 
+List of devices to have updated software:
+TDS-1_A,  
+ 
+Now upgrading software in TDS-1_A device with this IP address 172.30.100.10!
+ 
+Now is the time to download project configs by SSH connections ...
+ 
+ 
+Please connect all your devices by LAN cables!
+ 
+Now it is time to move into TFTP Server application.
+ 
+If you are ready and TFTP Server is not running, please type in '1' in console: 1
+ 
+Everything is fine, now you can turn on your TFTP SERVER...
+ 
+Your TFTP server is running now...
+ 
+Please choose in tab 'Current Directory' in TFTP Server Application folder called PROJECT-CONFIGS!
+ 
+If you set configuration properly and you are ready, please type in '1' in console: 1
+ 
+Everything was set, you can continue...
+ 
+Waiting about 10 seconds for SSH connection to be established ...
+ 
+Checking ip connections with configured network devices, please wait a moment.
+... 
+ 
++---------------------------------------+
+|               PING Table              |
++---------+---------------+-------------+
+|   Name  |   IP Address  | PING Status |
++---------+---------------+-------------+
+| TDS-1_A | 172.30.100.10 |      OK     |
+| TDS-1_B | 172.30.100.11 |      OK     |
+|  MSH-1  | 172.30.100.12 |      OK     |
++---------+---------------+-------------+
+If the fields are empty, check the connection manually by yourself.
+ 
+Now the projects configs are downloaded to the network devices.
+ 
+................................
+ 
+Now this device is being configured:
+MSH-1 -> 172.30.100.12
+ 
+................................
+ 
+Now this device is being configured:
+TDS-1_B -> 172.30.100.11
+ 
+................................
+ 
+Now this device is being configured:
+TDS-1_A -> 172.30.100.10
+ 
+................................
+ 
+Checking booting devices by project IP, please wait...
+.............................................. 
+ 
+Checking project connection by ping...
+...... 
+ 
++------------------------------------------+
+|  Checking connection to project configs  |
++----------------+----------------+--------+
+| Name of device |       IP       | Status |
++----------------+----------------+--------+
+|     MSH-1      | 172.30.100.41  |   OK   |
+|    TDS-1_B     | 172.30.100.201 |   OK   |
+|    TDS-1_A     | 172.30.100.101 |   OK   |
++----------------+----------------+--------+
+If the fields are empty, check the connection manually by yourself.
+ 
+................................
+ 
+We are moving into collecting outputs from already project configured network devices!
+ 
+................................
+ 
+This directory already exists -->  MSH-1
+ 
+Collecting data from this network device by SSH connection with this command:
+IP: 172.30.100.41, Device: MSH-1, Command: sh lldp nei
+ 
+Sorry, this device is unavailable:
+MSH-1 <--> 172.30.100.41
+ 
+................................
+ 
+Collecting data from this network device by SSH connection with this command:
+IP: 172.30.100.41, Device: MSH-1, Command: show run
+ 
+Sorry, this device is unavailable:
+MSH-1 <--> 172.30.100.41
+ 
+................................
+ 
+Collecting data from this network device by SSH connection with this command:
+IP: 172.30.100.41, Device: MSH-1, Command: show tech
+ 
+Sorry, this device is unavailable:
+MSH-1 <--> 172.30.100.41
+ 
+................................
+ 
+This directory already exists -->  TDS-1_B
+ 
+Collecting data from this network device by SSH connection with this command:
+IP: 172.30.100.201, Device: TDS-1_B, Command: sh lldp nei
+ 
+................................
+ 
+Collecting data from this network device by SSH connection with this command:
+IP: 172.30.100.201, Device: TDS-1_B, Command: show run
+ 
+................................
+ 
+Collecting data from this network device by SSH connection with this command:
+IP: 172.30.100.201, Device: TDS-1_B, Command: show tech
+ 
+................................
+ 
+This directory already exists -->  TDS-1_A
+ 
+Collecting data from this network device by SSH connection with this command:
+IP: 172.30.100.101, Device: TDS-1_A, Command: sh lldp nei
+ 
+................................
+ 
+Collecting data from this network device by SSH connection with this command:
+IP: 172.30.100.101, Device: TDS-1_A, Command: show run
+ 
+................................
+ 
+Collecting data from this network device by SSH connection with this command:
+IP: 172.30.100.101, Device: TDS-1_A, Command: show tech
+ 
+................................
+ 
+ 
+Your created configuration files has been deleted ...
+ 
+Thank you for using our script, hope you enjoy it!!!
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  10/05/2022 13:29:17
+ 
+IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!
+ 
+This is a list of all saved session logs: 
+2022-05-10.txt
+Do you want to delete device logs, console logs and table with licenses, ping and versions for support team? If yes type '1', if not type anything else:
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else:
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 7
+ 
+Which device do you want to connect? TDS-1_A
+ 
+Your list of possible devices to configure: 
+TDS-1_A
+ 
+ 
+You have chosen this configuration...
+COM7 ----> TDS-1_A
+Please wait patiently...
+ 
+.sh lic udi
+Device#	  PID			SN		UDI
+-----------------------------------------------------------------------------
+*1  	  IE-4010-4S24P         FDO2250U0AV     IE-4010-4S24P:FDO2250U0AV
+
+Switch#
+Switch#
+ 
+ 
+Device is chosen properly, let's continue...
+Info for debugging:
+True
+True
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+waiting
+ 
+Your device has been configured properly ---> TDS-1_A.
+Closed connection to COM7.
+ 
+................................
+ 
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 2
+ 
+Already configured devices:
+TDS-1_A
+ 
+Which device do you want to connect? TDS-1_B
+ 
+Your list of possible devices to configure: 
+TDS-1_B
+ 
+ 
+You have chosen this configuration...
+COM7 ----> TDS-1_B
+Please wait patiently...
+ 
+.sh lic udi
+Device#	  PID			SN		UDI
+-----------------------------------------------------------------------------
+*1  	  IE-4010-4S24P         FDO2250U0A2     IE-4010-4S24P:FDO2250U0A2
+
+Switch#
+Switch#
+ 
+ 
+Device is chosen properly, let's continue...
+Info for debugging:
+True
+True
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+waiting
+ 
+Your device has been configured properly ---> TDS-1_B.
+Closed connection to COM7.
+ 
+................................
+ 
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 2
+ 
+Already configured devices:
+TDS-1_A, TDS-1_B
+ 
+Which device do you want to connect? MSH-1
+ 
+Your list of possible devices to configure: 
+MSH-1
+ 
+ 
+You have chosen this configuration...
+COM7 ----> MSH-1
+Please wait patiently...
+ 
+.interface FastEthernet1/17
+!
+interface FastEthernet1/18
+!
+interface GigabitEthernet1/1
+!
+interface GigabitEthernet1/2
+!
+interface Vlan1
+ no ip address
+!
+ip forward-protocol nd
+!
+no ip http server
+no ip http secure-server
+!
+!
+!
+line con 0
+line vty 5 15
+!
+!
+!
+!
+!
+!
+!
+!
+end
+
+Switch#
+Switch#
+Switch#
+Switch#
+Switch#term len 24
+Switch#
+Switch#sh lic udi
+Device#	  PID			SN		UDI
+-----------------------------------------------------------------------------
+*1  	  IE-2000-16TC-G-E      FDO2251J1U4     IE-2000-16TC-G-E:FDO2251J1U4
+
+Switch#
+Switch#
+ 
+ 
+Device is chosen properly, let's continue...
+Info for debugging:
+True
+True
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+Please wait about 3 minutes, because IE2000 is working a little bit slower...
+ 
+Your device has been configured properly ---> MSH-1.
+Closed connection to COM7.
+ 
+................................
+ 
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 1
+ 
++----------------------------------------------------------------------------------------------------+
+|                                    Table with devices licenses                                     |
++----+---------+------------------------------+------------+--------------+---------------------+----+
+| ID |  Device |             UDI              |  License   |    Status    |      Expiration     | OK |
++----+---------+------------------------------+------------+--------------+---------------------+----+
+| 1  | TDS-1_A |  IE-4010-4S24P:FDO2250U0AV   | ipservices | Active,InUse | PermanentRightToUse | OK |
+| 2  | TDS-1_B |  IE-4010-4S24P:FDO2250U0A2   | ipservices | Active,InUse | PermanentRightToUse | OK |
+| 3  |  MSH-1  | IE-2000-16TC-G-E:FDO2251J1U4 |   iplite   | Active,InUse |      Permanent      | OK |
++----+---------+------------------------------+------------+--------------+---------------------+----+
+In case of UKNNOWN, please turn on the Putty client and check the configuration manually.
+ 
++--------------------------------------------------------+
+|               Table with device versions               |
++----+---------+--------+-----------------+--------------+
+| ID |   Name  | Model  | Current Version | New Version  |
++----+---------+--------+-----------------+--------------+
+| 1  | TDS-1_A | IE4010 |    15.2(6)E1    |   15.9(e4)   |
+| 2  | TDS-1_B | IE4010 |    15.2(4)EC2   |   15.9(e4)   |
+| 3  |  MSH-1  | IE2000 |    15.2(7)E4    | 15.9(e42000) |
++----+---------+--------+-----------------+--------------+
+If field 'New Version' is empty, check if you downloaded new versions of software into /FIRMWARE folder.
+ 
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. 1
+ 
+Which device do you want to update? Type ID numbers divided by space from table above: 1
+ 
+List of devices to have updated software:
+TDS-1_A,  
+ 
+Now upgrading software in TDS-1_A device with this IP address 172.30.100.10!
+ 
+Now is the time to download project configs by SSH connections ...
+ 
+ 
+Please connect all your devices by LAN cables!
+ 
+Now it is time to move into TFTP Server application.
+ 
+If you are ready and TFTP Server is not running, please type in '1' in console: 1
+ 
+Everything is fine, now you can turn on your TFTP SERVER...
+ 
+Your TFTP server is running now...
+ 
+Please choose in tab 'Current Directory' in TFTP Server Application folder called PROJECT-CONFIGS!
+ 
+If you set configuration properly and you are ready, please type in '1' in console: 1
+ 
+Everything was set, you can continue...
+ 
+Waiting about 10 seconds for SSH connection to be established ...
+ 
+Checking ip connections with configured network devices, please wait a moment.
+... 
+ 
++---------------------------------------+
+|               PING Table              |
++---------+---------------+-------------+
+|   Name  |   IP Address  | PING Status |
++---------+---------------+-------------+
+| TDS-1_A | 172.30.100.10 |      OK     |
+| TDS-1_B | 172.30.100.11 |      OK     |
+|  MSH-1  | 172.30.100.12 |      OK     |
++---------+---------------+-------------+
+If the fields are empty, check the connection manually by yourself.
+ 
+Now the projects configs are downloaded to the network devices.
+ 
+................................
+ 
+Now this device is being configured:
+MSH-1 -> 172.30.100.12
+ 
+................................
+ 
+Now this device is being configured:
+TDS-1_B -> 172.30.100.11
+ 
+................................
+ 
+Now this device is being configured:
+TDS-1_A -> 172.30.100.10
+ 
+................................
+ 
+Checking booting devices by project IP, please wait...
+.............................................. 
+ 
+Checking project connection by ping...
+...... 
+ 
++------------------------------------------+
+|  Checking connection to project configs  |
++----------------+----------------+--------+
+| Name of device |       IP       | Status |
++----------------+----------------+--------+
+|     MSH-1      | 172.30.100.41  |   OK   |
+|    TDS-1_B     | 172.30.100.201 |   OK   |
+|    TDS-1_A     | 172.30.100.101 |   OK   |
++----------------+----------------+--------+
+If the fields are empty, check the connection manually by yourself.
+ 
+................................
+ 
+We are moving into collecting outputs from already project configured network devices!
+ 
+................................
+ 
+This directory already exists -->  MSH-1
+ 
+Collecting data from this network device by SSH connection with this command:
+IP: 172.30.100.41, Device: MSH-1, Command: sh lldp nei
+ 
+Sorry, this device is unavailable:
+MSH-1 <--> 172.30.100.41
+ 
+................................
+ 
+Collecting data from this network device by SSH connection with this command:
+IP: 172.30.100.41, Device: MSH-1, Command: show run
+ 
+Sorry, this device is unavailable:
+MSH-1 <--> 172.30.100.41
+ 
+................................
+ 
+Collecting data from this network device by SSH connection with this command:
+IP: 172.30.100.41, Device: MSH-1, Command: show tech
+ 
+Sorry, this device is unavailable:
+MSH-1 <--> 172.30.100.41
+ 
+................................
+ 
+This directory already exists -->  TDS-1_B
+ 
+Collecting data from this network device by SSH connection with this command:
+IP: 172.30.100.201, Device: TDS-1_B, Command: sh lldp nei
+ 
+................................
+ 
+Collecting data from this network device by SSH connection with this command:
+IP: 172.30.100.201, Device: TDS-1_B, Command: show run
+ 
+................................
+ 
+Collecting data from this network device by SSH connection with this command:
+IP: 172.30.100.201, Device: TDS-1_B, Command: show tech
+ 
+................................
+ 
+This directory already exists -->  TDS-1_A
+ 
+Collecting data from this network device by SSH connection with this command:
+IP: 172.30.100.101, Device: TDS-1_A, Command: sh lldp nei
+ 
+................................
+ 
+Collecting data from this network device by SSH connection with this command:
+IP: 172.30.100.101, Device: TDS-1_A, Command: show run
+ 
+................................
+ 
+Collecting data from this network device by SSH connection with this command:
+IP: 172.30.100.101, Device: TDS-1_A, Command: show tech
+ 
+................................
+ 
+ 
+Your created configuration files has been deleted ...
+ 
+Thank you for using our script, hope you enjoy it!!!
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  10/05/2022 13:54:39
+ 
+IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!
+ 
+This is a list of all saved session logs: 
+2022-05-10.txt
+Do you want to delete device logs, console logs and table with licenses, ping and versions for support team? If yes type '1', if not type anything else:
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else:
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 7
+ 
+Which device do you want to connect? TDS-1_A
+ 
+Your list of possible devices to configure: 
+TDS-1_A
+ 
+ 
+You have chosen this configuration...
+COM7 ----> TDS-1_A
+Please wait patiently...
+ 
+.sh lic udi
+Device#	  PID			SN		UDI
+-----------------------------------------------------------------------------
+*1  	  IE-4010-4S24P         FDO2250U0AV     IE-4010-4S24P:FDO2250U0AV
+
+Switch#
+Switch#
+ 
+ 
+Device is chosen properly, let's continue...
+Info for debugging:
+True
+True
+Your device has not been configured yet. Downloading initial config already started.
+ 
+......................................................................
+
+ 
+waiting
+ 
+Your device has been configured properly ---> TDS-1_A.
+Closed connection to COM7.
+ 
+................................
+ 
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 2
+ 
+Already configured devices:
+TDS-1_A
+ 
+Which device do you want to connect? TDS-1_B
+ 
+Your list of possible devices to configure: 
+TDS-1_B
+ 
+ 
+You have chosen this configuration...
+COM7 ----> TDS-1_B
+Please wait patiently...
+ 
+..sh lic udi
+Device#	  PID			SN		UDI
+-----------------------------------------------------------------------------
+*1  	  IE-4010-4S24P         FDO2250U0A2     IE-4010-4S24P:FDO2250U0A2
+
+Switch#
+Switch#
+ 
+ 
+Device is chosen properly, let's continue...
+Info for debugging:
+True
+True
+Your device has not been configured yet. Downloading initial config already started.
+ 
+......................................................................
+
+ 
+waiting
+ 
+Your device has been configured properly ---> TDS-1_B.
+Closed connection to COM7.
+ 
+................................
+ 
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  10/05/2022 14:04:12
+ 
+IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!
+ 
+This is a list of all saved session logs: 
+2022-05-10.txt
+Do you want to delete device logs, console logs and table with licenses, ping and versions for support team? If yes type '1', if not type anything else:
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else:
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 7
+ 
+Which device do you want to connect? TDS-1_A
+ 
+Your list of possible devices to configure: 
+TDS-1_A
+ 
+ 
+You have chosen this configuration...
+COM7 ----> TDS-1_A
+Please wait patiently...
+ 
+.sh lic udi
+Device#	  PID			SN		UDI
+-----------------------------------------------------------------------------
+*1  	  IE-4010-4S24P         FDO2250U0AV     IE-4010-4S24P:FDO2250U0AV
+
+Switch#
+Switch#
+ 
+ 
+Device is chosen properly, let's continue...
+Info for debugging:
+True
+True
+Your device has not been configured yet. Downloading initial config already started.
+ 
+......................................................................
+
+ 
+waiting
+ 
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  10/05/2022 14:09:06
+ 
+IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!
+ 
+This is a list of all saved session logs: 
+2022-05-10.txt
+Do you want to delete device logs, console logs and table with licenses, ping and versions for support team? If yes type '1', if not type anything else:
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else:
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 7
+ 
+Already configured devices:
+TDS-1_A
+ 
+Which device do you want to connect? Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  10/05/2022 14:09:19
+ 
+IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!
+ 
+This is a list of all saved session logs: 
+2022-05-10.txt
+Do you want to delete device logs, console logs and table with licenses, ping and versions for support team? If yes type '1', if not type anything else:
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else:
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 7
+ 
+Which device do you want to connect? TDS-1_A
+ 
+Your list of possible devices to configure: 
+TDS-1_A
+ 
+ 
+You have chosen this configuration...
+COM7 ----> TDS-1_A
+Please wait patiently...
+ 
+.sh lic udi
+Device#	  PID			SN		UDI
+-----------------------------------------------------------------------------
+*1  	  IE-4010-4S24P         FDO2250U0AV     IE-4010-4S24P:FDO2250U0AV
+
+Switch#
+Switch#
+ 
+ 
+Device is chosen properly, let's continue...
+Info for debugging:
+True
+True
+Your device has not been configured yet. Downloading initial config already started.
+ 
+......................................................................
+
+ 
+waiting
+ 
+Your device has been configured properly ---> TDS-1_A.
+Closed connection to COM7.
+ 
+................................
+ 
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 2
+ 
+Already configured devices:
+TDS-1_A
+ 
+Which device do you want to connect? TDS-1_B
+ 
+Your list of possible devices to configure: 
+TDS-1_B
+ 
+ 
+You have chosen this configuration...
+COM7 ----> TDS-1_B
+Please wait patiently...
+ 
+.sh lic udi
+Device#	  PID			SN		UDI
+-----------------------------------------------------------------------------
+*1  	  IE-4010-4S24P         FDO2250U0A2     IE-4010-4S24P:FDO2250U0A2
+
+Switch#
+Switch#
+ 
+ 
+Device is chosen properly, let's continue...
+Info for debugging:
+True
+True
+Your device has not been configured yet. Downloading initial config already started.
+ 
+......................................................................
+
+ 
+waiting
+ 
+Your device has been configured properly ---> TDS-1_B.
+Closed connection to COM7.
+ 
+................................
+ 
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 2
+ 
+Already configured devices:
+TDS-1_A, TDS-1_B
+ 
+Which device do you want to connect? MSH-1
+ 
+Your list of possible devices to configure: 
+MSH-1
+ 
+ 
+You have chosen this configuration...
+COM7 ----> MSH-1
+Please wait patiently...
+ 
+.m len 24
+Switch#
+Switch#sh lic udi
+Device#	  PID			SN		UDI
+-----------------------------------------------------------------------------
+*1  	  IE-2000-16TC-G-E      FDO2251J1U4     IE-2000-16TC-G-E:FDO2251J1U4
+
+Switch#
+Switch#
+ 
+ 
+Device is chosen properly, let's continue...
+Info for debugging:
+True
+True
+Your device has not been configured yet. Downloading initial config already started.
+ 
+......................................................................
+*Jan  2 00:13:48.031: %AAAA-4-CLI_DEPRECATED: WARNING: Command has been added to the configuration using a type 5 passwor
+ret 
+ 
+Please wait about 3 minutes, because IE2000 is working a little bit slower...
+ 
+Your device has been configured properly ---> MSH-1.
+Closed connection to COM7.
+ 
+................................
+ 
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 1
+ 
++----------------------------------------------------------------------------------------------------+
+|                                    Table with devices licenses                                     |
++----+---------+------------------------------+------------+--------------+---------------------+----+
+| ID |  Device |             UDI              |  License   |    Status    |      Expiration     | OK |
++----+---------+------------------------------+------------+--------------+---------------------+----+
+| 1  | TDS-1_A |  IE-4010-4S24P:FDO2250U0AV   | ipservices | Active,InUse | PermanentRightToUse | OK |
+| 2  | TDS-1_B |  IE-4010-4S24P:FDO2250U0A2   | ipservices | Active,InUse | PermanentRightToUse | OK |
+| 3  |  MSH-1  | IE-2000-16TC-G-E:FDO2251J1U4 |   iplite   | Active,InUse |      Permanent      | OK |
++----+---------+------------------------------+------------+--------------+---------------------+----+
+In case of UKNNOWN, please turn on the Putty client and check the configuration manually.
+ 
++--------------------------------------------------------+
+|               Table with device versions               |
++----+---------+--------+-----------------+--------------+
+| ID |   Name  | Model  | Current Version | New Version  |
++----+---------+--------+-----------------+--------------+
+| 1  | TDS-1_A | IE4010 |    15.2(6)E1    |   15.9(e4)   |
+| 2  | TDS-1_B | IE4010 |    15.2(4)EC2   |   15.9(e4)   |
+| 3  |  MSH-1  | IE2000 |    15.2(7)E4    | 15.9(e42000) |
++----+---------+--------+-----------------+--------------+
+If field 'New Version' is empty, check if you downloaded new versions of software into /FIRMWARE folder.
+ 
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. 1
+ 
+Which device do you want to update? Type ID numbers divided by space from table above: 1
+ 
+List of devices to have updated software:
+TDS-1_A,  
+ 
+Now upgrading software in TDS-1_A device with this IP address 172.30.100.10!
+ 
+Now is the time to download project configs by SSH connections ...
+ 
+ 
+Please connect all your devices by LAN cables!
+ 
+Now it is time to move into TFTP Server application.
+ 
+If you are ready and TFTP Server is not running, please type in '1' in console: 1
+ 
+Everything is fine, now you can turn on your TFTP SERVER...
+ 
+Your TFTP server is running now...
+ 
+Please choose in tab 'Current Directory' in TFTP Server Application folder called PROJECT-CONFIGS!
+ 
+If you set configuration properly and you are ready, please type in '1' in console: 1
+ 
+Everything was set, you can continue...
+ 
+Waiting about 10 seconds for SSH connection to be established ...
+ 
+Checking ip connections with configured network devices, please wait a moment.
+... 
+ 
++---------------------------------------+
+|               PING Table              |
++---------+---------------+-------------+
+|   Name  |   IP Address  | PING Status |
++---------+---------------+-------------+
+| TDS-1_A | 172.30.100.10 |      OK     |
+| TDS-1_B | 172.30.100.11 |      OK     |
+|  MSH-1  | 172.30.100.12 |      OK     |
++---------+---------------+-------------+
+If the fields are empty, check the connection manually by yourself.
+ 
+Now the projects configs are downloaded to the network devices.
+ 
+................................
+ 
+Now this device is being configured:
+MSH-1 -> 172.30.100.12
+ 
+................................
+ 
+Now this device is being configured:
+TDS-1_B -> 172.30.100.11
+ 
+................................
+ 
+Now this device is being configured:
+TDS-1_A -> 172.30.100.10
+ 
+................................
+ 
+Checking booting devices by project IP, please wait...
+.............................................. 
+ 
+Checking project connection by ping...
+...... 
+ 
++------------------------------------------+
+|  Checking connection to project configs  |
++----------------+----------------+--------+
+| Name of device |       IP       | Status |
++----------------+----------------+--------+
+|     MSH-1      | 172.30.100.41  |   OK   |
+|    TDS-1_B     | 172.30.100.201 |   OK   |
+|    TDS-1_A     | 172.30.100.101 |   OK   |
++----------------+----------------+--------+
+If the fields are empty, check the connection manually by yourself.
+ 
+................................
+ 
+We are moving into collecting outputs from already project configured network devices!
+ 
+................................
+ 
+This directory already exists -->  MSH-1
+ 
+Collecting data from this network device by SSH connection with this command:
+IP: 172.30.100.41, Device: MSH-1, Command: sh lldp nei
+ 
+................................
+ 
+Collecting data from this network device by SSH connection with this command:
+IP: 172.30.100.41, Device: MSH-1, Command: show run
+ 
+................................
+ 
+Collecting data from this network device by SSH connection with this command:
+IP: 172.30.100.41, Device: MSH-1, Command: show tech
+ 
+................................
+ 
+This directory already exists -->  TDS-1_B
+ 
+Collecting data from this network device by SSH connection with this command:
+IP: 172.30.100.201, Device: TDS-1_B, Command: sh lldp nei
+ 
+................................
+ 
+Collecting data from this network device by SSH connection with this command:
+IP: 172.30.100.201, Device: TDS-1_B, Command: show run
+ 
+................................
+ 
+Collecting data from this network device by SSH connection with this command:
+IP: 172.30.100.201, Device: TDS-1_B, Command: show tech
+ 
+................................
+ 
+This directory already exists -->  TDS-1_A
+ 
+Collecting data from this network device by SSH connection with this command:
+IP: 172.30.100.101, Device: TDS-1_A, Command: sh lldp nei
+ 
+................................
+ 
+Collecting data from this network device by SSH connection with this command:
+IP: 172.30.100.101, Device: TDS-1_A, Command: show run
+ 
+................................
+ 
+Collecting data from this network device by SSH connection with this command:
+IP: 172.30.100.101, Device: TDS-1_A, Command: show tech
+ 
+................................
+ 
+ 
+Your created configuration files has been deleted ...
+ 
+Thank you for using our script, hope you enjoy it!!!
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  10/05/2022 14:43:21
+ 
+IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!
+ 
+This is a list of all saved session logs: 
+2022-05-10.txt
+Do you want to delete device logs, console logs and table with licenses, ping and versions for support team? If yes type '1', if not type anything else:
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else:
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 7
+ 
+Which device do you want to connect? TDS-1_A
+ 
+Your list of possible devices to configure: 
+TDS-1_A
+ 
+ 
+You have chosen this configuration...
+COM7 ----> TDS-1_A
+Please wait patiently...
+ 
+. 
+ 
+Device is chosen properly, let's continue...
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+waiting
+Sorry, you have provided bad info. Check your ports and device.
+Probably your port is used by different process...
+Maybe turn off the Putty client!
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: E
+You have provided wrong language, try again...
+ 
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  10/05/2022 14:48:24
+ 
+IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!
+ 
+This is a list of all saved session logs: 
+2022-05-10.txt
+Do you want to delete device logs, console logs and table with licenses, ping and versions for support team? If yes type '1', if not type anything else:
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else:
+1
+ 
+It is your system a complete one or it is just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 7
+ 
+Which device do you want to connect? T
+ 
+Your list of possible devices to configure: 
+TIR-1, TAS-1, TDS-1_A, TDS-1_B
+ 
+Which device do you want to connect? TDS
+ 
+Your list of possible devices to configure: 
+TDS-1_A, TDS-1_B
+ 
+Which device do you want to connect? TDS-1_A
+ 
+Your list of possible devices to configure: 
+TDS-1_A
+ 
+ 
+You have chosen this configuration...
+COM7 ----> TDS-1_A
+Please wait patiently...
+ 
+. 
+ 
+Device is chosen properly, let's continue...
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+waiting
+ 
+Your device has been configured properly ---> TDS-1_A.
+Closed connection to COM7.
+ 
+................................
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 2
+ 
+Already configured devices:
+TDS-1_A
+ 
+Which device do you want to connect? T
+ 
+Your list of possible devices to configure: 
+TIR-1, TAS-1, TDS-1_B
+ 
+Already configured devices:
+TDS-1_A
+ 
+Which device do you want to connect? TDS-1_B
+ 
+Your list of possible devices to configure: 
+TDS-1_B
+ 
+ 
+You have chosen this configuration...
+COM7 ----> TDS-1_B
+Please wait patiently...
+ 
+.. 
+ 
+Device is chosen properly, let's continue...
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+waiting
+ 
+Your device has been configured properly ---> TDS-1_B.
+Closed connection to COM7.
+ 
+................................
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 2
+ 
+Already configured devices:
+TDS-1_A, TDS-1_B
+ 
+Which device do you want to connect? M
+ 
+Your list of possible devices to configure: 
+MSC-1, MSW-1_A, MSW-1_B, MSX-1_A, MSX-1_B, MSY-1_A, MSY-1_B, MSS-1_A, MSS-1_B, MSH-1, MSH-2, MSH-3, MSH-4
+ 
+Already configured devices:
+TDS-1_A, TDS-1_B
+ 
+Which device do you want to connect? MSH-1
+ 
+Your list of possible devices to configure: 
+MSH-1
+ 
+ 
+You have chosen this configuration...
+COM7 ----> MSH-1
+Please wait patiently...
+ 
+.. 
+ 
+Device is chosen properly, let's continue...
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+Please wait about 3 minutes, because IE2000 is working a little bit slower...
+ 
+Your device has been configured properly ---> MSH-1.
+Closed connection to COM7.
+ 
+................................
+ 
+Have you already downloaded all of initial configurations? Type '1' if yes, type anything else if not: 1
+ 
++----------------------------------------------------------------------------------------------------+
+|                                    Table with devices licenses                                     |
++----+---------+------------------------------+------------+--------------+---------------------+----+
+| ID |  Device |             UDI              |  License   |    Status    |      Expiration     | OK |
++----+---------+------------------------------+------------+--------------+---------------------+----+
+| 1  | TDS-1_A |  IE-4010-4S24P:FDO2250U0AV   | ipservices | Active,InUse | PermanentRightToUse | OK |
+| 2  | TDS-1_B |  IE-4010-4S24P:FDO2250U0A2   | ipservices | Active,InUse | PermanentRightToUse | OK |
+| 3  |  MSH-1  | IE-2000-16TC-G-E:FDO2251J1U4 |   iplite   | Active,InUse |      Permanent      | OK |
++----+---------+------------------------------+------------+--------------+---------------------+----+
+In case of UKNNOWN, please turn on the Putty client and check the configuration manually.
+ 
++--------------------------------------------------------+
+|               Table with device versions               |
++----+---------+--------+-----------------+--------------+
+| ID |   Name  | Model  | Current Version | New Version  |
++----+---------+--------+-----------------+--------------+
+| 1  | TDS-1_A | IE4010 |    15.2(6)E1    |   15.9(e4)   |
+| 2  | TDS-1_B | IE4010 |    15.2(4)EC2   |   15.9(e4)   |
+| 3  |  MSH-1  | IE2000 |    15.2(7)E4    | 15.9(e42000) |
++----+---------+--------+-----------------+--------------+
+If field 'New Version' is empty, check if you downloaded new versions of software into /FIRMWARE folder.
+ 
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. 1
+ 
+Which device do you want to update? Type ID numbers divided by space from table above: 1, 3
+ 
+List of devices to have updated software:
+TDS-1_A, MSH-1,  
+ 
+Now upgrading software in TDS-1_A device with this IP address 172.30.100.10!
+Now upgrading software in MSH-1 device with this IP address 172.30.100.12!
+ 
+Now is the time to download project configs by SSH connections ...
+ 
+ 
+Please connect all your devices by LAN cables!
+ 
+Now it is time to move into TFTP Server application.
+ 
+If you are ready and TFTP Server is not running, please type in '1' in console: 1
+ 
+Everything is fine, now you can turn on your TFTP SERVER...
+ 
+Your TFTP server is running now...
+ 
+Please choose in tab 'Current Directory' in TFTP Server Application folder called PROJECT-CONFIGS!
+ 
+If you set configuration properly and you are ready, please type in '1' in console: 1
+ 
+Everything was set, you can continue...
+ 
+Waiting about 10 seconds for SSH connection to be established ...
+ 
+Checking ip connections with configured network devices, please wait a moment.
+... 
+ 
++---------------------------------------+
+|               PING Table              |
++---------+---------------+-------------+
+|   Name  |   IP Address  | PING Status |
++---------+---------------+-------------+
+| TDS-1_A | 172.30.100.10 |      OK     |
+| TDS-1_B | 172.30.100.11 |      OK     |
+|  MSH-1  | 172.30.100.12 |      OK     |
++---------+---------------+-------------+
+If the fields are empty, check the connection manually by yourself.
+ 
+Now the projects configs are downloaded to the network devices.
+ 
+................................
+ 
+Now this device is being configured:
+MSH-1 -> 172.30.100.12
+ 
+................................
+ 
+Now this device is being configured:
+TDS-1_B -> 172.30.100.11
+ 
+................................
+ 
+Now this device is being configured:
+TDS-1_A -> 172.30.100.10
+ 
+................................
+ 
+Checking booting devices by project IP, please wait...
+.............................................. 
+ 
+Checking project connection by ping...
+...... 
+ 
++------------------------------------------+
+|  Checking connection to project configs  |
++----------------+----------------+--------+
+| Name of device |       IP       | Status |
++----------------+----------------+--------+
+|     MSH-1      | 172.30.100.41  |   OK   |
+|    TDS-1_B     | 172.30.100.201 |   OK   |
+|    TDS-1_A     | 172.30.100.101 |   OK   |
++----------------+----------------+--------+
+If the fields are empty, check the connection manually by yourself.
+ 
+................................
+ 
+We are moving into collecting outputs from already project configured network devices!
+ 
+................................
+ 
+This directory already exists -->  MSH-1
+ 
+Collecting data from this network device by SSH connection with this command:
+IP: 172.30.100.41, Device: MSH-1, Command: sh lldp nei
+ 
+................................
+ 
+Collecting data from this network device by SSH connection with this command:
+IP: 172.30.100.41, Device: MSH-1, Command: show run
+ 
+................................
+ 
+Collecting data from this network device by SSH connection with this command:
+IP: 172.30.100.41, Device: MSH-1, Command: show tech
+ 
+................................
+ 
+This directory already exists -->  TDS-1_B
+ 
+Collecting data from this network device by SSH connection with this command:
+IP: 172.30.100.201, Device: TDS-1_B, Command: sh lldp nei
+ 
+................................
+ 
+Collecting data from this network device by SSH connection with this command:
+IP: 172.30.100.201, Device: TDS-1_B, Command: show run
+ 
+................................
+ 
+Collecting data from this network device by SSH connection with this command:
+IP: 172.30.100.201, Device: TDS-1_B, Command: show tech
+ 
+................................
+ 
+This directory already exists -->  TDS-1_A
+ 
+Collecting data from this network device by SSH connection with this command:
+IP: 172.30.100.101, Device: TDS-1_A, Command: sh lldp nei
+ 
+................................
+ 
+Collecting data from this network device by SSH connection with this command:
+IP: 172.30.100.101, Device: TDS-1_A, Command: show run
+ 
+................................
+ 
+Collecting data from this network device by SSH connection with this command:
+IP: 172.30.100.101, Device: TDS-1_A, Command: show tech
+ 
+................................
+ 
+ 
+Your created configuration files has been deleted ...
+ 
+Thank you for using our script, hope you enjoy it!!!

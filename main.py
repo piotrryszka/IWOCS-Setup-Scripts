@@ -184,119 +184,123 @@ while running_flag:
 
                         # TODO: testing needs to be uncommented
                         # STARTING BIG TRY WINDOWS
-                        # try:
-                        # setting COM connection
-                        ser = Serial(COM_string, COM_speed)
+                        try:
+                            # setting COM connection
+                            ser = Serial(COM_string, COM_speed)
 
-                        # waiting for router/switch to boot
-                        user_boot_flag = checking_booting(port = ser)
+                            # waiting for router/switch to boot
+                            user_boot_flag = checking_booting(port = ser)
 
-                        # counting number of gigabit and fast ports
-                        device_ports = checking_switch_ports(ser_port = ser)
+                            # counting number of gigabit and fast ports
+                            device_ports = checking_switch_ports(ser_port = ser)
 
-                        # checking if device is really the device, which was wanted by user
-                        proper_device = checking_device(ser_port = ser, user_device = user_device, lang_dict = lang_expressions)
+                            # checking if device is really the device, which was wanted by user
+                            proper_device = checking_device(ser_port = ser, user_device = user_device, lang_dict = lang_expressions)
 
-                        # returning next ip number and full name of configured device to download to specified device
-                        our_conf = creating_proper_configuration(user_device = user_device, port_num = device_ports['Gigabit'], ip_add = ip_number)
-                        # our_conf = creating_proper_configuration(user_device=user_device, port_num=1, ip_add=ip_number)
+                            # returning next ip number and full name of configured device to download to specified device
+                            our_conf = creating_proper_configuration(user_device = user_device, port_num = device_ports['Gigabit'], ip_add = ip_number)
+                            # our_conf = creating_proper_configuration(user_device=user_device, port_num=1, ip_add=ip_number)
 
-                        # remembering old IP number, last octet is important to save to txt file
-                        ip_save = ip_number
+                            # remembering old IP number, last octet is important to save to txt file
+                            ip_save = ip_number
 
-                        # returning tuple with full name device and next iip number to bes used
-                        actual_device = our_conf[1]  # name of device
-                        ip_number = our_conf[0]  # new ip address incremented by +1
+                            # returning tuple with full name device and next iip number to bes used
+                            actual_device = our_conf[1]  # name of device
+                            ip_number = our_conf[0]  # new ip address incremented by +1
 
-                        # saving ip address to txt file
-                        with open('temp/ip_number.txt', 'w') as f:
-                            f.write(str(ip_number))
+                            # saving ip address to txt file
+                            with open('temp/ip_number.txt', 'w') as f:
+                                f.write(str(ip_number))
 
-                        # # # TODO: DELETE IT
-                        # user_boot_flag = True
-                        # proper_device = True
+                            # # # TODO: DELETE IT
+                            # user_boot_flag = True
+                            # proper_device = True
 
-                        print('Info for debugging:')
-                        print(user_boot_flag)
-                        print(proper_device)
+                            if user_boot_flag and proper_device:
 
-                        if user_boot_flag and proper_device:
+                                print(lang_expressions['not_configured'])
+                                print(decorator_1)
 
-                            print(lang_expressions['not_configured'])
-                            print(decorator_1)
+                                # going to configuration mode
+                                to_conf_mode(ser)
 
-                            # going to configuration mode
-                            to_conf_mode(ser)
+                                # opening file with configuration
+                                actual_device = actual_device
+                                stripped_list = reading_conf_files(file=actual_device)
 
-                            # opening file with configuration
-                            actual_device = actual_device
-                            stripped_list = reading_conf_files(file=actual_device)
+                                # executing commands from the list
+                                for command in stripped_list:
+                                    send_to_console(ser, command)
+                                    # printing dots to inform user that script is still working
+                                    print('.', end='')
 
-                            # executing commands from the list
-                            for command in stripped_list:
-                                send_to_console(ser, command)
-                                # printing dots to inform user that script is still working
-                                print('.', end='')
+                                to_conf_mode(ser)
+                                test = send_to_console(ser, 'crypto key generate rsa mod 2048')
+                                send_to_console(ser, 'exit')
+                                test_2 = send_to_console(ser, 'write')
 
-                            print(decorator_1)
+                                print(decorator_1)
 
-                            if user_device in ie2000:
-                                print(lang_expressions['ie2000_wait'])
-                                sleep(120)
+                                if user_device in ie2000:
+                                    print(lang_expressions['ie2000_wait'])
+                                    sleep(300)
+                                else:
+                                    print('Collecting info from devices.')
+                                    sleep(120)
 
-                            # TODO: UNCOMMENT IT
-                            # checking info about license on the device
-                            # returning tuple with our data
-                            license_data = download_license(ser)
-                            # license_data = download_license()
+                                # TODO: UNCOMMENT IT
+                                # checking info about license on the device
+                                # returning tuple with our data
+                                license_data = download_license(ser)
+                                # license_data = download_license()
 
-                            # reading license data to variables use to fill txt file
-                            udi = license_data[0]
-                            state_string = license_data[1]
-                            type_string = license_data[2]
-                            ipservices_string = license_data[3]
+                                # reading license data to variables use to fill txt file
+                                udi = license_data[0]
+                                state_string = license_data[1]
+                                type_string = license_data[2]
+                                ipservices_string = license_data[3]
 
-                            # checking proper configuration license for IE4010
-                            ok_not = check_license(udi, state_string, type_string, ipservices_string)
+                                # checking proper configuration license for IE4010
+                                ok_not = check_license(udi, state_string, type_string, ipservices_string)
 
-                            print(decorator_1)
+                                print(decorator_1)
 
-                            # saving the name of configured device to the txt file
-                            saving_dev(f'{user_device} {ip_save}')
+                                # saving the name of configured device to the txt file
+                                saving_dev(f'{user_device} {ip_save}')
 
-                            # reading ID number from txt file
-                            try:
-                                with open('temp/id_number.txt', 'r') as f:
-                                    new_id = f.read()
-                                    id_number = int(new_id)
-                            except:
-                                pass
+                                # reading ID number from txt file
+                                try:
+                                    with open('temp/id_number.txt', 'r') as f:
+                                        new_id = f.read()
+                                        id_number = int(new_id)
+                                except:
+                                    pass
 
-                            # sending command to switch with sh version
-                            sh_version(ser)
+                                # sending command to switch with sh version
+                                sh_version(ser)
 
-                            # saving prepared data to txt, later will be prepared table report with it
-                            # TUTAJ ROBOTA
-                            read_version(id_number, user_device)
+                                # saving prepared data to txt, later will be prepared table report with it
+                                # TUTAJ ROBOTA
+                                read_version(id_number, user_device)
 
-                            # TESTING
-                            # saving info about licenses and devices to the txt file with incremented ID counter
-                            id_number = saving_info_lic(id_number, user_device, udi, ipservices_string, state_string,
-                                                        type_string, ok_not)
+                                # TESTING
+                                # saving info about licenses and devices to the txt file with incremented ID counter
+                                id_number = saving_info_lic(id_number, user_device, udi, ipservices_string, state_string,
+                                                            type_string, ok_not)
 
-                            # saving ID number to txt file
-                            with open('temp/id_number.txt', 'w') as f:
-                                f.write(str(id_number))
+                                # saving ID number to txt file
+                                with open('temp/id_number.txt', 'w') as f:
+                                    f.write(str(id_number))
 
-                            # closing connection
-                            ser.close()
-                            print(f"{lang_expressions['proper_conf']}{user_device}.")
-                            print(f"{lang_expressions['close_con']}{ser.name}.")
-                            print(decorator_1)
-                            print(decorator_2)
-                            print(decorator_1)
+                                # closing connection
+                                ser.close()
+                                print(f"{lang_expressions['proper_conf']}{user_device}.")
+                                print(f"{lang_expressions['close_con']}{ser.name}.")
+                                print(decorator_1)
+                                print(decorator_2)
+                                print(decorator_1)
 
-                        # except:
+                        except:
                             # bad chosen device or it is not working
                             print(lang_expressions['not_working'])
                             print(decorator_1)
