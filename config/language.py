@@ -4,7 +4,7 @@
 language_dictionary = {'En': {'information_prompt': 'IMPORTANT ISSUE!!!\nIf you want to leave any part of the program type 0 [zero] in your input!',
                               'module_question': "Is it your system a complete one or is it just one module? \nType '1' if system complete, if not write anything else: ",
                               'port_question': "Which COM port are you using?\nType number of your COM port: ",
-                              'device_question': "Which device do you want to connect? MOVE YOUR CONSOLE CABLE!",
+                              'device_question': "Which device do you want to connect? MOVE YOUR CONSOLE CABLE! ",
                               'listing_devices': "Your list of possible devices to configure: ",
                               'wait_prompt': "Please wait patiently...",
                               'user_choice': "You have chosen this configuration...",

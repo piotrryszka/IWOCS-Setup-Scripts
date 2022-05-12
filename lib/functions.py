@@ -348,3 +348,4 @@ def check_booting_ping(lang_dict, dict_dev):
         sleep(sleep_time)
     print(decorator_1)
     print(decorator_1)
+

@@ -4,7 +4,7 @@ from serial import Serial
 from time import sleep
 
 from lib.commands import send_to_console, checking_switch_ports, checking_ip_address, checking_device, check_tftp, \
-    to_conf_mode
+    to_conf_mode, gen_crypto_keys
 from lib.operations import opening_device_list, reading_conf_files, creating_proper_configuration, deleting_files, \
     deleting_conf, saving_dev, list_saved_dev, saving_license, saving_info_lic, reading_license, deleting_dev_logs, \
     deleting_dev_license, download_license, sh_version, read_version, saving_ver_table, add_ip, saving_ping_table, \
@@ -186,20 +186,20 @@ while running_flag:
                         # STARTING BIG TRY WINDOWS
                         try:
                             # setting COM connection
-                            ser = Serial(COM_string, COM_speed)
+                            # ser = Serial(COM_string, COM_speed)
 
                             # waiting for router/switch to boot
-                            user_boot_flag = checking_booting(port = ser)
+                            # user_boot_flag = checking_booting(port = ser)
 
                             # counting number of gigabit and fast ports
-                            device_ports = checking_switch_ports(ser_port = ser)
+                            # device_ports = checking_switch_ports(ser_port = ser)
 
                             # checking if device is really the device, which was wanted by user
-                            proper_device = checking_device(ser_port = ser, user_device = user_device, lang_dict = lang_expressions)
+                            # proper_device = checking_device(ser_port = ser, user_device = user_device, lang_dict = lang_expressions)
 
                             # returning next ip number and full name of configured device to download to specified device
-                            our_conf = creating_proper_configuration(user_device = user_device, port_num = device_ports['Gigabit'], ip_add = ip_number)
-                            # our_conf = creating_proper_configuration(user_device=user_device, port_num=1, ip_add=ip_number)
+                            # our_conf = creating_proper_configuration(user_device = user_device, port_num = device_ports['Gigabit'], ip_add = ip_number)
+                            our_conf = creating_proper_configuration(user_device=user_device, port_num=1, ip_add=ip_number)
 
                             # remembering old IP number, last octet is important to save to txt file
                             ip_save = ip_number
@@ -212,9 +212,9 @@ while running_flag:
                             with open('temp/ip_number.txt', 'w') as f:
                                 f.write(str(ip_number))
 
-                            # # # TODO: DELETE IT
-                            # user_boot_flag = True
-                            # proper_device = True
+                            # # TODO: DELETE IT
+                            user_boot_flag = True
+                            proper_device = True
 
                             if user_boot_flag and proper_device:
 
@@ -222,7 +222,7 @@ while running_flag:
                                 print(decorator_1)
 
                                 # going to configuration mode
-                                to_conf_mode(ser)
+                                # to_conf_mode(ser)
 
                                 # opening file with configuration
                                 actual_device = actual_device
@@ -230,29 +230,28 @@ while running_flag:
 
                                 # executing commands from the list
                                 for command in stripped_list:
-                                    send_to_console(ser, command)
+                                    # send_to_console(ser, command)
                                     # printing dots to inform user that script is still working
                                     print('.', end='')
 
-                                to_conf_mode(ser)
-                                test = send_to_console(ser, 'crypto key generate rsa mod 2048')
-                                send_to_console(ser, 'exit')
-                                test_2 = send_to_console(ser, 'write')
+                                # generating crypto keys for netowrk devices
+                                gen_crypto_keys()
 
                                 print(decorator_1)
 
-                                if user_device in ie2000:
-                                    print(lang_expressions['ie2000_wait'])
-                                    sleep(300)
-                                else:
-                                    print('Collecting info from devices.')
-                                    sleep(120)
+                                # TODO: UNCOMMENT
+                                # if user_device in ie2000:
+                                #     print(lang_expressions['ie2000_wait'])
+                                #     sleep(300)
+                                # else:
+                                #     print('Collecting info from this device.')
+                                #     sleep(120)
 
                                 # TODO: UNCOMMENT IT
                                 # checking info about license on the device
                                 # returning tuple with our data
-                                license_data = download_license(ser)
-                                # license_data = download_license()
+                                # license_data = download_license(ser)
+                                license_data = download_license()
 
                                 # reading license data to variables use to fill txt file
                                 udi = license_data[0]
@@ -277,7 +276,7 @@ while running_flag:
                                     pass
 
                                 # sending command to switch with sh version
-                                sh_version(ser)
+                                # sh_version(ser)
 
                                 # saving prepared data to txt, later will be prepared table report with it
                                 # TUTAJ ROBOTA
@@ -293,9 +292,9 @@ while running_flag:
                                     f.write(str(id_number))
 
                                 # closing connection
-                                ser.close()
+                                # ser.close()
                                 print(f"{lang_expressions['proper_conf']}{user_device}.")
-                                print(f"{lang_expressions['close_con']}{ser.name}.")
+                                # print(f"{lang_expressions['close_con']}{ser.name}.")
                                 print(decorator_1)
                                 print(decorator_2)
                                 print(decorator_1)
@@ -326,8 +325,8 @@ while running_flag:
                         print(decorator_1)
 
                         # closing connection
-                        ser.close()
-                        print(f"{lang_expressions['close_con']}{ser.name}.")
+                        # ser.close()
+                        # print(f"{lang_expressions['close_con']}{ser.name}.")
                         print(decorator_1)
                         break
 
@@ -523,5 +522,6 @@ while running_flag:
 # LAST COMMANDS IN SCRIPT
 # deleting all user-configuration files created while the script was running
 print(decorator_1)
-deleting_conf(lang_dict = lang_expressions)
+# TODO: UNCOMMENT IT
+# deleting_conf(lang_dict = lang_expressions)
 

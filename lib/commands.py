@@ -120,3 +120,10 @@ def to_conf_mode(ser_port):
     commands_list = ['en', 'conf t']
     for com in commands_list:
         send_to_console(ser_port, com)
+
+# sending commands to generate crypto keys to connect by ssh
+def gen_crypto_keys(ser):
+    to_conf_mode(ser)
+    send_to_console(ser, 'crypto key generate rsa mod 2048')
+    send_to_console(ser, 'exit')
+    send_to_console(ser, 'write')
