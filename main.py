@@ -316,7 +316,6 @@ while running_flag:
                             # configuring next device
                             device_flag = True
 
-                    # TODO: needs to be uncommented
                     elif user_device == str(0):
                         break
                     else:
