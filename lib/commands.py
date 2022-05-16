@@ -127,3 +127,4 @@ def gen_crypto_keys(ser):
     send_to_console(ser, 'crypto key generate rsa mod 2048')
     send_to_console(ser, 'exit')
     send_to_console(ser, 'write')
+

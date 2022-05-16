@@ -349,3 +349,33 @@ def check_booting_ping(lang_dict, dict_dev):
     print(decorator_1)
     print(decorator_1)
 
+# pinging by initial ip addresses
+def ping_initial():
+    with open('temp/already_conf.txt', 'r') as file:
+        # dic with ip addresses
+        final_dic = {}
+        running_flag = True
+        # reading file to structure
+        for line in file:
+            list_license = line.split()
+            final_dic[list_license[0]] = f'172.30.100.{list_license[1]}'
+        while running_flag:
+            for k in list(final_dic):
+                # sending ping
+                ping_output = ping(final_dic[k], verbose=False, count=count_ping)
+                # # printing dots to console to make sure that something is happening in script
+                print('.', end='')
+                for response in ping_output:
+                    # printing dots to console to make sure that something is happening in script
+                    print('.', end='')
+                    # checking if the ping was successful
+                    if response.error_message is None:
+                        # ping works, device could be reached
+                        # deleting element of dictionary
+                        del final_dic[k]
+                    else:
+                        pass
+                # checking if all devices are pinging
+                if len(final_dic) == 0:
+                    # leaving loop
+                    running_flag = False

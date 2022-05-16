@@ -378,3 +378,4 @@ def checking_stat_lic(lang_dict):
             user_input = input(lang_dict['user_acc'])
             print(user_input)
             print(decorator_1)
+

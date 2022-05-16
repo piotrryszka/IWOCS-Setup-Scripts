@@ -148,64 +148,39 @@
 #     return udi, state_string, type_string, ipservices_string
 #
 # print(download_license())
-from netmiko import ConnectHandler, NetmikoTimeoutException, NetmikoAuthenticationException
-from time import sleep
-from datetime import datetime
 
-from config.data import password, username, decorator_1, server_ip
+from pythonping import ping
+from config.data import decorator_1, count_ping
 
-
-def ssh_download(host, device, command):
-    # creating timestamp
-    now = datetime.now()
-    date_time = now.strftime("%m/%d/%Y")
-    dateTimeObj = datetime.now()
-    dateObj = dateTimeObj.date()
-    dateStr = dateObj.strftime("%d.%m.%Y")
-    # configuration of network device
-    cisco1 = {
-        "device_type": f"cisco_ios",
-        "host": f"{host}",
-        "username": f"{username}",
-        "password": f'{password}',
-        # session logger
-        "session_log": f"../logs/project_logs/{device}_{host}_{dateStr}.txt",
-        # enabling waiting for the output much longer
-        "fast_cli": False
-    }
-    with ConnectHandler(**cisco1) as net_connect:
-        # try:
-        # assigning command to sending command
-        our_command = command
-
-        # changing length of terminal to catch commands
-        # net_connect.send_command('terminal length 0', cmd_verify=False)
-
-        # sending 'enter' to clear CLI window
-        net_connect.send_command('\n', cmd_verify=False)
-
-        # command sent to network device
-        if our_command == 'show tech':
-            command_output = net_connect.send_command_expect(our_command, cmd_verify=False)
-        else:
-            command_output = net_connect.send_command(our_command, cmd_verify=False)
-
-        # changing length of terminal to basic
-        # net_connect.send_command('terminal length 24', cmd_verify=False)
-
-        # replacing spaces in command with - char
-        command = command.replace(' ', '-')
-
-        # opening file and saving an output to the file
-        with open(f'{command}___{dateStr}.txt', 'w') as file:
-            file.write(command_output)
-
-        # waiting to give time to device react
-        sleep(1)
-
-        # error handling while ssh connection
-        # except (NetmikoTimeoutException, NetmikoAuthenticationException) as error:
-        #     print(error)
-        #     print(decorator_1)
-
-ssh_download('172.30.100.41', 'MSH-1', 'sh run')
+with open('temp/already_conf.txt', 'r') as file:
+    final_dic = {}
+    running_flag = True
+    for line in file:
+        list_license = line.split()
+        final_dic[list_license[0]] = f'172.30.100.{list_license[1]}'
+    print(final_dic)
+    while running_flag:
+        for k in list(final_dic):
+            print(k)
+            # sending ping
+            ping_output = ping(final_dic[k], verbose=False, count=count_ping)
+            # # printing dots to console to make sure that something is happening in script
+            print('.', end='')
+            print(final_dic)
+            for response in ping_output:
+                # printing dots to console to make sure that something is happening in script
+                print('.', end='')
+                # checking if the ping was successful
+                if response.error_message is None:
+                    # ping works, device could be reached
+                    print('OK')
+                    # deleting element of dictionary
+                    del final_dic[k]
+                else:
+                    print("NIE OK")
+                    pass
+            # checking if all devices are pinging
+            if len(final_dic) == 0:
+                print('eee')
+                # leaving loop
+                running_flag = False

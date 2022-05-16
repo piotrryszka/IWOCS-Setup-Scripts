@@ -15,7 +15,7 @@ from lib.logging import *
 from lib.network import ssh_con, ssh_download
 from lib.functions import printing_logs, creating_timestamp, start_tftp, user_tftp, final_tftp, check_com, order_dev, \
     list_dev, create_table, kill_tftp, kill_putty, create_table_ver, add_row_ver, prepare_software, check_ping, \
-    check_license, create_dir, ping_projects, check_booting_ping
+    check_license, create_dir, ping_projects, check_booting_ping, ping_initial
 from config.data import ip_number, decorator_1, device_order, id_number, commands_list, decorator_2, dict_ip, ie2000
 
 # Program flags:
@@ -235,7 +235,7 @@ while running_flag:
                                     print('.', end='')
 
                                 # generating crypto keys for netowrk devices
-                                gen_crypto_keys()
+                                # gen_crypto_keys()
 
                                 print(decorator_1)
 
@@ -339,6 +339,8 @@ while running_flag:
 
         # SSH CONNECTIONS
         else:
+            # checking ping by initial ip addresses
+            ping_initial()
 
             # reading info about licenses to table
             reading_license(conf_table)
