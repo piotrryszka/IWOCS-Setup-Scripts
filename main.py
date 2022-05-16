@@ -342,6 +342,9 @@ while running_flag:
             # checking ping by initial ip addresses
             ping_initial()
 
+            # HERE TO PUT ALL SSH DOWNLOADING FUNCTIONS
+
+
             # reading info about licenses to table
             reading_license(conf_table)
 
