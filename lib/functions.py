@@ -354,7 +354,10 @@ def ping_initial():
     with open('temp/already_conf.txt', 'r') as file:
         # dic with ip addresses
         final_dic = {}
+        # main flag to run script
         running_flag = True
+        # counter to leave loop after some time
+        counter = 0
         # reading file to structure
         for line in file:
             list_license = line.split()
@@ -366,8 +369,6 @@ def ping_initial():
                 # # printing dots to console to make sure that something is happening in script
                 print('.', end='')
                 for response in ping_output:
-                    # printing dots to console to make sure that something is happening in script
-                    print('.', end='')
                     # checking if the ping was successful
                     if response.error_message is None:
                         # ping works, device could be reached
@@ -375,7 +376,13 @@ def ping_initial():
                         del final_dic[k]
                     else:
                         pass
+                    # incrementing counter
+                    counter += 1
                 # checking if all devices are pinging
                 if len(final_dic) == 0:
                     # leaving loop
+                    running_flag = False
+
+                # leaving whole part after timeout from data.py
+                if counter >= finish_time:
                     running_flag = False

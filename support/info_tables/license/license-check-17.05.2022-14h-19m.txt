@@ -1,0 +1,13 @@
++-------------------------------------------------------------------+
+|                    Table with devices licenses                    |
++----+---------+---------+---------+---------+------------+---------+
+| ID |  Device |   UDI   | License |  Status | Expiration |    OK   |
++----+---------+---------+---------+---------+------------+---------+
+| 1  | TDS-1_A | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 2  | TDS-1_B | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 3  |  TIR-1  | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 4  |  TAS-1  | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 5  |  MSC-1  | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 6  |  MSH-1  | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 7  |  MSH-2  | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
++----+---------+---------+---------+---------+------------+---------+
