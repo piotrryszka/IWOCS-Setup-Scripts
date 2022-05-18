@@ -9,6 +9,12 @@ from config.data import password, username, decorator_1, server_ip
 
 # establishing SSH connection and downloading project configs
 def ssh_con(file, host):
+    """
+
+    :param file:
+    :param host:
+    :return:
+    """
     # creating time stamp
     now = datetime.now()
     date_time = now.strftime("%m/%d/%Y")
@@ -55,6 +61,13 @@ def ssh_con(file, host):
 
 # sending commands to download input from devices
 def ssh_download(host, device, command):
+    """
+
+    :param host:
+    :param device:
+    :param command:
+    :return:
+    """
     # creating timestamp
     now = datetime.now()
     date_time = now.strftime("%m/%d/%Y")

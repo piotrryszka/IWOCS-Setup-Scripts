@@ -5,8 +5,14 @@ from time import sleep
 
 from lib.commands import send_to_console
 
+
 # waiting for router/switch to boot
 def checking_booting(port):
+    """
+
+    :param port:
+    :return:
+    """
     correct_flag = False
     verifying_string = ''
     counter = 0
