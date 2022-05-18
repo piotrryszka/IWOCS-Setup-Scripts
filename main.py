@@ -7,7 +7,7 @@ from lib.commands import send_to_console, checking_switch_ports, checking_ip_add
     to_conf_mode, gen_crypto_keys
 from lib.operations import opening_device_list, reading_conf_files, creating_proper_configuration, deleting_files, \
     deleting_conf, saving_dev, list_saved_dev, saving_license, saving_info_lic, reading_license, deleting_dev_logs, \
-    deleting_dev_license, download_license, sh_version, read_version, saving_ver_table, add_ip, saving_ping_table, \
+    deleting_dev_license, sh_version, read_version, saving_ver_table, add_ip, saving_ping_table, \
     deleting_dev_ping, deleting_dev_version, deleting_project_logs, checking_stat_lic, deleting_dev_pro_ping
 from lib.booting import checking_booting
 from lib.languages import listing_languages, reading_language
