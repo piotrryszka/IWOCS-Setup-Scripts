@@ -10,4 +10,8 @@
 | 5  |  MSC-1  | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
 | 6  |  MSH-1  | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
 | 7  |  MSH-2  | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 8  |  MSH-3  | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 9  |  MSH-4  | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 10 | MSW-1_B | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 11 | MSW-1_A | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
 +----+---------+---------+---------+---------+------------+---------+

@@ -12,7 +12,7 @@ from lib.operations import opening_device_list, reading_conf_files, creating_pro
 from lib.booting import checking_booting
 from lib.languages import listing_languages, reading_language
 from lib.logging import *
-from lib.network import ssh_con, ssh_download
+from lib.network import ssh_con, ssh_download, download_license_ssh
 from lib.functions import printing_logs, creating_timestamp, start_tftp, user_tftp, final_tftp, check_com, order_dev, \
     list_dev, create_table, kill_tftp, kill_putty, create_table_ver, add_row_ver, prepare_software, check_ping, \
     check_license, create_dir, ping_projects, check_booting_ping, ping_initial
@@ -239,28 +239,21 @@ while running_flag:
 
                                 print(decorator_1)
 
-                                # TODO: UNCOMMENT
-                                # if user_device in ie2000:
-                                #     print(lang_expressions['ie2000_wait'])
-                                #     sleep(300)
-                                # else:
-                                #     print('Collecting info from this device.')
-                                #     sleep(120)
-
                                 # TODO: UNCOMMENT IT
+                                # TODO: DELETE IT
                                 # checking info about license on the device
                                 # returning tuple with our data
                                 # license_data = download_license(ser)
-                                license_data = download_license()
+                                # license_data = download_license()
 
                                 # reading license data to variables use to fill txt file
-                                udi = license_data[0]
-                                state_string = license_data[1]
-                                type_string = license_data[2]
-                                ipservices_string = license_data[3]
+                                # udi = license_data[0]
+                                # state_string = license_data[1]
+                                # type_string = license_data[2]
+                                # ipservices_string = license_data[3]
 
-                                # checking proper configuration license for IE4010
-                                ok_not = check_license(udi, state_string, type_string, ipservices_string)
+                                # checking proper configuration license for IE4010 and IE2000
+                                # ok_not = check_license(udi, state_string, type_string, ipservices_string)
 
                                 print(decorator_1)
 
@@ -340,9 +333,22 @@ while running_flag:
         # SSH CONNECTIONS
         else:
             # checking ping by initial ip addresses
-            ping_initial()
+            ip_add = ping_initial()
+            for k in list(ip_add):
+                # preparing ip address
+                host = ip_add[k]
+                # TODO:
+                # HERE TO PUT ALL SSH DOWNLOADING FUNCTIONS
+                license_data = download_license_ssh(host)
 
-            # HERE TO PUT ALL SSH DOWNLOADING FUNCTIONS
+                # reading license data to variables use to fill txt file
+                udi = license_data[0]
+                state_string = license_data[1]
+                type_string = license_data[2]
+                ipservices_string = license_data[3]
+
+                # checking proper configuration license for IE4010 and IE2000
+                ok_not = check_license(udi, state_string, type_string, ipservices_string)
 
 
             # reading info about licenses to table

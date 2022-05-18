@@ -106,3 +106,98 @@ def ssh_download(host, device, command):
         except (NetmikoTimeoutException, NetmikoAuthenticationException) as error:
             print(error)
             print(decorator_1)
+
+# collecting license data from device by ssh
+def download_license_ssh(host):
+    # creating timestamp
+    now = datetime.now()
+    dateTimeObj = datetime.now()
+    dateObj = dateTimeObj.date()
+    dateStr = dateObj.strftime("%d.%m.%Y")
+    # configuration of network device
+    cisco1 = {
+        "device_type": f"cisco_ios",
+        "host": f"{host}",
+        "username": f"{username}",
+        "password": f'{password}',
+        # enabling waiting for the output much longer
+        "fast_cli": False
+    }
+    # crating empty strings
+    state_string = ''
+    type_string = ''
+    ipservices_string = ''
+    try:
+        # sending two commands to go into privilege mode
+        with ConnectHandler(**cisco1) as net_connect:
+            command_output = net_connect.send_command_expect('\n', cmd_verify=False)
+            command_output = net_connect.send_command_expect('en', cmd_verify=False)
+    except:
+        pass
+
+    # try and except to not fail during the script and arguments
+
+    # sending command to get UDI
+    try:
+        e = net_connect.send_command_expect('sh license udi', cmd_verify=False)
+        li = list(e.split())
+        # udi data
+        udi = li[11]
+    except:
+        udi = "UNKNOWN"
+
+    # checking license and its status
+    try:
+        e = net_connect.send_command_expect('sh license', cmd_verify=False)
+
+        # creating temporary txt file
+        with open("temp/license_console.txt", "w") as text_file:
+            text_file.write(e)
+
+        # reading temporary txt file
+        with open('temp/license_console.txt', 'r') as f:
+            counter = 0
+            counter_ie2000 = 0
+            lines = f.readlines()
+            for line in lines:
+                if 'IE-4010' in udi:
+                    if counter < 1:
+                        if 'License State:' in line:
+                            line_read = line.split()
+                            our_info = line_read[2:]
+                            state_string = ' '.join(our_info)
+                        if 'License Type:' in line:
+                            line_read = line.split()
+                            our_info = line_read[2:]
+                            type_string = ' '.join(our_info)
+                        if 'ipservices' in line:
+                            line_read = line.split()
+                            our_info = line_read[3:]
+                            ipservices_string = ' '.join(our_info)
+                if 'IE-2000' in udi:
+                    if 'iplite' in line:
+                        counter_ie2000 = 0
+                    if counter_ie2000 == 0:
+                        if 'License Type:' in line:
+                            line_read = line.split()
+                            our_info = line_read[2:]
+                            type_string = ' '.join(our_info)
+                        if 'License State:' in line:
+                            line_read = line.split()
+                            our_info = line_read[2:]
+                            state_string = ' '.join(our_info)
+                        if 'iplite' in line:
+                            line_read = line.split()
+                            our_info = line_read[3:]
+                            ipservices_string = ' '.join(our_info)
+                    if 'mrp-manager' in line:
+                        counter_ie2000 += 1
+                if 'lanbase' in line:
+                    counter =+ 1
+    except:
+        state_string = 'UNKNOWN'
+        type_string = 'UNKNOWN'
+        ipservices_string = 'UNKNOWN'
+
+    # returning 4 strings to be used in license table
+    return udi, state_string, type_string, ipservices_string

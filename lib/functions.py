@@ -384,5 +384,6 @@ def ping_initial():
                     running_flag = False
 
                 # leaving whole part after timeout from data.py
-                if counter >= finish_time:
+                if counter >= finish_time/100:
                     running_flag = False
+    return final_dic
