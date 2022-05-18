@@ -13,6 +13,11 @@ from lib.functions import adding_row
 
 # opening possible devices to configure
 def opening_device_list(file_name):
+    """
+
+    :param file_name:
+    :return:
+    """
     with open(f'static_files/{file_name}', 'r') as file_devices:
                         lines = file_devices.read()
                         list_of_lists = lines.splitlines()
@@ -20,6 +25,11 @@ def opening_device_list(file_name):
 
 # reading commands from files (add argument to make this happen)
 def reading_conf_files(file):
+    """
+
+    :param file:
+    :return:
+    """
     with open(f'temp/{file}') as file:
         # getting commands from list
         content_list = file.readlines()
@@ -28,6 +38,13 @@ def reading_conf_files(file):
 
 # creating and reading conf files
 def creating_proper_configuration(user_device, port_num, ip_add):
+    """
+
+    :param user_device:
+    :param port_num:
+    :param ip_add:
+    :return:
+    """
     with open('initial-configuration-files/cisco-switch') as f:
         lines = f.read()
         content_list = lines.split('\n')
@@ -54,6 +71,12 @@ def creating_proper_configuration(user_device, port_num, ip_add):
 
 # deleting logs and handling logs files
 def deleting_files(lang_dict, user_input):
+    """
+
+    :param lang_dict:
+    :param user_input:
+    :return:
+    """
     to_leave = False
     files = os.listdir('logs/console_logs')
     # deleting files
@@ -73,6 +96,11 @@ def deleting_files(lang_dict, user_input):
 
 # deleting initial configuration files created by the user while using script
 def deleting_conf(lang_dict):
+    """
+    deleting initial configuration files created by the user while using script
+    :param lang_dict:
+    :return:
+    """
     files = os.listdir('temp')
     # deleting files
     for file in files:
@@ -87,12 +115,21 @@ def deleting_conf(lang_dict):
 
 # saving already configured devices
 def saving_dev(dev_name):
+    """
+
+    :param dev_name:
+    :return:
+    """
     with open('temp/already_conf.txt', 'a') as f:
         f.write(dev_name)
         f.write('\n')
 
 # listing already configured devices from the file
 def list_saved_dev():
+    """
+
+    :return:
+    """
     new_dict = {}
     try:
         with open('temp/already_conf.txt', 'r') as file:
@@ -105,6 +142,11 @@ def list_saved_dev():
 
 # saving already configured devices with their license status
 def saving_license(table):
+    """
+
+    :param table:
+    :return:
+    """
     # get the date object from datetime object
     # creating timestamp
     dateTimeObj = datetime.now()
@@ -118,6 +160,17 @@ def saving_license(table):
 
 # saving info about devices and their license to file
 def saving_info_lic(counter_table, user_device, udi, license, status, expiration, ok):
+    """
+
+    :param counter_table:
+    :param user_device:
+    :param udi:
+    :param license:
+    :param status:
+    :param expiration:
+    :param ok:
+    :return:
+    """
     with open('temp/licenses.txt', 'a') as file:
         file.write(f'{counter_table} {user_device} {udi} {license} {status} {expiration} {ok}')
         file.write('\n')
@@ -126,6 +179,11 @@ def saving_info_lic(counter_table, user_device, udi, license, status, expiration
 
 # reading info about license from txt file
 def reading_license(conf_table):
+    """
+
+    :param conf_table:
+    :return:
+    """
     with open('temp/licenses.txt', 'r') as file:
         for line in file:
            list_license = line.split()
@@ -133,6 +191,10 @@ def reading_license(conf_table):
 
 # deleting device logs
 def deleting_dev_logs():
+    """
+
+    :return:
+    """
     files = os.listdir('logs/device_logs')
     # deleting files
     for file in files:
@@ -144,6 +206,10 @@ def deleting_dev_logs():
 
 # deleting project logs
 def deleting_project_logs():
+    """
+
+    :return:
+    """
     files = os.listdir('logs/project_logs')
     # deleting files
     for file in files:
@@ -155,6 +221,10 @@ def deleting_project_logs():
 
 # deleting table with licenses and their status for support
 def deleting_dev_license():
+    """
+
+    :return:
+    """
     files = os.listdir('support/info_tables/license')
     # deleting files
     for file in files:
@@ -166,6 +236,10 @@ def deleting_dev_license():
 
 # deleting tables with versions tables
 def deleting_dev_version():
+    """
+
+    :return:
+    """
     files = os.listdir('support/info_tables/version')
     # deleting files
     for file in files:
@@ -177,6 +251,10 @@ def deleting_dev_version():
 
 # deleting tables with ping tables
 def deleting_dev_ping():
+    """
+
+    :return:
+    """
     files = os.listdir('support/info_tables/ping')
     # deleting files
     for file in files:
@@ -188,6 +266,10 @@ def deleting_dev_ping():
 
 # deleting tables with project ping tables
 def deleting_dev_pro_ping():
+    """
+
+    :return:
+    """
     files = os.listdir('support/info_tables/ping_project')
     # deleting files
     for file in files:
@@ -199,6 +281,11 @@ def deleting_dev_pro_ping():
 
 # collecting license data from device
 def download_license(ser = 'COM1'):
+    """
+
+    :param ser:
+    :return:
+    """
     # crating empty strings
     state_string = ''
     type_string = ''
@@ -286,6 +373,11 @@ def download_license(ser = 'COM1'):
 
 # sending sh_version command and saving it output to txt file
 def sh_version(ser):
+    """
+
+    :param ser:
+    :return:
+    """
     # sending command
     output = send_to_console(ser, 'sh version', 5)
     # saving output to txt file
@@ -294,6 +386,12 @@ def sh_version(ser):
 
 # reading info about version from txt file
 def read_version(id, user_device):
+    """
+
+    :param id:
+    :param user_device:
+    :return:
+    """
     with open('temp/info_ver.txt', 'r') as my_file:
         for line in my_file:
             # looking for actual device model and version number
@@ -326,6 +424,11 @@ def read_version(id, user_device):
 
 # saving version table to txt
 def saving_ver_table(table):
+    """
+
+    :param table:
+    :return:
+    """
     dateTimeObj = datetime.now()
     dateObj = dateTimeObj.date()
     timeObj = dateTimeObj.time()
@@ -336,6 +439,11 @@ def saving_ver_table(table):
 
 # adding ip to the already configured devices to update software
 def add_ip(dev_list):
+    """
+
+    :param dev_list:
+    :return:
+    """
     with open('temp/already_conf.txt') as file:
         lines = file.readlines()
         stripped = [s.strip() for s in lines]
@@ -348,6 +456,11 @@ def add_ip(dev_list):
 
 # saving ping table to txt
 def saving_ping_table(table):
+    """
+
+    :param table:
+    :return:
+    """
     dateTimeObj = datetime.now()
     dateObj = dateTimeObj.date()
     timeObj = dateTimeObj.time()
@@ -358,6 +471,11 @@ def saving_ping_table(table):
 
 # checking if their is only one license in each folder
 def checking_stat_lic(lang_dict):
+    """
+
+    :param lang_dict:
+    :return:
+    """
     # listing directories of files
     files = os.listdir(f'firmware')
     running_flag = True

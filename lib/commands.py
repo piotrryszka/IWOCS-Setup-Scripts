@@ -12,6 +12,12 @@ from config.data import ie2000, ie4010, decorator_1, commands_list
 
 # sending commands to console
 def send_to_console(ser_fun: Serial, command: str, wait_time: float = 0.2):
+    """
+    :param ser_fun:
+    :param command:
+    :param wait_time:
+    :return:
+    """
     command_to_send = command + "\r\n"
     ser_fun.write(command_to_send.encode('utf-8'))
     sleep(wait_time)
@@ -20,6 +26,11 @@ def send_to_console(ser_fun: Serial, command: str, wait_time: float = 0.2):
 
 # counting gigabit and fast ports in devices
 def checking_switch_ports(ser_port):
+    """
+
+    :param ser_port:
+    :return:
+    """
     send_to_console(ser_port, 'no')
     send_to_console(ser_port, 'en')
     send_to_console(ser_port, 'term len 0')
@@ -36,6 +47,11 @@ def checking_switch_ports(ser_port):
 
 # checking if ip address was properly set by user
 def checking_ip_address(lang_dict):
+    """
+
+    :param lang_dict:
+    :return:
+    """
     print(decorator_1)
     print(lang_dict['ip_prompt'])
     print(decorator_1)
@@ -63,6 +79,13 @@ def checking_ip_address(lang_dict):
 
 # checking type of device
 def checking_device(ser_port, user_device, lang_dict):
+    """
+
+    :param ser_port:
+    :param user_device:
+    :param lang_dict:
+    :return:
+    """
     good_conf = False
     check_device = send_to_console(ser_port, 'sh lic udi', 3)
     # routers/firewall
@@ -87,6 +110,11 @@ def checking_device(ser_port, user_device, lang_dict):
 
 # checking if tftp server is already running
 def check_tftp(lang_dict):
+    """
+
+    :param lang_dict:
+    :return:
+    """
     print(decorator_1)
     print(lang_dict['tftp_server'])
     working_flag = False
@@ -117,12 +145,22 @@ def check_tftp(lang_dict):
 
 # going to conf mode before handling initial configuration
 def to_conf_mode(ser_port):
+    """
+
+    :param ser_port:
+    :return:
+    """
     commands_list = ['en', 'conf t']
     for com in commands_list:
         send_to_console(ser_port, com)
 
 # sending commands to generate crypto keys to connect by ssh
 def gen_crypto_keys(ser):
+    """
+
+    :param ser:
+    :return:
+    """
     to_conf_mode(ser)
     send_to_console(ser, 'crypto key generate rsa mod 2048')
     send_to_console(ser, 'exit')

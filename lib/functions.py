@@ -13,6 +13,11 @@ from config.data import decorator_1, count_ping, ip_hub, dict_ip, sleep_time, fi
 
 # printing accessible logs
 def printing_logs(lang_dict):
+    """
+
+    :param lang_dict:
+    :return:
+    """
     files = os.listdir('logs/console_logs')
     # printing files
     print(lang_dict['print_logs'])
@@ -20,6 +25,11 @@ def printing_logs(lang_dict):
 
 # creating_timestamp to make logs clearer
 def creating_timestamp(lang_dict):
+    """
+
+    :param lang_dict:
+    :return:
+    """
     # datetime object containing current date and time
     now = datetime.now()
     # converting data object to string
@@ -28,12 +38,22 @@ def creating_timestamp(lang_dict):
 
 # starting tftp server to download config to device
 def start_tftp(lang_dict):
+    """
+
+    :param lang_dict:
+    :return:
+    """
     print(lang_dict['tftp_start'])
     print(decorator_1)
     subprocess.Popen([r"tftp-server/tftpd32.exe"])
 
 # instruction to set tftp server properly
 def user_tftp(lang_dict):
+    """
+
+    :param lang_dict:
+    :return:
+    """
     continue_flag = True
     print(lang_dict['tftp_folder'])
     print(decorator_1)
@@ -52,6 +72,10 @@ def user_tftp(lang_dict):
 
 # final tftp check before uploading config files
 def final_tftp():
+    """
+
+    :return:
+    """
     output_netstat = str(subprocess.check_output("netstat -na | findstr /R ^UDP", shell=True)).strip()
     check_string = 'UDP    0.0.0.0:69'
     # checking if server works, use return in for example while loop
@@ -62,6 +86,11 @@ def final_tftp():
 
 # informing user to connect the console cable
 def check_com(lang_dict):
+    """
+
+    :param lang_dict:
+    :return:
+    """
     running_flag = True
     while running_flag:
         print(lang_dict['com_cable'])
@@ -75,6 +104,14 @@ def check_com(lang_dict):
 
 # good order of restarting devices
 def order_dev(conf_devices_list, device_order, new_dict, order_dev_dict):
+    """
+
+    :param conf_devices_list:
+    :param device_order:
+    :param new_dict:
+    :param order_dev_dict:
+    :return:
+    """
     # looking for the correct order of restarting devices
     for k in order_dev_dict:
         for y in device_order:
@@ -91,6 +128,12 @@ def order_dev(conf_devices_list, device_order, new_dict, order_dev_dict):
 
 # printing already initial configured devices
 def list_dev(device_list, lang_dict):
+    """
+
+    :param device_list:
+    :param lang_dict:
+    :return:
+    """
     device_list = list(dict.fromkeys(device_list))
     if len(device_list)>0:
         print(lang_dict['listing_dev'])
@@ -101,6 +144,10 @@ def list_dev(device_list, lang_dict):
 
 # creating basic table with headers from scratch
 def create_table():
+    """
+
+    :return:
+    """
     tb = pt()
     # add headers
     tb.field_names = ["ID", "Device", "UDI", "License", "Status", "Expiration", "OK"]
@@ -109,12 +156,28 @@ def create_table():
 
 # adding rows to our conf license table with devices
 def adding_row(table, count, device, udi, type_license, status_license, time_license, ok):
+    """
+
+    :param table:
+    :param count:
+    :param device:
+    :param udi:
+    :param type_license:
+    :param status_license:
+    :param time_license:
+    :param ok:
+    :return:
+    """
     table.add_row([count, device, udi, type_license, status_license, time_license, ok])
     count+=1
     return count
 
 # closing tftp server application
 def kill_tftp():
+    """
+
+    :return:
+    """
     try:
         # stdout/stderr argument forbid to print on console output and error output
         subprocess.call(["taskkill","/F","/IM","tftpd32.exe"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
@@ -123,6 +186,11 @@ def kill_tftp():
 
 # closing putty application
 def kill_putty(decision):
+    """
+
+    :param decision:
+    :return:
+    """
     if decision == '1':
         try:
             # stdout/stderr argument forbid to print on console output and error output
@@ -131,6 +199,11 @@ def kill_putty(decision):
             pass
 
 def create_table_ver(lang_dict):
+    """
+
+    :param lang_dict:
+    :return:
+    """
     tb = pt()
     # add headers
     tb.title = lang_dict['ver_table']
@@ -140,6 +213,11 @@ def create_table_ver(lang_dict):
 
 # adding rows in version table
 def add_row_ver(table):
+    """
+
+    :param table:
+    :return:
+    """
     with open('temp/version.txt', 'r') as text_file:
         for line in text_file:
             version_list = line.split()
@@ -147,6 +225,11 @@ def add_row_ver(table):
 
 # function to prepare which device need to be updated
 def prepare_software(lang_dict):
+    """
+
+    :param lang_dict:
+    :return:
+    """
     counter = 0
     # flag to be updated to leave loop
     update_flag = True
@@ -189,6 +272,11 @@ def prepare_software(lang_dict):
 
 # checking if the device is available by ping
 def check_ping(lang_dict):
+    """
+
+    :param lang_dict:
+    :return:
+    """
     # empty string
     result = ''
     # creating table
@@ -227,6 +315,14 @@ def check_ping(lang_dict):
 
 # function to test correctness of licenses of different network devices
 def check_license(udi, state_string, type_string, ipservices_string):
+    """
+
+    :param udi:
+    :param state_string:
+    :param type_string:
+    :param ipservices_string:
+    :return:
+    """
     # checking for IE4010
     if state_string == 'Active, In Use' and type_string == 'PermanentRightToUse' and ipservices_string == 'ipservices' and 'IE-4010' in udi:
         ok_not = 'OK'
@@ -243,6 +339,12 @@ def check_license(udi, state_string, type_string, ipservices_string):
 
 # function to create proper directories for different devices
 def create_dir(name_dev, lang_dict):
+    """
+
+    :param name_dev:
+    :param lang_dict:
+    :return:
+    """
     # create directories
     dirName = name_dev
     try:
@@ -259,6 +361,10 @@ def create_dir(name_dev, lang_dict):
 # TODO: needs upgrading
 # pinging hub ip address
 def check_hub_ping():
+    """
+
+    :return:
+    """
     ping_status = False
     ping_output = ping(f'{ip_hub}', count=count_ping)
     for response in ping_output:
@@ -274,6 +380,12 @@ def check_hub_ping():
 
 # checking project config connection by ping
 def ping_projects(lang_dict, dict_dev):
+    """
+
+    :param lang_dict:
+    :param dict_dev:
+    :return:
+    """
     # printing prompt what is done now
     print(lang_dict['current_ping'])
     # creating pretty table object and configuring it
@@ -315,6 +427,12 @@ def ping_projects(lang_dict, dict_dev):
 
 # checking if the device has booted after downloading project config
 def check_booting_ping(lang_dict, dict_dev):
+    """
+
+    :param lang_dict:
+    :param dict_dev:
+    :return:
+    """
     # flag to run function
     running_flag = True
     # counter of time
@@ -351,6 +469,10 @@ def check_booting_ping(lang_dict, dict_dev):
 
 # pinging by initial ip addresses
 def ping_initial():
+    """
+
+    :return:
+    """
     with open('temp/already_conf.txt', 'r') as file:
         # dic with ip addresses
         final_dic = {}
