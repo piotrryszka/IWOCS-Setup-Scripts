@@ -7,12 +7,12 @@ from lib.commands import send_to_console, checking_switch_ports, checking_ip_add
     to_conf_mode, gen_crypto_keys
 from lib.operations import opening_device_list, reading_conf_files, creating_proper_configuration, deleting_files, \
     deleting_conf, saving_dev, list_saved_dev, saving_license, saving_info_lic, reading_license, deleting_dev_logs, \
-    deleting_dev_license, sh_version, read_version, saving_ver_table, add_ip, saving_ping_table, \
-    deleting_dev_ping, deleting_dev_version, deleting_project_logs, checking_stat_lic, deleting_dev_pro_ping
+    deleting_dev_license,read_version, saving_ver_table, add_ip, saving_ping_table, \
+    deleting_dev_ping, deleting_dev_version, deleting_project_logs, checking_stat_lic, deleting_dev_pro_ping, del_ver_logs
 from lib.booting import checking_booting
 from lib.languages import listing_languages, reading_language
 from lib.logging import *
-from lib.network import ssh_con, ssh_download, download_license_ssh
+from lib.network import ssh_con, ssh_download, download_license_ssh, sh_version
 from lib.functions import printing_logs, creating_timestamp, start_tftp, user_tftp, final_tftp, check_com, order_dev, \
     list_dev, create_table, kill_tftp, kill_putty, create_table_ver, add_row_ver, prepare_software, check_ping, \
     check_license, create_dir, ping_projects, check_booting_ping, ping_initial
@@ -239,50 +239,10 @@ while running_flag:
 
                                 print(decorator_1)
 
-                                # TODO: UNCOMMENT IT
-                                # TODO: DELETE IT
-                                # checking info about license on the device
-                                # returning tuple with our data
-                                # license_data = download_license(ser)
-                                # license_data = download_license()
-
-                                # reading license data to variables use to fill txt file
-                                # udi = license_data[0]
-                                # state_string = license_data[1]
-                                # type_string = license_data[2]
-                                # ipservices_string = license_data[3]
-
-                                # checking proper configuration license for IE4010 and IE2000
-                                # ok_not = check_license(udi, state_string, type_string, ipservices_string)
-
                                 print(decorator_1)
 
                                 # saving the name of configured device to the txt file
                                 saving_dev(f'{user_device} {ip_save}')
-
-                                # reading ID number from txt file
-                                try:
-                                    with open('temp/id_number.txt', 'r') as f:
-                                        new_id = f.read()
-                                        id_number = int(new_id)
-                                except:
-                                    pass
-
-                                # sending command to switch with sh version
-                                # sh_version(ser)
-
-                                # saving prepared data to txt, later will be prepared table report with it
-                                # TUTAJ ROBOTA
-                                read_version(id_number, user_device)
-
-                                # TESTING
-                                # saving info about licenses and devices to the txt file with incremented ID counter
-                                id_number = saving_info_lic(id_number, user_device, udi, ipservices_string, state_string,
-                                                            type_string, ok_not)
-
-                                # saving ID number to txt file
-                                with open('temp/id_number.txt', 'w') as f:
-                                    f.write(str(id_number))
 
                                 # closing connection
                                 # ser.close()
@@ -332,13 +292,22 @@ while running_flag:
 
         # SSH CONNECTIONS
         else:
+            # deleting all tables if remaining
+            deleting_dev_license()
+            deleting_dev_version()
+            del_ver_logs()
+
             # checking ping by initial ip addresses
             ip_add = ping_initial()
+            print(ip_add)
             for k in list(ip_add):
+                # preparing data to save into txt file
+                user_device = k
+
                 # preparing ip address
                 host = ip_add[k]
-                # TODO:
-                # HERE TO PUT ALL SSH DOWNLOADING FUNCTIONS
+
+                # downloading info about license
                 license_data = download_license_ssh(host)
 
                 # reading license data to variables use to fill txt file
@@ -349,6 +318,25 @@ while running_flag:
 
                 # checking proper configuration license for IE4010 and IE2000
                 ok_not = check_license(udi, state_string, type_string, ipservices_string)
+
+                # sending command to switch with sh version
+                # sh_version(host)
+
+                # reading ID number from txt file
+                try:
+                    with open('temp/id_number.txt', 'r') as f:
+                        new_id = f.read()
+                        id_number = int(new_id)
+                except:
+                    pass
+
+                # saving prepared data to txt
+                read_version(id_number, user_device)
+
+                # TESTING
+                # saving info about licenses and devices to the txt file with incremented ID counter
+                id_number = saving_info_lic(id_number, user_device, udi, ipservices_string, state_string,
+                                            type_string, ok_not)
 
 
             # reading info about licenses to table

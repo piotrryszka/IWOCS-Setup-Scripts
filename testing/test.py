@@ -149,38 +149,6 @@
 #
 # print(download_license())
 
-from pythonping import ping
-from config.data import decorator_1, count_ping
-
-with open('temp/already_conf.txt', 'r') as file:
-    final_dic = {}
-    running_flag = True
-    for line in file:
-        list_license = line.split()
-        final_dic[list_license[0]] = f'172.30.100.{list_license[1]}'
-    print(final_dic)
-    while running_flag:
-        for k in list(final_dic):
-            print(k)
-            # sending ping
-            ping_output = ping(final_dic[k], verbose=False, count=count_ping)
-            # # printing dots to console to make sure that something is happening in script
-            print('.', end='')
-            print(final_dic)
-            for response in ping_output:
-                # printing dots to console to make sure that something is happening in script
-                print('.', end='')
-                # checking if the ping was successful
-                if response.error_message is None:
-                    # ping works, device could be reached
-                    print('OK')
-                    # deleting element of dictionary
-                    del final_dic[k]
-                else:
-                    print("NIE OK")
-                    pass
-            # checking if all devices are pinging
-            if len(final_dic) == 0:
-                print('eee')
-                # leaving loop
-                running_flag = False
+dicti = {'e': '123', 'es': 213}
+for k in list(dicti):
+    print(k)

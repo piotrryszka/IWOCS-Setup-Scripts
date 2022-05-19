@@ -122,6 +122,11 @@ def ssh_download(host, device, command):
 
 # collecting license data from device by ssh
 def download_license_ssh(host):
+    """
+
+    :param host:
+    :return:
+    """
     # creating timestamp
     now = datetime.now()
     dateTimeObj = datetime.now()
@@ -131,8 +136,6 @@ def download_license_ssh(host):
     cisco1 = {
         "device_type": f"cisco_ios",
         "host": f"{host}",
-        "username": f"{username}",
-        "password": f'{password}',
         # enabling waiting for the output much longer
         "fast_cli": False
     }
@@ -214,3 +217,30 @@ def download_license_ssh(host):
 
     # returning 4 strings to be used in license table
     return udi, state_string, type_string, ipservices_string
+
+# sending sh_version command and saving it output to txt file
+def sh_version(host):
+    """
+
+    :param host:
+    :param ser:
+    :return:
+    """
+    # creating timestamp
+    now = datetime.now()
+    dateTimeObj = datetime.now()
+    dateObj = dateTimeObj.date()
+    dateStr = dateObj.strftime("%d.%m.%Y")
+    # configuration of network device
+    cisco1 = {
+        "device_type": f"cisco_ios",
+        "host": f"{host}",
+        # enabling waiting for the output much longer
+        "fast_cli": False
+    }
+    # sending command
+    with ConnectHandler(**cisco1) as net_connect:
+        output = net_connect.send_command_expect('sh version', cmd_verify=False)
+    # saving output to txt file
+    with open('temp/info_ver.txt', 'w') as file:
+        file.write(output)

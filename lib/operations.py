@@ -279,111 +279,6 @@ def deleting_dev_pro_ping():
         except:
             pass
 
-# collecting license data from device
-# def download_license(ser = 'COM1'):
-#     """
-#
-#     :param ser:
-#     :return:
-#     """
-#     # crating empty strings
-#     state_string = ''
-#     type_string = ''
-#     ipservices_string = ''
-#
-#     try:
-#         # waiting for the device to finish reading commands from initial config, need to be tested how long it should be
-#         sleep(15)
-#
-#         # sending two commands to go into privilege mode
-#         send_to_console(ser, '\n')
-#         send_to_console(ser, 'en')
-#     except:
-#         pass
-#
-#     # try and except to not fail during the script and arguments
-#
-#     # sending command to get UDI
-#     try:
-#         e = send_to_console(ser, 'sh license udi', 3)
-#         li = list(e.split())
-#         # udi data
-#         udi = li[11]
-#     except:
-#         udi = "UNKNOWN"
-#
-#     # checking license and its status
-#     try:
-#         if 'IE-2000' in udi:
-#             e = send_to_console(ser, 'sh license', 15)
-#         else:
-#             e = send_to_console(ser, 'sh license', 2)
-#
-#         # creating temporary txt file
-#         with open("temp/license_console.txt", "w") as text_file:
-#             text_file.write(e)
-#
-#         # reading temporary txt file
-#         with open('temp/license_console.txt', 'r') as f:
-#             counter = 0
-#             counter_ie2000 = 0
-#             lines = f.readlines()
-#             for line in lines:
-#                 if 'IE-4010' in udi:
-#                     if counter < 1:
-#                         if 'License State:' in line:
-#                             line_read = line.split()
-#                             our_info = line_read[2:]
-#                             state_string = ' '.join(our_info)
-#                         if 'License Type:' in line:
-#                             line_read = line.split()
-#                             our_info = line_read[2:]
-#                             type_string = ' '.join(our_info)
-#                         if 'ipservices' in line:
-#                             line_read = line.split()
-#                             our_info = line_read[3:]
-#                             ipservices_string = ' '.join(our_info)
-#                 if 'IE-2000' in udi:
-#                     if 'iplite' in line:
-#                         counter_ie2000 = 0
-#                     if counter_ie2000 == 0:
-#                         if 'License Type:' in line:
-#                             line_read = line.split()
-#                             our_info = line_read[2:]
-#                             type_string = ' '.join(our_info)
-#                         if 'License State:' in line:
-#                             line_read = line.split()
-#                             our_info = line_read[2:]
-#                             state_string = ' '.join(our_info)
-#                         if 'iplite' in line:
-#                             line_read = line.split()
-#                             our_info = line_read[3:]
-#                             ipservices_string = ' '.join(our_info)
-#                     if 'mrp-manager' in line:
-#                         counter_ie2000 += 1
-#                 if 'lanbase' in line:
-#                     counter =+ 1
-#     except:
-#         state_string = 'UNKNOWN'
-#         type_string = 'UNKNOWN'
-#         ipservices_string = 'UNKNOWN'
-
-    # returning 4 strings to be used in license table
-    # return udi, state_string, type_string, ipservices_string
-
-# sending sh_version command and saving it output to txt file
-def sh_version(ser):
-    """
-
-    :param ser:
-    :return:
-    """
-    # sending command
-    output = send_to_console(ser, 'sh version', 5)
-    # saving output to txt file
-    with open('temp/info_ver.txt', 'w') as file:
-        file.write(output)
-
 # reading info about version from txt file
 def read_version(id, user_device):
     """
@@ -497,3 +392,15 @@ def checking_stat_lic(lang_dict):
             print(user_input)
             print(decorator_1)
 
+# deleting device licenses and versions
+def del_ver_logs():
+    """
+
+    :return:
+    """
+    # cannot delete the file from today's date
+    try:
+        os.remove(f'temp/version.txt')
+        os.remove(f'temp/licenses.txt')
+    except:
+        pass

@@ -11,4 +11,4 @@ Index 2 Feature: lanbase
         License Type: PermanentRightToUse
         License State: Active, Not in Use, EULA accepted
         License Priority: High
-        License Count: Non-Counted
+        License Count: Non-Countedha

@@ -1,0 +1,1744 @@
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  19/05/2022 13:05:17
+ 
+IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!
+ 
+This is a list of all saved script logs: 
+2022-05-18.txt, 2022-05-19.txt
+Do you want to delete previous script results? If yes type '1', if not type anything else:
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else:
+1
+ 
+Is it your system a complete one or is it just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 7
+ 
+Already configured devices:
+TDS-1_A, TDS-1_B, SDG-1_A, TIR-1, TAS-1, MSC-1, MSW-1_A, MSW-1_B, MSH-1, MSH-2, MSH-3, MSH-4
+ 
+Which device do you want to connect? MOVE YOUR CONSOLE CABLE! SDG
+ 
+Your list of possible devices to configure: 
+SDG-1_B
+ 
+Already configured devices:
+TDS-1_A, TDS-1_B, SDG-1_A, TIR-1, TAS-1, MSC-1, MSW-1_A, MSW-1_B, MSH-1, MSH-2, MSH-3, MSH-4
+ 
+Which device do you want to connect? MOVE YOUR CONSOLE CABLE! SDG-1_B
+ 
+Your list of possible devices to configure: 
+SDG-1_B
+ 
+ 
+You have chosen this configuration...
+COM7 ----> SDG-1_B
+Please wait patiently...
+ 
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+ 
+Your device has been configured properly ---> SDG-1_B.
+ 
+................................
+ 
+Was this device the last one? Type '1' if yes, type anything else if not: 1
+ 
+.............Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  19/05/2022 13:06:28
+ 
+IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!
+ 
+This is a list of all saved script logs: 
+2022-05-19.txt
+Do you want to delete previous script results? If yes type '1', if not type anything else:
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else:
+1
+ 
+Is it your system a complete one or is it just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 7
+ 
+Already configured devices:
+TDS-1_A, TDS-1_B, SDG-1_A, SDG-1_B, TIR-1, TAS-1, MSC-1, MSW-1_A, MSW-1_B, MSH-1, MSH-2, MSH-3, MSH-4
+ 
+Which device do you want to connect? MOVE YOUR CONSOLE CABLE! M
+ 
+Your list of possible devices to configure: 
+MSX-1_A, MSX-1_B, MSY-1_A, MSY-1_B, MSS-1_A, MSS-1_B
+ 
+Already configured devices:
+TDS-1_A, TDS-1_B, SDG-1_A, SDG-1_B, TIR-1, TAS-1, MSC-1, MSW-1_A, MSW-1_B, MSH-1, MSH-2, MSH-3, MSH-4
+ 
+Which device do you want to connect? MOVE YOUR CONSOLE CABLE! MSX-1_A
+ 
+Your list of possible devices to configure: 
+MSX-1_A
+ 
+ 
+You have chosen this configuration...
+COM7 ----> MSX-1_A
+Please wait patiently...
+ 
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+ 
+Your device has been configured properly ---> MSX-1_A.
+ 
+................................
+ 
+Was this device the last one? Type '1' if yes, type anything else if not: 1
+ 
+..............+-------------------------------------------------------------------+
+|                    Table with devices licenses                    |
++----+---------+---------+---------+---------+------------+---------+
+| ID |  Device |   UDI   | License |  Status | Expiration |    OK   |
++----+---------+---------+---------+---------+------------+---------+
+| 1  | TDS-1_A | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 2  | TDS-1_B | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 3  |  TIR-1  | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 4  |  TAS-1  | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 5  |  MSC-1  | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 6  |  MSH-1  | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 7  |  MSH-2  | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 8  |  MSH-3  | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 9  |  MSH-4  | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 10 | MSW-1_B | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 11 | MSW-1_A | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 12 | MSX-1_A | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 13 | MSX-1_A | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 14 | MSX-1_A | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 15 | MSX-1_A | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 16 | MSX-1_A | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 17 | MSX-1_A | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 18 | MSX-1_A | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 19 | MSX-1_A | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 20 | MSX-1_A | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 21 | MSX-1_A | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 22 | MSX-1_A | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 23 | MSX-1_A | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 24 | MSX-1_A | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 25 | MSX-1_A | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
++----+---------+---------+---------+---------+------------+---------+
+In case of UKNNOWN, please turn on the Putty client and check the configuration manually.
+ 
++-------------------------------------------------------+
+|               Table with device versions              |
++----+---------+--------+-----------------+-------------+
+| ID |   Name  | Model  | Current Version | New Version |
++----+---------+--------+-----------------+-------------+
+| 1  | TDS-1_A | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 2  | TDS-1_B | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 3  |  TIR-1  | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 4  |  TAS-1  | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 5  |  MSC-1  | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 6  |  MSH-1  | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 7  |  MSH-2  | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 8  |  MSH-3  | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 9  |  MSH-4  | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 10 | MSW-1_B | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 11 | MSW-1_A | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 12 | SDG-1_A | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 12 | MSX-1_A | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 13 | MSX-1_A | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 14 | MSX-1_A | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 15 | MSX-1_A | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 16 | MSX-1_A | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 17 | MSX-1_A | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 18 | MSX-1_A | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 19 | MSX-1_A | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 20 | MSX-1_A | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 21 | MSX-1_A | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 22 | MSX-1_A | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 23 | MSX-1_A | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 24 | MSX-1_A | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 25 | MSX-1_A | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
++----+---------+--------+-----------------+-------------+
+If field 'New Version' is empty, check if you downloaded new versions of software into /FIRMWARE folder.
+ 
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  19/05/2022 13:30:38
+ 
+IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!
+ 
+This is a list of all saved script logs: 
+2022-05-19.txt
+Do you want to delete previous script results? If yes type '1', if not type anything else:
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else:
+1
+ 
+Is it your system a complete one or is it just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 5
+ 
+Which device do you want to connect? MOVE YOUR CONSOLE CABLE! TAS-1
+ 
+Your list of possible devices to configure: 
+TAS-1
+ 
+ 
+You have chosen this configuration...
+COM5 ----> TAS-1
+Please wait patiently...
+ 
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+ 
+Your device has been configured properly ---> TAS-1.
+ 
+................................
+ 
+Was this device the last one? Type '1' if yes, type anything else if not: 1
+ 
+...{'TAS-1': '172.30.100.10'}
++-------------------------------------------------------------------+
+|                    Table with devices licenses                    |
++----+---------+---------+---------+---------+------------+---------+
+| ID |  Device |   UDI   | License |  Status | Expiration |    OK   |
++----+---------+---------+---------+---------+------------+---------+
+| 1  | TDS-1_A | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 2  | TDS-1_B | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 3  |  TIR-1  | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 4  |  TAS-1  | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 5  |  MSC-1  | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 6  |  MSH-1  | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 7  |  MSH-2  | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 8  |  MSH-3  | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 9  |  MSH-4  | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 10 | MSW-1_B | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 11 | MSW-1_A | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 12 | MSX-1_A | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 13 | MSX-1_A | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 14 | MSX-1_A | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 15 | MSX-1_A | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 16 | MSX-1_A | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 17 | MSX-1_A | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 18 | MSX-1_A | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 19 | MSX-1_A | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 20 | MSX-1_A | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 21 | MSX-1_A | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 22 | MSX-1_A | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 23 | MSX-1_A | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 24 | MSX-1_A | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 25 | MSX-1_A | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 1  |  TAS-1  | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
++----+---------+---------+---------+---------+------------+---------+
+In case of UKNNOWN, please turn on the Putty client and check the configuration manually.
+ 
++-------------------------------------------------------+
+|               Table with device versions              |
++----+---------+--------+-----------------+-------------+
+| ID |   Name  | Model  | Current Version | New Version |
++----+---------+--------+-----------------+-------------+
+| 1  | TDS-1_A | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 2  | TDS-1_B | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 3  |  TIR-1  | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 4  |  TAS-1  | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 5  |  MSC-1  | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 6  |  MSH-1  | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 7  |  MSH-2  | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 8  |  MSH-3  | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 9  |  MSH-4  | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 10 | MSW-1_B | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 11 | MSW-1_A | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 12 | SDG-1_A | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 12 | MSX-1_A | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 13 | MSX-1_A | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 14 | MSX-1_A | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 15 | MSX-1_A | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 16 | MSX-1_A | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 17 | MSX-1_A | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 18 | MSX-1_A | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 19 | MSX-1_A | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 20 | MSX-1_A | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 21 | MSX-1_A | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 22 | MSX-1_A | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 23 | MSX-1_A | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 24 | MSX-1_A | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 25 | MSX-1_A | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 1  |  TAS-1  | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
++----+---------+--------+-----------------+-------------+
+If field 'New Version' is empty, check if you downloaded new versions of software into /FIRMWARE folder.
+ 
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  19/05/2022 13:38:02
+ 
+IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!
+ 
+This is a list of all saved script logs: 
+2022-05-19.txt
+Do you want to delete previous script results? If yes type '1', if not type anything else:
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else:
+1
+ 
+Is it your system a complete one or is it just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 7
+ 
+Which device do you want to connect? MOVE YOUR CONSOLE CABLE! TDS-1-A
+ 
+Your list of possible devices to configure: 
+
+ 
+Which device do you want to connect? MOVE YOUR CONSOLE CABLE! TDS-1_A
+ 
+Your list of possible devices to configure: 
+TDS-1_A
+ 
+ 
+You have chosen this configuration...
+COM7 ----> TDS-1_A
+Please wait patiently...
+ 
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+ 
+Your device has been configured properly ---> TDS-1_A.
+ 
+................................
+ 
+Was this device the last one? Type '1' if yes, type anything else if not: 1
+ 
+...{'TDS-1_A': '172.30.100.10'}
++-------------------------------------------------------------------+
+|                    Table with devices licenses                    |
++----+---------+---------+---------+---------+------------+---------+
+| ID |  Device |   UDI   | License |  Status | Expiration |    OK   |
++----+---------+---------+---------+---------+------------+---------+
+| 1  | TDS-1_A | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
++----+---------+---------+---------+---------+------------+---------+
+In case of UKNNOWN, please turn on the Putty client and check the configuration manually.
+ 
++-------------------------------------------------------+
+|               Table with device versions              |
++----+---------+--------+-----------------+-------------+
+| ID |   Name  | Model  | Current Version | New Version |
++----+---------+--------+-----------------+-------------+
+| 1  | TDS-1_A | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
++----+---------+--------+-----------------+-------------+
+If field 'New Version' is empty, check if you downloaded new versions of software into /FIRMWARE folder.
+ 
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  19/05/2022 13:38:38
+ 
+IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!
+ 
+This is a list of all saved script logs: 
+2022-05-19.txt
+Do you want to delete previous script results? If yes type '1', if not type anything else:
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else:
+1
+ 
+Is it your system a complete one or is it just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 7
+ 
+Already configured devices:
+TDS-1_A
+ 
+Which device do you want to connect? MOVE YOUR CONSOLE CABLE! TDS-1_B
+ 
+Your list of possible devices to configure: 
+TDS-1_B
+ 
+ 
+You have chosen this configuration...
+COM7 ----> TDS-1_B
+Please wait patiently...
+ 
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+ 
+Your device has been configured properly ---> TDS-1_B.
+ 
+................................
+ 
+Was this device the last one? Type '1' if yes, type anything else if not: 2
+ 
+Already configured devices:
+TDS-1_A, TDS-1_B
+ 
+Which device do you want to connect? MOVE YOUR CONSOLE CABLE! TIR-1
+ 
+Your list of possible devices to configure: 
+TIR-1
+ 
+ 
+You have chosen this configuration...
+COM7 ----> TIR-1
+Please wait patiently...
+ 
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+ 
+Your device has been configured properly ---> TIR-1.
+ 
+................................
+ 
+Was this device the last one? Type '1' if yes, type anything else if not: SDG-1_A
+ 
+Already configured devices:
+TDS-1_A, TDS-1_B, TIR-1
+ 
+Which device do you want to connect? MOVE YOUR CONSOLE CABLE! SDG-1_A
+ 
+Your list of possible devices to configure: 
+SDG-1_A
+ 
+ 
+You have chosen this configuration...
+COM7 ----> SDG-1_A
+Please wait patiently...
+ 
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+ 
+Your device has been configured properly ---> SDG-1_A.
+ 
+................................
+ 
+Was this device the last one? Type '1' if yes, type anything else if not: 1
+ 
+....{'TDS-1_A': '172.30.100.10', 'TDS-1_B': '172.30.100.11', 'TIR-1': '172.30.100.12', 'SDG-1_A': '172.30.100.13'}
++-------------------------------------------------------------------+
+|                    Table with devices licenses                    |
++----+---------+---------+---------+---------+------------+---------+
+| ID |  Device |   UDI   | License |  Status | Expiration |    OK   |
++----+---------+---------+---------+---------+------------+---------+
+| 1  | TDS-1_A | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 1  | TDS-1_A | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 2  | TDS-1_B | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 3  |  TIR-1  | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 4  | SDG-1_A | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
++----+---------+---------+---------+---------+------------+---------+
+In case of UKNNOWN, please turn on the Putty client and check the configuration manually.
+ 
++-------------------------------------------------------+
+|               Table with device versions              |
++----+---------+--------+-----------------+-------------+
+| ID |   Name  | Model  | Current Version | New Version |
++----+---------+--------+-----------------+-------------+
+| 1  | TDS-1_A | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 1  | TDS-1_A | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 2  | TDS-1_B | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 3  |  TIR-1  | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 4  | SDG-1_A | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
++----+---------+--------+-----------------+-------------+
+If field 'New Version' is empty, check if you downloaded new versions of software into /FIRMWARE folder.
+ 
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  19/05/2022 13:44:12
+ 
+IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!
+ 
+This is a list of all saved script logs: 
+2022-05-19.txt
+Do you want to delete previous script results? If yes type '1', if not type anything else:
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else:
+1
+ 
+Is it your system a complete one or is it just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 7
+ 
+Already configured devices:
+TDS-1_A, TDS-1_B, SDG-1_A, TIR-1
+ 
+Which device do you want to connect? MOVE YOUR CONSOLE CABLE! SDG-1_B
+ 
+Your list of possible devices to configure: 
+SDG-1_B
+ 
+ 
+You have chosen this configuration...
+COM7 ----> SDG-1_B
+Please wait patiently...
+ 
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+ 
+Your device has been configured properly ---> SDG-1_B.
+ 
+................................
+ 
+Was this device the last one? Type '1' if yes, type anything else if not: 1
+ 
+.....{'TDS-1_A': '172.30.100.10', 'TDS-1_B': '172.30.100.11', 'TIR-1': '172.30.100.12', 'SDG-1_A': '172.30.100.13', 'SDG-1_B': '172.30.100.14'}
++-------------------------------------------------------------------+
+|                    Table with devices licenses                    |
++----+---------+---------+---------+---------+------------+---------+
+| ID |  Device |   UDI   | License |  Status | Expiration |    OK   |
++----+---------+---------+---------+---------+------------+---------+
+| 1  | TDS-1_A | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 1  | TDS-1_A | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 2  | TDS-1_B | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 3  |  TIR-1  | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 4  | SDG-1_A | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 1  | TDS-1_A | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 2  | TDS-1_B | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 3  |  TIR-1  | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 4  | SDG-1_A | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 5  | SDG-1_B | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
++----+---------+---------+---------+---------+------------+---------+
+In case of UKNNOWN, please turn on the Putty client and check the configuration manually.
+ 
++-------------------------------------------------------+
+|               Table with device versions              |
++----+---------+--------+-----------------+-------------+
+| ID |   Name  | Model  | Current Version | New Version |
++----+---------+--------+-----------------+-------------+
+| 1  | TDS-1_A | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 1  | TDS-1_A | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 2  | TDS-1_B | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 3  |  TIR-1  | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 4  | SDG-1_A | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 1  | TDS-1_A | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 2  | TDS-1_B | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 3  |  TIR-1  | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 4  | SDG-1_A | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 5  | SDG-1_B | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
++----+---------+--------+-----------------+-------------+
+If field 'New Version' is empty, check if you downloaded new versions of software into /FIRMWARE folder.
+ 
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  19/05/2022 13:46:32
+ 
+IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!
+ 
+This is a list of all saved script logs: 
+2022-05-19.txt
+Do you want to delete previous script results? If yes type '1', if not type anything else:
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else:
+1
+ 
+Is it your system a complete one or is it just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 7
+ 
+Already configured devices:
+TDS-1_A, TDS-1_B, SDG-1_A, SDG-1_B, TIR-1
+ 
+Which device do you want to connect? MOVE YOUR CONSOLE CABLE! MSX-1_A
+ 
+Your list of possible devices to configure: 
+MSX-1_A
+ 
+ 
+You have chosen this configuration...
+COM7 ----> MSX-1_A
+Please wait patiently...
+ 
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+ 
+Your device has been configured properly ---> MSX-1_A.
+ 
+................................
+ 
+Was this device the last one? Type '1' if yes, type anything else if not: 1
+ 
+......{'TDS-1_A': '172.30.100.10', 'TDS-1_B': '172.30.100.11', 'TIR-1': '172.30.100.12', 'SDG-1_A': '172.30.100.13', 'SDG-1_B': '172.30.100.14', 'MSX-1_A': '172.30.100.15'}
++-------------------------------------------------------------------+
+|                    Table with devices licenses                    |
++----+---------+---------+---------+---------+------------+---------+
+| ID |  Device |   UDI   | License |  Status | Expiration |    OK   |
++----+---------+---------+---------+---------+------------+---------+
+| 6  | MSX-1_A | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
++----+---------+---------+---------+---------+------------+---------+
+In case of UKNNOWN, please turn on the Putty client and check the configuration manually.
+ 
++-------------------------------------------------------+
+|               Table with device versions              |
++----+---------+--------+-----------------+-------------+
+| ID |   Name  | Model  | Current Version | New Version |
++----+---------+--------+-----------------+-------------+
+| 6  | MSX-1_A | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
++----+---------+--------+-----------------+-------------+
+If field 'New Version' is empty, check if you downloaded new versions of software into /FIRMWARE folder.
+ 
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  19/05/2022 13:50:05
+ 
+IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!
+ 
+This is a list of all saved script logs: 
+2022-05-19.txt
+Do you want to delete previous script results? If yes type '1', if not type anything else:
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else:
+1
+ 
+Is it your system a complete one or is it just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 7
+ 
+Which device do you want to connect? MOVE YOUR CONSOLE CABLE! TDS-1_A
+ 
+Your list of possible devices to configure: 
+TDS-1_A
+ 
+ 
+You have chosen this configuration...
+COM7 ----> TDS-1_A
+Please wait patiently...
+ 
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+ 
+Your device has been configured properly ---> TDS-1_A.
+ 
+................................
+ 
+Was this device the last one? Type '1' if yes, type anything else if not: 2
+ 
+Already configured devices:
+TDS-1_A
+ 
+Which device do you want to connect? MOVE YOUR CONSOLE CABLE! TIR
+ 
+Your list of possible devices to configure: 
+TIR-1
+ 
+Already configured devices:
+TDS-1_A
+ 
+Which device do you want to connect? MOVE YOUR CONSOLE CABLE! TIR-1
+ 
+Your list of possible devices to configure: 
+TIR-1
+ 
+ 
+You have chosen this configuration...
+COM7 ----> TIR-1
+Please wait patiently...
+ 
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+ 
+Your device has been configured properly ---> TIR-1.
+ 
+................................
+ 
+Was this device the last one? Type '1' if yes, type anything else if not: 2
+ 
+Already configured devices:
+TDS-1_A, TIR-1
+ 
+Which device do you want to connect? MOVE YOUR CONSOLE CABLE! TAS-1
+ 
+Your list of possible devices to configure: 
+TAS-1
+ 
+ 
+You have chosen this configuration...
+COM7 ----> TAS-1
+Please wait patiently...
+ 
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+ 
+Your device has been configured properly ---> TAS-1.
+ 
+................................
+ 
+Was this device the last one? Type '1' if yes, type anything else if not: 1
+ 
+...{'TDS-1_A': '172.30.100.10', 'TIR-1': '172.30.100.11', 'TAS-1': '172.30.100.12'}
++-------------------------------------------------------------------+
+|                    Table with devices licenses                    |
++----+---------+---------+---------+---------+------------+---------+
+| ID |  Device |   UDI   | License |  Status | Expiration |    OK   |
++----+---------+---------+---------+---------+------------+---------+
+| 1  | TDS-1_A | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 2  |  TIR-1  | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 3  |  TAS-1  | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
++----+---------+---------+---------+---------+------------+---------+
+In case of UKNNOWN, please turn on the Putty client and check the configuration manually.
+ 
++-------------------------------------------------------+
+|               Table with device versions              |
++----+---------+--------+-----------------+-------------+
+| ID |   Name  | Model  | Current Version | New Version |
++----+---------+--------+-----------------+-------------+
+| 1  | TDS-1_A | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 2  |  TIR-1  | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 3  |  TAS-1  | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
++----+---------+--------+-----------------+-------------+
+If field 'New Version' is empty, check if you downloaded new versions of software into /FIRMWARE folder.
+ 
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  19/05/2022 13:50:49
+ 
+IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!
+ 
+This is a list of all saved script logs: 
+2022-05-19.txt
+Do you want to delete previous script results? If yes type '1', if not type anything else:
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else:
+1
+ 
+Is it your system a complete one or is it just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 7
+ 
+Already configured devices:
+TDS-1_A, TIR-1, TAS-1
+ 
+Which device do you want to connect? MOVE YOUR CONSOLE CABLE! SDG-1_A
+ 
+Your list of possible devices to configure: 
+SDG-1_A
+ 
+ 
+You have chosen this configuration...
+COM7 ----> SDG-1_A
+Please wait patiently...
+ 
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+ 
+Your device has been configured properly ---> SDG-1_A.
+ 
+................................
+ 
+Was this device the last one? Type '1' if yes, type anything else if not: 2
+ 
+Already configured devices:
+TDS-1_A, TIR-1, TAS-1, SDG-1_A
+ 
+Which device do you want to connect? MOVE YOUR CONSOLE CABLE! SDG-1_B
+ 
+Your list of possible devices to configure: 
+SDG-1_B
+ 
+ 
+You have chosen this configuration...
+COM7 ----> SDG-1_B
+Please wait patiently...
+ 
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+ 
+Your device has been configured properly ---> SDG-1_B.
+ 
+................................
+ 
+Was this device the last one? Type '1' if yes, type anything else if not: 1
+ 
+.....{'TDS-1_A': '172.30.100.10', 'TIR-1': '172.30.100.11', 'TAS-1': '172.30.100.12', 'SDG-1_A': '172.30.100.13', 'SDG-1_B': '172.30.100.14'}
++-------------------------------------------------------------------+
+|                    Table with devices licenses                    |
++----+---------+---------+---------+---------+------------+---------+
+| ID |  Device |   UDI   | License |  Status | Expiration |    OK   |
++----+---------+---------+---------+---------+------------+---------+
+| 1  | TDS-1_A | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 2  |  TIR-1  | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 3  |  TAS-1  | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 1  | TDS-1_A | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 2  |  TIR-1  | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 3  |  TAS-1  | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 4  | SDG-1_A | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 5  | SDG-1_B | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
++----+---------+---------+---------+---------+------------+---------+
+In case of UKNNOWN, please turn on the Putty client and check the configuration manually.
+ 
++-------------------------------------------------------+
+|               Table with device versions              |
++----+---------+--------+-----------------+-------------+
+| ID |   Name  | Model  | Current Version | New Version |
++----+---------+--------+-----------------+-------------+
+| 1  | TDS-1_A | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 2  |  TIR-1  | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 3  |  TAS-1  | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 1  | TDS-1_A | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 2  |  TIR-1  | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 3  |  TAS-1  | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 4  | SDG-1_A | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 5  | SDG-1_B | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
++----+---------+--------+-----------------+-------------+
+If field 'New Version' is empty, check if you downloaded new versions of software into /FIRMWARE folder.
+ 
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  19/05/2022 13:58:53
+ 
+IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!
+ 
+This is a list of all saved script logs: 
+2022-05-19.txt
+Do you want to delete previous script results? If yes type '1', if not type anything else:
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else:
+1
+ 
+Is it your system a complete one or is it just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 7
+ 
+Already configured devices:
+TDS-1_A, SDG-1_A, SDG-1_B, TIR-1, TAS-1
+ 
+Which device do you want to connect? MOVE YOUR CONSOLE CABLE! TDS-1_B
+ 
+Your list of possible devices to configure: 
+TDS-1_B
+ 
+ 
+You have chosen this configuration...
+COM7 ----> TDS-1_B
+Please wait patiently...
+ 
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+ 
+Your device has been configured properly ---> TDS-1_B.
+ 
+................................
+ 
+Was this device the last one? Type '1' if yes, type anything else if not: 1
+ 
+......{'TDS-1_A': '172.30.100.10', 'TIR-1': '172.30.100.11', 'TAS-1': '172.30.100.12', 'SDG-1_A': '172.30.100.13', 'SDG-1_B': '172.30.100.14', 'TDS-1_B': '172.30.100.15'}
++-------------------------------------------------------------------+
+|                    Table with devices licenses                    |
++----+---------+---------+---------+---------+------------+---------+
+| ID |  Device |   UDI   | License |  Status | Expiration |    OK   |
++----+---------+---------+---------+---------+------------+---------+
+| 1  | TDS-1_A | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 2  |  TIR-1  | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 3  |  TAS-1  | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 1  | TDS-1_A | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 2  |  TIR-1  | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 3  |  TAS-1  | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 4  | SDG-1_A | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 5  | SDG-1_B | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 1  | TDS-1_A | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 2  |  TIR-1  | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 3  |  TAS-1  | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 4  | SDG-1_A | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 5  | SDG-1_B | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 6  | TDS-1_B | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
++----+---------+---------+---------+---------+------------+---------+
+In case of UKNNOWN, please turn on the Putty client and check the configuration manually.
+ 
++-------------------------------------------------------+
+|               Table with device versions              |
++----+---------+--------+-----------------+-------------+
+| ID |   Name  | Model  | Current Version | New Version |
++----+---------+--------+-----------------+-------------+
+| 1  | TDS-1_A | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 2  |  TIR-1  | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 3  |  TAS-1  | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 1  | TDS-1_A | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 2  |  TIR-1  | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 3  |  TAS-1  | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 4  | SDG-1_A | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 5  | SDG-1_B | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 1  | TDS-1_A | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 2  |  TIR-1  | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 3  |  TAS-1  | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 4  | SDG-1_A | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 5  | SDG-1_B | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 6  | TDS-1_B | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
++----+---------+--------+-----------------+-------------+
+If field 'New Version' is empty, check if you downloaded new versions of software into /FIRMWARE folder.
+ 
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  19/05/2022 14:00:19
+ 
+IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!
+ 
+This is a list of all saved script logs: 
+2022-05-19.txt
+Do you want to delete previous script results? If yes type '1', if not type anything else:
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else:
+1
+ 
+Is it your system a complete one or is it just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 7
+ 
+Which device do you want to connect? MOVE YOUR CONSOLE CABLE! TDS-1_A
+ 
+Your list of possible devices to configure: 
+TDS-1_A
+ 
+ 
+You have chosen this configuration...
+COM7 ----> TDS-1_A
+Please wait patiently...
+ 
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+ 
+Your device has been configured properly ---> TDS-1_A.
+ 
+................................
+ 
+Was this device the last one? Type '1' if yes, type anything else if not: 2
+ 
+Already configured devices:
+TDS-1_A
+ 
+Which device do you want to connect? MOVE YOUR CONSOLE CABLE! TDS-1_B
+ 
+Your list of possible devices to configure: 
+TDS-1_B
+ 
+ 
+You have chosen this configuration...
+COM7 ----> TDS-1_B
+Please wait patiently...
+ 
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+ 
+Your device has been configured properly ---> TDS-1_B.
+ 
+................................
+ 
+Was this device the last one? Type '1' if yes, type anything else if not: 1
+ 
+....{'TDS-1_A': '172.30.100.10', 'TDS-1_B': '172.30.100.11'}
++-------------------------------------------------------------------+
+|                    Table with devices licenses                    |
++----+---------+---------+---------+---------+------------+---------+
+| ID |  Device |   UDI   | License |  Status | Expiration |    OK   |
++----+---------+---------+---------+---------+------------+---------+
+| 1  | TDS-1_A | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 2  | TDS-1_B | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
++----+---------+---------+---------+---------+------------+---------+
+In case of UKNNOWN, please turn on the Putty client and check the configuration manually.
+ 
++-------------------------------------------------------+
+|               Table with device versions              |
++----+---------+--------+-----------------+-------------+
+| ID |   Name  | Model  | Current Version | New Version |
++----+---------+--------+-----------------+-------------+
+| 1  | TDS-1_A | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 2  | TDS-1_B | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
++----+---------+--------+-----------------+-------------+
+If field 'New Version' is empty, check if you downloaded new versions of software into /FIRMWARE folder.
+ 
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  19/05/2022 14:00:53
+ 
+IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!
+ 
+This is a list of all saved script logs: 
+2022-05-19.txt
+Do you want to delete previous script results? If yes type '1', if not type anything else:
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else:
+1
+ 
+Is it your system a complete one or is it just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 7
+ 
+Already configured devices:
+TDS-1_A, TDS-1_B
+ 
+Which device do you want to connect? MOVE YOUR CONSOLE CABLE! TAS-1
+ 
+Your list of possible devices to configure: 
+TAS-1
+ 
+ 
+You have chosen this configuration...
+COM7 ----> TAS-1
+Please wait patiently...
+ 
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+ 
+Your device has been configured properly ---> TAS-1.
+ 
+................................
+ 
+Was this device the last one? Type '1' if yes, type anything else if not: 2
+ 
+Already configured devices:
+TDS-1_A, TDS-1_B, TAS-1
+ 
+Which device do you want to connect? MOVE YOUR CONSOLE CABLE! SDG-1_B
+ 
+Your list of possible devices to configure: 
+SDG-1_B
+ 
+ 
+You have chosen this configuration...
+COM7 ----> SDG-1_B
+Please wait patiently...
+ 
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+ 
+Your device has been configured properly ---> SDG-1_B.
+ 
+................................
+ 
+Was this device the last one? Type '1' if yes, type anything else if not: 1
+ 
+....{'TDS-1_A': '172.30.100.10', 'TDS-1_B': '172.30.100.11', 'TAS-1': '172.30.100.12', 'SDG-1_B': '172.30.100.13'}
++-------------------------------------------------------------------+
+|                    Table with devices licenses                    |
++----+---------+---------+---------+---------+------------+---------+
+| ID |  Device |   UDI   | License |  Status | Expiration |    OK   |
++----+---------+---------+---------+---------+------------+---------+
+| 1  | TDS-1_A | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 2  | TDS-1_B | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 1  | TDS-1_A | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 2  | TDS-1_B | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 3  |  TAS-1  | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 4  | SDG-1_B | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
++----+---------+---------+---------+---------+------------+---------+
+In case of UKNNOWN, please turn on the Putty client and check the configuration manually.
+ 
++-------------------------------------------------------+
+|               Table with device versions              |
++----+---------+--------+-----------------+-------------+
+| ID |   Name  | Model  | Current Version | New Version |
++----+---------+--------+-----------------+-------------+
+| 1  | TDS-1_A | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 2  | TDS-1_B | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 1  | TDS-1_A | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 2  | TDS-1_B | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 3  |  TAS-1  | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 4  | SDG-1_B | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
++----+---------+--------+-----------------+-------------+
+If field 'New Version' is empty, check if you downloaded new versions of software into /FIRMWARE folder.
+ 
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  19/05/2022 14:03:16
+ 
+IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!
+ 
+This is a list of all saved script logs: 
+2022-05-19.txt
+Do you want to delete previous script results? If yes type '1', if not type anything else:
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else:
+1
+ 
+Is it your system a complete one or is it just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 7
+ 
+Which device do you want to connect? MOVE YOUR CONSOLE CABLE! TDS-1_A
+ 
+Your list of possible devices to configure: 
+TDS-1_A
+ 
+ 
+You have chosen this configuration...
+COM7 ----> TDS-1_A
+Please wait patiently...
+ 
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+ 
+Your device has been configured properly ---> TDS-1_A.
+ 
+................................
+ 
+Was this device the last one? Type '1' if yes, type anything else if not: 2
+ 
+Already configured devices:
+TDS-1_A
+ 
+Which device do you want to connect? MOVE YOUR CONSOLE CABLE! TDS-1_B
+ 
+Your list of possible devices to configure: 
+TDS-1_B
+ 
+ 
+You have chosen this configuration...
+COM7 ----> TDS-1_B
+Please wait patiently...
+ 
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+ 
+Your device has been configured properly ---> TDS-1_B.
+ 
+................................
+ 
+Was this device the last one? Type '1' if yes, type anything else if not: 1
+ 
+....{'TDS-1_A': '172.30.100.10', 'TDS-1_B': '172.30.100.11'}
++-------------------------------------------------------------------+
+|                    Table with devices licenses                    |
++----+---------+---------+---------+---------+------------+---------+
+| ID |  Device |   UDI   | License |  Status | Expiration |    OK   |
++----+---------+---------+---------+---------+------------+---------+
+| 1  | TDS-1_A | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 2  | TDS-1_B | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
++----+---------+---------+---------+---------+------------+---------+
+In case of UKNNOWN, please turn on the Putty client and check the configuration manually.
+ 
++-------------------------------------------------------+
+|               Table with device versions              |
++----+---------+--------+-----------------+-------------+
+| ID |   Name  | Model  | Current Version | New Version |
++----+---------+--------+-----------------+-------------+
+| 1  | TDS-1_A | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 2  | TDS-1_B | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
++----+---------+--------+-----------------+-------------+
+If field 'New Version' is empty, check if you downloaded new versions of software into /FIRMWARE folder.
+ 
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  19/05/2022 14:03:50
+ 
+IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!
+ 
+This is a list of all saved script logs: 
+2022-05-19.txt
+Do you want to delete previous script results? If yes type '1', if not type anything else:
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else:
+1
+ 
+Is it your system a complete one or is it just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 7
+ 
+Already configured devices:
+TDS-1_A, TDS-1_B
+ 
+Which device do you want to connect? MOVE YOUR CONSOLE CABLE! TAS-1
+ 
+Your list of possible devices to configure: 
+TAS-1
+ 
+ 
+You have chosen this configuration...
+COM7 ----> TAS-1
+Please wait patiently...
+ 
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+ 
+Your device has been configured properly ---> TAS-1.
+ 
+................................
+ 
+Was this device the last one? Type '1' if yes, type anything else if not: T
+ 
+Already configured devices:
+TDS-1_A, TDS-1_B, TAS-1
+ 
+Which device do you want to connect? MOVE YOUR CONSOLE CABLE! TIR-1
+ 
+Your list of possible devices to configure: 
+TIR-1
+ 
+ 
+You have chosen this configuration...
+COM7 ----> TIR-1
+Please wait patiently...
+ 
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+ 
+Your device has been configured properly ---> TIR-1.
+ 
+................................
+ 
+Was this device the last one? Type '1' if yes, type anything else if not: 1
+ 
+....{'TDS-1_A': '172.30.100.10', 'TDS-1_B': '172.30.100.11', 'TAS-1': '172.30.100.12', 'TIR-1': '172.30.100.13'}
++-------------------------------------------------------------------+
+|                    Table with devices licenses                    |
++----+---------+---------+---------+---------+------------+---------+
+| ID |  Device |   UDI   | License |  Status | Expiration |    OK   |
++----+---------+---------+---------+---------+------------+---------+
+| 1  | TDS-1_A | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 2  | TDS-1_B | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 3  | TDS-1_A | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 4  | TDS-1_B | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 5  |  TAS-1  | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 6  |  TIR-1  | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
++----+---------+---------+---------+---------+------------+---------+
+In case of UKNNOWN, please turn on the Putty client and check the configuration manually.
+ 
++-------------------------------------------------------+
+|               Table with device versions              |
++----+---------+--------+-----------------+-------------+
+| ID |   Name  | Model  | Current Version | New Version |
++----+---------+--------+-----------------+-------------+
+| 1  | TDS-1_A | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 2  | TDS-1_B | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 3  | TDS-1_A | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 4  | TDS-1_B | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 5  |  TAS-1  | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 6  |  TIR-1  | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
++----+---------+--------+-----------------+-------------+
+If field 'New Version' is empty, check if you downloaded new versions of software into /FIRMWARE folder.
+ 
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  19/05/2022 14:09:54
+ 
+IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!
+ 
+This is a list of all saved script logs: 
+2022-05-19.txt
+Do you want to delete previous script results? If yes type '1', if not type anything else:
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else:
+1
+ 
+Is it your system a complete one or is it just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 7
+ 
+Which device do you want to connect? MOVE YOUR CONSOLE CABLE! TDS-1_A
+ 
+Your list of possible devices to configure: 
+TDS-1_A
+ 
+ 
+You have chosen this configuration...
+COM7 ----> TDS-1_A
+Please wait patiently...
+ 
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+ 
+Your device has been configured properly ---> TDS-1_A.
+ 
+................................
+ 
+Was this device the last one? Type '1' if yes, type anything else if not: 2
+ 
+Already configured devices:
+TDS-1_A
+ 
+Which device do you want to connect? MOVE YOUR CONSOLE CABLE! TDS-1_B
+ 
+Your list of possible devices to configure: 
+TDS-1_B
+ 
+ 
+You have chosen this configuration...
+COM7 ----> TDS-1_B
+Please wait patiently...
+ 
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+ 
+Your device has been configured properly ---> TDS-1_B.
+ 
+................................
+ 
+Was this device the last one? Type '1' if yes, type anything else if not: 1
+ 
+....{'TDS-1_A': '172.30.100.10', 'TDS-1_B': '172.30.100.11'}
++-------------------------------------------------------------------+
+|                    Table with devices licenses                    |
++----+---------+---------+---------+---------+------------+---------+
+| ID |  Device |   UDI   | License |  Status | Expiration |    OK   |
++----+---------+---------+---------+---------+------------+---------+
+| 1  | TDS-1_A | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 2  | TDS-1_B | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
++----+---------+---------+---------+---------+------------+---------+
+In case of UKNNOWN, please turn on the Putty client and check the configuration manually.
+ 
++-------------------------------------------------------+
+|               Table with device versions              |
++----+---------+--------+-----------------+-------------+
+| ID |   Name  | Model  | Current Version | New Version |
++----+---------+--------+-----------------+-------------+
+| 1  | TDS-1_A | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 2  | TDS-1_B | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
++----+---------+--------+-----------------+-------------+
+If field 'New Version' is empty, check if you downloaded new versions of software into /FIRMWARE folder.
+ 
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  19/05/2022 14:10:31
+ 
+IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!
+ 
+This is a list of all saved script logs: 
+2022-05-19.txt
+Do you want to delete previous script results? If yes type '1', if not type anything else:
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else:
+1
+ 
+Is it your system a complete one or is it just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 7
+ 
+Already configured devices:
+TDS-1_A, TDS-1_B
+ 
+Which device do you want to connect? MOVE YOUR CONSOLE CABLE! TIR-1
+ 
+Your list of possible devices to configure: 
+TIR-1
+ 
+ 
+You have chosen this configuration...
+COM7 ----> TIR-1
+Please wait patiently...
+ 
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+ 
+Your device has been configured properly ---> TIR-1.
+ 
+................................
+ 
+Was this device the last one? Type '1' if yes, type anything else if not: 2
+ 
+Already configured devices:
+TDS-1_A, TDS-1_B, TIR-1
+ 
+Which device do you want to connect? MOVE YOUR CONSOLE CABLE! TAS-1
+ 
+Your list of possible devices to configure: 
+TAS-1
+ 
+ 
+You have chosen this configuration...
+COM7 ----> TAS-1
+Please wait patiently...
+ 
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+ 
+Your device has been configured properly ---> TAS-1.
+ 
+................................
+ 
+Was this device the last one? Type '1' if yes, type anything else if not: 1
+ 
+....{'TDS-1_A': '172.30.100.10', 'TDS-1_B': '172.30.100.11', 'TIR-1': '172.30.100.12', 'TAS-1': '172.30.100.13'}
++-------------------------------------------------------------------+
+|                    Table with devices licenses                    |
++----+---------+---------+---------+---------+------------+---------+
+| ID |  Device |   UDI   | License |  Status | Expiration |    OK   |
++----+---------+---------+---------+---------+------------+---------+
+| 3  | TDS-1_A | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 4  | TDS-1_B | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 5  |  TIR-1  | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 6  |  TAS-1  | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
++----+---------+---------+---------+---------+------------+---------+
+In case of UKNNOWN, please turn on the Putty client and check the configuration manually.
+ 
++-------------------------------------------------------+
+|               Table with device versions              |
++----+---------+--------+-----------------+-------------+
+| ID |   Name  | Model  | Current Version | New Version |
++----+---------+--------+-----------------+-------------+
+| 3  | TDS-1_A | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 4  | TDS-1_B | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 5  |  TIR-1  | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 6  |  TAS-1  | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
++----+---------+--------+-----------------+-------------+
+If field 'New Version' is empty, check if you downloaded new versions of software into /FIRMWARE folder.
+ 
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  19/05/2022 14:12:06
+ 
+IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!
+ 
+This is a list of all saved script logs: 
+2022-05-19.txt
+Do you want to delete previous script results? If yes type '1', if not type anything else:
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else:
+1
+ 
+Is it your system a complete one or is it just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 7
+ 
+Which device do you want to connect? MOVE YOUR CONSOLE CABLE! TDS-1_A
+ 
+Your list of possible devices to configure: 
+TDS-1_A
+ 
+ 
+You have chosen this configuration...
+COM7 ----> TDS-1_A
+Please wait patiently...
+ 
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+ 
+Your device has been configured properly ---> TDS-1_A.
+ 
+................................
+ 
+Was this device the last one? Type '1' if yes, type anything else if not: 2
+ 
+Already configured devices:
+TDS-1_A
+ 
+Which device do you want to connect? MOVE YOUR CONSOLE CABLE! TDS-1_B
+ 
+Your list of possible devices to configure: 
+TDS-1_B
+ 
+ 
+You have chosen this configuration...
+COM7 ----> TDS-1_B
+Please wait patiently...
+ 
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+ 
+Your device has been configured properly ---> TDS-1_B.
+ 
+................................
+ 
+Was this device the last one? Type '1' if yes, type anything else if not: 1
+ 
+....{'TDS-1_A': '172.30.100.10', 'TDS-1_B': '172.30.100.11'}
++-------------------------------------------------------------------+
+|                    Table with devices licenses                    |
++----+---------+---------+---------+---------+------------+---------+
+| ID |  Device |   UDI   | License |  Status | Expiration |    OK   |
++----+---------+---------+---------+---------+------------+---------+
+| 1  | TDS-1_A | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 2  | TDS-1_B | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
++----+---------+---------+---------+---------+------------+---------+
+In case of UKNNOWN, please turn on the Putty client and check the configuration manually.
+ 
++-------------------------------------------------------+
+|               Table with device versions              |
++----+---------+--------+-----------------+-------------+
+| ID |   Name  | Model  | Current Version | New Version |
++----+---------+--------+-----------------+-------------+
+| 1  | TDS-1_A | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 2  | TDS-1_B | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
++----+---------+--------+-----------------+-------------+
+If field 'New Version' is empty, check if you downloaded new versions of software into /FIRMWARE folder.
+ 
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  19/05/2022 14:12:46
+ 
+IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!
+ 
+This is a list of all saved script logs: 
+2022-05-19.txt
+Do you want to delete previous script results? If yes type '1', if not type anything else:
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else:
+1
+ 
+Is it your system a complete one or is it just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 7
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 7
+ 
+Already configured devices:
+TDS-1_A, TDS-1_B
+ 
+Which device do you want to connect? MOVE YOUR CONSOLE CABLE! TIR-1
+ 
+Your list of possible devices to configure: 
+TIR-1
+ 
+ 
+You have chosen this configuration...
+COM7 ----> TIR-1
+Please wait patiently...
+ 
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+ 
+Your device has been configured properly ---> TIR-1.
+ 
+................................
+ 
+Was this device the last one? Type '1' if yes, type anything else if not: 2
+ 
+Already configured devices:
+TDS-1_A, TDS-1_B, TIR-1
+ 
+Which device do you want to connect? MOVE YOUR CONSOLE CABLE! TAS-1
+ 
+Your list of possible devices to configure: 
+TAS-1
+ 
+ 
+You have chosen this configuration...
+COM7 ----> TAS-1
+Please wait patiently...
+ 
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+ 
+Your device has been configured properly ---> TAS-1.
+ 
+................................
+ 
+Was this device the last one? Type '1' if yes, type anything else if not: 1
+ 
+....{'TDS-1_A': '172.30.100.10', 'TDS-1_B': '172.30.100.11', 'TIR-1': '172.30.100.12', 'TAS-1': '172.30.100.13'}
++-------------------------------------------------------------------+
+|                    Table with devices licenses                    |
++----+---------+---------+---------+---------+------------+---------+
+| ID |  Device |   UDI   | License |  Status | Expiration |    OK   |
++----+---------+---------+---------+---------+------------+---------+
+| 1  | TDS-1_A | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 2  | TDS-1_B | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 3  |  TIR-1  | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
+| 4  |  TAS-1  | UNKNOWN | UNKNOWN | UNKNOWN |  UNKNOWN   | UNKNOWN |
++----+---------+---------+---------+---------+------------+---------+
+In case of UKNNOWN, please turn on the Putty client and check the configuration manually.
+ 
++-------------------------------------------------------+
+|               Table with device versions              |
++----+---------+--------+-----------------+-------------+
+| ID |   Name  | Model  | Current Version | New Version |
++----+---------+--------+-----------------+-------------+
+| 1  | TDS-1_A | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 2  | TDS-1_B | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 3  |  TIR-1  | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 4  |  TAS-1  | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
++----+---------+--------+-----------------+-------------+
+If field 'New Version' is empty, check if you downloaded new versions of software into /FIRMWARE folder.
+ 
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. 
