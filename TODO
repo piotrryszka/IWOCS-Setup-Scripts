@@ -5,13 +5,6 @@ TODO NEXT
 obsluga tej wersji softu ulepszyc jutro, lepszy UX i musi byc przekazywanie co to za model, aby poprawnie wczytac jego mozliwa nowa wersje softu
 podsumowanie zrobic jakiesc
 
-PRZEROBIC TO ZBIERANIE WERSJI I LICENCJI PO SSH BO BEDZIE LATWIEJ ZBIERAC OUTPUT
-
-O CO CHODZI Z TYM LACZENIEM SIE PO SSH
-
-TODO WIELOWATKOWOSC
-https://www.tutorialspoint.com/python3/python_multithreading.htm
-
 TODO FINAL
 PY2EXE i zrobienie z tego skryptu odpalanego na wszystkich mozliwych urzadzeniach
 albo pyinstaller albo cokolwiek innego tylko zeby to exe zadzialalo
