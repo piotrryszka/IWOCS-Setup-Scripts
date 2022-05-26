@@ -15,8 +15,8 @@ from config.data import decorator_1, count_ping, ip_hub, dict_ip, sleep_time, fi
 def printing_logs(lang_dict):
     """
 
-    :param lang_dict:
-    :return:
+    :param lang_dict: dictionary with all prompts in data.py
+    :return: NULL
     """
     files = os.listdir('logs/console_logs')
     # printing files
@@ -27,8 +27,8 @@ def printing_logs(lang_dict):
 def creating_timestamp(lang_dict):
     """
 
-    :param lang_dict:
-    :return:
+    :param lang_dict: dictionary with all prompts in data.py
+    :return: NULL
     """
     # datetime object containing current date and time
     now = datetime.now()
@@ -40,8 +40,8 @@ def creating_timestamp(lang_dict):
 def start_tftp(lang_dict):
     """
 
-    :param lang_dict:
-    :return:
+    :param lang_dict: dictionary with all prompts in data.py
+    :return: NULL
     """
     print(lang_dict['tftp_start'])
     print(decorator_1)
@@ -51,8 +51,8 @@ def start_tftp(lang_dict):
 def user_tftp(lang_dict):
     """
 
-    :param lang_dict:
-    :return:
+    :param lang_dict: dictionary with all prompts in data.py
+    :return: NULL
     """
     continue_flag = True
     print(lang_dict['tftp_folder'])
@@ -74,7 +74,7 @@ def user_tftp(lang_dict):
 def final_tftp():
     """
 
-    :return:
+    :return: NULL
     """
     output_netstat = str(subprocess.check_output("netstat -na | findstr /R ^UDP", shell=True)).strip()
     check_string = 'UDP    0.0.0.0:69'
@@ -88,8 +88,8 @@ def final_tftp():
 def check_com(lang_dict):
     """
 
-    :param lang_dict:
-    :return:
+    :param lang_dict: dictionary with all prompts in data.py
+    :return: NULL
     """
     running_flag = True
     while running_flag:

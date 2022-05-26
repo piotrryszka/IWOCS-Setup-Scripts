@@ -15,8 +15,8 @@ from lib.functions import adding_row
 def opening_device_list(file_name):
     """
 
-    :param file_name:
-    :return:
+    :param file_name: name of file (device name)
+    :return: NULL
     """
     with open(f'static_files/{file_name}', 'r') as file_devices:
                         lines = file_devices.read()
@@ -27,8 +27,8 @@ def opening_device_list(file_name):
 def reading_conf_files(file):
     """
 
-    :param file:
-    :return:
+    :param file: name of file to be configured
+    :return: list with commands to be sent by COM to this device
     """
     with open(f'temp/{file}') as file:
         # getting commands from list
@@ -40,10 +40,10 @@ def reading_conf_files(file):
 def creating_proper_configuration(user_device, port_num, ip_add):
     """
 
-    :param user_device:
-    :param port_num:
-    :param ip_add:
-    :return:
+    :param user_device: name of the device being configured for example TDS-1_A
+    :param port_num: number of gigabit ethernet ports
+    :param ip_add: initial ip address to be set on this device
+    :return: tuple with next ip address; string with file name and ip address
     """
     with open('initial-configuration-files/cisco-switch') as f:
         lines = f.read()
@@ -70,12 +70,12 @@ def creating_proper_configuration(user_device, port_num, ip_add):
         return ip_add, f'cisco-switch-{user_device}-172.30.100.{str(ip_add-1)} '
 
 # deleting logs and handling logs files
-def deleting_files(lang_dict, user_input):
+def deleting_files(user_input):
     """
 
-    :param lang_dict:
-    :param user_input:
-    :return:
+    :param lang_dict: dictionary with all prompts in data.py
+    :param user_input: info provided by the user 0/1/anything else
+    :return: flag True/False
     """
     to_leave = False
     files = os.listdir('logs/console_logs')
@@ -98,8 +98,8 @@ def deleting_files(lang_dict, user_input):
 def deleting_conf(lang_dict):
     """
     deleting initial configuration files created by the user while using script
-    :param lang_dict:
-    :return:
+    :param lang_dict: dictionary with all prompts in data.py
+    :return: NULL
     """
     files = os.listdir('temp')
     # deleting files
@@ -117,8 +117,8 @@ def deleting_conf(lang_dict):
 def saving_dev(dev_name):
     """
 
-    :param dev_name:
-    :return:
+    :param dev_name: device name for example TDS-1_A
+    :return: NULL
     """
     with open('temp/already_conf.txt', 'a') as f:
         f.write(dev_name)
@@ -128,7 +128,7 @@ def saving_dev(dev_name):
 def list_saved_dev():
     """
 
-    :return:
+    :return: NULL
     """
     new_dict = {}
     try:
@@ -144,8 +144,8 @@ def list_saved_dev():
 def saving_license(table):
     """
 
-    :param table:
-    :return:
+    :param table: table with licenses created in main.py
+    :return: string with name of the file where the table is
     """
     # get the date object from datetime object
     # creating timestamp
@@ -162,14 +162,14 @@ def saving_license(table):
 def saving_info_lic(counter_table, user_device, udi, license, status, expiration, ok):
     """
 
-    :param counter_table:
-    :param user_device:
-    :param udi:
-    :param license:
-    :param status:
-    :param expiration:
-    :param ok:
-    :return:
+    :param counter_table: counter in table with id
+    :param user_device: device already configured like TDS-1_A
+    :param udi: udi status
+    :param license: license status
+    :param status: status
+    :param expiration: expiration of license
+    :param ok: ok or not for special devices
+    :return: counter table to increment ID
     """
     with open('temp/licenses.txt', 'a') as file:
         file.write(f'{counter_table} {user_device} {udi} {license} {status} {expiration} {ok}')
@@ -181,8 +181,8 @@ def saving_info_lic(counter_table, user_device, udi, license, status, expiration
 def reading_license(conf_table):
     """
 
-    :param conf_table:
-    :return:
+    :param conf_table: configuration table from main.py
+    :return: NULL
     """
     with open('temp/licenses.txt', 'r') as file:
         for line in file:
@@ -193,7 +193,7 @@ def reading_license(conf_table):
 def deleting_dev_logs():
     """
 
-    :return:
+    :return: NULL
     """
     files = os.listdir('logs/device_logs')
     # deleting files
@@ -208,7 +208,7 @@ def deleting_dev_logs():
 def deleting_project_logs():
     """
 
-    :return:
+    :return: NULL
     """
     files = os.listdir('logs/project_logs')
     # deleting files
@@ -223,7 +223,7 @@ def deleting_project_logs():
 def deleting_dev_license():
     """
 
-    :return:
+    :return: NULL
     """
     files = os.listdir('support/info_tables/license')
     # deleting files
@@ -238,7 +238,7 @@ def deleting_dev_license():
 def deleting_dev_version():
     """
 
-    :return:
+    :return: NULL
     """
     files = os.listdir('support/info_tables/version')
     # deleting files
@@ -253,7 +253,7 @@ def deleting_dev_version():
 def deleting_dev_ping():
     """
 
-    :return:
+    :return: NULL
     """
     files = os.listdir('support/info_tables/ping')
     # deleting files
@@ -268,7 +268,7 @@ def deleting_dev_ping():
 def deleting_dev_pro_ping():
     """
 
-    :return:
+    :return: NULL
     """
     files = os.listdir('support/info_tables/ping_project')
     # deleting files
@@ -283,8 +283,8 @@ def deleting_dev_pro_ping():
 def read_version(id, user_device):
     """
 
-    :param id:
-    :param user_device:
+    :param id: id number
+    :param user_device: proper device like TDS-1_A
     :return:
     """
     with open('temp/info_ver.txt', 'r') as my_file:
@@ -321,8 +321,8 @@ def read_version(id, user_device):
 def saving_ver_table(table):
     """
 
-    :param table:
-    :return:
+    :param table: version table created in main.py
+    :return: NULL
     """
     dateTimeObj = datetime.now()
     dateObj = dateTimeObj.date()
@@ -336,8 +336,8 @@ def saving_ver_table(table):
 def add_ip(dev_list):
     """
 
-    :param dev_list:
-    :return:
+    :param dev_list: list of devices to have upgraded the software
+    :return: full list of the devices with ip addresses
     """
     with open('temp/already_conf.txt') as file:
         lines = file.readlines()
@@ -353,8 +353,8 @@ def add_ip(dev_list):
 def saving_ping_table(table):
     """
 
-    :param table:
-    :return:
+    :param table: ping table created in main.py
+    :return: NULL
     """
     dateTimeObj = datetime.now()
     dateObj = dateTimeObj.date()
@@ -368,8 +368,8 @@ def saving_ping_table(table):
 def checking_stat_lic(lang_dict):
     """
 
-    :param lang_dict:
-    :return:
+    :param lang_dict: dictionary with prompts in data.py
+    :return: NULL
     """
     # listing directories of files
     files = os.listdir(f'firmware')
@@ -396,7 +396,7 @@ def checking_stat_lic(lang_dict):
 def del_ver_logs():
     """
 
-    :return:
+    :return: NULL
     """
     # cannot delete the file from today's date
     try:

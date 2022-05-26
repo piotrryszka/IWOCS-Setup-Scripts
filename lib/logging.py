@@ -7,6 +7,9 @@ from datetime import datetime
 
 
 class Logger(object):
+    """
+        ONLY COLLECTING EVERYTHING FROM CONSOLE
+    """
     # creating time stamp
     exact_time = datetime.date(datetime.now())
 

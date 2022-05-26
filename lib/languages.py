@@ -7,7 +7,7 @@ from config.language import language_dictionary
 def listing_languages():
     """
 
-    :return:
+    :return: list of possible languages to be used
     """
     language_list = []
     for key in language_dictionary:
@@ -18,8 +18,8 @@ def listing_languages():
 def reading_language(user_lang):
     """
 
-    :param user_lang:
-    :return:
+    :param user_lang: language chosen by the user
+    :return: list of prompts in chosen language
     """
     return language_dictionary[user_lang]
 

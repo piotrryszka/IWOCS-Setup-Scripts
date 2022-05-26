@@ -11,9 +11,9 @@ from config.data import password, username, decorator_1, server_ip
 def ssh_con(file, host):
     """
 
-    :param file:
-    :param host:
-    :return:
+    :param file: name of project configuration of the device
+    :param host: initial ip address of the device
+    :return: NULL
     """
     # creating time stamp
     now = datetime.now()
@@ -54,7 +54,7 @@ def ssh_con(file, host):
             # waiting to give time to device react
             sleep(2)
 
-         # error handling while ssh connection
+        # error handling while ssh connection
         except (NetmikoTimeoutException, NetmikoAuthenticationException) as error:
             print(error)
             print(decorator_1)
@@ -63,10 +63,10 @@ def ssh_con(file, host):
 def ssh_download(host, device, command):
     """
 
-    :param host:
-    :param device:
-    :param command:
-    :return:
+    :param host: project ip address
+    :param device: device for example IE4010
+    :param command: command sent to the device for example: sh run
+    :return: NULL
     """
     # creating timestamp
     now = datetime.now()
@@ -124,8 +124,8 @@ def ssh_download(host, device, command):
 def download_license_ssh(host):
     """
 
-    :param host:
-    :return:
+    :param host: initial ip address
+    :return: NULL
     """
     # creating timestamp
     now = datetime.now()
@@ -222,9 +222,8 @@ def download_license_ssh(host):
 def sh_version(host):
     """
 
-    :param host:
-    :param ser:
-    :return:
+    :param host: initial ip address
+    :return: NULL
     """
     # creating timestamp
     now = datetime.now()
