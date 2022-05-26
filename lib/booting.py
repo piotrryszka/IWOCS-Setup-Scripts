@@ -10,8 +10,8 @@ from lib.commands import send_to_console
 def checking_booting(port):
     """
 
-    :param port:
-    :return:
+    :param port: COM port number
+    :return: flag if the device are booted or not
     """
     correct_flag = False
     verifying_string = ''

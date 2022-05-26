@@ -13,10 +13,10 @@ from config.data import ie2000, ie4010, decorator_1, commands_list
 # sending commands to console
 def send_to_console(ser_fun: Serial, command: str, wait_time: float = 0.2):
     """
-    :param ser_fun:
-    :param command:
-    :param wait_time:
-    :return:
+    :param ser_fun: Serial COM
+    :param command: command we want to execute od the device
+    :param wait_time: waiting time till executing next command (device is waiting)
+    :return: sent string
     """
     command_to_send = command + "\r\n"
     ser_fun.write(command_to_send.encode('utf-8'))
@@ -28,8 +28,8 @@ def send_to_console(ser_fun: Serial, command: str, wait_time: float = 0.2):
 def checking_switch_ports(ser_port):
     """
 
-    :param ser_port:
-    :return:
+    :param ser_port: serial port number
+    :return: gigabit/fast ethernet ports with its quantity
     """
     send_to_console(ser_port, 'no')
     send_to_console(ser_port, 'en')
@@ -49,8 +49,8 @@ def checking_switch_ports(ser_port):
 def checking_ip_address(lang_dict):
     """
 
-    :param lang_dict:
-    :return:
+    :param lang_dict: dictionary with all prompts in data.py
+    :return: flag if set IP is correct or not
     """
     print(decorator_1)
     print(lang_dict['ip_prompt'])
@@ -81,10 +81,10 @@ def checking_ip_address(lang_dict):
 def checking_device(ser_port, user_device, lang_dict):
     """
 
-    :param ser_port:
-    :param user_device:
-    :param lang_dict:
-    :return:
+    :param ser_port: serial port number
+    :param user_device: device chosen by the user for example TDS-1_A
+    :param lang_dict: dictionary with all prompts in data.py
+    :return: flag if the device is properly chosen and it is proper model like IE4010
     """
     good_conf = False
     check_device = send_to_console(ser_port, 'sh lic udi', 3)
@@ -112,8 +112,8 @@ def checking_device(ser_port, user_device, lang_dict):
 def check_tftp(lang_dict):
     """
 
-    :param lang_dict:
-    :return:
+    :param lang_dict: dictionary with all prompts in data.py
+    :return: flag if tftp server is running or not
     """
     print(decorator_1)
     print(lang_dict['tftp_server'])
@@ -147,8 +147,8 @@ def check_tftp(lang_dict):
 def to_conf_mode(ser_port):
     """
 
-    :param ser_port:
-    :return:
+    :param ser_port: serial port number
+    :return: NULL
     """
     commands_list = ['en', 'conf t']
     for com in commands_list:
@@ -158,8 +158,8 @@ def to_conf_mode(ser_port):
 def gen_crypto_keys(ser):
     """
 
-    :param ser:
-    :return:
+    :param ser: serial port number
+    :return: NULL
     """
     to_conf_mode(ser)
     send_to_console(ser, 'crypto key generate rsa mod 2048')
