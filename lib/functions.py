@@ -472,7 +472,7 @@ def check_booting_ping(lang_dict, dict_dev):
 def ping_initial():
     """
 
-    :return: dictionary which contains initial configured devices that are available to ping 
+    :return: dictionary which contains initial configured devices that are available to ping
     """
     with open('temp/already_conf.txt', 'r') as file:
         # dic with ip addresses
