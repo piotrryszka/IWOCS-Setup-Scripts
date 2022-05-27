@@ -106,11 +106,11 @@ def check_com(lang_dict):
 def order_dev(conf_devices_list, device_order, new_dict, order_dev_dict):
     """
 
-    :param conf_devices_list:
-    :param device_order:
-    :param new_dict:
-    :param order_dev_dict:
-    :return:
+    :param conf_devices_list: list of devices to be rebooted
+    :param device_order: order of devices to be rebooted
+    :param new_dict: dict with available devices
+    :param order_dev_dict: order of devices to be configured
+    :return: returning proper order of available devices to be rebooted
     """
     # looking for the correct order of restarting devices
     for k in order_dev_dict:
@@ -130,9 +130,9 @@ def order_dev(conf_devices_list, device_order, new_dict, order_dev_dict):
 def list_dev(device_list, lang_dict):
     """
 
-    :param device_list:
-    :param lang_dict:
-    :return:
+    :param device_list: list of initial configured devices
+    :param lang_dict: dictionary of prompts from data.py
+    :return: NULL
     """
     device_list = list(dict.fromkeys(device_list))
     if len(device_list)>0:
@@ -146,7 +146,7 @@ def list_dev(device_list, lang_dict):
 def create_table():
     """
 
-    :return:
+    :return: table created with license header
     """
     tb = pt()
     # add headers
@@ -158,25 +158,25 @@ def create_table():
 def adding_row(table, count, device, udi, type_license, status_license, time_license, ok):
     """
 
-    :param table:
-    :param count:
-    :param device:
-    :param udi:
-    :param type_license:
-    :param status_license:
-    :param time_license:
-    :param ok:
-    :return:
+    :param table: table created by prettytable
+    :param count: counter of ID
+    :param device: device like TDS-1_A
+    :param udi: udi info of device
+    :param type_license: type of license
+    :param status_license: status of the license
+    :param time_license: time duration of license
+    :param ok: ok or not ok for the configuration of
+    :return: counter of the device like ID
     """
     table.add_row([count, device, udi, type_license, status_license, time_license, ok])
-    count+=1
+    count += 1
     return count
 
 # closing tftp server application
 def kill_tftp():
     """
 
-    :return:
+    :return: NULL
     """
     try:
         # stdout/stderr argument forbid to print on console output and error output
@@ -188,8 +188,8 @@ def kill_tftp():
 def kill_putty(decision):
     """
 
-    :param decision:
-    :return:
+    :param decision: decision taken by the user for example 1 or 0
+    :return: NULL
     """
     if decision == '1':
         try:
@@ -198,11 +198,12 @@ def kill_putty(decision):
         except:
             pass
 
+# creating table with version on the device
 def create_table_ver(lang_dict):
     """
 
-    :param lang_dict:
-    :return:
+    :param lang_dict: dictionary of prompts from language.py
+    :return: table with versions header
     """
     tb = pt()
     # add headers
@@ -215,8 +216,8 @@ def create_table_ver(lang_dict):
 def add_row_ver(table):
     """
 
-    :param table:
-    :return:
+    :param table: table from prettytable module
+    :return: NULL
     """
     with open('temp/version.txt', 'r') as text_file:
         for line in text_file:
@@ -227,8 +228,8 @@ def add_row_ver(table):
 def prepare_software(lang_dict):
     """
 
-    :param lang_dict:
-    :return:
+    :param lang_dict: dictionary with prompts from language.py
+    :return: list with the devices needs to be updated
     """
     counter = 0
     # flag to be updated to leave loop
@@ -274,8 +275,8 @@ def prepare_software(lang_dict):
 def check_ping(lang_dict):
     """
 
-    :param lang_dict:
-    :return:
+    :param lang_dict: dictionary with prompts from language.py
+    :return: table with pings status
     """
     # empty string
     result = ''
@@ -317,11 +318,11 @@ def check_ping(lang_dict):
 def check_license(udi, state_string, type_string, ipservices_string):
     """
 
-    :param udi:
-    :param state_string:
-    :param type_string:
-    :param ipservices_string:
-    :return:
+    :param udi: string with udi info
+    :param state_string: string with state of license info
+    :param type_string: string with type of license info
+    :param ipservices_string: string with info about license status
+    :return: ok or not parameter for different types of device like IE4010 or IE2000
     """
     # checking for IE4010
     if state_string == 'Active, In Use' and type_string == 'PermanentRightToUse' and ipservices_string == 'ipservices' and 'IE-4010' in udi:
@@ -341,9 +342,9 @@ def check_license(udi, state_string, type_string, ipservices_string):
 def create_dir(name_dev, lang_dict):
     """
 
-    :param name_dev:
-    :param lang_dict:
-    :return:
+    :param name_dev: name of the device for example TDS-1_A
+    :param lang_dict: dictionary of prompts from language.py
+    :return: NULL
     """
     # create directories
     dirName = name_dev
@@ -363,7 +364,7 @@ def create_dir(name_dev, lang_dict):
 def check_hub_ping():
     """
 
-    :return:
+    :return: flag if we can ping hub or not (True/False)
     """
     ping_status = False
     ping_output = ping(f'{ip_hub}', count=count_ping)
@@ -382,9 +383,9 @@ def check_hub_ping():
 def ping_projects(lang_dict, dict_dev):
     """
 
-    :param lang_dict:
-    :param dict_dev:
-    :return:
+    :param lang_dict: dictionary of prompts from language.py
+    :param dict_dev: dictionary with project configured devices
+    :return: NULL
     """
     # printing prompt what is done now
     print(lang_dict['current_ping'])
@@ -429,9 +430,9 @@ def ping_projects(lang_dict, dict_dev):
 def check_booting_ping(lang_dict, dict_dev):
     """
 
-    :param lang_dict:
-    :param dict_dev:
-    :return:
+    :param lang_dict: dictionary of prompts from language.py
+    :param dict_dev: dictionary with project configured devices
+    :return: NULL
     """
     # flag to run function
     running_flag = True
@@ -471,7 +472,7 @@ def check_booting_ping(lang_dict, dict_dev):
 def ping_initial():
     """
 
-    :return:
+    :return: dictionary which contains initial configured devices that are available to ping 
     """
     with open('temp/already_conf.txt', 'r') as file:
         # dic with ip addresses
