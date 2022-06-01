@@ -485,6 +485,7 @@ def ping_initial():
         for line in file:
             list_license = line.split()
             final_dic[list_license[0]] = f'172.30.100.{list_license[1]}'
+        final_dic_test = final_dic.copy()
         while running_flag:
             for k in list(final_dic):
                 # sending ping
@@ -509,4 +510,4 @@ def ping_initial():
                 # leaving whole part after timeout from data.py
                 if counter >= finish_time/100:
                     running_flag = False
-    return final_dic
+    return final_dic_test

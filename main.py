@@ -77,7 +77,7 @@ while running_flag:
     # deleting console logs, pretty table with licenses files and device logs files
     printing_logs(lang_expressions)
     user_del = input(lang_expressions['deleting_logs'])
-    del_flag = deleting_files(lang_dict=lang_expressions, user_input=user_del)
+    del_flag = deleting_files(user_input=user_del)
     if user_del == '1':
         # calling functions to delete support and logs files
         deleting_dev_license()
@@ -184,78 +184,78 @@ while running_flag:
 
                         # TODO: testing needs to be uncommented
                         # STARTING BIG TRY WINDOWS
-                        try:
-                            # setting COM connection
-                            # ser = Serial(COM_string, COM_speed)
+                    # try:
+                        # setting COM connection
+                        ser = Serial(COM_string, COM_speed)
 
-                            # waiting for router/switch to boot
-                            # user_boot_flag = checking_booting(port = ser)
+                        # waiting for router/switch to boot
+                        user_boot_flag = checking_booting(port = ser)
 
-                            # counting number of gigabit and fast ports
-                            # device_ports = checking_switch_ports(ser_port = ser)
+                        # counting number of gigabit and fast ports
+                        device_ports = checking_switch_ports(ser_port = ser)
 
-                            # checking if device is really the device, which was wanted by user
-                            # proper_device = checking_device(ser_port = ser, user_device = user_device, lang_dict = lang_expressions)
+                        # checking if device is really the device, which was wanted by user
+                        proper_device = checking_device(ser_port = ser, user_device = user_device, lang_dict = lang_expressions)
 
-                            # returning next ip number and full name of configured device to download to specified device
-                            # our_conf = creating_proper_configuration(user_device = user_device, port_num = device_ports['Gigabit'], ip_add = ip_number)
-                            our_conf = creating_proper_configuration(user_device=user_device, port_num=1, ip_add=ip_number)
+                        # returning next ip number and full name of configured device to download to specified device
+                        our_conf = creating_proper_configuration(user_device = user_device, port_num = device_ports['Gigabit'], ip_add = ip_number)
+                        # our_conf = creating_proper_configuration(user_device=user_device, port_num=1, ip_add=ip_number)
 
-                            # remembering old IP number, last octet is important to save to txt file
-                            ip_save = ip_number
+                        # remembering old IP number, last octet is important to save to txt file
+                        ip_save = ip_number
 
-                            # returning tuple with full name device and next iip number to bes used
-                            actual_device = our_conf[1]  # name of device
-                            ip_number = our_conf[0]  # new ip address incremented by +1
+                        # returning tuple with full name device and next iip number to bes used
+                        actual_device = our_conf[1]  # name of device
+                        ip_number = our_conf[0]  # new ip address incremented by +1
 
-                            # saving ip address to txt file
-                            with open('temp/ip_number.txt', 'w') as f:
-                                f.write(str(ip_number))
+                        # saving ip address to txt file
+                        with open('temp/ip_number.txt', 'w') as f:
+                            f.write(str(ip_number))
 
-                            # # TODO: DELETE IT
-                            user_boot_flag = True
-                            proper_device = True
+                        # # TODO: DELETE IT
+                        user_boot_flag = True
+                        proper_device = True
 
-                            if user_boot_flag and proper_device:
+                        if user_boot_flag and proper_device:
 
-                                print(lang_expressions['not_configured'])
-                                print(decorator_1)
-
-                                # going to configuration mode
-                                # to_conf_mode(ser)
-
-                                # opening file with configuration
-                                actual_device = actual_device
-                                stripped_list = reading_conf_files(file=actual_device)
-
-                                # executing commands from the list
-                                for command in stripped_list:
-                                    # send_to_console(ser, command)
-                                    # printing dots to inform user that script is still working
-                                    print('.', end='')
-
-                                # generating crypto keys for netowrk devices
-                                # gen_crypto_keys()
-
-                                print(decorator_1)
-
-                                print(decorator_1)
-
-                                # saving the name of configured device to the txt file
-                                saving_dev(f'{user_device} {ip_save}')
-
-                                # closing connection
-                                # ser.close()
-                                print(f"{lang_expressions['proper_conf']}{user_device}.")
-                                # print(f"{lang_expressions['close_con']}{ser.name}.")
-                                print(decorator_1)
-                                print(decorator_2)
-                                print(decorator_1)
-
-                        except:
-                            # bad chosen device or it is not working
-                            print(lang_expressions['not_working'])
+                            print(lang_expressions['not_configured'])
                             print(decorator_1)
+
+                            # going to configuration mode
+                            to_conf_mode(ser)
+
+                            # opening file with configuration
+                            actual_device = actual_device
+                            stripped_list = reading_conf_files(file=actual_device)
+
+                            # executing commands from the list
+                            for command in stripped_list:
+                                send_to_console(ser, command)
+                                # printing dots to inform user that script is still working
+                                print('.', end='')
+
+                            # generating crypto keys for netowrk devices
+                            gen_crypto_keys(ser)
+
+                            print(decorator_1)
+
+                            print(decorator_1)
+
+                            # saving the name of configured device to the txt file
+                            saving_dev(f'{user_device} {ip_save}')
+
+                            # closing connection
+                            ser.close()
+                            print(f"{lang_expressions['proper_conf']}{user_device}.")
+                            print(f"{lang_expressions['close_con']}{ser.name}.")
+                            print(decorator_1)
+                            print(decorator_2)
+                            print(decorator_1)
+
+                        # except:
+                        #     # bad chosen device or it is not working
+                        #     print(lang_expressions['not_working'])
+                        #     print(decorator_1)
 
                         # question if user has finished initial configuration of devices
                         finish_conf = input(lang_expressions['finish_conf'])
@@ -277,8 +277,8 @@ while running_flag:
                         print(decorator_1)
 
                         # closing connection
-                        # ser.close()
-                        # print(f"{lang_expressions['close_con']}{ser.name}.")
+                        ser.close()
+                        print(f"{lang_expressions['close_con']}{ser.name}.")
                         print(decorator_1)
                         break
 
@@ -299,7 +299,8 @@ while running_flag:
 
             # checking ping by initial ip addresses
             ip_add = ping_initial()
-            print(ip_add)
+            # wait to finish previous tasks
+            sleep(3)
             for k in list(ip_add):
                 # preparing data to save into txt file
                 user_device = k
@@ -320,7 +321,7 @@ while running_flag:
                 ok_not = check_license(udi, state_string, type_string, ipservices_string)
 
                 # sending command to switch with sh version
-                # sh_version(host)
+                sh_version(host)
 
                 # reading ID number from txt file
                 try:

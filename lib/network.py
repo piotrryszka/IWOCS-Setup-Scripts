@@ -137,7 +137,9 @@ def download_license_ssh(host):
         "device_type": f"cisco_ios",
         "host": f"{host}",
         # enabling waiting for the output much longer
-        "fast_cli": False
+        "fast_cli": False,
+        "username": f"{username}",
+        "password": f'{password}'
     }
     # crating empty strings
     state_string = ''
@@ -155,16 +157,18 @@ def download_license_ssh(host):
 
     # sending command to get UDI
     try:
-        e = net_connect.send_command_expect('sh license udi', cmd_verify=False)
+        with ConnectHandler(**cisco1) as net_connect:
+            e = net_connect.send_command_expect('sh license udi', cmd_verify=False)
         li = list(e.split())
         # udi data
-        udi = li[11]
+        udi = li[-1]
     except:
         udi = "UNKNOWN"
 
     # checking license and its status
     try:
-        e = net_connect.send_command_expect('sh license', cmd_verify=False)
+        with ConnectHandler(**cisco1) as net_connect:
+            e = net_connect.send_command_expect('sh license', cmd_verify=False)
 
         # creating temporary txt file
         with open("temp/license_console.txt", "w") as text_file:
@@ -235,7 +239,9 @@ def sh_version(host):
         "device_type": f"cisco_ios",
         "host": f"{host}",
         # enabling waiting for the output much longer
-        "fast_cli": False
+        "fast_cli": False,
+        "username": f"{username}",
+        "password": f'{password}'
     }
     # sending command
     with ConnectHandler(**cisco1) as net_connect:
