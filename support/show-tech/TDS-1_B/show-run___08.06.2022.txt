@@ -1,0 +1,582 @@
+Building configuration...
+
+Current configuration : 14800 bytes
+!
+! Last configuration change at 18:00:45 CST Sun Jan 1 2006
+!
+version 15.2
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+service password-encryption
+service sequence-numbers
+!
+hostname TDS-1_B
+!
+boot-start-marker
+boot-end-marker
+!
+!
+logging buffered 16384 informational
+enable secret 5 $1$vhjr$Zr37SWDYBA8I9LmagrxJg1
+!
+username walter privilege 15 secret 5 $1$u/LQ$NtiHcHtmKzWwA1aed/XoQ/
+username marvin privilege 15 secret 5 $1$xegf$IQ4NS5Z4evQ6LEBDGI3l90
+username daffy privilege 5 secret 5 $1$/6pG$YpDyPemQiW/4Mtpj.EBpR0
+no aaa new-model
+clock timezone CST -6 0
+clock summer-time CDT recurring
+system mtu routing 1500
+no ip source-route
+ip routing
+!
+ip vrf 100
+ description Management
+!
+ip dhcp use subscriber-id client-id
+ip dhcp subscriber-id interface-name
+!
+ip dhcp pool 11
+ network 172.30.11.0 255.255.255.0
+ default-router 172.30.11.1 
+ lease 10
+ reserved-only
+   address 172.30.11.65 client-id "Gi1/7" ascii
+   address 172.30.11.66 client-id "Gi1/8" ascii
+   cip instance 1
+!
+ip dhcp pool 100
+ vrf 100
+ network 172.30.100.0 255.255.255.0
+ default-router 172.30.100.1 
+ lease 10
+ reserved-only
+   address 172.30.100.92 client-id "Gi1/9" ascii
+   cip instance 2
+!
+ip dhcp pool 22
+ network 172.30.22.0 255.255.255.0
+ default-router 172.30.22.1 
+ lease 10
+ reserved-only
+   address 172.30.22.112 client-id "Gi1/1" ascii
+   address 172.30.22.113 client-id "Gi1/2" ascii
+   address 172.30.22.111 client-id "Gi1/3" ascii
+   address 172.30.22.91 client-id "Gi1/4" ascii
+   address 172.30.22.114 client-id "Gi1/5" ascii
+   address 172.30.22.116 client-id "Gi1/6" ascii
+   cip instance 3
+!
+!
+no ip domain-lookup
+ip domain-name iwocsg2.bifrost.technipfmc.com
+login block-for 20 attempts 5 within 60
+login on-failure log
+vtp mode off
+!
+shutdown vlan 666
+!
+!
+!
+!
+!
+ptp mode e2etransparent 
+!
+!
+!
+license boot level ipservices
+!
+spanning-tree mode rapid-pvst
+spanning-tree loopguard default
+spanning-tree portfast edge bpduguard default
+spanning-tree extend system-id
+spanning-tree vlan 11-13,100,200-299,888 priority 8192
+errdisable recovery cause udld
+errdisable recovery cause bpduguard
+errdisable recovery cause security-violation
+errdisable recovery cause channel-misconfig
+errdisable recovery cause pagp-flap
+errdisable recovery cause link-flap
+errdisable recovery cause sfp-config-mismatch
+errdisable recovery cause gbic-invalid
+errdisable recovery cause l2ptguard
+errdisable recovery cause psecure-violation
+errdisable recovery cause port-mode-failure
+errdisable recovery cause dhcp-rate-limit
+errdisable recovery cause pppoe-ia-rate-limit
+errdisable recovery cause mac-limit
+errdisable recovery cause vmps
+errdisable recovery cause storm-control
+errdisable recovery cause inline-power
+errdisable recovery cause arp-inspection
+errdisable recovery cause loopback
+errdisable recovery cause small-frame
+errdisable recovery cause psp
+!
+alarm profile defaultPort
+ alarm not-operating 
+ syslog not-operating 
+ notifies not-operating 
+!
+!
+!
+!
+!
+!
+!
+transceiver type all
+vlan internal allocation policy ascending
+!
+vlan 11
+ name SCADA
+!
+vlan 12
+ name HPU
+!
+vlan 13
+ name SFT
+!
+vlan 14
+ name CIU
+!
+vlan 21
+ name SCU_A
+!
+vlan 22
+ name SCU_B
+!
+vlan 100
+ name MANAGEMENT
+!
+vlan 105
+ name MANAGEMENT-PCU
+!
+vlan 201
+ name SAFE_A
+!
+vlan 202
+ name SAFE_B
+!
+vlan 210
+ name SPCU-W
+!
+vlan 220
+ name SPCU-X
+!
+vlan 229
+ name PCU
+!
+vlan 666
+ name NOTINUSE
+ shutdown
+!
+vlan 888
+ name NATIVE
+no cdp run
+!
+lldp run
+!
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface GigabitEthernet1/1
+ description UPS_B
+ switchport access vlan 22
+ switchport mode access
+ ip dhcp server use subscriber-id client-id
+ power inline never
+ storm-control broadcast level 20.00
+ storm-control multicast level 20.00
+ storm-control action shutdown
+ spanning-tree portfast edge
+!
+interface GigabitEthernet1/2
+ description BPCS-PLC_B
+ switchport access vlan 22
+ switchport mode access
+ ip dhcp server use subscriber-id client-id
+ power inline never
+ storm-control broadcast level 20.00
+ storm-control multicast level 20.00
+ storm-control action shutdown
+ spanning-tree portfast edge
+!
+interface GigabitEthernet1/3
+ description SPCU-R_B
+ switchport access vlan 22
+ switchport mode access
+ ip dhcp server use subscriber-id client-id
+ power inline never
+ storm-control broadcast level 20.00
+ storm-control multicast level 20.00
+ storm-control action shutdown
+ spanning-tree portfast edge
+!
+interface GigabitEthernet1/4
+ description EWS-BPCS_B
+ switchport access vlan 22
+ switchport mode access
+ ip dhcp server use subscriber-id client-id
+ power inline never
+ storm-control broadcast level 20.00
+ storm-control multicast level 20.00
+ storm-control action shutdown
+ spanning-tree portfast edge
+!
+interface GigabitEthernet1/5
+ description Purge-Control-PLC_B
+ switchport access vlan 22
+ switchport mode access
+ ip dhcp server use subscriber-id client-id
+ power inline never
+ storm-control broadcast level 20.00
+ storm-control multicast level 20.00
+ storm-control action shutdown
+ spanning-tree portfast edge
+!
+interface GigabitEthernet1/6
+ description Grease-Pump-UPS_B
+ switchport access vlan 22
+ switchport mode access
+ ip dhcp server use subscriber-id client-id
+ power inline never
+ storm-control broadcast level 20.00
+ storm-control multicast level 20.00
+ storm-control action shutdown
+ spanning-tree portfast edge
+!
+interface GigabitEthernet1/7
+ description LCP-1_B
+ switchport access vlan 11
+ switchport mode access
+ ip dhcp server use subscriber-id client-id
+ power inline never
+ storm-control broadcast level 20.00
+ storm-control multicast level 20.00
+ storm-control action shutdown
+ spanning-tree portfast edge
+!
+interface GigabitEthernet1/8
+ description LCP-2_B
+ switchport access vlan 11
+ switchport mode access
+ ip dhcp server use subscriber-id client-id
+ power inline never
+ storm-control broadcast level 20.00
+ storm-control multicast level 20.00
+ storm-control action shutdown
+ spanning-tree portfast edge
+!
+interface GigabitEthernet1/9
+ description EWS-Management_B
+ switchport access vlan 100
+ switchport mode access
+ ip dhcp server use subscriber-id client-id
+ power inline never
+ storm-control broadcast level 20.00
+ storm-control multicast level 20.00
+ storm-control action shutdown
+ spanning-tree portfast edge
+ ip dhcp snooping limit rate 20
+ ip dhcp snooping trust
+!
+interface GigabitEthernet1/10
+ description TRUNK_TO_SDG-1_A
+ switchport trunk allowed vlan 11-14,21,22,100,105,200-299
+ switchport trunk native vlan 888
+ switchport mode trunk
+ power inline never
+ storm-control broadcast level 20.00
+ storm-control multicast level 20.00
+ storm-control action shutdown
+!
+interface GigabitEthernet1/11
+ description TRUNK_TO_SDG-1_B
+ switchport trunk allowed vlan 11-14,21,22,100,105,200-299
+ switchport trunk native vlan 888
+ switchport mode trunk
+ power inline never
+ storm-control broadcast level 20.00
+ storm-control multicast level 20.00
+ storm-control action shutdown
+!
+interface GigabitEthernet1/12
+ description TRUNK_TO_TDS-1_A
+ switchport trunk allowed vlan 11-14,21,22,100,105,200-299
+ switchport trunk native vlan 888
+ switchport mode trunk
+ power inline never
+ storm-control broadcast level 20.00
+ storm-control multicast level 20.00
+ storm-control action shutdown
+!
+interface GigabitEthernet1/13
+ description PC2-X3
+ switchport trunk allowed vlan 11,22
+ switchport trunk native vlan 888
+ switchport mode trunk
+ power inline never
+ storm-control broadcast level 20.00
+ storm-control multicast level 20.00
+ storm-control action shutdown
+!
+interface GigabitEthernet1/14
+ description PC3-X3
+ switchport trunk allowed vlan 100,210,220
+ switchport trunk native vlan 888
+ switchport mode trunk
+ power inline never
+ storm-control broadcast level 20.00
+ storm-control multicast level 20.00
+ storm-control action shutdown
+!
+interface GigabitEthernet1/15
+ description PC4-X3
+ switchport trunk allowed vlan 11
+ switchport trunk native vlan 888
+ switchport mode trunk
+ power inline never
+ storm-control broadcast level 20.00
+ storm-control multicast level 20.00
+ storm-control action shutdown
+!
+interface GigabitEthernet1/16
+ description TRUNK_to_MODULE
+ switchport trunk allowed vlan 11-14,22,100,105,200-299
+ switchport trunk native vlan 888
+ switchport mode trunk
+ power inline never
+ storm-control broadcast level 20.00
+ storm-control multicast level 20.00
+ storm-control action shutdown
+!
+interface GigabitEthernet1/17
+ description TRUNK_to_MODULE
+ switchport trunk allowed vlan 11-14,22,100,105,200-299
+ switchport trunk native vlan 888
+ switchport mode trunk
+ power inline never
+ storm-control broadcast level 20.00
+ storm-control multicast level 20.00
+ storm-control action shutdown
+!
+interface GigabitEthernet1/18
+ description TRUNK_to_MODULE
+ switchport trunk allowed vlan 11-14,22,100,105,200-299
+ switchport trunk native vlan 888
+ switchport mode trunk
+ power inline never
+ storm-control broadcast level 20.00
+ storm-control multicast level 20.00
+ storm-control action shutdown
+!
+interface GigabitEthernet1/19
+ description TRUNK_to_MODULE
+ switchport trunk allowed vlan 11-14,22,100,105,200-299
+ switchport trunk native vlan 888
+ switchport mode trunk
+ power inline never
+ storm-control broadcast level 20.00
+ storm-control multicast level 20.00
+ storm-control action shutdown
+!
+interface GigabitEthernet1/20
+ description TRUNK_to_MODULE
+ switchport trunk allowed vlan 11-14,22,100,105,200-299
+ switchport trunk native vlan 888
+ switchport mode trunk
+ power inline never
+ storm-control broadcast level 20.00
+ storm-control multicast level 20.00
+ storm-control action shutdown
+!
+interface GigabitEthernet1/21
+ description TRUNK_to_MODULE
+ switchport trunk allowed vlan 11-14,22,100,105,200-299
+ switchport trunk native vlan 888
+ switchport mode trunk
+ power inline never
+ storm-control broadcast level 20.00
+ storm-control multicast level 20.00
+ storm-control action shutdown
+!
+interface GigabitEthernet1/22
+ description TRUNK_to_MODULE
+ switchport trunk allowed vlan 11-14,22,100,105,200-299
+ switchport trunk native vlan 888
+ switchport mode trunk
+ power inline never
+ storm-control broadcast level 20.00
+ storm-control multicast level 20.00
+ storm-control action shutdown
+!
+interface GigabitEthernet1/23
+ description TRUNK_to_MODULE
+ switchport trunk allowed vlan 11-14,22,100,105,200-299
+ switchport trunk native vlan 888
+ switchport mode trunk
+ power inline never
+ storm-control broadcast level 20.00
+ storm-control multicast level 20.00
+ storm-control action shutdown
+!
+interface GigabitEthernet1/24
+ description TRUNK_to_MODULE
+ switchport trunk allowed vlan 11-14,22,100,105,200-299
+ switchport trunk native vlan 888
+ switchport mode trunk
+ power inline never
+ storm-control broadcast level 20.00
+ storm-control multicast level 20.00
+ storm-control action shutdown
+!
+interface GigabitEthernet1/25
+ description TRUNK_to_MODULE
+ switchport trunk allowed vlan 11-14,22,100,105,200-299
+ switchport trunk native vlan 888
+ switchport mode trunk
+ storm-control broadcast level 20.00
+ storm-control multicast level 20.00
+ storm-control action shutdown
+!
+interface GigabitEthernet1/26
+ description TRUNK_to_MODULE
+ switchport trunk allowed vlan 11-14,22,100,105,200-299
+ switchport trunk native vlan 888
+ switchport mode trunk
+ shutdown
+ storm-control broadcast level 20.00
+ storm-control multicast level 20.00
+ storm-control action shutdown
+!
+interface GigabitEthernet1/27
+ description TRUNK_to_MODULE
+ switchport trunk allowed vlan 11-14,22,100,105,200-299
+ switchport trunk native vlan 888
+ switchport mode trunk
+ shutdown
+ storm-control broadcast level 20.00
+ storm-control multicast level 20.00
+ storm-control action shutdown
+!
+interface GigabitEthernet1/28
+ description TRUNK_to_MODULE
+ switchport trunk allowed vlan 11-14,22,100,105,200-299
+ switchport trunk native vlan 888
+ switchport mode trunk
+ shutdown
+ storm-control broadcast level 20.00
+ storm-control multicast level 20.00
+ storm-control action shutdown
+!
+interface Vlan1
+ no ip address
+ no ip redirects
+ no ip unreachables
+ no ip proxy-arp
+ shutdown
+!
+interface Vlan11
+ description SCADA
+ ip address 172.30.11.21 255.255.255.0
+ no ip redirects
+ no ip unreachables
+ no ip proxy-arp
+!
+interface Vlan12
+ description HPU/HDU
+ ip address 172.30.12.21 255.255.255.0
+ no ip redirects
+ no ip unreachables
+ no ip proxy-arp
+!
+interface Vlan22
+ description SCU_B
+ ip address 172.30.22.11 255.255.255.0
+ no ip redirects
+ no ip unreachables
+ no ip proxy-arp
+!
+interface Vlan100
+ description Management
+ ip vrf forwarding 100
+ ip address 172.30.100.201 255.255.255.0
+ no ip redirects
+ no ip unreachables
+ no ip proxy-arp
+!
+ip forward-protocol nd
+!
+no ip http server
+no ip http secure-server
+ip tftp source-interface Vlan100
+ip route vrf 100 0.0.0.0 0.0.0.0 172.30.100.1
+!
+!
+logging trap notifications
+logging host 172.30.100.99 vrf 100
+!
+snmp-server community LUCKYLUKE RO
+snmp-server location IWOCS Gen2
+snmp-server contact 0.0.16b
+snmp mib flash cache
+!
+privilege exec level 5 show spanning-tree blockedports
+privilege exec level 5 show spanning-tree
+privilege exec level 5 show lldp neighbors
+privilege exec level 5 show lldp
+privilege exec level 5 show vlan
+privilege exec level 5 show running-config
+privilege exec level 5 show logging
+privilege exec level 5 show interfaces
+privilege exec level 5 show
+banner motd ^CC
+
+                                                    
+                            TechnipFMC                      
+                     
+         ------------------ W A R N I N G -----------------           
+               This system is for authorized use only.                
+      All activities conducted on and information accessed, processed,     
+           stored or sent using this device may be examined.           
+By using the system, all users acknowledge and consent to such monitoring.
+   All unauthorized or improper use of this system shall be reported.      
+                                                                      
+                All activities performed on this device               
+                      are logged and monitored.                       
+                                                                      
+         -------------------------------------------------     
+                                                    
+                        Location  : IWOCS Generation 2
+                     Device name  : TDS-1_B
+                      Cabinet PN  : P6000183221 
+                      Network PN  : P6000185409
+                         Version  : B
+                        Filename  : TDS-1_B
+                                                     
+         -------------------------------------------------        
+^C
+!
+line con 0
+ logging synchronous
+ login local
+line vty 0 4
+ logging synchronous
+ login local
+ transport input ssh
+line vty 5 15
+ logging synchronous
+ login local
+ transport input ssh
+!
+ntp server vrf 100 172.30.51.10 minpoll 10
+!
+end

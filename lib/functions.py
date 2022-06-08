@@ -490,6 +490,7 @@ def ping_initial():
             for k in list(final_dic):
                 # sending ping
                 ping_output = ping(final_dic[k], verbose=False, count=count_ping)
+                print(final_dic[k])
                 # # printing dots to console to make sure that something is happening in script
                 print('.', end='')
                 for response in ping_output:
@@ -499,6 +500,8 @@ def ping_initial():
                         # deleting element of dictionary
                         del final_dic[k]
                     else:
+                        final_dic[k]
+                        print("CIAGLE PING")
                         pass
                     # incrementing counter
                     counter += 1
@@ -508,6 +511,6 @@ def ping_initial():
                     running_flag = False
 
                 # leaving whole part after timeout from data.py
-                if counter >= finish_time/100:
+                if counter >= finish_time:
                     running_flag = False
     return final_dic_test

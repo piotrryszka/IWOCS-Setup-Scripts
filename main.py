@@ -297,10 +297,14 @@ while running_flag:
             deleting_dev_version()
             del_ver_logs()
 
+            # wait to finish previous tasks
+            # printing dots to inform user that sth is happenning 
+            for i in range(180):
+                sleep(1)
+                print('.', end='')
+
             # checking ping by initial ip addresses
             ip_add = ping_initial()
-            # wait to finish previous tasks
-            sleep(3)
             for k in list(ip_add):
                 # preparing data to save into txt file
                 user_device = k

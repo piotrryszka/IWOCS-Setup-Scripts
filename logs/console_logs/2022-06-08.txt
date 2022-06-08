@@ -1,0 +1,1001 @@
+Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  08/06/2022 12:17:53
+ 
+IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!
+ 
+This is a list of all saved script logs: 
+2022-06-01.txt, 2022-06-08.txt
+Do you want to delete previous script results? If yes type '1', if not type anything else:
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else:
+1
+ 
+Is it your system a complete one or is it just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 4
+ 
+Which device do you want to connect? MOVE YOUR CONSOLE CABLE! TDS-1_A
+ 
+Your list of possible devices to configure: 
+TDS-1_A
+ 
+ 
+You have chosen this configuration...
+COM4 ----> TDS-1_A
+Please wait patiently...
+ 
+.. 
+ 
+Device is chosen properly, let's continue...
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+ 
+Your device has been configured properly ---> TDS-1_A.
+Closed connection to COM4.
+ 
+................................
+ 
+Was this device the last one? Type '1' if yes, type anything else if not: 2
+ 
+Already configured devices:
+TDS-1_A
+ 
+Which device do you want to connect? MOVE YOUR CONSOLE CABLE! TDS-1_B
+ 
+Your list of possible devices to configure: 
+TDS-1_B
+ 
+ 
+You have chosen this configuration...
+COM4 ----> TDS-1_B
+Please wait patiently...
+ 
+.. 
+ 
+Device is chosen properly, let's continue...
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+ 
+Your device has been configured properly ---> TDS-1_B.
+Closed connection to COM4.
+ 
+................................
+ 
+Was this device the last one? Type '1' if yes, type anything else if not: 2
+ 
+Already configured devices:
+TDS-1_A, TDS-1_B
+ 
+Which device do you want to connect? MOVE YOUR CONSOLE CABLE! MSH-1
+ 
+Your list of possible devices to configure: 
+MSH-1
+ 
+ 
+You have chosen this configuration...
+COM4 ----> MSH-1
+Please wait patiently...
+ 
+. 
+ 
+Device is chosen properly, let's continue...
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+ 
+Your device has been configured properly ---> MSH-1.
+Closed connection to COM4.
+ 
+................................
+ 
+Was this device the last one? Type '1' if yes, type anything else if not: 1
+ 
+...Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  08/06/2022 12:28:38
+ 
+IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!
+ 
+This is a list of all saved script logs: 
+2022-06-08.txt
+Do you want to delete previous script results? If yes type '1', if not type anything else:
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else:
+1
+ 
+Is it your system a complete one or is it just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 7
+ 
+Already configured devices:
+TDS-1_A, TDS-1_B, MSH-1
+ 
+Which device do you want to connect? MOVE YOUR CONSOLE CABLE! Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  08/06/2022 12:28:55
+ 
+IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!
+ 
+This is a list of all saved script logs: 
+2022-06-08.txt
+Do you want to delete previous script results? If yes type '1', if not type anything else:
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else:
+1
+ 
+Is it your system a complete one or is it just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 4
+ 
+Which device do you want to connect? MOVE YOUR CONSOLE CABLE! TDS-1_A
+ 
+Your list of possible devices to configure: 
+TDS-1_A
+ 
+ 
+You have chosen this configuration...
+COM4 ----> TDS-1_A
+Please wait patiently...
+ 
+................. 
+ 
+Device is chosen properly, let's continue...
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+ 
+Your device has been configured properly ---> TDS-1_A.
+Closed connection to COM4.
+ 
+................................
+ 
+Was this device the last one? Type '1' if yes, type anything else if not: 2
+ 
+Already configured devices:
+TDS-1_A
+ 
+Which device do you want to connect? MOVE YOUR CONSOLE CABLE! TDS-1_B
+ 
+Your list of possible devices to configure: 
+TDS-1_B
+ 
+ 
+You have chosen this configuration...
+COM4 ----> TDS-1_B
+Please wait patiently...
+ 
+.. 
+ 
+Device is chosen properly, let's continue...
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+ 
+Your device has been configured properly ---> TDS-1_B.
+Closed connection to COM4.
+ 
+................................
+ 
+Was this device the last one? Type '1' if yes, type anything else if not: 1
+ 
+172.30.100.10
+.172.30.100.11
+.172.30.100.10
+.172.30.100.11
+.Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  08/06/2022 12:34:57
+ 
+IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!
+ 
+This is a list of all saved script logs: 
+2022-06-08.txt
+Do you want to delete previous script results? If yes type '1', if not type anything else:
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else:
+1
+ 
+Is it your system a complete one or is it just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 4
+ 
+Which device do you want to connect? MOVE YOUR CONSOLE CABLE! TDS-1_B
+ 
+Your list of possible devices to configure: 
+TDS-1_B
+ 
+ 
+You have chosen this configuration...
+COM4 ----> TDS-1_B
+Please wait patiently...
+ 
+................ 
+ 
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+ 
+Your device has been configured properly ---> TDS-1_B.
+Closed connection to COM4.
+ 
+................................
+ 
+Was this device the last one? Type '1' if yes, type anything else if not: 2
+ 
+Already configured devices:
+TDS-1_B
+ 
+Which device do you want to connect? MOVE YOUR CONSOLE CABLE! TDS-1_A
+ 
+Your list of possible devices to configure: 
+TDS-1_A
+ 
+ 
+You have chosen this configuration...
+COM4 ----> TDS-1_A
+Please wait patiently...
+ 
+.. 
+ 
+Device is chosen properly, let's continue...
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+ 
+Your device has been configured properly ---> TDS-1_A.
+Closed connection to COM4.
+ 
+................................
+ 
+Was this device the last one? Type '1' if yes, type anything else if not: 1
+ 
+172.30.100.10
+.172.30.100.11
+.+-------------------------------------------------------------------------------------------------+
+|                                   Table with devices licenses                                   |
++----+---------+---------------------------+------------+--------------+---------------------+----+
+| ID |  Device |            UDI            |  License   |    Status    |      Expiration     | OK |
++----+---------+---------------------------+------------+--------------+---------------------+----+
+| 1  | TDS-1_B | IE-4010-4S24P:FDO2250U0A2 | ipservices | Active,InUse | PermanentRightToUse | OK |
+| 2  | TDS-1_A | IE-4010-4S24P:FDO2250U0AV | ipservices | Active,InUse | PermanentRightToUse | OK |
++----+---------+---------------------------+------------+--------------+---------------------+----+
+In case of UKNNOWN, please turn on the Putty client and check the configuration manually.
+ 
++-------------------------------------------------------+
+|               Table with device versions              |
++----+---------+--------+-----------------+-------------+
+| ID |   Name  | Model  | Current Version | New Version |
++----+---------+--------+-----------------+-------------+
+| 1  | TDS-1_B | IE4010 |    15.2(4)EC2   |   15.9(e4)  |
+| 2  | TDS-1_A | IE4010 |    15.2(6)E1    |   15.9(e4)  |
++----+---------+--------+-----------------+-------------+
+If field 'New Version' is empty, check if you downloaded new versions of software into /FIRMWARE folder.
+ 
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. 1
+ 
+Which device do you want to update? Type ID numbers divided by space from table above: 1
+ 
+List of devices to have updated software:
+TDS-1_B,  
+ 
+Now upgrading software in TDS-1_B device with this IP address 172.30.100.10!
+ 
+Now is the time to download project configs by SSH connections ...
+ 
+ 
+.............
+ 
+Now it is time to move into TFTP Server application.
+ 
+If you are ready and TFTP Server is not running, please type in '1' in console: 1
+ 
+Everything is fine, now you can turn on your TFTP SERVER...
+ 
+Your TFTP server is running now...
+ 
+Please choose in tab 'Current Directory' in TFTP Server Application folder called PROJECT-CONFIGS!
+ 
+If you set configuration properly and you are ready, please type in '1' in console: Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  08/06/2022 13:02:09
+ 
+IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!
+ 
+This is a list of all saved script logs: 
+2022-06-08.txt
+Do you want to delete previous script results? If yes type '1', if not type anything else:
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else:
+1
+ 
+Is it your system a complete one or is it just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 4
+ 
+Which device do you want to connect? MOVE YOUR CONSOLE CABLE! TDS-1_A
+ 
+Your list of possible devices to configure: 
+TDS-1_A
+ 
+ 
+You have chosen this configuration...
+COM4 ----> TDS-1_A
+Please wait patiently...
+ 
+.. 
+ 
+Device is chosen properly, let's continue...
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+ 
+Your device has been configured properly ---> TDS-1_A.
+Closed connection to COM4.
+ 
+................................
+ 
+Was this device the last one? Type '1' if yes, type anything else if not: 2
+ 
+Already configured devices:
+TDS-1_A
+ 
+Which device do you want to connect? MOVE YOUR CONSOLE CABLE! TDS-1_B
+ 
+Your list of possible devices to configure: 
+TDS-1_B
+ 
+ 
+You have chosen this configuration...
+COM4 ----> TDS-1_B
+Please wait patiently...
+ 
+.. 
+ 
+Device is chosen properly, let's continue...
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+ 
+Your device has been configured properly ---> TDS-1_B.
+Closed connection to COM4.
+ 
+................................
+ 
+Was this device the last one? Type '1' if yes, type anything else if not: 2
+ 
+Already configured devices:
+TDS-1_A, TDS-1_B
+ 
+Which device do you want to connect? MOVE YOUR CONSOLE CABLE! MSH-1
+ 
+Your list of possible devices to configure: 
+MSH-1
+ 
+ 
+You have chosen this configuration...
+COM4 ----> MSH-1
+Please wait patiently...
+ 
+. 
+ 
+Device is chosen properly, let's continue...
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+ 
+Your device has been configured properly ---> MSH-1.
+Closed connection to COM4.
+ 
+................................
+ 
+Was this device the last one? Type '1' if yes, type anything else if not: 1
+ 
+172.30.100.10
+.172.30.100.11
+.172.30.100.12
+.Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  08/06/2022 13:08:51
+ 
+IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!
+ 
+This is a list of all saved script logs: 
+2022-06-08.txt
+Do you want to delete previous script results? If yes type '1', if not type anything else:
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else:
+1
+ 
+Is it your system a complete one or is it just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 4
+ 
+Which device do you want to connect? MOVE YOUR CONSOLE CABLE! TDS-1_A
+ 
+Your list of possible devices to configure: 
+TDS-1_A
+ 
+ 
+You have chosen this configuration...
+COM4 ----> TDS-1_A
+Please wait patiently...
+ 
+................................ 
+ 
+Device is chosen properly, let's continue...
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+ 
+Your device has been configured properly ---> TDS-1_A.
+Closed connection to COM4.
+ 
+................................
+ 
+Was this device the last one? Type '1' if yes, type anything else if not: 2
+ 
+Already configured devices:
+TDS-1_A
+ 
+Which device do you want to connect? MOVE YOUR CONSOLE CABLE! TDS-1_B
+ 
+Your list of possible devices to configure: 
+TDS-1_B
+ 
+ 
+You have chosen this configuration...
+COM4 ----> TDS-1_B
+Please wait patiently...
+ 
+.. 
+ 
+Device is chosen properly, let's continue...
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+ 
+Your device has been configured properly ---> TDS-1_B.
+Closed connection to COM4.
+ 
+................................
+ 
+Was this device the last one? Type '1' if yes, type anything else if not: 2
+ 
+Already configured devices:
+TDS-1_A, TDS-1_B
+ 
+Which device do you want to connect? MOVE YOUR CONSOLE CABLE! MSH-1
+ 
+Your list of possible devices to configure: 
+MSH-1
+ 
+ 
+You have chosen this configuration...
+COM4 ----> MSH-1
+Please wait patiently...
+ 
+.. 
+ 
+Device is chosen properly, let's continue...
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+ 
+Your device has been configured properly ---> MSH-1.
+Closed connection to COM4.
+ 
+................................
+ 
+Was this device the last one? Type '1' if yes, type anything else if not: 1
+ 
+172.30.100.10
+.172.30.100.11
+.172.30.100.12
+.Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: Available languages are presented below:
+En, No, Fr
+Please choose one of possible languages: En
+ 
+Creating current timestamp:  08/06/2022 13:17:14
+ 
+IMPORTANT ISSUE!!!
+If you want to leave any part of the program type 0 [zero] in your input!
+ 
+This is a list of all saved script logs: 
+2022-06-08.txt
+Do you want to delete previous script results? If yes type '1', if not type anything else:
+1
+ 
+Type 1 if you want to try close PUTTY application, if not type anything else:
+1
+ 
+Is it your system a complete one or is it just one module? 
+Type '1' if system complete, if not write anything else: 1
+ 
+Please connect your console cable to your device!
+If you are ready type '1', because anything else won't be accepted: 1
+ 
+Which COM port are you using?
+Type number of your COM port: 4
+ 
+Which device do you want to connect? MOVE YOUR CONSOLE CABLE! TDS-1_A
+ 
+Your list of possible devices to configure: 
+TDS-1_A
+ 
+ 
+You have chosen this configuration...
+COM4 ----> TDS-1_A
+Please wait patiently...
+ 
+................................ 
+ 
+Device is chosen properly, let's continue...
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+ 
+Your device has been configured properly ---> TDS-1_A.
+Closed connection to COM4.
+ 
+................................
+ 
+Was this device the last one? Type '1' if yes, type anything else if not: 2
+ 
+Already configured devices:
+TDS-1_A
+ 
+Which device do you want to connect? MOVE YOUR CONSOLE CABLE! TDS-1_B
+ 
+Your list of possible devices to configure: 
+TDS-1_B
+ 
+ 
+You have chosen this configuration...
+COM4 ----> TDS-1_B
+Please wait patiently...
+ 
+.. 
+ 
+Device is chosen properly, let's continue...
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+ 
+Your device has been configured properly ---> TDS-1_B.
+Closed connection to COM4.
+ 
+................................
+ 
+Was this device the last one? Type '1' if yes, type anything else if not: 2
+ 
+Already configured devices:
+TDS-1_A, TDS-1_B
+ 
+Which device do you want to connect? MOVE YOUR CONSOLE CABLE! MSH-1
+ 
+Your list of possible devices to configure: 
+MSH-1
+ 
+ 
+You have chosen this configuration...
+COM4 ----> MSH-1
+Please wait patiently...
+ 
+.. 
+ 
+Device is chosen properly, let's continue...
+Your device has not been configured yet. Downloading initial config already started.
+ 
+...................................................................... 
+ 
+Your device has been configured properly ---> MSH-1.
+Closed connection to COM4.
+ 
+................................
+ 
+Was this device the last one? Type '1' if yes, type anything else if not: 1
+ 
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+172.30.100.10
+.172.30.100.11
+.172.30.100.12
+.+----------------------------------------------------------------------------------------------------+
+|                                    Table with devices licenses                                     |
++----+---------+------------------------------+------------+--------------+---------------------+----+
+| ID |  Device |             UDI              |  License   |    Status    |      Expiration     | OK |
++----+---------+------------------------------+------------+--------------+---------------------+----+
+| 1  | TDS-1_A |  IE-4010-4S24P:FDO2250U0AV   | ipservices | Active,InUse | PermanentRightToUse | OK |
+| 2  | TDS-1_B |  IE-4010-4S24P:FDO2250U0A2   | ipservices | Active,InUse | PermanentRightToUse | OK |
+| 3  |  MSH-1  | IE-2000-16TC-G-E:FDO2251J1U4 |   iplite   | Active,InUse |      Permanent      | OK |
++----+---------+------------------------------+------------+--------------+---------------------+----+
+In case of UKNNOWN, please turn on the Putty client and check the configuration manually.
+ 
++--------------------------------------------------------+
+|               Table with device versions               |
++----+---------+--------+-----------------+--------------+
+| ID |   Name  | Model  | Current Version | New Version  |
++----+---------+--------+-----------------+--------------+
+| 1  | TDS-1_A | IE4010 |    15.2(6)E1    |   15.9(e4)   |
+| 2  | TDS-1_B | IE4010 |    15.2(4)EC2   |   15.9(e4)   |
+| 3  |  MSH-1  | IE2000 |    15.2(7)E4    | 15.9(e42000) |
++----+---------+--------+-----------------+--------------+
+If field 'New Version' is empty, check if you downloaded new versions of software into /FIRMWARE folder.
+ 
+ 
+If you want to download new versions of software type '1', anything else won't be accepted. 1
+ 
+Which device do you want to update? Type ID numbers divided by space from table above: 1
+ 
+List of devices to have updated software:
+TDS-1_A,  
+ 
+Now upgrading software in TDS-1_A device with this IP address 172.30.100.10!
+ 
+Now is the time to download project configs by SSH connections ...
+ 
+ 
+.............
+ 
+Now it is time to move into TFTP Server application.
+ 
+If you are ready and TFTP Server is not running, please type in '1' in console: 1
+ 
+Everything is fine, now you can turn on your TFTP SERVER...
+ 
+Your TFTP server is running now...
+ 
+Please choose in tab 'Current Directory' in TFTP Server Application folder called PROJECT-CONFIGS!
+ 
+If you set configuration properly and you are ready, please type in '1' in console: 1
+ 
+Everything was set, you can continue...
+ 
+Waiting about 10 seconds for SSH connection to be established ...
+ 
+Checking ip connections with configured network devices, please wait a moment.
+... 
+ 
++---------------------------------------+
+|               PING Table              |
++---------+---------------+-------------+
+|   Name  |   IP Address  | PING Status |
++---------+---------------+-------------+
+| TDS-1_A | 172.30.100.10 |      OK     |
+| TDS-1_B | 172.30.100.11 |      OK     |
+|  MSH-1  | 172.30.100.12 |      OK     |
++---------+---------------+-------------+
+If the fields are empty, check the connection manually by yourself.
+ 
+Now the projects configs are downloaded to the network devices.
+ 
+................................
+ 
+Now this device is being configured:
+MSH-1 -> 172.30.100.12
+ 
+................................
+ 
+Now this device is being configured:
+TDS-1_B -> 172.30.100.11
+ 
+................................
+ 
+Now this device is being configured:
+TDS-1_A -> 172.30.100.10
+ 
+................................
+ 
+Checking booting devices by project IP, please wait...
+............................................... 
+ 
+Checking project connection by ping...
+...... 
+ 
++------------------------------------------+
+|  Checking connection to project configs  |
++----------------+----------------+--------+
+| Name of device |       IP       | Status |
++----------------+----------------+--------+
+|     MSH-1      | 172.30.100.41  |   OK   |
+|    TDS-1_B     | 172.30.100.201 |   OK   |
+|    TDS-1_A     | 172.30.100.101 |   OK   |
++----------------+----------------+--------+
+If the fields are empty, check the connection manually by yourself.
+ 
+................................
+ 
+We are moving into collecting outputs from already project configured network devices!
+ 
+................................
+ 
+This directory already exists -->  MSH-1
+ 
+Collecting data from this network device by SSH connection with this command:
+IP: 172.30.100.41, Device: MSH-1, Command: sh lldp nei
+ 
+................................
+ 
+Collecting data from this network device by SSH connection with this command:
+IP: 172.30.100.41, Device: MSH-1, Command: show run
+ 
+................................
+ 
+Collecting data from this network device by SSH connection with this command:
+IP: 172.30.100.41, Device: MSH-1, Command: show tech
+ 
+................................
+ 
+This directory already exists -->  TDS-1_B
+ 
+Collecting data from this network device by SSH connection with this command:
+IP: 172.30.100.201, Device: TDS-1_B, Command: sh lldp nei
+ 
+................................
+ 
+Collecting data from this network device by SSH connection with this command:
+IP: 172.30.100.201, Device: TDS-1_B, Command: show run
+ 
+................................
+ 
+Collecting data from this network device by SSH connection with this command:
+IP: 172.30.100.201, Device: TDS-1_B, Command: show tech
+ 
+................................
+ 
+This directory already exists -->  TDS-1_A
+ 
+Collecting data from this network device by SSH connection with this command:
+IP: 172.30.100.101, Device: TDS-1_A, Command: sh lldp nei
+ 
+................................
+ 
+Collecting data from this network device by SSH connection with this command:
+IP: 172.30.100.101, Device: TDS-1_A, Command: show run
+ 
+................................
+ 
+Collecting data from this network device by SSH connection with this command:
+IP: 172.30.100.101, Device: TDS-1_A, Command: show tech
+ 
+................................
+ 
+ 
